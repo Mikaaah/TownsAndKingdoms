@@ -8,16 +8,26 @@ assignees: Mikaaah
 ---
 
 **Describe the bug**
-_A clear and concise description of what the bug is._
+__A clear and concise description of what the bug is.__
+
+►
 
 **To Reproduce**
-_Steps to reproduce the behavior:_
+__Steps to reproduce the behavior:__
+
+►
 
 **Expected behavior**
-_A clear and concise description of what you expected to happen._
+__A clear and concise description of what you expected to happen.__
+
+►
 
 **Screenshots**
-_If applicable, add screenshots to help explain your problem._
+__If applicable, add screenshots to help explain your problem.__
+
+►
 
 **Additional context**
-_Add any other context about the problem here._
+__Add any other context about the problem here.__
+
+►
