@@ -2,7 +2,7 @@
 name: "Bug Report \U0001F4BE"
 about: Found a Bug, Use this Template!
 title: "❰Bug❱ \U0001F4BE - "
-labels: 'Type: Bug'
+labels: 'Type: Bug, Type: Feature Request'
 assignees: Mikaaah
 
 ---
