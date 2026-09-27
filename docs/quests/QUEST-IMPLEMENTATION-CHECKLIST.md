@@ -1,0 +1,12 @@
+# Quest Implementation Checklist
+- [ ] chapter goal/exit approved
+- [ ] 25–40 main milestones drafted
+- [ ] dependencies readable
+- [ ] optional systems cannot hard-lock progression
+- [ ] task IDs verified
+- [ ] boss/event detection tested
+- [ ] team completion tested
+- [ ] rewards checked for bypasses
+- [ ] custom processes explained
+- [ ] optional guide links added
+- [ ] fresh-world playthrough complete
