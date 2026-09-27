@@ -5,6 +5,7 @@ This list is deliberately curated from T&K2's actual quest/KubeJS footprint plus
 
 ## Status
 
+- **Core** — locked design pillar unless compatibility makes it impossible
 - **Candidate** — strong fit; put into the first compatibility instance unless noted
 - **Testing** — promising but must prove compatibility/balance before becoming core
 - **Optional** — useful/flavorful; add only if the pack still has room
@@ -14,15 +15,16 @@ This list is deliberately curated from T&K2's actual quest/KubeJS footprint plus
 
 | Mod | T&K2 | Status | Role / decision |
 |---|---:|---|---|
-| Create | Yes | Candidate | Core manufacturing language |
-| KubeJS | Yes | Candidate | Recipes, events, integration, custom content |
+| Create | Yes | Core | Core manufacturing language |
+| Applied Energistics 2 | Yes | Core | Core storage/logistics pillar; important enough to receive custom progression and Create-based integration |
+| KubeJS | Yes | Core | Recipes, events, integration, custom content |
 | LootJS | New | Candidate | Script dungeon/boss/structure loot without hand-editing every table |
 | KubeJS Additions | New | Candidate | Extra integration + custom recipe/JEI presentation options |
 | ProbeJS | New | Candidate (dev-only) | Registry/API discovery and VS Code scripting support |
-| FTB Quests | Yes | Candidate | Main story + optional reference tabs |
+| FTB Quests | Yes | Core | Main story + optional reference tabs |
 | FTB Teams | Yes/dep | Candidate | Team quest progression |
 | FTB Chunks | Yes | Optional | Claims/map if wanted; not needed for core progression |
-| JEI | Yes | Candidate | Recipe discovery; critical in a heavily customized pack |
+| JEI | Yes | Core | Recipe discovery; critical in a heavily customized pack |
 | Jade | Yes | Candidate | Machine/block information |
 | Jade Addons | New | Optional | Extra Jade integration |
 
@@ -146,17 +148,28 @@ Building content is allowed a little more breadth because it adds less mechanica
 
 ## Storage, logistics & QoL
 
+**Applied Energistics 2 is not optional infrastructure in T&K3. It is a major progression pillar.**  
+The exact chapter gates can change, but the design target is that AE2 evolves from a manufactured storage/logistics technology into late-game automation infrastructure, with Create-based processor/component manufacturing instead of a mostly untouched default AE2 progression.
+
 | Mod | T&K2 | Status | Role / decision |
 |---|---:|---|---|
-| Applied Energistics 2 | Yes | Candidate | Mid/late-game logistics; custom Create-based processor recipes again |
+| Applied Energistics 2 | Yes | Core | Core digital storage, logistics, autocrafting and endgame infrastructure |
 | Sophisticated Backpacks | Yes | Candidate | Player inventory/QoL |
-| Sophisticated Storage | Yes | Optional | Useful, but AE2 + colony + Create may already cover storage |
+| Sophisticated Storage | Yes | Optional | Useful early/mid storage, but must not trivialize the road to AE2 |
 | Waystones | Yes | Candidate | Keep, but gate/cost it so travel still matters |
 | Nature's Compass | Yes | Optional | Great anti-frustration tool; gate or reward it |
 | Explorer's Compass | New | Optional | Same for structures; useful if major dungeons are rare |
 | FTB Chunks | Yes | Optional | Claims + map |
 | one map mod | Yes | Candidate | Choose JourneyMap **or** Xaero, not both |
 | EnderStorage / duplicate wireless storage | Yes | Rejected initially | Avoid another storage ecosystem unless a real need appears |
+
+### AE2 integration targets
+- custom Create-manufactured processors/components
+- chapter-gated storage-cell tiers
+- autocrafting as an industrial milestone, not early convenience
+- P2P/spatial/advanced network features as late-game engineering
+- integration with factory logistics and potentially kingdom supply
+- no competing storage mod should make AE2 irrelevant before it opens
 
 ## Custom systems / special packdev tools
 
@@ -184,13 +197,13 @@ Add performance mods one by one and benchmark Create + MineColonies + Epic Fight
 Do **not** install every optional candidate at once.
 
 ### Foundation
-Create, KubeJS, LootJS, KubeJS Additions, FTB Quests, FTB Teams, JEI, Jade, Epic Fight, Passive Skill Tree.
+Create, **AE2**, KubeJS, LootJS, KubeJS Additions, FTB Quests, FTB Teams, JEI, Jade, Epic Fight, Passive Skill Tree.
 
 ### First gameplay pillars
 MineColonies, CreateColonies, Farmer's Delight, Slice & Dice, Twilight Forest, Twilight Tweaks, Cataclysm, Mowzie's Mobs, Simply Swords, Artifacts.
 
 ### Engineering/building
-Create Connected, Copycats+, Create Deco, Steam 'n' Rails, AE2, Sophisticated Backpacks, Supplementaries, Quark, Handcrafted.
+Create Connected, Copycats+, Create Deco, Steam 'n' Rails, Sophisticated Backpacks, Supplementaries, Quark, Handcrafted.
 
 ### World
 Tectonic, Regions Unexplored, IDAS, YUNG's Better Strongholds, Lootr.
