@@ -13,3 +13,4 @@
 | D-009 | Space may exist but is not the final goal | Locked | Avoid repeating T&K2 endpoint |
 | D-010 | Final goal is a multi-system world-scale project/event | Baseline | Gives every pillar an endgame role |
 | D-011 | Applied Energistics 2 is a core progression pillar | Locked | AE2 is central to storage, logistics and automation; it should receive custom Create-integrated progression rather than remain optional QoL |
+| D-013 | Epic Fight is the locked combat foundation | Locked | Weapon ecosystems will be adapted to Epic Fight through a T&K-owned compatibility layer; compatibility should not dictate weapon selection |
