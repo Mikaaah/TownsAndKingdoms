@@ -1,7 +1,7 @@
 # T&K3 Mod List — 1.21.1 NeoForge
 
 **Baseline:** 2026-09-28  
-This is the current **v0.2 target list** for the first serious compatibility/progression instance. It is curated around Create → electrification → Mekanism → AE2, Epic Fight combat, integrated Ars/Iron's magic, MineColonies, and a deliberately curated adventure/world layer.
+This is the current **v0.2 target list** for the first serious compatibility/progression instance. It is curated around Create → electrification → Mekanism → AE2, Epic Fight combat, integrated Ars/Iron's magic, a custom timed cave-expedition dimension, and a deliberately curated adventure/world layer. MineColonies is no longer assumed as a core pillar because of server-cost concerns.
 
 ## Status
 
@@ -131,15 +131,15 @@ Ice & Fire is **not locked yet**. Run it in the compatibility/seed test because 
 
 Run a **seed-density sweep** before adding any more structure mods. Alex's Caves + Iron's structures + Cataclysm + Twilight + possible Ice & Fire already create substantial exploration content.
 
-## MineColonies / kingdom
+## Kingdom / settlement
 
 | Mod | Status | Role |
 |---|---|---|
-| MineColonies | Core | Settlement → town → kingdom progression |
-| Structurize | Dependency | MineColonies foundation |
-| Create: Colony | Include / test | Mechanical-colony bridge |
+| MineColonies | **Optional / performance test** | Excellent settlement simulation, but no longer a required progression pillar |
+| Structurize | Only with MineColonies | Dependency / building tooling |
+| Create: Colony | Only with MineColonies | Mechanical-colony bridge |
 
-Do not add multiple overlapping colony/Create bridge mods until Create: Colony is tested.
+**Performance rule:** T&K3 must not require MineColonies for the main progression. If profiling shows unacceptable server CPU/chunk-loading cost, remove it without redesigning the pack. The kingdom fantasy can instead be delivered through T&K contracts, construction milestones, resource deliveries, structures and world events.
 
 ## Food / preparation
 
@@ -188,7 +188,7 @@ Avoid the previous giant Let's Do food suite.
 | Embeddium | Include/test |
 | Entity Culling | Include/test |
 
-Benchmark after each major content batch, especially **MineColonies + Alex's Caves + Alex's Mobs + Cataclysm + Ice & Fire**.
+Benchmark after each major content batch, especially **Alex's Caves + Alex's Mobs + Cataclysm + Ice & Fire**. MineColonies gets a separate A/B server-performance profile before inclusion.
 
 # v0.2 first serious test instance
 
@@ -202,7 +202,6 @@ Install together:
 **Iron's Spells + Ars Nouveau + Ars 'n Spells + Alex's Caves: Spellbooks**  
 **Alex's Caves Continued + Alex's Mobs Continued**  
 **Cataclysm + Mowzie's Mobs + Twilight Forest + Twilight Tweaks**  
-**MineColonies + Structurize + Create: Colony**  
 **Farmer's Delight + Alex's Delight (test)**  
 **Tectonic + Regions Unexplored + IDAS + Better Strongholds + Lootr**  
 **Supplementaries + Quark + Handcrafted + Sophisticated Backpacks + Waystones + JourneyMap**  
