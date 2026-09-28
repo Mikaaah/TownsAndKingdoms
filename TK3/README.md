@@ -17,7 +17,7 @@ T&K3 development area. T&K2 files in the repository root are historical and shou
 
 Current baseline: v1.0.
 
-- `docs/SKILLTREE_V1.0.md` — architecture and current rules
+- `kubejs/server_scripts/TK3_SkillTree.js` — v1.0 baseline generator\n- `docs/SKILLTREE_V1.0.md` — architecture and current rules
 - `docs/SKILLTREE_BALANCE_V1.0.md` — first-pass balance budget
 - `docs/SKILLTREE_ICONS.md` — exact Passive Skill Tree icon mapping and fallbacks
 - `docs/SKILLTREE_V0.1.md` — archived initial skeleton notes
