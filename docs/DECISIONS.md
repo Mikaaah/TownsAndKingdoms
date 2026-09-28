@@ -14,3 +14,5 @@
 | D-010 | Final goal is a multi-system world-scale project/event | Baseline | Gives every pillar an endgame role |
 | D-011 | Applied Energistics 2 is a core progression pillar | Locked | AE2 is central to storage, logistics and automation; it should receive custom Create-integrated progression rather than remain optional QoL |
 | D-013 | Epic Fight is the locked combat foundation | Locked | Weapon ecosystems will be adapted to Epic Fight through a T&K-owned compatibility layer; compatibility should not dictate weapon selection |
+| D-014 | Main progression must not depend on MineColonies | Locked | Colony AI/pathfinding and chunk-loading can make multiplayer hosting materially heavier; keep MineColonies optional until profiled |
+| D-015 | A timed custom cave-expedition dimension is a major progression system | Baseline | Provides repeatable combat/exploration, stronger mobs, bosses, loot and skill-point rewards without making the normal overworld infinitely dense |
