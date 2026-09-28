@@ -48,9 +48,10 @@ This list is deliberately curated from T&K2's actual quest/KubeJS footprint plus
 
 | Mod | T&K2 | Status | Role / decision |
 |---|---:|---|---|
-| Epic Fight | Yes | Candidate | Core combat system |
+| Epic Fight | Yes | Core | Locked combat foundation; T&K owns the compatibility/balance layer |
 | Passive Skill Tree NeoForge | New | Testing | Intended character-progression backbone; very new unofficial port, test hard |
-| Simply Swords | Yes | Testing | Excellent weapon variety for manufacturing; recipes/stats/movesets must be curated |
+| Weapons of Miracles | New/returning ecosystem | Candidate | Signature Epic Fight weapons, innate skills and high-identity legendary gear; use selectively rather than as the universal best set |
+| Simply Swords | Yes | Testing | Broad weapon variety for manufacturing; recipes/stats/movesets must be curated |
 | Artifacts | Yes | Candidate | Lighter exploration relic system |
 | Relics | Yes | Optional | Use instead of / selectively alongside Artifacts only if it adds distinct build choices |
 | Epic Fight Compat | New | Testing | Covers many weapons, but is extremely new; never make the pack depend on it blindly |
