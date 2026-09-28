@@ -1,219 +1,211 @@
 # T&K3 Mod List — 1.21.1 NeoForge
 
-Cross-reference baseline: **2026-09-28**.  
-This list is deliberately curated from T&K2's actual quest/KubeJS footprint plus current 1.21.1 NeoForge candidates. Dependencies/libraries are not listed unless they matter to pack design.
+**Baseline:** 2026-09-28  
+This is the current **v0.2 target list** for the first serious compatibility/progression instance. It is curated around Create → electrification → Mekanism → AE2, Epic Fight combat, integrated Ars/Iron's magic, MineColonies, and a deliberately curated adventure/world layer.
 
 ## Status
 
-- **Core** — locked design pillar unless compatibility makes it impossible
-- **Candidate** — strong fit; put into the first compatibility instance unless noted
-- **Testing** — promising but must prove compatibility/balance before becoming core
-- **Optional** — useful/flavorful; add only if the pack still has room
-- **Rejected** — do not plan around it for the current target
+- **Core** — intended pillar of the pack
+- **Include** — install in the main prototype
+- **Testing** — install/test, but not locked
+- **Optional later** — do not add to the first instance unless a gap appears
+- **Hold / reject** — intentionally excluded for now
 
-## Foundation & pack development
+## Foundation / pack development
 
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Create | Yes | Core | Core manufacturing language |
-| Applied Energistics 2 | Yes | Core | Core storage/logistics pillar; important enough to receive custom progression and Create-based integration |
-| KubeJS | Yes | Core | Recipes, events, integration, custom content |
-| LootJS | New | Candidate | Script dungeon/boss/structure loot without hand-editing every table |
-| KubeJS Additions | New | Candidate | Extra integration + custom recipe/JEI presentation options |
-| ProbeJS | New | Candidate (dev-only) | Registry/API discovery and VS Code scripting support |
-| FTB Quests | Yes | Core | Main story + optional reference tabs |
-| FTB Teams | Yes/dep | Candidate | Team quest progression |
-| FTB Chunks | Yes | Optional | Claims/map if wanted; not needed for core progression |
-| JEI | Yes | Core | Recipe discovery; critical in a heavily customized pack |
-| Jade | Yes | Candidate | Machine/block information |
-| Jade Addons | New | Optional | Extra Jade integration |
+| Mod | Status | Role |
+|---|---|---|
+| Create | Core | Physical manufacturing and early/mid mechanical industry |
+| Applied Energistics 2 | Core | Digital storage, logistics and autocrafting |
+| Mekanism | Core | Advanced powered processing, chemistry and high-tech industry |
+| Mekanism Generators | Include | Late industrial power progression |
+| KubeJS | Core | Recipes, events, progression integration and custom content |
+| LootJS | Include | Curated dungeon/boss/structure loot |
+| KubeJS Additions | Include | Extra scripting/integration tools |
+| ProbeJS | Dev-only | Registry/API discovery during development |
+| FTB Quests | Core | Main story and reference books |
+| FTB Teams | Include | Team quest progression |
+| JEI | Core | Recipe discovery |
+| Jade | Include | Machine/block information |
+| Curios API | Dependency/core utility | Equipment/accessory integration |
 
-## Create & engineering
+## Create ecosystem
 
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Create: Connected | New | Candidate | High-value Create QoL with little progression bloat |
-| Create: Copycats+ | New | Candidate | Excellent building flexibility around factories/towns |
-| Create Deco | Yes | Candidate | Industrial building palette |
-| Create: Steam 'n' Rails NeoForge | Yes | Candidate | Kingdom logistics/trains; unofficial port so test it |
-| Create Slice & Dice | New | Candidate | Connects Farmer's Delight food production to Create |
-| CreateColonies | New | Candidate | Direct Create ↔ MineColonies integration |
-| Create Crafts & Additions | Yes | Testing | Useful electrical bridge; include only if energy has a clear progression purpose |
-| Create: The Factory Must Grow | Yes | Testing | Strong heavy-industry option, but large enough to become its own tech tree; must earn its place |
-| Create Power Loader | New | Optional | Useful for trains/large moving infrastructure |
-| Create Enchantment Industry | Yes | Optional | Only if enchanting/XP processing fits the final magic/equipment economy |
-| old Create: Dreams & Desires stack | Yes | Rejected | Do not rebuild the old addon pile/mechanism ladder |
+| Mod | Status | Role |
+|---|---|---|
+| Create: Connected | Include | High-value factory/QoL blocks |
+| Create: Copycats+ | Include | Flexible factory and town building |
+| Create Deco | Include | Industrial building palette |
+| Steam 'n' Rails NeoForge | Include / test | Trains and kingdom logistics |
+| Create Crafts & Additions | Include | **Primary bridge from rotation to FE** |
+| Create Slice & Dice | Include | Farmer's Delight automation |
+| Create: Colony | Include / test | MineColonies ↔ Create integration |
+| Create Power Loader | Optional later | Large contraption/train utility |
+| Create Enchantment Industry | Optional later | Only if XP/enchant automation earns a role |
+| Create: The Factory Must Grow | Hold | Mekanism already fills advanced industry; avoid duplicate tech trees |
 
-## RPG, combat & character progression
+**Design rule:** Create remains the main **item logistics / physical manufacturing** language. Mekanism Logistical Transporters are heavily gated or disabled until late game. Mekanism cables, fluid pipes and chemical tubes remain available when their systems need them.
 
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Epic Fight | Yes | Core | Locked combat foundation; T&K owns the compatibility/balance layer |
-| Passive Skill Tree NeoForge | New | Testing | Intended character-progression backbone; very new unofficial port, test hard |
-| Weapons of Miracles | New/returning ecosystem | Candidate | Signature Epic Fight weapons, innate skills and high-identity legendary gear; use selectively rather than as the universal best set |
-| Simply Swords | Yes | Testing | Broad weapon variety for manufacturing; recipes/stats/movesets must be curated |
-| Artifacts | Yes | Candidate | Lighter exploration relic system |
-| Relics | Yes | Optional | Use instead of / selectively alongside Artifacts only if it adds distinct build choices |
-| Epic Fight Compat | New | Testing | Covers many weapons, but is extremely new; never make the pack depend on it blindly |
-| Apotheosis | Yes | Rejected initially | Affix/gem power can overwhelm our custom weapon tiers + skill tree; reconsider only selected modules later |
-| Epic Samurai / duplicate weapon packs | Yes | Rejected initially | Avoid weapon bloat until the core Epic Fight equipment roster is locked |
+## Combat / equipment / character
+
+| Mod | Status | Role |
+|---|---|---|
+| Epic Fight | Core | Locked combat foundation |
+| Passive Skill Tree NeoForge | Core concept / hard testing | Character build backbone; new unofficial port needs heavy testing |
+| Weapons of Miracles | Include | Signature Epic Fight weapons/movesets |
+| L_Ender's Cataclysm | Core adventure | Bosses, structures and special equipment |
+| Mowzie's Mobs | Include | Memorable elites/bosses |
+| Simply Swords | Testing | Large normal weapon asset pool; only keep curated weapons |
+| Artifacts | Include | Exploration relics |
+| Relics | Optional later | Only if it adds build choices without overwhelming equipment balance |
+| T&K Epic Fight compatibility layer | Core custom | Our own datapack/resource compatibility and balance layer |
+
+**Equipment rule:** default recipes/stats are not authoritative. T&K decides weapon tier, manufacturing route, moveset category and power budget.
 
 ## Magic
 
-Goal: **one primary magic identity + at most one complementary system** at first.
+T&K3 deliberately uses **both Iron's Spells and Ars Nouveau**, but integrates them rather than presenting two isolated quest islands.
 
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Iron's Spells 'n Spellbooks | Yes | Candidate | Best fit for RPG combat, boss loot and skill-tree builds |
-| Ars Nouveau | Yes | Candidate | Best fit for arcane crafting/automation; compare directly with Iron's role |
-| Malum | Yes | Candidate | Strong complementary soul/spirit metallurgy and thematic materials |
-| Ars 'n Spells | New | Optional/Testing | Interesting bridge if both Ars + Iron's survive selection |
-| Summoning Rituals | New | Testing | Very useful packdev tool for ritual crafting, command triggers and custom boss/item rituals |
-| Botania | Yes | Rejected for target | No official 1.21.1 release currently; also duplicates a full progression system |
+| Mod | Status | Role |
+|---|---|---|
+| Iron's Spells 'n Spellbooks | Core | Combat magic, spell loot, magical structures/bosses |
+| Ars Nouveau | Core | Arcane crafting, rituals, Source and automation |
+| Ars 'n Spells | Core integration | Bridges mana/equipment/spell systems between Ars and Iron's |
+| Alex's Caves: Spellbooks | Include | Direct Alex's Caves ↔ Iron's integration |
+| Summoning Rituals | Testing | Packdev ritual/boss/custom-recipe framework |
+| Monsters & Spellbooks | Testing later | 90+ extra spells, mobs and two schools; potentially good but high bloat risk |
+| Cursed School | Testing later | Interesting corruption/dark-school system; currently very new |
+| Reliquified Iron's Spells | Optional later | Only if Relics is selected |
+| Iron's RPG Tweaks | Hold | Overlaps Epic Fight + Passive Skill Tree + our own balance rules |
+| T.O Magic 'n Extras | Reject for 1.21.1 | Published 1.21.1 build is deprecated / marked not to use |
+| Malum | Hold for now | Good mod, but Ars + Iron's already provide two full magic languages |
+| Botania | Reject for target | Not part of current 1.21.1 foundation |
 
-### Magic decision to make
-Preferred prototype:
-1. **Iron's Spells + Malum** for RPG-first magic, **or**
-2. **Ars Nouveau + Malum** for engineering/crafting-first magic.
+## Alex ecosystem
 
-Only test Ars + Iron's + Malum together if each ends up with a non-overlapping role.
+| Mod | Status | Role |
+|---|---|---|
+| Alex's Caves Continued | **Include** | Major underground exploration pillar; six large cave biomes/content ecosystem |
+| CodxLib | Dependency | Required by Alex's Caves Continued / Continued ecosystem |
+| Alex's Mobs Continued | **Include** | Creature/ecology variety; use Continued line for consistency |
+| Alex's Caves: Spellbooks | Include | Iron's integration |
+| Alex's Delight | Testing | Alex's Mobs ↔ Farmer's Delight integration |
+| Alex's Caves Continued Delight | Testing | Alex's Caves ↔ Farmer's Delight integration |
+| Alex's Patches | Only if needed | Port-specific fixes if our chosen builds require them |
+
+**Port rule:** use the **Continued** Alex projects where possible rather than mixing multiple unrelated ports.
+
+## Ice & Fire
+
+| Mod | Status | Role |
+|---|---|---|
+| IceAndFire Community Edition | **Testing** | Dragons, legendary materials, structures and potential boss/equipment progression |
+| Dragon Care | Optional later | Only if dragon husbandry becomes a real kingdom feature |
+| Ice and Fire: Spellbooks | Hold | Do not plan around it until a verified compatible 1.21.1 build matches our IAFCE setup |
+
+Ice & Fire is **not locked yet**. Run it in the compatibility/seed test because the current 1.21.1 NeoForge Community Edition is mature enough to evaluate, but keep it only if dragon/worldgen density and equipment balance justify the footprint. Epic Fight compatibility can be authored by T&K.
+
+## Dimensions / major adventure
+
+| Mod | Status | Role |
+|---|---|---|
+| Twilight Forest | Include | Curated progression dimension |
+| Twilight Tweaks | Include | Custom final encounter/function hooks |
+| Twilight Forest Final Boss Remake | Testing | Possible Castle Keeper/final encounter base |
+| The Aether | Optional later | Only if it receives a defined chapter role |
+| Deeper and Darker | Optional later | Same rule |
+| Ad Astra | Optional later | Expedition content, never final goal |
+
+## World generation / structures
+
+| Mod | Status | Role |
+|---|---|---|
+| Tectonic | Include | Terrain foundation |
+| Regions Unexplored | Include | Biomes/building palette |
+| Alex's Caves Continued | Include | Underground mega-biomes |
+| Integrated Dungeons and Structures | Testing | Primary general structure suite if density is acceptable |
+| YUNG's Better Strongholds | Include | Stronger End route |
+| Lootr | Include | Multiplayer-safe structure loot |
+| YUNG's Better Dungeons | Hold | Add only if IDAS leaves a clear dungeon gap |
+| Dungeons & Taverns | Hold | Avoid stacking structure generators blindly |
+
+Run a **seed-density sweep** before adding any more structure mods. Alex's Caves + Iron's structures + Cataclysm + Twilight + possible Ice & Fire already create substantial exploration content.
 
 ## MineColonies / kingdom
 
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| MineColonies | Yes | Candidate | Civilization/kingdom pillar |
-| CreateColonies | New | Candidate | Mechanical-colony bridge |
-| Compatibility addon for MineColonies | New | Testing | Adds compatibility content; useful but verify exactly what we need |
-| Structurize | Yes/dep | Dependency | MineColonies foundation |
-| Create: Colony | New | Optional | Alternative/integration candidate; compare against CreateColonies instead of stacking both |
-
-## Bosses, dimensions & major adventure content
-
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Twilight Forest | Yes | Candidate | Major curated adventure realm |
-| Twilight Tweaks | New | Candidate | Lets us trigger our own final encounter/function |
-| Twilight Forest Final Boss Remake | New | Testing | Ready-made Castle Keeper; can sit inside our custom encounter wrapper |
-| L_Ender's Cataclysm | Yes | Candidate | High-quality major bosses, structures and endgame threats |
-| Mowzie's Mobs | Yes | Candidate | Memorable overworld elites/bosses without adding another huge dimension |
-| Mowzie's Cataclysm | New | Testing | Nice bridge between the two boss ecosystems |
-| The Aether | Yes | Optional | Strong secondary realm; add only if it has a defined chapter role |
-| Deeper and Darker | Yes | Optional | Alternative secondary dimension; do not automatically keep every realm |
-| Ad Astra | Yes | Optional | Keep as a late expedition, never as the pack's final goal |
-| IceAndFire Community Edition | Replaces old I&F | Testing | Dragons/legendary materials fit well, but worldgen/content footprint is large |
-| Alex's Caves Neo unofficial port | Replaces old Alex's Caves | Testing later | Old pack used it heavily, but unofficial/new port makes it too risky for foundation |
-| Alex's Mobs Neo unofficial port | Replaces old Alex's Mobs | Optional/Testing | Same concern; don't need it if Mowzie/Cataclysm already cover creature variety |
-| End Remastered | Yes | Rejected initially | Our own Keystone/Relic progression should replace the old eye gate |
-
-## World generation, structures & dungeons
-
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Tectonic | New | Candidate | Terrain shaping; strong base for exploration |
-| Regions Unexplored | Yes | Candidate | Biomes + building palette; test density with Tectonic |
-| Integrated Dungeons and Structures (IDAS) | Yes | Testing | Very thematic with Create/Quark/Supplementaries; likely primary structure suite |
-| YUNG's Better Strongholds | Yes-ish | Candidate | Makes the vanilla End route a real dungeon |
-| YUNG's Better Dungeons | Yes-ish | Optional | Add only if IDAS leaves a dungeon gap |
-| Dungeons & Taverns | New | Optional/Testing | Good structures, but overlaps with IDAS/YUNG; choose, don't stack everything |
-| Lootr | Yes | Candidate | Essential multiplayer dungeon loot handling |
-| The Graveyard / large extra structure stacks | Yes | Rejected initially | Re-add individually only after worldgen density testing |
-
-### Worldgen rule
-Start with **Tectonic + Regions Unexplored + IDAS + Better Strongholds + Lootr**. Add more only after a seed sweep proves the world is not saturated.
-
-## Food, farming & preparation
-
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Farmer's Delight | Yes | Candidate | Main food/cooking ecosystem |
-| Create Slice & Dice | New | Candidate | Industrial food integration |
-| Let's Do: Vinery | Yes | Optional | Good flavor if drinks get a defined buff/economy role |
-| Let's Do: HerbalBrews | Yes | Optional | Potential potion/preparation niche |
-| Bakery / Candlelight / Meadow / Beachparty / Brewery etc. | Yes | Rejected initially | Old suite created food bloat; only bring back individual mods with a clear role |
-
-## Building & decoration
-
-Building content is allowed a little more breadth because it adds less mechanical bloat.
-
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Supplementaries | Yes | Candidate | Excellent vanilla+/town utility and decoration |
-| Quark | Yes | Candidate | Broad vanilla+ improvements; review modules and disable overlap |
-| Create: Copycats+ | New | Candidate | Factory/town building flexibility |
-| Create Deco | Yes | Candidate | Industrial detail |
-| Handcrafted | Yes | Candidate | Furniture/buildables |
-| MrCrayfish's Furniture Mod: Refurbished | Yes | Optional | Functional furniture; test overlap with Handcrafted |
-| Chipped | Yes | Optional | Huge decorative palette; safe-ish but can clutter JEI |
-| Architect's Palette / Another Furniture | Yes | Rejected initially | Add later only if the palette has a real gap |
-
-## Storage, logistics & QoL
-
-**Applied Energistics 2 is not optional infrastructure in T&K3. It is a major progression pillar.**  
-The exact chapter gates can change, but the design target is that AE2 evolves from a manufactured storage/logistics technology into late-game automation infrastructure, with Create-based processor/component manufacturing instead of a mostly untouched default AE2 progression.
-
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Applied Energistics 2 | Yes | Core | Core digital storage, logistics, autocrafting and endgame infrastructure |
-| Sophisticated Backpacks | Yes | Candidate | Player inventory/QoL |
-| Sophisticated Storage | Yes | Optional | Useful early/mid storage, but must not trivialize the road to AE2 |
-| Waystones | Yes | Candidate | Keep, but gate/cost it so travel still matters |
-| Nature's Compass | Yes | Optional | Great anti-frustration tool; gate or reward it |
-| Explorer's Compass | New | Optional | Same for structures; useful if major dungeons are rare |
-| FTB Chunks | Yes | Optional | Claims + map |
-| one map mod | Yes | Candidate | Choose JourneyMap **or** Xaero, not both |
-| EnderStorage / duplicate wireless storage | Yes | Rejected initially | Avoid another storage ecosystem unless a real need appears |
-
-### AE2 integration targets
-- custom Create-manufactured processors/components
-- chapter-gated storage-cell tiers
-- autocrafting as an industrial milestone, not early convenience
-- P2P/spatial/advanced network features as late-game engineering
-- integration with factory logistics and potentially kingdom supply
-- no competing storage mod should make AE2 irrelevant before it opens
-
-## Custom systems / special packdev tools
-
-| Mod | T&K2 | Status | Role / decision |
-|---|---:|---|---|
-| Custom Machinery | New | Testing | Powerful escape hatch for a custom forge/ritual/machine recipe type; beta, only use if Create cannot express the mechanic cleanly |
-| Summoning Rituals | New | Testing | Custom ritual recipe/command/boss trigger framework |
-| LootJS | New | Candidate | Custom loot integration |
-| KubeJS Additions | New | Candidate | Custom presentation/integration |
-| ProbeJS | New | Candidate (dev-only) | Scripting productivity |
-
-## Performance baseline
-
-| Mod | Status | Notes |
+| Mod | Status | Role |
 |---|---|---|
-| ModernFix | Candidate | General fixes, memory/startup improvements |
-| FerriteCore | Candidate | Memory reduction |
-| Embeddium | Candidate | Client renderer performance |
-| Entity Culling | Candidate | Client rendering savings |
+| MineColonies | Core | Settlement → town → kingdom progression |
+| Structurize | Dependency | MineColonies foundation |
+| Create: Colony | Include / test | Mechanical-colony bridge |
 
-Add performance mods one by one and benchmark Create + MineColonies + Epic Fight before calling the stack final.
+Do not add multiple overlapping colony/Create bridge mods until Create: Colony is tested.
 
-# Recommended first compatibility instance
+## Food / preparation
 
-Do **not** install every optional candidate at once.
+| Mod | Status | Role |
+|---|---|---|
+| Farmer's Delight | Core food | Main cooking ecosystem |
+| Create Slice & Dice | Include | Industrial cooking |
+| Alex's Delight | Testing | Alex's Mobs food integration |
+| Alex's Caves Continued Delight | Testing | Cave-food integration |
+| Let's Do: Vinery | Optional later | Only if drinks receive a clear buff/economy role |
+| Let's Do: HerbalBrews | Optional later | Only if it fills a preparation niche |
 
-### Foundation
-Create, **AE2**, KubeJS, LootJS, KubeJS Additions, FTB Quests, FTB Teams, JEI, Jade, Epic Fight, Passive Skill Tree.
+Avoid the previous giant Let's Do food suite.
 
-### First gameplay pillars
-MineColonies, CreateColonies, Farmer's Delight, Slice & Dice, Twilight Forest, Twilight Tweaks, Cataclysm, Mowzie's Mobs, Simply Swords, Artifacts.
+## Building / decoration
 
-### Engineering/building
-Create Connected, Copycats+, Create Deco, Steam 'n' Rails, Sophisticated Backpacks, Supplementaries, Quark, Handcrafted.
+| Mod | Status | Role |
+|---|---|---|
+| Supplementaries | Include | Town utility and decoration |
+| Quark | Include / configure | Vanilla+; disable overlapping modules |
+| Handcrafted | Include | Furniture |
+| Create: Copycats+ | Include | Architectural flexibility |
+| Create Deco | Include | Industrial decoration |
+| Chipped | Optional later | Large decorative library; add if JEI/content load is acceptable |
+| Refurbished Furniture | Optional later | Only if functional furniture is worth the overlap |
 
-### World
-Tectonic, Regions Unexplored, IDAS, YUNG's Better Strongholds, Lootr.
+## Storage / travel / QoL
 
-### Magic test A/B
-- A: Iron's Spells + Malum
-- B: Ars Nouveau + Malum
+| Mod | Status | Role |
+|---|---|---|
+| Applied Energistics 2 | Core | Main storage/logistics system |
+| Sophisticated Backpacks | Include | Player inventory utility |
+| Sophisticated Storage | Optional / early only | Must not make AE2 progression irrelevant |
+| Waystones | Include / gate | Travel convenience with meaningful cost |
+| JourneyMap | Include | One map system only |
+| Nature's Compass | Optional later | Anti-frustration biome finder |
+| Explorer's Compass | Optional later | Major-structure finder if needed |
+| FTB Chunks | Optional | Claims/chunk loading if server design needs it |
 
-### Performance/dev
-ModernFix, FerriteCore, Embeddium, Entity Culling, ProbeJS.
+## Performance / client baseline
 
-This is the **v0.1 compatibility/prototype stack**, not the final pack. The next step is to boot it, verify dependencies, and remove or replace anything that does not justify its footprint.
+| Mod | Status |
+|---|---|
+| ModernFix | Include/test |
+| FerriteCore | Include/test |
+| Embeddium | Include/test |
+| Entity Culling | Include/test |
+
+Benchmark after each major content batch, especially **MineColonies + Alex's Caves + Alex's Mobs + Cataclysm + Ice & Fire**.
+
+# v0.2 first serious test instance
+
+Install together:
+
+**Create + Connected + Copycats+ + Deco + Crafts & Additions + Slice & Dice + Steam 'n' Rails**  
+**AE2**  
+**Mekanism + Mekanism Generators**  
+**KubeJS + LootJS + KubeJS Additions + FTB Quests + JEI + Jade**  
+**Epic Fight + Weapons of Miracles + Passive Skill Tree**  
+**Iron's Spells + Ars Nouveau + Ars 'n Spells + Alex's Caves: Spellbooks**  
+**Alex's Caves Continued + Alex's Mobs Continued**  
+**Cataclysm + Mowzie's Mobs + Twilight Forest + Twilight Tweaks**  
+**MineColonies + Structurize + Create: Colony**  
+**Farmer's Delight + Alex's Delight (test)**  
+**Tectonic + Regions Unexplored + IDAS + Better Strongholds + Lootr**  
+**Supplementaries + Quark + Handcrafted + Sophisticated Backpacks + Waystones + JourneyMap**  
+**ModernFix + FerriteCore + Embeddium + Entity Culling**
+
+Then add **IceAndFire Community Edition** as the first large A/B test. If it improves the pack without saturating worldgen or undermining equipment progression, promote it to Include.
