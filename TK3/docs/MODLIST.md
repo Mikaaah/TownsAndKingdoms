@@ -45,6 +45,7 @@
 - Create Aeronautics
 - Mekanism
 - Mekanism Generators
+- Applied Energistics 2 (AE2)
 - Create: Enchantment Industry
 
 ### Bosses & Mobs
@@ -182,8 +183,10 @@ FTB Quests is the visible campaign/progression layer. AStages provides actual ga
 
 End Remastered is part of the End-access progression. Boss kills and other milestones can be used to gate required Eyes and End access.
 
-### Create + Mekanism
+### Create + Mekanism + AE2
 Create remains the compact mechanical/processing backbone. Mekanism is a later technology layer rather than an immediate replacement for Create.
+
+Applied Energistics 2 is the main late-game storage, logistics and autocrafting network. AE2 should support the production chain rather than replace the intended Create/Mekanism processing progression.
 
 Create Crafts & Additions must be progression-gated so the Alternator / Electric Motor loop does not bypass intended power progression.
 
