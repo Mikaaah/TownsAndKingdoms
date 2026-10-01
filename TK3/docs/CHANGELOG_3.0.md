@@ -104,9 +104,10 @@ Current selected content includes:
 - Create Aeronautics/Sable interactions with claims, teleportation, magic and machines require explicit multiplayer testing.
 
 ### World generation
-- Final worldgen is **not locked yet**.
-- **ReTerraForged** is a candidate under active testing.
-- A world-generation crash has already been observed in the current test cycle; root cause still requires confirmation.
+- **FreeTerraForged** replaces ReTerraForged as the primary Overworld terrain candidate.
+- The selected Overworld test stack now combines FreeTerraForged with Alex's Caves, Biomes O' Plenty, Oh The Biomes We've Gone, Upgrade Aquatic, Atmospheric, Autumnity, Environmental and [Let's Do] BloomingNature.
+- Nether and End worldgen remain under active selection.
+- BOP's Nether/End biome injection will be configured independently from its Overworld role to avoid conflicts with dedicated dimension overhauls.
 
 ### Economy
 - Economy selection is still **TBD**.
@@ -156,7 +157,15 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Scripting | KubeJS | Core | Needs T&K2 audit | Reworked |
 | Scripting | ProbeJS | Core | Needs T&K2 audit | Added / Needs audit |
 | Scripting | LootJS | Core | Needs T&K2 audit | Added / Needs audit |
-| Worldgen | ReTerraForged | Candidate | Needs T&K2 audit | Candidate |
+| Worldgen | FreeTerraForged | Candidate / primary Overworld test | New T&K3 choice | Replaces ReTerraForged |
+| Worldgen | ReTerraForged | Dropped from primary test | T&K3 pre-release candidate | Replaced by FreeTerraForged |
+| Overworld | Biomes O' Plenty | Selected test stack | Needs T&K2 audit | Returning / needs audit |
+| Overworld | Oh The Biomes We've Gone | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Overworld | Upgrade Aquatic | Selected test stack | Needs T&K2 audit | Returning / needs audit |
+| Overworld | Atmospheric | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Overworld | Autumnity | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Overworld | Environmental | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Overworld | [Let's Do] BloomingNature | Selected test stack | Needs T&K2 audit | Added / needs audit |
 
 ---
 
