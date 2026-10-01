@@ -131,12 +131,13 @@ These are part of the intended progression/integration layer rather than standal
 - Apothic Category Compat
 
 ### MineColonies bridges
-- Epic Fight X Minecolonies Compat — **selected**; targeted Epic Fight integration for MineColonies citizens, guards, raiders and mercenaries
+- MineColonies: Epicfied (Epic Colonies) — **candidate / primary test**; preferred richer Epic Fight integration if it proves stable with the locked Epic Fight + MineColonies versions
+- Epic Fight X Minecolonies Compat — **fallback candidate**; simpler compatibility bridge if Epic Colonies shows version, animation or stability issues
 - Create: MineColonies Link — **selected**; connects MineColonies supply requests to Create logistics
 - Compatibility addon for MineColonies — **candidate / high priority test**; relevant because it includes compatibility for Create, Applied Energistics 2 and Ars Nouveau
 - Tweaks addon for MineColonies — **candidate / paired compatibility test**
 
-**Compatibility rule:** Do not stack multiple Epic Fight ↔ MineColonies bridge mods by default. MineColonies: Epicfied (Epic Colonies) is an alternative implementation to evaluate against Epic Fight X Minecolonies Compat, not an automatic additional install.
+**Compatibility rule:** Never load Epic Colonies and Epic Fight X Minecolonies Compat together. Epic Colonies is the primary test candidate; Epic Fight X remains the fallback. Lock the exact Epic Fight + MineColonies versions only after a dedicated combat, raid, animation and multiplayer regression test.
 
 ### Create Aeronautics / Sable bridges
 - Create Aeronautics: FTB Chunks Compat
@@ -239,7 +240,7 @@ MineColonies is the primary T&K3 settlement/kingdom system and replaces MCA Rebo
 
 Create: MineColonies Link is selected so colony supply requests can become part of the Create logistics network instead of remaining a separate manual resource loop.
 
-Epic Fight X Minecolonies Compat is selected as the targeted combat bridge. This is an intentional exception to the general rule against broad generic Epic Fight compatibility packs because it directly integrates a selected T&K3 core system.
+Epic Colonies is the primary MineColonies ↔ Epic Fight test candidate because it provides the richer citizen/animation integration. Epic Fight X Minecolonies Compat remains the simpler fallback if Epic Colonies causes version, animation, rendering or server stability issues. The two bridge mods must never be installed together.
 
 #### Multiplayer performance baseline — initial test values
 These limits are the starting point for dedicated-server testing, not permanent maximums:
