@@ -77,9 +77,9 @@
 - The Twilight Forest
 
 #### End — selected test stack
-- BetterEnd: New Dawn — primary End biome/content layer
-- YUNG's Better End Island — selected main-island / dragon-arena overhaul
-- Nullscape — terrain-layer candidate; explicitly compatible with YUNG's Better End Island
+- BetterEnd: New Dawn — primary End biome/content layer, including the main island and End-city ecosystem
+- Nullscape — terrain-layer candidate
+- YUNG's Better End Island — **rejected for T&K3**; unnecessary overlap with BetterEnd
 - End's Phantasm — **rejected for T&K3**
 
 #### Nether — selected test stack
@@ -88,7 +88,7 @@
 - YUNG's Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility
 - Gardens of the Dead — **rejected for T&K3**
 
-**Structure direction:** Prefer focused YUNG's structure overhauls and dedicated structure mods over stacking additional full-dimension biome overhauls. YUNG's Better End Island is used for the central End island; YUNG's Better Nether Fortresses replaces the vanilla fortress experience without taking ownership of the entire Nether biome source.
+**Structure direction:** BetterEnd remains the primary End overhaul rather than stacking another main-island overhaul on top of it. For the Nether, YUNG's Better Nether Fortresses replaces the vanilla fortress experience without taking ownership of the entire Nether biome source. Supplemental End/Nether structure mods should add exploration without replacing the selected biome/terrain layers.
 
 ### Towns & Kingdoms
 - MineColonies
