@@ -98,11 +98,14 @@ These are part of the intended progression/integration layer rather than standal
 - Create: Enchantment Industry - Create-based XP/enchanting processing
 - Mekanism Generators - Mekanism power-generation progression
 
-### KubeJS integration modules
-- KubeJS Create
-- KubeJS Mekanism
-- KubeJS Ars Nouveau
-- KubeJS Iron's Spells
+### KubeJS integration modules — locked core integrations
+- KubeJS Create — Create
+- KubeJS Mekanism — Mekanism
+- KubeJS Ars Nouveau — Ars Nouveau
+- KubeJS Iron's Spells — Iron's Spells 'n Spellbooks
+- Applied KubeJS — Applied Energistics 2
+
+**Decision:** These five KubeJS integration modules are part of the locked T&K3 core integration layer. They are not optional candidates. Exact compatible jar versions will be pinned when the assembled 1.21.1 NeoForge test instance is version-locked.
 
 ---
 
