@@ -57,7 +57,10 @@
 - Mowzie's Mobs
 
 ### Exploration & World
-- **TBD** - review on the main development PC
+- **ReTerraForged — candidate / active worldgen test**
+- additional worldgen/exploration selection **TBD**
+
+Current testing note: ReTerraForged has been present in the 1.21.1 NeoForge worldgen test instance. A recent world-generation run crashed; root cause is not yet confirmed, so it is not locked as the final worldgen choice.
 
 ### Dimensions
 - The Twilight Forest
@@ -223,7 +226,7 @@ FTB Chunks protection, Sable sublevel behavior, Mekanism machines, magic interac
 
 The following are intentionally not finalized yet:
 
-- Exploration & World
+- final Exploration & World selection
 - Economy
 - Additional Towns & Kingdoms systems
 - Additional Create addons
