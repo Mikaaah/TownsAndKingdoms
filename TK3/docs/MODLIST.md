@@ -67,8 +67,10 @@ Current testing note: ReTerraForged has been present in the 1.21.1 NeoForge worl
 - Amplified Nether
 
 ### Towns & Kingdoms
-- MCA Reborn
+- MineColonies
 - **Additional kingdom/town systems TBD**
+
+**Decision:** MineColonies replaces MCA Reborn as the main settlement/kingdom system for T&K3. MCA Reborn is no longer part of the current baseline.
 
 ### Travel
 - Waystones
@@ -128,6 +130,14 @@ These are part of the intended progression/integration layer rather than standal
 - Apothic Compats
 - Apothic Category Compat
 
+### MineColonies bridges
+- Epic Fight X Minecolonies Compat — **selected**; targeted Epic Fight integration for MineColonies citizens, guards, raiders and mercenaries
+- Create: MineColonies Link — **selected**; connects MineColonies supply requests to Create logistics
+- Compatibility addon for MineColonies — **candidate / high priority test**; relevant because it includes compatibility for Create, Applied Energistics 2 and Ars Nouveau
+- Tweaks addon for MineColonies — **candidate / paired compatibility test**
+
+**Compatibility rule:** Do not stack multiple Epic Fight ↔ MineColonies bridge mods by default. MineColonies: Epicfied (Epic Colonies) is an alternative implementation to evaluate against Epic Fight X Minecolonies Compat, not an automatic additional install.
+
 ### Create Aeronautics / Sable bridges
 - Create Aeronautics: FTB Chunks Compat
 - Create Aeronautics: Mekanism Compatibility
@@ -169,6 +179,12 @@ Install only the **1.21.1 NeoForge** variants required by the selected mod versi
 
 ### Alex's Mobs / Alex's Caves ports
 - Citadel (Unofficial Port)
+
+### MineColonies
+- Structurize
+- Multi-Piston
+- BlockUI
+- Domum Ornamentum
 
 ### Other shared libraries
 - Lionfish API
@@ -217,6 +233,27 @@ Repeated boss kills should generally increase throughput or access to additional
 Epic Fight is the combat framework.
 
 Compatibility for T&K3-selected weapons, mobs and bosses will be maintained with custom T&K3 datapack/KubeJS/resource work where possible instead of depending on a generic external Epic Fight compatibility pack.
+
+### MineColonies
+MineColonies is the primary T&K3 settlement/kingdom system and replaces MCA Reborn in the current baseline.
+
+Create: MineColonies Link is selected so colony supply requests can become part of the Create logistics network instead of remaining a separate manual resource loop.
+
+Epic Fight X Minecolonies Compat is selected as the targeted combat bridge. This is an intentional exception to the general rule against broad generic Epic Fight compatibility packs because it directly integrates a selected T&K3 core system.
+
+#### Multiplayer performance baseline — initial test values
+These limits are the starting point for dedicated-server testing, not permanent maximums:
+
+- maxcitizenpercolony = 100
+- maxColonySize = 12 chunks radius
+- minColonyDistance = 12 chunks
+- forceloadcolony = false
+- pathNodeLimitMultiplier = 1
+- maxRaiders = 40
+- one active colony per player/team as the default server rule
+- do not permanently force-load complete colonies through FTB Chunks in the default server profile
+
+The citizen cap can be raised toward 125–150 only after multiplayer profiling shows enough tick-time headroom. Epic Fight-enabled guards/raiders make entity-heavy raids especially important to profile. Prefer spark profiling before increasing limits.
 
 ### Aeronautics
 Create Aeronautics is intended as a meaningful travel/engineering progression system.
