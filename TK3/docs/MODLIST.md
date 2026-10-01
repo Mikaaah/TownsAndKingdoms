@@ -57,10 +57,21 @@
 - Mowzie's Mobs
 
 ### Exploration & World
-- **ReTerraForged — candidate / active worldgen test**
-- additional worldgen/exploration selection **TBD**
 
-Current testing note: ReTerraForged has been present in the 1.21.1 NeoForge worldgen test instance. A recent world-generation run crashed; root cause is not yet confirmed, so it is not locked as the final worldgen choice.
+#### Overworld — selected worldgen test stack
+- FreeTerraForged — terrain / macro-landform generator
+- Alex's Caves — cave biomes and underground exploration
+- Biomes O' Plenty
+- Oh The Biomes We've Gone (BWG)
+- Upgrade Aquatic
+- Atmospheric
+- Autumnity
+- Environmental
+- [Let's Do] BloomingNature
+
+**Decision:** FreeTerraForged replaces ReTerraForged as the primary T&K3 terrain candidate. BOP + BWG provide the large biome libraries; Team Abnormals and BloomingNature provide smaller, more refined ecosystem/vanilla-biome layers.
+
+**Dimension rule:** BOP's Nether/End biome injection must be treated separately from its Overworld role. Nether and End biome generation may be disabled if the dedicated dimension stack uses BetterNether/BetterEnd or another custom biome source.
 
 ### Dimensions
 - The Twilight Forest
@@ -267,7 +278,8 @@ FTB Chunks protection, Sable sublevel behavior, Mekanism machines, magic interac
 
 The following are intentionally not finalized yet:
 
-- final Exploration & World selection
+- final Nether worldgen selection
+- final End worldgen selection
 - Economy
 - Additional Towns & Kingdoms systems
 - Additional Create addons
