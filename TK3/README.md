@@ -51,6 +51,16 @@ Important decisions:
 - Exploration/worldgen, economy and the expanded Towns & Kingdoms layer still need final lock-in.
 - T&K2 scripts/configs/assets are reference material only.
 
+
+## 3.0 mod list & changelog
+
+- [docs/MODLIST.md](docs/MODLIST.md) — definitive T&K3 mod selection and integration decisions
+- [docs/CHANGELOG_3.0.md](docs/CHANGELOG_3.0.md) — working T&K2 → T&K3 comparison ledger and 3.0 development changelog
+- [wiki/3.0-Modlist.md](wiki/3.0-Modlist.md) — public-facing 3.0 modlist wiki source
+- [wiki/3.0-Changelog.md](wiki/3.0-Changelog.md) — public-facing 3.0 changelog wiki source
+
+Update order: `MODLIST.md` first, then the comparison changelog, then the wiki-source mirrors.
+
 ## Skill tree
 
 Current design baseline: **v3.2.2**.
