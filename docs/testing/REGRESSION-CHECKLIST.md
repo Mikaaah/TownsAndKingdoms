@@ -1,0 +1,16 @@
+# Regression Checklist
+- [ ] clean client starts
+- [ ] dedicated server starts
+- [ ] no fatal KubeJS errors
+- [ ] no missing registry references
+- [ ] quests load
+- [ ] recipe viewer/custom recipes display
+- [ ] Chapter I fresh-world completion
+- [ ] all released chapters completable in order
+- [ ] no obvious duplicate canonical recipes
+- [ ] bosses reward/trigger once
+- [ ] critical structures findable
+- [ ] no missing resource assets
+- [ ] configs match baseline
+- [ ] multiplayer rejoin works
+- [ ] no known dupe or trivial progression bypass
