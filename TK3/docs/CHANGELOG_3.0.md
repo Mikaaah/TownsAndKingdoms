@@ -113,6 +113,50 @@ Current selected content includes:
 - YUNG's Better Nether Fortresses is selected partly because its 1.21.1 NeoForge build includes optional built-in Create compatibility.
 - BOP's Nether/End biome injection will be configured independently from its Overworld role to avoid conflicts with dedicated dimension overhauls.
 
+### Dungeons & structures
+The temporary definitive Overworld dungeon/structure baseline now includes:
+- Integrated Dungeons & Structures (IDAS)
+- Integrated Dungeons Arise (IDA)
+- Integrated Cataclysm
+- Integrated Stronghold
+- YUNG's Better Dungeons
+- Dungeons & Taverns
+
+Large IDAS/IDA structures, especially Create-heavy dungeons, will be made rarer where needed so they remain major discoveries and do not bypass intended Create progression through salvage.
+
+### Optimization
+The temporary definitive optimization baseline is:
+- Sodium
+- Lithium
+- ModernFix
+- FerriteCore
+- ImmediatelyFast
+- Entity Culling
+- BadOptimizations
+- Dynamic FPS
+- AllTheLeaks
+- Clumps
+- FastSuite
+- spark
+- Chunky
+
+More invasive threading/worldgen/network optimizers remain outside the baseline until isolated compatibility testing.
+
+### Quality of life
+The temporary definitive QoL baseline is:
+- JEI
+- Jade
+- Jade Addons
+- AppleSkin
+- Mouse Tweaks
+- Controlling
+- Shulker Box Tooltip
+- Lootr
+- Iris
+- BetterF3
+
+Explorer's Compass is intentionally excluded because direct structure locating conflicts with the pack's exploration design.
+
 ### Economy
 - Economy selection is still **TBD**.
 
@@ -178,6 +222,35 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Nether | BetterNether: New Dawn | Selected test stack | Needs T&K2 audit | Added / needs audit |
 | Nether | YUNG's Better Nether Fortresses | Selected test stack | Needs T&K2 audit | Added / needs audit |
 | Nether | Gardens of the Dead | Rejected | Needs T&K2 audit | Removed from T&K3 consideration |
+| Structures | Integrated Dungeons & Structures | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Structures | Integrated Dungeons Arise | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Structures | Integrated Cataclysm | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Structures | Integrated Stronghold | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Structures | YUNG's Better Dungeons | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Structures | Dungeons & Taverns | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | Sodium | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | Lithium | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | ModernFix | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | FerriteCore | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | ImmediatelyFast | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | Entity Culling | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | BadOptimizations | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | Dynamic FPS | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | AllTheLeaks | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | Clumps | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Optimization | FastSuite | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Tooling | spark | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Tooling | Chunky | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | JEI | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | Jade | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | Jade Addons | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | AppleSkin | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | Mouse Tweaks | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | Controlling | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| QoL | Shulker Box Tooltip | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Multiplayer QoL | Lootr | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Client | Iris | Temporary definitive baseline | Needs T&K2 audit | Selected |
+| Client | BetterF3 | Temporary definitive baseline | Needs T&K2 audit | Selected |
 
 ---
 
