@@ -91,9 +91,12 @@ Current selected content includes:
 - Amplified Nether
 
 ### Towns, kingdoms & multiplayer
-- **MCA Reborn** is currently selected.
+- **MineColonies** now replaces MCA Reborn as the primary settlement/kingdom system.
+- **Epic Fight X Minecolonies Compat** is selected to integrate colony combatants with Epic Fight.
+- **Create: MineColonies Link** is selected to connect colony supply requests to Create logistics.
+- A dedicated multiplayer performance baseline is being introduced for colony population, claims, chunk-loading, pathfinding and raid size.
 - **FTB Chunks** and **FTB Teams** provide the current claims/team foundation.
-- Additional kingdom/town systems are still being selected.
+- Additional kingdom/town integrations can still be selected where they add real cross-mod value.
 
 ### Travel
 - **Waystones** is selected.
@@ -139,7 +142,12 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Mobs | Mowzie's Mobs | Core | Needs T&K2 audit | Needs audit |
 | Dimensions | The Twilight Forest | Core | Needs T&K2 audit | Needs audit |
 | Dimensions | Amplified Nether | Core | Needs T&K2 audit | Added / Needs audit |
-| Towns | MCA Reborn | Core | Needs T&K2 audit | Needs audit |
+| Towns | MineColonies | Core | Needs T&K2 audit | Added / Returning pending audit |
+| Towns | MCA Reborn | Removed from T&K3 baseline | T&K3 pre-release selection | Replaced by MineColonies |
+| Integration | Epic Fight X Minecolonies Compat | Integration | New T&K3 bridge | Added |
+| Integration | Create: MineColonies Link | Integration | New T&K3 bridge | Added |
+| Integration | Compatibility addon for MineColonies | Candidate | New T&K3 bridge | Candidate |
+| Integration | Tweaks addon for MineColonies | Candidate | New T&K3 bridge | Candidate |
 | Travel | Waystones | Core | Needs T&K2 audit | Needs audit |
 | Multiplayer | FTB Chunks | Core | Needs T&K2 audit | Needs audit |
 | Multiplayer | FTB Teams | Core | Needs T&K2 audit | Needs audit |
@@ -147,6 +155,23 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Scripting | ProbeJS | Core | Needs T&K2 audit | Added / Needs audit |
 | Scripting | LootJS | Core | Needs T&K2 audit | Added / Needs audit |
 | Worldgen | ReTerraForged | Candidate | Needs T&K2 audit | Candidate |
+
+---
+
+## MineColonies multiplayer baseline
+
+Initial dedicated-server test limits:
+
+- maximum 100 citizens per colony
+- 12-chunk maximum colony radius
+- 12-chunk minimum colony distance
+- colony force-loading disabled
+- pathfinding node multiplier kept at 1
+- raids capped at 40 raiders
+- one active colony per player/team by default
+- no default permanent FTB Chunks force-loading of complete colonies
+
+These values are deliberately conservative. They can be relaxed after real multiplayer profiling rather than assuming the default MineColonies limits are appropriate for a large T&K3 server.
 
 ---
 
