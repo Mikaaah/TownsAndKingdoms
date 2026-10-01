@@ -106,7 +106,9 @@ Current selected content includes:
 ### World generation
 - **FreeTerraForged** replaces ReTerraForged as the primary Overworld terrain candidate.
 - The selected Overworld test stack now combines FreeTerraForged with Alex's Caves, Biomes O' Plenty, Oh The Biomes We've Gone, Upgrade Aquatic, Atmospheric, Autumnity, Environmental and [Let's Do] BloomingNature.
-- Nether and End worldgen remain under active selection.
+- The End test stack now uses BetterEnd: New Dawn with YUNG's Better End Island; Nullscape remains the terrain-layer candidate. End's Phantasm has been rejected for T&K3.
+- The Nether test stack uses Amplified Nether + BetterNether: New Dawn + YUNG's Better Nether Fortresses. Gardens of the Dead has been rejected for T&K3.
+- YUNG's Better Nether Fortresses is selected partly because its 1.21.1 NeoForge build includes optional built-in Create compatibility.
 - BOP's Nether/End biome injection will be configured independently from its Overworld role to avoid conflicts with dedicated dimension overhauls.
 
 ### Economy
@@ -166,6 +168,14 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Overworld | Autumnity | Selected test stack | Needs T&K2 audit | Added / needs audit |
 | Overworld | Environmental | Selected test stack | Needs T&K2 audit | Added / needs audit |
 | Overworld | [Let's Do] BloomingNature | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| End | BetterEnd: New Dawn | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| End | YUNG's Better End Island | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| End | Nullscape | Candidate terrain layer | Needs T&K2 audit | Candidate |
+| End | End's Phantasm | Rejected | Needs T&K2 audit | Removed from T&K3 consideration |
+| Nether | Amplified Nether | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Nether | BetterNether: New Dawn | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Nether | YUNG's Better Nether Fortresses | Selected test stack | Needs T&K2 audit | Added / needs audit |
+| Nether | Gardens of the Dead | Rejected | Needs T&K2 audit | Removed from T&K3 consideration |
 
 ---
 
