@@ -75,7 +75,20 @@
 
 ### Dimensions
 - The Twilight Forest
-- Amplified Nether
+
+#### End — selected test stack
+- BetterEnd: New Dawn — primary End biome/content layer
+- YUNG's Better End Island — selected main-island / dragon-arena overhaul
+- Nullscape — terrain-layer candidate; explicitly compatible with YUNG's Better End Island
+- End's Phantasm — **rejected for T&K3**
+
+#### Nether — selected test stack
+- Amplified Nether — terrain layer
+- BetterNether: New Dawn — primary Nether biome/content layer
+- YUNG's Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility
+- Gardens of the Dead — **rejected for T&K3**
+
+**Structure direction:** Prefer focused YUNG's structure overhauls and dedicated structure mods over stacking additional full-dimension biome overhauls. YUNG's Better End Island is used for the central End island; YUNG's Better Nether Fortresses replaces the vanilla fortress experience without taking ownership of the entire Nether biome source.
 
 ### Towns & Kingdoms
 - MineColonies
@@ -198,6 +211,9 @@ Install only the **1.21.1 NeoForge** variants required by the selected mod versi
 - BlockUI
 - Domum Ornamentum
 
+### YUNG's Better mods
+- YUNG's API
+
 ### Other shared libraries
 - Lionfish API
 - Jupiter
@@ -278,8 +294,9 @@ FTB Chunks protection, Sable sublevel behavior, Mekanism machines, magic interac
 
 The following are intentionally not finalized yet:
 
-- final Nether worldgen selection
-- final End worldgen selection
+- final Nether structure density / supplemental structures
+- final End structure density / supplemental structures
+- Nullscape final compatibility decision
 - Economy
 - Additional Towns & Kingdoms systems
 - Additional Create addons
