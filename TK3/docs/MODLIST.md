@@ -94,7 +94,7 @@
 - MineColonies
 - **Additional kingdom/town systems TBD**
 
-**Decision:** MineColonies replaces MCA Reborn as the main settlement/kingdom system for T&K3. MCA Reborn is no longer part of the current baseline.
+**Decision:** MineColonies is the selected settlement/kingdom system for T&K3. MCA Reborn was only considered during early T&K3 planning and is not part of the current baseline.
 
 ### Travel
 - Waystones
@@ -263,7 +263,7 @@ Epic Fight is the combat framework.
 Compatibility for T&K3-selected weapons, mobs and bosses will be maintained with custom T&K3 datapack/KubeJS/resource work where possible instead of depending on a generic external Epic Fight compatibility pack.
 
 ### MineColonies
-MineColonies is the primary T&K3 settlement/kingdom system and replaces MCA Reborn in the current baseline.
+MineColonies is the primary T&K3 settlement/kingdom system. MCA Reborn was only an early T&K3 candidate and is not part of the baseline.
 
 Create: MineColonies Link is selected so colony supply requests can become part of the Create logistics network instead of remaining a separate manual resource loop.
 
