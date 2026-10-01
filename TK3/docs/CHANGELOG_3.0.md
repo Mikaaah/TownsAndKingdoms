@@ -91,7 +91,7 @@ Current selected content includes:
 - Amplified Nether
 
 ### Towns, kingdoms & multiplayer
-- **MineColonies** now replaces MCA Reborn as the primary settlement/kingdom system.
+- **MineColonies** is selected as the primary settlement/kingdom system for T&K3. MCA Reborn was only considered during early T&K3 planning and was not part of T&K2.
 - **MineColonies: Epicfied (Epic Colonies)** is now the primary Epic Fight integration candidate for MineColonies.
 - **Epic Fight X Minecolonies Compat** remains the fallback bridge if Epic Colonies fails compatibility or stability testing.
 - **Create: MineColonies Link** is selected to connect colony supply requests to Create logistics.
@@ -149,7 +149,7 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Dimensions | The Twilight Forest | Core | Needs T&K2 audit | Needs audit |
 | Dimensions | Amplified Nether | Core | Needs T&K2 audit | Added / Needs audit |
 | Towns | MineColonies | Core | Needs T&K2 audit | Added / Returning pending audit |
-| Towns | MCA Reborn | Removed from T&K3 baseline | T&K3 pre-release selection | Replaced by MineColonies |
+| Towns | MCA Reborn | Not selected | Not present in T&K2 | Early T&K3 candidate only |
 | Integration | MineColonies: Epicfied (Epic Colonies) | Candidate / primary test | New T&K3 bridge | Candidate |
 | Integration | Epic Fight X Minecolonies Compat | Fallback candidate | New T&K3 bridge | Candidate / fallback |
 | Integration | Create: MineColonies Link | Integration | New T&K3 bridge | Added |
