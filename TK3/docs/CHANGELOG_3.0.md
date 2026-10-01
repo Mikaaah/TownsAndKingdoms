@@ -92,7 +92,8 @@ Current selected content includes:
 
 ### Towns, kingdoms & multiplayer
 - **MineColonies** now replaces MCA Reborn as the primary settlement/kingdom system.
-- **Epic Fight X Minecolonies Compat** is selected to integrate colony combatants with Epic Fight.
+- **MineColonies: Epicfied (Epic Colonies)** is now the primary Epic Fight integration candidate for MineColonies.
+- **Epic Fight X Minecolonies Compat** remains the fallback bridge if Epic Colonies fails compatibility or stability testing.
 - **Create: MineColonies Link** is selected to connect colony supply requests to Create logistics.
 - A dedicated multiplayer performance baseline is being introduced for colony population, claims, chunk-loading, pathfinding and raid size.
 - **FTB Chunks** and **FTB Teams** provide the current claims/team foundation.
@@ -144,7 +145,8 @@ This is the working ledger used while finalizing the 3.0 pack. The T&K2 comparis
 | Dimensions | Amplified Nether | Core | Needs T&K2 audit | Added / Needs audit |
 | Towns | MineColonies | Core | Needs T&K2 audit | Added / Returning pending audit |
 | Towns | MCA Reborn | Removed from T&K3 baseline | T&K3 pre-release selection | Replaced by MineColonies |
-| Integration | Epic Fight X Minecolonies Compat | Integration | New T&K3 bridge | Added |
+| Integration | MineColonies: Epicfied (Epic Colonies) | Candidate / primary test | New T&K3 bridge | Candidate |
+| Integration | Epic Fight X Minecolonies Compat | Fallback candidate | New T&K3 bridge | Candidate / fallback |
 | Integration | Create: MineColonies Link | Integration | New T&K3 bridge | Added |
 | Integration | Compatibility addon for MineColonies | Candidate | New T&K3 bridge | Candidate |
 | Integration | Tweaks addon for MineColonies | Candidate | New T&K3 bridge | Candidate |
