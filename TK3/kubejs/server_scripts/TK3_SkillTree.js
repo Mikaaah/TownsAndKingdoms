@@ -1,3 +1,8 @@
+// IMPORTANT — ARCHIVED RUNTIME BASELINE
+// This file is the older v1.0 10-class generator and is NOT the current T&K3 design source of truth.
+// Current design baseline: v3.2.2 — see TK3/docs/SKILLTREE_V3.2.2.md and TK3/docs/PROJECT_STATUS.md.
+// Do not extend this file as the final tree until the v3.2.x runtime package is restored/re-exported.
+//
 // Towns & Kingdoms 3 - Passive Skill Tree v1.0 BASELINE
 // Minecraft 1.21.1 NeoForge / Passive Skill Tree 1.21.1 port / KubeJS
 // Based on adesanyua/Passive-Skill-Tree examples/kubejs.
