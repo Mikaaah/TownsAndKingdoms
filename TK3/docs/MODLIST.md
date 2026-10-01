@@ -58,7 +58,7 @@
 
 ### Exploration & World
 
-#### Overworld — selected worldgen test stack
+#### Overworld — temporary definitive worldgen baseline
 - FreeTerraForged — terrain / macro-landform generator
 - Alex's Caves — cave biomes and underground exploration
 - Biomes O' Plenty
@@ -72,6 +72,16 @@
 **Decision:** FreeTerraForged replaces ReTerraForged as the primary T&K3 terrain candidate. BOP + BWG provide the large biome libraries; Team Abnormals and BloomingNature provide smaller, more refined ecosystem/vanilla-biome layers.
 
 **Dimension rule:** BOP's Nether/End biome injection must be treated separately from its Overworld role. Nether and End biome generation may be disabled if the dedicated dimension stack uses BetterNether/BetterEnd or another custom biome source.
+
+#### Overworld dungeons & structures — temporary definitive baseline
+- Integrated Dungeons & Structures (IDAS)
+- Integrated Dungeons Arise (IDA)
+- Integrated Cataclysm
+- Integrated Stronghold
+- YUNG's Better Dungeons
+- Dungeons & Taverns
+
+**Dungeon balance rule:** Large IDAS/IDA/Create-heavy structures must be configured substantially rarer than default where necessary. Major structures are intended to be discoveries, not common sources of free Create progression materials. Integrated mob pools and T&K3 LootJS/AStages rules may be used to keep dungeon difficulty and rewards aligned with progression.
 
 ### Dimensions
 - The Twilight Forest
@@ -110,6 +120,37 @@
 
 ### Economy
 - **TBD** - review on the main development PC
+
+### Optimization — temporary definitive baseline
+- Sodium
+- Lithium
+- ModernFix
+- FerriteCore
+- ImmediatelyFast
+- Entity Culling
+- BadOptimizations
+- Dynamic FPS
+- AllTheLeaks
+- Clumps
+- FastSuite
+- spark
+- Chunky
+
+**Optimization rule:** This is the conservative selected baseline. More invasive worldgen/threading/network optimizers such as C2ME, Noisium, ScalableLux, Alternate Current and Krypton Reno are not part of the temporary definitive baseline and may only be added after isolated regression testing.
+
+### Quality of Life — temporary definitive baseline
+- JEI
+- Jade
+- Jade Addons
+- AppleSkin
+- Mouse Tweaks
+- Controlling
+- Shulker Box Tooltip
+- Lootr
+- Iris
+- BetterF3
+
+**QoL rule:** Explorer's Compass is not used because direct structure locating conflicts with T&K3's exploration design. Lootr handles normal multiplayer structure loot; progression-critical rewards remain controlled by T&K3 progression/loot rules.
 
 ---
 
@@ -211,6 +252,9 @@ Install only the **1.21.1 NeoForge** variants required by the selected mod versi
 - BlockUI
 - Domum Ornamentum
 
+### Integrated structure stack
+- Integrated API
+
 ### YUNG's Better mods
 - YUNG's API
 
@@ -300,7 +344,6 @@ The following are intentionally not finalized yet:
 - Economy
 - Additional Towns & Kingdoms systems
 - Additional Create addons
-- Optional QoL/performance mods
 - Final version pins
 - Final Epic Fight moveset compatibility matrix
 
