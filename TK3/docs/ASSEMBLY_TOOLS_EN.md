@@ -19,7 +19,7 @@ The Iron Hammer’s native shaped recipe uses four iron ingots and two sticks. F
 
 Put the starting item on a belt or depot and perform each deployment in order. Two alloys means **two separate deployments**, even when the same deployer is reused. All four sequences have one loop and a guaranteed output. A finishing tool replaces the old final press; there is no extra pressing operation afterwards.
 
-Only tier 1 has a manual mechanism and frame recipe for the first powered workshop. Higher mechanisms use sequenced assembly; their frames use a casing plus one deployed mechanism. Stonecutting then selects the actual machine.
+All mechanisms require sequenced assembly. Only the tier 1 frame has a manual startup recipe from raw materials; automated frames use a casing plus one deployed mechanism. Stonecutting then selects the actual machine.
 
 ## Technical notes
 

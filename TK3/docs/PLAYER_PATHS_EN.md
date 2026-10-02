@@ -10,13 +10,12 @@ Follow these routes to build each workshop. Use the recipe catalogue for exact i
 | Algal Blend, automated | 1 kelp + 1 clay ball | Mixer | 4 |
 | Andesite Alloy, manual | 1 andesite + 1 Algal Blend | Crafting | 2 |
 | Andesite Alloy, automated | 1 andesite + 1 Algal Blend | Mixer | 4 |
-| Kinetic Mechanism, manual | 3 Andesite Alloy + 1 wooden slab | Crafting | 1 |
 | Kinetic Mechanism, automated | 1 wooden slab → deploy 1 Andesite Alloy → deploy a second alloy → deploy with Iron Hammer | Sequenced assembly | 1 |
-| Kinetic Machine, manual | 8 Kinetic Mechanisms around 1 Andesite Casing | Shaped crafting | 1 |
+| Kinetic Machine, manual | 7 Andesite Alloy + 1 wooden slab + 1 Andesite Casing | Shaped crafting | 1 |
 | Kinetic Machine, automated | 1 Andesite Casing + 1 Kinetic Mechanism | Deployer | 1 |
 | Workshop machines | 1 Kinetic Machine | Stonecutting | Choose one recipe output |
 
-**First workshop:** native crafting table, furnace, stonecutter and Andesite Casing → manual blend, alloy, mechanism and frame → water wheel, shafts and cogs → press and basin → mixer and deployer → cheaper automated mechanisms and frames.
+**First workshop:** native crafting table, furnace, stonecutter and Andesite Casing → manual blend, alloy and raw-material frame → water wheel, shafts and cogs → press and basin → mixer and deployer → cheaper automated mechanisms and frames.
 
 A vanilla stonecutter needs iron and stone, without a custom machine prerequisite. Mine the first iron or wash gravel. Sheet, whisk and propeller support routes remain reachable. One frame can become three water wheels, two basins or one press, mixer or deployer. These are separate choices: stonecutting consumes the frame.
 
@@ -96,4 +95,4 @@ The Iron Hammer’s native shaped recipe uses four iron ingots and two sticks. F
 
 Put the starting item on a belt or depot and perform each deployment in order. Two alloys means **two separate deployments**, even when the same deployer is reused. All four sequences have one loop and a guaranteed output. A finishing tool replaces the old final press; there is no extra pressing operation afterwards.
 
-Only tier 1 has a manual mechanism and frame recipe for the first powered workshop. Higher mechanisms use sequenced assembly; their frames use a casing plus one deployed mechanism. Stonecutting then selects the actual machine.
+All mechanisms require sequenced assembly. Only the tier 1 frame has a manual startup recipe from raw materials; automated frames use a casing plus one deployed mechanism. Stonecutting then selects the actual machine.

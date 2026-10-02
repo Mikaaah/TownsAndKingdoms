@@ -13,7 +13,7 @@ Target: Minecraft 1.21.1 NeoForge, KubeJS 2101.7.2 and the selected integration 
 
 ## Updates and load order
 
-The package contains 675 recipes, 81 quests, six component items and four machine-frame blocks. The original 66 quest IDs remain; fifteen extra quests guide frames and compatibility. Four new tool quests guide ordinary tools before milestone rewards. Frame quests are prerequisites for their machine family and chapter milestones.
+The package contains 674 recipes, 81 quests, six component items and four machine-frame blocks. The original 66 quest IDs remain; fifteen extra quests guide frames and compatibility. Four new tool quests guide ordinary tools before milestone rewards. Frame quests are prerequisites for their machine family and chapter milestones.
 
 `tk3_whitelist.js` runs last with priority `-10000`. Do not place another recipe modifier after it at a lower priority. Processing restrictions target recipe type and input; changed machine/component outputs use an exact recipe-ID whitelist.
 

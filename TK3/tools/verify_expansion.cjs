@@ -33,7 +33,8 @@ for(const name of ['kinetic_automated','hydraulic_assembly','precision_assembly'
  const r=registered.find(r=>r.id==='kubejs:tk3/frames/'+name);assert.equal(r.kind,'deploying');assert.equal(r.args[1].length,2);
  assert(r.args[1][0].endsWith('_casing'));assert(!r.keep,'Frame mechanism is consumed');
 }
-assert(registered.find(r=>r.id==='kubejs:tk3/frames/kinetic_manual').args[1].join('').split('M').length-1===8);
+assert.equal(registered.find(r=>r.id==='kubejs:tk3/frames/kinetic_manual').args[1].join('').split('A').length-1,7);
+for(const mech of mechanisms){assert(registered.filter(r=>r.id===mech.id).length===1);assert(m.output_whitelist[mech.output].every(id=>id===mech.id),'No alternate mechanism route');}
 assert(registered.find(r=>r.id.endsWith('/metallurgic_infuser')).keep);
 const schema=m.recipes.filter(r=>r.kind==='wrapped');for(const r of schema){const built=registered.find(x=>x.id===r.id).args[0];assert(built.type.startsWith('sophisticated'));assert.equal(built.result.id,r.output);assert(!built.result.item);assert(built['neoforge:conditions'].length)}
 // Simulate separate native and added recipe collections and late bypass injection.

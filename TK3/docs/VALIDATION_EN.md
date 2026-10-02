@@ -2,7 +2,7 @@
 
 ## Checks completed
 
-The authoring harness registers 675 unique recipes through the explicit API surface. Item inputs and outputs exist in the reviewed registry or are registered by this package; Architect’s Palette is the required addition. Native fluid IDs were checked against ProbeJS.
+The authoring harness registers 674 unique recipes through the explicit API surface. Item inputs and outputs exist in the reviewed registry or are registered by this package; Architect’s Palette is the required addition. Native fluid IDs were checked against ProbeJS.
 
 All 81 quests have unique IDs and an acyclic dependency graph. The final whitelist removes simulated native and injected alloy alternatives while retaining every approved recipe. Processing checks remove an unwanted veridium route and preserve native ingot-to-iron-dust conversion.
 

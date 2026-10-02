@@ -113,10 +113,11 @@
       "id": "81716226DE700507",
       "title": "Kinetic Mechanism",
       "description": [
-        "Manual startup: three Andesite Alloy around one wooden slab. Once you have a deployer, sequence a slab through two separate alloy deployments and finish with a BetterEnd Iron Hammer. One loop, one guaranteed mechanism."
+        "Sequence a wooden slab through two separate Andesite Alloy deployments and finish with a BetterEnd Iron Hammer. One loop, one guaranteed mechanism. Mechanisms have no handcrafting route: start by crafting the first machine frame from raw materials."
       ],
       "dependencies": [
-        "1582749B34D70227"
+        "ACB87B030157932E",
+        "8F0957A5C7DF0B61"
       ],
       "tasks": [
         {
@@ -132,7 +133,7 @@
       ],
       "optional": false,
       "x": 0.0,
-      "y": 3.0,
+      "y": 7.0,
       "icon": "kubejs:tk3_rotation_mechanism",
       "rewards": []
     },
@@ -368,7 +369,8 @@
         "81A75761F9C7C8C5",
         "ACB87B030157932E",
         "3CDCB1B10D0E9151",
-        "8F0957A5C7DF0B61"
+        "8F0957A5C7DF0B61",
+        "81716226DE700507"
       ],
       "tasks": [
         {
@@ -402,10 +404,10 @@
       "id": "3CDCB1B10D0E9151",
       "title": "Kinetic Machine",
       "description": [
-        "Manual startup: eight Kinetic Mechanisms around an Andesite Casing. Automated: deploy one Kinetic Mechanism onto one Andesite Casing. Stonecut the frame into a water wheel, press, basin, mixer or deployer."
+        "Manual startup: seven Andesite Alloy, one wooden slab and one Andesite Casing. Pattern: AAA / ACA / ASA. Automated: deploy one Kinetic Mechanism onto one Andesite Casing. Stonecut the frame into a water wheel, press, basin, mixer or deployer."
       ],
       "dependencies": [
-        "81716226DE700507"
+        "1582749B34D70227"
       ],
       "tasks": [
         {
@@ -420,7 +422,7 @@
       ],
       "optional": false,
       "x": 0.0,
-      "y": 7.0,
+      "y": 3.0,
       "icon": "kubejs:tk3_kinetic_machine",
       "rewards": []
     },
@@ -520,8 +522,8 @@
         }
       ],
       "optional": false,
-      "x": 9.0,
-      "y": 5.0,
+      "x": 6.0,
+      "y": 8.0,
       "icon": "betterend:iron_hammer",
       "rewards": []
     }

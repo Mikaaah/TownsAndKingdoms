@@ -5,7 +5,7 @@ ServerEvents.recipes(event => {
   ["create:crushing_wheel", "create:millstone", "create_wizardry:arcane_casing", "kubejs:tk3_arcane_machine", "kubejs:tk3_hydraulic_machine", "kubejs:tk3_kinetic_machine", "kubejs:tk3_precision_machine"].forEach(output => event.remove({output: output}));
 
   // tier 1 | kubejs:tk3/frames/kinetic_manual
-  event.shaped("kubejs:tk3_kinetic_machine", ["MMM", "MCM", "MMM"], {"M": "kubejs:tk3_rotation_mechanism", "C": "create:andesite_casing"}).id("kubejs:tk3/frames/kinetic_manual");
+  event.shaped("kubejs:tk3_kinetic_machine", ["AAA", "ACA", "ASA"], {"A": "create:andesite_alloy", "C": "create:andesite_casing", "S": "#minecraft:wooden_slabs"}).id("kubejs:tk3/frames/kinetic_manual");
 
   // tier 1 | kubejs:tk3/frames/kinetic_automated
   event.recipes.create.deploying(["kubejs:tk3_kinetic_machine"], ["create:andesite_casing", "kubejs:tk3_rotation_mechanism"]).id("kubejs:tk3/frames/kinetic_automated");

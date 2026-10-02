@@ -16,9 +16,6 @@ ServerEvents.recipes(event => {
   // tier 1 | kubejs:tk3/tier_1/andesite_alloy_bulk
   event.recipes.create.mixing(["4x create:andesite_alloy"], ["minecraft:andesite", "architects_palette:algal_blend"]).id("kubejs:tk3/tier_1/andesite_alloy_bulk");
 
-  // tier 1 | kubejs:tk3/tier_1/tk3_rotation_mechanism
-  event.shaped("kubejs:tk3_rotation_mechanism", [" A ", "ASA", "   "], {"A": "create:andesite_alloy", "S": "#minecraft:wooden_slabs"}).id("kubejs:tk3/tier_1/tk3_rotation_mechanism");
-
   // tier 1 | kubejs:tk3/tier_1/rotation_mechanism_automated
   // Final tool is durability-based. Do not keepHeldItem(): ordinary tools wear; unbreakable rewards do not.
   event.recipes.create.sequenced_assembly(["kubejs:tk3_rotation_mechanism"], "#minecraft:wooden_slabs", [event.recipes.create.deploying(["kubejs:tk3_incomplete_rotation_mechanism"], ["kubejs:tk3_incomplete_rotation_mechanism", "create:andesite_alloy"]), event.recipes.create.deploying(["kubejs:tk3_incomplete_rotation_mechanism"], ["kubejs:tk3_incomplete_rotation_mechanism", "create:andesite_alloy"]), event.recipes.create.deploying(["kubejs:tk3_incomplete_rotation_mechanism"], ["kubejs:tk3_incomplete_rotation_mechanism", "betterend:iron_hammer"])]).transitionalItem("kubejs:tk3_incomplete_rotation_mechanism").loops(1).id("kubejs:tk3/tier_1/rotation_mechanism_automated");

@@ -10,7 +10,6 @@ All authored recipes. Tool inputs in sequences are held by a deployer and lose d
 | 4x architects_palette:algal_blend | mixing | minecraft:kelp → minecraft:clay_ball | — | `kubejs:tk3/tier_1/algal_blend_bulk` |
 | 2x create:andesite_alloy | shapeless | minecraft:andesite → architects_palette:algal_blend | — | `kubejs:tk3/tier_1/andesite_alloy` |
 | 4x create:andesite_alloy | mixing | minecraft:andesite → architects_palette:algal_blend | — | `kubejs:tk3/tier_1/andesite_alloy_bulk` |
-| kubejs:tk3_rotation_mechanism | shaped | A: create:andesite_alloy → S: #minecraft:wooden_slabs | — | `kubejs:tk3/tier_1/tk3_rotation_mechanism` |
 | kubejs:tk3_rotation_mechanism | sequence | #minecraft:wooden_slabs → create:andesite_alloy → create:andesite_alloy → betterend:iron_hammer | Final held tool: betterend:iron_hammer; 1 durability/use; unbreakable supported; One loop, guaranteed result | `kubejs:tk3/tier_1/rotation_mechanism_automated` |
 | 3x create:water_wheel | stonecutting | kubejs:tk3_kinetic_machine | — | `kubejs:tk3/tier_1/water_wheel` |
 | create:large_water_wheel | stonecutting | kubejs:tk3_kinetic_machine | — | `kubejs:tk3/tier_1/large_water_wheel` |
@@ -52,7 +51,7 @@ All authored recipes. Tool inputs in sequences are held by a deployer and lose d
 | 6x create:chute | stonecutting | kubejs:tk3_kinetic_machine | — | `kubejs:tk3/tier_1/chute` |
 | create:speedometer | stonecutting | kubejs:tk3_kinetic_machine | — | `kubejs:tk3/tier_1/speedometer` |
 | create:analog_lever | stonecutting | kubejs:tk3_kinetic_machine | — | `kubejs:tk3/tier_1/analog_lever` |
-| kubejs:tk3_kinetic_machine | shaped | M: kubejs:tk3_rotation_mechanism → C: create:andesite_casing | — | `kubejs:tk3/frames/kinetic_manual` |
+| kubejs:tk3_kinetic_machine | shaped | A: create:andesite_alloy → C: create:andesite_casing → S: #minecraft:wooden_slabs | — | `kubejs:tk3/frames/kinetic_manual` |
 | kubejs:tk3_kinetic_machine | deploying | create:andesite_casing → kubejs:tk3_rotation_mechanism | — | `kubejs:tk3/frames/kinetic_automated` |
 | create:millstone | stonecutting | kubejs:tk3_kinetic_machine | — | `kubejs:tk3/frames/create_millstone` |
 | minecraft:clay_ball | milling | minecraft:andesite | — | `kubejs:tk3/geology/milling_andesite` |

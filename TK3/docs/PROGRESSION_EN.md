@@ -2,7 +2,7 @@
 
 Towns & Kingdoms 3 · Minecraft 1.21.1 NeoForge
 
-Five chapters lead from a manual workshop to tool-finished Create assembly, magical production and the first FE network. There are 675 authored recipes, 663 for tiers 1–5, and 81 quests.
+Five chapters lead from a manual workshop to tool-finished Create assembly, magical production and the first FE network. There are 674 authored recipes, 662 for tiers 1–5, and 81 quests.
 
 ## What the recipe count includes
 
@@ -12,13 +12,13 @@ Timber and storage variants account for much of the catalogue. There are twelve 
 
 | Tier | Frame | How it is made | Role |
 |---|---|---|---|
-| 1 | Tk3 Kinetic Machine | Andesite Casing → deploy one Kinetic Mechanism; manual startup: 8 mechanisms + casing | Basic workshop machines |
+| 1 | Tk3 Kinetic Machine | Andesite Casing → deploy one Kinetic Mechanism; manual startup: 7 Andesite Alloy + wooden slab + casing | Basic workshop machines |
 | 2 | Tk3 Hydraulic Machine | Copper Casing → deploy one Sealed Mechanism | Fluid devices |
 | 3 | Tk3 Precision Machine | Brass Casing → deploy one Precision Mechanism | Smart machinery and logistics |
 | 4 | Tk3 Arcane Machine | Wizardry Arcane Casing → deploy one Arcane Mechanism | Apparatus-based magical devices |
 | 5 | Steel Casing | 5 steel + 2 osmium + Precision Machine + Arcane Machine | Mekanism and first FE |
 
-Only the first mechanism and frame have a costly manual startup recipe. Four different incomplete mechanism items identify the four sequences. Existing Create Precision Mechanism and Mekanism Steel Casing are reused. Frame blocks remain recipe inputs and generator foundations.
+Every mechanism requires sequenced assembly. Only the first machine frame has a costly manual recipe from raw materials. Four different incomplete mechanism items identify the four sequences. Existing Create Precision Mechanism and Mekanism Steel Casing are reused. Frame blocks remain recipe inputs and generator foundations.
 
 ## Progression rules
 
@@ -34,7 +34,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | A living binder | 8 × Kelp | A kingdom starts small | — |
 | Algal Blend | 8 × Algal Blend | A living binder | — |
 | Andesite Alloy | 16 × Andesite Alloy | Algal Blend | — |
-| Kinetic Mechanism | 4 × Tk3 Rotation Mechanism | Andesite Alloy | — |
+| Kinetic Mechanism | 4 × Tk3 Rotation Mechanism | Automate assembly, Tools of the workshop · Workshop Hammer | — |
 | Turn the wheel | 1 × Water Wheel | Kinetic Machine | — |
 | Your first press | 1 × Mechanical Press | Turn the wheel | — |
 | Mix, don’t grind | 1 × Mechanical Mixer | Your first press | — |
@@ -43,8 +43,8 @@ Create handles physical processing. Arcane casing preparation and magical device
 | A renewable workshop · optional | 1 × Mechanical Saw, Confirm the working setup | Automate assembly | — |
 | Stone into iron · optional | 16 × Iron Nugget | Air changes materials | — |
 | Lay your foundations · optional | 1 × Blockhuttownhall | Kinetic Mechanism | — |
-| Milestone · The workshop runs | Confirm the working setup | Mix, don’t grind, Air changes materials, Automate assembly, Kinetic Machine, Tools of the workshop · Workshop Hammer | Workshop Hammer · Unbreakable |
-| Kinetic Machine | 1 × Tk3 Kinetic Machine | Kinetic Mechanism | — |
+| Milestone · The workshop runs | Confirm the working setup | Mix, don’t grind, Air changes materials, Automate assembly, Kinetic Machine, Tools of the workshop · Workshop Hammer, Kinetic Mechanism | Workshop Hammer · Unbreakable |
+| Kinetic Machine | 1 × Tk3 Kinetic Machine | Andesite Alloy | — |
 | A geological worksite · optional | Confirm the working setup | Kinetic Machine | — |
 | Timber without exceptions · optional | 1 × Mechanical Saw | Your first press | — |
 | A modest storage upgrade · optional | 1 × Upgrade Base | Kinetic Machine | — |
