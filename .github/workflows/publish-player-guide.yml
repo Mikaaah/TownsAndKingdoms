@@ -6,6 +6,7 @@ on:
     paths:
       - 'TK3/player-guide/**'
       - '.github/workflows/publish-player-guide.yml'
+      - '.github/workflows/publish-tk3-wiki.yml'
   workflow_dispatch:
 
 permissions:
