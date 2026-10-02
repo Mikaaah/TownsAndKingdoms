@@ -6,7 +6,7 @@ T&K3 development area. T&K2 files in the repository root are historical referenc
 
 **[Open the purple T&K3 player guide](https://mikaaah.github.io/TownsAndKingdoms/)** — tier walkthroughs, machine frames, chapter quests, renewable resources and searchable recipes.
 
-[Read the progression overview](wiki/3.0-Progression.md).
+[Progression](https://mikaaah.github.io/TownsAndKingdoms/progression/) · [Automation](https://mikaaah.github.io/TownsAndKingdoms/automation/) · [Visual recipes](https://mikaaah.github.io/TownsAndKingdoms/workshop/) · [T&K2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/).
 
 ## Current target
 
@@ -62,10 +62,10 @@ Important decisions:
 
 - [docs/MODLIST.md](docs/MODLIST.md) — definitive T&K3 mod selection and integration decisions
 - [docs/CHANGELOG_3.0.md](docs/CHANGELOG_3.0.md) — working T&K2 → T&K3 comparison ledger and 3.0 development changelog
-- [wiki/3.0-Modlist.md](wiki/3.0-Modlist.md) — public-facing 3.0 modlist wiki source
-- [wiki/3.0-Changelog.md](wiki/3.0-Changelog.md) — public-facing 3.0 changelog wiki source
+- [Pages mod list](https://mikaaah.github.io/TownsAndKingdoms/3.0/modlist/) — public-facing migrated mod list
+- [Pages changelog](https://mikaaah.github.io/TownsAndKingdoms/3.0/changelog/) — public-facing migrated changelog
 
-Update order: `MODLIST.md` first, then the comparison changelog, then the wiki-source mirrors.
+Update order: `MODLIST.md` first, then the comparison changelog, then rebuild the handbook. See [Pages migration notes](docs/PAGES_MIGRATION.md).
 
 ## Skill tree
 
@@ -85,3 +85,4 @@ Current design baseline: **v3.2.2**.
 Trello: https://trello.com/b/GI39ejtX/towns-and-kingdoms
 
 GitHub stores the technical/design source of truth. Trello stores implementation status, testing and next actions.
+

@@ -1,23 +1,26 @@
-<p align="center"><img src="TK3/player-guide/banner.svg" alt="Towns & Kingdoms 3 — Player Guide" width="100%"></p>
+<p align="center"><img src="TK3/player-guide/assets/wiki-portal.svg" alt="Towns & Kingdoms 3 — Player Guide" width="100%"></p>
 
 # Towns & Kingdoms 3
 
 Create-powered workshops, living magic and industrial progression for **Minecraft 1.21.1 · NeoForge**.
 
-## Player guide
+## Player handbook
 
-**[Open the purple player guide](https://mikaaah.github.io/TownsAndKingdoms/)**
+**[Open the purple player handbook](https://mikaaah.github.io/TownsAndKingdoms/)**
 
-Follow the first five chapters, build your machines and look up the recipe you need.
+Follow the first five chapters, build your machines and explore the full 2.0 and 3.0 documentation. The GitHub Wiki now points to this handbook.
 
 | Guide | What you will find |
 |---|---|
-| [Getting started](https://mikaaah.github.io/TownsAndKingdoms/#overview) | Your first manual workshop and the path to automation |
-| [Machine frames](https://mikaaah.github.io/TownsAndKingdoms/#frames) | Kinetic, Hydraulic, Precision and Arcane machines |
-| [Tier walkthroughs](https://mikaaah.github.io/TownsAndKingdoms/#paths) | Ingredients, processing steps and bootstrap routes |
-| [Chapters & quests](https://mikaaah.github.io/TownsAndKingdoms/#chapters) | Main goals, prerequisites and optional branches |
-| [Resource generators](https://mikaaah.github.io/TownsAndKingdoms/#compat) | Ten stone selectors and renewable material yields |
-| [Find a recipe](https://mikaaah.github.io/TownsAndKingdoms/#recipes) | Search by item, ingredient, mod, tier or process |
+| [Getting started](https://mikaaah.github.io/TownsAndKingdoms/progression/#overview) | Your first manual workshop and the path to automation |
+| [Machine frames](https://mikaaah.github.io/TownsAndKingdoms/progression/#frames) | Kinetic, Hydraulic, Precision and Arcane machines |
+| [Tier walkthroughs](https://mikaaah.github.io/TownsAndKingdoms/progression/#paths) | Ingredients, processing steps and bootstrap routes |
+| [Chapters & quests](https://mikaaah.github.io/TownsAndKingdoms/progression/#chapters) | Main goals, prerequisites and optional branches |
+| [Resource generators](https://mikaaah.github.io/TownsAndKingdoms/progression/#compat) | Ten stone selectors and renewable material yields |
+| [Automation field guide](https://mikaaah.github.io/TownsAndKingdoms/automation/) | Collection, crop and wood farms, processing and troubleshooting |
+| [Visual recipe workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) | Interactive steps for all authored recipes |
+| [T&K2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | The complete original wiki |
+| [Find a recipe](https://mikaaah.github.io/TownsAndKingdoms/progression/#recipes) | Search by item, ingredient, mod, tier or process |
 
 ## The first five chapters
 
@@ -29,6 +32,7 @@ Follow the first five chapters, build your machines and look up the recipe you n
 | IV · Arcane Industry | Source, magical production and the Wilden trial |
 | V · Industrial Bridge | Steel, first FE and Mekanism refining |
 
-**[Read the progression overview on GitHub](TK3/wiki/3.0-Progression.md)** · **[T&K3 project files](TK3/)**
+**[Read the progression overview](https://mikaaah.github.io/TownsAndKingdoms/3.0/progression/)** · **[T&K3 project files](TK3/)**
 
 The older T&K2 archive is preserved as historical reference.
+

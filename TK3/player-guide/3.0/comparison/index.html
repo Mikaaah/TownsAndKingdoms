@@ -1,0 +1,799 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#301b47"><meta name="description" content="Towns & Kingdoms player documentation, recipes, automation and legacy wiki."><title>T&amp;K2 → T&amp;K3 comparison · Towns & Kingdoms</title><link rel="icon" type="image/svg+xml" href="../../assets/mark.svg"><link rel="stylesheet" href="../../assets/site.css"><link rel="canonical" href="https://mikaaah.github.io/TownsAndKingdoms/3.0/comparison/"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="site-brand" href="../../">TOWNS <em>&</em> KINGDOMS</a><span class="version-label">Player handbook</span><nav class="site-nav" aria-label="Main navigation"><a href="../../">Home</a><a href="../../3.0/">T&K3</a><a href="../../progression/">Chapters & recipes</a><a href="../../automation/">Automation</a><a href="../../workshop/">Visual workshop</a><a href="../../2.0/">T&K2 archive</a></nav></div></header><main class="page" id="main"><div class="breadcrumb"><a href="../../">Home</a> / <a href="../../3.0/">T&K3</a> / T&amp;K2 → T&amp;K3 comparison</div><div class="article-layout"><aside class="article-index" aria-label="On this page"><strong>On this page</strong><a href="#legacy-reference">Legacy reference</a><a href="#comparison-labels">Comparison labels</a><a href="#30-baseline">3.0 baseline</a><a href="#platform">Platform</a><a href="#progression-architecture">Progression architecture</a><a href="#character-progression">Character progression</a><a href="#combat">Combat</a><a href="#gear-amp-loot">Gear &amp; loot</a><a href="#magic">Magic</a><a href="#engineering-automation-amp-storage">Engineering, automation &amp; storage</a><a href="#integration-layer">Integration layer</a><a href="#bosses-mobs-amp-dimensions">Bosses, mobs &amp; dimensions</a><a href="#towns-kingdoms-amp-multiplayer">Towns, kingdoms &amp; multiplayer</a><a href="#travel">Travel</a><a href="#world-generation">World generation</a><a href="#dungeons-amp-structures">Dungeons &amp; structures</a><a href="#optimization">Optimization</a><a href="#quality-of-life">Quality of life</a><a href="#economy">Economy</a><a href="#mod-by-mod-comparison-ledger">Mod-by-mod comparison ledger</a><a href="#minecolonies-multiplayer-baseline">MineColonies multiplayer baseline</a><a href="#open-comparison-work">Open comparison work</a><a href="#maintenance-rule">Maintenance rule</a></aside><article class="article-body"><h1 id="towns-amp-kingdoms-30--modlist-amp-development-changelog">Towns &amp; Kingdoms 3.0 — Modlist &amp; Development Changelog</h1>
+<blockquote>
+<p>Living comparison log for Towns &amp; Kingdoms 3.</p>
+<p>Target: <strong>Minecraft 1.21.1 / NeoForge</strong></p>
+<p>This file tracks meaningful changes from the Towns &amp; Kingdoms 2 era into T&amp;K3. It is intentionally maintained alongside <code>MODLIST.md</code>.</p>
+</blockquote>
+<h2 id="legacy-reference">Legacy reference</h2>
+<p>T&amp;K2 public wiki references:</p>
+<ul>
+<li>Mod list: <a href="https://mikaaah.github.io/TownsAndKingdoms/2.0/modlist/">https://github.com/Mikaaah/TownsAndKingdoms/wiki/Modslist</a></li>
+<li>1.20.1 update: <a href="https://mikaaah.github.io/TownsAndKingdoms/2.0/a-new-world/">https://github.com/Mikaaah/TownsAndKingdoms/wiki/A-New-World-%7C-The-1.20.1-Update</a></li>
+</ul>
+<p>The legacy pages are comparison material only. T&amp;K3 does not inherit a mod, config or script simply because it existed in T&amp;K2.</p>
+<h2 id="comparison-labels">Comparison labels</h2>
+<ul>
+<li><strong>Returning</strong> — confirmed T&amp;K2 concept/mod retained in T&amp;K3.</li>
+<li><strong>Added</strong> — new to T&amp;K3.</li>
+<li><strong>Replaced</strong> — T&amp;K2 mod/system is intentionally superseded.</li>
+<li><strong>Removed</strong> — T&amp;K2 mod/system is intentionally not returning.</li>
+<li><strong>Reworked</strong> — same broad feature remains but its implementation/progression changes substantially.</li>
+<li><strong>Candidate</strong> — under active review; not part of the final stable baseline yet.</li>
+<li><strong>Needs T&amp;K2 audit</strong> — current T&amp;K3 selection is known, but exact T&amp;K2 comparison has not yet been verified against the legacy list.</li>
+</ul>
+<hr>
+<h2 id="30-baseline">3.0 baseline</h2>
+<h3 id="platform">Platform</h3>
+<ul>
+<li>Minecraft target moved to <strong>1.21.1</strong>.</li>
+<li>Loader baseline moved to <strong>NeoForge</strong>.</li>
+<li>T&amp;K3 is treated as a rebuild rather than an in-place port of T&amp;K2.</li>
+<li>T&amp;K2 scripts, configs and assets are reference material only.</li>
+</ul>
+<h3 id="progression-architecture">Progression architecture</h3>
+<ul>
+<li><strong>FTB Quests</strong> is the visible campaign/progression layer.</li>
+<li><strong>AStages</strong> provides hard gameplay gating so recipes, machines, items and systems cannot be bypassed simply by obtaining a late-game item.</li>
+<li><strong>End Remastered</strong> is part of the End-access progression.</li>
+<li>Boss and milestone progression can unlock reusable processing permissions/catalysts.</li>
+</ul>
+<h3 id="character-progression">Character progression</h3>
+<ul>
+<li><strong>Passive Skill Tree</strong> is the character-progression foundation.</li>
+<li>T&amp;K3 uses six definitive classes, eighteen subclasses and four professions.</li>
+<li>Class identity is designed to interact with combat, equipment and progression instead of being a standalone stat screen.</li>
+</ul>
+<h3 id="combat">Combat</h3>
+<ul>
+<li><strong>Epic Fight</strong> is the combat framework.</li>
+<li><strong>Weapons of Miracles</strong> and <strong>Simply Swords</strong> are part of the selected weapon/combat stack.</li>
+<li>Compatibility/movesets for the selected T&amp;K3 stack are maintained by T&amp;K3 instead of relying on a generic compatibility pack.</li>
+</ul>
+<h3 id="gear-amp-loot">Gear &amp; loot</h3>
+<ul>
+<li><strong>Apotheosis / Apothic systems</strong> provide affixes, gems, sockets and related loot systems.</li>
+<li>Default progression/balance is deliberately customized for T&amp;K3.</li>
+</ul>
+<h3 id="magic">Magic</h3>
+<ul>
+<li><strong>Iron&#39;s Spells &#39;n Spellbooks</strong> is primarily the combat-spellcasting system.</li>
+<li><strong>Ars Nouveau</strong> is primarily the arcane crafting, processing and automation system.</li>
+<li>Cross-mod progression is intentionally used to prevent the magic mods from becoming separate progression islands.</li>
+<li><strong>Just Another Witchery Remake</strong> is part of the selected magic stack.</li>
+</ul>
+<h3 id="engineering-automation-amp-storage">Engineering, automation &amp; storage</h3>
+<ul>
+<li><strong>Create</strong> is the early/mid-game mechanical and processing backbone.</li>
+<li><strong>Mekanism + Mekanism Generators</strong> form a later technology layer.</li>
+<li><strong>Applied Energistics 2</strong> is the late-game storage, logistics and autocrafting layer.</li>
+<li>AE2 should support intended processing chains rather than bypass them.</li>
+<li><strong>Create Aeronautics</strong> is planned as a meaningful travel/engineering progression system.</li>
+<li>Automation is intentionally compact; T&amp;K3 avoids unnecessary multi-step material bloat.</li>
+</ul>
+<h3 id="integration-layer">Integration layer</h3>
+<ul>
+<li><strong>KubeJS</strong>, <strong>ProbeJS</strong> and <strong>LootJS</strong> are part of the foundation.</li>
+<li>Locked KubeJS integrations:<ul>
+<li>KubeJS Create</li>
+<li>KubeJS Mekanism</li>
+<li>KubeJS Ars Nouveau</li>
+<li>KubeJS Iron&#39;s Spells</li>
+<li>Applied KubeJS</li>
+</ul>
+</li>
+<li>Cross-mod recipes and compatibility are an intentional pack feature rather than incidental mod overlap.</li>
+</ul>
+<h3 id="bosses-mobs-amp-dimensions">Bosses, mobs &amp; dimensions</h3>
+<p>Current selected content includes:</p>
+<ul>
+<li>Cataclysm</li>
+<li>Alex&#39;s Mobs community 1.21.1 NeoForge port</li>
+<li>Alex&#39;s Caves community 1.21.1 NeoForge port</li>
+<li>Ice and Fire: Community Edition</li>
+<li>Bosses&#39; Rise</li>
+<li>Mowzie&#39;s Mobs</li>
+<li>The Twilight Forest</li>
+<li>Amplified Nether</li>
+</ul>
+<h3 id="towns-kingdoms-amp-multiplayer">Towns, kingdoms &amp; multiplayer</h3>
+<ul>
+<li><strong>MineColonies</strong> is selected as the primary settlement/kingdom system for T&amp;K3. MCA Reborn was only considered during early T&amp;K3 planning and was not part of T&amp;K2.</li>
+<li><strong>MineColonies: Epicfied (Epic Colonies)</strong> is now the primary Epic Fight integration candidate for MineColonies.</li>
+<li><strong>Epic Fight X Minecolonies Compat</strong> remains the fallback bridge if Epic Colonies fails compatibility or stability testing.</li>
+<li><strong>Create: MineColonies Link</strong> is selected to connect colony supply requests to Create logistics.</li>
+<li>A dedicated multiplayer performance baseline is being introduced for colony population, claims, chunk-loading, pathfinding and raid size.</li>
+<li><strong>FTB Chunks</strong> and <strong>FTB Teams</strong> provide the current claims/team foundation.</li>
+<li>Additional kingdom/town integrations can still be selected where they add real cross-mod value.</li>
+</ul>
+<h3 id="travel">Travel</h3>
+<ul>
+<li><strong>Waystones</strong> is selected.</li>
+<li>Create Aeronautics/Sable interactions with claims, teleportation, magic and machines require explicit multiplayer testing.</li>
+</ul>
+<h3 id="world-generation">World generation</h3>
+<ul>
+<li><strong>FreeTerraForged</strong> replaces ReTerraForged as the primary Overworld terrain candidate.</li>
+<li>The selected Overworld test stack now combines FreeTerraForged with Alex&#39;s Caves, Biomes O&#39; Plenty, Oh The Biomes We&#39;ve Gone, Upgrade Aquatic, Atmospheric, Autumnity, Environmental and [Let&#39;s Do] BloomingNature.</li>
+<li>The End test stack now uses BetterEnd: New Dawn as the primary overhaul, with Nullscape remaining the terrain-layer candidate.</li>
+<li>YUNG&#39;s Better End Island has been rejected because BetterEnd already covers the central End experience and additional End structures; stacking another main-island overhaul adds unnecessary overlap.</li>
+<li>End&#39;s Phantasm has been rejected for T&amp;K3.</li>
+<li>The Nether test stack uses Amplified Nether + BetterNether: New Dawn + YUNG&#39;s Better Nether Fortresses. Gardens of the Dead has been rejected for T&amp;K3.</li>
+<li>YUNG&#39;s Better Nether Fortresses is selected partly because its 1.21.1 NeoForge build includes optional built-in Create compatibility.</li>
+<li>BOP&#39;s Nether/End biome injection will be configured independently from its Overworld role to avoid conflicts with dedicated dimension overhauls.</li>
+</ul>
+<h3 id="dungeons-amp-structures">Dungeons &amp; structures</h3>
+<p>The temporary definitive Overworld dungeon/structure baseline now includes:</p>
+<ul>
+<li>Integrated Dungeons &amp; Structures (IDAS)</li>
+<li>Integrated Dungeons Arise (IDA)</li>
+<li>Integrated Cataclysm</li>
+<li>Integrated Stronghold</li>
+<li>YUNG&#39;s Better Dungeons</li>
+<li>Dungeons &amp; Taverns</li>
+</ul>
+<p>Large IDAS/IDA structures, especially Create-heavy dungeons, will be made rarer where needed so they remain major discoveries and do not bypass intended Create progression through salvage.</p>
+<h3 id="optimization">Optimization</h3>
+<p>The temporary definitive optimization baseline is:</p>
+<ul>
+<li>Sodium</li>
+<li>Lithium</li>
+<li>ModernFix</li>
+<li>FerriteCore</li>
+<li>ImmediatelyFast</li>
+<li>Entity Culling</li>
+<li>BadOptimizations</li>
+<li>Dynamic FPS</li>
+<li>AllTheLeaks</li>
+<li>Clumps</li>
+<li>FastSuite</li>
+<li>spark</li>
+<li>Chunky</li>
+</ul>
+<p>More invasive threading/worldgen/network optimizers remain outside the baseline until isolated compatibility testing.</p>
+<h3 id="quality-of-life">Quality of life</h3>
+<p>The temporary definitive QoL baseline is:</p>
+<ul>
+<li>JEI</li>
+<li>Jade</li>
+<li>Jade Addons</li>
+<li>AppleSkin</li>
+<li>Mouse Tweaks</li>
+<li>Controlling</li>
+<li>Shulker Box Tooltip</li>
+<li>Lootr</li>
+<li>Iris</li>
+<li>BetterF3</li>
+</ul>
+<p>Explorer&#39;s Compass is intentionally excluded because direct structure locating conflicts with the pack&#39;s exploration design.</p>
+<h3 id="economy">Economy</h3>
+<ul>
+<li>Economy selection is still <strong>TBD</strong>.</li>
+</ul>
+<hr>
+<h2 id="mod-by-mod-comparison-ledger">Mod-by-mod comparison ledger</h2>
+<p>This is the working ledger used while finalizing the 3.0 pack. The T&amp;K2 comparison column must be updated whenever a mod is locked, removed or replaced.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Mod / System</th>
+<th>T&amp;K3 status</th>
+<th>T&amp;K2 comparison</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Progression</td>
+<td>FTB Quests</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Reworked</td>
+</tr>
+<tr>
+<td>Progression</td>
+<td>AStages</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Reworked</td>
+</tr>
+<tr>
+<td>Progression</td>
+<td>End Remastered</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Character</td>
+<td>Passive Skill Tree</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Reworked</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td>Epic Fight</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Reworked</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td>Weapons of Miracles</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added</td>
+</tr>
+<tr>
+<td>Combat</td>
+<td>Simply Swords</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Gear</td>
+<td>Apotheosis / Apothic</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Reworked</td>
+</tr>
+<tr>
+<td>Magic</td>
+<td>Ars Nouveau</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Magic</td>
+<td>Iron&#39;s Spells &#39;n Spellbooks</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Magic</td>
+<td>Just Another Witchery Remake</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Tech</td>
+<td>Create</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Reworked</td>
+</tr>
+<tr>
+<td>Tech</td>
+<td>Mekanism</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Tech</td>
+<td>Mekanism Generators</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>Applied Energistics 2</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Travel / Tech</td>
+<td>Create Aeronautics</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added</td>
+</tr>
+<tr>
+<td>Bosses</td>
+<td>Cataclysm</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Mobs</td>
+<td>Alex&#39;s Mobs</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Exploration</td>
+<td>Alex&#39;s Caves</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Mobs</td>
+<td>Ice and Fire: Community Edition</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Bosses</td>
+<td>Bosses&#39; Rise</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added</td>
+</tr>
+<tr>
+<td>Mobs</td>
+<td>Mowzie&#39;s Mobs</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>The Twilight Forest</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Dimensions</td>
+<td>Amplified Nether</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Towns</td>
+<td>MineColonies</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Returning pending audit</td>
+</tr>
+<tr>
+<td>Towns</td>
+<td>MCA Reborn</td>
+<td>Not selected</td>
+<td>Not present in T&amp;K2</td>
+<td>Early T&amp;K3 candidate only</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>MineColonies: Epicfied (Epic Colonies)</td>
+<td>Candidate / primary test</td>
+<td>New T&amp;K3 bridge</td>
+<td>Candidate</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Epic Fight X Minecolonies Compat</td>
+<td>Fallback candidate</td>
+<td>New T&amp;K3 bridge</td>
+<td>Candidate / fallback</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Create: MineColonies Link</td>
+<td>Integration</td>
+<td>New T&amp;K3 bridge</td>
+<td>Added</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Compatibility addon for MineColonies</td>
+<td>Candidate</td>
+<td>New T&amp;K3 bridge</td>
+<td>Candidate</td>
+</tr>
+<tr>
+<td>Integration</td>
+<td>Tweaks addon for MineColonies</td>
+<td>Candidate</td>
+<td>New T&amp;K3 bridge</td>
+<td>Candidate</td>
+</tr>
+<tr>
+<td>Travel</td>
+<td>Waystones</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Multiplayer</td>
+<td>FTB Chunks</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Multiplayer</td>
+<td>FTB Teams</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Needs audit</td>
+</tr>
+<tr>
+<td>Scripting</td>
+<td>KubeJS</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Reworked</td>
+</tr>
+<tr>
+<td>Scripting</td>
+<td>ProbeJS</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Scripting</td>
+<td>LootJS</td>
+<td>Core</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / Needs audit</td>
+</tr>
+<tr>
+<td>Worldgen</td>
+<td>FreeTerraForged</td>
+<td>Candidate / primary Overworld test</td>
+<td>New T&amp;K3 choice</td>
+<td>Replaces ReTerraForged</td>
+</tr>
+<tr>
+<td>Worldgen</td>
+<td>ReTerraForged</td>
+<td>Dropped from primary test</td>
+<td>T&amp;K3 pre-release candidate</td>
+<td>Replaced by FreeTerraForged</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>Biomes O&#39; Plenty</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Returning / needs audit</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>Oh The Biomes We&#39;ve Gone</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>Upgrade Aquatic</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Returning / needs audit</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>Atmospheric</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>Autumnity</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>Environmental</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Overworld</td>
+<td>[Let&#39;s Do] BloomingNature</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>End</td>
+<td>BetterEnd: New Dawn</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>End</td>
+<td>YUNG&#39;s Better End Island</td>
+<td>Rejected</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Removed from T&amp;K3 consideration</td>
+</tr>
+<tr>
+<td>End</td>
+<td>Nullscape</td>
+<td>Candidate terrain layer</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Candidate</td>
+</tr>
+<tr>
+<td>End</td>
+<td>End&#39;s Phantasm</td>
+<td>Rejected</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Removed from T&amp;K3 consideration</td>
+</tr>
+<tr>
+<td>Nether</td>
+<td>Amplified Nether</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Nether</td>
+<td>BetterNether: New Dawn</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Nether</td>
+<td>YUNG&#39;s Better Nether Fortresses</td>
+<td>Selected test stack</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Added / needs audit</td>
+</tr>
+<tr>
+<td>Nether</td>
+<td>Gardens of the Dead</td>
+<td>Rejected</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Removed from T&amp;K3 consideration</td>
+</tr>
+<tr>
+<td>Structures</td>
+<td>Integrated Dungeons &amp; Structures</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Structures</td>
+<td>Integrated Dungeons Arise</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Structures</td>
+<td>Integrated Cataclysm</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Structures</td>
+<td>Integrated Stronghold</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Structures</td>
+<td>YUNG&#39;s Better Dungeons</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Structures</td>
+<td>Dungeons &amp; Taverns</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Sodium</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Lithium</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>ModernFix</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>FerriteCore</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>ImmediatelyFast</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Entity Culling</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>BadOptimizations</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Dynamic FPS</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>AllTheLeaks</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Clumps</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>FastSuite</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Tooling</td>
+<td>spark</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Tooling</td>
+<td>Chunky</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>JEI</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>Jade</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>Jade Addons</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>AppleSkin</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>Mouse Tweaks</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>Controlling</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>QoL</td>
+<td>Shulker Box Tooltip</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Multiplayer QoL</td>
+<td>Lootr</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>Iris</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>BetterF3</td>
+<td>Temporary definitive baseline</td>
+<td>Needs T&amp;K2 audit</td>
+<td>Selected</td>
+</tr>
+</tbody></table></div>
+<hr>
+<h2 id="minecolonies-multiplayer-baseline">MineColonies multiplayer baseline</h2>
+<p>Initial dedicated-server test limits:</p>
+<ul>
+<li>maximum 100 citizens per colony</li>
+<li>12-chunk maximum colony radius</li>
+<li>12-chunk minimum colony distance</li>
+<li>colony force-loading disabled</li>
+<li>pathfinding node multiplier kept at 1</li>
+<li>raids capped at 40 raiders</li>
+<li>one active colony per player/team by default</li>
+<li>no default permanent FTB Chunks force-loading of complete colonies</li>
+</ul>
+<p>These values are deliberately conservative. They can be relaxed after real multiplayer profiling rather than assuming the default MineColonies limits are appropriate for a large T&amp;K3 server.</p>
+<hr>
+<h2 id="open-comparison-work">Open comparison work</h2>
+<ul>
+<li>Import/verify the complete T&amp;K2 1.20.1 mod list into the comparison ledger.</li>
+<li>Mark each T&amp;K3 mod as Returning, Added, Replaced or Removed relative to T&amp;K2.</li>
+<li>Record replacements where a T&amp;K2 feature returns through a different mod.</li>
+<li>Keep dependencies out of headline changelog sections unless they materially affect players.</li>
+<li>Add final worldgen, economy, town/kingdom and QoL/performance decisions once locked.</li>
+<li>Add exact jar versions only after the first assembled 1.21.1 NeoForge instance is version-locked.</li>
+</ul>
+<h2 id="maintenance-rule">Maintenance rule</h2>
+<p>Whenever the definitive mod selection changes:</p>
+<ol>
+<li>Update <code>TK3/docs/MODLIST.md</code> first.</li>
+<li>Update the relevant row/section in this changelog.</li>
+<li>Update the public-facing 3.0 wiki-source pages in <code>TK3/wiki/</code>.</li>
+<li>For a removed or replaced mod, record the reason if it affects progression, worlds, servers or player expectations.</li>
+</ol>
+</article></div><footer class="site-footer"><span>Towns & Kingdoms · Build your workshop. Grow your kingdom.</span><div><a href="../../2.0/">2.0 archive</a> · <a href="https://github.com/Mikaaah/TownsAndKingdoms">GitHub</a> · <a href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback</a></div></footer></main><script src="../../assets/site.js" defer></script></body></html>

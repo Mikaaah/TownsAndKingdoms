@@ -1,0 +1,341 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#301b47"><meta name="description" content="Towns & Kingdoms player documentation, recipes, automation and legacy wiki."><title>Selection notes · Towns & Kingdoms</title><link rel="icon" type="image/svg+xml" href="../../assets/mark.svg"><link rel="stylesheet" href="../../assets/site.css"><link rel="canonical" href="https://mikaaah.github.io/TownsAndKingdoms/3.0/selection-notes/"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="site-brand" href="../../">TOWNS <em>&</em> KINGDOMS</a><span class="version-label">Player handbook</span><nav class="site-nav" aria-label="Main navigation"><a href="../../">Home</a><a href="../../3.0/">T&K3</a><a href="../../progression/">Chapters & recipes</a><a href="../../automation/">Automation</a><a href="../../workshop/">Visual workshop</a><a href="../../2.0/">T&K2 archive</a></nav></div></header><main class="page" id="main"><div class="breadcrumb"><a href="../../">Home</a> / <a href="../../3.0/">T&K3</a> / Selection notes</div><div class="article-layout"><aside class="article-index" aria-label="On this page"><strong>On this page</strong><a href="#status-rules">Status rules</a><a href="#core-mods">Core mods</a><a href="#progression">Progression</a><a href="#character--rpg">Character / RPG</a><a href="#combat">Combat</a><a href="#gear-amp-loot">Gear &amp; Loot</a><a href="#magic">Magic</a><a href="#engineering-amp-automation">Engineering &amp; Automation</a><a href="#bosses-amp-mobs">Bosses &amp; Mobs</a><a href="#exploration-amp-world">Exploration &amp; World</a><a href="#dimensions">Dimensions</a><a href="#towns-amp-kingdoms">Towns &amp; Kingdoms</a><a href="#travel">Travel</a><a href="#multiplayer--claims">Multiplayer / Claims</a><a href="#integration--scripting">Integration / Scripting</a><a href="#economy">Economy</a><a href="#optimization--temporary-definitive-baseline">Optimization — temporary definitive baseline</a><a href="#quality-of-life--temporary-definitive-baseline">Quality of Life — temporary definitive baseline</a><a href="#selected-create--technology-integrations">Selected Create / technology integrations</a><a href="#kubejs-integration-modules--locked-core-integrations">KubeJS integration modules — locked core integrations</a><a href="#progression--compatibility-integrations">Progression / compatibility integrations</a><a href="#stages--ftb">Stages / FTB</a><a href="#magic--content-bridges">Magic / content bridges</a><a href="#apotheosis-bridges">Apotheosis bridges</a><a href="#minecolonies-bridges">MineColonies bridges</a><a href="#create-aeronautics--sable-bridges">Create Aeronautics / Sable bridges</a><a href="#required-libraries--dependencies">Required libraries / dependencies</a><a href="#ftb-stack">FTB stack</a><a href="#apotheosis-stack">Apotheosis stack</a><a href="#iron39s-spells-stack">Iron&amp;#39;s Spells stack</a><a href="#just-another-witchery-remake">Just Another Witchery Remake</a><a href="#create-aeronautics">Create Aeronautics</a><a href="#alex39s-mobs--alex39s-caves-ports">Alex&amp;#39;s Mobs / Alex&amp;#39;s Caves ports</a><a href="#minecolonies">MineColonies</a><a href="#integrated-structure-stack">Integrated structure stack</a><a href="#yung39s-better-mods">YUNG&amp;#39;s Better mods</a><a href="#other-shared-libraries">Other shared libraries</a><a href="#important-integration-decisions">Important integration decisions</a><a href="#progression-1">Progression</a><a href="#create--mekanism--ae2">Create + Mekanism + AE2</a><a href="#magic-1">Magic</a><a href="#apotheosis">Apotheosis</a><a href="#boss-progression">Boss progression</a><a href="#epic-fight">Epic Fight</a><a href="#minecolonies-1">MineColonies</a><a href="#aeronautics">Aeronautics</a><a href="#open-sections">Open sections</a></aside><article class="article-body"><h1 id="tampk3-mod-list">T&amp;K3 Mod List</h1>
+<blockquote>
+<p>Source of truth for the current Towns &amp; Kingdoms 3 mod stack.</p>
+<p>Target: <strong>Minecraft 1.21.1 / NeoForge</strong></p>
+</blockquote>
+<h2 id="status-rules">Status rules</h2>
+<ul>
+<li><strong>Core</strong> = selected as part of the current T&amp;K3 foundation.</li>
+<li><strong>Integration</strong> = intended compatibility/progression bridge between selected core mods.</li>
+<li><strong>Dependency</strong> = library required by one or more selected mods.</li>
+<li><strong>Candidate</strong> = useful, but still needs an in-pack test before it becomes part of the stable baseline.</li>
+<li>Exact jar versions will be pinned when the first assembled test instance is built.</li>
+<li>T&amp;K2 scripts/configs/assets are historical reference only and must not be copied into T&amp;K3.</li>
+</ul>
+<hr>
+<h2 id="core-mods">Core mods</h2>
+<h3 id="progression">Progression</h3>
+<ul>
+<li>FTB Quests</li>
+<li>AStages</li>
+<li>End Remastered</li>
+</ul>
+<h3 id="character--rpg">Character / RPG</h3>
+<ul>
+<li>Passive Skill Tree (NeoForge)</li>
+</ul>
+<h3 id="combat">Combat</h3>
+<ul>
+<li>Epic Fight</li>
+<li>Weapons of Miracles</li>
+<li>Simply Swords</li>
+</ul>
+<p><strong>Decision:</strong> Epic Fight compatibility/movesets for the T&amp;K3 core stack will be maintained by T&amp;K3 itself. Do not add a generic community Epic Fight compatibility pack to the baseline.</p>
+<h3 id="gear-amp-loot">Gear &amp; Loot</h3>
+<ul>
+<li>Apotheosis</li>
+</ul>
+<h3 id="magic">Magic</h3>
+<ul>
+<li>Ars Nouveau</li>
+<li>Iron&#39;s Spells &#39;n Spellbooks</li>
+<li>Just Another Witchery Remake</li>
+</ul>
+<h3 id="engineering-amp-automation">Engineering &amp; Automation</h3>
+<ul>
+<li>Create</li>
+<li>Create Aeronautics</li>
+<li>Mekanism</li>
+<li>Mekanism Generators</li>
+<li>Applied Energistics 2 (AE2)</li>
+<li>Create: Enchantment Industry</li>
+</ul>
+<h3 id="bosses-amp-mobs">Bosses &amp; Mobs</h3>
+<ul>
+<li>Cataclysm</li>
+<li>Alex&#39;s Mobs (1.21.1 NeoForge community port)</li>
+<li>Alex&#39;s Caves (1.21.1 NeoForge community port)</li>
+<li>Ice and Fire: Community Edition</li>
+<li>Bosses&#39; Rise - Epic Souls-like Boss Fights</li>
+<li>Mowzie&#39;s Mobs</li>
+</ul>
+<h3 id="exploration-amp-world">Exploration &amp; World</h3>
+<h4 id="overworld--temporary-definitive-worldgen-baseline">Overworld — temporary definitive worldgen baseline</h4>
+<ul>
+<li>FreeTerraForged — terrain / macro-landform generator</li>
+<li>Alex&#39;s Caves — cave biomes and underground exploration</li>
+<li>Biomes O&#39; Plenty</li>
+<li>Oh The Biomes We&#39;ve Gone (BWG)</li>
+<li>Upgrade Aquatic</li>
+<li>Atmospheric</li>
+<li>Autumnity</li>
+<li>Environmental</li>
+<li>[Let&#39;s Do] BloomingNature</li>
+</ul>
+<p><strong>Decision:</strong> FreeTerraForged replaces ReTerraForged as the primary T&amp;K3 terrain candidate. BOP + BWG provide the large biome libraries; Team Abnormals and BloomingNature provide smaller, more refined ecosystem/vanilla-biome layers.</p>
+<p><strong>Dimension rule:</strong> BOP&#39;s Nether/End biome injection must be treated separately from its Overworld role. Nether and End biome generation may be disabled if the dedicated dimension stack uses BetterNether/BetterEnd or another custom biome source.</p>
+<h4 id="overworld-dungeons-amp-structures--temporary-definitive-baseline">Overworld dungeons &amp; structures — temporary definitive baseline</h4>
+<ul>
+<li>Integrated Dungeons &amp; Structures (IDAS)</li>
+<li>Integrated Dungeons Arise (IDA)</li>
+<li>Integrated Cataclysm</li>
+<li>Integrated Stronghold</li>
+<li>YUNG&#39;s Better Dungeons</li>
+<li>Dungeons &amp; Taverns</li>
+</ul>
+<p><strong>Dungeon balance rule:</strong> Large IDAS/IDA/Create-heavy structures must be configured substantially rarer than default where necessary. Major structures are intended to be discoveries, not common sources of free Create progression materials. Integrated mob pools and T&amp;K3 LootJS/AStages rules may be used to keep dungeon difficulty and rewards aligned with progression.</p>
+<h3 id="dimensions">Dimensions</h3>
+<ul>
+<li>The Twilight Forest</li>
+</ul>
+<h4 id="end--selected-test-stack">End — selected test stack</h4>
+<ul>
+<li>BetterEnd: New Dawn — primary End biome/content layer, including the main island and End-city ecosystem</li>
+<li>Nullscape — terrain-layer candidate</li>
+<li>YUNG&#39;s Better End Island — <strong>rejected for T&amp;K3</strong>; unnecessary overlap with BetterEnd</li>
+<li>End&#39;s Phantasm — <strong>rejected for T&amp;K3</strong></li>
+</ul>
+<h4 id="nether--selected-test-stack">Nether — selected test stack</h4>
+<ul>
+<li>Amplified Nether — terrain layer</li>
+<li>BetterNether: New Dawn — primary Nether biome/content layer</li>
+<li>YUNG&#39;s Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility</li>
+<li>Gardens of the Dead — <strong>rejected for T&amp;K3</strong></li>
+</ul>
+<p><strong>Structure direction:</strong> BetterEnd remains the primary End overhaul rather than stacking another main-island overhaul on top of it. For the Nether, YUNG&#39;s Better Nether Fortresses replaces the vanilla fortress experience without taking ownership of the entire Nether biome source. Supplemental End/Nether structure mods should add exploration without replacing the selected biome/terrain layers.</p>
+<h3 id="towns-amp-kingdoms">Towns &amp; Kingdoms</h3>
+<ul>
+<li>MineColonies</li>
+<li><strong>Additional kingdom/town systems TBD</strong></li>
+</ul>
+<p><strong>Decision:</strong> MineColonies is the selected settlement/kingdom system for T&amp;K3. MCA Reborn was only considered during early T&amp;K3 planning and is not part of the current baseline.</p>
+<h3 id="travel">Travel</h3>
+<ul>
+<li>Waystones</li>
+</ul>
+<h3 id="multiplayer--claims">Multiplayer / Claims</h3>
+<ul>
+<li>FTB Chunks</li>
+<li>FTB Teams</li>
+</ul>
+<h3 id="integration--scripting">Integration / Scripting</h3>
+<ul>
+<li>KubeJS</li>
+<li>ProbeJS</li>
+<li>LootJS</li>
+</ul>
+<h3 id="economy">Economy</h3>
+<ul>
+<li><strong>TBD</strong> - review on the main development PC</li>
+</ul>
+<h3 id="optimization--temporary-definitive-baseline">Optimization — temporary definitive baseline</h3>
+<ul>
+<li>Sodium</li>
+<li>Lithium</li>
+<li>ModernFix</li>
+<li>FerriteCore</li>
+<li>ImmediatelyFast</li>
+<li>Entity Culling</li>
+<li>BadOptimizations</li>
+<li>Dynamic FPS</li>
+<li>AllTheLeaks</li>
+<li>Clumps</li>
+<li>FastSuite</li>
+<li>spark</li>
+<li>Chunky</li>
+</ul>
+<p><strong>Optimization rule:</strong> This is the conservative selected baseline. More invasive worldgen/threading/network optimizers such as C2ME, Noisium, ScalableLux, Alternate Current and Krypton Reno are not part of the temporary definitive baseline and may only be added after isolated regression testing.</p>
+<h3 id="quality-of-life--temporary-definitive-baseline">Quality of Life — temporary definitive baseline</h3>
+<ul>
+<li>JEI</li>
+<li>Jade</li>
+<li>Jade Addons</li>
+<li>AppleSkin</li>
+<li>Mouse Tweaks</li>
+<li>Controlling</li>
+<li>Shulker Box Tooltip</li>
+<li>Lootr</li>
+<li>Iris</li>
+<li>BetterF3</li>
+</ul>
+<p><strong>QoL rule:</strong> Explorer&#39;s Compass is not used because direct structure locating conflicts with T&amp;K3&#39;s exploration design. Lootr handles normal multiplayer structure loot; progression-critical rewards remain controlled by T&amp;K3 progression/loot rules.</p>
+<hr>
+<h2 id="selected-create--technology-integrations">Selected Create / technology integrations</h2>
+<p>These are part of the intended progression/integration layer rather than standalone content bloat.</p>
+<ul>
+<li>Create Crafts &amp; Additions - bridge Create rotational power and FE-based technology</li>
+<li>Ars Creo - Create + Ars Nouveau</li>
+<li>Create: Ars Nouveau Compat - selected Create processing for Ars materials</li>
+<li>Create: Wizardry - Create + Iron&#39;s Spells &#39;n Spellbooks</li>
+<li>Create: Enchantment Industry - Create-based XP/enchanting processing</li>
+<li>Mekanism Generators - Mekanism power-generation progression</li>
+</ul>
+<h3 id="kubejs-integration-modules--locked-core-integrations">KubeJS integration modules — locked core integrations</h3>
+<ul>
+<li>KubeJS Create — Create</li>
+<li>KubeJS Mekanism — Mekanism</li>
+<li>KubeJS Ars Nouveau — Ars Nouveau</li>
+<li>KubeJS Iron&#39;s Spells — Iron&#39;s Spells &#39;n Spellbooks</li>
+<li>Applied KubeJS — Applied Energistics 2</li>
+</ul>
+<p><strong>Decision:</strong> These five KubeJS integration modules are part of the locked T&amp;K3 core integration layer. They are not optional candidates. Exact compatible jar versions will be pinned when the assembled 1.21.1 NeoForge test instance is version-locked.</p>
+<hr>
+<h2 id="progression--compatibility-integrations">Progression / compatibility integrations</h2>
+<h3 id="stages--ftb">Stages / FTB</h3>
+<ul>
+<li>FTB XMod Compat</li>
+<li>AStages FTB Quests</li>
+<li>AStages Curios</li>
+</ul>
+<h3 id="magic--content-bridges">Magic / content bridges</h3>
+<ul>
+<li>Ars &#39;n Spells</li>
+<li>Alex&#39;s Caves: Spellbooks</li>
+<li>Cataclysm: Spellbooks</li>
+<li>Ice and Fire: Spellbooks</li>
+<li>Spellbooks of Twilight</li>
+</ul>
+<h3 id="apotheosis-bridges">Apotheosis bridges</h3>
+<ul>
+<li>Apotheosis x Iron&#39;s Spellbooks Compat</li>
+<li>Apothic Compats</li>
+<li>Apothic Category Compat</li>
+</ul>
+<h3 id="minecolonies-bridges">MineColonies bridges</h3>
+<ul>
+<li>MineColonies: Epicfied (Epic Colonies) — <strong>candidate / primary test</strong>; preferred richer Epic Fight integration if it proves stable with the locked Epic Fight + MineColonies versions</li>
+<li>Epic Fight X Minecolonies Compat — <strong>fallback candidate</strong>; simpler compatibility bridge if Epic Colonies shows version, animation or stability issues</li>
+<li>Create: MineColonies Link — <strong>selected</strong>; connects MineColonies supply requests to Create logistics</li>
+<li>Compatibility addon for MineColonies — <strong>candidate / high priority test</strong>; relevant because it includes compatibility for Create, Applied Energistics 2 and Ars Nouveau</li>
+<li>Tweaks addon for MineColonies — <strong>candidate / paired compatibility test</strong></li>
+</ul>
+<p><strong>Compatibility rule:</strong> Never load Epic Colonies and Epic Fight X Minecolonies Compat together. Epic Colonies is the primary test candidate; Epic Fight X remains the fallback. Lock the exact Epic Fight + MineColonies versions only after a dedicated combat, raid, animation and multiplayer regression test.</p>
+<h3 id="create-aeronautics--sable-bridges">Create Aeronautics / Sable bridges</h3>
+<ul>
+<li>Create Aeronautics: FTB Chunks Compat</li>
+<li>Create Aeronautics: Mekanism Compatibility</li>
+<li>Ars Sable</li>
+<li>Waystones: Sable</li>
+<li>IronSable - <strong>candidate; test before locking</strong></li>
+</ul>
+<hr>
+<h2 id="required-libraries--dependencies">Required libraries / dependencies</h2>
+<p>Install only the <strong>1.21.1 NeoForge</strong> variants required by the selected mod versions. Transitive dependency versions are pinned with the first assembled test instance.</p>
+<h3 id="ftb-stack">FTB stack</h3>
+<ul>
+<li>Architectury API</li>
+<li>FTB Library</li>
+</ul>
+<h3 id="apotheosis-stack">Apotheosis stack</h3>
+<ul>
+<li>Placebo</li>
+<li>Patchouli</li>
+<li>Apothic Attributes</li>
+<li>Apothic Spawners</li>
+<li>Apothic Enchanting</li>
+</ul>
+<h3 id="iron39s-spells-stack">Iron&#39;s Spells stack</h3>
+<ul>
+<li>Curios API</li>
+<li>GeckoLib</li>
+<li>Iron&#39;s Lib</li>
+<li>playerAnimator</li>
+</ul>
+<h3 id="just-another-witchery-remake">Just Another Witchery Remake</h3>
+<ul>
+<li>Curios API</li>
+<li>Kotlin for Forge</li>
+<li>Modonomicon</li>
+</ul>
+<h3 id="create-aeronautics">Create Aeronautics</h3>
+<ul>
+<li>Create</li>
+<li>Sable</li>
+</ul>
+<h3 id="alex39s-mobs--alex39s-caves-ports">Alex&#39;s Mobs / Alex&#39;s Caves ports</h3>
+<ul>
+<li>Citadel (Unofficial Port)</li>
+</ul>
+<h3 id="minecolonies">MineColonies</h3>
+<ul>
+<li>Structurize</li>
+<li>Multi-Piston</li>
+<li>BlockUI</li>
+<li>Domum Ornamentum</li>
+</ul>
+<h3 id="integrated-structure-stack">Integrated structure stack</h3>
+<ul>
+<li>Integrated API</li>
+</ul>
+<h3 id="yung39s-better-mods">YUNG&#39;s Better mods</h3>
+<ul>
+<li>YUNG&#39;s API</li>
+</ul>
+<h3 id="other-shared-libraries">Other shared libraries</h3>
+<ul>
+<li>Lionfish API</li>
+<li>Jupiter</li>
+<li>Uranus</li>
+<li>Balm</li>
+<li>Rhino</li>
+<li>Better Advanced Tooltips</li>
+<li>Fzzy Config</li>
+<li>Simply Tooltips</li>
+</ul>
+<hr>
+<h2 id="important-integration-decisions">Important integration decisions</h2>
+<h3 id="progression-1">Progression</h3>
+<p>FTB Quests is the visible campaign/progression layer. AStages provides actual gameplay locks so recipes, machines, items, equipment slots and major systems cannot be bypassed by gifting or finding late-game items.</p>
+<p>End Remastered is part of the End-access progression. Boss kills and other milestones can be used to gate required Eyes and End access.</p>
+<h3 id="create--mekanism--ae2">Create + Mekanism + AE2</h3>
+<p>Create remains the compact mechanical/processing backbone. Mekanism is a later technology layer rather than an immediate replacement for Create.</p>
+<p>Applied Energistics 2 is the main late-game storage, logistics and autocrafting network. AE2 should support the production chain rather than replace the intended Create/Mekanism processing progression.</p>
+<p>Create Crafts &amp; Additions must be progression-gated so the Alternator / Electric Motor loop does not bypass intended power progression.</p>
+<h3 id="magic-1">Magic</h3>
+<p>Iron&#39;s Spells is primarily the combat-spellcasting system.</p>
+<p>Ars Nouveau is primarily the arcane crafting/processing/automation system.</p>
+<p>Cross-mod recipes should intentionally connect Create, Ars Nouveau, Iron&#39;s Spells and boss progression rather than letting each mod remain a separate progression island.</p>
+<h3 id="apotheosis">Apotheosis</h3>
+<p>Apotheosis is the affix/gem/socket/salvage framework, but its default progression and balance will be customized for T&amp;K3.</p>
+<p>T&amp;K3 rarity forging, reinforcement and Unique weapon evolution are separate custom systems built around KubeJS/Create/magic/boss progression.</p>
+<h3 id="boss-progression">Boss progression</h3>
+<p>Major bosses can unlock permanent reusable processing catalysts. Boss defeat stages provide permission; physical catalysts provide production capacity.</p>
+<p>Repeated boss kills should generally increase throughput or access to additional catalyst copies rather than being mandatory consumable grind.</p>
+<h3 id="epic-fight">Epic Fight</h3>
+<p>Epic Fight is the combat framework.</p>
+<p>Compatibility for T&amp;K3-selected weapons, mobs and bosses will be maintained with custom T&amp;K3 datapack/KubeJS/resource work where possible instead of depending on a generic external Epic Fight compatibility pack.</p>
+<h3 id="minecolonies-1">MineColonies</h3>
+<p>MineColonies is the primary T&amp;K3 settlement/kingdom system. MCA Reborn was only an early T&amp;K3 candidate and is not part of the baseline.</p>
+<p>Create: MineColonies Link is selected so colony supply requests can become part of the Create logistics network instead of remaining a separate manual resource loop.</p>
+<p>Epic Colonies is the primary MineColonies ↔ Epic Fight test candidate because it provides the richer citizen/animation integration. Epic Fight X Minecolonies Compat remains the simpler fallback if Epic Colonies causes version, animation, rendering or server stability issues. The two bridge mods must never be installed together.</p>
+<h4 id="multiplayer-performance-baseline--initial-test-values">Multiplayer performance baseline — initial test values</h4>
+<p>These limits are the starting point for dedicated-server testing, not permanent maximums:</p>
+<ul>
+<li>maxcitizenpercolony = 100</li>
+<li>maxColonySize = 12 chunks radius</li>
+<li>minColonyDistance = 12 chunks</li>
+<li>forceloadcolony = false</li>
+<li>pathNodeLimitMultiplier = 1</li>
+<li>maxRaiders = 40</li>
+<li>one active colony per player/team as the default server rule</li>
+<li>do not permanently force-load complete colonies through FTB Chunks in the default server profile</li>
+</ul>
+<p>The citizen cap can be raised toward 125–150 only after multiplayer profiling shows enough tick-time headroom. Epic Fight-enabled guards/raiders make entity-heavy raids especially important to profile. Prefer spark profiling before increasing limits.</p>
+<h3 id="aeronautics">Aeronautics</h3>
+<p>Create Aeronautics is intended as a meaningful travel/engineering progression system.</p>
+<p>FTB Chunks protection, Sable sublevel behavior, Mekanism machines, magic interactions and teleportation must be explicitly tested before the first multiplayer baseline is considered stable.</p>
+<hr>
+<h2 id="open-sections">Open sections</h2>
+<p>The following are intentionally not finalized yet:</p>
+<ul>
+<li>final Nether structure density / supplemental structures</li>
+<li>final End structure density / supplemental structures</li>
+<li>Nullscape final compatibility decision</li>
+<li>Economy</li>
+<li>Additional Towns &amp; Kingdoms systems</li>
+<li>Additional Create addons</li>
+<li>Final version pins</li>
+<li>Final Epic Fight moveset compatibility matrix</li>
+</ul>
+<p>Do not fill these with random content mods just to make the list larger. Each addition should have a clear role in progression, worldbuilding, integration or multiplayer.</p>
+</article></div><footer class="site-footer"><span>Towns & Kingdoms · Build your workshop. Grow your kingdom.</span><div><a href="../../2.0/">2.0 archive</a> · <a href="https://github.com/Mikaaah/TownsAndKingdoms">GitHub</a> · <a href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback</a></div></footer></main><script src="../../assets/site.js" defer></script></body></html>
