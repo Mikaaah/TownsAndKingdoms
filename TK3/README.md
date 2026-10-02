@@ -4,7 +4,7 @@ T&K3 development area. T&K2 files in the repository root are historical referenc
 
 ## Player guide
 
-**[Open the purple T&K3 player guide](https://mikaaah.github.io/TownsAndKingdoms/)** — tier walkthroughs, machine frames, chapter quests, renewable resources and searchable recipes.
+**[Open the official T&K3 wiki](https://mikaaah.github.io/TownsAndKingdoms/)** — tier walkthroughs, machine frames, chapter quests, renewable resources and searchable recipes.
 
 [Progression](https://mikaaah.github.io/TownsAndKingdoms/progression/) · [Automation](https://mikaaah.github.io/TownsAndKingdoms/automation/) · [Visual recipes](https://mikaaah.github.io/TownsAndKingdoms/workshop/) · [T&K2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/).
 
@@ -65,7 +65,7 @@ Important decisions:
 - [Pages mod list](https://mikaaah.github.io/TownsAndKingdoms/3.0/modlist/) — public-facing migrated mod list
 - [Pages changelog](https://mikaaah.github.io/TownsAndKingdoms/3.0/changelog/) — public-facing migrated changelog
 
-Update order: `MODLIST.md` first, then the comparison changelog, then rebuild the handbook. See [Pages migration notes](docs/PAGES_MIGRATION.md).
+Update order: `MODLIST.md` first, then the comparison changelog, then rebuild the wiki. See [Pages migration notes](docs/PAGES_MIGRATION.md).
 
 ## Skill tree
 

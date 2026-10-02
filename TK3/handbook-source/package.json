@@ -2,6 +2,8 @@
   "name": "towns-and-kingdoms-handbook",
   "private": true,
   "dependencies": {
-    "marked": "17.0.5"
+    "marked": "17.0.5",
+    "three": "0.180.0",
+    "esbuild": "0.25.10"
   }
 }

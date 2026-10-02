@@ -1,4 +1,4 @@
-# Automation field guide
+# ⚙ AUTOMATION GUIDE
 
 Build a small, reliable workshop first. Add collection, buffers and a clear output before increasing speed. The recipes linked here follow the current T&K3 chapters; the videos show general Create layouts and may use older Minecraft versions.
 
@@ -28,7 +28,7 @@ The **machine frame** is a recipe ingredient. Stonecutting it gives the working 
 
 **A Hopper Upgrade is not a vacuum.** For loose drops in tier 1, use a vanilla hopper; for contact collection use Pickup, and for collection over an area use Magnet. Magnet range and upgrade speed depend on the installed configuration.
 
-### A simple tier 1 transfer stack
+### ◆ A SIMPLE TIER 1 TRANSFER STACK
 
 1. Craft a Sophisticated chest or barrel with a free upgrade slot. A vanilla chest cannot accept its upgrades.
 2. Make the T&K3 **Upgrade Base**: two Iron Sheets, two planks and one Kinetic Mechanism, in the listed shaped pattern.
@@ -50,12 +50,12 @@ Use a Clutch when you want to stop a branch while leaving the rest of the worksh
 
 ## Crop farm: wheat, carrots and potatoes
 
-**Tier 1.** A small rotating arm is an accessible first farm. Start with vanilla crops; test unfamiliar modded crops on a short arm before planting a whole field.
+**Tier 1.** A small rotating arm is an accessible first farm. **The support arm and Harvesters sit at different heights:** the arm runs above the plants; the Harvesters hang at plant height. Start with vanilla crops; test unfamiliar modded crops on a short arm before planting a whole field.
 
 **Parts:** one Mechanical Bearing; a glued arm or chassis; Harvesters covering your chosen rows; one attached chest or barrel; rotation; and, for automatic unloading, **two** Portable Storage Interfaces plus a receiving hopper or funnel.
 
 1. Prepare a hydrated, well-lit field and plant the crop. Leave room for the arm to pass across the plants.
-2. Point the bearing upwards and attach an arm above it. Mount Harvesters at crop height, facing the direction in which the arm moves.
+2. Point the bearing upwards and attach a glued central column and support arm. Mount Harvesters underneath the arm at crop height, facing the direction in which the arm moves.
 3. Glue the storage and all moving parts into the same contraption. Keep the receiving chest and hopper stationary.
 4. Supply rotation and assemble the bearing. Moving Harvesters harvest mature crops and reset supported plants when Create's replant setting is enabled. A stationary Harvester alone is not a working farm.
 5. Put one Portable Storage Interface on the arm and another on the fixed unloading point. Their faces must align as the arm passes, with **one or two air blocks** between them; start with one.
@@ -65,7 +65,19 @@ Keep seeds available for expanding the field. Do not mill all wheat immediately:
 
 **If it fails:** check hydration and light; harvester orientation and height; glue on the chest; the replant configuration; aligned interfaces; and space in the output. A full chest can stop a perfectly good unloading station.
 
-<div class="farm-diagram" data-diagram="crop" aria-label="Crop farm layout"></div>
+### Build heights — a small bearing farm
+
+Use a **three-block harvesting radius** for your first test. Hydrate the field within four blocks of a water source; the bearing occupies the centre, so place water beside it. Add light and leave the sweep clear.
+
+| Layer | Placement | Check |
+|---|---|---|
+| **Y = 0 — GROUND** | Farmland, water and the upward-facing bearing | Feed the bearing from below; keep farmland hydrated |
+| **Y = 1 — CROP** | Wheat, carrots or potatoes; moving Harvesters | The Harvesters pass through the plant layer, facing the direction of travel |
+| **Y = 2 — SUPPORT** | Glued support arm and attached inventory | Hang the Harvesters underneath; connect the arm to the bearing with a glued central column |
+
+<div class="equipment-strip" data-items="create:mechanical_bearing,create:mechanical_harvester,create:portable_storage_interface,minecraft:water_bucket"></div>
+
+<div class="build-check"><strong>◆ FIRST TEST</strong><p>Start with one mature crop in the sweep. Confirm <b>HARVEST → REPLANT → MOVING STORAGE → FIXED STORAGE</b> before extending the field. Hold <b>W</b> over the Mechanical Harvester and Portable Storage Interface for Create’s placement demonstrations.</p></div>
 
 ## Wood farm: cut, replant, reserve saplings
 
@@ -75,7 +87,7 @@ Keep seeds available for expanding the field. Do not mill all wheat immediately:
 
 1. Lay out dirt planting spots around the sweep. Leave enough light and air above them for trees to grow.
 2. Put moving Saws at the level of the lowest trunk block, facing into the path of the trees. The cut must disconnect the tree from the ground; cutting a higher log can leave a stump.
-3. Place Deployers to visit the cleared dirt. Their interaction target is **two blocks in front** of the block; check the spacing before gluing the arm.
+3. Place Deployers to visit the cleared dirt. Their interaction target is **two blocks in front** of the block, at the sapling-space height above dirt. A Deployer facing downwards uses a different height offset; test the reach before gluing the arm.
 4. Set each Deployer's filter to the sapling you want. On a moving contraption, it takes matching items from the attached inventories and replants.
 5. Put an initial sapling supply in the moving storage. Check that a planted tree grows, is cut and is replanted before adding more lanes.
 6. Unload at the interface pair. **Keep saplings on the contraption.** In tier 1, empty logs manually for the first build, or add a vanilla sorting-and-return circuit. In tier 3, filtered brass extraction makes selective unloading much simpler.
@@ -88,7 +100,18 @@ The pack's Saw routes cover **200 verified wood pairs**. Most logs follow **log 
 
 Wood recipe compatibility does not guarantee that every custom tree has vanilla growth or tree-cutting behaviour. Use the recipe catalogue for that wood's exact input and output.
 
-<div class="farm-diagram" data-diagram="wood" aria-label="Tree farm layout"></div>
+### Check the cutting and planting layers
+
+| Component | Position / target | First test |
+|---|---|---|
+| **SAW** | At the lowest trunk layer, one block above the dirt | Cut one grown oak tree; no trunk stump should remain |
+| **DEPLOYER** | Targets the empty sapling space above dirt, **two blocks in front** of its face | With the farm stopped, confirm the target height and reach |
+| **MOVING STORAGE** | Glued to the same contraption | Load saplings before assembling; set the Deployer filter |
+| **UNLOADING** | An aligned moving/fixed interface pair | Export logs while retaining or returning saplings |
+
+<div class="equipment-strip" data-items="create:mechanical_saw,create:deployer,create:mechanical_bearing,create:portable_storage_interface,minecraft:oak_sapling"></div>
+
+<div class="build-check"><strong>◆ FIRST TEST</strong><p>Use <b>ONE PLANTING POSITION</b>. Watch a complete <b>PLANT → GROW → CUT → REPLANT</b> cycle. Check the Deployer’s two-block reach with in-game Ponder before extending the moving arm. Leave room for the tree canopy and keep planting stock out of general extraction.</p></div>
 
 ## Kelp, sugar cane and bamboo
 
@@ -121,7 +144,17 @@ T&K3 changes lava/water stone generation using a foundation. The vertical order 
 4. Collect the drops with a hopper or a belt/funnel route. Add storage before milling or crushing.
 5. Keep one output branch as building stone; send the material branch into the selected processor.
 
-<div class="farm-diagram" data-diagram="geology" aria-label="Stone generator foundation"></div>
+### The foundation — read from top to bottom
+
+| Vertical position | Block | Function |
+|---|---|---|
+| **TOP — GENERATION CELL** | Selected stone | Lava/water contact creates the stone; the Drill faces this cell |
+| **ONE BLOCK BELOW** | Selector lens | Chooses the resource route |
+| **TWO BLOCKS BELOW** | Required machine frame | Enables that foundation tier |
+
+<div class="equipment-strip" data-items="create:mechanical_drill,kubejs:tk3_kinetic_machine,kubejs:tk3_hydraulic_machine,kubejs:tk3_precision_machine,minecraft:hopper"></div>
+
+**Keep the drill aligned with the generation cell.** The lens and frame are permanent foundation blocks, outside the breaking path.
 
 <div id="geology-guide-table"></div>
 

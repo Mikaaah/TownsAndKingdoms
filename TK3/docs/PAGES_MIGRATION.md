@@ -1,4 +1,4 @@
-# Pages handbook
+# Pages wiki
 
 The full original wiki was captured at wiki commit 3048823394bb466f20215a8ee9766ac0687cf558. All 11 pages are preserved byte-for-byte in TK3/wiki-archive/2026-10-02 and the public archive directory. migration.json records their hashes and new destinations.
 

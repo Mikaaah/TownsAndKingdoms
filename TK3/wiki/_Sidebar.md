@@ -1,9 +1,15 @@
-## Player handbook
+## ◆ OFFICIAL WIKI
 
-[Enter the handbook →](https://mikaaah.github.io/TownsAndKingdoms/)
+**[OPEN THE WIKI →](https://mikaaah.github.io/TownsAndKingdoms/)**
 
-[T&K3](https://mikaaah.github.io/TownsAndKingdoms/3.0/) · [T&K2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/)
+**[III · T&K3](https://mikaaah.github.io/TownsAndKingdoms/3.0/)**
 
-[Automation](https://mikaaah.github.io/TownsAndKingdoms/automation/)
+**[CHAPTERS & RECIPES](https://mikaaah.github.io/TownsAndKingdoms/progression/)**
 
-[Visual workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/)
+**[AUTOMATION](https://mikaaah.github.io/TownsAndKingdoms/automation/)**
+
+**[RECIPE WORKSHOP](https://mikaaah.github.io/TownsAndKingdoms/workshop/)**
+
+---
+
+**[II · T&K2 ARCHIVE](https://mikaaah.github.io/TownsAndKingdoms/2.0/)**

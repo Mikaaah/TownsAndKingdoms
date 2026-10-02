@@ -14,6 +14,9 @@ already={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in redirect.glo
 if actual==already:
     print('Wiki already contains the current redirects.')
     sys.exit(0)
+if actual in manifest.get('portal_history', []):
+    print('Wiki contains an exact previously published portal. The branding update may proceed.')
+    sys.exit(0)
 for name,digest in expected.items():
     original=archive/'2026-10-02'/name
     if hashlib.sha256(original.read_bytes()).hexdigest()!=digest:

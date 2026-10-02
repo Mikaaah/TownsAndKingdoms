@@ -1,14 +1,14 @@
-<p align="center"><img src="TK3/player-guide/assets/wiki-portal.svg" alt="Towns & Kingdoms 3 — Player Guide" width="100%"></p>
+<p align="center"><img src="TK3/player-guide/assets/brand/tklogo.png" alt="Towns & Kingdoms 3 — Player Guide" width="100%"></p>
 
 # Towns & Kingdoms 3
 
 Create-powered workshops, living magic and industrial progression for **Minecraft 1.21.1 · NeoForge**.
 
-## Player handbook
+## ◆ OFFICIAL WIKI
 
-**[Open the purple player handbook](https://mikaaah.github.io/TownsAndKingdoms/)**
+**[Open the official wiki](https://mikaaah.github.io/TownsAndKingdoms/)**
 
-Follow the first five chapters, build your machines and explore the full 2.0 and 3.0 documentation. The GitHub Wiki now points to this handbook.
+Follow the first five chapters, build your machines and explore the full 2.0 and 3.0 documentation. The GitHub Wiki now points to this wiki.
 
 | Guide | What you will find |
 |---|---|
