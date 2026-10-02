@@ -1,0 +1,428 @@
+{
+  "id": "385173DB173FB2DC",
+  "filename": "tk3_chapter_5",
+  "group": "7427C3F538DF9198",
+  "title": "V · The Industrial Bridge",
+  "subtitle": "Steel, FE and basic Mekanism processing",
+  "icon": "mekanism:steel_casing",
+  "order_index": 5,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "706D7A080CA97780",
+      "title": "Steel without a dead end",
+      "description": [
+        "Heated mixer: two iron ingots plus one coal → two steel ingots. The native Mekanism steel chain remains as an alternative after bootstrap."
+      ],
+      "dependencies": [
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "26A08147E6497EFA",
+          "type": "item",
+          "item": {
+            "id": "mekanism:ingot_steel",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "mekanism:ingot_steel",
+      "rewards": []
+    },
+    {
+      "id": "4D0167AA016C4D1D",
+      "title": "Explore for osmium",
+      "description": [
+        "Mine and smelt native osmium. Resource ore generation is unchanged; discovery still matters."
+      ],
+      "dependencies": [
+        "706D7A080CA97780"
+      ],
+      "tasks": [
+        {
+          "id": "B7436D5EF3F4180A",
+          "type": "item",
+          "item": {
+            "id": "mekanism:ingot_osmium",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 0.0,
+      "icon": "mekanism:ingot_osmium",
+      "rewards": []
+    },
+    {
+      "id": "4695098E92291861",
+      "title": "The industrial casing",
+      "description": [
+        "5 steel ingots + 2 osmium ingots + 1 Precision Machine + 1 Arcane Machine. Geen FE nodig voor de casing; bouw daarna heat generator en kabels."
+      ],
+      "dependencies": [
+        "4D0167AA016C4D1D"
+      ],
+      "tasks": [
+        {
+          "id": "50969B36EC1B87D3",
+          "type": "item",
+          "item": {
+            "id": "mekanism:steel_casing",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 0.0,
+      "icon": "mekanism:steel_casing",
+      "rewards": []
+    },
+    {
+      "id": "93E266805B739F1E",
+      "title": "First FE power",
+      "description": [
+        "Steel casing + furnace + precision mechanism. Follow native lava/fuel mechanics. Start small; advanced generation is later."
+      ],
+      "dependencies": [
+        "4695098E92291861"
+      ],
+      "tasks": [
+        {
+          "id": "53A7C8EE650D7D7F",
+          "type": "item",
+          "item": {
+            "id": "mekanismgenerators:heat_generator",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 0.0,
+      "icon": "mekanismgenerators:heat_generator",
+      "rewards": []
+    },
+    {
+      "id": "125A3803D0675140",
+      "title": "Boss catalyst, preserved",
+      "description": [
+        "Deploy a Wilden Tribute onto a steel casing. The held tribute is kept. Feed power and native infusion materials."
+      ],
+      "dependencies": [
+        "93E266805B739F1E"
+      ],
+      "tasks": [
+        {
+          "id": "B2B6C2603953D799",
+          "type": "item",
+          "item": {
+            "id": "mekanism:metallurgic_infuser",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "mekanism:metallurgic_infuser",
+      "rewards": []
+    },
+    {
+      "id": "22C5239A1ECB2275",
+      "title": "Infused alloys",
+      "description": [
+        "Native redstone infusion of iron. Chemistry starts here; atomic materials and later factories remain locked."
+      ],
+      "dependencies": [
+        "125A3803D0675140"
+      ],
+      "tasks": [
+        {
+          "id": "073B876B23822DF7",
+          "type": "item",
+          "item": {
+            "id": "mekanism:alloy_infused",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "mekanism:alloy_infused",
+      "rewards": []
+    },
+    {
+      "id": "C3E4988BA7985699",
+      "title": "Refine with power",
+      "description": [
+        "Casing + infused alloy + precision mechanism. Added raw iron/copper enrichment yields two dust per raw item."
+      ],
+      "dependencies": [
+        "22C5239A1ECB2275"
+      ],
+      "tasks": [
+        {
+          "id": "09ADBAE35D25B068",
+          "type": "item",
+          "item": {
+            "id": "mekanism:enrichment_chamber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 3.0,
+      "icon": "mekanism:enrichment_chamber",
+      "rewards": []
+    },
+    {
+      "id": "3ABE3751382FBE7A",
+      "title": "Reliable iron doubling",
+      "description": [
+        "Raw iron → two iron dust → two ingots. No ore → block conversion multiplier is added."
+      ],
+      "dependencies": [
+        "C3E4988BA7985699"
+      ],
+      "tasks": [
+        {
+          "id": "50E793ABBA9A1785",
+          "type": "item",
+          "item": {
+            "id": "mekanism:dust_iron",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 3.0,
+      "icon": "mekanism:dust_iron",
+      "rewards": []
+    },
+    {
+      "id": "71C1008520C76C54",
+      "title": "Close the refining loop",
+      "description": [
+        "Casing + furnace + precision mechanism. Native dust smelting remains. Feed the line without creating a crafting loop."
+      ],
+      "dependencies": [
+        "C3E4988BA7985699"
+      ],
+      "tasks": [
+        {
+          "id": "034B164771D1567B",
+          "type": "item",
+          "item": {
+            "id": "mekanism:energized_smelter",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "mekanism:energized_smelter",
+      "rewards": []
+    },
+    {
+      "id": "27AB073539D21F23",
+      "title": "A compact FE grid",
+      "description": [
+        "Use basic cables only. Higher transport tiers, factories and QIO belong to later chapters."
+      ],
+      "dependencies": [
+        "93E266805B739F1E"
+      ],
+      "tasks": [
+        {
+          "id": "8194721DA71793E8",
+          "type": "item",
+          "item": {
+            "id": "mekanism:basic_universal_cable",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "mekanism:basic_universal_cable",
+      "rewards": []
+    },
+    {
+      "id": "8AEE32607826B700",
+      "title": "Rotation becomes FE",
+      "description": [
+        "Casing + copper spool + precision mechanism. Native conversion efficiencies are unchanged; verify net loss in the real instance."
+      ],
+      "dependencies": [
+        "27AB073539D21F23"
+      ],
+      "tasks": [
+        {
+          "id": "A26C48DECA7A3A6D",
+          "type": "item",
+          "item": {
+            "id": "createaddition:alternator",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 6.0,
+      "icon": "createaddition:alternator",
+      "rewards": []
+    },
+    {
+      "id": "AA29B81585231684",
+      "title": "FE becomes rotation",
+      "description": [
+        "Casing + capacitor + precision mechanism. Alternator and motor become available together at tier V; measure the loop to confirm no energy gain."
+      ],
+      "dependencies": [
+        "8AEE32607826B700"
+      ],
+      "tasks": [
+        {
+          "id": "0ED3121AD0C33255",
+          "type": "item",
+          "item": {
+            "id": "createaddition:electric_motor",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 6.0,
+      "icon": "createaddition:electric_motor",
+      "rewards": []
+    },
+    {
+      "id": "28D1C6A606738490",
+      "title": "Basic industrial logistics",
+      "description": [
+        "Short-range basic pipes are now available. Create remains the workshop backbone; late transport upgrades remain locked."
+      ],
+      "dependencies": [
+        "27AB073539D21F23"
+      ],
+      "tasks": [
+        {
+          "id": "9D6EAE12742BFC13",
+          "type": "item",
+          "item": {
+            "id": "mekanism:basic_mechanical_pipe",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "mekanism:basic_mechanical_pipe",
+      "rewards": []
+    },
+    {
+      "id": "4B5E0820B553B7C9",
+      "title": "Milestone · An industrial kingdom",
+      "description": [
+        "Operate powered enrichment and smelting beside your Create workshop. Five-chapter baseline complete. AE2, factories, advanced chemistry and End gates continue in later chapters and stay locked in this package. Reward: a second unbreakable Iron Hammer for a parallel kinetic assembly line. Tier 6 remains locked."
+      ],
+      "dependencies": [
+        "3ABE3751382FBE7A",
+        "71C1008520C76C54",
+        "27AB073539D21F23"
+      ],
+      "tasks": [
+        {
+          "id": "0196E98285D09164",
+          "type": "checkmark",
+          "title": "Confirm the described setup works"
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "mekanism:steel_casing",
+      "rewards": [
+        {
+          "id": "FDCC343B1C03B7C3",
+          "type": "item",
+          "item": {
+            "id": "betterend:iron_hammer",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Industrial Workshop Hammer\", \"color\": \"light_purple\", \"italic\": false}"
+            }
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "FED36031DE160879",
+      "title": "Storage grows with industry",
+      "description": [
+        "Use the wrapped recipe: sophisticatedstorage:stack_upgrade_tier_1 + mekanism:steel_casing + mekanism:alloy_infused → sophisticatedstorage:stack_upgrade_tier_2. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "22C5239A1ECB2275"
+      ],
+      "tasks": [
+        {
+          "id": "B7C77DAE92F90CE9",
+          "type": "item",
+          "item": {
+            "id": "sophisticatedstorage:stack_upgrade_tier_2",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 7.0,
+      "icon": "sophisticatedstorage:stack_upgrade_tier_2",
+      "rewards": []
+    }
+  ]
+}

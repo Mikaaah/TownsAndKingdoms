@@ -1,0 +1,481 @@
+{
+  "id": "37CE91EE749CE647",
+  "filename": "tk3_chapter_4",
+  "group": "7427C3F538DF9198",
+  "title": "IV · Arcane Industry",
+  "subtitle": "Living source, haunting and the Wilden trial",
+  "icon": "kubejs:tk3_arcane_mechanism",
+  "order_index": 4,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "5125B9C72B3D557A",
+      "title": "Meet the arcane",
+      "description": [
+        "Early combat magic remains available. This chapter unlocks industrial magic rather than requiring everyone to choose a spellcaster class."
+      ],
+      "dependencies": [
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "B0D9D6403958B081",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:source_gem",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "ars_nouveau:source_gem",
+      "rewards": []
+    },
+    {
+      "id": "99927D9130355969",
+      "title": "Imbue materials",
+      "description": [
+        "Native recipe, available before chapter IV so early combat magic can obtain Source Gems. Use it again here for industrial essences."
+      ],
+      "dependencies": [
+        "5125B9C72B3D557A"
+      ],
+      "tasks": [
+        {
+          "id": "340DD49ED2B0CE97",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:imbuement_chamber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 0.0,
+      "icon": "ars_nouveau:imbuement_chamber",
+      "rewards": []
+    },
+    {
+      "id": "6DAE9B7ED80E0BAE",
+      "title": "The apparatus",
+      "description": [
+        "Craft one Precision Machine, one diamond and one Source Gem into an Enchanting Apparatus. Native Imbuement Chamber and Source Jar remain available. Native Volcanic/Vitalic Sourcelinks supply the first Source before your Arcane Machine."
+      ],
+      "dependencies": [
+        "99927D9130355969"
+      ],
+      "tasks": [
+        {
+          "id": "76689EA7985E6A37",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:enchanting_apparatus",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 0.0,
+      "icon": "ars_nouveau:enchanting_apparatus",
+      "rewards": []
+    },
+    {
+      "id": "65B4EC8E3207A4A4",
+      "title": "Soul-fire transformation",
+      "description": [
+        "Haunt source gems using a fan blowing through soul fire. This adds a renewable combat-magic ingredient without adding a custom dust."
+      ],
+      "dependencies": [
+        "5125B9C72B3D557A"
+      ],
+      "tasks": [
+        {
+          "id": "06A1057D9ED2EAC6",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:arcane_essence",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 0.0,
+      "icon": "irons_spellbooks:arcane_essence",
+      "rewards": []
+    },
+    {
+      "id": "C700CC7F56F767F7",
+      "title": "Magic with purpose",
+      "description": [
+        "Use the installed native Ars essence recipe. Its native imbuement recipe is preserved."
+      ],
+      "dependencies": [
+        "6DAE9B7ED80E0BAE"
+      ],
+      "tasks": [
+        {
+          "id": "87F9004E03E0E87D",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:manipulation_essence",
+            "count": 1
+          },
+          "count": 2,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "ars_nouveau:manipulation_essence",
+      "rewards": []
+    },
+    {
+      "id": "B1A7B6E107792F3A",
+      "title": "Arcane Mechanism",
+      "description": [
+        "Precision Mechanism → deploy Source Gem → deploy Arcane Essence → deploy Manipulation Essence → deploy gold ingot → finish with a deployer holding an Ars Enchanter’s Sword. One loop, guaranteed output. Craft the ordinary sword first using its native apparatus recipe."
+      ],
+      "dependencies": [
+        "65B4EC8E3207A4A4",
+        "C700CC7F56F767F7",
+        "9F28FD277094F74B"
+      ],
+      "tasks": [
+        {
+          "id": "25D72540DE021D0A",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_arcane_mechanism",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_arcane_mechanism",
+      "rewards": []
+    },
+    {
+      "id": "76997D06649707C1",
+      "title": "Source from living systems",
+      "description": [
+        "Grow crops near the agronomic sourcelink and store Source in native Source Jars. Native jar recipes remain."
+      ],
+      "dependencies": [
+        "E17BD8D8EAE6C470"
+      ],
+      "tasks": [
+        {
+          "id": "80CD7C8CF7801B14",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:agronomic_sourcelink",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 3.0,
+      "icon": "ars_nouveau:agronomic_sourcelink",
+      "rewards": []
+    },
+    {
+      "id": "4E87EB8787FBF595",
+      "title": "A living courier",
+      "description": [
+        "Create handles processing and bulk movement; starbuncles handle small local transfers."
+      ],
+      "dependencies": [
+        "76997D06649707C1"
+      ],
+      "tasks": [
+        {
+          "id": "1E26817D212F022C",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:starbuncle_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 3.0,
+      "icon": "ars_nouveau:starbuncle_charm",
+      "rewards": []
+    },
+    {
+      "id": "3D7AE7A177E4B3A1",
+      "title": "A magical farm",
+      "description": [
+        "An optional living farm; keep Create infrastructure for physical processing."
+      ],
+      "dependencies": [
+        "76997D06649707C1"
+      ],
+      "tasks": [
+        {
+          "id": "5599703559FBF79F",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:whirlisprig_charm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "ars_nouveau:whirlisprig_charm",
+      "rewards": []
+    },
+    {
+      "id": "69938684411DC418",
+      "title": "Ink from the workshop",
+      "description": [
+        "Mix ink sac + arcane essence + 250 mB water → two common ink. Higher rarities keep native recipes and combat/exploration progression."
+      ],
+      "dependencies": [
+        "B1A7B6E107792F3A"
+      ],
+      "tasks": [
+        {
+          "id": "0D319D01694D8634",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:common_ink",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "irons_spellbooks:common_ink",
+      "rewards": []
+    },
+    {
+      "id": "ECE312175896D4D2",
+      "title": "Combat-magic chemistry",
+      "description": [
+        "Use native brewing recipes. No speculative cauldron-fluid serializer is added in this release."
+      ],
+      "dependencies": [
+        "B1A7B6E107792F3A"
+      ],
+      "tasks": [
+        {
+          "id": "7705704B03F64456",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:alchemist_cauldron",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 6.0,
+      "icon": "irons_spellbooks:alchemist_cauldron",
+      "rewards": []
+    },
+    {
+      "id": "20170C693355A17F",
+      "title": "The Wilden trial",
+      "description": [
+        "Summon and defeat the Wilden Chimera using the native Ars challenge ritual. This kill is detected; obtaining a gifted tribute alone does not satisfy the task."
+      ],
+      "dependencies": [
+        "B1A7B6E107792F3A",
+        "76997D06649707C1"
+      ],
+      "tasks": [
+        {
+          "id": "374695B55E5515E1",
+          "type": "kill",
+          "entity": "ars_nouveau:wilden_boss",
+          "value": 1
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_arcane_mechanism",
+      "rewards": []
+    },
+    {
+      "id": "C4AD612A27AE0CA1",
+      "title": "A permanent physical catalyst",
+      "description": [
+        "Keep the tribute. A deployer later applies it to a steel casing to create the metallurgic infuser without consuming it."
+      ],
+      "dependencies": [
+        "20170C693355A17F"
+      ],
+      "tasks": [
+        {
+          "id": "7C7882988EB62F5D",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:wilden_tribute",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "ars_nouveau:wilden_tribute",
+      "rewards": []
+    },
+    {
+      "id": "1CD504854E287D44",
+      "title": "Milestone · Magic powers industry",
+      "description": [
+        "Maintain Source generation and produce an arcane mechanism. The detected boss kill plus this milestone unlocks chapter V industry. Reward: unbreakable Arcane Engraver. Install it in the finishing deployer; it accepts the same recipe as the ordinary tool and removes replacement maintenance."
+      ],
+      "dependencies": [
+        "C4AD612A27AE0CA1",
+        "76997D06649707C1",
+        "E17BD8D8EAE6C470",
+        "9F28FD277094F74B"
+      ],
+      "tasks": [
+        {
+          "id": "629C6297D52044D2",
+          "type": "checkmark",
+          "title": "Confirm the described setup works"
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_arcane_mechanism",
+      "rewards": [
+        {
+          "id": "DB28DE9C5DAF2478",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:enchanters_sword",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Arcane Engraver\", \"color\": \"light_purple\", \"italic\": false}"
+            }
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "E17BD8D8EAE6C470",
+      "title": "Arcane Machine",
+      "description": [
+        "Apparatus: Brass Casing as reagent, Source Gem + Arcane Essence + gold on pedestals, 500 Source → Wizardry Arcane Casing. Then deploy one Arcane Mechanism onto that casing. Use the frame for Source devices, automation charms and Wizardry machines."
+      ],
+      "dependencies": [
+        "B1A7B6E107792F3A"
+      ],
+      "tasks": [
+        {
+          "id": "B6B37B4D29395EF0",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_arcane_machine",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 7.0,
+      "icon": "kubejs:tk3_arcane_machine",
+      "rewards": []
+    },
+    {
+      "id": "E9105C20847930BB",
+      "title": "Runes meet machinery",
+      "description": [
+        "Compacting stone + Arcane Essence maakt Blank Rune. Ars fire/water/air/earth essence + Arcane Mechanism via apparatus maakt de vier basale element-runes. Combat glyphs en hogere spell progressie behouden native routes."
+      ],
+      "dependencies": [
+        "E17BD8D8EAE6C470"
+      ],
+      "tasks": [
+        {
+          "id": "6A2365DACA73BC60",
+          "type": "item",
+          "item": {
+            "id": "irons_spellbooks:blank_rune",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 13.0,
+      "icon": "irons_spellbooks:blank_rune",
+      "rewards": []
+    },
+    {
+      "id": "9F28FD277094F74B",
+      "title": "Tools of the workshop · Arcane Engraver",
+      "description": [
+        "Craft an ordinary ars_nouveau:enchanters_sword. It is the final deployer-held tool for this chapter’s mechanism sequence. Use normal tools to finish the chapter; claim the named unbreakable version at the milestone and replace the tool in your deployer."
+      ],
+      "dependencies": [
+        "C700CC7F56F767F7"
+      ],
+      "tasks": [
+        {
+          "id": "F69473959CD16E84",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:enchanters_sword",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 5.0,
+      "icon": "ars_nouveau:enchanters_sword",
+      "rewards": []
+    }
+  ]
+}

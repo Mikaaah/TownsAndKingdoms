@@ -1,0 +1,529 @@
+{
+  "id": "B67D7DBBCDDED52D",
+  "filename": "tk3_chapter_1",
+  "group": "7427C3F538DF9198",
+  "title": "I · Roots of Industry",
+  "subtitle": "Algal binder, rotation and your first workshop",
+  "icon": "create:andesite_alloy",
+  "order_index": 1,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "E365737F0D5E14BC",
+      "title": "A kingdom starts small",
+      "description": [
+        "Welcome to T&K3. Build compact production lines, explore, and grow a settlement. Main quests follow the workshop spine; side branches are optional. Machine possession is detected; automation checkmarks are self-reported."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "6C81BA6DBC2B6D07",
+          "type": "checkmark",
+          "title": "Confirm the described setup works"
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "create:andesite_alloy",
+      "rewards": []
+    },
+    {
+      "id": "BABE42E43499AB7A",
+      "title": "A living binder",
+      "description": [
+        "Grow kelp. Combine one kelp and one clay ball into two Algal Blend. Mixing doubles the yield once your workshop is running."
+      ],
+      "dependencies": [
+        "E365737F0D5E14BC"
+      ],
+      "tasks": [
+        {
+          "id": "6234D8C57B480382",
+          "type": "item",
+          "item": {
+            "id": "minecraft:kelp",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 0.0,
+      "icon": "minecraft:kelp",
+      "rewards": []
+    },
+    {
+      "id": "A5238E5196525670",
+      "title": "Algal Blend",
+      "description": [
+        "Use the real Architect’s Palette item. One andesite plus one blend makes two alloy by hand or four in a mixer."
+      ],
+      "dependencies": [
+        "BABE42E43499AB7A"
+      ],
+      "tasks": [
+        {
+          "id": "2A7D7547BC0F2DD4",
+          "type": "item",
+          "item": {
+            "id": "architects_palette:algal_blend",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 0.0,
+      "icon": "architects_palette:algal_blend",
+      "rewards": []
+    },
+    {
+      "id": "1582749B34D70227",
+      "title": "Andesite Alloy",
+      "description": [
+        "Start manually; improve your material yield with a mixer later. Shafts, cogs and casings retain native recipes."
+      ],
+      "dependencies": [
+        "A5238E5196525670"
+      ],
+      "tasks": [
+        {
+          "id": "5E25303E7780585A",
+          "type": "item",
+          "item": {
+            "id": "create:andesite_alloy",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 0.0,
+      "icon": "create:andesite_alloy",
+      "rewards": []
+    },
+    {
+      "id": "81716226DE700507",
+      "title": "Kinetic Mechanism",
+      "description": [
+        "Manual startup: three Andesite Alloy around one wooden slab. Once you have a deployer, sequence a slab through two separate alloy deployments and finish with a BetterEnd Iron Hammer. One loop, one guaranteed mechanism."
+      ],
+      "dependencies": [
+        "1582749B34D70227"
+      ],
+      "tasks": [
+        {
+          "id": "77825599D934B0F0",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_rotation_mechanism",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_rotation_mechanism",
+      "rewards": []
+    },
+    {
+      "id": "9B7732063DC4A23E",
+      "title": "Turn the wheel",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_kinetic_machine → 3x create:water_wheel. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "3CDCB1B10D0E9151"
+      ],
+      "tasks": [
+        {
+          "id": "54957E3D0DF41F8A",
+          "type": "item",
+          "item": {
+            "id": "create:water_wheel",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "create:water_wheel",
+      "rewards": []
+    },
+    {
+      "id": "5078A6A449259361",
+      "title": "Your first press",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_kinetic_machine → create:mechanical_press. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "9B7732063DC4A23E"
+      ],
+      "tasks": [
+        {
+          "id": "4AB21C85609CBA51",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_press",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 3.0,
+      "icon": "create:mechanical_press",
+      "rewards": []
+    },
+    {
+      "id": "529A3B5C7473AFAE",
+      "title": "Mix, don’t grind",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_kinetic_machine → create:mechanical_mixer. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "5078A6A449259361"
+      ],
+      "tasks": [
+        {
+          "id": "A678FD977EB5AA69",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_mixer",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 3.0,
+      "icon": "create:mechanical_mixer",
+      "rewards": []
+    },
+    {
+      "id": "81A75761F9C7C8C5",
+      "title": "Air changes materials",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_kinetic_machine → create:encased_fan. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "5078A6A449259361"
+      ],
+      "tasks": [
+        {
+          "id": "A8EC23AC9DC0D66C",
+          "type": "item",
+          "item": {
+            "id": "create:encased_fan",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "create:encased_fan",
+      "rewards": []
+    },
+    {
+      "id": "ACB87B030157932E",
+      "title": "Automate assembly",
+      "description": [
+        "Build a Deployer from a Kinetic Machine in a stonecutter. On a belt or depot, deploy one Andesite Alloy onto a wooden slab, deploy a second alloy, then use a deployer holding an Iron Hammer. Ordinary hammers lose one durability; the chapter reward does not."
+      ],
+      "dependencies": [
+        "5078A6A449259361"
+      ],
+      "tasks": [
+        {
+          "id": "59352B5B76B50D6E",
+          "type": "item",
+          "item": {
+            "id": "create:deployer",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "create:deployer",
+      "rewards": []
+    },
+    {
+      "id": "776BDA3591CF3819",
+      "title": "A renewable workshop",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_kinetic_machine → create:mechanical_saw. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "ACB87B030157932E"
+      ],
+      "tasks": [
+        {
+          "id": "C3DA7A877640420D",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_saw",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        },
+        {
+          "id": "4D48986BC2935601",
+          "type": "checkmark",
+          "title": "Confirm the described setup works"
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 6.0,
+      "icon": "create:mechanical_saw",
+      "rewards": []
+    },
+    {
+      "id": "7252DDC421A43488",
+      "title": "Stone into iron",
+      "description": [
+        "Cobble → gravel (mill) → iron nuggets (native fan washing) → ingots. Native washing is probabilistic; this is a compact renewable route, not an ore replacement."
+      ],
+      "dependencies": [
+        "81A75761F9C7C8C5"
+      ],
+      "tasks": [
+        {
+          "id": "D7372ADD153CD84E",
+          "type": "item",
+          "item": {
+            "id": "minecraft:iron_nugget",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 6.0,
+      "icon": "minecraft:iron_nugget",
+      "rewards": []
+    },
+    {
+      "id": "68A60ED774FE8B85",
+      "title": "Lay your foundations",
+      "description": [
+        "MineColonies is the selected kingdom system. Start a settlement beside the workshop; colony supply requests will later benefit from Create logistics."
+      ],
+      "dependencies": [
+        "81716226DE700507"
+      ],
+      "tasks": [
+        {
+          "id": "88325E7736105096",
+          "type": "item",
+          "item": {
+            "id": "minecolonies:blockhuttownhall",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "minecolonies:blockhuttownhall",
+      "rewards": []
+    },
+    {
+      "id": "B0A94968CD02DE8A",
+      "title": "Milestone · The workshop runs",
+      "description": [
+        "Have a functioning wheel, press, mixer/basin and deployer. Confirm after producing alloy and rotation mechanisms on your line. Unlocks chapter II machines for your team. Reward: unbreakable Workshop Hammer. Install it in the finishing deployer; it accepts the same recipe as the ordinary tool and removes replacement maintenance."
+      ],
+      "dependencies": [
+        "529A3B5C7473AFAE",
+        "81A75761F9C7C8C5",
+        "ACB87B030157932E",
+        "3CDCB1B10D0E9151",
+        "8F0957A5C7DF0B61"
+      ],
+      "tasks": [
+        {
+          "id": "7784ADD6336E15F2",
+          "type": "checkmark",
+          "title": "Confirm the described setup works"
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "create:andesite_alloy",
+      "rewards": [
+        {
+          "id": "58C2AB98333E09EF",
+          "type": "item",
+          "item": {
+            "id": "betterend:iron_hammer",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Workshop Hammer\", \"color\": \"light_purple\", \"italic\": false}"
+            }
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "3CDCB1B10D0E9151",
+      "title": "Kinetic Machine",
+      "description": [
+        "Manual startup: eight Kinetic Mechanisms around an Andesite Casing. Automated: deploy one Kinetic Mechanism onto one Andesite Casing. Stonecut the frame into a water wheel, press, basin, mixer or deployer."
+      ],
+      "dependencies": [
+        "81716226DE700507"
+      ],
+      "tasks": [
+        {
+          "id": "B78A09480DFE1B61",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_kinetic_machine",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 7.0,
+      "icon": "kubejs:tk3_kinetic_machine",
+      "rewards": []
+    },
+    {
+      "id": "E86FDB29E2A366C3",
+      "title": "A geological worksite",
+      "description": [
+        "Build the working setup described by this quest. Follow the player guide for the resource generator or machine arrangement."
+      ],
+      "dependencies": [
+        "3CDCB1B10D0E9151"
+      ],
+      "tasks": [
+        {
+          "id": "FDD7A95E325AD730",
+          "type": "checkmark",
+          "title": "Controleer dat de beschreven opstelling werkt"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 13.0,
+      "icon": "kubejs:tk3_kinetic_machine",
+      "rewards": []
+    },
+    {
+      "id": "11ACF21444AF4D20",
+      "title": "Timber without exceptions",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_kinetic_machine → create:mechanical_saw. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "5078A6A449259361"
+      ],
+      "tasks": [
+        {
+          "id": "22D4F36C18516E2E",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_saw",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 11.0,
+      "icon": "create:mechanical_saw",
+      "rewards": []
+    },
+    {
+      "id": "5442D7567BEB84C2",
+      "title": "A modest storage upgrade",
+      "description": [
+        "Upgrade Base gebruikt iron sheets, planks en 1 Kinetic Mechanism. Native basiskisten en barrels blijven goedkoop. Neem je inhoud mee via native component-behoudende tier recipes."
+      ],
+      "dependencies": [
+        "3CDCB1B10D0E9151"
+      ],
+      "tasks": [
+        {
+          "id": "5F9BBEE728400991",
+          "type": "item",
+          "item": {
+            "id": "sophisticatedstorage:upgrade_base",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 17.0,
+      "icon": "sophisticatedstorage:upgrade_base",
+      "rewards": []
+    },
+    {
+      "id": "8F0957A5C7DF0B61",
+      "title": "Tools of the workshop · Workshop Hammer",
+      "description": [
+        "Craft an ordinary betterend:iron_hammer. It is the final deployer-held tool for this chapter’s mechanism sequence. Use normal tools to finish the chapter; claim the named unbreakable version at the milestone and replace the tool in your deployer."
+      ],
+      "dependencies": [
+        "ACB87B030157932E"
+      ],
+      "tasks": [
+        {
+          "id": "FFF9B4565AF19956",
+          "type": "item",
+          "item": {
+            "id": "betterend:iron_hammer",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 5.0,
+      "icon": "betterend:iron_hammer",
+      "rewards": []
+    }
+  ]
+}

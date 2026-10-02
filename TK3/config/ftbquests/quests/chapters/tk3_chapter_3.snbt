@@ -1,0 +1,429 @@
+{
+  "id": "B071418F68BCBE32",
+  "filename": "tk3_chapter_3",
+  "group": "7427C3F538DF9198",
+  "title": "III · Brass & Precision",
+  "subtitle": "Heated metallurgy, deterministic assembly and organised logistics",
+  "icon": "create:precision_mechanism",
+  "order_index": 3,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "7D8632126C331521",
+      "title": "Bring heat home",
+      "description": [
+        "Travel to the Nether and capture a blaze in an empty blaze burner. Blaze rods detect exploration; burner operation must be checked in your factory."
+      ],
+      "dependencies": [
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "1EEBE5DC2D95B7DD",
+          "type": "item",
+          "item": {
+            "id": "minecraft:blaze_rod",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "minecraft:blaze_rod",
+      "rewards": []
+    },
+    {
+      "id": "1307B878F3F42A2B",
+      "title": "Brass metallurgy",
+      "description": [
+        "Heated mixing: one copper plus one zinc → two brass ingots. Farm blaze fuel before relying on the line."
+      ],
+      "dependencies": [
+        "7D8632126C331521"
+      ],
+      "tasks": [
+        {
+          "id": "9872A79680701654",
+          "type": "item",
+          "item": {
+            "id": "create:brass_ingot",
+            "count": 1
+          },
+          "count": 16,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 0.0,
+      "icon": "create:brass_ingot",
+      "rewards": []
+    },
+    {
+      "id": "7BF1AF791ED655E5",
+      "title": "Redstone into control",
+      "description": [
+        "Native rose quartz, polishing and electron tube recipes remain. Craft sandpaper or automate polishing."
+      ],
+      "dependencies": [
+        "1307B878F3F42A2B"
+      ],
+      "tasks": [
+        {
+          "id": "11E7C42C720B7BF9",
+          "type": "item",
+          "item": {
+            "id": "create:electron_tube",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 0.0,
+      "icon": "create:electron_tube",
+      "rewards": []
+    },
+    {
+      "id": "A91C7A72AC207A82",
+      "title": "Precision without scrap",
+      "description": [
+        "Sealed Mechanism → deploy brass sheet → deploy Electron Tube → deploy with Create Sand Paper. One loop and one guaranteed Precision Mechanism. Ordinary paper loses one durability; chapter III awards a permanent abrasive."
+      ],
+      "dependencies": [
+        "7BF1AF791ED655E5",
+        "BA629D9609254B95"
+      ],
+      "tasks": [
+        {
+          "id": "7DC15488A4AECDE9",
+          "type": "item",
+          "item": {
+            "id": "create:precision_mechanism",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 0.0,
+      "icon": "create:precision_mechanism",
+      "rewards": []
+    },
+    {
+      "id": "279AC1657033348A",
+      "title": "Route with purpose",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_precision_machine → 6x create:brass_funnel. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "2882C35E2B2F02CA"
+      ],
+      "tasks": [
+        {
+          "id": "5BD2D70007882ED9",
+          "type": "item",
+          "item": {
+            "id": "create:brass_funnel",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "create:brass_funnel",
+      "rewards": []
+    },
+    {
+      "id": "379BC147CCACE9A5",
+      "title": "Handle exact ingredients",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_precision_machine → create:mechanical_arm. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "279AC1657033348A"
+      ],
+      "tasks": [
+        {
+          "id": "4477DA1F5525B7F5",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_arm",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "create:mechanical_arm",
+      "rewards": []
+    },
+    {
+      "id": "777B72383FBA7A39",
+      "title": "Mechanical crafting",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_precision_machine → 3x create:mechanical_crafter. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "A91C7A72AC207A82"
+      ],
+      "tasks": [
+        {
+          "id": "EC3248AA057B6859",
+          "type": "item",
+          "item": {
+            "id": "create:mechanical_crafter",
+            "count": 1
+          },
+          "count": 3,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 3.0,
+      "icon": "create:mechanical_crafter",
+      "rewards": []
+    },
+    {
+      "id": "B77521993A072FD8",
+      "title": "Create logistics",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_precision_machine → create:packager. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "279AC1657033348A"
+      ],
+      "tasks": [
+        {
+          "id": "7D2CECC9D5AA495C",
+          "type": "item",
+          "item": {
+            "id": "create:packager",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 3.0,
+      "icon": "create:packager",
+      "rewards": []
+    },
+    {
+      "id": "CAB7DFF4987AD337",
+      "title": "Order from the workshop",
+      "description": [
+        "Use the stonecutting recipe: kubejs:tk3_precision_machine → create:stock_ticker. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "B77521993A072FD8"
+      ],
+      "tasks": [
+        {
+          "id": "8077AB0C80A548D4",
+          "type": "item",
+          "item": {
+            "id": "create:stock_ticker",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "create:stock_ticker",
+      "rewards": []
+    },
+    {
+      "id": "CECCE1D45846A825",
+      "title": "Recover experience",
+      "description": [
+        "Native experience fluids stay intact. Advanced enchanting waits for chapter IV."
+      ],
+      "dependencies": [
+        "A91C7A72AC207A82"
+      ],
+      "tasks": [
+        {
+          "id": "4239176A9E7211F8",
+          "type": "item",
+          "item": {
+            "id": "create_enchantment_industry:grindstone_drain",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "create_enchantment_industry:grindstone_drain",
+      "rewards": []
+    },
+    {
+      "id": "7A23BC39D080029A",
+      "title": "A first propeller",
+      "description": [
+        "An optional Aeronautics bridge. Follow installed Ponder documentation; full ship-building and levitite balance are outside these five chapters."
+      ],
+      "dependencies": [
+        "A91C7A72AC207A82"
+      ],
+      "tasks": [
+        {
+          "id": "ED62CDD76B321E71",
+          "type": "item",
+          "item": {
+            "id": "aeronautics:propeller_bearing",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 6.0,
+      "icon": "aeronautics:propeller_bearing",
+      "rewards": []
+    },
+    {
+      "id": "B81077B20C8371D3",
+      "title": "Milestone · Precision at scale",
+      "description": [
+        "Operate a brass/precision production line with controlled item routing. Unlocks arcane production devices. Reward: unbreakable Precision Abrasive. Install it in the finishing deployer; it accepts the same recipe as the ordinary tool and removes replacement maintenance."
+      ],
+      "dependencies": [
+        "379BC147CCACE9A5",
+        "A91C7A72AC207A82",
+        "2882C35E2B2F02CA",
+        "BA629D9609254B95"
+      ],
+      "tasks": [
+        {
+          "id": "D7947CD2BA70CD70",
+          "type": "checkmark",
+          "title": "Confirm the described setup works"
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 6.0,
+      "icon": "create:precision_mechanism",
+      "rewards": [
+        {
+          "id": "354715E6F4046607",
+          "type": "item",
+          "item": {
+            "id": "create:sand_paper",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Precision Abrasive\", \"color\": \"light_purple\", \"italic\": false}"
+            }
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "2882C35E2B2F02CA",
+      "title": "Precision Machine",
+      "description": [
+        "Deploy one Precision Mechanism onto one Brass Casing. Stonecut the frame into arms, crafters and smart logistics."
+      ],
+      "dependencies": [
+        "A91C7A72AC207A82"
+      ],
+      "tasks": [
+        {
+          "id": "365C38B2628250B5",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_precision_machine",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_precision_machine",
+      "rewards": []
+    },
+    {
+      "id": "3698B09554B2D421",
+      "title": "A crushing improvement",
+      "description": [
+        "Use the mechanical crafting recipe: kubejs:tk3_precision_machine + create:andesite_alloy + #minecraft:planks → 2x create:crushing_wheel. Follow the recipe viewer for the exact pattern and conditions."
+      ],
+      "dependencies": [
+        "777B72383FBA7A39"
+      ],
+      "tasks": [
+        {
+          "id": "3A7961062B22B9C1",
+          "type": "item",
+          "item": {
+            "id": "create:crushing_wheel",
+            "count": 1
+          },
+          "count": 1
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 9.0,
+      "icon": "create:crushing_wheel",
+      "rewards": []
+    },
+    {
+      "id": "BA629D9609254B95",
+      "title": "Tools of the workshop · Precision Abrasive",
+      "description": [
+        "Craft an ordinary create:sand_paper. It is the final deployer-held tool for this chapter’s mechanism sequence. Use normal tools to finish the chapter; claim the named unbreakable version at the milestone and replace the tool in your deployer."
+      ],
+      "dependencies": [
+        "7BF1AF791ED655E5"
+      ],
+      "tasks": [
+        {
+          "id": "ACAFE382B2DEA71B",
+          "type": "item",
+          "item": {
+            "id": "create:sand_paper",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 5.0,
+      "icon": "create:sand_paper",
+      "rewards": []
+    }
+  ]
+}

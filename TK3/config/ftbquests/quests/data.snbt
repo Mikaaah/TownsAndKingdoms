@@ -1,0 +1,8 @@
+{
+"version": 13,
+"title": "Towns & Kingdoms 3",
+"icon": "create:precision_mechanism",
+"default_consume_items": false,
+"default_autoclaim_rewards": "disabled",
+"progression_mode": "linear"
+}
