@@ -5,8 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "TK3/wiki/3.0-Modlist.md"
-      - "TK3/wiki/3.0-Changelog.md"
+      - "TK3/wiki/**"
   workflow_dispatch:
 
 permissions:
@@ -33,8 +32,7 @@ jobs:
 
       - name: Copy T&K3 wiki pages
         run: |
-          cp "TK3/wiki/3.0-Modlist.md" "wiki/3.0-Modlist.md"
-          cp "TK3/wiki/3.0-Changelog.md" "wiki/3.0-Changelog.md"
+          cp TK3/wiki/*.md wiki/
 
       - name: Publish changed pages
         working-directory: wiki
@@ -42,7 +40,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add "3.0-Modlist.md" "3.0-Changelog.md"
+          git add -- *.md
 
           if git diff --cached --quiet; then
             echo "Wiki is already up to date."

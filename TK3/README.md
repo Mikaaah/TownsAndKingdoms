@@ -2,6 +2,12 @@
 
 T&K3 development area. T&K2 files in the repository root are historical reference and must not be used as the runtime base for T&K3.
 
+## Player guide
+
+**[Open the purple T&K3 player guide](https://mikaaah.github.io/TownsAndKingdoms/)** — tier walkthroughs, machine frames, chapter quests, renewable resources and searchable recipes.
+
+[Read the progression overview](wiki/3.0-Progression.md).
+
 ## Current target
 
 - Minecraft **1.21.1**
