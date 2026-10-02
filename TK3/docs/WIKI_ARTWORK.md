@@ -15,3 +15,7 @@ The old farm drawings were removed. Crop, wood and generator sections now use co
 ## Rebuilding
 
 Install dependencies in TK3/handbook-source, then run TK3/tools/build_handbook.cjs. Compiled visual assets are committed, so the normal Pages workflow needs no mod downloads or render-time services. fetch-mod-assets.py and build-mod-assets.py record provenance and can regenerate the atlas. No mod jars are published.
+
+## Model orientation checks
+
+Run `npm run test:models` from `TK3/handbook-source` after installing its dependencies. The geometry checks cover outward face normals, the stonecutter’s two opposing one-sided blade faces, native clockwise UV rotations, a downward-facing Deployer, an upward-facing processing Saw, and separate stonecutting input/output icons. Item icons face the camera; they do not inherit a baked inventory model’s rotation.

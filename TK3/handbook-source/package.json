@@ -5,5 +5,8 @@
     "marked": "17.0.5",
     "three": "0.180.0",
     "esbuild": "0.25.10"
+  },
+  "scripts": {
+    "test:models": "node tests/viewer-models.cjs"
   }
 }
