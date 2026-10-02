@@ -12,3 +12,10 @@ body{font-family:Arial,Helvetica,sans-serif}a{color:#e8bbd0}strong,b{color:#fff}
 .visual-link{display:inline-flex;margin-top:8px;padding:6px 9px;border:1px solid #785069;border-radius:5px;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.04em;text-decoration:none}
 
 .scene:has([data-ready="false"]){height:auto;min-height:0;padding:14px}.scene:has([data-ready="false"]) + .scene-hint{display:none}
+
+/* Entire guide cards are semantic links, with a visible keyboard focus. */
+a.guide-card{display:block;color:var(--text);text-decoration:none;transition:border-color .15s ease,background-color .15s ease}
+a.guide-card:hover{background:#352346;border-color:var(--accent);text-decoration:none}
+a.guide-card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.guide-card p:not(.eyebrow){color:var(--muted)}
+.card-action{display:inline-block;color:#e8bbd0;font-size:11px;font-weight:800;letter-spacing:.06em}

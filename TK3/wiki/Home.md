@@ -10,7 +10,7 @@ The **official Towns & Kingdoms wiki** is hosted on **GitHub Pages**. Explore th
 
 | ◆ T&K3 — CURRENT | II · T&K2 — ARCHIVE |
 |---|---|
-| **[OVERVIEW](https://mikaaah.github.io/TownsAndKingdoms/3.0/)** | **[2.0 WIKI ARCHIVE](https://mikaaah.github.io/TownsAndKingdoms/2.0/)** |
+| **[FEATURES & MODS](https://mikaaah.github.io/TownsAndKingdoms/3.0/features/)** | **[2.0 WIKI ARCHIVE](https://mikaaah.github.io/TownsAndKingdoms/2.0/)** |
 | **[CHAPTERS & RECIPES](https://mikaaah.github.io/TownsAndKingdoms/progression/)** | [Features](https://mikaaah.github.io/TownsAndKingdoms/2.0/features/) |
 | **[AUTOMATION GUIDE](https://mikaaah.github.io/TownsAndKingdoms/automation/)** | [Changelog](https://mikaaah.github.io/TownsAndKingdoms/2.0/changelog/) |
 | **[RECIPE WORKSHOP](https://mikaaah.github.io/TownsAndKingdoms/workshop/)** | [Mod list](https://mikaaah.github.io/TownsAndKingdoms/2.0/modlist/) |

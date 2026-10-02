@@ -4,6 +4,8 @@
 
 **[III · T&K3](https://mikaaah.github.io/TownsAndKingdoms/3.0/)**
 
+**[FEATURES & MODS](https://mikaaah.github.io/TownsAndKingdoms/3.0/features/)**
+
 **[CHAPTERS & RECIPES](https://mikaaah.github.io/TownsAndKingdoms/progression/)**
 
 **[AUTOMATION](https://mikaaah.github.io/TownsAndKingdoms/automation/)**
