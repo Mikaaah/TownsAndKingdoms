@@ -2,7 +2,6 @@
 // T&K3 1.21.1 · assembly revision
 ServerEvents.recipes(event => {
   ["create:copper_backtank", "create:copper_casing", "create:copper_sheet", "create:copper_valve_handle", "create:fluid_pipe", "create:fluid_tank", "create:fluid_valve", "create:hose_pulley", "create:iron_sheet", "create:item_drain", "create:mechanical_press", "create:mechanical_pump", "create:portable_fluid_interface", "create:spout", "create:steam_engine", "create:steam_whistle", "createaddition:capacitor", "createaddition:rolling_mill", "farmersdelight:iron_knife", "kubejs:tk3_hydraulic_machine", "kubejs:tk3_incomplete_sealed_mechanism", "kubejs:tk3_rotation_mechanism", "kubejs:tk3_sealed_mechanism", "minecraft:copper_block", "minecraft:copper_ingot", "minecraft:kelp", "minecraft:redstone", "minecraft:slime_ball", "minecraft:wheat"].forEach(id => { if (Item.of(id).isEmpty()) throw new Error('[TK3] Missing required item: ' + id); });
-  ["create:copper_backtank", "create:copper_valve_handle", "create:fluid_pipe", "create:fluid_tank", "create:fluid_valve", "create:hose_pulley", "create:item_drain", "create:mechanical_pump", "create:portable_fluid_interface", "create:spout", "create:steam_engine", "create:steam_whistle", "createaddition:capacitor", "createaddition:rolling_mill", "kubejs:tk3_sealed_mechanism", "minecraft:slime_ball"].forEach(output => event.remove({output: output}));
 
   // tier 2 | kubejs:tk3/tier_2/tk3_sealed_mechanism
   // Final tool is durability-based. Do not keepHeldItem(): ordinary tools wear; unbreakable rewards do not.

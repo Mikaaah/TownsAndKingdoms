@@ -19,3 +19,9 @@ a.guide-card:hover{background:#352346;border-color:var(--accent);text-decoration
 a.guide-card:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 .guide-card p:not(.eyebrow){color:var(--muted)}
 .card-action{display:inline-block;color:#e8bbd0;font-size:11px;font-weight:800;letter-spacing:.06em}
+
+.guide-shortcuts{display:flex;flex-wrap:wrap;gap:10px 22px;margin:15px 0 25px;font-size:11px;font-weight:800}
+.recipe-browser>select{width:100%;margin:0 0 10px;padding:8px;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:6px}
+.recipe-related{gap:7px;align-items:flex-start}.recipe-related>.small{display:block;width:100%;padding:5px 0}
+.article-body h1{font-size:clamp(27px,3vw,40px);line-height:1.2}
+.article-body .table-wrap{margin:16px 0 25px}

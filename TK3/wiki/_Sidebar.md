@@ -6,6 +6,10 @@
 
 **[FEATURES & MODS](https://mikaaah.github.io/TownsAndKingdoms/3.0/features/)**
 
+**[CREATE PARTS & MACHINES](https://mikaaah.github.io/TownsAndKingdoms/3.0/create/)**
+
+**[ALL GUIDES](https://mikaaah.github.io/TownsAndKingdoms/guides/)**
+
 **[CHAPTERS & RECIPES](https://mikaaah.github.io/TownsAndKingdoms/progression/)**
 
 **[AUTOMATION](https://mikaaah.github.io/TownsAndKingdoms/automation/)**

@@ -15,7 +15,7 @@ Each mechanism sequence ends with a **tool held by a Deployer**. The tool is not
 
 Craft and use an ordinary tool **before** finishing the chapter; the reward removes maintenance afterwards. Every player may claim each milestone reward once. It is not a recipe ingredient or an unlock token. On a server, a team can supply multiple finishing deployers by claiming its members’ rewards.
 
-The Iron Hammer’s native shaped recipe uses four iron ingots and two sticks. Farmer’s Delight Iron Knife and Create Sand Paper retain their native recipes. The Enchanter’s Sword uses its native Enchanting Apparatus recipe: diamond sword as reagent; one diamond, two gold blocks and two Source Gem Blocks on pedestals; no Source cost. Your apparatus and first Source generation are available before the Arcane Machine.
+The Iron Hammer’s native shaped recipe uses four iron ingots and two sticks. Farmer’s Delight Iron Knife retains its native recipe. Create Sand Paper uses the explicit paper + sand support recipe. The Enchanter’s Sword uses its native Enchanting Apparatus recipe: diamond sword as reagent; one diamond, two gold blocks and two Source Gem Blocks on pedestals; no Source cost. Your apparatus and first Source generation are available before the Arcane Machine.
 
 Put the starting item on a belt or depot and perform each deployment in order. Two alloys means **two separate deployments**, even when the same deployer is reused. All four sequences have one loop and a guaranteed output. A finishing tool replaces the old final press; there is no extra pressing operation afterwards.
 

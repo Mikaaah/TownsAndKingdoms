@@ -2,7 +2,6 @@
 // T&K3 1.21.1 · assembly revision
 ServerEvents.recipes(event => {
   ["create:asurine", "create:copper_nugget", "create:crimsite", "create:crushed_raw_copper", "create:crushed_raw_gold", "create:crushed_raw_iron", "create:crushed_raw_zinc", "create:limestone", "create:ochrum", "create:scorchia", "create:scoria", "create:veridium", "create:zinc_nugget", "minecraft:andesite", "minecraft:bone_meal", "minecraft:clay_ball", "minecraft:coal", "minecraft:diorite", "minecraft:gold_nugget", "minecraft:granite", "minecraft:iron_nugget", "minecraft:lapis_lazuli", "minecraft:quartz", "minecraft:redstone"].forEach(id => { if (Item.of(id).isEmpty()) throw new Error('[TK3] Missing required item: ' + id); });
-  [].forEach(output => event.remove({output: output}));
 
   // tier 1 | kubejs:tk3/geology/milling_andesite
   event.recipes.create.milling(["minecraft:clay_ball"], ["minecraft:andesite"]).id("kubejs:tk3/geology/milling_andesite");

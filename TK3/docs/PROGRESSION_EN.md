@@ -2,20 +2,20 @@
 
 Towns & Kingdoms 3 · Minecraft 1.21.1 NeoForge
 
-Five chapters lead from a manual workshop to tool-finished Create assembly, magical production and the first FE network. There are 674 authored recipes, 662 for tiers 1–5, and 81 quests.
+Five chapters lead from a manual workshop to tool-finished Create assembly, magical production and the first FE network. There are 788 authored recipes, 776 for tiers 1–5, and 81 quests.
 
 ## What the recipe count includes
 
-Timber and storage variants account for much of the catalogue. There are twelve reserved AE2 recipes for chapter 6. Native tool recipes remain available.
+Timber and storage variants account for much of the catalogue. There are twelve reserved AE2 recipes for chapter 6. Create tools now follow the explicit support recipes.
 
 ## Machine-frame economy
 
 | Tier | Frame | How it is made | Role |
 |---|---|---|---|
-| 1 | Tk3 Kinetic Machine | Andesite Casing → deploy one Kinetic Mechanism; manual startup: 7 Andesite Alloy + wooden slab + casing | Basic workshop machines |
-| 2 | Tk3 Hydraulic Machine | Copper Casing → deploy one Sealed Mechanism | Fluid devices |
-| 3 | Tk3 Precision Machine | Brass Casing → deploy one Precision Mechanism | Smart machinery and logistics |
-| 4 | Tk3 Arcane Machine | Wizardry Arcane Casing → deploy one Arcane Mechanism | Apparatus-based magical devices |
+| 1 | Kinetic Machine | Andesite Casing → deploy one Kinetic Mechanism; manual startup: 7 Andesite Alloy + wooden slab + casing | Basic workshop machines |
+| 2 | Hydraulic Machine | Copper Casing → deploy one Sealed Mechanism | Fluid devices |
+| 3 | Precision Machine | Brass Casing → deploy one Precision Mechanism | Smart machinery and logistics |
+| 4 | Arcane Machine | Wizardry Arcane Casing → deploy one Arcane Mechanism | Apparatus-based magical devices |
 | 5 | Steel Casing | 5 steel + 2 osmium + Precision Machine + Arcane Machine | Mekanism and first FE |
 
 Every mechanism requires sequenced assembly. Only the first machine frame has a costly manual recipe from raw materials. Four different incomplete mechanism items identify the four sequences. Existing Create Precision Mechanism and Mekanism Steel Casing are reused. Frame blocks remain recipe inputs and generator foundations.
@@ -34,7 +34,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | A living binder | 8 × Kelp | A kingdom starts small | — |
 | Algal Blend | 8 × Algal Blend | A living binder | — |
 | Andesite Alloy | 16 × Andesite Alloy | Algal Blend | — |
-| Kinetic Mechanism | 4 × Tk3 Rotation Mechanism | Automate assembly, Tools of the workshop · Workshop Hammer | — |
+| Kinetic Mechanism | 4 × Rotation Mechanism | Automate assembly, Tools of the workshop · Workshop Hammer | — |
 | Turn the wheel | 1 × Water Wheel | Kinetic Machine | — |
 | Your first press | 1 × Mechanical Press | Turn the wheel | — |
 | Mix, don’t grind | 1 × Mechanical Mixer | Your first press | — |
@@ -44,7 +44,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | Stone into iron · optional | 16 × Iron Nugget | Air changes materials | — |
 | Lay your foundations · optional | 1 × Blockhuttownhall | Kinetic Mechanism | — |
 | Milestone · The workshop runs | Confirm the working setup | Mix, don’t grind, Air changes materials, Automate assembly, Kinetic Machine, Tools of the workshop · Workshop Hammer, Kinetic Mechanism | Workshop Hammer · Unbreakable |
-| Kinetic Machine | 1 × Tk3 Kinetic Machine | Andesite Alloy | — |
+| Kinetic Machine | 1 × Kinetic Machine | Andesite Alloy | — |
 | A geological worksite · optional | Confirm the working setup | Kinetic Machine | — |
 | Timber without exceptions · optional | 1 × Mechanical Saw | Your first press | — |
 | A modest storage upgrade · optional | 1 × Upgrade Base | Kinetic Machine | — |
@@ -56,7 +56,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 |---|---|---|---|
 | Flatten copper | 16 × Copper Sheet | Milestone · The workshop runs | — |
 | Renewable sealant | 8 × Slime Ball | Flatten copper | — |
-| Sealed Mechanism | 4 × Tk3 Sealed Mechanism | Renewable sealant, Tools of the workshop · Sealwright Knife | — |
+| Sealed Mechanism | 4 × Sealed Mechanism | Renewable sealant, Tools of the workshop · Sealwright Knife | — |
 | Direct the flow | 16 × Fluid Pipe | Hydraulic Machine | — |
 | Move water | 1 × Mechanical Pump | Direct the flow | — |
 | Buffer fluids | 4 × Fluid Tank | Move water | — |
@@ -66,7 +66,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | Expand rotational power · optional | 1 × Steam Engine | Buffer fluids | — |
 | Wires for later · optional | 1 × Rolling Mill | Sealed Mechanism | — |
 | Milestone · A sealed production line | Confirm the working setup | Fill on the line, Buffer fluids, Hydraulic Machine, Tools of the workshop · Sealwright Knife | Sealwright Knife · Unbreakable |
-| Hydraulic Machine | 1 × Tk3 Hydraulic Machine | Sealed Mechanism | — |
+| Hydraulic Machine | 1 × Hydraulic Machine | Sealed Mechanism | — |
 | Copperworks geology · optional | Confirm the working setup | Hydraulic Machine | — |
 | Tools of the workshop · Sealwright Knife | 1 × Iron Knife | Renewable sealant | — |
 
@@ -86,7 +86,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | Recover experience · optional | 1 × Grindstone Drain | Precision without scrap | — |
 | A first propeller · optional | 1 × Propeller Bearing | Precision without scrap | — |
 | Milestone · Precision at scale | Confirm the working setup | Handle exact ingredients, Precision without scrap, Precision Machine, Tools of the workshop · Precision Abrasive | Precision Abrasive · Unbreakable |
-| Precision Machine | 1 × Tk3 Precision Machine | Precision without scrap | — |
+| Precision Machine | 1 × Precision Machine | Precision without scrap | — |
 | A crushing improvement · optional | 1 × Crushing Wheel | Mechanical crafting | — |
 | Tools of the workshop · Precision Abrasive | 1 × Sand Paper | Redstone into control | — |
 
@@ -99,7 +99,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | The apparatus | 1 × Enchanting Apparatus | Imbue materials | — |
 | Soul-fire transformation | 8 × Arcane Essence | Meet the arcane | — |
 | Magic with purpose | 2 × Manipulation Essence | The apparatus | — |
-| Arcane Mechanism | 4 × Tk3 Arcane Mechanism | Soul-fire transformation, Magic with purpose, Tools of the workshop · Arcane Engraver | — |
+| Arcane Mechanism | 4 × Arcane Mechanism | Soul-fire transformation, Magic with purpose, Tools of the workshop · Arcane Engraver | — |
 | Source from living systems | 1 × Agronomic Sourcelink | Arcane Machine | — |
 | A living courier · optional | 1 × Starbuncle Charm | Source from living systems | — |
 | A magical farm · optional | 1 × Whirlisprig Charm | Source from living systems | — |
@@ -108,7 +108,7 @@ Create handles physical processing. Arcane casing preparation and magical device
 | The Wilden trial | Defeat the Wilden boss | Arcane Mechanism, Source from living systems | — |
 | A permanent physical catalyst | 1 × Wilden Tribute | The Wilden trial | — |
 | Milestone · Magic powers industry | Confirm the working setup | A permanent physical catalyst, Source from living systems, Arcane Machine, Tools of the workshop · Arcane Engraver | Arcane Engraver · Unbreakable |
-| Arcane Machine | 1 × Tk3 Arcane Machine | Arcane Mechanism | — |
+| Arcane Machine | 1 × Arcane Machine | Arcane Mechanism | — |
 | Runes meet machinery · optional | 1 × Blank Rune | Arcane Machine | — |
 | Tools of the workshop · Arcane Engraver | 1 × Enchanters Sword | Magic with purpose | — |
 

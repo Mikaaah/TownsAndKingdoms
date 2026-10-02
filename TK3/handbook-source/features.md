@@ -4,7 +4,7 @@
 
 Towns & Kingdoms 3 connects mechanical engineering, magic, action combat and settlement building. Your factory supplies your adventures; your discoveries give you new reasons to expand it.
 
-<div class="notice">T&K3 is in development. This guide introduces the currently selected mod foundation. The authored workshop campaign covers <strong>5 CHAPTERS · 81 QUESTS · 662 RECIPES</strong>; later systems expand that foundation.</div>
+<div class="notice">T&K3 is in development. This guide introduces the currently selected mod foundation. The authored workshop campaign covers <strong>5 CHAPTERS · 81 QUESTS · 776 RECIPES</strong>; later systems expand that foundation.</div>
 
 ## Engineering & storage
 

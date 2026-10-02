@@ -2,13 +2,14 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
 const assetRoot=new URL('.',document.currentScript.src);
+const artVersion=new URL(document.currentScript.src).searchParams.get('art')||'base';
 let library;
 async function load(){
  if(!library)library=Promise.all([
   fetch(new URL('create-models.json',assetRoot)).then(r=>r.json()),
-  fetch(new URL('item-art.json',assetRoot)).then(r=>r.json()),
+  fetch(new URL('item-art.json?v='+artVersion,assetRoot)).then(r=>r.json()),
   new THREE.TextureLoader().loadAsync(new URL('model-atlas.png',assetRoot).href),
-  new THREE.TextureLoader().loadAsync(new URL('item-atlas.webp',assetRoot).href)
+  new THREE.TextureLoader().loadAsync(new URL('item-atlas.webp?v='+artVersion,assetRoot).href)
  ]).then(([data,art,texture,items])=>{
   for(const t of [texture,items]){t.magFilter=THREE.NearestFilter;t.minFilter=THREE.NearestFilter;t.colorSpace=THREE.SRGBColorSpace;}
   return {data,art,texture,items};

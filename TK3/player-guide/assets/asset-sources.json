@@ -221,7 +221,7 @@
       "sha256": "df15a07f86ca1ca93aa66373f9d5d84dd3d4586631fceb38f4fbc85dad591e39"
     }
   ],
-  "icon_count": 723,
+  "icon_count": 806,
   "missing_icons": [
     "aeronautics:propeller_bearing",
     "alexscaves:pewen_log",
@@ -243,10 +243,15 @@
     "ars_nouveau:relay_splitter",
     "cataclysm:chorus_planks",
     "cataclysm:chorus_stem",
+    "create:chain_conveyor",
     "create:copper_valve_handle",
     "create:crushing_wheel",
     "create:display_link",
+    "create:empty_blaze_burner",
+    "create:flywheel",
     "create:large_water_wheel",
+    "create:mechanical_roller",
+    "create:nixie_tube",
     "create:stock_link",
     "create:water_wheel",
     "create_enchantment_industry:blaze_enchanter",

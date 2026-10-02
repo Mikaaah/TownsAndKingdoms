@@ -12,6 +12,8 @@ The starter **Kinetic Machine** has a manual crafting route: **7 Andesite Alloy 
 
 **[FOLLOW CHAPTERS I–V →](../../progression/#chapters)** · [Open the visual workshop](../../workshop/)
 
+**[OPEN CREATE PARTS & MACHINES →](../create/)**
+
 ## Production before expansion
 
 Build dependable supplies of wood, crops and processed stone before adding more machines. Put an output buffer after each important process and keep your finishing tools available at their stations.

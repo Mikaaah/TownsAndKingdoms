@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "recipes": 788,
+  "quests": 81,
+  "woodPairs": 200,
+  "stoneGenerators": 10,
+  "customItems": 6,
+  "machineFrames": 4,
+  "stageRestrictions": 470,
+  "checks": [
+    "known registry IDs",
+    "explicit API surface",
+    "recipe uniqueness",
+    "approved recipes survive final whitelist",
+    "native and injected alloy alternatives excluded",
+    "processing scoped by type and input",
+    "native iron ingot-to-dust preserved",
+    "component-preserving storage wrappers",
+    "acyclic stable quests",
+    "offline team stage sync",
+    "tier 6 reserved",
+    "ten geological selectors and fluid guards"
+  ],
+  "limitation": "Mock authoring tests; Minecraft integration and economic balance not executed"
+}

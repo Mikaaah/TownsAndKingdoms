@@ -2,7 +2,6 @@
 // T&K3 1.21.1 · assembly revision
 ServerEvents.recipes(event => {
   ["ae2:calculation_processor", "ae2:calculation_processor_press", "ae2:certus_quartz_crystal", "ae2:certus_quartz_dust", "ae2:charged_certus_quartz_crystal", "ae2:charger", "ae2:engineering_processor", "ae2:engineering_processor_press", "ae2:fluix_crystal", "ae2:fluix_dust", "ae2:inscriber", "ae2:logic_processor", "ae2:logic_processor_press", "ae2:printed_calculation_processor", "ae2:printed_engineering_processor", "ae2:printed_logic_processor", "ae2:printed_silicon", "ae2:silicon", "ae2:silicon_press", "createaddition:capacitor", "createaddition:electric_motor", "mekanism:dust_gold", "mekanism:dust_lead", "mekanism:dust_osmium", "mekanism:dust_tin", "mekanism:raw_lead", "mekanism:raw_osmium", "mekanism:raw_tin", "mekanism:steel_casing", "minecraft:diamond", "minecraft:gold_ingot", "minecraft:raw_gold", "minecraft:redstone"].forEach(id => { if (Item.of(id).isEmpty()) throw new Error('[TK3] Missing required item: ' + id); });
-  ["ae2:calculation_processor", "ae2:charged_certus_quartz_crystal", "ae2:charger", "ae2:engineering_processor", "ae2:inscriber", "ae2:logic_processor", "ae2:printed_calculation_processor", "ae2:printed_engineering_processor", "ae2:printed_logic_processor", "ae2:printed_silicon"].forEach(output => event.remove({output: output}));
 
   // tier 6 | kubejs:tk3/late_layers/ae2_charger
   event.shapeless("ae2:charger", ["mekanism:steel_casing", "ae2:certus_quartz_crystal", "createaddition:capacitor"]).id("kubejs:tk3/late_layers/ae2_charger");
