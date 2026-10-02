@@ -16,16 +16,16 @@ run('kubejs/server_scripts/compat/tk3_tags.js');
 assert.equal(registered.length,m.recipes.length);assert.equal(new Set(registered.map(r=>r.id)).size,registered.length);
 const ids=new Set(registered.map(r=>r.id));for(const r of m.recipes)assert(ids.has(r.id));
 for(const r of registered){if(r.kind==='shapeless')assert(r.args[1].length<=9&&r.args[1].every(x=>!/^\d+x /.test(x)));if(r.kind==='sequenced_assembly')assert.equal(r.loops,1)}
-assert.equal(custom.length,6);assert.equal(blocks.length,4);
+assert.equal(custom.length,Object.keys(m.custom_items).length);assert.equal(blocks.length,Object.values(m.frames).filter(x=>x.startsWith('kubejs:')).length);
 const mechanisms=m.recipes.filter(r=>r.tool);
-assert.equal(mechanisms.length,4);
+assert.equal(mechanisms.length,10);
 for(const expected of mechanisms){
  const built=registered.find(r=>r.id===expected.id);assert.equal(built.kind,'sequenced_assembly');
  const steps=built.args[2].map(b=>b._recipe);
  assert.equal(steps.length,expected.inputs.length-1);assert(steps.every(r=>r.kind==='deploying'));
  assert.equal(steps.at(-1).args[1][1],expected.tool);assert(!steps.at(-1).keep,'Normal tools must wear');
- assert.equal(built.transition,expected.transition);
- assert.equal(new Set(mechanisms.map(r=>r.transition)).size,4);
+ assert.equal(built.transition,expected.transition);for(let i=0;i<steps.length-1;i++)assert.equal(Boolean(steps[i].keep),(expected.keep_steps||[]).includes(i));
+ assert.equal(new Set(mechanisms.map(r=>r.transition)).size,10);
 }
 const kinetic=registered.find(r=>r.id.endsWith('/rotation_mechanism_automated'));
 assert.equal(kinetic.args[2].filter(s=>s._recipe.args[1][1]==='create:andesite_alloy').length,2);
@@ -45,21 +45,22 @@ const injected={id:'foreign:alloy_injection',output:'create:andesite_alloy',inpu
 e.findRecipeIds=f=>natives.filter(x=>!x.removed&&matches(x,f)).map(x=>x.id);e.remove=f=>natives.filter(x=>x.id===f.id).forEach(x=>x.removed=true);
 sandbox.Java={loadClass(n){if(n.endsWith('RecipeFilter'))return {wrap(f){return {test(ctx){return matches(ctx.recipe,f)}}}};if(n.endsWith('RecipeMatchContext$Impl'))return class{constructor(recipe){this.recipe=recipe}};throw Error(n)}};
 run('kubejs/server_scripts/recipes/tk3_whitelist.js');assert(natives[0].removed);assert(!natives[1].removed);assert(natives[2].removed);assert(injected.removed);for(const r of registered.filter(x=>ids.has(x.id)))assert(!r.removed,'Whitelist removed approved '+r.id);
-const qs=new Map(),all=[];for(let t=1;t<=5;t++){const c=JSON.parse(fs.readFileSync(path.join(root,`config/ftbquests/quests/chapters/tk3_chapter_${t}.snbt`)));all.push(c.id);for(const q of c.quests){qs.set(q.id,q);all.push(q.id,...q.tasks.map(t=>t.id),...q.rewards.map(r=>r.id));}}assert.equal(new Set(all).size,all.length);assert.equal(qs.size,m.quest_count);
-for(let t=1;t<=5;t++){
+const qs=new Map(),all=[];for(let t=1;t<=10;t++){const c=JSON.parse(fs.readFileSync(path.join(root,`config/ftbquests/quests/chapters/tk3_chapter_${t}.snbt`)));all.push(c.id);for(const q of c.quests){qs.set(q.id,q);all.push(q.id,...q.tasks.map(t=>t.id),...q.rewards.map(r=>r.id));}}assert.equal(new Set(all).size,all.length);assert.equal(qs.size,m.quest_count);
+for(let t=1;t<=10;t++){
  const q=qs.get(m.milestones[t]);assert.equal(q.rewards.length,1);
  const reward=q.rewards[0];assert.equal(reward.type,'item');assert.equal(reward.team_reward,false);assert.equal(reward.count,1);
  assert(known.has(reward.item.id));assert.deepEqual(reward.item.components['minecraft:unbreakable'],{});
  assert.equal(JSON.parse(reward.item.components['minecraft:custom_name']).color,'light_purple');
+ if(t>=6)assert.equal(reward.item.id,mechanisms.find(r=>r.tier===t&&r.system==='campaign').tool);
  if(t<=4) assert.equal(reward.item.id,mechanisms[t-1].tool);
 }
 const visited=new Set(),visiting=new Set();function visit(id){assert(qs.has(id),id);if(visited.has(id))return;assert(!visiting.has(id),'Cycle '+id);visiting.add(id);qs.get(id).dependencies.forEach(visit);visiting.delete(id);visited.add(id)}qs.forEach(q=>visit(q.id));
 const completed=new Set(),alice={stages:new Set()},bob={stages:new Set()},gates=[];
 sandbox.FTBQuests={getServerDataFromPlayer(){return {isCompleted(id){return completed.has(id)}}}};sandbox.PlayerEvents={loggedIn(f){handlers.login=f}};sandbox.FTBQuestsEvents={completed(id,f){handlers[id]=f}};
 function gate(id,stage,...items){assert(!gates.some(g=>g.id===id),'Duplicate restriction '+id);gates.push({id,stage,items});const b={};for(const k of ['allowPickup','allowInventoryStorage','allowContainerStorage','allowMining','allowLeftClick','showInRecipeViewer','setCanBePlaced','setCanItemBeRightClicked','setCanInteractWithBlock'])b[k]=()=>b;return b}
-sandbox.AStages={addRestrictionForItem:gate,addRestrictionForMod:gate,playerHasStage(p,s){return p.stages.has(s)},addStageToPlayer(p,s){p.stages.add(s)}};run('kubejs/server_scripts/progression/tk3_stages.js');handlers.login({player:alice});assert.equal(alice.stages.size,0);for(let t=1;t<=4;t++){completed.add(m.milestones[t]);handlers[m.milestones[t]]({onlineMembers:[alice]});assert(alice.stages.has('tk3_tier_'+(t+1)))}handlers.login({player:bob});assert.deepEqual([...bob.stages],[...alice.stages]);assert(!alice.stages.has('tk3_tier_6'));
+sandbox.AStages={addRestrictionForItem:gate,addRestrictionForMod:gate,addRestrictionForDimension:gate,playerHasStage(p,s){return p.stages.has(s)},addStageToPlayer(p,s){p.stages.add(s)}};run('kubejs/server_scripts/progression/tk3_stages.js');handlers.login({player:alice});assert.equal(alice.stages.size,0);for(let t=1;t<=9;t++){completed.add(m.milestones[t]);handlers[m.milestones[t]]({onlineMembers:[alice]});assert(alice.stages.has('tk3_tier_'+(t+1)))}handlers.login({player:bob});assert.deepEqual([...bob.stages],[...alice.stages]);assert(alice.stages.has('tk3_tier_10'));assert(gates.some(g=>g.id==='tk3/end'&&g.stage==='tk3_tier_9'));for(const b of m.campaign_extension.bosses){completed.add(b.quest);handlers[b.quest]({onlineMembers:[alice]});assert(alice.stages.has('tk3_boss_'+b.item.replace('kubejs:tk3_','')))}
 // Native fluid handler: each selector, absent/mismatched pad, obsidian, client/cancel guard.
 let fluidHandler;const state=id=>({id,getBlock(){return {id}}});sandbox.Java={loadClass(n){if(n.endsWith('FluidPlaceBlockEvent'))return function FluidEvent(){};if(n.endsWith('BuiltInRegistries'))return {BLOCK:{getKey(b){return b.id}}};throw Error(n)}};sandbox.NativeEvents={onEvent(type,f){fluidHandler=f}};sandbox.Block={getBlock(id){return {defaultBlockState(){return state(id)}}}};run('kubejs/server_scripts/progression/tk3_stone_generators.js');
 function generate(g,frame,initial='minecraft:cobblestone',cancel=false,server=true){let result=initial;fluidHandler({getLevel(){return {getServer(){return server?{}:null},getBlockState(p){return state(p.n===1?g.lens:frame)}}},isCanceled(){return cancel},getNewState(){return state(initial)},getPos(){return {below(n=1){return {n}}}},setNewState(s){result=s.id}});return result}
 for(const g of m.geology){assert.equal(generate(g,m.frames[g.tier]),g.stone);assert.equal(generate(g,'minecraft:air'),'minecraft:cobblestone');assert.equal(generate(g,m.frames[g.tier],'minecraft:obsidian'),'minecraft:obsidian');assert.equal(generate(g,m.frames[g.tier],'minecraft:cobblestone',true),'minecraft:cobblestone');assert.equal(generate(g,m.frames[g.tier],'minecraft:cobblestone',false,false),'minecraft:cobblestone')}
-const result={status:'PASS',recipes:m.recipes.length,quests:qs.size,woodPairs:m.wood.length,stoneGenerators:m.geology.length,customItems:custom.length,machineFrames:blocks.length,stageRestrictions:gates.length,checks:['known registry IDs','explicit API surface','recipe uniqueness','approved recipes survive final whitelist','native and injected alloy alternatives excluded','processing scoped by type and input','native iron ingot-to-dust preserved','component-preserving storage wrappers','acyclic stable quests','offline team stage sync','tier 6 reserved','ten geological selectors and fluid guards'],limitation:'Mock authoring tests; Minecraft integration and economic balance not executed'};fs.writeFileSync(path.join(root,'docs/static_validation.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));
+const result={status:'PASS',recipes:m.recipes.length,quests:qs.size,woodPairs:m.wood.length,stoneGenerators:m.geology.length,customItems:custom.length,machineFrames:blocks.length,stageRestrictions:gates.length,checks:['known registry IDs','explicit API surface','recipe uniqueness','approved recipes survive final whitelist','native and injected alloy alternatives excluded','processing scoped by type and input','native iron ingot-to-dust preserved','component-preserving storage wrappers','acyclic stable quests','offline team stage sync','ten tiers unlock in order; End tier 9; boss stages','ten geological selectors and fluid guards'],limitation:'Mock authoring tests; Minecraft integration and economic balance not executed'};fs.writeFileSync(path.join(root,'docs/static_validation.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

@@ -424,6 +424,56 @@
       "y": 5.0,
       "icon": "create:sand_paper",
       "rewards": []
+    },
+    {
+      "id": "1B3F9890A09FB86E",
+      "title": "The town places an order",
+      "description": [
+        "Connect a MineColonies warehouse to Create orders. Native colony research and building levels remain active."
+      ],
+      "dependencies": [
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "9EFA781745ADB579",
+          "type": "item",
+          "item": {
+            "id": "createminecolonies:colony_warehouse_stock_link",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "createminecolonies:colony_warehouse_stock_link",
+      "rewards": []
+    },
+    {
+      "id": "2D00B1B84A789DA2",
+      "title": "A deliberate duel",
+      "description": [
+        "Fight the Wroughtnaut with the native encounter mechanics. Epic Fight, Simply Swords and Weapons of Miracles form the combat layer."
+      ],
+      "dependencies": [
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "6E3DC360964B39D5",
+          "type": "kill",
+          "entity": "mowziesmobs:ferrous_wroughtnaut",
+          "value": 1
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "create:precision_mechanism",
+      "rewards": []
     }
   ]
 }

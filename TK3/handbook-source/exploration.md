@@ -45,3 +45,7 @@ The Nether and End selections are still being assembled for T&K3. **Nullscape** 
 **Waystones** is the selected travel system. **FTB Teams** and **FTB Chunks** support organising and protecting a shared home, while **Lootr** is selected for normal multiplayer structure loot.
 
 **[BACK TO FEATURES →](../features/)** · [Towns & multiplayer](../kingdoms/)
+
+## Follow the campaign
+
+**[ALL MODS, ADDONS & THEIR TIERS →](../tier-map/)** · **[TEN CHAPTER PATHS →](../../progression/#paths)**

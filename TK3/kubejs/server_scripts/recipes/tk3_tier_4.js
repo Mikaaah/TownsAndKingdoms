@@ -196,28 +196,6 @@ ServerEvents.recipes(event => {
         1000)
         .id("kubejs:tk3/tier_4/mycelial_sourcelink");
 
-    // Mechanical Grindstone / Apparatus
-    event.recipes.ars_nouveau.enchanting_apparatus(
-        [
-            "minecraft:grindstone",
-            "ars_nouveau:source_gem"
-        ],
-        "kubejs:tk3_arcane_machine",
-        "create_enchantment_industry:mechanical_grindstone",
-        1000)
-        .id("kubejs:tk3/tier_4/mechanical_grindstone");
-
-    // Experience Hatch / Apparatus
-    event.recipes.ars_nouveau.enchanting_apparatus(
-        [
-            "create:fluid_tank",
-            "ars_nouveau:source_gem"
-        ],
-        "kubejs:tk3_arcane_machine",
-        "create_enchantment_industry:experience_hatch",
-        1000)
-        .id("kubejs:tk3/tier_4/experience_hatch");
-
     //->------------------------]  Tier 4 / Materials / Mixing [------------------------<-//
 
     // Common Ink / Mixing

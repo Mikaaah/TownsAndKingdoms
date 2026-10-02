@@ -1,12 +1,12 @@
 {
   "status": "PASS",
-  "recipes": 788,
-  "quests": 81,
+  "recipes": 1499,
+  "quests": 159,
   "woodPairs": 200,
   "stoneGenerators": 10,
-  "customItems": 6,
-  "machineFrames": 4,
-  "stageRestrictions": 470,
+  "customItems": 22,
+  "machineFrames": 9,
+  "stageRestrictions": 1381,
   "checks": [
     "known registry IDs",
     "explicit API surface",
@@ -18,7 +18,7 @@
     "component-preserving storage wrappers",
     "acyclic stable quests",
     "offline team stage sync",
-    "tier 6 reserved",
+    "ten tiers unlock in order; End tier 9; boss stages",
     "ten geological selectors and fluid guards"
   ],
   "limitation": "Mock authoring tests; Minecraft integration and economic balance not executed"

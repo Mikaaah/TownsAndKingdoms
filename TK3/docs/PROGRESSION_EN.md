@@ -1,133 +1,238 @@
-# Progression overview
+# T&K3 · CAMPAIGN & RECIPES
 
-Towns & Kingdoms 3 · Minecraft 1.21.1 NeoForge
+**10 CHAPTERS · 159 QUESTS · 1499 MANAGED RECIPES**
 
-Five chapters lead from a manual workshop to tool-finished Create assembly, magical production and the first FE network. There are 788 authored recipes, 776 for tiers 1–5, and 81 quests.
+Create remains the production backbone. Magic, digital logistics, expeditions and nuclear industry add distinct workshops while keeping earlier mechanisms useful. Follow the [recipe paths](PLAYER_PATHS_EN.md) and [complete mod tier map](MOD_TIER_MAP_EN.md).
 
 ## What the recipe count includes
 
-Timber and storage variants account for much of the catalogue. There are twelve reserved AE2 recipes for chapter 6. Create tools now follow the explicit support recipes.
+The catalogue includes authored construction and processing routes, deliberately retained native serializer recipes, timber compatibility and explicit reconfiguration variants. It is a count of recipes, not unique items. Native exploration, ritual, worldgen and chemical-only mechanics that are not overridden remain available by design.
 
 ## Machine-frame economy
 
 | Tier | Frame | How it is made | Role |
 |---|---|---|---|
-| 1 | Kinetic Machine | Andesite Casing → deploy one Kinetic Mechanism; manual startup: 7 Andesite Alloy + wooden slab + casing | Basic workshop machines |
-| 2 | Hydraulic Machine | Copper Casing → deploy one Sealed Mechanism | Fluid devices |
-| 3 | Precision Machine | Brass Casing → deploy one Precision Mechanism | Smart machinery and logistics |
-| 4 | Arcane Machine | Wizardry Arcane Casing → deploy one Arcane Mechanism | Apparatus-based magical devices |
-| 5 | Steel Casing | 5 steel + 2 osmium + Precision Machine + Arcane Machine | Mekanism and first FE |
+| 1 | **Kinetic Machine** | Manual startup: 7 Andesite Alloy + slab + casing; automate by deploying a Kinetic Mechanism onto Andesite Casing | Basic workshop machines |
+| 2 | **Hydraulic Machine** | Copper Casing → deploy Sealed Mechanism | Fluid handling |
+| 3 | **Precision Machine** | Brass Casing → deploy Precision Mechanism | Smart machinery and logistics |
+| 4 | **Arcane Machine** | Arcane Casing → deploy Arcane Mechanism | Apparatus / magical devices |
+| 5 | **Steel Casing** | 5 steel + 2 osmium + Precision Machine + Arcane Machine | Steel / first FE |
+| 6 | **Network Chassis** | Steel Casing → deploy Network Mechanism | AE2 / network and affix stations |
+| 7 | **Expedition Frame** | Arcane Casing → deploy Expedition Mechanism | Chemistry / airship controls |
+| 8 | **Containment Frame** | Steel Casing → deploy Containment Mechanism | Fission / turbines and containment |
+| 9 | **Singularity Frame** | Fluix Block → deploy Singularity Mechanism | Fusion / SPS and quantum logistics |
+| 10 | **Sovereign Core** | Sps Casing → deploy Sovereign Mechanism | Final Keystone / powered equipment |
 
-Every mechanism requires sequenced assembly. Only the first machine frame has a costly manual recipe from raw materials. Four different incomplete mechanism items identify the four sequences. Existing Create Precision Mechanism and Mekanism Steel Casing are reused. Frame blocks remain recipe inputs and generator foundations.
-
-## Progression rules
-
-Create handles physical processing. Arcane casing preparation and magical devices use the apparatus. Each milestone awards a named unbreakable tool once per player. Factory checkmarks confirm the setup manually; item tasks check possession. The Wilden boss catalyst remains reusable. Chapter 5 does not unlock tier 6.
+Every mechanism uses sequenced assembly. Only the Kinetic Machine has a manual startup recipe. Later frame construction deploys a mechanism onto its casing, and machines use their listed frame-based construction or preserving upgrade route.
 
 ## Chapter quest catalogue
 
 ### I · Roots of Industry
 
-| Quest | Goal | Prerequisites | Reward |
-|---|---|---|---|
-| A kingdom starts small | Confirm the working setup | Start | — |
-| A living binder | 8 × Kelp | A kingdom starts small | — |
-| Algal Blend | 8 × Algal Blend | A living binder | — |
-| Andesite Alloy | 16 × Andesite Alloy | Algal Blend | — |
-| Kinetic Mechanism | 4 × Rotation Mechanism | Automate assembly, Tools of the workshop · Workshop Hammer | — |
-| Turn the wheel | 1 × Water Wheel | Kinetic Machine | — |
-| Your first press | 1 × Mechanical Press | Turn the wheel | — |
-| Mix, don’t grind | 1 × Mechanical Mixer | Your first press | — |
-| Air changes materials | 1 × Encased Fan | Your first press | — |
-| Automate assembly | 1 × Deployer | Your first press | — |
-| A renewable workshop · optional | 1 × Mechanical Saw, Confirm the working setup | Automate assembly | — |
-| Stone into iron · optional | 16 × Iron Nugget | Air changes materials | — |
-| Lay your foundations · optional | 1 × Blockhuttownhall | Kinetic Mechanism | — |
-| Milestone · The workshop runs | Confirm the working setup | Mix, don’t grind, Air changes materials, Automate assembly, Kinetic Machine, Tools of the workshop · Workshop Hammer, Kinetic Mechanism | Workshop Hammer · Unbreakable |
-| Kinetic Machine | 1 × Kinetic Machine | Andesite Alloy | — |
-| A geological worksite · optional | Confirm the working setup | Kinetic Machine | — |
-| Timber without exceptions · optional | 1 × Mechanical Saw | Your first press | — |
-| A modest storage upgrade · optional | 1 × Upgrade Base | Kinetic Machine | — |
-| Tools of the workshop · Workshop Hammer | 1 × Iron Hammer | Automate assembly | — |
+| Quest | Goal |
+|---|---|
+| **A kingdom starts small** | Confirm the working setup |
+| **A living binder** | 8 × minecraft:kelp |
+| **Algal Blend** | 8 × architects_palette:algal_blend |
+| **Andesite Alloy** | 16 × create:andesite_alloy |
+| **Kinetic Mechanism** | 4 × kubejs:tk3_rotation_mechanism |
+| **Turn the wheel** | 1 × create:water_wheel |
+| **Your first press** | 1 × create:mechanical_press |
+| **Mix, don’t grind** | 1 × create:mechanical_mixer |
+| **Air changes materials** | 1 × create:encased_fan |
+| **Automate assembly** | 1 × create:deployer |
+| **A renewable workshop** · optional | 1 × create:mechanical_saw, Confirm the working setup |
+| **Stone into iron** · optional | 16 × minecraft:iron_nugget |
+| **Lay your foundations** · optional | 1 × minecolonies:blockhuttownhall |
+| **Milestone · The workshop runs** | Confirm the working setup |
+| **Kinetic Machine** | 1 × kubejs:tk3_kinetic_machine |
+| **A geological worksite** · optional | Confirm the working setup |
+| **Timber without exceptions** · optional | 1 × create:mechanical_saw |
+| **A modest storage upgrade** · optional | 1 × sophisticatedstorage:upgrade_base |
+| **Tools of the workshop · Workshop Hammer** | 1 × betterend:iron_hammer |
 
 ### II · Copperworks
 
-| Quest | Goal | Prerequisites | Reward |
-|---|---|---|---|
-| Flatten copper | 16 × Copper Sheet | Milestone · The workshop runs | — |
-| Renewable sealant | 8 × Slime Ball | Flatten copper | — |
-| Sealed Mechanism | 4 × Sealed Mechanism | Renewable sealant, Tools of the workshop · Sealwright Knife | — |
-| Direct the flow | 16 × Fluid Pipe | Hydraulic Machine | — |
-| Move water | 1 × Mechanical Pump | Direct the flow | — |
-| Buffer fluids | 4 × Fluid Tank | Move water | — |
-| Fill on the line | 1 × Spout | Buffer fluids | — |
-| Recover fluids · optional | 1 × Item Drain | Buffer fluids | — |
-| Reach a reservoir · optional | 1 × Hose Pulley | Move water | — |
-| Expand rotational power · optional | 1 × Steam Engine | Buffer fluids | — |
-| Wires for later · optional | 1 × Rolling Mill | Sealed Mechanism | — |
-| Milestone · A sealed production line | Confirm the working setup | Fill on the line, Buffer fluids, Hydraulic Machine, Tools of the workshop · Sealwright Knife | Sealwright Knife · Unbreakable |
-| Hydraulic Machine | 1 × Hydraulic Machine | Sealed Mechanism | — |
-| Copperworks geology · optional | Confirm the working setup | Hydraulic Machine | — |
-| Tools of the workshop · Sealwright Knife | 1 × Iron Knife | Renewable sealant | — |
+| Quest | Goal |
+|---|---|
+| **Flatten copper** | 16 × create:copper_sheet |
+| **Renewable sealant** | 8 × minecraft:slime_ball |
+| **Sealed Mechanism** | 4 × kubejs:tk3_sealed_mechanism |
+| **Direct the flow** | 16 × create:fluid_pipe |
+| **Move water** | 1 × create:mechanical_pump |
+| **Buffer fluids** | 4 × create:fluid_tank |
+| **Fill on the line** | 1 × create:spout |
+| **Recover fluids** · optional | 1 × create:item_drain |
+| **Reach a reservoir** · optional | 1 × create:hose_pulley |
+| **Expand rotational power** · optional | 1 × create:steam_engine |
+| **Wires for later** · optional | 1 × createaddition:rolling_mill |
+| **Milestone · A sealed production line** | Confirm the working setup |
+| **Hydraulic Machine** | 1 × kubejs:tk3_hydraulic_machine |
+| **Copperworks geology** · optional | Confirm the working setup |
+| **Tools of the workshop · Sealwright Knife** | 1 × farmersdelight:iron_knife |
 
 ### III · Brass & Precision
 
-| Quest | Goal | Prerequisites | Reward |
-|---|---|---|---|
-| Bring heat home | 1 × Blaze Rod | Milestone · A sealed production line | — |
-| Brass metallurgy | 16 × Brass Ingot | Bring heat home | — |
-| Redstone into control | 8 × Electron Tube | Brass metallurgy | — |
-| Precision without scrap | 4 × Precision Mechanism | Redstone into control, Tools of the workshop · Precision Abrasive | — |
-| Route with purpose | 4 × Brass Funnel | Precision Machine | — |
-| Handle exact ingredients | 1 × Mechanical Arm | Route with purpose | — |
-| Mechanical crafting · optional | 3 × Mechanical Crafter | Precision without scrap | — |
-| Create logistics · optional | 1 × Packager | Route with purpose | — |
-| Order from the workshop · optional | 1 × Stock Ticker | Create logistics | — |
-| Recover experience · optional | 1 × Grindstone Drain | Precision without scrap | — |
-| A first propeller · optional | 1 × Propeller Bearing | Precision without scrap | — |
-| Milestone · Precision at scale | Confirm the working setup | Handle exact ingredients, Precision without scrap, Precision Machine, Tools of the workshop · Precision Abrasive | Precision Abrasive · Unbreakable |
-| Precision Machine | 1 × Precision Machine | Precision without scrap | — |
-| A crushing improvement · optional | 1 × Crushing Wheel | Mechanical crafting | — |
-| Tools of the workshop · Precision Abrasive | 1 × Sand Paper | Redstone into control | — |
+| Quest | Goal |
+|---|---|
+| **Bring heat home** | 1 × minecraft:blaze_rod |
+| **Brass metallurgy** | 16 × create:brass_ingot |
+| **Redstone into control** | 8 × create:electron_tube |
+| **Precision without scrap** | 4 × create:precision_mechanism |
+| **Route with purpose** | 4 × create:brass_funnel |
+| **Handle exact ingredients** | 1 × create:mechanical_arm |
+| **Mechanical crafting** · optional | 3 × create:mechanical_crafter |
+| **Create logistics** · optional | 1 × create:packager |
+| **Order from the workshop** · optional | 1 × create:stock_ticker |
+| **Recover experience** · optional | 1 × create_enchantment_industry:grindstone_drain |
+| **A first propeller** · optional | 1 × aeronautics:propeller_bearing |
+| **Milestone · Precision at scale** | Confirm the working setup |
+| **Precision Machine** | 1 × kubejs:tk3_precision_machine |
+| **A crushing improvement** · optional | 1 × create:crushing_wheel |
+| **Tools of the workshop · Precision Abrasive** | 1 × create:sand_paper |
+| **The town places an order** · optional | 1 × createminecolonies:colony_warehouse_stock_link |
+| **A deliberate duel** · optional | Defeat mowziesmobs:ferrous_wroughtnaut |
 
 ### IV · Arcane Industry
 
-| Quest | Goal | Prerequisites | Reward |
-|---|---|---|---|
-| Meet the arcane | 16 × Source Gem | Milestone · Precision at scale | — |
-| Imbue materials | 1 × Imbuement Chamber | Meet the arcane | — |
-| The apparatus | 1 × Enchanting Apparatus | Imbue materials | — |
-| Soul-fire transformation | 8 × Arcane Essence | Meet the arcane | — |
-| Magic with purpose | 2 × Manipulation Essence | The apparatus | — |
-| Arcane Mechanism | 4 × Arcane Mechanism | Soul-fire transformation, Magic with purpose, Tools of the workshop · Arcane Engraver | — |
-| Source from living systems | 1 × Agronomic Sourcelink | Arcane Machine | — |
-| A living courier · optional | 1 × Starbuncle Charm | Source from living systems | — |
-| A magical farm · optional | 1 × Whirlisprig Charm | Source from living systems | — |
-| Ink from the workshop · optional | 4 × Common Ink | Arcane Mechanism | — |
-| Combat-magic chemistry · optional | 1 × Alchemist Cauldron | Arcane Mechanism | — |
-| The Wilden trial | Defeat the Wilden boss | Arcane Mechanism, Source from living systems | — |
-| A permanent physical catalyst | 1 × Wilden Tribute | The Wilden trial | — |
-| Milestone · Magic powers industry | Confirm the working setup | A permanent physical catalyst, Source from living systems, Arcane Machine, Tools of the workshop · Arcane Engraver | Arcane Engraver · Unbreakable |
-| Arcane Machine | 1 × Arcane Machine | Arcane Mechanism | — |
-| Runes meet machinery · optional | 1 × Blank Rune | Arcane Machine | — |
-| Tools of the workshop · Arcane Engraver | 1 × Enchanters Sword | Magic with purpose | — |
+| Quest | Goal |
+|---|---|
+| **Meet the arcane** | 16 × ars_nouveau:source_gem |
+| **Imbue materials** | 1 × ars_nouveau:imbuement_chamber |
+| **The apparatus** | 1 × ars_nouveau:enchanting_apparatus |
+| **Soul-fire transformation** | 8 × irons_spellbooks:arcane_essence |
+| **Magic with purpose** | 2 × ars_nouveau:manipulation_essence |
+| **Arcane Mechanism** | 4 × kubejs:tk3_arcane_mechanism |
+| **Source from living systems** | 1 × ars_nouveau:agronomic_sourcelink |
+| **A living courier** · optional | 1 × ars_nouveau:starbuncle_charm |
+| **A magical farm** · optional | 1 × ars_nouveau:whirlisprig_charm |
+| **Ink from the workshop** · optional | 4 × irons_spellbooks:common_ink |
+| **Combat-magic chemistry** · optional | 1 × irons_spellbooks:alchemist_cauldron |
+| **The Wilden trial** | Defeat ars_nouveau:wilden_boss |
+| **A permanent physical catalyst** | 1 × ars_nouveau:wilden_tribute |
+| **Milestone · Magic powers industry** | Confirm the working setup |
+| **Arcane Machine** | 1 × kubejs:tk3_arcane_machine |
+| **Runes meet machinery** · optional | 1 × irons_spellbooks:blank_rune |
+| **Tools of the workshop · Arcane Engraver** | 1 × ars_nouveau:enchanters_sword |
+| **A living power source** · optional | 1 × ars_creo:starbuncle_wheel |
+| **A second kind of magic** · optional | 1 × witchery:iron_witches_oven |
+| **Mana in motion** · optional | 1 × create_wizardry:arcane_pump |
 
 ### V · The Industrial Bridge
 
-| Quest | Goal | Prerequisites | Reward |
-|---|---|---|---|
-| Steel without a dead end | 16 × Ingot Steel | Milestone · Magic powers industry | — |
-| Explore for osmium | 8 × Ingot Osmium | Steel without a dead end | — |
-| The industrial casing | 4 × Steel Casing | Explore for osmium | — |
-| First FE power | 1 × Heat Generator | The industrial casing | — |
-| Boss catalyst, preserved | 1 × Metallurgic Infuser | First FE power | — |
-| Infused alloys | 8 × Alloy Infused | Boss catalyst, preserved | — |
-| Refine with power | 1 × Enrichment Chamber | Infused alloys | — |
-| Reliable iron doubling | 16 × Dust Iron | Refine with power | — |
-| Close the refining loop | 1 × Energized Smelter | Refine with power | — |
-| A compact FE grid | 4 × Basic Universal Cable | First FE power | — |
-| Rotation becomes FE · optional | 1 × Alternator | A compact FE grid | — |
-| FE becomes rotation · optional | 1 × Electric Motor | Rotation becomes FE | — |
-| Basic industrial logistics · optional | 4 × Basic Mechanical Pipe | A compact FE grid | — |
-| Milestone · An industrial kingdom | Confirm the working setup | Reliable iron doubling, Close the refining loop, A compact FE grid | Industrial Workshop Hammer · Unbreakable |
-| Storage grows with industry · optional | 1 × Stack Upgrade Tier 2 | Infused alloys | — |
+| Quest | Goal |
+|---|---|
+| **Steel without a dead end** | 16 × mekanism:ingot_steel |
+| **Explore for osmium** | 8 × mekanism:ingot_osmium |
+| **The industrial casing** | 4 × mekanism:steel_casing |
+| **First FE power** | 1 × mekanismgenerators:heat_generator |
+| **Boss catalyst, preserved** | 1 × mekanism:metallurgic_infuser |
+| **Infused alloys** | 8 × mekanism:alloy_infused |
+| **Refine with power** | 1 × mekanism:enrichment_chamber |
+| **Reliable iron doubling** | 16 × mekanism:dust_iron |
+| **Close the refining loop** | 1 × mekanism:energized_smelter |
+| **A compact FE grid** | 4 × mekanism:basic_universal_cable |
+| **Rotation becomes FE** · optional | 1 × createaddition:alternator |
+| **FE becomes rotation** · optional | 1 × createaddition:electric_motor |
+| **Basic industrial logistics** · optional | 4 × mekanism:basic_mechanical_pipe |
+| **Milestone · An industrial kingdom** | Confirm the working setup |
+| **Storage grows with industry** · optional | 1 × sophisticatedstorage:stack_upgrade_tier_2 |
+| **Distil the harvest** · optional | 1 × witchery:distillery |
+
+### VI · The Connected Kingdom
+
+| Quest | Goal |
+|---|---|
+| **Charge the crystal** | 1 × ae2:charger |
+| **A crystal in motion** | 8 × ae2:fluix_crystal |
+| **Processors before the network** | 1 × ae2:inscriber |
+| **Network Mechanism** | 4 × kubejs:tk3_network_mechanism |
+| **Network Chassis** | 2 × kubejs:tk3_network_chassis |
+| **A network heart** | 1 × ae2:controller |
+| **An organised stockroom** | 1 × ae2:drive |
+| **Make the stockroom readable** | 1 × ae2:terminal |
+| **Teach the network** | 1 × ae2:pattern_encoding_terminal |
+| **Ask Create to work** | 1 × ae2:pattern_provider |
+| **Craft on request** | 1 × ae2:molecular_assembler |
+| **Give the job a workspace** | 1 × ae2:1k_crafting_storage |
+| **Parallel refining** | 1 × mekanism:basic_enriching_factory |
+| **Words cross systems** | 1 × ars_n_spells:spell_loom |
+| **Orders from the town** · optional | 1 × createminecolonies:colony_warehouse_stock_link |
+| **Trial · Lich** | Defeat twilightforest:lich |
+| **Milestone · The Connected Kingdom** | Confirm the working setup |
+| **Refine the equipment** · optional | 1 × apotheosis:reforging_table |
+| **Spells from the forest** · optional | Confirm the working setup |
+
+### VII · Beyond the Horizon
+
+| Quest | Goal |
+|---|---|
+| **A stronger circuit** | 8 × mekanism:alloy_reinforced |
+| **Expedition Mechanism** | 4 × kubejs:tk3_expedition_mechanism |
+| **Expedition Frame** | 2 × kubejs:tk3_expedition_frame |
+| **Separate with purpose** | 1 × mekanism:electrolytic_separator |
+| **Polymers from a farm** | 1 × mekanism:pressurized_reaction_chamber |
+| **A flexible shell** | 8 × mekanism:hdpe_sheet |
+| **Controlled flight** | 1 × aeronautics:gyroscopic_propeller_bearing |
+| **Lift from a compact line** | 16 × aeronautics:white_envelope |
+| **An actual expedition** | Confirm the working setup |
+| **Keep the network nearby** | 1 × ae2:wireless_terminal |
+| **A second life for gear** | 1 × create_enchantment_industry:blaze_forger |
+| **Storage travels too** | 1 × sophisticatedbackpacks:netherite_backpack |
+| **Trial · The Harbinger** | Defeat cataclysm:the_harbinger |
+| **Milestone · Beyond the Horizon** | Confirm the working setup |
+| **An expedition meets a dragon** · optional | Defeat iceandfire:fire_dragon |
+| **An expedition below ground** · optional | Defeat alexscaves:forsaken |
+| **The cave becomes a workshop** · optional | 1 × alexscaves:quarry |
+| **Another expedition trial** · optional | Confirm the working setup |
+
+### VIII · Containment & Control
+
+| Quest | Goal |
+|---|---|
+| **Containment Mechanism** | 4 × kubejs:tk3_containment_mechanism |
+| **Containment Frame** | 4 × kubejs:tk3_containment_frame |
+| **Prepare fissile fuel** | 1 × mekanism:isotopic_centrifuge |
+| **A contained reactor** | 16 × mekanismgenerators:fission_reactor_casing |
+| **Recover the steam** | 16 × mekanismgenerators:turbine_casing |
+| **Waste is part of the recipe** | 4 × mekanism:radioactive_waste_barrel |
+| **Sunlight after fission** | 2 × mekanism:pellet_polonium |
+| **One warehouse, many items** | 1 × ae2:cell_component_16k |
+| **A planned worksite** | 1 × mekanism:digital_miner |
+| **Prove the shutdown** | Confirm the working setup |
+| **Trial · Ignis** | Defeat cataclysm:ignis |
+| **Milestone · Containment & Control** | Confirm the working setup |
+| **A forge with a living flame** · optional | 1 × iceandfire:dragonforge_fire_core_disabled |
+| **A second contained furnace** · optional | 1 × alexscaves:nuclear_furnace_component |
+
+### IX · Singularity Engineering
+
+| Quest | Goal |
+|---|---|
+| **The End is earned** | Confirm the working setup |
+| **A kingdom beyond the portal** | Defeat minecraft:ender_dragon |
+| **A controlled singularity** | 1 × ae2:singularity |
+| **Singularity Mechanism** | 4 × kubejs:tk3_singularity_mechanism |
+| **Singularity Frame** | 4 × kubejs:tk3_singularity_frame |
+| **Fuel from two directions** | 1 × mekanismgenerators:fusion_reactor_controller |
+| **Contain the impossible** | 16 × mekanism:sps_casing |
+| **An honest antimatter line** | 1 × mekanism:pellet_antimatter |
+| **A distant network** | 8 × ae2:quantum_ring |
+| **Trial · Ender Guardian** | Defeat cataclysm:ender_guardian |
+| **Milestone · Singularity Engineering** | Confirm the working setup |
+
+### X · The Sovereign Project
+
+| Quest | Goal |
+|---|---|
+| **Sovereign Mechanism** | 4 × kubejs:tk3_sovereign_mechanism |
+| **Sovereign Core** | 2 × kubejs:tk3_sovereign_core |
+| **An industrial suit** · optional | 1 × mekanism:mekasuit_bodyarmor |
+| **One tool, powered** · optional | 1 × mekanism:meka_tool |
+| **A final storage tier** · optional | 1 × ae2:cell_component_256k |
+| **The workshop still matters** | Confirm the working setup |
+| **Industry closes its loop** | Confirm the working setup |
+| **A kingdom has supplies** | Confirm the working setup |
+| **The Sovereign Keystone** | 1 × kubejs:tk3_sovereign_keystone |
+| **Milestone · The Sovereign Project** | Confirm the working setup |
+

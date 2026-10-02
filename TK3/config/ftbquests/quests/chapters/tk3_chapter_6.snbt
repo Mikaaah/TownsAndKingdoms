@@ -1,0 +1,539 @@
+{
+  "id": "167A43A421FCB160",
+  "filename": "tk3_chapter_6",
+  "group": "7427C3F538DF9198",
+  "title": "VI · The Connected Kingdom",
+  "subtitle": "AE2 networks, processing patterns and living logistics",
+  "icon": "kubejs:tk3_network_chassis",
+  "order_index": 6,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "C013863D68E0D0D0",
+      "title": "Charge the crystal",
+      "description": [
+        "Steel Casing, certus crystal and a capacitor bootstrap the Charger before the Network Chassis."
+      ],
+      "dependencies": [
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "F2FCA7AADEE2FE30",
+          "type": "item",
+          "item": {
+            "id": "ae2:charger",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "ae2:charger",
+      "rewards": []
+    },
+    {
+      "id": "F677DE139213B47E",
+      "title": "A crystal in motion",
+      "description": [
+        "Use the native AE2 water transformation: charged certus, Nether quartz and redstone. Native crystal growth remains available."
+      ],
+      "dependencies": [
+        "C013863D68E0D0D0"
+      ],
+      "tasks": [
+        {
+          "id": "E1A2F456810DD1A0",
+          "type": "item",
+          "item": {
+            "id": "ae2:fluix_crystal",
+            "count": 1
+          },
+          "count": 8,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 0.0,
+      "icon": "ae2:fluix_crystal",
+      "rewards": []
+    },
+    {
+      "id": "34D93080B4F3A5A7",
+      "title": "Processors before the network",
+      "description": [
+        "Build the bootstrap Inscriber before the network. Duplicate the presses, print circuits and silicon, then combine them with redstone into processors."
+      ],
+      "dependencies": [
+        "F677DE139213B47E"
+      ],
+      "tasks": [
+        {
+          "id": "7A14E899CB5B39D2",
+          "type": "item",
+          "item": {
+            "id": "ae2:inscriber",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 0.0,
+      "icon": "ae2:inscriber",
+      "rewards": []
+    },
+    {
+      "id": "DFC360DD6FA1C1F5",
+      "title": "Network Mechanism",
+      "description": [
+        "Precision Mechanism → Advanced Control Circuit → Fluix Crystal → Diamond Hammer. One sequence loop, guaranteed output."
+      ],
+      "dependencies": [
+        "34D93080B4F3A5A7"
+      ],
+      "tasks": [
+        {
+          "id": "5850DC86AC9785B2",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_network_mechanism",
+            "count": 1
+          },
+          "count": 4,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_network_mechanism",
+      "rewards": []
+    },
+    {
+      "id": "93DCE0D628925C09",
+      "title": "Network Chassis",
+      "description": [
+        "Deploy a Network Mechanism onto a Steel Casing. Keep your first Charger and Inscriber; the chassis builds the wider network."
+      ],
+      "dependencies": [
+        "DFC360DD6FA1C1F5"
+      ],
+      "tasks": [
+        {
+          "id": "7C7BB5FFEA5C618E",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_network_chassis",
+            "count": 1
+          },
+          "count": 2,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 12.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_network_chassis",
+      "rewards": []
+    },
+    {
+      "id": "5C294B30545AD1E2",
+      "title": "A network heart",
+      "description": [
+        "Connect the controller to FE using an Energy Acceptor. AE2 channels and native power use remain active."
+      ],
+      "dependencies": [
+        "93DCE0D628925C09"
+      ],
+      "tasks": [
+        {
+          "id": "CA2BBFAC28CD3301",
+          "type": "item",
+          "item": {
+            "id": "ae2:controller",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "ae2:controller",
+      "rewards": []
+    },
+    {
+      "id": "797EC6B3D2640E9A",
+      "title": "An organised stockroom",
+      "description": [
+        "Use 1k cells first; filter external storage on Sophisticated Storage buffers instead of mixing every item into one uncontrolled drawer."
+      ],
+      "dependencies": [
+        "5C294B30545AD1E2"
+      ],
+      "tasks": [
+        {
+          "id": "47E27A7385F8181F",
+          "type": "item",
+          "item": {
+            "id": "ae2:drive",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "ae2:drive",
+      "rewards": []
+    },
+    {
+      "id": "02E367A6FCEDEE75",
+      "title": "Make the stockroom readable",
+      "description": [
+        "Attach a terminal through powered ME cable. Craft processors on the Inscriber; duplicate the native presses for parallel lines."
+      ],
+      "dependencies": [
+        "797EC6B3D2640E9A"
+      ],
+      "tasks": [
+        {
+          "id": "1D92207EE983C05C",
+          "type": "item",
+          "item": {
+            "id": "ae2:terminal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 3.0,
+      "icon": "ae2:terminal",
+      "rewards": []
+    },
+    {
+      "id": "020D015BFDDBE979",
+      "title": "Teach the network",
+      "description": [
+        "Encode separate crafting and processing patterns. Match the authored recipe batch exactly, including returned buckets and catalysts."
+      ],
+      "dependencies": [
+        "02E367A6FCEDEE75"
+      ],
+      "tasks": [
+        {
+          "id": "561AAADE43251FB5",
+          "type": "item",
+          "item": {
+            "id": "ae2:pattern_encoding_terminal",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 3.0,
+      "icon": "ae2:pattern_encoding_terminal",
+      "rewards": []
+    },
+    {
+      "id": "22A3D2BDC4FB4932",
+      "title": "Ask Create to work",
+      "description": [
+        "A processing pattern sends ingredients into a buffer feeding the Create machine. Use an Import Bus or Interface to return results; do not extract unfinished sequence items."
+      ],
+      "dependencies": [
+        "020D015BFDDBE979"
+      ],
+      "tasks": [
+        {
+          "id": "F5A270B736248182",
+          "type": "item",
+          "item": {
+            "id": "ae2:pattern_provider",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 12.0,
+      "y": 3.0,
+      "icon": "ae2:pattern_provider",
+      "rewards": []
+    },
+    {
+      "id": "5704A8275D98254D",
+      "title": "Craft on request",
+      "description": [
+        "Build a Crafting Unit with crafting storage before expecting automatic jobs. Processing patterns automate the established Create and magic recipes."
+      ],
+      "dependencies": [
+        "22A3D2BDC4FB4932"
+      ],
+      "tasks": [
+        {
+          "id": "DA14159454106613",
+          "type": "item",
+          "item": {
+            "id": "ae2:molecular_assembler",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "ae2:molecular_assembler",
+      "rewards": []
+    },
+    {
+      "id": "E64B424359254CA0",
+      "title": "Give the job a workspace",
+      "description": [
+        "Start with one small CPU. Larger storage and coprocessors belong to later tiers."
+      ],
+      "dependencies": [
+        "5704A8275D98254D"
+      ],
+      "tasks": [
+        {
+          "id": "B3DE868CA9E112D5",
+          "type": "item",
+          "item": {
+            "id": "ae2:1k_crafting_storage",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "ae2:1k_crafting_storage",
+      "rewards": []
+    },
+    {
+      "id": "CFB803B841F5B7C4",
+      "title": "Parallel refining",
+      "description": [
+        "Upgrade the Enrichment Chamber through its data-preserving Mekanism recipe. The machine inventory and settings survive."
+      ],
+      "dependencies": [
+        "E64B424359254CA0"
+      ],
+      "tasks": [
+        {
+          "id": "F0F3D5E2548EAACC",
+          "type": "item",
+          "item": {
+            "id": "mekanism:basic_enriching_factory",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 6.0,
+      "icon": "mekanism:basic_enriching_factory",
+      "rewards": []
+    },
+    {
+      "id": "7093BC3055E89788",
+      "title": "Words cross systems",
+      "description": [
+        "The Ars spell loom links the magic systems. Its native spell rules stay active; machine construction follows the network tier."
+      ],
+      "dependencies": [
+        "CFB803B841F5B7C4"
+      ],
+      "tasks": [
+        {
+          "id": "D81C751E22EC114E",
+          "type": "item",
+          "item": {
+            "id": "ars_n_spells:spell_loom",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 6.0,
+      "icon": "ars_n_spells:spell_loom",
+      "rewards": []
+    },
+    {
+      "id": "9A88469BCCAB33DD",
+      "title": "Orders from the town",
+      "description": [
+        "Connect the colony warehouse to Create orders. Colony research and building levels stay native. Configure one shared supply buffer."
+      ],
+      "dependencies": [
+        "7093BC3055E89788"
+      ],
+      "tasks": [
+        {
+          "id": "96AB387F505B43BF",
+          "type": "item",
+          "item": {
+            "id": "createminecolonies:colony_warehouse_stock_link",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 12.0,
+      "y": 6.0,
+      "icon": "createminecolonies:colony_warehouse_stock_link",
+      "rewards": []
+    },
+    {
+      "id": "D5FDACA2A14DE92D",
+      "title": "Trial · Lich",
+      "description": [
+        "Defeat this boss. The kill task is detected and grants one reusable production core per player. Further player kills drop additional cores for parallel lines."
+      ],
+      "dependencies": [
+        "7093BC3055E89788"
+      ],
+      "tasks": [
+        {
+          "id": "4CD3350D8747BF97",
+          "type": "kill",
+          "entity": "twilightforest:lich",
+          "value": 1
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_network_chassis",
+      "rewards": [
+        {
+          "id": "B553E03C97E3F3DE",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_verdant_sigil",
+            "count": 1
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "DCEB2AF9B398CAEB",
+      "title": "Milestone · The Connected Kingdom",
+      "description": [
+        "Complete the working line and the required trial. This unlocks chapter 7. Reward: a named unbreakable finishing tool; one claim per player."
+      ],
+      "dependencies": [
+        "CFB803B841F5B7C4",
+        "7093BC3055E89788",
+        "D5FDACA2A14DE92D"
+      ],
+      "tasks": [
+        {
+          "id": "B561467BC68BCA5F",
+          "type": "checkmark",
+          "title": "Confirm this production line works"
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_network_chassis",
+      "rewards": [
+        {
+          "id": "8E989FEECC3D3EE5",
+          "type": "item",
+          "item": {
+            "id": "betterend:diamond_hammer",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Network Chassis Tool\", \"color\": \"light_purple\", \"italic\": false}"
+            }
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "23374C63ED14E574",
+      "title": "Refine the equipment",
+      "description": [
+        "Salvage unwanted affixed equipment, then use native reforging and gems. The tables require the network workshop."
+      ],
+      "dependencies": [
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "334F7C19C2C30851",
+          "type": "item",
+          "item": {
+            "id": "apotheosis:reforging_table",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 9.0,
+      "icon": "apotheosis:reforging_table",
+      "rewards": []
+    },
+    {
+      "id": "BAD0BA4776492ABB",
+      "title": "Spells from the forest",
+      "description": [
+        "Explore Twilight Forest and Spellbooks of Twilight. Native boss seals and adventure order remain active."
+      ],
+      "dependencies": [
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "F529FC17BE9DC834",
+          "type": "checkmark",
+          "title": "Confirm this production line works"
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_network_chassis",
+      "rewards": []
+    }
+  ]
+}

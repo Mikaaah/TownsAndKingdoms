@@ -8,213 +8,932 @@ ServerEvents.recipes(event => {
     const MatchContext = Java.loadClass(
         'dev.latvian.mods.kubejs.recipe.filter.RecipeMatchContext$Impl');
     const allowed = {
-        "sophisticatedstorage:copper_to_gold_tier_upgrade": [],
-        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_4_conversion": [],
-        "sophisticatedstorage:stack_upgrade_omega_tier": [],
-        "sophisticatedstorage:basic_to_netherite_tier_upgrade": [],
-        "sophisticatedbackpacks:infinity_upgrade": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_4_conversion": [],
-        "sophisticatedstorage:basic_to_gold_tier_upgrade": [],
-        "sophisticatedstorage:basic_to_diamond_tier_upgrade": [],
-        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_3_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_3_conversion": [],
-        "sophisticatedbackpacks:stack_upgrade_omega_tier": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_2_conversion": [],
-        "sophisticatedstorage:diamond_to_netherite_tier_upgrade": [],
-        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_2_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_1_plus_conversion": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_3": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_4_conversion": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_4": [],
-        "sophisticatedstorage:stack_upgrade_tier_5": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_3_conversion": [],
-        "sophisticatedstorage:iron_to_diamond_tier_upgrade": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_4_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_4_conversion": [],
-        "sophisticatedstorage:basic_to_iron_tier_upgrade": [],
-        "sophisticatedbackpacks:survival_infinity_upgrade": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_2_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_2_conversion": [],
-        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_4_conversion": [],
-        "sophisticatedstorage:iron_to_netherite_tier_upgrade": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_4_conversion": [],
-        "sophisticatedstorage:survival_infinity_upgrade": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_5_conversion": [],
-        "sophisticatedstorage:copper_to_diamond_tier_upgrade": [],
-        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_5_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_3": [],
-        "sophisticatedstorage:infinity_upgrade": [],
-        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_3_conversion": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_3_to_tier_4_conversion": [],
-        "sophisticatedstorage:copper_to_netherite_tier_upgrade": [],
-        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_3_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_5_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_4": [],
-        "sophisticatedstorage:stack_upgrade_tier_4_to_tier_5_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_5_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_3_conversion": [],
-        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_1_conversion": [],
-        "sophisticatedstorage:stack_upgrade_tier_1_plus": [],
-        "sophisticatedstorage:gold_to_netherite_tier_upgrade": [],
-        "architects_palette:algal_blend": [
-            "kubejs:tk3/tier_1/algal_blend",
-            "kubejs:tk3/tier_1/algal_blend_bulk"
+        "ae2:16k_crafting_storage": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_16k_cpu_crafting_storage"
         ],
-        "create:andesite_alloy": [
-            "kubejs:tk3/create/andesite_alloy_unpacking",
-            "kubejs:tk3/tier_1/andesite_alloy",
-            "kubejs:tk3/tier_1/andesite_alloy_bulk"
+        "ae2:1k_crafting_storage": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_1k_cpu_crafting_storage"
         ],
-        "kubejs:tk3_rotation_mechanism": [
-            "kubejs:tk3/tier_1/rotation_mechanism_automated"
+        "ae2:256k_crafting_storage": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_256k_cpu_crafting_storage"
         ],
-        "create:water_wheel": [
-            "kubejs:tk3/tier_1/water_wheel"
+        "ae2:4k_crafting_storage": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_4k_cpu_crafting_storage"
         ],
-        "create:large_water_wheel": [
-            "kubejs:tk3/tier_1/large_water_wheel"
+        "ae2:64k_crafting_storage": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_64k_cpu_crafting_storage"
         ],
-        "create:mechanical_press": [
-            "kubejs:tk3/tier_1/mechanical_press"
+        "ae2:advanced_card": [
+            "kubejs:tk3/ae_network/ae2_materials_advancedcard"
         ],
-        "create:mechanical_mixer": [
-            "kubejs:tk3/tier_1/mechanical_mixer"
+        "ae2:annihilation_core": [
+            "kubejs:tk3/ae_network/ae2_materials_annihilationcore"
         ],
-        "create:encased_fan": [
-            "kubejs:tk3/tier_1/encased_fan"
+        "ae2:annihilation_plane": [
+            "kubejs:tk3/ae_network/ae2_network_parts_annihilation_plane_alt",
+            "kubejs:tk3/ae_network/ae2_network_parts_annihilation_plane_alt2"
         ],
-        "create:mechanical_saw": [
-            "kubejs:tk3/tier_1/mechanical_saw"
+        "ae2:basic_card": [
+            "kubejs:tk3/ae_network/ae2_materials_basiccard"
         ],
-        "create:mechanical_drill": [
-            "kubejs:tk3/tier_1/mechanical_drill"
+        "ae2:black_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_black"
         ],
-        "create:mechanical_bearing": [
-            "kubejs:tk3/tier_1/mechanical_bearing"
+        "ae2:black_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_black"
         ],
-        "create:mechanical_harvester": [
-            "kubejs:tk3/tier_1/mechanical_harvester"
+        "ae2:black_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_black"
         ],
-        "create:deployer": [
-            "kubejs:tk3/tier_1/deployer"
+        "ae2:black_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_black"
         ],
-        "create:basin": [
-            "kubejs:tk3/tier_1/basin"
+        "ae2:black_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_black"
         ],
-        "create:andesite_funnel": [
-            "kubejs:tk3/tier_1/andesite_funnel"
+        "ae2:blank_pattern": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_patterns_blank"
         ],
-        "create:portable_storage_interface": [
-            "kubejs:tk3/tier_1/portable_storage_interface"
+        "ae2:blue_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_blue"
         ],
-        "minecraft:gravel": [
-            "kubejs:tk3/tier_1/cobble_to_gravel"
+        "ae2:blue_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_blue"
         ],
-        "minecraft:clay_ball": [
-            "kubejs:tk3/compat/mud_clay",
-            "kubejs:tk3/geology/crushing_andesite",
-            "kubejs:tk3/geology/milling_andesite",
-            "kubejs:tk3/tier_1/renewable_clay"
+        "ae2:blue_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_blue"
         ],
-        "kubejs:tk3_sealed_mechanism": [
-            "kubejs:tk3/tier_2/tk3_sealed_mechanism"
+        "ae2:blue_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_blue"
         ],
-        "create:fluid_pipe": [
-            "kubejs:tk3/tier_2/fluid_pipe"
+        "ae2:blue_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_blue"
         ],
-        "create:mechanical_pump": [
-            "kubejs:tk3/tier_2/mechanical_pump"
+        "ae2:brown_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_brown"
         ],
-        "create:fluid_tank": [
-            "kubejs:tk3/tier_2/fluid_tank"
+        "ae2:brown_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_brown"
         ],
-        "create:spout": [
-            "kubejs:tk3/tier_2/spout"
+        "ae2:brown_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_brown"
         ],
-        "create:item_drain": [
-            "kubejs:tk3/tier_2/item_drain"
+        "ae2:brown_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_brown"
         ],
-        "create:hose_pulley": [
-            "kubejs:tk3/tier_2/hose_pulley"
+        "ae2:brown_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_brown"
         ],
-        "create:portable_fluid_interface": [
-            "kubejs:tk3/tier_2/portable_fluid_interface"
+        "ae2:cable_anchor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_cable_anchor"
         ],
-        "create:steam_engine": [
-            "kubejs:tk3/tier_2/steam_engine"
+        "ae2:cable_energy_acceptor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_energy_acceptor"
         ],
-        "createaddition:rolling_mill": [
-            "kubejs:tk3/tier_2/rolling_mill"
+        "ae2:cable_interface": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_interfaces_interface_part"
         ],
-        "minecraft:slime_ball": [
-            "kubejs:tk3/tier_2/renewable_sealant"
+        "ae2:cable_pattern_provider": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_pattern_providers_interface_part"
         ],
-        "create:brass_ingot": [
-            "kubejs:tk3/create/brass_ingot_from_nuggets",
-            "kubejs:tk3/create/brass_ingot_unpacking",
-            "kubejs:tk3/tier_3/brass_ingot"
+        "ae2:calculation_processor": [
+            "kubejs:tk3/late_layers/ae2_calculation_processor"
         ],
-        "create:precision_mechanism": [
-            "kubejs:tk3/tier_3/precision_mechanism"
+        "ae2:calculation_processor_press": [
+            "kubejs:tk3/ae_network/ae2_inscriber_calculation_processor_press"
         ],
-        "create:brass_funnel": [
-            "kubejs:tk3/tier_3/brass_funnel"
+        "ae2:capacity_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardcapacity"
         ],
-        "create:brass_tunnel": [
-            "kubejs:tk3/tier_3/brass_tunnel"
+        "ae2:cell_component_16k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_16k_part"
         ],
-        "create:mechanical_arm": [
-            "kubejs:tk3/tier_3/mechanical_arm"
+        "ae2:cell_component_1k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_1k_part"
         ],
-        "create:rotation_speed_controller": [
-            "kubejs:tk3/tier_3/rotation_speed_controller"
+        "ae2:cell_component_256k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_256k_part"
         ],
-        "create:mechanical_crafter": [
-            "kubejs:tk3/tier_3/mechanical_crafter"
+        "ae2:cell_component_4k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_4k_part"
         ],
-        "create:sequenced_gearshift": [
-            "kubejs:tk3/tier_3/sequenced_gearshift"
+        "ae2:cell_component_64k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_64k_part"
         ],
-        "create:packager": [
-            "kubejs:tk3/tier_3/packager"
+        "ae2:cell_workbench": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_cell_workbench"
         ],
-        "create:stock_link": [
-            "kubejs:tk3/create/stock_link_clear",
-            "kubejs:tk3/tier_3/stock_link"
+        "ae2:charged_certus_quartz_crystal": [
+            "kubejs:tk3/late_layers/ae2_charged_certus_quartz_crystal"
         ],
-        "create:stock_ticker": [
-            "kubejs:tk3/create/stock_ticker_clear",
-            "kubejs:tk3/tier_3/stock_ticker"
+        "ae2:charged_staff": [
+            "kubejs:tk3/ae_network/ae2_tools_misctools_charged_staff"
         ],
-        "create:repackager": [
-            "kubejs:tk3/tier_3/repackager"
+        "ae2:charger": [
+            "kubejs:tk3/late_layers/ae2_charger"
         ],
-        "create:package_frogport": [
-            "kubejs:tk3/tier_3/package_frogport"
+        "ae2:chest": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_storage_chest"
         ],
-        "create_enchantment_industry:grindstone_drain": [
-            "kubejs:tk3/tier_3/grindstone_drain"
+        "ae2:chiseled_quartz_slab": [
+            "kubejs:tk3/ae_network/ae2_shaped_slabs_chiseled_quartz_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_slabs_chiseled_quartz_slab"
         ],
-        "create_enchantment_industry:printer": [
-            "kubejs:tk3/tier_3/printer"
+        "ae2:chiseled_quartz_stairs": [
+            "kubejs:tk3/ae_network/ae2_shaped_stairs_chiseled_quartz_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_stairs_chiseled_quartz_stairs"
+        ],
+        "ae2:chiseled_quartz_wall": [
+            "kubejs:tk3/ae_network/ae2_shaped_walls_chiseled_quartz_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_walls_chiseled_quartz_wall"
+        ],
+        "ae2:color_applicator": [
+            "kubejs:tk3/ae_network/ae2_tools_network_color_applicator"
+        ],
+        "ae2:condenser": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_io_condenser"
+        ],
+        "ae2:controller": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_controller"
+        ],
+        "ae2:conversion_monitor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_monitors_conversion"
+        ],
+        "ae2:crafting_accelerator": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_cpu_crafting_accelerator"
+        ],
+        "ae2:crafting_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardcrafting"
+        ],
+        "ae2:crafting_monitor": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_cpu_crafting_monitor"
+        ],
+        "ae2:crafting_terminal": [
+            "kubejs:tk3/ae_network/ae2_network_parts_terminals_crafting"
+        ],
+        "ae2:crafting_unit": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_cpu_crafting_unit"
+        ],
+        "ae2:crank": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_crank"
+        ],
+        "ae2:crystal_resonance_generator": [
+            "kubejs:tk3/ae_network/ae2_network_crystal_resonance_generator"
+        ],
+        "ae2:cyan_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_cyan"
+        ],
+        "ae2:cyan_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_cyan"
+        ],
+        "ae2:cyan_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_cyan"
+        ],
+        "ae2:cyan_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_cyan"
+        ],
+        "ae2:cyan_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_cyan"
+        ],
+        "ae2:dark_monitor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_panels_dark_monitor"
+        ],
+        "ae2:dense_energy_cell": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_energy_dense_energy_cell"
+        ],
+        "ae2:drive": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_storage_drive"
+        ],
+        "ae2:ender_dust": [
+            "kubejs:tk3/ae_network/ae2_inscriber_ender_dust"
+        ],
+        "ae2:energy_acceptor": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_energy_energy_acceptor",
+            "kubejs:tk3/ae_network/ae2_network_blocks_energy_energy_acceptor_alt"
+        ],
+        "ae2:energy_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardenergy"
+        ],
+        "ae2:energy_cell": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_energy_energy_cell"
+        ],
+        "ae2:energy_level_emitter": [
+            "kubejs:tk3/ae_network/ae2_network_parts_energy_level_emitter"
+        ],
+        "ae2:engineering_processor": [
+            "kubejs:tk3/late_layers/ae2_engineering_processor"
+        ],
+        "ae2:engineering_processor_press": [
+            "kubejs:tk3/ae_network/ae2_inscriber_engineering_processor_press"
+        ],
+        "ae2:equal_distribution_card": [
+            "kubejs:tk3/ae_network/ae2_materials_carddistribution"
+        ],
+        "ae2:export_bus": [
+            "kubejs:tk3/ae_network/ae2_network_parts_export_bus"
+        ],
+        "ae2:fluid_cell_housing": [
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_cell_housing"
+        ],
+        "ae2:fluid_storage_cell_16k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_16k_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_16k"
+        ],
+        "ae2:fluid_storage_cell_1k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_1k_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_1k"
+        ],
+        "ae2:fluid_storage_cell_256k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_256k",
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_256k_storage"
+        ],
+        "ae2:fluid_storage_cell_4k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_4k",
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_4k_storage"
+        ],
+        "ae2:fluid_storage_cell_64k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_64k",
+            "kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_64k_storage"
+        ],
+        "ae2:fluix_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_fluix",
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_fluix_clean"
+        ],
+        "ae2:fluix_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_fluix",
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_fluix_clean"
+        ],
+        "ae2:fluix_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_fluix",
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_fluix_clean"
+        ],
+        "ae2:fluix_pearl": [
+            "kubejs:tk3/ae_network/ae2_misc_fluixpearl"
+        ],
+        "ae2:fluix_slab": [
+            "kubejs:tk3/ae_network/ae2_shaped_slabs_fluix_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_slabs_fluix_slab"
+        ],
+        "ae2:fluix_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_fluix_clean",
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_fluix"
+        ],
+        "ae2:fluix_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_fluix",
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_from_smart",
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_fluix_clean"
+        ],
+        "ae2:fluix_stairs": [
+            "kubejs:tk3/ae_network/ae2_shaped_stairs_fluix_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_stairs_fluix_stairs"
+        ],
+        "ae2:fluix_upgrade_smithing_template": [
+            "kubejs:tk3/ae_network/ae2_tools_fluix_upgrade_smithing_template"
+        ],
+        "ae2:fluix_wall": [
+            "kubejs:tk3/ae_network/ae2_shaped_walls_fluix_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_walls_fluix_wall"
+        ],
+        "ae2:formation_core": [
+            "kubejs:tk3/ae_network/ae2_materials_formationcore"
+        ],
+        "ae2:formation_plane": [
+            "kubejs:tk3/ae_network/ae2_network_parts_formation_plane_alt",
+            "kubejs:tk3/ae_network/ae2_network_parts_formation_plane"
+        ],
+        "ae2:fuzzy_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardfuzzy"
+        ],
+        "ae2:gray_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_gray"
+        ],
+        "ae2:gray_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_gray"
+        ],
+        "ae2:gray_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_gray"
+        ],
+        "ae2:gray_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_gray"
+        ],
+        "ae2:gray_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_gray"
+        ],
+        "ae2:green_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_green"
+        ],
+        "ae2:green_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_green"
+        ],
+        "ae2:green_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_green"
+        ],
+        "ae2:green_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_green"
+        ],
+        "ae2:green_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_green"
+        ],
+        "ae2:growth_accelerator": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_crystal_processing_growth_accelerator"
+        ],
+        "ae2:guide": [
+            "kubejs:tk3/ae_network/ae2_charger_guide"
+        ],
+        "ae2:import_bus": [
+            "kubejs:tk3/ae_network/ae2_network_parts_import_bus"
+        ],
+        "ae2:inscriber": [
+            "kubejs:tk3/late_layers/ae2_inscriber"
+        ],
+        "ae2:interface": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_interfaces_interface",
+            "kubejs:tk3/ae_network/ae2_network_blocks_interfaces_interface_alt"
+        ],
+        "ae2:inverted_toggle_bus": [
+            "kubejs:tk3/ae_network/ae2_network_parts_toggle_bus_inverted_alt"
+        ],
+        "ae2:inverter_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardinverter"
+        ],
+        "ae2:io_port": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_io_port"
+        ],
+        "ae2:item_cell_housing": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_cell_housing"
+        ],
+        "ae2:item_storage_cell_16k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_16k_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_16k"
+        ],
+        "ae2:item_storage_cell_1k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_1k_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_1k"
+        ],
+        "ae2:item_storage_cell_256k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_256k_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_256k"
+        ],
+        "ae2:item_storage_cell_4k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_4k",
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_4k_storage"
+        ],
+        "ae2:item_storage_cell_64k": [
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_64k",
+            "kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_64k_storage"
+        ],
+        "ae2:level_emitter": [
+            "kubejs:tk3/ae_network/ae2_network_parts_level_emitter"
+        ],
+        "ae2:light_blue_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_light_blue"
+        ],
+        "ae2:light_blue_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_light_blue"
+        ],
+        "ae2:light_blue_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_light_blue"
+        ],
+        "ae2:light_blue_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_light_blue"
+        ],
+        "ae2:light_blue_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_light_blue"
+        ],
+        "ae2:light_detector": [
+            "kubejs:tk3/ae_network/ae2_decorative_light_detector"
+        ],
+        "ae2:light_gray_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_light_gray"
+        ],
+        "ae2:light_gray_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_light_gray"
+        ],
+        "ae2:light_gray_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_light_gray"
+        ],
+        "ae2:light_gray_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_light_gray"
+        ],
+        "ae2:light_gray_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_light_gray"
+        ],
+        "ae2:lime_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_lime"
+        ],
+        "ae2:lime_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_lime"
+        ],
+        "ae2:lime_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_lime"
+        ],
+        "ae2:lime_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_lime"
+        ],
+        "ae2:lime_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_lime"
+        ],
+        "ae2:logic_processor": [
+            "kubejs:tk3/late_layers/ae2_logic_processor"
+        ],
+        "ae2:logic_processor_press": [
+            "kubejs:tk3/ae_network/ae2_inscriber_logic_processor_press"
+        ],
+        "ae2:magenta_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_magenta"
+        ],
+        "ae2:magenta_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_magenta"
+        ],
+        "ae2:magenta_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_magenta"
+        ],
+        "ae2:magenta_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_magenta"
+        ],
+        "ae2:magenta_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_magenta"
+        ],
+        "ae2:matter_cannon": [
+            "kubejs:tk3/ae_network/ae2_tools_matter_cannon"
+        ],
+        "ae2:me_p2p_tunnel": [
+            "kubejs:tk3/ae_network/ae2_network_parts_tunnels_me"
+        ],
+        "ae2:memory_card": [
+            "kubejs:tk3/ae_network/ae2_tools_network_memory_card"
+        ],
+        "ae2:molecular_assembler": [
+            "kubejs:tk3/ae_network/ae2_network_crafting_molecular_assembler"
+        ],
+        "ae2:monitor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_panels_monitor"
+        ],
+        "ae2:network_tool": [
+            "kubejs:tk3/ae_network/ae2_tools_network_tool"
+        ],
+        "ae2:not_so_mysterious_cube": [
+            "kubejs:tk3/ae_network/ae2_shaped_not_so_mysterious_cube"
+        ],
+        "ae2:orange_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_orange"
+        ],
+        "ae2:orange_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_orange"
+        ],
+        "ae2:orange_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_orange"
+        ],
+        "ae2:orange_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_orange"
+        ],
+        "ae2:orange_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_orange"
+        ],
+        "ae2:pattern_access_terminal": [
+            "kubejs:tk3/ae_network/ae2_network_parts_terminals_pattern_access"
+        ],
+        "ae2:pattern_encoding_terminal": [
+            "kubejs:tk3/ae_network/ae2_network_parts_terminals_pattern_encoding"
+        ],
+        "ae2:pattern_provider": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_pattern_providers_interface_alt",
+            "kubejs:tk3/ae_network/ae2_network_blocks_pattern_providers_interface"
+        ],
+        "ae2:pink_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_pink"
+        ],
+        "ae2:pink_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_pink"
+        ],
+        "ae2:pink_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_pink"
+        ],
+        "ae2:pink_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_pink"
+        ],
+        "ae2:pink_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_pink"
+        ],
+        "ae2:portable_fluid_cell_16k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_fluid_cell_16k"
+        ],
+        "ae2:portable_fluid_cell_1k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_fluid_cell_1k"
+        ],
+        "ae2:portable_fluid_cell_256k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_fluid_cell_256k"
+        ],
+        "ae2:portable_fluid_cell_4k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_fluid_cell_4k"
+        ],
+        "ae2:portable_fluid_cell_64k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_fluid_cell_64k"
+        ],
+        "ae2:portable_item_cell_16k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_item_cell_16k"
+        ],
+        "ae2:portable_item_cell_1k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_item_cell_1k"
+        ],
+        "ae2:portable_item_cell_256k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_item_cell_256k"
+        ],
+        "ae2:portable_item_cell_4k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_item_cell_4k"
+        ],
+        "ae2:portable_item_cell_64k": [
+            "kubejs:tk3/ae_network/ae2_tools_portable_item_cell_64k"
+        ],
+        "ae2:printed_calculation_processor": [
+            "kubejs:tk3/late_layers/ae2_printed_calculation_processor"
+        ],
+        "ae2:printed_engineering_processor": [
+            "kubejs:tk3/late_layers/ae2_printed_engineering_processor"
+        ],
+        "ae2:printed_logic_processor": [
+            "kubejs:tk3/late_layers/ae2_printed_logic_processor"
+        ],
+        "ae2:printed_silicon": [
+            "kubejs:tk3/late_layers/ae2_printed_silicon"
+        ],
+        "ae2:purple_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_purple"
+        ],
+        "ae2:purple_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_purple"
+        ],
+        "ae2:purple_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_purple"
+        ],
+        "ae2:purple_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_purple"
+        ],
+        "ae2:purple_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_purple"
+        ],
+        "ae2:quantum_entangled_singularity": [
+            "kubejs:tk3/ae_network/ae2_transform_entangled_singularity",
+            "kubejs:tk3/ae_network/ae2_transform_entangled_singularity_from_pearl"
+        ],
+        "ae2:quantum_link": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_quantum_link"
+        ],
+        "ae2:quantum_ring": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_quantum_ring"
+        ],
+        "ae2:quartz_brick_slab": [
+            "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_bricks",
+            "kubejs:tk3/ae_network/ae2_block_cutter_slabs_quartz_brick_slab"
+        ],
+        "ae2:quartz_brick_stairs": [
+            "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_bricks",
+            "kubejs:tk3/ae_network/ae2_block_cutter_stairs_quartz_brick_stairs"
+        ],
+        "ae2:quartz_brick_wall": [
+            "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_bricks",
+            "kubejs:tk3/ae_network/ae2_block_cutter_walls_quartz_brick_wall"
+        ],
+        "ae2:quartz_bricks": [
+            "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_bricks",
+            "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_bricks_from_stonecutting"
+        ],
+        "ae2:quartz_fiber": [
+            "kubejs:tk3/ae_network/ae2_network_parts_quartz_fiber_part"
+        ],
+        "ae2:quartz_fixture": [
+            "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture",
+            "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture_from_anchors"
+        ],
+        "ae2:quartz_pillar": [
+            "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_pillar_from_stonecutting",
+            "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_pillar"
+        ],
+        "ae2:quartz_pillar_slab": [
+            "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_pillar",
+            "kubejs:tk3/ae_network/ae2_block_cutter_slabs_quartz_pillar_slab"
+        ],
+        "ae2:quartz_pillar_stairs": [
+            "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_pillar",
+            "kubejs:tk3/ae_network/ae2_block_cutter_stairs_quartz_pillar_stairs"
+        ],
+        "ae2:quartz_pillar_wall": [
+            "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_pillar",
+            "kubejs:tk3/ae_network/ae2_block_cutter_walls_quartz_pillar_wall"
+        ],
+        "ae2:quartz_slab": [
+            "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_slabs_quartz_slab"
+        ],
+        "ae2:quartz_stairs": [
+            "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_stairs_quartz_stairs"
+        ],
+        "ae2:quartz_wall": [
+            "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_block",
+            "kubejs:tk3/ae_network/ae2_block_cutter_walls_quartz_wall"
+        ],
+        "ae2:red_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_red"
+        ],
+        "ae2:red_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_red"
+        ],
+        "ae2:red_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_red"
+        ],
+        "ae2:red_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_red"
+        ],
+        "ae2:red_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_red"
+        ],
+        "ae2:redstone_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardredstone"
+        ],
+        "ae2:semi_dark_monitor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_panels_semi_dark_monitor_alt",
+            "kubejs:tk3/ae_network/ae2_network_parts_panels_semi_dark_monitor"
+        ],
+        "ae2:spatial_anchor": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_spatial_anchor"
+        ],
+        "ae2:spatial_cell_component_128": [
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_components_1"
+        ],
+        "ae2:spatial_cell_component_16": [
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_components_0"
+        ],
+        "ae2:spatial_cell_component_2": [
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_components"
+        ],
+        "ae2:spatial_io_port": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_spatial_io_port"
+        ],
+        "ae2:spatial_pylon": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_spatial_io_pylon"
+        ],
+        "ae2:spatial_storage_cell_128": [
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_128_cubed",
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_128_cubed_storage"
+        ],
+        "ae2:spatial_storage_cell_16": [
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_16_cubed_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_16_cubed"
+        ],
+        "ae2:spatial_storage_cell_2": [
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_2_cubed_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_2_cubed"
+        ],
+        "ae2:speed_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardspeed"
+        ],
+        "ae2:storage_bus": [
+            "kubejs:tk3/ae_network/ae2_network_parts_storage_bus"
+        ],
+        "ae2:storage_monitor": [
+            "kubejs:tk3/ae_network/ae2_network_parts_monitors_storage"
+        ],
+        "ae2:terminal": [
+            "kubejs:tk3/ae_network/ae2_network_parts_terminals"
+        ],
+        "ae2:tiny_tnt": [
+            "kubejs:tk3/ae_network/ae2_misc_tiny_tnt"
+        ],
+        "ae2:toggle_bus": [
+            "kubejs:tk3/ae_network/ae2_network_parts_toggle_bus",
+            "kubejs:tk3/ae_network/ae2_network_parts_toggle_bus_alt"
+        ],
+        "ae2:vibration_chamber": [
+            "kubejs:tk3/ae_network/ae2_network_blocks_energy_vibration_chamber"
+        ],
+        "ae2:view_cell": [
+            "kubejs:tk3/ae_network/ae2_network_cells_view_cell_storage",
+            "kubejs:tk3/ae_network/ae2_network_cells_view_cell"
+        ],
+        "ae2:void_card": [
+            "kubejs:tk3/ae_network/ae2_materials_cardvoid"
+        ],
+        "ae2:white_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_white"
+        ],
+        "ae2:white_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_white"
+        ],
+        "ae2:white_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_white"
+        ],
+        "ae2:white_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_white"
+        ],
+        "ae2:white_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_white"
+        ],
+        "ae2:wireless_access_point": [
+            "kubejs:tk3/ae_network/ae2_network_wireless_access_point"
+        ],
+        "ae2:wireless_booster": [
+            "kubejs:tk3/ae_network/ae2_network_wireless_booster"
+        ],
+        "ae2:wireless_crafting_terminal": [
+            "kubejs:tk3/ae_network/ae2_network_wireless_crafting_terminal",
+            "kubejs:tk3/ae_network/ae2_network_upgrade_wireless_crafting_terminal"
+        ],
+        "ae2:wireless_receiver": [
+            "kubejs:tk3/ae_network/ae2_network_wireless_part"
+        ],
+        "ae2:wireless_terminal": [
+            "kubejs:tk3/ae_network/ae2_network_wireless_terminal"
+        ],
+        "ae2:yellow_covered_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_covered_yellow"
+        ],
+        "ae2:yellow_covered_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_covered_yellow"
+        ],
+        "ae2:yellow_glass_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_glass_yellow"
+        ],
+        "ae2:yellow_smart_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_smart_yellow"
+        ],
+        "ae2:yellow_smart_dense_cable": [
+            "kubejs:tk3/ae_network/ae2_network_cables_dense_smart_yellow"
+        ],
+        "aeronautics:adjustable_burner": [
+            "kubejs:tk3/addons/aeronautics_adjustable_burner"
+        ],
+        "aeronautics:andesite_propeller": [
+            "kubejs:tk3/addons/aeronautics_andesite_propeller"
+        ],
+        "aeronautics:black_envelope": [
+            "kubejs:tk3/addons/aeronautics_black_envelope"
+        ],
+        "aeronautics:black_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_black_envelope_encased_shaft"
+        ],
+        "aeronautics:blue_envelope": [
+            "kubejs:tk3/addons/aeronautics_blue_envelope"
+        ],
+        "aeronautics:blue_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_blue_envelope_encased_shaft"
+        ],
+        "aeronautics:brown_envelope": [
+            "kubejs:tk3/addons/aeronautics_brown_envelope"
+        ],
+        "aeronautics:brown_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_brown_envelope_encased_shaft"
+        ],
+        "aeronautics:cyan_envelope": [
+            "kubejs:tk3/addons/aeronautics_cyan_envelope"
+        ],
+        "aeronautics:cyan_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_cyan_envelope_encased_shaft"
+        ],
+        "aeronautics:end_stone_powder": [
+            "kubejs:tk3/addons/aeronautics_end_stone_powder"
+        ],
+        "aeronautics:gray_envelope": [
+            "kubejs:tk3/addons/aeronautics_gray_envelope"
+        ],
+        "aeronautics:gray_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_gray_envelope_encased_shaft"
+        ],
+        "aeronautics:green_envelope": [
+            "kubejs:tk3/addons/aeronautics_green_envelope"
+        ],
+        "aeronautics:green_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_green_envelope_encased_shaft"
+        ],
+        "aeronautics:gyroscopic_propeller_bearing": [
+            "kubejs:tk3/addons/aeronautics_gyroscopic_propeller_bearing"
+        ],
+        "aeronautics:light_blue_envelope": [
+            "kubejs:tk3/addons/aeronautics_light_blue_envelope"
+        ],
+        "aeronautics:light_blue_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_light_blue_envelope_encased_shaft"
+        ],
+        "aeronautics:light_gray_envelope": [
+            "kubejs:tk3/addons/aeronautics_light_gray_envelope"
+        ],
+        "aeronautics:light_gray_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_light_gray_envelope_encased_shaft"
+        ],
+        "aeronautics:lime_envelope": [
+            "kubejs:tk3/addons/aeronautics_lime_envelope"
+        ],
+        "aeronautics:lime_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_lime_envelope_encased_shaft"
+        ],
+        "aeronautics:magenta_envelope": [
+            "kubejs:tk3/addons/aeronautics_magenta_envelope"
+        ],
+        "aeronautics:magenta_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_magenta_envelope_encased_shaft"
+        ],
+        "aeronautics:mounted_potato_cannon": [
+            "kubejs:tk3/addons/aeronautics_mechanical_crafting_mounted_potato_cannon"
+        ],
+        "aeronautics:orange_envelope": [
+            "kubejs:tk3/addons/aeronautics_orange_envelope"
+        ],
+        "aeronautics:orange_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_orange_envelope_encased_shaft"
+        ],
+        "aeronautics:pink_envelope": [
+            "kubejs:tk3/addons/aeronautics_pink_envelope"
+        ],
+        "aeronautics:pink_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_pink_envelope_encased_shaft"
         ],
         "aeronautics:propeller_bearing": [
             "kubejs:tk3/tier_3/propeller_bearing"
         ],
-        "ars_nouveau:enchanting_apparatus": [
-            "kubejs:tk3/tier_4/enchanting_apparatus"
+        "aeronautics:purple_envelope": [
+            "kubejs:tk3/addons/aeronautics_purple_envelope"
         ],
-        "irons_spellbooks:arcane_essence": [
-            "kubejs:tk3/tier_4/arcane_essence"
+        "aeronautics:purple_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_purple_envelope_encased_shaft"
         ],
-        "kubejs:tk3_arcane_mechanism": [
-            "kubejs:tk3/tier_4/tk3_arcane_mechanism"
+        "aeronautics:red_envelope": [
+            "kubejs:tk3/addons/aeronautics_red_envelope"
+        ],
+        "aeronautics:red_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_red_envelope_encased_shaft"
+        ],
+        "aeronautics:smart_propeller": [
+            "kubejs:tk3/addons/aeronautics_smart_propeller"
+        ],
+        "aeronautics:steam_vent": [
+            "kubejs:tk3/addons/aeronautics_steam_vent"
+        ],
+        "aeronautics:white_envelope": [
+            "kubejs:tk3/addons/aeronautics_white_envelope"
+        ],
+        "aeronautics:white_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_white_envelope_encased_shaft"
+        ],
+        "aeronautics:wooden_propeller": [
+            "kubejs:tk3/addons/aeronautics_wooden_propeller"
+        ],
+        "aeronautics:yellow_envelope": [
+            "kubejs:tk3/addons/aeronautics_yellow_envelope"
+        ],
+        "aeronautics:yellow_envelope_encased_shaft": [
+            "kubejs:tk3/addons/aeronautics_yellow_envelope_encased_shaft"
+        ],
+        "apotheosis:augmenting_table": [
+            "kubejs:tk3/addons/apotheosis_augmenting_table"
+        ],
+        "apotheosis:gem_cutting_table": [
+            "kubejs:tk3/addons/apotheosis_gem_cutting_table"
+        ],
+        "apotheosis:reforging_table": [
+            "kubejs:tk3/addons/apotheosis_reforging_table"
+        ],
+        "apotheosis:salvaging_table": [
+            "kubejs:tk3/addons/apotheosis_salvaging_table"
+        ],
+        "architects_palette:algal_blend": [
+            "kubejs:tk3/tier_1/algal_blend",
+            "kubejs:tk3/tier_1/algal_blend_bulk"
+        ],
+        "ars_creo:starbuncle_wheel": [
+            "kubejs:tk3/addons/ars_creo_starbuncle_wheel"
+        ],
+        "ars_n_spells:mana_infusion": [
+            "kubejs:tk3/addons/ars_n_spells_mana_infusion"
+        ],
+        "ars_n_spells:mana_well": [
+            "kubejs:tk3/addons/ars_n_spells_mana_well"
+        ],
+        "ars_n_spells:spell_loom": [
+            "kubejs:tk3/addons/ars_n_spells_spell_loom"
         ],
         "ars_nouveau:agronomic_sourcelink": [
             "kubejs:tk3/tier_4/agronomic_sourcelink"
         ],
+        "ars_nouveau:alchemical_sourcelink": [
+            "kubejs:tk3/tier_4/alchemical_sourcelink"
+        ],
+        "ars_nouveau:enchanting_apparatus": [
+            "kubejs:tk3/tier_4/enchanting_apparatus"
+        ],
+        "ars_nouveau:mycelial_sourcelink": [
+            "kubejs:tk3/tier_4/mycelial_sourcelink"
+        ],
         "ars_nouveau:relay": [
             "kubejs:tk3/tier_4/relay"
+        ],
+        "ars_nouveau:relay_collector": [
+            "kubejs:tk3/tier_4/relay_collector"
+        ],
+        "ars_nouveau:relay_deposit": [
+            "kubejs:tk3/tier_4/relay_deposit"
+        ],
+        "ars_nouveau:relay_splitter": [
+            "kubejs:tk3/tier_4/relay_splitter"
         ],
         "ars_nouveau:starbuncle_charm": [
             "kubejs:tk3/tier_4/starbuncle_charm"
@@ -225,157 +944,421 @@ ServerEvents.recipes(event => {
         "ars_nouveau:wixie_charm": [
             "kubejs:tk3/tier_4/wixie_charm"
         ],
-        "irons_spellbooks:alchemist_cauldron": [
-            "kubejs:tk3/tier_4/alchemist_cauldron"
+        "betterend:diamond_hammer": [
+            "kubejs:tk3/addons/betterend_diamond_hammer"
         ],
-        "irons_spellbooks:arcane_anvil": [
-            "kubejs:tk3/tier_4/arcane_anvil"
-        ],
-        "create_enchantment_industry:blaze_enchanter": [
-            "kubejs:tk3/tier_4/blaze_enchanter"
-        ],
-        "irons_spellbooks:common_ink": [
-            "kubejs:tk3/magic/bottle_common_ink",
-            "kubejs:tk3/magic/mana_ink",
-            "kubejs:tk3/tier_4/common_ink"
-        ],
-        "mekanism:ingot_steel": [
-            "kubejs:tk3/tier_5/steel_bootstrap",
-            "kubejs:tk3/tier_5/steel_from_dust"
-        ],
-        "mekanism:steel_casing": [
-            "kubejs:tk3/tier_5/steel_casing"
-        ],
-        "mekanism:metallurgic_infuser": [
-            "kubejs:tk3/tier_5/metallurgic_infuser"
-        ],
-        "mekanism:enrichment_chamber": [
-            "kubejs:tk3/tier_5/enrichment_chamber"
-        ],
-        "mekanism:crusher": [
-            "kubejs:tk3/tier_5/crusher"
-        ],
-        "mekanism:energized_smelter": [
-            "kubejs:tk3/tier_5/energized_smelter"
-        ],
-        "mekanismgenerators:heat_generator": [
-            "kubejs:tk3/tier_5/heat_generator"
-        ],
-        "createaddition:alternator": [
-            "kubejs:tk3/tier_5/alternator"
-        ],
-        "createaddition:electric_motor": [
-            "kubejs:tk3/tier_5/electric_motor"
-        ],
-        "mekanism:basic_universal_cable": [
-            "kubejs:tk3/tier_5/basic_universal_cable"
-        ],
-        "mekanism:basic_mechanical_pipe": [
-            "kubejs:tk3/tier_5/basic_mechanical_pipe"
-        ],
-        "mekanism:basic_logistical_transporter": [
-            "kubejs:tk3/tier_5/basic_logistical_transporter"
-        ],
-        "create:shaft": [
-            "kubejs:tk3/tier_1/shaft"
-        ],
-        "create:cogwheel": [
-            "kubejs:tk3/tier_1/cogwheel"
-        ],
-        "create:large_cogwheel": [
-            "kubejs:tk3/tier_1/large_cogwheel"
-        ],
-        "create:belt_connector": [
-            "kubejs:tk3/tier_1/belt_connector"
-        ],
-        "create:propeller": [
-            "kubejs:tk3/tier_1/propeller"
-        ],
-        "create:gearbox": [
-            "kubejs:tk3/create/gearbox_conversion",
-            "kubejs:tk3/tier_1/gearbox"
-        ],
-        "create:vertical_gearbox": [
-            "kubejs:tk3/create/vertical_gearbox_conversion",
-            "kubejs:tk3/tier_1/vertical_gearbox"
-        ],
-        "create:clutch": [
-            "kubejs:tk3/tier_1/clutch"
-        ],
-        "create:gearshift": [
-            "kubejs:tk3/tier_1/gearshift"
-        ],
-        "create:encased_chain_drive": [
-            "kubejs:tk3/tier_1/encased_chain_drive"
+        "cataclysm_spellbooks:hellfire_forge": [
+            "kubejs:tk3/addons/cataclysm_spellbooks_hellfire_forge"
         ],
         "create:adjustable_chain_gearshift": [
             "kubejs:tk3/tier_1/adjustable_chain_gearshift"
         ],
-        "create:mechanical_plough": [
-            "kubejs:tk3/tier_1/mechanical_plough"
+        "create:analog_lever": [
+            "kubejs:tk3/tier_1/analog_lever"
         ],
-        "create:rope_pulley": [
-            "kubejs:tk3/tier_1/rope_pulley"
+        "create:andesite_alloy": [
+            "kubejs:tk3/tier_1/andesite_alloy",
+            "kubejs:tk3/tier_1/andesite_alloy_bulk",
+            "kubejs:tk3/create/andesite_alloy_unpacking"
         ],
-        "create:mechanical_piston": [
-            "kubejs:tk3/create/piston_unstick",
-            "kubejs:tk3/tier_1/mechanical_piston"
+        "create:andesite_alloy_block": [
+            "kubejs:tk3/create/andesite_alloy_block_packing"
         ],
-        "create:cart_assembler": [
-            "kubejs:tk3/tier_1/cart_assembler"
+        "create:andesite_casing": [
+            "kubejs:tk3/create/andesite_casing_manual",
+            "kubejs:tk3/create/andesite_casing_automated"
         ],
-        "create:windmill_bearing": [
-            "kubejs:tk3/tier_1/windmill_bearing"
-        ],
-        "create:gantry_carriage": [
-            "kubejs:tk3/tier_1/gantry_carriage"
-        ],
-        "create:weighted_ejector": [
-            "kubejs:tk3/tier_1/weighted_ejector"
-        ],
-        "create:linear_chassis": [
-            "kubejs:tk3/create/linear_chassis_conversion",
-            "kubejs:tk3/tier_1/linear_chassis"
-        ],
-        "create:radial_chassis": [
-            "kubejs:tk3/tier_1/radial_chassis"
+        "create:andesite_funnel": [
+            "kubejs:tk3/tier_1/andesite_funnel"
         ],
         "create:andesite_tunnel": [
             "kubejs:tk3/tier_1/andesite_tunnel"
         ],
-        "create:depot": [
-            "kubejs:tk3/tier_1/depot"
+        "create:attribute_filter": [
+            "kubejs:tk3/create/attribute_filter",
+            "kubejs:tk3/create/attribute_filter_clear"
+        ],
+        "create:basin": [
+            "kubejs:tk3/tier_1/basin"
+        ],
+        "create:belt_connector": [
+            "kubejs:tk3/tier_1/belt_connector"
+        ],
+        "create:brass_block": [
+            "kubejs:tk3/create/brass_block_packing"
+        ],
+        "create:brass_casing": [
+            "kubejs:tk3/create/brass_casing_manual",
+            "kubejs:tk3/create/brass_casing_automated"
+        ],
+        "create:brass_funnel": [
+            "kubejs:tk3/tier_3/brass_funnel"
+        ],
+        "create:brass_hand": [
+            "kubejs:tk3/create/brass_hand"
+        ],
+        "create:brass_ingot": [
+            "kubejs:tk3/tier_3/brass_ingot",
+            "kubejs:tk3/create/brass_ingot_unpacking",
+            "kubejs:tk3/create/brass_ingot_from_nuggets"
+        ],
+        "create:brass_nugget": [
+            "kubejs:tk3/create/brass_nugget_from_ingot"
+        ],
+        "create:brass_sheet": [
+            "kubejs:tk3/create/brass_sheet"
+        ],
+        "create:brass_tunnel": [
+            "kubejs:tk3/tier_3/brass_tunnel"
+        ],
+        "create:cardboard": [
+            "kubejs:tk3/create/cardboard",
+            "kubejs:tk3/create/cardboard_unpacking"
+        ],
+        "create:cardboard_block": [
+            "kubejs:tk3/create/cardboard_block"
+        ],
+        "create:cart_assembler": [
+            "kubejs:tk3/tier_1/cart_assembler"
+        ],
+        "create:chain_conveyor": [
+            "kubejs:tk3/create/chain_conveyor"
         ],
         "create:chute": [
             "kubejs:tk3/tier_1/chute"
         ],
-        "create:speedometer": [
-            "kubejs:tk3/create/speedometer_conversion",
-            "kubejs:tk3/tier_1/speedometer"
+        "create:clipboard": [
+            "kubejs:tk3/create/crafting_appliances_clipboard",
+            "kubejs:tk3/create/clipboard_clear"
         ],
-        "create:analog_lever": [
-            "kubejs:tk3/tier_1/analog_lever"
+        "create:clockwork_bearing": [
+            "kubejs:tk3/create/clockwork_bearing"
         ],
-        "create:fluid_valve": [
-            "kubejs:tk3/tier_2/fluid_valve"
+        "create:clutch": [
+            "kubejs:tk3/tier_1/clutch"
         ],
-        "create:copper_valve_handle": [
-            "kubejs:tk3/tier_2/copper_valve_handle"
-        ],
-        "create:steam_whistle": [
-            "kubejs:tk3/tier_2/steam_whistle"
-        ],
-        "create:copper_backtank": [
-            "kubejs:tk3/tier_2/copper_backtank"
-        ],
-        "createaddition:capacitor": [
-            "kubejs:tk3/tier_2/capacitor"
+        "create:cogwheel": [
+            "kubejs:tk3/tier_1/cogwheel"
         ],
         "create:content_observer": [
             "kubejs:tk3/tier_3/content_observer"
         ],
-        "create:stockpile_switch": [
-            "kubejs:tk3/tier_3/stockpile_switch"
+        "create:contraption_controls": [
+            "kubejs:tk3/tier_3/contraption_controls"
+        ],
+        "create:controller_rail": [
+            "kubejs:tk3/create/controller_rail"
+        ],
+        "create:controls": [
+            "kubejs:tk3/tier_3/controls"
+        ],
+        "create:copper_backtank": [
+            "kubejs:tk3/tier_2/copper_backtank"
+        ],
+        "create:copper_casing": [
+            "kubejs:tk3/create/copper_casing_manual",
+            "kubejs:tk3/create/copper_casing_automated"
+        ],
+        "create:copper_diving_boots": [
+            "kubejs:tk3/create/copper_diving_boots"
+        ],
+        "create:copper_diving_helmet": [
+            "kubejs:tk3/create/copper_diving_helmet"
+        ],
+        "create:copper_nugget": [
+            "kubejs:tk3/geology/milling_veridium",
+            "kubejs:tk3/geology/wash_copper",
+            "kubejs:tk3/create/copper_nugget_from_ingot"
+        ],
+        "create:copper_sheet": [
+            "kubejs:tk3/create/copper_sheet"
+        ],
+        "create:copper_valve_handle": [
+            "kubejs:tk3/tier_2/copper_valve_handle"
+        ],
+        "create:crafter_slot_cover": [
+            "kubejs:tk3/create/crafter_slot_cover"
+        ],
+        "create:crafting_blueprint": [
+            "kubejs:tk3/create/crafting_appliances_crafting_blueprint"
+        ],
+        "create:crushing_wheel": [
+            "kubejs:tk3/frames/create_crushing_wheel"
+        ],
+        "create:cuckoo_clock": [
+            "kubejs:tk3/create/crafting_kinetics_cuckoo_clock"
+        ],
+        "create:deployer": [
+            "kubejs:tk3/tier_1/deployer"
+        ],
+        "create:depot": [
+            "kubejs:tk3/tier_1/depot"
+        ],
+        "create:desk_bell": [
+            "kubejs:tk3/create/crafting_logistics_desk_bell"
+        ],
+        "create:display_board": [
+            "kubejs:tk3/tier_3/display_board"
+        ],
+        "create:display_link": [
+            "kubejs:tk3/tier_3/display_link"
+        ],
+        "create:dough": [
+            "kubejs:tk3/create/crafting_appliances_dough",
+            "kubejs:tk3/create/dough_bulk"
+        ],
+        "create:electron_tube": [
+            "kubejs:tk3/create/electron_tube",
+            "kubejs:tk3/create/electron_tube_automated"
+        ],
+        "create:elevator_pulley": [
+            "kubejs:tk3/tier_3/elevator_pulley"
+        ],
+        "create:empty_blaze_burner": [
+            "kubejs:tk3/create/empty_blaze_burner"
+        ],
+        "create:empty_schematic": [
+            "kubejs:tk3/create/crafting_schematics_empty_schematic"
+        ],
+        "create:encased_chain_drive": [
+            "kubejs:tk3/tier_1/encased_chain_drive"
+        ],
+        "create:encased_fan": [
+            "kubejs:tk3/tier_1/encased_fan"
+        ],
+        "create:factory_gauge": [
+            "kubejs:tk3/create/factory_gauge",
+            "kubejs:tk3/create/factory_gauge_clear"
+        ],
+        "create:filter": [
+            "kubejs:tk3/create/filter",
+            "kubejs:tk3/create/filter_clear"
+        ],
+        "create:fluid_pipe": [
+            "kubejs:tk3/tier_2/fluid_pipe"
+        ],
+        "create:fluid_tank": [
+            "kubejs:tk3/tier_2/fluid_tank"
+        ],
+        "create:fluid_valve": [
+            "kubejs:tk3/tier_2/fluid_valve"
+        ],
+        "create:flywheel": [
+            "kubejs:tk3/create/flywheel"
+        ],
+        "create:gantry_carriage": [
+            "kubejs:tk3/tier_1/gantry_carriage"
+        ],
+        "create:gantry_shaft": [
+            "kubejs:tk3/create/gantry_shaft"
+        ],
+        "create:gearbox": [
+            "kubejs:tk3/tier_1/gearbox",
+            "kubejs:tk3/create/gearbox_conversion"
+        ],
+        "create:gearshift": [
+            "kubejs:tk3/tier_1/gearshift"
+        ],
+        "create:goggles": [
+            "kubejs:tk3/create/goggles"
+        ],
+        "create:golden_sheet": [
+            "kubejs:tk3/create/golden_sheet"
+        ],
+        "create:hand_crank": [
+            "kubejs:tk3/create/hand_crank"
+        ],
+        "create:hose_pulley": [
+            "kubejs:tk3/tier_2/hose_pulley"
+        ],
+        "create:iron_sheet": [
+            "kubejs:tk3/create/iron_sheet"
+        ],
+        "create:item_drain": [
+            "kubejs:tk3/tier_2/item_drain"
+        ],
+        "create:item_hatch": [
+            "kubejs:tk3/create/item_hatch"
+        ],
+        "create:item_vault": [
+            "kubejs:tk3/create/item_vault"
+        ],
+        "create:large_cogwheel": [
+            "kubejs:tk3/tier_1/large_cogwheel"
+        ],
+        "create:large_water_wheel": [
+            "kubejs:tk3/tier_1/large_water_wheel"
+        ],
+        "create:linear_chassis": [
+            "kubejs:tk3/tier_1/linear_chassis",
+            "kubejs:tk3/create/linear_chassis_conversion"
+        ],
+        "create:linked_controller": [
+            "kubejs:tk3/create/linked_controller"
+        ],
+        "create:mechanical_arm": [
+            "kubejs:tk3/tier_3/mechanical_arm"
+        ],
+        "create:mechanical_bearing": [
+            "kubejs:tk3/tier_1/mechanical_bearing"
+        ],
+        "create:mechanical_crafter": [
+            "kubejs:tk3/tier_3/mechanical_crafter"
+        ],
+        "create:mechanical_drill": [
+            "kubejs:tk3/tier_1/mechanical_drill"
+        ],
+        "create:mechanical_harvester": [
+            "kubejs:tk3/tier_1/mechanical_harvester"
+        ],
+        "create:mechanical_mixer": [
+            "kubejs:tk3/tier_1/mechanical_mixer"
+        ],
+        "create:mechanical_piston": [
+            "kubejs:tk3/tier_1/mechanical_piston",
+            "kubejs:tk3/create/piston_unstick"
+        ],
+        "create:mechanical_plough": [
+            "kubejs:tk3/tier_1/mechanical_plough"
+        ],
+        "create:mechanical_press": [
+            "kubejs:tk3/tier_1/mechanical_press"
+        ],
+        "create:mechanical_pump": [
+            "kubejs:tk3/tier_2/mechanical_pump"
+        ],
+        "create:mechanical_roller": [
+            "kubejs:tk3/create/mechanical_roller"
+        ],
+        "create:mechanical_saw": [
+            "kubejs:tk3/tier_1/mechanical_saw"
+        ],
+        "create:metal_bracket": [
+            "kubejs:tk3/create/metal_bracket"
+        ],
+        "create:metal_girder": [
+            "kubejs:tk3/create/metal_girder"
+        ],
+        "create:millstone": [
+            "kubejs:tk3/frames/create_millstone"
+        ],
+        "create:minecart_coupling": [
+            "kubejs:tk3/create/minecart_coupling"
+        ],
+        "create:nixie_tube": [
+            "kubejs:tk3/create/nixie_tube"
+        ],
+        "create:nozzle": [
+            "kubejs:tk3/create/nozzle"
+        ],
+        "create:package_filter": [
+            "kubejs:tk3/create/package_filter",
+            "kubejs:tk3/create/package_filter_clear"
+        ],
+        "create:package_frogport": [
+            "kubejs:tk3/tier_3/package_frogport"
+        ],
+        "create:packager": [
+            "kubejs:tk3/tier_3/packager"
+        ],
+        "create:peculiar_bell": [
+            "kubejs:tk3/create/crafting_curiosities_peculiar_bell"
+        ],
+        "create:piston_extension_pole": [
+            "kubejs:tk3/create/piston_extension_pole"
+        ],
+        "create:placard": [
+            "kubejs:tk3/create/crafting_kinetics_placard"
+        ],
+        "create:polished_rose_quartz": [
+            "kubejs:tk3/create/polished_rose_quartz"
+        ],
+        "create:portable_fluid_interface": [
+            "kubejs:tk3/tier_2/portable_fluid_interface"
+        ],
+        "create:portable_storage_interface": [
+            "kubejs:tk3/tier_1/portable_storage_interface"
+        ],
+        "create:powered_latch": [
+            "kubejs:tk3/create/powered_latch"
+        ],
+        "create:powered_toggle_latch": [
+            "kubejs:tk3/create/powered_toggle_latch"
+        ],
+        "create:precision_mechanism": [
+            "kubejs:tk3/tier_3/precision_mechanism"
+        ],
+        "create:propeller": [
+            "kubejs:tk3/tier_1/propeller"
+        ],
+        "create:pulse_extender": [
+            "kubejs:tk3/create/pulse_extender"
+        ],
+        "create:pulse_repeater": [
+            "kubejs:tk3/create/pulse_repeater"
+        ],
+        "create:pulse_timer": [
+            "kubejs:tk3/create/pulse_timer"
+        ],
+        "create:radial_chassis": [
+            "kubejs:tk3/tier_1/radial_chassis"
+        ],
+        "create:red_sand_paper": [
+            "kubejs:tk3/create/red_sand_paper"
+        ],
+        "create:redstone_contact": [
+            "kubejs:tk3/create/redstone_contact"
+        ],
+        "create:redstone_link": [
+            "kubejs:tk3/tier_3/redstone_link"
+        ],
+        "create:redstone_requester": [
+            "kubejs:tk3/create/redstone_requester",
+            "kubejs:tk3/create/redstone_requester_clear"
+        ],
+        "create:repackager": [
+            "kubejs:tk3/tier_3/repackager"
+        ],
+        "create:rope_pulley": [
+            "kubejs:tk3/tier_1/rope_pulley"
+        ],
+        "create:rose_quartz": [
+            "kubejs:tk3/create/rose_quartz_bulk",
+            "kubejs:tk3/create/rose_quartz"
+        ],
+        "create:rose_quartz_lamp": [
+            "kubejs:tk3/create/rose_quartz_lamp"
+        ],
+        "create:rotation_speed_controller": [
+            "kubejs:tk3/tier_3/rotation_speed_controller"
+        ],
+        "create:sail_frame": [
+            "kubejs:tk3/create/sail_frame"
+        ],
+        "create:sand_paper": [
+            "kubejs:tk3/create/sand_paper"
+        ],
+        "create:schedule": [
+            "kubejs:tk3/create/schedule",
+            "kubejs:tk3/create/schedule_clear"
+        ],
+        "create:schematic_and_quill": [
+            "kubejs:tk3/create/crafting_schematics_schematic_and_quill"
+        ],
+        "create:schematic_table": [
+            "kubejs:tk3/create/crafting_schematics_schematic_table"
+        ],
+        "create:schematicannon": [
+            "kubejs:tk3/create/schematicannon"
+        ],
+        "create:secondary_linear_chassis": [
+            "kubejs:tk3/create/secondary_linear_chassis_conversion"
+        ],
+        "create:sequenced_gearshift": [
+            "kubejs:tk3/tier_3/sequenced_gearshift"
+        ],
+        "create:shaft": [
+            "kubejs:tk3/tier_1/shaft"
         ],
         "create:smart_chute": [
             "kubejs:tk3/tier_3/smart_chute"
@@ -383,84 +1366,241 @@ ServerEvents.recipes(event => {
         "create:smart_fluid_pipe": [
             "kubejs:tk3/tier_3/smart_fluid_pipe"
         ],
-        "create:display_link": [
-            "kubejs:tk3/tier_3/display_link"
+        "create:speedometer": [
+            "kubejs:tk3/tier_1/speedometer",
+            "kubejs:tk3/create/speedometer_conversion"
         ],
-        "create:display_board": [
-            "kubejs:tk3/tier_3/display_board"
+        "create:spout": [
+            "kubejs:tk3/tier_2/spout"
         ],
-        "create:redstone_link": [
-            "kubejs:tk3/tier_3/redstone_link"
+        "create:steam_engine": [
+            "kubejs:tk3/tier_2/steam_engine"
         ],
-        "create:elevator_pulley": [
-            "kubejs:tk3/tier_3/elevator_pulley"
+        "create:steam_whistle": [
+            "kubejs:tk3/tier_2/steam_whistle"
         ],
-        "create:contraption_controls": [
-            "kubejs:tk3/tier_3/contraption_controls"
+        "create:sticker": [
+            "kubejs:tk3/create/sticker"
         ],
-        "create:track_station": [
-            "kubejs:tk3/tier_3/track_station"
+        "create:sticky_mechanical_piston": [
+            "kubejs:tk3/create/sticky_mechanical_piston"
         ],
-        "create:track_signal": [
-            "kubejs:tk3/tier_3/track_signal"
+        "create:stock_link": [
+            "kubejs:tk3/tier_3/stock_link",
+            "kubejs:tk3/create/stock_link_clear"
+        ],
+        "create:stock_ticker": [
+            "kubejs:tk3/tier_3/stock_ticker",
+            "kubejs:tk3/create/stock_ticker_clear"
+        ],
+        "create:stockpile_switch": [
+            "kubejs:tk3/tier_3/stockpile_switch"
+        ],
+        "create:stressometer": [
+            "kubejs:tk3/create/stressometer_conversion"
+        ],
+        "create:super_glue": [
+            "kubejs:tk3/create/super_glue"
+        ],
+        "create:track": [
+            "kubejs:tk3/create/track"
         ],
         "create:track_observer": [
             "kubejs:tk3/tier_3/track_observer"
         ],
-        "create:controls": [
-            "kubejs:tk3/tier_3/controls"
+        "create:track_signal": [
+            "kubejs:tk3/tier_3/track_signal"
         ],
-        "ars_nouveau:relay_splitter": [
-            "kubejs:tk3/tier_4/relay_splitter"
+        "create:track_station": [
+            "kubejs:tk3/tier_3/track_station"
         ],
-        "ars_nouveau:relay_deposit": [
-            "kubejs:tk3/tier_4/relay_deposit"
+        "create:transmitter": [
+            "kubejs:tk3/create/transmitter"
         ],
-        "ars_nouveau:relay_collector": [
-            "kubejs:tk3/tier_4/relay_collector"
+        "create:tree_fertilizer": [
+            "kubejs:tk3/create/tree_fertilizer"
         ],
-        "ars_nouveau:alchemical_sourcelink": [
-            "kubejs:tk3/tier_4/alchemical_sourcelink"
+        "create:turntable": [
+            "kubejs:tk3/create/turntable"
         ],
-        "ars_nouveau:mycelial_sourcelink": [
-            "kubejs:tk3/tier_4/mycelial_sourcelink"
+        "create:vertical_gearbox": [
+            "kubejs:tk3/tier_1/vertical_gearbox",
+            "kubejs:tk3/create/vertical_gearbox_conversion"
         ],
-        "create_enchantment_industry:mechanical_grindstone": [
-            "kubejs:tk3/tier_4/mechanical_grindstone"
+        "create:water_wheel": [
+            "kubejs:tk3/tier_1/water_wheel"
+        ],
+        "create:weighted_ejector": [
+            "kubejs:tk3/tier_1/weighted_ejector"
+        ],
+        "create:whisk": [
+            "kubejs:tk3/create/whisk"
+        ],
+        "create:white_sail": [
+            "kubejs:tk3/create/white_sail",
+            "kubejs:tk3/create/sail_from_frame"
+        ],
+        "create:windmill_bearing": [
+            "kubejs:tk3/tier_1/windmill_bearing"
+        ],
+        "create:wooden_bracket": [
+            "kubejs:tk3/create/wooden_bracket"
+        ],
+        "create:wrench": [
+            "kubejs:tk3/create/wrench"
+        ],
+        "create:zinc_block": [
+            "kubejs:tk3/create/zinc_block_packing"
+        ],
+        "create:zinc_ingot": [
+            "kubejs:tk3/create/zinc_ingot_unpacking",
+            "kubejs:tk3/create/zinc_ingot_from_nuggets",
+            "kubejs:tk3/create/zinc_smelting_raw_ore",
+            "kubejs:tk3/create/zinc_smelting_ore",
+            "kubejs:tk3/create/zinc_smelting_crushed",
+            "kubejs:tk3/create/zinc_blasting_raw_ore",
+            "kubejs:tk3/create/zinc_blasting_ore",
+            "kubejs:tk3/create/zinc_blasting_crushed"
+        ],
+        "create:zinc_nugget": [
+            "kubejs:tk3/geology/milling_asurine",
+            "kubejs:tk3/geology/wash_zinc",
+            "kubejs:tk3/create/zinc_nugget_from_ingot"
+        ],
+        "create_enchantment_industry:blaze_enchanter": [
+            "kubejs:tk3/tier_4/blaze_enchanter"
+        ],
+        "create_enchantment_industry:blaze_forger": [
+            "kubejs:tk3/addons/create_enchantment_industry_blaze_forger"
+        ],
+        "create_enchantment_industry:brass_bookshelf": [
+            "kubejs:tk3/addons/create_enchantment_industry_sequenced_assembly_brass_bookshelf"
         ],
         "create_enchantment_industry:experience_hatch": [
-            "kubejs:tk3/tier_4/experience_hatch"
+            "kubejs:tk3/addons/create_enchantment_industry_experience_hatch"
         ],
-        "mekanism:basic_energy_cube": [
-            "kubejs:tk3/tier_5/basic_energy_cube"
+        "create_enchantment_industry:experience_lantern": [
+            "kubejs:tk3/addons/create_enchantment_industry_crafting_experience_lantern"
         ],
-        "kubejs:tk3_kinetic_machine": [
-            "kubejs:tk3/frames/kinetic_automated",
-            "kubejs:tk3/frames/kinetic_manual"
+        "create_enchantment_industry:gem_cutter": [
+            "kubejs:tk3/addons/create_enchantment_industry_crafting_gem_cutter"
         ],
-        "kubejs:tk3_hydraulic_machine": [
-            "kubejs:tk3/frames/hydraulic_assembly"
+        "create_enchantment_industry:grindstone_drain": [
+            "kubejs:tk3/tier_3/grindstone_drain"
         ],
-        "kubejs:tk3_precision_machine": [
-            "kubejs:tk3/frames/precision_assembly"
+        "create_enchantment_industry:infuser": [
+            "kubejs:tk3/addons/create_enchantment_industry_crafting_infuser"
         ],
-        "kubejs:tk3_arcane_machine": [
-            "kubejs:tk3/frames/arcane_calibration"
+        "create_enchantment_industry:mechanical_grindstone": [
+            "kubejs:tk3/addons/create_enchantment_industry_crafting_mechanical_grindstone"
         ],
-        "create:millstone": [
-            "kubejs:tk3/frames/create_millstone"
+        "create_enchantment_industry:printer": [
+            "kubejs:tk3/tier_3/printer"
         ],
-        "create:crushing_wheel": [
-            "kubejs:tk3/frames/create_crushing_wheel"
+        "create_wizardry:arcane_casing": [
+            "kubejs:tk3/frames/arcane_casing"
+        ],
+        "create_wizardry:arcane_pipe": [
+            "kubejs:tk3/addons/create_wizardry_arcane_pipe_from_pipe",
+            "kubejs:tk3/addons/create_wizardry_arcane_pipe_vertical",
+            "kubejs:tk3/addons/create_wizardry_arcane_pipe",
+            "kubejs:tk3/addons/create_wizardry_item_application_arcane_pipe",
+            "kubejs:tk3/addons/create_wizardry_deploying_arcane_pipe"
+        ],
+        "create_wizardry:arcane_pump": [
+            "kubejs:tk3/addons/create_wizardry_arcane_pump_from_pump",
+            "kubejs:tk3/addons/create_wizardry_arcane_pump",
+            "kubejs:tk3/addons/create_wizardry_item_application_arcane_pump",
+            "kubejs:tk3/addons/create_wizardry_deploying_arcane_pump"
+        ],
+        "create_wizardry:arcane_sheet": [
+            "kubejs:tk3/addons/create_wizardry_pressing_arcane_sheet",
+            "kubejs:tk3/addons/create_wizardry_filling_arcane_sheet"
+        ],
+        "create_wizardry:blaze_caster": [
+            "kubejs:tk3/addons/create_wizardry_blaze_caster"
+        ],
+        "create_wizardry:channeler": [
+            "kubejs:tk3/addons/create_wizardry_channeler"
+        ],
+        "create_wizardry:mana_siphon": [
+            "kubejs:tk3/addons/create_wizardry_mana_siphon"
+        ],
+        "create_wizardry:smart_arcane_pipe": [
+            "kubejs:tk3/addons/create_wizardry_smart_arcane_pipe",
+            "kubejs:tk3/addons/create_wizardry_item_application_smart_arcane_pipe",
+            "kubejs:tk3/addons/create_wizardry_deploying_smart_arcane_pipe"
+        ],
+        "createaddition:alternator": [
+            "kubejs:tk3/tier_5/alternator"
+        ],
+        "createaddition:capacitor": [
+            "kubejs:tk3/tier_2/capacitor"
+        ],
+        "createaddition:connector": [
+            "kubejs:tk3/addons/createaddition_crafting_connector"
+        ],
+        "createaddition:digital_adapter": [
+            "kubejs:tk3/addons/createaddition_crafting_digital_adapter"
+        ],
+        "createaddition:electric_motor": [
+            "kubejs:tk3/tier_5/electric_motor"
+        ],
+        "createaddition:large_connector": [
+            "kubejs:tk3/addons/createaddition_crafting_large_connector"
+        ],
+        "createaddition:modular_accumulator": [
+            "kubejs:tk3/addons/createaddition_crafting_modular_accumulator"
+        ],
+        "createaddition:portable_energy_interface": [
+            "kubejs:tk3/addons/createaddition_crafting_portable_energy_interface"
+        ],
+        "createaddition:redstone_relay": [
+            "kubejs:tk3/addons/createaddition_crafting_redstone_relay"
+        ],
+        "createaddition:rolling_mill": [
+            "kubejs:tk3/tier_2/rolling_mill"
+        ],
+        "createaddition:tesla_coil": [
+            "kubejs:tk3/addons/createaddition_mechanical_crafting_tesla_coil"
+        ],
+        "createminecolonies:colony_warehouse_stock_link": [
+            "kubejs:tk3/addons/createminecolonies_colony_warehouse_stock_link"
+        ],
+        "endrem:corrupted_eye": [
+            "kubejs:tk3/campaign/corrupted_eye"
+        ],
+        "endrem:cryptic_eye": [
+            "kubejs:tk3/campaign/cryptic_eye"
+        ],
+        "endrem:magical_eye": [
+            "kubejs:tk3/campaign/magical_eye"
+        ],
+        "endrem:nether_eye": [
+            "kubejs:tk3/campaign/nether_eye"
+        ],
+        "farmersdelight:diamond_knife": [
+            "kubejs:tk3/addons/farmersdelight_diamond_knife"
+        ],
+        "irons_spellbooks:alchemist_cauldron": [
+            "kubejs:tk3/tier_4/alchemist_cauldron"
+        ],
+        "irons_spellbooks:arcane_anvil": [
+            "kubejs:tk3/tier_4/arcane_anvil"
+        ],
+        "irons_spellbooks:arcane_essence": [
+            "kubejs:tk3/tier_4/arcane_essence"
+        ],
+        "irons_spellbooks:arcane_ingot": [
+            "kubejs:tk3/magic/irons_spellbooks_arcane_ingot"
         ],
         "irons_spellbooks:blank_rune": [
             "kubejs:tk3/magic/irons_spellbooks_blank_rune"
         ],
-        "irons_spellbooks:magic_cloth": [
-            "kubejs:tk3/magic/irons_spellbooks_magic_cloth"
-        ],
-        "irons_spellbooks:arcane_ingot": [
-            "kubejs:tk3/magic/irons_spellbooks_arcane_ingot"
+        "irons_spellbooks:common_ink": [
+            "kubejs:tk3/tier_4/common_ink",
+            "kubejs:tk3/magic/mana_ink",
+            "kubejs:tk3/magic/bottle_common_ink"
         ],
         "irons_spellbooks:fire_rune": [
             "kubejs:tk3/magic/irons_spellbooks_fire_rune"
@@ -471,158 +1611,1015 @@ ServerEvents.recipes(event => {
         "irons_spellbooks:lightning_rune": [
             "kubejs:tk3/magic/irons_spellbooks_lightning_rune"
         ],
+        "irons_spellbooks:magic_cloth": [
+            "kubejs:tk3/magic/irons_spellbooks_magic_cloth"
+        ],
         "irons_spellbooks:nature_rune": [
             "kubejs:tk3/magic/irons_spellbooks_nature_rune"
         ],
-        "create_wizardry:arcane_sheet": [
-            "kubejs:tk3/magic/create_wizardry_arcane_sheet"
+        "kubejs:tk3_arcane_machine": [
+            "kubejs:tk3/frames/arcane_calibration"
         ],
-        "create_wizardry:arcane_pump": [
-            "kubejs:tk3/magic/create_wizardry_arcane_pump"
+        "kubejs:tk3_arcane_mechanism": [
+            "kubejs:tk3/tier_4/tk3_arcane_mechanism"
         ],
-        "create_wizardry:arcane_pipe": [
-            "kubejs:tk3/magic/create_wizardry_arcane_pipe"
+        "kubejs:tk3_containment_frame": [
+            "kubejs:tk3/campaign/frame_8"
         ],
-        "create_wizardry:smart_arcane_pipe": [
-            "kubejs:tk3/magic/create_wizardry_smart_arcane_pipe"
+        "kubejs:tk3_containment_mechanism": [
+            "kubejs:tk3/campaign/containment_mechanism"
         ],
-        "create_wizardry:mana_siphon": [
-            "kubejs:tk3/magic/create_wizardry_mana_siphon"
+        "kubejs:tk3_expedition_frame": [
+            "kubejs:tk3/campaign/frame_7"
         ],
-        "create_wizardry:channeler": [
-            "kubejs:tk3/magic/create_wizardry_channeler"
+        "kubejs:tk3_expedition_mechanism": [
+            "kubejs:tk3/campaign/expedition_mechanism"
         ],
-        "create_wizardry:blaze_caster": [
-            "kubejs:tk3/magic/create_wizardry_blaze_caster"
+        "kubejs:tk3_hydraulic_machine": [
+            "kubejs:tk3/frames/hydraulic_assembly"
         ],
-        "ars_creo:starbuncle_wheel": [
-            "kubejs:tk3/magic/ars_creo_starbuncle_wheel"
+        "kubejs:tk3_kinetic_machine": [
+            "kubejs:tk3/frames/kinetic_manual",
+            "kubejs:tk3/frames/kinetic_automated"
         ],
-        "sophisticatedstorage:upgrade_base": [
-            "kubejs:tk3/storage/sophisticatedstorage_upgrade_base"
+        "kubejs:tk3_network_chassis": [
+            "kubejs:tk3/campaign/frame_6"
         ],
-        "sophisticatedstorage:pickup_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_pickup_upgrade"
+        "kubejs:tk3_network_mechanism": [
+            "kubejs:tk3/campaign/network_mechanism"
         ],
-        "sophisticatedstorage:filter_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_filter_upgrade"
+        "kubejs:tk3_precision_machine": [
+            "kubejs:tk3/frames/precision_assembly"
         ],
-        "sophisticatedstorage:void_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_void_upgrade"
+        "kubejs:tk3_rotation_mechanism": [
+            "kubejs:tk3/tier_1/rotation_mechanism_automated"
         ],
-        "sophisticatedstorage:compacting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_compacting_upgrade"
+        "kubejs:tk3_sealed_mechanism": [
+            "kubejs:tk3/tier_2/tk3_sealed_mechanism"
         ],
-        "sophisticatedstorage:stonecutter_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_stonecutter_upgrade"
+        "kubejs:tk3_singularity_frame": [
+            "kubejs:tk3/campaign/frame_9"
         ],
-        "sophisticatedstorage:crafting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_crafting_upgrade"
+        "kubejs:tk3_singularity_mechanism": [
+            "kubejs:tk3/campaign/singularity_mechanism"
         ],
-        "sophisticatedstorage:magnet_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_magnet_upgrade"
+        "kubejs:tk3_sovereign_core": [
+            "kubejs:tk3/campaign/frame_10"
         ],
-        "sophisticatedstorage:feeding_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_feeding_upgrade"
+        "kubejs:tk3_sovereign_keystone": [
+            "kubejs:tk3/campaign/sovereign_keystone"
         ],
-        "sophisticatedstorage:pump_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_pump_upgrade"
+        "kubejs:tk3_sovereign_mechanism": [
+            "kubejs:tk3/campaign/sovereign_mechanism"
         ],
-        "sophisticatedstorage:xp_pump_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade"
+        "mekanism:advanced_bin": [
+            "kubejs:tk3/industrial/mekanism_bin_advanced"
         ],
-        "sophisticatedstorage:alchemy_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_alchemy_upgrade"
+        "mekanism:advanced_chemical_tank": [
+            "kubejs:tk3/industrial/mekanism_chemical_tank_advanced"
         ],
-        "sophisticatedstorage:smelting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_smelting_upgrade"
+        "mekanism:advanced_combining_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_combining"
         ],
-        "sophisticatedstorage:smoking_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_smoking_upgrade"
+        "mekanism:advanced_compressing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_compressing"
         ],
-        "sophisticatedstorage:blasting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_blasting_upgrade"
+        "mekanism:advanced_control_circuit": [
+            "kubejs:tk3/industrial/mekanism_control_circuit_advanced",
+            "kubejs:tk3/industrial/mekanism_control_circuit_infused_advanced"
         ],
-        "sophisticatedstorage:advanced_alchemy_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_alchemy_upgrade"
+        "mekanism:advanced_crushing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_crushing"
         ],
-        "sophisticatedstorage:advanced_compacting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_compacting_upgrade"
+        "mekanism:advanced_energy_cube": [
+            "kubejs:tk3/industrial/mekanism_energy_cube_advanced"
         ],
-        "sophisticatedstorage:advanced_feeding_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_feeding_upgrade"
+        "mekanism:advanced_enriching_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_enriching"
         ],
-        "sophisticatedstorage:advanced_filter_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_filter_upgrade"
+        "mekanism:advanced_fluid_tank": [
+            "kubejs:tk3/industrial/mekanism_fluid_tank_advanced"
         ],
-        "sophisticatedstorage:advanced_hopper_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_hopper_upgrade"
+        "mekanism:advanced_induction_cell": [
+            "kubejs:tk3/industrial/mekanism_induction_cell_advanced"
         ],
-        "sophisticatedstorage:advanced_jukebox_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_jukebox_upgrade"
+        "mekanism:advanced_induction_provider": [
+            "kubejs:tk3/industrial/mekanism_induction_provider_advanced"
         ],
-        "sophisticatedstorage:advanced_magnet_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_magnet_upgrade"
+        "mekanism:advanced_infusing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_infusing"
         ],
-        "sophisticatedstorage:advanced_pickup_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_pickup_upgrade"
+        "mekanism:advanced_injecting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_injecting"
         ],
-        "sophisticatedstorage:advanced_pump_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_pump_upgrade"
+        "mekanism:advanced_logistical_transporter": [
+            "kubejs:tk3/industrial/mekanism_transmitter_logistical_transporter_advanced"
         ],
-        "sophisticatedstorage:advanced_void_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_advanced_void_upgrade"
+        "mekanism:advanced_mechanical_pipe": [
+            "kubejs:tk3/industrial/mekanism_transmitter_mechanical_pipe_advanced"
         ],
-        "sophisticatedstorage:stack_upgrade_tier_1": [
-            "kubejs:tk3/storage/sophisticatedstorage_stack_upgrade_tier_1"
+        "mekanism:advanced_pressurized_tube": [
+            "kubejs:tk3/industrial/mekanism_transmitter_pressurized_tube_advanced"
         ],
-        "sophisticatedstorage:stack_upgrade_tier_2": [
-            "kubejs:tk3/storage/sophisticatedstorage_stack_upgrade_tier_2"
+        "mekanism:advanced_purifying_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_purifying"
         ],
-        "sophisticatedbackpacks:upgrade_base": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_upgrade_base"
+        "mekanism:advanced_sawing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_sawing"
         ],
-        "sophisticatedbackpacks:pickup_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_pickup_upgrade"
+        "mekanism:advanced_smelting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_advanced_smelting"
         ],
-        "sophisticatedbackpacks:filter_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_filter_upgrade"
+        "mekanism:advanced_thermodynamic_conductor": [
+            "kubejs:tk3/industrial/mekanism_transmitter_thermodynamic_conductor_advanced"
         ],
-        "sophisticatedbackpacks:void_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_void_upgrade"
+        "mekanism:advanced_tier_installer": [
+            "kubejs:tk3/industrial/mekanism_tier_installer_advanced"
         ],
-        "sophisticatedbackpacks:compacting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_compacting_upgrade"
+        "mekanism:advanced_universal_cable": [
+            "kubejs:tk3/industrial/mekanism_transmitter_universal_cable_advanced"
         ],
-        "sophisticatedbackpacks:stonecutter_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_stonecutter_upgrade"
+        "mekanism:alloy_atomic": [
+            "kubejs:tk3/industrial/mekanism_metallurgic_infusing_alloy_atomic"
         ],
-        "sophisticatedbackpacks:crafting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_crafting_upgrade"
+        "mekanism:alloy_reinforced": [
+            "kubejs:tk3/industrial/mekanism_metallurgic_infusing_alloy_reinforced"
         ],
-        "sophisticatedbackpacks:magnet_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_magnet_upgrade"
+        "mekanism:antiprotonic_nucleosynthesizer": [
+            "kubejs:tk3/industrial/mekanism_antiprotonic_nucleosynthesizer"
         ],
-        "sophisticatedbackpacks:feeding_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_feeding_upgrade"
+        "mekanism:basic_bin": [
+            "kubejs:tk3/industrial/mekanism_bin_basic"
         ],
-        "sophisticatedbackpacks:pump_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_pump_upgrade"
+        "mekanism:basic_chemical_tank": [
+            "kubejs:tk3/industrial/mekanism_chemical_tank_basic"
         ],
-        "sophisticatedbackpacks:xp_pump_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_xp_pump_upgrade"
+        "mekanism:basic_combining_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_combining"
         ],
-        "sophisticatedbackpacks:alchemy_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_alchemy_upgrade"
+        "mekanism:basic_compressing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_compressing"
         ],
-        "sophisticatedbackpacks:smelting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_smelting_upgrade"
+        "mekanism:basic_crushing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_crushing"
         ],
-        "sophisticatedbackpacks:smoking_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_smoking_upgrade"
+        "mekanism:basic_energy_cube": [
+            "kubejs:tk3/tier_5/basic_energy_cube"
         ],
-        "sophisticatedbackpacks:blasting_upgrade": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_blasting_upgrade"
+        "mekanism:basic_enriching_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_enriching"
+        ],
+        "mekanism:basic_fluid_tank": [
+            "kubejs:tk3/industrial/mekanism_fluid_tank_basic"
+        ],
+        "mekanism:basic_induction_cell": [
+            "kubejs:tk3/industrial/mekanism_induction_cell_basic"
+        ],
+        "mekanism:basic_induction_provider": [
+            "kubejs:tk3/industrial/mekanism_induction_provider_basic"
+        ],
+        "mekanism:basic_infusing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_infusing"
+        ],
+        "mekanism:basic_injecting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_injecting"
+        ],
+        "mekanism:basic_logistical_transporter": [
+            "kubejs:tk3/tier_5/basic_logistical_transporter"
+        ],
+        "mekanism:basic_mechanical_pipe": [
+            "kubejs:tk3/tier_5/basic_mechanical_pipe"
+        ],
+        "mekanism:basic_pressurized_tube": [
+            "kubejs:tk3/industrial/mekanism_transmitter_pressurized_tube_basic"
+        ],
+        "mekanism:basic_purifying_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_purifying"
+        ],
+        "mekanism:basic_sawing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_sawing"
+        ],
+        "mekanism:basic_smelting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_basic_smelting"
+        ],
+        "mekanism:basic_thermodynamic_conductor": [
+            "kubejs:tk3/industrial/mekanism_transmitter_thermodynamic_conductor_basic"
+        ],
+        "mekanism:basic_tier_installer": [
+            "kubejs:tk3/industrial/mekanism_tier_installer_basic"
+        ],
+        "mekanism:basic_universal_cable": [
+            "kubejs:tk3/tier_5/basic_universal_cable"
+        ],
+        "mekanism:boiler_casing": [
+            "kubejs:tk3/industrial/mekanism_boiler_casing"
+        ],
+        "mekanism:boiler_valve": [
+            "kubejs:tk3/industrial/mekanism_boiler_valve"
+        ],
+        "mekanism:cardboard_box": [
+            "kubejs:tk3/industrial/mekanism_cardboard_box"
+        ],
+        "mekanism:chargepad": [
+            "kubejs:tk3/industrial/mekanism_chargepad"
+        ],
+        "mekanism:chemical_crystallizer": [
+            "kubejs:tk3/industrial/mekanism_chemical_crystallizer"
+        ],
+        "mekanism:chemical_dissolution_chamber": [
+            "kubejs:tk3/industrial/mekanism_chemical_dissolution_chamber"
+        ],
+        "mekanism:chemical_infuser": [
+            "kubejs:tk3/industrial/mekanism_chemical_infuser"
+        ],
+        "mekanism:chemical_injection_chamber": [
+            "kubejs:tk3/industrial/mekanism_chemical_injection_chamber"
+        ],
+        "mekanism:chemical_oxidizer": [
+            "kubejs:tk3/industrial/mekanism_chemical_oxidizer"
+        ],
+        "mekanism:chemical_washer": [
+            "kubejs:tk3/industrial/mekanism_chemical_washer"
+        ],
+        "mekanism:combiner": [
+            "kubejs:tk3/industrial/mekanism_combiner"
+        ],
+        "mekanism:crusher": [
+            "kubejs:tk3/tier_5/crusher"
+        ],
+        "mekanism:deepslate_fluorite_ore": [
+            "kubejs:tk3/industrial/mekanism_processing_fluorite_to_deepslate_ore"
+        ],
+        "mekanism:deepslate_lead_ore": [
+            "kubejs:tk3/industrial/mekanism_processing_lead_ore_deepslate_from_raw"
+        ],
+        "mekanism:deepslate_osmium_ore": [
+            "kubejs:tk3/industrial/mekanism_processing_osmium_ore_deepslate_from_raw"
+        ],
+        "mekanism:deepslate_tin_ore": [
+            "kubejs:tk3/industrial/mekanism_processing_tin_ore_deepslate_from_raw"
+        ],
+        "mekanism:deepslate_uranium_ore": [
+            "kubejs:tk3/industrial/mekanism_processing_uranium_ore_deepslate_from_raw"
+        ],
+        "mekanism:digital_miner": [
+            "kubejs:tk3/industrial/mekanism_digital_miner"
+        ],
+        "mekanism:dimensional_stabilizer": [
+            "kubejs:tk3/industrial/mekanism_dimensional_stabilizer"
+        ],
+        "mekanism:diversion_transporter": [
+            "kubejs:tk3/industrial/mekanism_transmitter_diversion_transporter"
+        ],
+        "mekanism:dust_refined_obsidian": [
+            "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_dust_from_ingot",
+            "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_dust_from_obsidian_dust"
+        ],
+        "mekanism:dynamic_tank": [
+            "kubejs:tk3/industrial/mekanism_dynamic_tank"
+        ],
+        "mekanism:dynamic_valve": [
+            "kubejs:tk3/industrial/mekanism_dynamic_valve"
+        ],
+        "mekanism:electric_pump": [
+            "kubejs:tk3/industrial/mekanism_electric_pump"
+        ],
+        "mekanism:electrolytic_separator": [
+            "kubejs:tk3/industrial/mekanism_electrolytic_separator"
+        ],
+        "mekanism:elite_bin": [
+            "kubejs:tk3/industrial/mekanism_bin_elite"
+        ],
+        "mekanism:elite_chemical_tank": [
+            "kubejs:tk3/industrial/mekanism_chemical_tank_elite"
+        ],
+        "mekanism:elite_combining_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_combining"
+        ],
+        "mekanism:elite_compressing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_compressing"
+        ],
+        "mekanism:elite_control_circuit": [
+            "kubejs:tk3/industrial/mekanism_control_circuit_elite",
+            "kubejs:tk3/industrial/mekanism_control_circuit_infused_elite"
+        ],
+        "mekanism:elite_crushing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_crushing"
+        ],
+        "mekanism:elite_energy_cube": [
+            "kubejs:tk3/industrial/mekanism_energy_cube_elite"
+        ],
+        "mekanism:elite_enriching_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_enriching"
+        ],
+        "mekanism:elite_fluid_tank": [
+            "kubejs:tk3/industrial/mekanism_fluid_tank_elite"
+        ],
+        "mekanism:elite_induction_cell": [
+            "kubejs:tk3/industrial/mekanism_induction_cell_elite"
+        ],
+        "mekanism:elite_induction_provider": [
+            "kubejs:tk3/industrial/mekanism_induction_provider_elite"
+        ],
+        "mekanism:elite_infusing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_infusing"
+        ],
+        "mekanism:elite_injecting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_injecting"
+        ],
+        "mekanism:elite_logistical_transporter": [
+            "kubejs:tk3/industrial/mekanism_transmitter_logistical_transporter_elite"
+        ],
+        "mekanism:elite_mechanical_pipe": [
+            "kubejs:tk3/industrial/mekanism_transmitter_mechanical_pipe_elite"
+        ],
+        "mekanism:elite_pressurized_tube": [
+            "kubejs:tk3/industrial/mekanism_transmitter_pressurized_tube_elite"
+        ],
+        "mekanism:elite_purifying_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_purifying"
+        ],
+        "mekanism:elite_sawing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_sawing"
+        ],
+        "mekanism:elite_smelting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_elite_smelting"
+        ],
+        "mekanism:elite_thermodynamic_conductor": [
+            "kubejs:tk3/industrial/mekanism_transmitter_thermodynamic_conductor_elite"
+        ],
+        "mekanism:elite_tier_installer": [
+            "kubejs:tk3/industrial/mekanism_tier_installer_elite"
+        ],
+        "mekanism:elite_universal_cable": [
+            "kubejs:tk3/industrial/mekanism_transmitter_universal_cable_elite"
+        ],
+        "mekanism:energized_smelter": [
+            "kubejs:tk3/tier_5/energized_smelter"
+        ],
+        "mekanism:enrichment_chamber": [
+            "kubejs:tk3/tier_5/enrichment_chamber"
+        ],
+        "mekanism:fluidic_plenisher": [
+            "kubejs:tk3/industrial/mekanism_fluidic_plenisher"
+        ],
+        "mekanism:formulaic_assemblicator": [
+            "kubejs:tk3/industrial/mekanism_formulaic_assemblicator"
+        ],
+        "mekanism:fuelwood_heater": [
+            "kubejs:tk3/industrial/mekanism_fuelwood_heater"
+        ],
+        "mekanism:hdpe_pellet": [
+            "kubejs:tk3/industrial/mekanism_reaction_substrate_ethene_oxygen"
+        ],
+        "mekanism:hdpe_rod": [
+            "kubejs:tk3/industrial/mekanism_hdpe_rod"
+        ],
+        "mekanism:hdpe_sheet": [
+            "kubejs:tk3/industrial/mekanism_enriching_hdpe_sheet"
+        ],
+        "mekanism:induction_casing": [
+            "kubejs:tk3/industrial/mekanism_induction_casing"
+        ],
+        "mekanism:induction_port": [
+            "kubejs:tk3/industrial/mekanism_induction_port"
+        ],
+        "mekanism:industrial_alarm": [
+            "kubejs:tk3/industrial/mekanism_industrial_alarm"
+        ],
+        "mekanism:ingot_refined_glowstone": [
+            "kubejs:tk3/industrial/mekanism_processing_refined_glowstone_ingot_from_block",
+            "kubejs:tk3/industrial/mekanism_processing_refined_glowstone_ingot_from_dust",
+            "kubejs:tk3/industrial/mekanism_processing_refined_glowstone_ingot_from_nuggets"
+        ],
+        "mekanism:ingot_refined_obsidian": [
+            "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_ingot_from_block",
+            "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_ingot_from_dust",
+            "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_ingot_from_nuggets"
+        ],
+        "mekanism:ingot_steel": [
+            "kubejs:tk3/tier_5/steel_bootstrap",
+            "kubejs:tk3/tier_5/steel_from_dust"
+        ],
+        "mekanism:isotopic_centrifuge": [
+            "kubejs:tk3/industrial/mekanism_isotopic_centrifuge"
+        ],
+        "mekanism:laser": [
+            "kubejs:tk3/industrial/mekanism_laser"
+        ],
+        "mekanism:laser_amplifier": [
+            "kubejs:tk3/industrial/mekanism_laser_amplifier"
+        ],
+        "mekanism:laser_tractor_beam": [
+            "kubejs:tk3/industrial/mekanism_laser_tractor_beam"
+        ],
+        "mekanism:logistical_sorter": [
+            "kubejs:tk3/industrial/mekanism_logistical_sorter"
+        ],
+        "mekanism:meka_tool": [
+            "kubejs:tk3/industrial/mekanism_meka_tool"
+        ],
+        "mekanism:mekasuit_bodyarmor": [
+            "kubejs:tk3/industrial/mekanism_mekasuit_bodyarmor"
+        ],
+        "mekanism:mekasuit_boots": [
+            "kubejs:tk3/industrial/mekanism_mekasuit_boots"
+        ],
+        "mekanism:mekasuit_helmet": [
+            "kubejs:tk3/industrial/mekanism_mekasuit_helmet"
+        ],
+        "mekanism:mekasuit_pants": [
+            "kubejs:tk3/industrial/mekanism_mekasuit_pants"
+        ],
+        "mekanism:metallurgic_infuser": [
+            "kubejs:tk3/tier_5/metallurgic_infuser"
+        ],
+        "mekanism:modification_station": [
+            "kubejs:tk3/industrial/mekanism_modification_station"
+        ],
+        "mekanism:module_attack_amplification_unit": [
+            "kubejs:tk3/industrial/mekanism_module_attack_amplification_unit"
+        ],
+        "mekanism:module_base": [
+            "kubejs:tk3/industrial/mekanism_module_base"
+        ],
+        "mekanism:module_blasting_unit": [
+            "kubejs:tk3/industrial/mekanism_module_blasting_unit"
+        ],
+        "mekanism:module_charge_distribution_unit": [
+            "kubejs:tk3/industrial/mekanism_module_charge_distribution_unit"
+        ],
+        "mekanism:module_color_modulation_unit": [
+            "kubejs:tk3/industrial/mekanism_module_color_modulation_unit"
+        ],
+        "mekanism:module_dosimeter_unit": [
+            "kubejs:tk3/industrial/mekanism_module_dosimeter_unit"
+        ],
+        "mekanism:module_electrolytic_breathing_unit": [
+            "kubejs:tk3/industrial/mekanism_module_electrolytic_breathing_unit"
+        ],
+        "mekanism:module_elytra_unit": [
+            "kubejs:tk3/industrial/mekanism_module_elytra_unit"
+        ],
+        "mekanism:module_energy_unit": [
+            "kubejs:tk3/industrial/mekanism_module_energy_unit"
+        ],
+        "mekanism:module_excavation_escalation_unit": [
+            "kubejs:tk3/industrial/mekanism_module_excavation_escalation_unit"
+        ],
+        "mekanism:module_farming_unit": [
+            "kubejs:tk3/industrial/mekanism_module_farming_unit"
+        ],
+        "mekanism:module_fortune_unit": [
+            "kubejs:tk3/industrial/mekanism_module_fortune_unit"
+        ],
+        "mekanism:module_frost_walker_unit": [
+            "kubejs:tk3/industrial/mekanism_module_frost_walker_unit"
+        ],
+        "mekanism:module_geiger_unit": [
+            "kubejs:tk3/industrial/mekanism_module_geiger_unit"
+        ],
+        "mekanism:module_gravitational_modulating_unit": [
+            "kubejs:tk3/industrial/mekanism_module_gravitational_modulating_unit"
+        ],
+        "mekanism:module_gyroscopic_stabilization_unit": [
+            "kubejs:tk3/industrial/mekanism_module_gyroscopic_stabilization_unit"
+        ],
+        "mekanism:module_hydraulic_propulsion_unit": [
+            "kubejs:tk3/industrial/mekanism_module_hydraulic_propulsion_unit"
+        ],
+        "mekanism:module_hydrostatic_repulsor_unit": [
+            "kubejs:tk3/industrial/mekanism_module_hydrostatic_repulsor_unit"
+        ],
+        "mekanism:module_inhalation_purification_unit": [
+            "kubejs:tk3/industrial/mekanism_module_inhalation_purification_unit"
+        ],
+        "mekanism:module_jetpack_unit": [
+            "kubejs:tk3/industrial/mekanism_module_jetpack_unit"
+        ],
+        "mekanism:module_laser_dissipation_unit": [
+            "kubejs:tk3/industrial/mekanism_module_laser_dissipation_unit"
+        ],
+        "mekanism:module_locomotive_boosting_unit": [
+            "kubejs:tk3/industrial/mekanism_module_locomotive_boosting_unit"
+        ],
+        "mekanism:module_magnetic_attraction_unit": [
+            "kubejs:tk3/industrial/mekanism_module_magnetic_attraction_unit"
+        ],
+        "mekanism:module_motorized_servo_unit": [
+            "kubejs:tk3/industrial/mekanism_module_motorized_servo_unit"
+        ],
+        "mekanism:module_nutritional_injection_unit": [
+            "kubejs:tk3/industrial/mekanism_module_nutritional_injection_unit"
+        ],
+        "mekanism:module_radiation_shielding_unit": [
+            "kubejs:tk3/industrial/mekanism_module_radiation_shielding_unit"
+        ],
+        "mekanism:module_shearing_unit": [
+            "kubejs:tk3/industrial/mekanism_module_shearing_unit"
+        ],
+        "mekanism:module_silk_touch_unit": [
+            "kubejs:tk3/industrial/mekanism_module_silk_touch_unit"
+        ],
+        "mekanism:module_soul_surfer_unit": [
+            "kubejs:tk3/industrial/mekanism_module_soul_surfer_unit"
+        ],
+        "mekanism:module_teleportation_unit": [
+            "kubejs:tk3/industrial/mekanism_module_teleportation_unit"
+        ],
+        "mekanism:module_vein_mining_unit": [
+            "kubejs:tk3/industrial/mekanism_module_vein_mining_unit"
+        ],
+        "mekanism:module_vision_enhancement_unit": [
+            "kubejs:tk3/industrial/mekanism_module_vision_enhancement_unit"
+        ],
+        "mekanism:nutritional_liquifier": [
+            "kubejs:tk3/industrial/mekanism_nutritional_liquifier"
+        ],
+        "mekanism:oredictionificator": [
+            "kubejs:tk3/industrial/mekanism_oredictionificator"
+        ],
+        "mekanism:osmium_compressor": [
+            "kubejs:tk3/industrial/mekanism_osmium_compressor"
+        ],
+        "mekanism:painting_machine": [
+            "kubejs:tk3/industrial/mekanism_painting_machine"
+        ],
+        "mekanism:pellet_antimatter": [
+            "kubejs:tk3/industrial/mekanism_processing_lategame_antimatter_pellet_from_gas"
+        ],
+        "mekanism:pellet_plutonium": [
+            "kubejs:tk3/industrial/mekanism_processing_lategame_plutonium_pellet_from_reaction"
+        ],
+        "mekanism:pellet_polonium": [
+            "kubejs:tk3/industrial/mekanism_processing_lategame_polonium_pellet_from_reaction"
+        ],
+        "mekanism:personal_barrel": [
+            "kubejs:tk3/industrial/mekanism_personal_barrel"
+        ],
+        "mekanism:personal_chest": [
+            "kubejs:tk3/industrial/mekanism_personal_chest"
+        ],
+        "mekanism:pigment_extractor": [
+            "kubejs:tk3/industrial/mekanism_pigment_extractor"
+        ],
+        "mekanism:pigment_mixer": [
+            "kubejs:tk3/industrial/mekanism_pigment_mixer"
+        ],
+        "mekanism:precision_sawmill": [
+            "kubejs:tk3/industrial/mekanism_precision_sawmill"
+        ],
+        "mekanism:pressure_disperser": [
+            "kubejs:tk3/industrial/mekanism_pressure_disperser"
+        ],
+        "mekanism:pressurized_reaction_chamber": [
+            "kubejs:tk3/industrial/mekanism_pressurized_reaction_chamber"
+        ],
+        "mekanism:purification_chamber": [
+            "kubejs:tk3/industrial/mekanism_purification_chamber"
+        ],
+        "mekanism:qio_dashboard": [
+            "kubejs:tk3/industrial/mekanism_qio_dashboard"
+        ],
+        "mekanism:qio_drive_array": [
+            "kubejs:tk3/industrial/mekanism_qio_drive_array"
+        ],
+        "mekanism:qio_drive_base": [
+            "kubejs:tk3/industrial/mekanism_qio_drive_base"
+        ],
+        "mekanism:qio_drive_hyper_dense": [
+            "kubejs:tk3/industrial/mekanism_qio_drive_hyper_dense"
+        ],
+        "mekanism:qio_drive_supermassive": [
+            "kubejs:tk3/industrial/mekanism_qio_drive_supermassive"
+        ],
+        "mekanism:qio_drive_time_dilating": [
+            "kubejs:tk3/industrial/mekanism_qio_drive_time_dilating"
+        ],
+        "mekanism:qio_exporter": [
+            "kubejs:tk3/industrial/mekanism_qio_exporter"
+        ],
+        "mekanism:qio_importer": [
+            "kubejs:tk3/industrial/mekanism_qio_importer"
+        ],
+        "mekanism:qio_redstone_adapter": [
+            "kubejs:tk3/industrial/mekanism_qio_redstone_adapter"
+        ],
+        "mekanism:quantum_entangloporter": [
+            "kubejs:tk3/industrial/mekanism_quantum_entangloporter"
+        ],
+        "mekanism:radioactive_waste_barrel": [
+            "kubejs:tk3/industrial/mekanism_radioactive_waste_barrel"
+        ],
+        "mekanism:resistive_heater": [
+            "kubejs:tk3/industrial/mekanism_resistive_heater"
+        ],
+        "mekanism:restrictive_transporter": [
+            "kubejs:tk3/industrial/mekanism_transmitter_restrictive_transporter"
+        ],
+        "mekanism:rotary_condensentrator": [
+            "kubejs:tk3/industrial/mekanism_rotary_condensentrator"
+        ],
+        "mekanism:security_desk": [
+            "kubejs:tk3/industrial/mekanism_security_desk"
+        ],
+        "mekanism:seismic_vibrator": [
+            "kubejs:tk3/industrial/mekanism_seismic_vibrator"
+        ],
+        "mekanism:solar_neutron_activator": [
+            "kubejs:tk3/industrial/mekanism_solar_neutron_activator"
+        ],
+        "mekanism:sps_casing": [
+            "kubejs:tk3/industrial/mekanism_sps_casing"
+        ],
+        "mekanism:sps_port": [
+            "kubejs:tk3/industrial/mekanism_sps_port"
+        ],
+        "mekanism:steel_casing": [
+            "kubejs:tk3/tier_5/steel_casing"
+        ],
+        "mekanism:structural_glass": [
+            "kubejs:tk3/industrial/mekanism_structural_glass"
+        ],
+        "mekanism:substrate": [
+            "kubejs:tk3/industrial/mekanism_reaction_substrate_water_ethene",
+            "kubejs:tk3/industrial/mekanism_reaction_substrate_water_hydrogen"
+        ],
+        "mekanism:supercharged_coil": [
+            "kubejs:tk3/industrial/mekanism_supercharged_coil"
+        ],
+        "mekanism:superheating_element": [
+            "kubejs:tk3/industrial/mekanism_superheating_element"
+        ],
+        "mekanism:teleporter": [
+            "kubejs:tk3/industrial/mekanism_teleporter"
+        ],
+        "mekanism:teleporter_frame": [
+            "kubejs:tk3/industrial/mekanism_teleporter_frame"
+        ],
+        "mekanism:thermal_evaporation_block": [
+            "kubejs:tk3/industrial/mekanism_thermal_evaporation_block"
+        ],
+        "mekanism:thermal_evaporation_controller": [
+            "kubejs:tk3/industrial/mekanism_thermal_evaporation_controller"
+        ],
+        "mekanism:thermal_evaporation_valve": [
+            "kubejs:tk3/industrial/mekanism_thermal_evaporation_valve"
+        ],
+        "mekanism:ultimate_bin": [
+            "kubejs:tk3/industrial/mekanism_bin_ultimate"
+        ],
+        "mekanism:ultimate_chemical_tank": [
+            "kubejs:tk3/industrial/mekanism_chemical_tank_ultimate"
+        ],
+        "mekanism:ultimate_combining_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_combining"
+        ],
+        "mekanism:ultimate_compressing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_compressing"
+        ],
+        "mekanism:ultimate_control_circuit": [
+            "kubejs:tk3/industrial/mekanism_control_circuit_infused_ultimate",
+            "kubejs:tk3/industrial/mekanism_control_circuit_ultimate"
+        ],
+        "mekanism:ultimate_crushing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_crushing"
+        ],
+        "mekanism:ultimate_energy_cube": [
+            "kubejs:tk3/industrial/mekanism_energy_cube_ultimate"
+        ],
+        "mekanism:ultimate_enriching_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_enriching"
+        ],
+        "mekanism:ultimate_fluid_tank": [
+            "kubejs:tk3/industrial/mekanism_fluid_tank_ultimate"
+        ],
+        "mekanism:ultimate_induction_cell": [
+            "kubejs:tk3/industrial/mekanism_induction_cell_ultimate"
+        ],
+        "mekanism:ultimate_induction_provider": [
+            "kubejs:tk3/industrial/mekanism_induction_provider_ultimate"
+        ],
+        "mekanism:ultimate_infusing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_infusing"
+        ],
+        "mekanism:ultimate_injecting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_injecting"
+        ],
+        "mekanism:ultimate_logistical_transporter": [
+            "kubejs:tk3/industrial/mekanism_transmitter_logistical_transporter_ultimate"
+        ],
+        "mekanism:ultimate_mechanical_pipe": [
+            "kubejs:tk3/industrial/mekanism_transmitter_mechanical_pipe_ultimate"
+        ],
+        "mekanism:ultimate_pressurized_tube": [
+            "kubejs:tk3/industrial/mekanism_transmitter_pressurized_tube_ultimate"
+        ],
+        "mekanism:ultimate_purifying_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_purifying"
+        ],
+        "mekanism:ultimate_sawing_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_sawing"
+        ],
+        "mekanism:ultimate_smelting_factory": [
+            "kubejs:tk3/industrial/mekanism_factory_ultimate_smelting"
+        ],
+        "mekanism:ultimate_thermodynamic_conductor": [
+            "kubejs:tk3/industrial/mekanism_transmitter_thermodynamic_conductor_ultimate"
+        ],
+        "mekanism:ultimate_tier_installer": [
+            "kubejs:tk3/industrial/mekanism_tier_installer_ultimate"
+        ],
+        "mekanism:ultimate_universal_cable": [
+            "kubejs:tk3/industrial/mekanism_transmitter_universal_cable_ultimate"
+        ],
+        "mekanismgenerators:advanced_solar_generator": [
+            "kubejs:tk3/industrial/mekanismgenerators_advanced_solar_generator"
+        ],
+        "mekanismgenerators:bio_generator": [
+            "kubejs:tk3/industrial/mekanismgenerators_bio_generator"
+        ],
+        "mekanismgenerators:control_rod_assembly": [
+            "kubejs:tk3/industrial/mekanismgenerators_control_rod_assembly"
+        ],
+        "mekanismgenerators:electromagnetic_coil": [
+            "kubejs:tk3/industrial/mekanismgenerators_electromagnetic_coil"
+        ],
+        "mekanismgenerators:fission_fuel_assembly": [
+            "kubejs:tk3/industrial/mekanismgenerators_fission_fuel_assembly"
+        ],
+        "mekanismgenerators:fission_reactor_casing": [
+            "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_casing"
+        ],
+        "mekanismgenerators:fission_reactor_logic_adapter": [
+            "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_logic_adapter"
+        ],
+        "mekanismgenerators:fission_reactor_port": [
+            "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_port"
+        ],
+        "mekanismgenerators:fusion_reactor_controller": [
+            "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_controller"
+        ],
+        "mekanismgenerators:fusion_reactor_frame": [
+            "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_frame"
+        ],
+        "mekanismgenerators:fusion_reactor_logic_adapter": [
+            "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_logic_adapter"
+        ],
+        "mekanismgenerators:fusion_reactor_port": [
+            "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_port"
+        ],
+        "mekanismgenerators:gas_burning_generator": [
+            "kubejs:tk3/industrial/mekanismgenerators_gas_burning_generator"
+        ],
+        "mekanismgenerators:heat_generator": [
+            "kubejs:tk3/tier_5/heat_generator"
+        ],
+        "mekanismgenerators:laser_focus_matrix": [
+            "kubejs:tk3/industrial/mekanismgenerators_laser_focus_matrix"
+        ],
+        "mekanismgenerators:reactor_glass": [
+            "kubejs:tk3/industrial/mekanismgenerators_reactor_glass"
+        ],
+        "mekanismgenerators:rotational_complex": [
+            "kubejs:tk3/industrial/mekanismgenerators_rotational_complex"
+        ],
+        "mekanismgenerators:saturating_condenser": [
+            "kubejs:tk3/industrial/mekanismgenerators_saturating_condenser"
+        ],
+        "mekanismgenerators:solar_generator": [
+            "kubejs:tk3/industrial/mekanismgenerators_solar_generator"
+        ],
+        "mekanismgenerators:turbine_blade": [
+            "kubejs:tk3/industrial/mekanismgenerators_turbine_blade"
+        ],
+        "mekanismgenerators:turbine_casing": [
+            "kubejs:tk3/industrial/mekanismgenerators_turbine_casing"
+        ],
+        "mekanismgenerators:turbine_rotor": [
+            "kubejs:tk3/industrial/mekanismgenerators_turbine_rotor"
+        ],
+        "mekanismgenerators:turbine_valve": [
+            "kubejs:tk3/industrial/mekanismgenerators_turbine_valve"
+        ],
+        "mekanismgenerators:turbine_vent": [
+            "kubejs:tk3/industrial/mekanismgenerators_turbine_vent"
+        ],
+        "mekanismgenerators:wind_generator": [
+            "kubejs:tk3/industrial/mekanismgenerators_wind_generator"
+        ],
+        "minecraft:clay_ball": [
+            "kubejs:tk3/tier_1/renewable_clay",
+            "kubejs:tk3/geology/milling_andesite",
+            "kubejs:tk3/geology/crushing_andesite",
+            "kubejs:tk3/compat/mud_clay"
+        ],
+        "minecraft:copper_ingot": [
+            "kubejs:tk3/create/copper_ingot_from_nuggets"
+        ],
+        "minecraft:gravel": [
+            "kubejs:tk3/tier_1/cobble_to_gravel"
+        ],
+        "minecraft:slime_ball": [
+            "kubejs:tk3/tier_2/renewable_sealant"
+        ],
+        "simulated:altitude_sensor": [
+            "kubejs:tk3/addons/simulated_altitude_sensor"
+        ],
+        "simulated:analog_transmission": [
+            "kubejs:tk3/addons/simulated_analog_transmission"
+        ],
+        "simulated:auger_cog": [
+            "kubejs:tk3/addons/simulated_auger_cog_from_auger_shaft"
+        ],
+        "simulated:auger_shaft": [
+            "kubejs:tk3/addons/simulated_auger_shaft"
+        ],
+        "simulated:black_handle": [
+            "kubejs:tk3/addons/simulated_black_handle"
+        ],
+        "simulated:black_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_black_nameplate_from_other_nameplate"
+        ],
+        "simulated:blue_handle": [
+            "kubejs:tk3/addons/simulated_blue_handle"
+        ],
+        "simulated:blue_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_blue_nameplate_from_other_nameplate"
+        ],
+        "simulated:brown_handle": [
+            "kubejs:tk3/addons/simulated_brown_handle"
+        ],
+        "simulated:brown_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_brown_nameplate_from_other_nameplate"
+        ],
+        "simulated:contraption_diagram": [
+            "kubejs:tk3/addons/simulated_contraption_diagram"
+        ],
+        "simulated:copper_handle": [
+            "kubejs:tk3/addons/simulated_copper_handle"
+        ],
+        "simulated:cyan_handle": [
+            "kubejs:tk3/addons/simulated_cyan_handle"
+        ],
+        "simulated:cyan_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_cyan_nameplate_from_other_nameplate"
+        ],
+        "simulated:directional_gearshift": [
+            "kubejs:tk3/addons/simulated_directional_gearshift"
+        ],
+        "simulated:directional_linked_receiver": [
+            "kubejs:tk3/addons/simulated_directional_linked_receiver"
+        ],
+        "simulated:docking_connector": [
+            "kubejs:tk3/addons/simulated_mechanical_crafting_docking_connector"
+        ],
+        "simulated:gimbal_sensor": [
+            "kubejs:tk3/addons/simulated_gimbal_sensor"
+        ],
+        "simulated:gray_handle": [
+            "kubejs:tk3/addons/simulated_gray_handle"
+        ],
+        "simulated:gray_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_gray_nameplate_from_other_nameplate"
+        ],
+        "simulated:green_handle": [
+            "kubejs:tk3/addons/simulated_green_handle"
+        ],
+        "simulated:green_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_green_nameplate_from_other_nameplate"
+        ],
+        "simulated:honey_glue": [
+            "kubejs:tk3/addons/simulated_filling_honey_glue"
+        ],
+        "simulated:iron_handle": [
+            "kubejs:tk3/addons/simulated_handle_undye"
+        ],
+        "simulated:laser_pointer": [
+            "kubejs:tk3/addons/simulated_laser_pointer"
+        ],
+        "simulated:laser_sensor": [
+            "kubejs:tk3/addons/simulated_laser_sensor"
+        ],
+        "simulated:light_blue_handle": [
+            "kubejs:tk3/addons/simulated_light_blue_handle"
+        ],
+        "simulated:light_blue_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_light_blue_nameplate_from_other_nameplate"
+        ],
+        "simulated:light_gray_handle": [
+            "kubejs:tk3/addons/simulated_light_gray_handle"
+        ],
+        "simulated:light_gray_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_light_gray_nameplate_from_other_nameplate"
+        ],
+        "simulated:lime_handle": [
+            "kubejs:tk3/addons/simulated_lime_handle"
+        ],
+        "simulated:lime_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_lime_nameplate_from_other_nameplate"
+        ],
+        "simulated:linked_typewriter": [
+            "kubejs:tk3/addons/simulated_mechanical_crafting_linked_typewriter"
+        ],
+        "simulated:magenta_handle": [
+            "kubejs:tk3/addons/simulated_magenta_handle"
+        ],
+        "simulated:magenta_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_magenta_nameplate_from_other_nameplate"
+        ],
+        "simulated:modulating_linked_receiver": [
+            "kubejs:tk3/addons/simulated_modulating_linked_receiver"
+        ],
+        "simulated:navigation_table": [
+            "kubejs:tk3/addons/simulated_navigation_table"
+        ],
+        "simulated:optical_sensor": [
+            "kubejs:tk3/addons/simulated_optical_sensor"
+        ],
+        "simulated:orange_handle": [
+            "kubejs:tk3/addons/simulated_orange_handle"
+        ],
+        "simulated:orange_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_orange_nameplate_from_other_nameplate"
+        ],
+        "simulated:physics_assembler": [
+            "kubejs:tk3/addons/simulated_physics_assembler"
+        ],
+        "simulated:pink_handle": [
+            "kubejs:tk3/addons/simulated_pink_handle"
+        ],
+        "simulated:pink_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_pink_nameplate_from_other_nameplate"
+        ],
+        "simulated:plunger_launcher": [
+            "kubejs:tk3/addons/simulated_mechanical_crafting_plunger_launcher"
+        ],
+        "simulated:purple_handle": [
+            "kubejs:tk3/addons/simulated_purple_handle"
+        ],
+        "simulated:purple_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_purple_nameplate_from_other_nameplate"
+        ],
+        "simulated:red_handle": [
+            "kubejs:tk3/addons/simulated_red_handle"
+        ],
+        "simulated:red_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_red_nameplate_from_other_nameplate"
+        ],
+        "simulated:red_portable_engine": [
+            "kubejs:tk3/addons/simulated_red_portable_engine"
+        ],
+        "simulated:redstone_accumulator": [
+            "kubejs:tk3/addons/simulated_redstone_accumulator"
+        ],
+        "simulated:redstone_inductor": [
+            "kubejs:tk3/addons/simulated_redstone_inductor"
+        ],
+        "simulated:redstone_magnet": [
+            "kubejs:tk3/addons/simulated_redstone_magnet"
+        ],
+        "simulated:rope_connector": [
+            "kubejs:tk3/addons/simulated_rope_connector"
+        ],
+        "simulated:rope_coupling": [
+            "kubejs:tk3/addons/simulated_rope_coupling"
+        ],
+        "simulated:rope_winch": [
+            "kubejs:tk3/addons/simulated_rope_winch"
+        ],
+        "simulated:spring": [
+            "kubejs:tk3/addons/simulated_spring"
+        ],
+        "simulated:steering_wheel": [
+            "kubejs:tk3/addons/simulated_steering_wheel"
+        ],
+        "simulated:swivel_bearing": [
+            "kubejs:tk3/addons/simulated_swivel_bearing"
+        ],
+        "simulated:throttle_lever": [
+            "kubejs:tk3/addons/simulated_throttle_lever"
+        ],
+        "simulated:torsion_spring": [
+            "kubejs:tk3/addons/simulated_torsion_spring"
+        ],
+        "simulated:velocity_sensor": [
+            "kubejs:tk3/addons/simulated_velocity_sensor"
+        ],
+        "simulated:white_handle": [
+            "kubejs:tk3/addons/simulated_white_handle"
+        ],
+        "simulated:white_nameplate": [
+            "kubejs:tk3/addons/simulated_white_nameplate"
+        ],
+        "simulated:white_symmetric_sail": [
+            "kubejs:tk3/addons/simulated_white_symmetric_sail"
+        ],
+        "simulated:yellow_handle": [
+            "kubejs:tk3/addons/simulated_yellow_handle"
+        ],
+        "simulated:yellow_nameplate": [
+            "kubejs:tk3/addons/simulated_crafting_yellow_nameplate_from_other_nameplate"
         ],
         "sophisticatedbackpacks:advanced_alchemy_upgrade": [
             "kubejs:tk3/storage/sophisticatedbackpacks_advanced_alchemy_upgrade"
@@ -666,440 +2663,439 @@ ServerEvents.recipes(event => {
         "sophisticatedbackpacks:advanced_void_upgrade": [
             "kubejs:tk3/storage/sophisticatedbackpacks_advanced_void_upgrade"
         ],
-        "sophisticatedbackpacks:stack_upgrade_tier_1": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_stack_upgrade_tier_1"
+        "sophisticatedbackpacks:alchemy_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_alchemy_upgrade"
         ],
-        "sophisticatedbackpacks:stack_upgrade_tier_2": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_stack_upgrade_tier_2"
+        "sophisticatedbackpacks:blasting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_blasting_upgrade"
         ],
-        "sophisticatedstorage:copper_chest": [
-            "kubejs:tk3/storage/sophisticatedstorage_copper_chest"
-        ],
-        "sophisticatedstorage:iron_chest": [
-            "kubejs:tk3/storage/sophisticatedstorage_iron_chest"
-        ],
-        "sophisticatedstorage:gold_chest": [
-            "kubejs:tk3/storage/sophisticatedstorage_gold_chest"
-        ],
-        "sophisticatedstorage:diamond_chest": [
-            "kubejs:tk3/storage/sophisticatedstorage_diamond_chest"
-        ],
-        "sophisticatedstorage:copper_barrel": [
-            "kubejs:tk3/storage/sophisticatedstorage_copper_barrel"
-        ],
-        "sophisticatedstorage:iron_barrel": [
-            "kubejs:tk3/storage/sophisticatedstorage_iron_barrel"
-        ],
-        "sophisticatedstorage:gold_barrel": [
-            "kubejs:tk3/storage/sophisticatedstorage_gold_barrel"
-        ],
-        "sophisticatedstorage:diamond_barrel": [
-            "kubejs:tk3/storage/sophisticatedstorage_diamond_barrel"
-        ],
-        "sophisticatedstorage:limited_copper_barrel_1": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_1"
-        ],
-        "sophisticatedstorage:limited_iron_barrel_1": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_1"
-        ],
-        "sophisticatedstorage:limited_gold_barrel_1": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_1"
-        ],
-        "sophisticatedstorage:limited_diamond_barrel_1": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_1"
-        ],
-        "sophisticatedstorage:limited_copper_barrel_2": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_2"
-        ],
-        "sophisticatedstorage:limited_iron_barrel_2": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_2"
-        ],
-        "sophisticatedstorage:limited_gold_barrel_2": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_2"
-        ],
-        "sophisticatedstorage:limited_diamond_barrel_2": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_2"
-        ],
-        "sophisticatedstorage:limited_copper_barrel_3": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_3"
-        ],
-        "sophisticatedstorage:limited_iron_barrel_3": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_3"
-        ],
-        "sophisticatedstorage:limited_gold_barrel_3": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_3"
-        ],
-        "sophisticatedstorage:limited_diamond_barrel_3": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_3"
-        ],
-        "sophisticatedstorage:limited_copper_barrel_4": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_4"
-        ],
-        "sophisticatedstorage:limited_iron_barrel_4": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_4"
-        ],
-        "sophisticatedstorage:limited_gold_barrel_4": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_4"
-        ],
-        "sophisticatedstorage:limited_diamond_barrel_4": [
-            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_4"
-        ],
-        "sophisticatedstorage:copper_shulker_box": [
-            "kubejs:tk3/storage/sophisticatedstorage_copper_shulker_box"
-        ],
-        "sophisticatedstorage:iron_shulker_box": [
-            "kubejs:tk3/storage/sophisticatedstorage_iron_shulker_box"
-        ],
-        "sophisticatedstorage:gold_shulker_box": [
-            "kubejs:tk3/storage/sophisticatedstorage_gold_shulker_box"
-        ],
-        "sophisticatedstorage:diamond_shulker_box": [
-            "kubejs:tk3/storage/sophisticatedstorage_diamond_shulker_box"
+        "sophisticatedbackpacks:compacting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_compacting_upgrade"
         ],
         "sophisticatedbackpacks:copper_backpack": [
             "kubejs:tk3/storage/sophisticatedbackpacks_copper_backpack"
         ],
-        "sophisticatedbackpacks:iron_backpack": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_iron_backpack"
-        ],
-        "sophisticatedbackpacks:gold_backpack": [
-            "kubejs:tk3/storage/sophisticatedbackpacks_gold_backpack"
+        "sophisticatedbackpacks:crafting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_crafting_upgrade"
         ],
         "sophisticatedbackpacks:diamond_backpack": [
             "kubejs:tk3/storage/sophisticatedbackpacks_diamond_backpack"
         ],
+        "sophisticatedbackpacks:feeding_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_feeding_upgrade"
+        ],
+        "sophisticatedbackpacks:filter_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_filter_upgrade"
+        ],
+        "sophisticatedbackpacks:gold_backpack": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_gold_backpack"
+        ],
+        "sophisticatedbackpacks:infinity_upgrade": [],
+        "sophisticatedbackpacks:iron_backpack": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_iron_backpack"
+        ],
+        "sophisticatedbackpacks:magnet_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_magnet_upgrade"
+        ],
+        "sophisticatedbackpacks:netherite_backpack": [
+            "kubejs:tk3/addons/sophisticatedbackpacks_netherite_backpack"
+        ],
+        "sophisticatedbackpacks:pickup_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_pickup_upgrade"
+        ],
+        "sophisticatedbackpacks:pump_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_pump_upgrade"
+        ],
+        "sophisticatedbackpacks:smelting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_smelting_upgrade"
+        ],
+        "sophisticatedbackpacks:smoking_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_smoking_upgrade"
+        ],
+        "sophisticatedbackpacks:stack_upgrade_omega_tier": [],
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_1_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_2_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_3_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_4_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_1": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_stack_upgrade_tier_1"
+        ],
+        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_2_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_3_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_4_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_2": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_stack_upgrade_tier_2"
+        ],
+        "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_3_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_4_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_3": [
+            "kubejs:tk3/addons/sophisticatedstorage_backpack_stack_upgrade_tier_3_from_storage_stack_upgrade_tier_4",
+            "kubejs:tk3/addons/sophisticatedbackpacks_stack_upgrade_tier_3"
+        ],
+        "sophisticatedbackpacks:stack_upgrade_tier_3_to_tier_4_conversion": [],
+        "sophisticatedbackpacks:stack_upgrade_tier_4": [
+            "kubejs:tk3/addons/sophisticatedstorage_backpack_stack_upgrade_tier_4_from_storage_stack_upgrade_tier_5",
+            "kubejs:tk3/addons/sophisticatedbackpacks_stack_upgrade_tier_4"
+        ],
+        "sophisticatedbackpacks:stonecutter_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_stonecutter_upgrade"
+        ],
+        "sophisticatedbackpacks:survival_infinity_upgrade": [],
+        "sophisticatedbackpacks:upgrade_base": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_upgrade_base"
+        ],
+        "sophisticatedbackpacks:void_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_void_upgrade"
+        ],
+        "sophisticatedbackpacks:xp_pump_upgrade": [
+            "kubejs:tk3/storage/sophisticatedbackpacks_xp_pump_upgrade"
+        ],
+        "sophisticatedstorage:advanced_alchemy_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_alchemy_upgrade"
+        ],
+        "sophisticatedstorage:advanced_compacting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_compacting_upgrade"
+        ],
+        "sophisticatedstorage:advanced_feeding_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_feeding_upgrade"
+        ],
+        "sophisticatedstorage:advanced_filter_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_filter_upgrade"
+        ],
+        "sophisticatedstorage:advanced_hopper_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_hopper_upgrade"
+        ],
+        "sophisticatedstorage:advanced_jukebox_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_jukebox_upgrade"
+        ],
+        "sophisticatedstorage:advanced_magnet_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_magnet_upgrade"
+        ],
+        "sophisticatedstorage:advanced_pickup_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_pickup_upgrade"
+        ],
+        "sophisticatedstorage:advanced_pump_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_pump_upgrade"
+        ],
+        "sophisticatedstorage:advanced_void_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_advanced_void_upgrade"
+        ],
+        "sophisticatedstorage:alchemy_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_alchemy_upgrade"
+        ],
         "sophisticatedstorage:basic_to_copper_tier_upgrade": [
             "kubejs:tk3/storage/sophisticatedstorage_basic_to_copper_tier_upgrade"
         ],
-        "sophisticatedstorage:copper_to_iron_tier_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_copper_to_iron_tier_upgrade"
+        "sophisticatedstorage:basic_to_diamond_tier_upgrade": [],
+        "sophisticatedstorage:basic_to_gold_tier_upgrade": [],
+        "sophisticatedstorage:basic_to_iron_tier_upgrade": [],
+        "sophisticatedstorage:basic_to_netherite_tier_upgrade": [
+            "kubejs:tk3/addons/sophisticatedstorage_basic_to_netherite_tier_upgrade"
         ],
-        "sophisticatedstorage:iron_to_gold_tier_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_iron_to_gold_tier_upgrade"
+        "sophisticatedstorage:blasting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_blasting_upgrade"
         ],
-        "sophisticatedstorage:gold_to_diamond_tier_upgrade": [
-            "kubejs:tk3/storage/sophisticatedstorage_gold_to_diamond_tier_upgrade"
+        "sophisticatedstorage:compacting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_compacting_upgrade"
         ],
         "sophisticatedstorage:controller": [
             "kubejs:tk3/storage/sophisticatedstorage_controller"
         ],
-        "sophisticatedstorage:storage_link": [
-            "kubejs:tk3/storage/sophisticatedstorage_storage_link"
+        "sophisticatedstorage:copper_barrel": [
+            "kubejs:tk3/storage/sophisticatedstorage_copper_barrel"
+        ],
+        "sophisticatedstorage:copper_chest": [
+            "kubejs:tk3/storage/sophisticatedstorage_copper_chest"
+        ],
+        "sophisticatedstorage:copper_shulker_box": [
+            "kubejs:tk3/storage/sophisticatedstorage_copper_shulker_box"
+        ],
+        "sophisticatedstorage:copper_to_diamond_tier_upgrade": [],
+        "sophisticatedstorage:copper_to_gold_tier_upgrade": [],
+        "sophisticatedstorage:copper_to_iron_tier_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_copper_to_iron_tier_upgrade"
+        ],
+        "sophisticatedstorage:copper_to_netherite_tier_upgrade": [
+            "kubejs:tk3/addons/sophisticatedstorage_copper_to_netherite_tier_upgrade"
+        ],
+        "sophisticatedstorage:crafting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_crafting_upgrade"
+        ],
+        "sophisticatedstorage:diamond_barrel": [
+            "kubejs:tk3/storage/sophisticatedstorage_diamond_barrel"
+        ],
+        "sophisticatedstorage:diamond_chest": [
+            "kubejs:tk3/storage/sophisticatedstorage_diamond_chest"
+        ],
+        "sophisticatedstorage:diamond_shulker_box": [
+            "kubejs:tk3/storage/sophisticatedstorage_diamond_shulker_box"
+        ],
+        "sophisticatedstorage:diamond_to_netherite_tier_upgrade": [
+            "kubejs:tk3/addons/sophisticatedstorage_diamond_to_netherite_tier_upgrade"
+        ],
+        "sophisticatedstorage:feeding_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_feeding_upgrade"
+        ],
+        "sophisticatedstorage:filter_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_filter_upgrade"
+        ],
+        "sophisticatedstorage:gold_barrel": [
+            "kubejs:tk3/storage/sophisticatedstorage_gold_barrel"
+        ],
+        "sophisticatedstorage:gold_chest": [
+            "kubejs:tk3/storage/sophisticatedstorage_gold_chest"
+        ],
+        "sophisticatedstorage:gold_shulker_box": [
+            "kubejs:tk3/storage/sophisticatedstorage_gold_shulker_box"
+        ],
+        "sophisticatedstorage:gold_to_diamond_tier_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_gold_to_diamond_tier_upgrade"
+        ],
+        "sophisticatedstorage:gold_to_netherite_tier_upgrade": [
+            "kubejs:tk3/addons/sophisticatedstorage_gold_to_netherite_tier_upgrade"
+        ],
+        "sophisticatedstorage:infinity_upgrade": [],
+        "sophisticatedstorage:iron_barrel": [
+            "kubejs:tk3/storage/sophisticatedstorage_iron_barrel"
+        ],
+        "sophisticatedstorage:iron_chest": [
+            "kubejs:tk3/storage/sophisticatedstorage_iron_chest"
+        ],
+        "sophisticatedstorage:iron_shulker_box": [
+            "kubejs:tk3/storage/sophisticatedstorage_iron_shulker_box"
+        ],
+        "sophisticatedstorage:iron_to_diamond_tier_upgrade": [],
+        "sophisticatedstorage:iron_to_gold_tier_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_iron_to_gold_tier_upgrade"
+        ],
+        "sophisticatedstorage:iron_to_netherite_tier_upgrade": [
+            "kubejs:tk3/addons/sophisticatedstorage_iron_to_netherite_tier_upgrade"
+        ],
+        "sophisticatedstorage:limited_copper_barrel_1": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_1"
+        ],
+        "sophisticatedstorage:limited_copper_barrel_2": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_2"
+        ],
+        "sophisticatedstorage:limited_copper_barrel_3": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_3"
+        ],
+        "sophisticatedstorage:limited_copper_barrel_4": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_4"
+        ],
+        "sophisticatedstorage:limited_diamond_barrel_1": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_1"
+        ],
+        "sophisticatedstorage:limited_diamond_barrel_2": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_2"
+        ],
+        "sophisticatedstorage:limited_diamond_barrel_3": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_3"
+        ],
+        "sophisticatedstorage:limited_diamond_barrel_4": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_4"
+        ],
+        "sophisticatedstorage:limited_gold_barrel_1": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_1"
+        ],
+        "sophisticatedstorage:limited_gold_barrel_2": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_2"
+        ],
+        "sophisticatedstorage:limited_gold_barrel_3": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_3"
+        ],
+        "sophisticatedstorage:limited_gold_barrel_4": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_4"
+        ],
+        "sophisticatedstorage:limited_iron_barrel_1": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_1"
+        ],
+        "sophisticatedstorage:limited_iron_barrel_2": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_2"
+        ],
+        "sophisticatedstorage:limited_iron_barrel_3": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_3"
+        ],
+        "sophisticatedstorage:limited_iron_barrel_4": [
+            "kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_4"
+        ],
+        "sophisticatedstorage:limited_netherite_barrel_1": [
+            "kubejs:tk3/addons/sophisticatedstorage_limited_netherite_barrel_1"
+        ],
+        "sophisticatedstorage:limited_netherite_barrel_2": [
+            "kubejs:tk3/addons/sophisticatedstorage_limited_netherite_barrel_2"
+        ],
+        "sophisticatedstorage:limited_netherite_barrel_3": [
+            "kubejs:tk3/addons/sophisticatedstorage_limited_netherite_barrel_3"
+        ],
+        "sophisticatedstorage:limited_netherite_barrel_4": [
+            "kubejs:tk3/addons/sophisticatedstorage_limited_netherite_barrel_4"
+        ],
+        "sophisticatedstorage:magnet_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_magnet_upgrade"
+        ],
+        "sophisticatedstorage:netherite_barrel": [
+            "kubejs:tk3/addons/sophisticatedstorage_netherite_barrel"
+        ],
+        "sophisticatedstorage:netherite_chest": [
+            "kubejs:tk3/addons/sophisticatedstorage_netherite_chest",
+            "kubejs:tk3/addons/sophisticatedstorage_double_netherite_chest"
+        ],
+        "sophisticatedstorage:netherite_shulker_box": [
+            "kubejs:tk3/addons/sophisticatedstorage_netherite_shulker_from_netherite_chest",
+            "kubejs:tk3/addons/sophisticatedstorage_netherite_shulker_box"
+        ],
+        "sophisticatedstorage:pickup_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_pickup_upgrade"
+        ],
+        "sophisticatedstorage:pump_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_pump_upgrade"
+        ],
+        "sophisticatedstorage:smelting_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_smelting_upgrade"
+        ],
+        "sophisticatedstorage:smoking_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_smoking_upgrade"
+        ],
+        "sophisticatedstorage:stack_upgrade_omega_tier": [],
+        "sophisticatedstorage:stack_upgrade_tier_1": [
+            "kubejs:tk3/storage/sophisticatedstorage_stack_upgrade_tier_1"
+        ],
+        "sophisticatedstorage:stack_upgrade_tier_1_plus": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_2_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_3_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_4_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_5_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_1_plus_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_2_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_3_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_4_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_1_to_tier_5_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_2": [
+            "kubejs:tk3/storage/sophisticatedstorage_stack_upgrade_tier_2"
+        ],
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_3_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_4_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_2_to_tier_5_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_3": [
+            "kubejs:tk3/addons/sophisticatedstorage_stack_upgrade_tier_3",
+            "kubejs:tk3/addons/sophisticatedstorage_storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2"
+        ],
+        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_4_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_3_to_tier_5_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_4": [
+            "kubejs:tk3/addons/sophisticatedstorage_storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3",
+            "kubejs:tk3/addons/sophisticatedstorage_stack_upgrade_tier_4"
+        ],
+        "sophisticatedstorage:stack_upgrade_tier_4_to_tier_5_conversion": [],
+        "sophisticatedstorage:stack_upgrade_tier_5": [
+            "kubejs:tk3/addons/sophisticatedstorage_stack_upgrade_tier_5",
+            "kubejs:tk3/addons/sophisticatedstorage_storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4"
+        ],
+        "sophisticatedstorage:stonecutter_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_stonecutter_upgrade"
         ],
         "sophisticatedstorage:storage_input": [
             "kubejs:tk3/storage/sophisticatedstorage_storage_input"
         ],
-        "sophisticatedstorage:storage_output": [
-            "kubejs:tk3/storage/sophisticatedstorage_storage_output"
-        ],
         "sophisticatedstorage:storage_io": [
             "kubejs:tk3/storage/sophisticatedstorage_storage_io"
         ],
-        "ae2:charger": [
-            "kubejs:tk3/late_layers/ae2_charger"
+        "sophisticatedstorage:storage_link": [
+            "kubejs:tk3/storage/sophisticatedstorage_storage_link"
         ],
-        "ae2:inscriber": [
-            "kubejs:tk3/late_layers/ae2_inscriber"
+        "sophisticatedstorage:storage_output": [
+            "kubejs:tk3/storage/sophisticatedstorage_storage_output"
         ],
-        "ae2:charged_certus_quartz_crystal": [
-            "kubejs:tk3/late_layers/ae2_charged_certus_quartz_crystal"
+        "sophisticatedstorage:survival_infinity_upgrade": [],
+        "sophisticatedstorage:upgrade_base": [
+            "kubejs:tk3/storage/sophisticatedstorage_upgrade_base"
         ],
-        "ae2:printed_silicon": [
-            "kubejs:tk3/late_layers/ae2_printed_silicon"
+        "sophisticatedstorage:void_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_void_upgrade"
         ],
-        "ae2:printed_logic_processor": [
-            "kubejs:tk3/late_layers/ae2_printed_logic_processor"
+        "sophisticatedstorage:xp_pump_upgrade": [
+            "kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade"
         ],
-        "ae2:logic_processor": [
-            "kubejs:tk3/late_layers/ae2_logic_processor"
+        "witchery:altar": [
+            "kubejs:tk3/addons/witchery_altar"
         ],
-        "ae2:printed_calculation_processor": [
-            "kubejs:tk3/late_layers/ae2_printed_calculation_processor"
+        "witchery:cauldron": [
+            "kubejs:tk3/addons/witchery_cauldron"
         ],
-        "ae2:calculation_processor": [
-            "kubejs:tk3/late_layers/ae2_calculation_processor"
+        "witchery:distillery": [
+            "kubejs:tk3/addons/witchery_distillery"
         ],
-        "ae2:printed_engineering_processor": [
-            "kubejs:tk3/late_layers/ae2_printed_engineering_processor"
+        "witchery:iron_witches_oven": [
+            "kubejs:tk3/addons/witchery_iron_witches_oven"
         ],
-        "ae2:engineering_processor": [
-            "kubejs:tk3/late_layers/ae2_engineering_processor"
+        "witchery:spinning_wheel": [
+            "kubejs:tk3/addons/witchery_spinning_wheel"
         ],
-        "create_wizardry:arcane_casing": [
-            "kubejs:tk3/frames/arcane_casing"
+        "iceandfire:dragonforge_fire_core_disabled": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_fire_core_disabled"
         ],
-        "create:andesite_alloy_block": [
-            "kubejs:tk3/create/andesite_alloy_block_packing"
+        "iceandfire:dragonforge_fire_input": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_fire_input"
         ],
-        "create:redstone_contact": [
-            "kubejs:tk3/create/redstone_contact"
+        "iceandfire:dragonforge_fire_brick": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_fire_brick"
         ],
-        "create:goggles": [
-            "kubejs:tk3/create/goggles"
+        "iceandfire:dragonforge_ice_core_disabled": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_ice_core_disabled"
         ],
-        "create:peculiar_bell": [
-            "kubejs:tk3/create/crafting_curiosities_peculiar_bell"
+        "iceandfire:dragonforge_ice_input": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_ice_input"
         ],
-        "create:whisk": [
-            "kubejs:tk3/create/whisk"
+        "iceandfire:dragonforge_ice_brick": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_ice_brick"
         ],
-        "create:rose_quartz": [
-            "kubejs:tk3/create/rose_quartz",
-            "kubejs:tk3/create/rose_quartz_bulk"
+        "iceandfire:dragonforge_lightning_core_disabled": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_core_disabled"
         ],
-        "create:zinc_ingot": [
-            "kubejs:tk3/create/zinc_blasting_crushed",
-            "kubejs:tk3/create/zinc_blasting_ore",
-            "kubejs:tk3/create/zinc_blasting_raw_ore",
-            "kubejs:tk3/create/zinc_ingot_from_nuggets",
-            "kubejs:tk3/create/zinc_ingot_unpacking",
-            "kubejs:tk3/create/zinc_smelting_crushed",
-            "kubejs:tk3/create/zinc_smelting_ore",
-            "kubejs:tk3/create/zinc_smelting_raw_ore"
+        "iceandfire:dragonforge_lightning_input": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_input"
         ],
-        "create:schedule": [
-            "kubejs:tk3/create/schedule",
-            "kubejs:tk3/create/schedule_clear"
+        "iceandfire:dragonforge_lightning_brick": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick"
         ],
-        "create:sail_frame": [
-            "kubejs:tk3/create/sail_frame"
+        "alexscaves:quarry": [
+            "kubejs:tk3/addons/alexscaves_quarry"
         ],
-        "create:schematic_table": [
-            "kubejs:tk3/create/crafting_schematics_schematic_table"
+        "alexscaves:drain": [
+            "kubejs:tk3/addons/alexscaves_drain"
         ],
-        "create:brass_sheet": [
-            "kubejs:tk3/create/brass_sheet"
+        "alexscaves:nuclear_furnace_component": [
+            "kubejs:tk3/addons/alexscaves_nuclear_furnace_component"
         ],
-        "create:linked_controller": [
-            "kubejs:tk3/create/linked_controller"
+        "alexscaves:nuclear_siren": [
+            "kubejs:tk3/addons/alexscaves_nuclear_siren"
         ],
-        "create:dough": [
-            "kubejs:tk3/create/crafting_appliances_dough",
-            "kubejs:tk3/create/dough_bulk"
+        "alexscaves:conversion_crucible": [
+            "kubejs:tk3/addons/alexscaves_conversion_crucible"
         ],
-        "create:clockwork_bearing": [
-            "kubejs:tk3/create/clockwork_bearing"
-        ],
-        "create:metal_girder": [
-            "kubejs:tk3/create/metal_girder"
-        ],
-        "create:copper_diving_boots": [
-            "kubejs:tk3/create/copper_diving_boots"
-        ],
-        "create:brass_nugget": [
-            "kubejs:tk3/create/brass_nugget_from_ingot"
-        ],
-        "create:cardboard": [
-            "kubejs:tk3/create/cardboard",
-            "kubejs:tk3/create/cardboard_unpacking"
-        ],
-        "create:super_glue": [
-            "kubejs:tk3/create/super_glue"
-        ],
-        "create:package_filter": [
-            "kubejs:tk3/create/package_filter",
-            "kubejs:tk3/create/package_filter_clear"
-        ],
-        "create:zinc_nugget": [
-            "kubejs:tk3/create/zinc_nugget_from_ingot",
-            "kubejs:tk3/geology/milling_asurine",
-            "kubejs:tk3/geology/wash_zinc"
-        ],
-        "create:track": [
-            "kubejs:tk3/create/track"
-        ],
-        "create:wooden_bracket": [
-            "kubejs:tk3/create/wooden_bracket"
-        ],
-        "create:electron_tube": [
-            "kubejs:tk3/create/electron_tube",
-            "kubejs:tk3/create/electron_tube_automated"
-        ],
-        "create:polished_rose_quartz": [
-            "kubejs:tk3/create/polished_rose_quartz"
-        ],
-        "create:rose_quartz_lamp": [
-            "kubejs:tk3/create/rose_quartz_lamp"
-        ],
-        "create:controller_rail": [
-            "kubejs:tk3/create/controller_rail"
-        ],
-        "create:brass_casing": [
-            "kubejs:tk3/create/brass_casing_automated",
-            "kubejs:tk3/create/brass_casing_manual"
-        ],
-        "create:crafter_slot_cover": [
-            "kubejs:tk3/create/crafter_slot_cover"
-        ],
-        "create:white_sail": [
-            "kubejs:tk3/create/sail_from_frame",
-            "kubejs:tk3/create/white_sail"
-        ],
-        "create:placard": [
-            "kubejs:tk3/create/crafting_kinetics_placard"
-        ],
-        "create:minecart_coupling": [
-            "kubejs:tk3/create/minecart_coupling"
-        ],
-        "create:copper_diving_helmet": [
-            "kubejs:tk3/create/copper_diving_helmet"
-        ],
-        "create:powered_latch": [
-            "kubejs:tk3/create/powered_latch"
-        ],
-        "create:copper_nugget": [
-            "kubejs:tk3/create/copper_nugget_from_ingot",
-            "kubejs:tk3/geology/milling_veridium",
-            "kubejs:tk3/geology/wash_copper"
-        ],
-        "create:cuckoo_clock": [
-            "kubejs:tk3/create/crafting_kinetics_cuckoo_clock"
-        ],
-        "create:cardboard_block": [
-            "kubejs:tk3/create/cardboard_block"
-        ],
-        "create:turntable": [
-            "kubejs:tk3/create/turntable"
-        ],
-        "create:crafting_blueprint": [
-            "kubejs:tk3/create/crafting_appliances_crafting_blueprint"
-        ],
-        "create:zinc_block": [
-            "kubejs:tk3/create/zinc_block_packing"
-        ],
-        "create:redstone_requester": [
-            "kubejs:tk3/create/redstone_requester",
-            "kubejs:tk3/create/redstone_requester_clear"
-        ],
-        "create:golden_sheet": [
-            "kubejs:tk3/create/golden_sheet"
-        ],
-        "create:item_vault": [
-            "kubejs:tk3/create/item_vault"
-        ],
-        "create:nozzle": [
-            "kubejs:tk3/create/nozzle"
-        ],
-        "create:stressometer": [
-            "kubejs:tk3/create/stressometer_conversion"
-        ],
-        "minecraft:copper_ingot": [
-            "kubejs:tk3/create/copper_ingot_from_nuggets"
-        ],
-        "create:secondary_linear_chassis": [
-            "kubejs:tk3/create/secondary_linear_chassis_conversion"
-        ],
-        "create:brass_hand": [
-            "kubejs:tk3/create/brass_hand"
-        ],
-        "create:powered_toggle_latch": [
-            "kubejs:tk3/create/powered_toggle_latch"
-        ],
-        "create:item_hatch": [
-            "kubejs:tk3/create/item_hatch"
-        ],
-        "create:nixie_tube": [
-            "kubejs:tk3/create/nixie_tube"
-        ],
-        "create:schematic_and_quill": [
-            "kubejs:tk3/create/crafting_schematics_schematic_and_quill"
-        ],
-        "create:sticker": [
-            "kubejs:tk3/create/sticker"
-        ],
-        "create:transmitter": [
-            "kubejs:tk3/create/transmitter"
-        ],
-        "create:hand_crank": [
-            "kubejs:tk3/create/hand_crank"
-        ],
-        "create:mechanical_roller": [
-            "kubejs:tk3/create/mechanical_roller"
-        ],
-        "create:iron_sheet": [
-            "kubejs:tk3/create/iron_sheet"
-        ],
-        "create:red_sand_paper": [
-            "kubejs:tk3/create/red_sand_paper"
-        ],
-        "create:andesite_casing": [
-            "kubejs:tk3/create/andesite_casing_automated",
-            "kubejs:tk3/create/andesite_casing_manual"
-        ],
-        "create:pulse_timer": [
-            "kubejs:tk3/create/pulse_timer"
-        ],
-        "create:attribute_filter": [
-            "kubejs:tk3/create/attribute_filter",
-            "kubejs:tk3/create/attribute_filter_clear"
-        ],
-        "create:schematicannon": [
-            "kubejs:tk3/create/schematicannon"
-        ],
-        "create:flywheel": [
-            "kubejs:tk3/create/flywheel"
-        ],
-        "create:filter": [
-            "kubejs:tk3/create/filter",
-            "kubejs:tk3/create/filter_clear"
-        ],
-        "create:empty_schematic": [
-            "kubejs:tk3/create/crafting_schematics_empty_schematic"
-        ],
-        "create:metal_bracket": [
-            "kubejs:tk3/create/metal_bracket"
-        ],
-        "create:desk_bell": [
-            "kubejs:tk3/create/crafting_logistics_desk_bell"
-        ],
-        "create:brass_block": [
-            "kubejs:tk3/create/brass_block_packing"
-        ],
-        "create:copper_casing": [
-            "kubejs:tk3/create/copper_casing_automated",
-            "kubejs:tk3/create/copper_casing_manual"
-        ],
-        "create:gantry_shaft": [
-            "kubejs:tk3/create/gantry_shaft"
-        ],
-        "create:sand_paper": [
-            "kubejs:tk3/create/sand_paper"
-        ],
-        "create:piston_extension_pole": [
-            "kubejs:tk3/create/piston_extension_pole"
-        ],
-        "create:chain_conveyor": [
-            "kubejs:tk3/create/chain_conveyor"
-        ],
-        "create:wrench": [
-            "kubejs:tk3/create/wrench"
-        ],
-        "create:pulse_extender": [
-            "kubejs:tk3/create/pulse_extender"
-        ],
-        "create:copper_sheet": [
-            "kubejs:tk3/create/copper_sheet"
-        ],
-        "create:sticky_mechanical_piston": [
-            "kubejs:tk3/create/sticky_mechanical_piston"
-        ],
-        "create:empty_blaze_burner": [
-            "kubejs:tk3/create/empty_blaze_burner"
-        ],
-        "create:pulse_repeater": [
-            "kubejs:tk3/create/pulse_repeater"
-        ],
-        "create:clipboard": [
-            "kubejs:tk3/create/clipboard_clear",
-            "kubejs:tk3/create/crafting_appliances_clipboard"
-        ],
-        "create:factory_gauge": [
-            "kubejs:tk3/create/factory_gauge",
-            "kubejs:tk3/create/factory_gauge_clear"
-        ],
-        "create:tree_fertilizer": [
-            "kubejs:tk3/create/tree_fertilizer"
-        ]
+        "ae2:debug_phantom_node": [],
+        "create:creative_blaze_cake": [],
+        "create:creative_fluid_tank": [],
+        "ae2:creative_storage_cell": [],
+        "ae2:debug_replicator_card": [],
+        "create:creative_motor": [],
+        "ae2:debug_meteorite_placer": [],
+        "mekanism:creative_chemical_tank": [],
+        "ae2:debug_eraser": [],
+        "create:creative_crate": [],
+        "create_enchantment_industry:creative_bookshelf": [],
+        "ae2:debug_item_gen": [],
+        "mekanism:creative_fluid_tank": [],
+        "mekanism:creative_bin": [],
+        "ae2:debug_card": [],
+        "mekanism:creative_energy_cube": [],
+        "ae2:creative_energy_cell": [],
+        "ae2:debug_cube_gen": [],
+        "ae2:debug_energy_gen": [],
+        "iceandfire:dragonforge_fire_core": [],
+        "iceandfire:dragonforge_ice_core": [],
+        "iceandfire:dragonforge_lightning_core": []
     };
     const processing = [{
             "type": "create:milling",
@@ -5270,6 +7266,12 @@ ServerEvents.recipes(event => {
             "input": "mekanism:raw_lead",
             "ids": [
                 "kubejs:tk3/late_layers/mekanism_dust_lead"
+            ]
+        }, {
+            "type": "create:mixing",
+            "input": "aeronautics:end_stone_powder",
+            "ids": [
+                "kubejs:tk3/addons/levitite_blend"
             ]
         }];
     const checks = Object.keys(allowed)

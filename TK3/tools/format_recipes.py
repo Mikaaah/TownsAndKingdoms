@@ -91,7 +91,7 @@ def section(row):
     kind, system = row['kind'], row['system']
     output = re.sub(r'^\d+x ', '', row['output'])
     mod = output.split(':')[0]
-    if system == 'create':
+    if system in ('create', 'campaign', 'addons', 'ae_network', 'industrial'):
         purpose = row['section']
     elif system == 'compat':
         purpose = ('Timber processing' if kind == 'cutting' else 'Vanilla compatibility') + ' / ' + mod

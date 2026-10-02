@@ -48,3 +48,7 @@ Create Aeronautics is also selected for the engineering and travel layer, with i
 | **Shulker Box Tooltip** | Inspect container contents from a tooltip |
 
 **[BACK TO FEATURES →](../features/)** · [Explore the world](../exploration/)
+
+## Follow the campaign
+
+**[ALL MODS, ADDONS & THEIR TIERS →](../tier-map/)** · **[TEN CHAPTER PATHS →](../../progression/#paths)**

@@ -1,0 +1,995 @@
+{
+  "source": "docs/MODLIST.md",
+  "entries": [
+    {
+      "name": "FTB Quests",
+      "group": "Progression",
+      "tier": "I–X",
+      "role": "159 quests across ten chapters; per-player milestone tools and detected boss trials",
+      "status": "Selected"
+    },
+    {
+      "name": "AStages",
+      "group": "Progression",
+      "tier": "I–X",
+      "role": "Machine access and milestone sync; End entry after VIII",
+      "status": "Selected"
+    },
+    {
+      "name": "End Remastered",
+      "group": "Progression",
+      "tier": "VI–IX",
+      "role": "Four retained boss-eye imprints; native unique-eye puzzle and IX End entry",
+      "status": "Selected"
+    },
+    {
+      "name": "Passive Skill Tree (NeoForge)",
+      "group": "Character / RPG",
+      "tier": "I–X",
+      "role": "Native combat or character framework; equipment exploration and optional duel branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Epic Fight",
+      "group": "Combat",
+      "tier": "I–X",
+      "role": "Native combat or character framework; equipment exploration and optional duel branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Weapons of Miracles",
+      "group": "Combat",
+      "tier": "I–X",
+      "role": "Native combat or character framework; equipment exploration and optional duel branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Simply Swords",
+      "group": "Combat",
+      "tier": "I–X",
+      "role": "Native combat or character framework; equipment exploration and optional duel branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Apotheosis",
+      "group": "Gear & Loot",
+      "tier": "VI–VIII",
+      "role": "Network-tier salvage/reforge/gem tables; expedition augmentation; native affixes",
+      "status": "Selected"
+    },
+    {
+      "name": "Ars Nouveau",
+      "group": "Magic",
+      "tier": "IV–X",
+      "role": "Source / apparatus / essences and charms; finishing sword and final assembly",
+      "status": "Selected"
+    },
+    {
+      "name": "Iron's Spells 'n Spellbooks",
+      "group": "Magic",
+      "tier": "IV–IX",
+      "role": "Arcane Anvil / cauldron / runes / mana routes; combat spellbooks",
+      "status": "Selected"
+    },
+    {
+      "name": "Just Another Witchery Remake",
+      "group": "Magic",
+      "tier": "IV–V",
+      "role": "Oven / altar / cauldron / spinning wheel IV; distillery V; native rituals",
+      "status": "Selected"
+    },
+    {
+      "name": "Create",
+      "group": "Engineering & Automation",
+      "tier": "I–X",
+      "role": "Native selected system, connected to its parent workshop below",
+      "status": "Selected"
+    },
+    {
+      "name": "Create Aeronautics",
+      "group": "Engineering & Automation",
+      "tier": "III, VII, IX",
+      "role": "Stationary propellers III; powered ship hardware VII; End-stone lifting fluid IX",
+      "status": "Selected"
+    },
+    {
+      "name": "Mekanism",
+      "group": "Engineering & Automation",
+      "tier": "V–X",
+      "role": "Steel/FE V, basic factories VI, chemistry VII, containment VIII, SPS/QIO IX, powered equipment X",
+      "status": "Selected"
+    },
+    {
+      "name": "Mekanism Generators",
+      "group": "Engineering & Automation",
+      "tier": "V–IX",
+      "role": "Heat V, renewables VI, gas VII, fission/turbine VIII, fusion IX",
+      "status": "Selected"
+    },
+    {
+      "name": "Applied Energistics 2 (AE2)",
+      "group": "Engineering & Automation",
+      "tier": "VI–X",
+      "role": "1k → 4k → 16k → 64k → 256k; processing patterns VI, wireless VII, spatial VIII, quantum IX",
+      "status": "Selected"
+    },
+    {
+      "name": "Create: Enchantment Industry",
+      "group": "Engineering & Automation",
+      "tier": "III–VIII",
+      "role": "Grindstone III; XP utilities IV; infuser VI; forger/gem cutter VII; affix augmentor VIII",
+      "status": "Selected"
+    },
+    {
+      "name": "Cataclysm",
+      "group": "Bosses & Mobs",
+      "tier": "I–IX",
+      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Alex's Mobs (1.21.1 NeoForge community port)",
+      "group": "Bosses & Mobs",
+      "tier": "I–IX",
+      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Alex's Caves (1.21.1 NeoForge community port)",
+      "group": "Bosses & Mobs",
+      "tier": "I–IX",
+      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Ice and Fire: Community Edition",
+      "group": "Bosses & Mobs",
+      "tier": "I–IX",
+      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Bosses' Rise - Epic Souls-like Boss Fights",
+      "group": "Bosses & Mobs",
+      "tier": "I–IX",
+      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "status": "Selected"
+    },
+    {
+      "name": "Mowzie's Mobs",
+      "group": "Bosses & Mobs",
+      "tier": "I–IX",
+      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "status": "Selected"
+    },
+    {
+      "name": "FreeTerraForged — terrain / macro-landform generator",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Alex's Caves — cave biomes and underground exploration",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Biomes O' Plenty",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Oh The Biomes We've Gone (BWG)",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Upgrade Aquatic",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Atmospheric",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Autumnity",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Environmental",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "[Let's Do] BloomingNature",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Integrated Dungeons & Structures (IDAS)",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Integrated Dungeons Arise (IDA)",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Integrated Cataclysm",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Integrated Stronghold",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "YUNG's Better Dungeons",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "Dungeons & Taverns",
+      "group": "Exploration & World",
+      "tier": "I–X",
+      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "status": "Selected"
+    },
+    {
+      "name": "The Twilight Forest",
+      "group": "Dimensions",
+      "tier": "VI / IX",
+      "role": "Twilight trial VI; End route IX with native progression",
+      "status": "Selected"
+    },
+    {
+      "name": "BetterEnd: New Dawn — primary End biome/content layer, including the main island and End-city ecosystem",
+      "group": "Dimensions",
+      "tier": "VI / IX",
+      "role": "Twilight trial VI; End route IX with native progression",
+      "status": "Selected"
+    },
+    {
+      "name": "Nullscape — terrain-layer candidate",
+      "group": "Dimensions",
+      "tier": "Pending",
+      "role": "Listed test candidate; no new recipes or stages activated",
+      "status": "Candidate"
+    },
+    {
+      "name": "YUNG's Better End Island — **rejected for T&K3**; unnecessary overlap with BetterEnd",
+      "group": "Dimensions",
+      "tier": "Excluded",
+      "role": "Outside the current selected baseline",
+      "status": "Rejected"
+    },
+    {
+      "name": "End's Phantasm — **rejected for T&K3**",
+      "group": "Dimensions",
+      "tier": "Excluded",
+      "role": "Outside the current selected baseline",
+      "status": "Rejected"
+    },
+    {
+      "name": "Amplified Nether — terrain layer",
+      "group": "Dimensions",
+      "tier": "VI / IX",
+      "role": "Twilight trial VI; End route IX with native progression",
+      "status": "Selected"
+    },
+    {
+      "name": "BetterNether: New Dawn — primary Nether biome/content layer",
+      "group": "Dimensions",
+      "tier": "VI / IX",
+      "role": "Twilight trial VI; End route IX with native progression",
+      "status": "Selected"
+    },
+    {
+      "name": "YUNG's Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility",
+      "group": "Dimensions",
+      "tier": "VI / IX",
+      "role": "Twilight trial VI; End route IX with native progression",
+      "status": "Selected"
+    },
+    {
+      "name": "Gardens of the Dead — **rejected for T&K3**",
+      "group": "Dimensions",
+      "tier": "Excluded",
+      "role": "Outside the current selected baseline",
+      "status": "Rejected"
+    },
+    {
+      "name": "MineColonies",
+      "group": "Towns & Kingdoms",
+      "tier": "I–X",
+      "role": "Native settlement buildings/research; stock-link integration III and final supply line X",
+      "status": "Selected"
+    },
+    {
+      "name": "Waystones",
+      "group": "Travel",
+      "tier": "I–X",
+      "role": "Native discovered/crafted travel; selected Sable bridge applies to ships VII",
+      "status": "Selected"
+    },
+    {
+      "name": "FTB Chunks",
+      "group": "Multiplayer / Claims",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "FTB Teams",
+      "group": "Multiplayer / Claims",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "KubeJS",
+      "group": "Integration / Scripting",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "ProbeJS",
+      "group": "Integration / Scripting",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "LootJS",
+      "group": "Integration / Scripting",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "Sodium",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Lithium",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "ModernFix",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "FerriteCore",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "ImmediatelyFast",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Entity Culling",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "BadOptimizations",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Dynamic FPS",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "AllTheLeaks",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Clumps",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "FastSuite",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "spark",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Chunky",
+      "group": "Optimization — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "JEI",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Jade",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Jade Addons",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "AppleSkin",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Mouse Tweaks",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Controlling",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Shulker Box Tooltip",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Lootr",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Iris",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "BetterF3",
+      "group": "Quality of Life — temporary definitive baseline",
+      "tier": "I–X",
+      "role": "Native performance / interface support; no progression recipe",
+      "status": "Selected"
+    },
+    {
+      "name": "Create Crafts & Additions - bridge Create rotational power and FE-based technology",
+      "group": "Selected Create / technology integrations",
+      "tier": "II, V–VII",
+      "role": "Rolling mill/capacitor II; FE bridge V; network components VI; portable power VII",
+      "status": "Selected"
+    },
+    {
+      "name": "Ars Creo - Create + Ars Nouveau",
+      "group": "Selected Create / technology integrations",
+      "tier": "IV",
+      "role": "Starbuncle wheel powered by the arcane workshop",
+      "status": "Selected"
+    },
+    {
+      "name": "Create: Ars Nouveau Compat - selected Create processing for Ars materials",
+      "group": "Selected Create / technology integrations",
+      "tier": "IV–X",
+      "role": "Native Create processing attached to the chapter IV source / essence workshop",
+      "status": "Selected"
+    },
+    {
+      "name": "Create: Wizardry - Create + Iron's Spells 'n Spellbooks",
+      "group": "Selected Create / technology integrations",
+      "tier": "IV, VI–VII",
+      "role": "Arcane casing/sheets/pipes/pump IV; smart mana devices VI; Blaze Caster VII",
+      "status": "Selected"
+    },
+    {
+      "name": "Create: Enchantment Industry - Create-based XP/enchanting processing",
+      "group": "Selected Create / technology integrations",
+      "tier": "III–VIII",
+      "role": "Grindstone III; XP utilities IV; infuser VI; forger/gem cutter VII; affix augmentor VIII",
+      "status": "Selected"
+    },
+    {
+      "name": "Mekanism Generators - Mekanism power-generation progression",
+      "group": "Selected Create / technology integrations",
+      "tier": "V–IX",
+      "role": "Heat V, renewables VI, gas VII, fission/turbine VIII, fusion IX",
+      "status": "Selected"
+    },
+    {
+      "name": "KubeJS Create — Create",
+      "group": "KubeJS integration modules — locked core integrations",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "KubeJS Mekanism — Mekanism",
+      "group": "KubeJS integration modules — locked core integrations",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "KubeJS Ars Nouveau — Ars Nouveau",
+      "group": "KubeJS integration modules — locked core integrations",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "KubeJS Iron's Spells — Iron's Spells 'n Spellbooks",
+      "group": "KubeJS integration modules — locked core integrations",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "Applied KubeJS — Applied Energistics 2",
+      "group": "KubeJS integration modules — locked core integrations",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "FTB XMod Compat",
+      "group": "Stages / FTB",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "AStages FTB Quests",
+      "group": "Stages / FTB",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "AStages Curios",
+      "group": "Stages / FTB",
+      "tier": "I–X",
+      "role": "Campaign, claims, team stage sync or verified recipe API; no independent machine",
+      "status": "Integration"
+    },
+    {
+      "name": "Ars 'n Spells",
+      "group": "Magic / content bridges",
+      "tier": "VI–IX",
+      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "status": "Integration"
+    },
+    {
+      "name": "Alex's Caves: Spellbooks",
+      "group": "Magic / content bridges",
+      "tier": "VI–IX",
+      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "status": "Integration"
+    },
+    {
+      "name": "Cataclysm: Spellbooks",
+      "group": "Magic / content bridges",
+      "tier": "VI–IX",
+      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "status": "Integration"
+    },
+    {
+      "name": "Ice and Fire: Spellbooks",
+      "group": "Magic / content bridges",
+      "tier": "VI–IX",
+      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "status": "Integration"
+    },
+    {
+      "name": "Spellbooks of Twilight",
+      "group": "Magic / content bridges",
+      "tier": "VI–IX",
+      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "status": "Integration"
+    },
+    {
+      "name": "Apotheosis x Iron's Spellbooks Compat",
+      "group": "Apotheosis bridges",
+      "tier": "VI–VIII",
+      "role": "Network-tier salvage/reforge/gem tables; expedition augmentation; native affixes",
+      "status": "Integration"
+    },
+    {
+      "name": "Apothic Compats",
+      "group": "Apotheosis bridges",
+      "tier": "IV, VI–VIII",
+      "role": "Native spell-affix/category compatibility; network-tier tables and later Create XP devices",
+      "status": "Integration"
+    },
+    {
+      "name": "Apothic Category Compat",
+      "group": "Apotheosis bridges",
+      "tier": "IV, VI–VIII",
+      "role": "Native spell-affix/category compatibility; network-tier tables and later Create XP devices",
+      "status": "Integration"
+    },
+    {
+      "name": "MineColonies: Epicfied (Epic Colonies) — **candidate / primary test**; preferred richer Epic Fight integration if it proves stable with the locked Epic Fight + MineColonies versions",
+      "group": "MineColonies bridges",
+      "tier": "Pending",
+      "role": "Listed test candidate; no new recipes or stages activated",
+      "status": "Candidate"
+    },
+    {
+      "name": "Epic Fight X Minecolonies Compat — **fallback candidate**; simpler compatibility bridge if Epic Colonies shows version, animation or stability issues",
+      "group": "MineColonies bridges",
+      "tier": "Pending",
+      "role": "Listed test candidate; no new recipes or stages activated",
+      "status": "Candidate"
+    },
+    {
+      "name": "Create: MineColonies Link — **selected**; connects MineColonies supply requests to Create logistics",
+      "group": "MineColonies bridges",
+      "tier": "III, VI, X",
+      "role": "Warehouse stock link III; AE2 supply logistics VI; final kingdom supply confirmation X",
+      "status": "Integration"
+    },
+    {
+      "name": "Compatibility addon for MineColonies — **candidate / high priority test**; relevant because it includes compatibility for Create, Applied Energistics 2 and Ars Nouveau",
+      "group": "MineColonies bridges",
+      "tier": "Pending",
+      "role": "Listed test candidate; no new recipes or stages activated",
+      "status": "Candidate"
+    },
+    {
+      "name": "Tweaks addon for MineColonies — **candidate / paired compatibility test**",
+      "group": "MineColonies bridges",
+      "tier": "Pending",
+      "role": "Listed test candidate; no new recipes or stages activated",
+      "status": "Candidate"
+    },
+    {
+      "name": "Create Aeronautics: FTB Chunks Compat",
+      "group": "Create Aeronautics / Sable bridges",
+      "tier": "VII–X",
+      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "status": "Integration"
+    },
+    {
+      "name": "Create Aeronautics: Mekanism Compatibility",
+      "group": "Create Aeronautics / Sable bridges",
+      "tier": "VII–X",
+      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "status": "Integration"
+    },
+    {
+      "name": "Ars Sable",
+      "group": "Create Aeronautics / Sable bridges",
+      "tier": "VII–X",
+      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "status": "Integration"
+    },
+    {
+      "name": "Waystones: Sable",
+      "group": "Create Aeronautics / Sable bridges",
+      "tier": "VII–X",
+      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "status": "Integration"
+    },
+    {
+      "name": "IronSable - **candidate; test before locking**",
+      "group": "Create Aeronautics / Sable bridges",
+      "tier": "Pending",
+      "role": "Listed test candidate; no new recipes or stages activated",
+      "status": "Candidate"
+    },
+    {
+      "name": "Architectury API",
+      "group": "FTB stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "FTB Library",
+      "group": "FTB stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Placebo",
+      "group": "Apotheosis stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Patchouli",
+      "group": "Apotheosis stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Apothic Attributes",
+      "group": "Apotheosis stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Apothic Spawners",
+      "group": "Apotheosis stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Apothic Enchanting",
+      "group": "Apotheosis stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Curios API",
+      "group": "Iron's Spells stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "GeckoLib",
+      "group": "Iron's Spells stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Iron's Lib",
+      "group": "Iron's Spells stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "playerAnimator",
+      "group": "Iron's Spells stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Curios API",
+      "group": "Just Another Witchery Remake",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Kotlin for Forge",
+      "group": "Just Another Witchery Remake",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Modonomicon",
+      "group": "Just Another Witchery Remake",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Create",
+      "group": "Create Aeronautics",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Sable",
+      "group": "Create Aeronautics",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Citadel (Unofficial Port)",
+      "group": "Alex's Mobs / Alex's Caves ports",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Structurize",
+      "group": "MineColonies",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Multi-Piston",
+      "group": "MineColonies",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "BlockUI",
+      "group": "MineColonies",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Domum Ornamentum",
+      "group": "MineColonies",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Integrated API",
+      "group": "Integrated structure stack",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "YUNG's API",
+      "group": "YUNG's Better mods",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Lionfish API",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Jupiter",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Uranus",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Balm",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Rhino",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Better Advanced Tooltips",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Fzzy Config",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    },
+    {
+      "name": "Simply Tooltips",
+      "group": "Other shared libraries",
+      "tier": "All chapters",
+      "role": "Required support library; no independent crafting tier",
+      "status": "Dependency"
+    }
+  ],
+  "status_counts": {
+    "Selected": 74,
+    "Candidate": 6,
+    "Rejected": 3,
+    "Integration": 26,
+    "Dependency": 31
+  },
+  "recipes": 1499,
+  "chapters": 10,
+  "quests": 159
+}

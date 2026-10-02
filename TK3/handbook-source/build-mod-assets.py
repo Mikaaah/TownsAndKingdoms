@@ -12,6 +12,10 @@ archives=[]
 for p in sorted((ROOT/'mod-assets').glob('*.source.json')):
     jar=p.with_name(p.name.replace('.source.json','.jar'))
     if jar.exists(): archives.append(ZipFile(jar))
+    if jar.exists():
+        outer=ZipFile(jar)
+        for nested in outer.namelist():
+            if nested.startswith('META-INF/jarjar/') and nested.endswith('.jar'): archives.append(ZipFile(BytesIO(outer.read(nested))))
 archives.append(ZipFile(ROOT.parent/'project_sources/02-kubejs.zip'))
 files={}
 for z in archives:
@@ -19,8 +23,8 @@ for z in archives:
         key=name.removeprefix('kubejs/')
         if key.startswith('assets/') and key.endswith(('.json','.png')):files[key]=(z,name)
 # Current mechanism textures take precedence over the historical pack.
-for p in (ROOT.parent/'build/TK3_Tiers_1-5/kubejs/assets').rglob('*.png'):
-    files['assets/'+str(p.relative_to(ROOT.parent/'build/TK3_Tiers_1-5/kubejs/assets'))]=p
+for p in (ROOT.parent/'build/TK3_Campaign/kubejs/assets').rglob('*.png'):
+    files['assets/'+str(p.relative_to(ROOT.parent/'build/TK3_Campaign/kubejs/assets'))]=p
 
 def raw(key):
     entry=files.get(key)
@@ -125,7 +129,7 @@ def icon(d):
             zbuffer[ymin:ymax+1,xmin:xmax+1][mask]=depth[mask]
     return Image.fromarray(pixels)
 
-manifest=json.loads((ROOT.parent/'build/TK3_Tiers_1-5/docs/progression_manifest.json').read_text())
+manifest=json.loads((ROOT.parent/'build/TK3_Campaign/docs/progression_manifest.json').read_text())
 ids=set()
 def collect(value):
     if isinstance(value,str) and ':' in value:
@@ -135,12 +139,12 @@ def collect(value):
     elif isinstance(value,list):
         for v in value:collect(v)
 for r in manifest['recipes']:
-    if r['tier']<=5:
+    if r['tier']<=10:
         collect(r['output']);collect(r['inputs']);collect(r.get('transition'))
 ids.update(['create:portable_storage_interface','create:mechanical_harvester','create:mechanical_saw','create:mechanical_bearing','create:deployer','minecraft:oak_sapling','minecraft:water_bucket','minecraft:stonecutter','minecraft:chest','sophisticatedstorage:hopper_upgrade','minecraft:hopper','minecraft:oak_planks','minecraft:oak_slab'])
 custom_models={}
 custom_textures={}
-for script in (ROOT.parent/'build/TK3_Tiers_1-5/kubejs/startup_scripts').glob('*.js'):
+for script in (ROOT.parent/'build/TK3_Campaign/kubejs/startup_scripts').glob('*.js'):
     text=script.read_text()
     for name,parent in re.findall(r'event\.create\([\"\']([^\"\']+)[\"\']\).*?\.parentModel\([\"\']([^\"\']+)[\"\']\)',text):custom_models['kubejs:'+name]=parent
     for name,tex in re.findall(r'event\.create\([\"\']([^\"\']+)[\"\']\).*?\.texture\([\"\']([^\"\']+)[\"\']\)',text):custom_textures['kubejs:'+name]=tex

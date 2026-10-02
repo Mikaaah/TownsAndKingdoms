@@ -363,7 +363,7 @@
       "id": "4B5E0820B553B7C9",
       "title": "Milestone · An industrial kingdom",
       "description": [
-        "Operate powered enrichment and smelting beside your Create workshop. Five-chapter baseline complete. AE2, factories, advanced chemistry and End gates continue in later chapters and stay locked in this package. Reward: a second unbreakable Iron Hammer for a parallel kinetic assembly line. Tier 6 remains locked."
+        "Your Create workshop, magical production and powered refining now form one industrial bridge. Complete this milestone to unlock chapter VI and the first AE2 network. The rewarded hammer supports a parallel kinetic assembly line."
       ],
       "dependencies": [
         "3ABE3751382FBE7A",
@@ -422,6 +422,33 @@
       "x": 3.0,
       "y": 7.0,
       "icon": "sophisticatedstorage:stack_upgrade_tier_2",
+      "rewards": []
+    },
+    {
+      "id": "FD76A87CBF9E524B",
+      "title": "Distil the harvest",
+      "description": [
+        "Expand Witchery with the industrial distillery. Native brews and rituals retain their own requirements."
+      ],
+      "dependencies": [
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "8DA84B504C781BF6",
+          "type": "item",
+          "item": {
+            "id": "witchery:distillery",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "witchery:distillery",
       "rewards": []
     }
   ]

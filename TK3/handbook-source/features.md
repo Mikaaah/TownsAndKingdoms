@@ -4,7 +4,7 @@
 
 Towns & Kingdoms 3 connects mechanical engineering, magic, action combat and settlement building. Your factory supplies your adventures; your discoveries give you new reasons to expand it.
 
-<div class="notice">T&K3 is in development. This guide introduces the currently selected mod foundation. The authored workshop campaign covers <strong>5 CHAPTERS · 81 QUESTS · 776 RECIPES</strong>; later systems expand that foundation.</div>
+<div class="notice">T&K3 is in development. This guide introduces the currently selected mod foundation. The authored workshop campaign covers <strong>10 CHAPTERS · 159 QUESTS · 1499 RECIPES</strong>.</div>
 
 ## Engineering & storage
 
@@ -45,3 +45,7 @@ Build a settlement with **MineColonies**, organise your group with **FTB Teams**
 | Collect items or build farms | **[AUTOMATION FIELD GUIDE](../../automation/)** |
 | Check the complete selected stack | **[CURRENT MOD SELECTION](../selection-notes/)** |
 | Revisit the previous pack | **[T&K2 FEATURES](../../2.0/features/)** |
+
+## Follow the campaign
+
+**[ALL MODS, ADDONS & THEIR TIERS →](../tier-map/)** · **[TEN CHAPTER PATHS →](../../progression/#paths)**

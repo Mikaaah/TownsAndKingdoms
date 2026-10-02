@@ -1,833 +1,1555 @@
-# Recipe catalogue
+# Managed recipe catalogue
 
-**776 CHAPTER 1–5 RECIPES** · **81 QUESTS** · Minecraft 1.21.1 / NeoForge
+**10 TIERS · 1499 RECIPES**
 
-The exact authored recipes are listed below. Twelve AE2 recipes remain reserved for tier 6 and are outside the current player campaign.
+Use the [interactive workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) for item art, patterns and ordered operations. [Tier paths](PLAYER_PATHS_EN.md) explain the bootstraps.
 
-| Recipe family | Recipes |
-|---|---:|
-| Core | 125 |
-| Frames | 8 |
-| Geology | 24 |
-| Compat | 385 |
-| Magic | 17 |
-| Storage | 99 |
-| Late Layers | 4 |
-| Create | 114 |
+## Tier 1
 
-## Core
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [2x architects_palette:algal_blend](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Falgal_blend) | shapeless | minecraft:kelp + minecraft:clay_ball |
+| [4x architects_palette:algal_blend](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Falgal_blend_bulk) | mixing | minecraft:kelp + minecraft:clay_ball |
+| [2x create:andesite_alloy](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fandesite_alloy) | shapeless | minecraft:andesite + architects_palette:algal_blend |
+| [4x create:andesite_alloy](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fandesite_alloy_bulk) | mixing | minecraft:andesite + architects_palette:algal_blend |
+| [kubejs:tk3_rotation_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Frotation_mechanism_automated) | sequence | #minecraft:wooden_slabs + create:andesite_alloy + create:andesite_alloy + betterend:iron_hammer |
+| [3x create:water_wheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fwater_wheel) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:large_water_wheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Flarge_water_wheel) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_press](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_press) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_mixer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_mixer) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:encased_fan](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fencased_fan) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_saw](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_saw) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_drill](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_drill) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_bearing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_bearing) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_harvester](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_harvester) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:deployer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fdeployer) | stonecutting | kubejs:tk3_kinetic_machine |
+| [2x create:basin](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fbasin) | stonecutting | kubejs:tk3_kinetic_machine |
+| [4x create:andesite_funnel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fandesite_funnel) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:portable_storage_interface](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fportable_storage_interface) | stonecutting | kubejs:tk3_kinetic_machine |
+| [minecraft:gravel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fcobble_to_gravel) | milling | minecraft:cobblestone |
+| [minecraft:clay_ball](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Frenewable_clay) | splashing | minecraft:sand |
+| [8x create:shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fshaft) | shapeless | create:andesite_alloy + minecraft:stick |
+| [2x create:cogwheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fcogwheel) | shapeless | create:shaft + #minecraft:planks |
+| [create:large_cogwheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Flarge_cogwheel) | shapeless | 2x create:cogwheel + #minecraft:planks |
+| [3x create:belt_connector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fbelt_connector) | shapeless | 6x minecraft:dried_kelp |
+| [create:propeller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fpropeller) | shaped | create:iron_sheet + create:andesite_alloy |
+| [create:gearbox](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fgearbox) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:vertical_gearbox](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fvertical_gearbox) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:clutch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fclutch) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:gearshift](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fgearshift) | stonecutting | kubejs:tk3_kinetic_machine |
+| [3x create:encased_chain_drive](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fencased_chain_drive) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:adjustable_chain_gearshift](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fadjustable_chain_gearshift) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_plough](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_plough) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:rope_pulley](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Frope_pulley) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:mechanical_piston](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fmechanical_piston) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:cart_assembler](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fcart_assembler) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:windmill_bearing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fwindmill_bearing) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:gantry_carriage](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fgantry_carriage) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:weighted_ejector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fweighted_ejector) | stonecutting | kubejs:tk3_kinetic_machine |
+| [4x create:linear_chassis](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Flinear_chassis) | stonecutting | kubejs:tk3_kinetic_machine |
+| [4x create:radial_chassis](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fradial_chassis) | stonecutting | kubejs:tk3_kinetic_machine |
+| [4x create:andesite_tunnel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fandesite_tunnel) | stonecutting | kubejs:tk3_kinetic_machine |
+| [2x create:depot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fdepot) | stonecutting | kubejs:tk3_kinetic_machine |
+| [6x create:chute](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fchute) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:speedometer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fspeedometer) | stonecutting | kubejs:tk3_kinetic_machine |
+| [create:analog_lever](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Fanalog_lever) | stonecutting | kubejs:tk3_kinetic_machine |
+| [kubejs:tk3_kinetic_machine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Fkinetic_manual) | shaped | create:andesite_alloy + create:andesite_casing + #minecraft:wooden_slabs |
+| [kubejs:tk3_kinetic_machine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Fkinetic_automated) | deploying | create:andesite_casing + kubejs:tk3_rotation_mechanism |
+| [create:millstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Fcreate_millstone) | stonecutting | kubejs:tk3_kinetic_machine |
+| [minecraft:clay_ball](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_andesite) | milling | minecraft:andesite |
+| [2x minecraft:clay_ball](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_andesite) | crushing | minecraft:andesite |
+| [minecraft:quartz](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_diorite) | milling | minecraft:diorite |
+| [2x minecraft:quartz](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_diorite) | crushing | minecraft:diorite |
+| [minecraft:lapis_lazuli](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_granite) | milling | minecraft:granite |
+| [2x minecraft:lapis_lazuli](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_granite) | crushing | minecraft:granite |
+| [minecraft:bone_meal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_limestone) | milling | create:limestone |
+| [2x minecraft:bone_meal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_limestone) | crushing | create:limestone |
+| [alexscaves:stripped_pewen_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_alexscaves_pewen_log) | cutting | alexscaves:pewen_log |
+| [6x alexscaves:pewen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_alexscaves_pewen_log) | cutting | alexscaves:stripped_pewen_log |
+| [alexscaves:stripped_pewen_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_alexscaves_pewen_wood) | cutting | alexscaves:pewen_wood |
+| [6x alexscaves:pewen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_alexscaves_pewen_wood) | cutting | alexscaves:stripped_pewen_wood |
+| [alexscaves:stripped_thornwood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_alexscaves_thornwood_log) | cutting | alexscaves:thornwood_log |
+| [6x alexscaves:thornwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_alexscaves_thornwood_log) | cutting | alexscaves:stripped_thornwood_log |
+| [alexscaves:stripped_thornwood_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_alexscaves_thornwood_wood) | cutting | alexscaves:thornwood_wood |
+| [6x alexscaves:thornwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_alexscaves_thornwood_wood) | cutting | alexscaves:stripped_thornwood_wood |
+| [atmospheric:stripped_aspen_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_aspen_log) | cutting | atmospheric:aspen_log |
+| [6x atmospheric:aspen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_aspen_log) | cutting | atmospheric:stripped_aspen_log |
+| [atmospheric:stripped_aspen_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_aspen_wood) | cutting | atmospheric:aspen_wood |
+| [6x atmospheric:aspen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_aspen_wood) | cutting | atmospheric:stripped_aspen_wood |
+| [atmospheric:stripped_grimwood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_grimwood_log) | cutting | atmospheric:grimwood_log |
+| [6x atmospheric:grimwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_grimwood_log) | cutting | atmospheric:stripped_grimwood_log |
+| [atmospheric:stripped_kousa_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_kousa_log) | cutting | atmospheric:kousa_log |
+| [6x atmospheric:kousa_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_kousa_log) | cutting | atmospheric:stripped_kousa_log |
+| [atmospheric:stripped_kousa_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_kousa_wood) | cutting | atmospheric:kousa_wood |
+| [6x atmospheric:kousa_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_kousa_wood) | cutting | atmospheric:stripped_kousa_wood |
+| [atmospheric:stripped_laurel_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_laurel_log) | cutting | atmospheric:laurel_log |
+| [6x atmospheric:laurel_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_laurel_log) | cutting | atmospheric:stripped_laurel_log |
+| [atmospheric:stripped_laurel_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_laurel_wood) | cutting | atmospheric:laurel_wood |
+| [6x atmospheric:laurel_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_laurel_wood) | cutting | atmospheric:stripped_laurel_wood |
+| [atmospheric:stripped_morado_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_morado_log) | cutting | atmospheric:morado_log |
+| [6x atmospheric:morado_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_morado_log) | cutting | atmospheric:stripped_morado_log |
+| [atmospheric:stripped_morado_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_morado_wood) | cutting | atmospheric:morado_wood |
+| [6x atmospheric:morado_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_morado_wood) | cutting | atmospheric:stripped_morado_wood |
+| [atmospheric:stripped_rosewood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_rosewood_log) | cutting | atmospheric:rosewood_log |
+| [6x atmospheric:rosewood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_rosewood_log) | cutting | atmospheric:stripped_rosewood_log |
+| [atmospheric:stripped_yucca_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_yucca_log) | cutting | atmospheric:yucca_log |
+| [6x atmospheric:yucca_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_yucca_log) | cutting | atmospheric:stripped_yucca_log |
+| [atmospheric:stripped_yucca_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_atmospheric_yucca_wood) | cutting | atmospheric:yucca_wood |
+| [6x atmospheric:yucca_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_atmospheric_yucca_wood) | cutting | atmospheric:stripped_yucca_wood |
+| [autumnity:stripped_maple_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_autumnity_maple_log) | cutting | autumnity:maple_log |
+| [6x autumnity:maple_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_autumnity_maple_log) | cutting | autumnity:stripped_maple_log |
+| [autumnity:stripped_maple_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_autumnity_maple_wood) | cutting | autumnity:maple_wood |
+| [6x autumnity:maple_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_autumnity_maple_wood) | cutting | autumnity:stripped_maple_wood |
+| [6x betterend:dragon_tree_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_dragon_tree_log) | cutting | betterend:dragon_tree_log |
+| [6x betterend:end_lotus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_end_lotus_log) | cutting | betterend:end_lotus_log |
+| [6x betterend:end_lotus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_end_lotus_stem) | cutting | betterend:end_lotus_stem |
+| [6x betterend:helix_tree_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_helix_tree_log) | cutting | betterend:helix_tree_log |
+| [6x betterend:jellyshroom_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_jellyshroom_log) | cutting | betterend:jellyshroom_log |
+| [6x betterend:lacugrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_lacugrove_log) | cutting | betterend:lacugrove_log |
+| [6x betterend:lucernia_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_lucernia_log) | cutting | betterend:lucernia_log |
+| [6x betterend:mossy_glowshroom_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_mossy_glowshroom_log) | cutting | betterend:mossy_glowshroom_log |
+| [6x betterend:pythadendron_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_pythadendron_log) | cutting | betterend:pythadendron_log |
+| [6x betterend:tenanea_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_tenanea_log) | cutting | betterend:tenanea_log |
+| [6x betterend:umbrella_tree_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betterend_umbrella_tree_log) | cutting | betterend:umbrella_tree_log |
+| [6x betternether:anchor_tree_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_anchor_tree_log) | cutting | betternether:anchor_tree_log |
+| [6x betternether:gloomwood_dark_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_gloomwood_dark_log) | cutting | betternether:gloomwood_dark_log |
+| [6x betternether:gloomwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_gloomwood_log) | cutting | betternether:gloomwood_log |
+| [6x betternether:gloomwood_transition_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_gloomwood_transition_log) | cutting | betternether:gloomwood_transition_log |
+| [6x betternether:mushroom_fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_mushroom_fir_log) | cutting | betternether:mushroom_fir_log |
+| [6x betternether:mushroom_fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_mushroom_fir_stem) | cutting | betternether:mushroom_fir_stem |
+| [6x betternether:nether_mushroom_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_nether_mushroom_stem) | cutting | betternether:nether_mushroom_stem |
+| [6x betternether:nether_reed_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_nether_reed_stem) | cutting | betternether:nether_reed_stem |
+| [6x betternether:nether_sakura_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_nether_sakura_log) | cutting | betternether:nether_sakura_log |
+| [6x betternether:rubeus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_rubeus_log) | cutting | betternether:rubeus_log |
+| [6x betternether:stalagnate_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_stalagnate_log) | cutting | betternether:stalagnate_log |
+| [6x betternether:stalagnate_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_stalagnate_stem) | cutting | betternether:stalagnate_stem |
+| [6x betternether:wart_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_wart_log) | cutting | betternether:wart_log |
+| [6x betternether:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_betternether_willow_log) | cutting | betternether:willow_log |
+| [biomesoplenty:stripped_dead_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_dead_log) | cutting | biomesoplenty:dead_log |
+| [6x biomesoplenty:dead_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_dead_log) | cutting | biomesoplenty:stripped_dead_log |
+| [biomesoplenty:stripped_dead_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_dead_wood) | cutting | biomesoplenty:dead_wood |
+| [6x biomesoplenty:dead_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_dead_wood) | cutting | biomesoplenty:stripped_dead_wood |
+| [biomesoplenty:stripped_empyreal_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_empyreal_log) | cutting | biomesoplenty:empyreal_log |
+| [6x biomesoplenty:empyreal_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_empyreal_log) | cutting | biomesoplenty:stripped_empyreal_log |
+| [biomesoplenty:stripped_empyreal_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_empyreal_wood) | cutting | biomesoplenty:empyreal_wood |
+| [6x biomesoplenty:empyreal_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_empyreal_wood) | cutting | biomesoplenty:stripped_empyreal_wood |
+| [biomesoplenty:stripped_fir_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_fir_log) | cutting | biomesoplenty:fir_log |
+| [6x biomesoplenty:fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_fir_log) | cutting | biomesoplenty:stripped_fir_log |
+| [biomesoplenty:stripped_fir_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_fir_wood) | cutting | biomesoplenty:fir_wood |
+| [6x biomesoplenty:fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_fir_wood) | cutting | biomesoplenty:stripped_fir_wood |
+| [biomesoplenty:stripped_hellbark_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_hellbark_log) | cutting | biomesoplenty:hellbark_log |
+| [6x biomesoplenty:hellbark_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_hellbark_log) | cutting | biomesoplenty:stripped_hellbark_log |
+| [biomesoplenty:stripped_hellbark_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_hellbark_wood) | cutting | biomesoplenty:hellbark_wood |
+| [6x biomesoplenty:hellbark_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_hellbark_wood) | cutting | biomesoplenty:stripped_hellbark_wood |
+| [biomesoplenty:stripped_jacaranda_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_jacaranda_log) | cutting | biomesoplenty:jacaranda_log |
+| [6x biomesoplenty:jacaranda_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_jacaranda_log) | cutting | biomesoplenty:stripped_jacaranda_log |
+| [biomesoplenty:stripped_jacaranda_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_jacaranda_wood) | cutting | biomesoplenty:jacaranda_wood |
+| [6x biomesoplenty:jacaranda_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_jacaranda_wood) | cutting | biomesoplenty:stripped_jacaranda_wood |
+| [biomesoplenty:stripped_magic_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_magic_log) | cutting | biomesoplenty:magic_log |
+| [6x biomesoplenty:magic_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_magic_log) | cutting | biomesoplenty:stripped_magic_log |
+| [biomesoplenty:stripped_magic_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_magic_wood) | cutting | biomesoplenty:magic_wood |
+| [6x biomesoplenty:magic_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_magic_wood) | cutting | biomesoplenty:stripped_magic_wood |
+| [biomesoplenty:stripped_mahogany_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_mahogany_log) | cutting | biomesoplenty:mahogany_log |
+| [6x biomesoplenty:mahogany_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_mahogany_log) | cutting | biomesoplenty:stripped_mahogany_log |
+| [biomesoplenty:stripped_mahogany_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_mahogany_wood) | cutting | biomesoplenty:mahogany_wood |
+| [6x biomesoplenty:mahogany_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_mahogany_wood) | cutting | biomesoplenty:stripped_mahogany_wood |
+| [biomesoplenty:stripped_maple_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_maple_log) | cutting | biomesoplenty:maple_log |
+| [6x biomesoplenty:maple_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_maple_log) | cutting | biomesoplenty:stripped_maple_log |
+| [biomesoplenty:stripped_maple_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_maple_wood) | cutting | biomesoplenty:maple_wood |
+| [6x biomesoplenty:maple_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_maple_wood) | cutting | biomesoplenty:stripped_maple_wood |
+| [biomesoplenty:stripped_palm_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_palm_log) | cutting | biomesoplenty:palm_log |
+| [6x biomesoplenty:palm_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_palm_log) | cutting | biomesoplenty:stripped_palm_log |
+| [biomesoplenty:stripped_palm_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_palm_wood) | cutting | biomesoplenty:palm_wood |
+| [6x biomesoplenty:palm_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_palm_wood) | cutting | biomesoplenty:stripped_palm_wood |
+| [biomesoplenty:stripped_pine_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_pine_log) | cutting | biomesoplenty:pine_log |
+| [6x biomesoplenty:pine_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_pine_log) | cutting | biomesoplenty:stripped_pine_log |
+| [biomesoplenty:stripped_pine_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_pine_wood) | cutting | biomesoplenty:pine_wood |
+| [6x biomesoplenty:pine_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_pine_wood) | cutting | biomesoplenty:stripped_pine_wood |
+| [biomesoplenty:stripped_redwood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_redwood_log) | cutting | biomesoplenty:redwood_log |
+| [6x biomesoplenty:redwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_redwood_log) | cutting | biomesoplenty:stripped_redwood_log |
+| [biomesoplenty:stripped_redwood_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_redwood_wood) | cutting | biomesoplenty:redwood_wood |
+| [6x biomesoplenty:redwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_redwood_wood) | cutting | biomesoplenty:stripped_redwood_wood |
+| [biomesoplenty:stripped_umbran_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_umbran_log) | cutting | biomesoplenty:umbran_log |
+| [6x biomesoplenty:umbran_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_umbran_log) | cutting | biomesoplenty:stripped_umbran_log |
+| [biomesoplenty:stripped_umbran_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_umbran_wood) | cutting | biomesoplenty:umbran_wood |
+| [6x biomesoplenty:umbran_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_umbran_wood) | cutting | biomesoplenty:stripped_umbran_wood |
+| [biomesoplenty:stripped_willow_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_willow_log) | cutting | biomesoplenty:willow_log |
+| [6x biomesoplenty:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_willow_log) | cutting | biomesoplenty:stripped_willow_log |
+| [biomesoplenty:stripped_willow_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomesoplenty_willow_wood) | cutting | biomesoplenty:willow_wood |
+| [6x biomesoplenty:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomesoplenty_willow_wood) | cutting | biomesoplenty:stripped_willow_wood |
+| [biomeswevegone:stripped_aspen_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_aspen_log) | cutting | biomeswevegone:aspen_log |
+| [6x biomeswevegone:aspen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_aspen_log) | cutting | biomeswevegone:stripped_aspen_log |
+| [biomeswevegone:stripped_aspen_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_aspen_wood) | cutting | biomeswevegone:aspen_wood |
+| [6x biomeswevegone:aspen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_aspen_wood) | cutting | biomeswevegone:stripped_aspen_wood |
+| [biomeswevegone:stripped_baobab_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_baobab_log) | cutting | biomeswevegone:baobab_log |
+| [6x biomeswevegone:baobab_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_baobab_log) | cutting | biomeswevegone:stripped_baobab_log |
+| [biomeswevegone:stripped_baobab_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_baobab_wood) | cutting | biomeswevegone:baobab_wood |
+| [6x biomeswevegone:baobab_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_baobab_wood) | cutting | biomeswevegone:stripped_baobab_wood |
+| [biomeswevegone:stripped_blue_enchanted_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_blue_enchanted_log) | cutting | biomeswevegone:blue_enchanted_log |
+| [6x biomeswevegone:blue_enchanted_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_blue_enchanted_log) | cutting | biomeswevegone:stripped_blue_enchanted_log |
+| [biomeswevegone:stripped_blue_enchanted_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_blue_enchanted_wood) | cutting | biomeswevegone:blue_enchanted_wood |
+| [6x biomeswevegone:blue_enchanted_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_blue_enchanted_wood) | cutting | biomeswevegone:stripped_blue_enchanted_wood |
+| [biomeswevegone:stripped_cika_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_cika_log) | cutting | biomeswevegone:cika_log |
+| [6x biomeswevegone:cika_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_cika_log) | cutting | biomeswevegone:stripped_cika_log |
+| [biomeswevegone:stripped_cika_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_cika_wood) | cutting | biomeswevegone:cika_wood |
+| [6x biomeswevegone:cika_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_cika_wood) | cutting | biomeswevegone:stripped_cika_wood |
+| [biomeswevegone:stripped_cypress_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_cypress_log) | cutting | biomeswevegone:cypress_log |
+| [6x biomeswevegone:cypress_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_cypress_log) | cutting | biomeswevegone:stripped_cypress_log |
+| [biomeswevegone:stripped_cypress_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_cypress_wood) | cutting | biomeswevegone:cypress_wood |
+| [6x biomeswevegone:cypress_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_cypress_wood) | cutting | biomeswevegone:stripped_cypress_wood |
+| [biomeswevegone:stripped_ebony_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_ebony_log) | cutting | biomeswevegone:ebony_log |
+| [6x biomeswevegone:ebony_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_ebony_log) | cutting | biomeswevegone:stripped_ebony_log |
+| [biomeswevegone:stripped_ebony_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_ebony_wood) | cutting | biomeswevegone:ebony_wood |
+| [6x biomeswevegone:ebony_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_ebony_wood) | cutting | biomeswevegone:stripped_ebony_wood |
+| [biomeswevegone:stripped_fir_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_fir_log) | cutting | biomeswevegone:fir_log |
+| [6x biomeswevegone:fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_fir_log) | cutting | biomeswevegone:stripped_fir_log |
+| [biomeswevegone:stripped_fir_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_fir_wood) | cutting | biomeswevegone:fir_wood |
+| [6x biomeswevegone:fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_fir_wood) | cutting | biomeswevegone:stripped_fir_wood |
+| [biomeswevegone:stripped_florus_stem](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_florus_stem) | cutting | biomeswevegone:florus_stem |
+| [6x biomeswevegone:florus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_florus_stem) | cutting | biomeswevegone:stripped_florus_stem |
+| [biomeswevegone:stripped_florus_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_florus_wood) | cutting | biomeswevegone:florus_wood |
+| [6x biomeswevegone:florus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_florus_wood) | cutting | biomeswevegone:stripped_florus_wood |
+| [biomeswevegone:stripped_green_enchanted_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_green_enchanted_log) | cutting | biomeswevegone:green_enchanted_log |
+| [6x biomeswevegone:green_enchanted_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_green_enchanted_log) | cutting | biomeswevegone:stripped_green_enchanted_log |
+| [biomeswevegone:stripped_green_enchanted_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_green_enchanted_wood) | cutting | biomeswevegone:green_enchanted_wood |
+| [6x biomeswevegone:green_enchanted_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_green_enchanted_wood) | cutting | biomeswevegone:stripped_green_enchanted_wood |
+| [biomeswevegone:stripped_holly_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_holly_log) | cutting | biomeswevegone:holly_log |
+| [6x biomeswevegone:holly_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_holly_log) | cutting | biomeswevegone:stripped_holly_log |
+| [biomeswevegone:stripped_holly_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_holly_wood) | cutting | biomeswevegone:holly_wood |
+| [6x biomeswevegone:holly_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_holly_wood) | cutting | biomeswevegone:stripped_holly_wood |
+| [biomeswevegone:stripped_ironwood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_ironwood_log) | cutting | biomeswevegone:ironwood_log |
+| [6x biomeswevegone:ironwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_ironwood_log) | cutting | biomeswevegone:stripped_ironwood_log |
+| [biomeswevegone:stripped_ironwood_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_ironwood_wood) | cutting | biomeswevegone:ironwood_wood |
+| [6x biomeswevegone:ironwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_ironwood_wood) | cutting | biomeswevegone:stripped_ironwood_wood |
+| [biomeswevegone:stripped_jacaranda_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_jacaranda_log) | cutting | biomeswevegone:jacaranda_log |
+| [6x biomeswevegone:jacaranda_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_jacaranda_log) | cutting | biomeswevegone:stripped_jacaranda_log |
+| [biomeswevegone:stripped_jacaranda_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_jacaranda_wood) | cutting | biomeswevegone:jacaranda_wood |
+| [6x biomeswevegone:jacaranda_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_jacaranda_wood) | cutting | biomeswevegone:stripped_jacaranda_wood |
+| [biomeswevegone:stripped_mahogany_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_mahogany_log) | cutting | biomeswevegone:mahogany_log |
+| [6x biomeswevegone:mahogany_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_mahogany_log) | cutting | biomeswevegone:stripped_mahogany_log |
+| [biomeswevegone:stripped_mahogany_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_mahogany_wood) | cutting | biomeswevegone:mahogany_wood |
+| [6x biomeswevegone:mahogany_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_mahogany_wood) | cutting | biomeswevegone:stripped_mahogany_wood |
+| [biomeswevegone:stripped_maple_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_maple_log) | cutting | biomeswevegone:maple_log |
+| [6x biomeswevegone:maple_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_maple_log) | cutting | biomeswevegone:stripped_maple_log |
+| [biomeswevegone:stripped_maple_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_maple_wood) | cutting | biomeswevegone:maple_wood |
+| [6x biomeswevegone:maple_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_maple_wood) | cutting | biomeswevegone:stripped_maple_wood |
+| [biomeswevegone:stripped_palm_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_palm_log) | cutting | biomeswevegone:palm_log |
+| [6x biomeswevegone:palm_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_palm_log) | cutting | biomeswevegone:stripped_palm_log |
+| [biomeswevegone:stripped_palm_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_palm_wood) | cutting | biomeswevegone:palm_wood |
+| [6x biomeswevegone:palm_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_palm_wood) | cutting | biomeswevegone:stripped_palm_wood |
+| [biomeswevegone:stripped_pine_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_pine_log) | cutting | biomeswevegone:pine_log |
+| [6x biomeswevegone:pine_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_pine_log) | cutting | biomeswevegone:stripped_pine_log |
+| [biomeswevegone:stripped_pine_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_pine_wood) | cutting | biomeswevegone:pine_wood |
+| [6x biomeswevegone:pine_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_pine_wood) | cutting | biomeswevegone:stripped_pine_wood |
+| [biomeswevegone:stripped_rainbow_eucalyptus_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_rainbow_eucalyptus_log) | cutting | biomeswevegone:rainbow_eucalyptus_log |
+| [6x biomeswevegone:rainbow_eucalyptus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_rainbow_eucalyptus_log) | cutting | biomeswevegone:stripped_rainbow_eucalyptus_log |
+| [biomeswevegone:stripped_rainbow_eucalyptus_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_rainbow_eucalyptus_wood) | cutting | biomeswevegone:rainbow_eucalyptus_wood |
+| [6x biomeswevegone:rainbow_eucalyptus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_rainbow_eucalyptus_wood) | cutting | biomeswevegone:stripped_rainbow_eucalyptus_wood |
+| [biomeswevegone:stripped_redwood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_redwood_log) | cutting | biomeswevegone:redwood_log |
+| [6x biomeswevegone:redwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_redwood_log) | cutting | biomeswevegone:stripped_redwood_log |
+| [biomeswevegone:stripped_redwood_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_redwood_wood) | cutting | biomeswevegone:redwood_wood |
+| [6x biomeswevegone:redwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_redwood_wood) | cutting | biomeswevegone:stripped_redwood_wood |
+| [biomeswevegone:stripped_sakura_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_sakura_log) | cutting | biomeswevegone:sakura_log |
+| [6x biomeswevegone:sakura_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_sakura_log) | cutting | biomeswevegone:stripped_sakura_log |
+| [biomeswevegone:stripped_sakura_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_sakura_wood) | cutting | biomeswevegone:sakura_wood |
+| [6x biomeswevegone:sakura_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_sakura_wood) | cutting | biomeswevegone:stripped_sakura_wood |
+| [biomeswevegone:stripped_skyris_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_skyris_log) | cutting | biomeswevegone:skyris_log |
+| [6x biomeswevegone:skyris_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_skyris_log) | cutting | biomeswevegone:stripped_skyris_log |
+| [biomeswevegone:stripped_skyris_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_skyris_wood) | cutting | biomeswevegone:skyris_wood |
+| [6x biomeswevegone:skyris_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_skyris_wood) | cutting | biomeswevegone:stripped_skyris_wood |
+| [biomeswevegone:stripped_spirit_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_spirit_log) | cutting | biomeswevegone:spirit_log |
+| [6x biomeswevegone:spirit_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_spirit_log) | cutting | biomeswevegone:stripped_spirit_log |
+| [biomeswevegone:stripped_spirit_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_spirit_wood) | cutting | biomeswevegone:spirit_wood |
+| [6x biomeswevegone:spirit_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_spirit_wood) | cutting | biomeswevegone:stripped_spirit_wood |
+| [biomeswevegone:stripped_white_mangrove_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_white_mangrove_log) | cutting | biomeswevegone:white_mangrove_log |
+| [6x biomeswevegone:white_mangrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_white_mangrove_log) | cutting | biomeswevegone:stripped_white_mangrove_log |
+| [biomeswevegone:stripped_white_mangrove_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_white_mangrove_wood) | cutting | biomeswevegone:white_mangrove_wood |
+| [6x biomeswevegone:white_mangrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_white_mangrove_wood) | cutting | biomeswevegone:stripped_white_mangrove_wood |
+| [biomeswevegone:stripped_willow_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_willow_log) | cutting | biomeswevegone:willow_log |
+| [6x biomeswevegone:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_willow_log) | cutting | biomeswevegone:stripped_willow_log |
+| [biomeswevegone:stripped_willow_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_willow_wood) | cutting | biomeswevegone:willow_wood |
+| [6x biomeswevegone:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_willow_wood) | cutting | biomeswevegone:stripped_willow_wood |
+| [biomeswevegone:stripped_witch_hazel_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_witch_hazel_log) | cutting | biomeswevegone:witch_hazel_log |
+| [6x biomeswevegone:witch_hazel_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_witch_hazel_log) | cutting | biomeswevegone:stripped_witch_hazel_log |
+| [biomeswevegone:stripped_witch_hazel_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_witch_hazel_wood) | cutting | biomeswevegone:witch_hazel_wood |
+| [6x biomeswevegone:witch_hazel_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_witch_hazel_wood) | cutting | biomeswevegone:stripped_witch_hazel_wood |
+| [biomeswevegone:stripped_zelkova_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_zelkova_log) | cutting | biomeswevegone:zelkova_log |
+| [6x biomeswevegone:zelkova_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_zelkova_log) | cutting | biomeswevegone:stripped_zelkova_log |
+| [biomeswevegone:stripped_zelkova_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_biomeswevegone_zelkova_wood) | cutting | biomeswevegone:zelkova_wood |
+| [6x biomeswevegone:zelkova_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_biomeswevegone_zelkova_wood) | cutting | biomeswevegone:stripped_zelkova_wood |
+| [bloomingnature:stripped_aspen_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_aspen_log) | cutting | bloomingnature:aspen_log |
+| [6x bloomingnature:aspen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_aspen_log) | cutting | bloomingnature:stripped_aspen_log |
+| [bloomingnature:stripped_aspen_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_aspen_wood) | cutting | bloomingnature:aspen_wood |
+| [6x bloomingnature:aspen_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_aspen_wood) | cutting | bloomingnature:stripped_aspen_wood |
+| [bloomingnature:stripped_baobab_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_baobab_log) | cutting | bloomingnature:baobab_log |
+| [6x bloomingnature:baobab_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_baobab_log) | cutting | bloomingnature:stripped_baobab_log |
+| [bloomingnature:stripped_baobab_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_baobab_wood) | cutting | bloomingnature:baobab_wood |
+| [6x bloomingnature:baobab_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_baobab_wood) | cutting | bloomingnature:stripped_baobab_wood |
+| [bloomingnature:stripped_chestnut_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_chestnut_log) | cutting | bloomingnature:chestnut_log |
+| [6x bloomingnature:chestnut_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_chestnut_log) | cutting | bloomingnature:stripped_chestnut_log |
+| [bloomingnature:stripped_chestnut_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_chestnut_wood) | cutting | bloomingnature:chestnut_wood |
+| [6x bloomingnature:chestnut_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_chestnut_wood) | cutting | bloomingnature:stripped_chestnut_wood |
+| [bloomingnature:stripped_cypress_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_cypress_log) | cutting | bloomingnature:cypress_log |
+| [6x bloomingnature:cypress_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_cypress_log) | cutting | bloomingnature:stripped_cypress_log |
+| [bloomingnature:stripped_cypress_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_cypress_wood) | cutting | bloomingnature:cypress_wood |
+| [6x bloomingnature:cypress_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_cypress_wood) | cutting | bloomingnature:stripped_cypress_wood |
+| [bloomingnature:stripped_ebony_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_ebony_log) | cutting | bloomingnature:ebony_log |
+| [6x bloomingnature:ebony_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_ebony_log) | cutting | bloomingnature:stripped_ebony_log |
+| [bloomingnature:stripped_ebony_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_ebony_wood) | cutting | bloomingnature:ebony_wood |
+| [6x bloomingnature:ebony_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_ebony_wood) | cutting | bloomingnature:stripped_ebony_wood |
+| [bloomingnature:stripped_fan_palm_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_fan_palm_log) | cutting | bloomingnature:fan_palm_log |
+| [6x bloomingnature:fan_palm_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_fan_palm_log) | cutting | bloomingnature:stripped_fan_palm_log |
+| [bloomingnature:stripped_fan_palm_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_fan_palm_wood) | cutting | bloomingnature:fan_palm_wood |
+| [6x bloomingnature:fan_palm_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_fan_palm_wood) | cutting | bloomingnature:stripped_fan_palm_wood |
+| [bloomingnature:stripped_fir_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_fir_log) | cutting | bloomingnature:fir_log |
+| [6x bloomingnature:fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_fir_log) | cutting | bloomingnature:stripped_fir_log |
+| [bloomingnature:stripped_fir_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_fir_wood) | cutting | bloomingnature:fir_wood |
+| [6x bloomingnature:fir_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_fir_wood) | cutting | bloomingnature:stripped_fir_wood |
+| [bloomingnature:stripped_larch_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_larch_log) | cutting | bloomingnature:larch_log |
+| [6x bloomingnature:larch_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_larch_log) | cutting | bloomingnature:stripped_larch_log |
+| [bloomingnature:stripped_larch_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_larch_wood) | cutting | bloomingnature:larch_wood |
+| [6x bloomingnature:larch_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_larch_wood) | cutting | bloomingnature:stripped_larch_wood |
+| [bloomingnature:stripped_swamp_cypress_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_swamp_cypress_log) | cutting | bloomingnature:swamp_cypress_log |
+| [6x bloomingnature:swamp_cypress_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_swamp_cypress_log) | cutting | bloomingnature:stripped_swamp_cypress_log |
+| [bloomingnature:stripped_swamp_cypress_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_swamp_cypress_wood) | cutting | bloomingnature:swamp_cypress_wood |
+| [6x bloomingnature:swamp_cypress_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_swamp_cypress_wood) | cutting | bloomingnature:stripped_swamp_cypress_wood |
+| [bloomingnature:stripped_swamp_oak_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_swamp_oak_log) | cutting | bloomingnature:swamp_oak_log |
+| [6x bloomingnature:swamp_oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_swamp_oak_log) | cutting | bloomingnature:stripped_swamp_oak_log |
+| [bloomingnature:stripped_swamp_oak_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bloomingnature_swamp_oak_wood) | cutting | bloomingnature:swamp_oak_wood |
+| [6x bloomingnature:swamp_oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bloomingnature_swamp_oak_wood) | cutting | bloomingnature:stripped_swamp_oak_wood |
+| [6x cataclysm:chorus_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_cataclysm_chorus_stem) | cutting | cataclysm:chorus_stem |
+| [environmental:stripped_pine_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_pine_log) | cutting | environmental:pine_log |
+| [6x environmental:pine_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_pine_log) | cutting | environmental:stripped_pine_log |
+| [environmental:stripped_pine_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_pine_wood) | cutting | environmental:pine_wood |
+| [6x environmental:pine_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_pine_wood) | cutting | environmental:stripped_pine_wood |
+| [environmental:stripped_plum_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_plum_log) | cutting | environmental:plum_log |
+| [6x environmental:plum_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_plum_log) | cutting | environmental:stripped_plum_log |
+| [environmental:stripped_plum_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_plum_wood) | cutting | environmental:plum_wood |
+| [6x environmental:plum_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_plum_wood) | cutting | environmental:stripped_plum_wood |
+| [environmental:stripped_willow_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_willow_log) | cutting | environmental:willow_log |
+| [6x environmental:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_willow_log) | cutting | environmental:stripped_willow_log |
+| [environmental:stripped_willow_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_willow_wood) | cutting | environmental:willow_wood |
+| [6x environmental:willow_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_willow_wood) | cutting | environmental:stripped_willow_wood |
+| [environmental:stripped_wisteria_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_wisteria_log) | cutting | environmental:wisteria_log |
+| [6x environmental:wisteria_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_wisteria_log) | cutting | environmental:stripped_wisteria_log |
+| [environmental:stripped_wisteria_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_environmental_wisteria_wood) | cutting | environmental:wisteria_wood |
+| [6x environmental:wisteria_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_environmental_wisteria_wood) | cutting | environmental:stripped_wisteria_wood |
+| [6x iceandfire:dreadwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_iceandfire_dreadwood_log) | cutting | iceandfire:dreadwood_log |
+| [minecraft:stripped_acacia_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_acacia_log) | cutting | minecraft:acacia_log |
+| [6x minecraft:acacia_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_acacia_log) | cutting | minecraft:stripped_acacia_log |
+| [minecraft:stripped_acacia_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_acacia_wood) | cutting | minecraft:acacia_wood |
+| [6x minecraft:acacia_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_acacia_wood) | cutting | minecraft:stripped_acacia_wood |
+| [minecraft:stripped_birch_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_birch_log) | cutting | minecraft:birch_log |
+| [6x minecraft:birch_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_birch_log) | cutting | minecraft:stripped_birch_log |
+| [minecraft:stripped_birch_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_birch_wood) | cutting | minecraft:birch_wood |
+| [6x minecraft:birch_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_birch_wood) | cutting | minecraft:stripped_birch_wood |
+| [minecraft:stripped_cherry_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_cherry_log) | cutting | minecraft:cherry_log |
+| [6x minecraft:cherry_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_cherry_log) | cutting | minecraft:stripped_cherry_log |
+| [minecraft:stripped_cherry_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_cherry_wood) | cutting | minecraft:cherry_wood |
+| [6x minecraft:cherry_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_cherry_wood) | cutting | minecraft:stripped_cherry_wood |
+| [minecraft:stripped_crimson_hyphae](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_crimson_hyphae) | cutting | minecraft:crimson_hyphae |
+| [6x minecraft:crimson_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_crimson_hyphae) | cutting | minecraft:stripped_crimson_hyphae |
+| [minecraft:stripped_crimson_stem](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_crimson_stem) | cutting | minecraft:crimson_stem |
+| [6x minecraft:crimson_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_crimson_stem) | cutting | minecraft:stripped_crimson_stem |
+| [minecraft:stripped_dark_oak_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_dark_oak_log) | cutting | minecraft:dark_oak_log |
+| [6x minecraft:dark_oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_dark_oak_log) | cutting | minecraft:stripped_dark_oak_log |
+| [minecraft:stripped_dark_oak_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_dark_oak_wood) | cutting | minecraft:dark_oak_wood |
+| [6x minecraft:dark_oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_dark_oak_wood) | cutting | minecraft:stripped_dark_oak_wood |
+| [minecraft:stripped_jungle_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_jungle_log) | cutting | minecraft:jungle_log |
+| [6x minecraft:jungle_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_jungle_log) | cutting | minecraft:stripped_jungle_log |
+| [minecraft:stripped_jungle_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_jungle_wood) | cutting | minecraft:jungle_wood |
+| [6x minecraft:jungle_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_jungle_wood) | cutting | minecraft:stripped_jungle_wood |
+| [minecraft:stripped_mangrove_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_mangrove_log) | cutting | minecraft:mangrove_log |
+| [6x minecraft:mangrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_mangrove_log) | cutting | minecraft:stripped_mangrove_log |
+| [minecraft:stripped_mangrove_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_mangrove_wood) | cutting | minecraft:mangrove_wood |
+| [6x minecraft:mangrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_mangrove_wood) | cutting | minecraft:stripped_mangrove_wood |
+| [minecraft:stripped_oak_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_oak_log) | cutting | minecraft:oak_log |
+| [6x minecraft:oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_oak_log) | cutting | minecraft:stripped_oak_log |
+| [minecraft:stripped_oak_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_oak_wood) | cutting | minecraft:oak_wood |
+| [6x minecraft:oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_oak_wood) | cutting | minecraft:stripped_oak_wood |
+| [minecraft:stripped_spruce_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_spruce_log) | cutting | minecraft:spruce_log |
+| [6x minecraft:spruce_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_spruce_log) | cutting | minecraft:stripped_spruce_log |
+| [minecraft:stripped_spruce_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_spruce_wood) | cutting | minecraft:spruce_wood |
+| [6x minecraft:spruce_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_spruce_wood) | cutting | minecraft:stripped_spruce_wood |
+| [minecraft:stripped_warped_hyphae](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_warped_hyphae) | cutting | minecraft:warped_hyphae |
+| [6x minecraft:warped_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_warped_hyphae) | cutting | minecraft:stripped_warped_hyphae |
+| [minecraft:stripped_warped_stem](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_minecraft_warped_stem) | cutting | minecraft:warped_stem |
+| [6x minecraft:warped_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_minecraft_warped_stem) | cutting | minecraft:stripped_warped_stem |
+| [quark:stripped_ancient_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_quark_ancient_log) | cutting | quark:ancient_log |
+| [6x quark:ancient_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_quark_ancient_log) | cutting | quark:stripped_ancient_log |
+| [quark:stripped_ancient_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_quark_ancient_wood) | cutting | quark:ancient_wood |
+| [6x quark:ancient_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_quark_ancient_wood) | cutting | quark:stripped_ancient_wood |
+| [quark:stripped_azalea_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_quark_azalea_log) | cutting | quark:azalea_log |
+| [6x quark:azalea_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_quark_azalea_log) | cutting | quark:stripped_azalea_log |
+| [quark:stripped_azalea_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_quark_azalea_wood) | cutting | quark:azalea_wood |
+| [6x quark:azalea_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_quark_azalea_wood) | cutting | quark:stripped_azalea_wood |
+| [quark:stripped_blossom_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_quark_blossom_log) | cutting | quark:blossom_log |
+| [6x quark:blossom_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_quark_blossom_log) | cutting | quark:stripped_blossom_log |
+| [quark:stripped_blossom_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_quark_blossom_wood) | cutting | quark:blossom_wood |
+| [6x quark:blossom_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_quark_blossom_wood) | cutting | quark:stripped_blossom_wood |
+| [twilightforest:stripped_canopy_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_canopy_log) | cutting | twilightforest:canopy_log |
+| [6x twilightforest:canopy_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_canopy_log) | cutting | twilightforest:stripped_canopy_log |
+| [twilightforest:stripped_canopy_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_canopy_wood) | cutting | twilightforest:canopy_wood |
+| [6x twilightforest:canopy_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_canopy_wood) | cutting | twilightforest:stripped_canopy_wood |
+| [twilightforest:stripped_dark_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_dark_log) | cutting | twilightforest:dark_log |
+| [6x twilightforest:dark_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_dark_log) | cutting | twilightforest:stripped_dark_log |
+| [twilightforest:stripped_dark_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_dark_wood) | cutting | twilightforest:dark_wood |
+| [6x twilightforest:dark_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_dark_wood) | cutting | twilightforest:stripped_dark_wood |
+| [twilightforest:stripped_mangrove_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_mangrove_log) | cutting | twilightforest:mangrove_log |
+| [6x twilightforest:mangrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_mangrove_log) | cutting | twilightforest:stripped_mangrove_log |
+| [twilightforest:stripped_mangrove_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_mangrove_wood) | cutting | twilightforest:mangrove_wood |
+| [6x twilightforest:mangrove_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_mangrove_wood) | cutting | twilightforest:stripped_mangrove_wood |
+| [twilightforest:stripped_mining_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_mining_log) | cutting | twilightforest:mining_log |
+| [6x twilightforest:mining_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_mining_log) | cutting | twilightforest:stripped_mining_log |
+| [twilightforest:stripped_mining_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_mining_wood) | cutting | twilightforest:mining_wood |
+| [6x twilightforest:mining_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_mining_wood) | cutting | twilightforest:stripped_mining_wood |
+| [twilightforest:stripped_sorting_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_sorting_log) | cutting | twilightforest:sorting_log |
+| [6x twilightforest:sorting_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_sorting_log) | cutting | twilightforest:stripped_sorting_log |
+| [twilightforest:stripped_sorting_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_sorting_wood) | cutting | twilightforest:sorting_wood |
+| [6x twilightforest:sorting_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_sorting_wood) | cutting | twilightforest:stripped_sorting_wood |
+| [twilightforest:stripped_time_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_time_log) | cutting | twilightforest:time_log |
+| [6x twilightforest:time_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_time_log) | cutting | twilightforest:stripped_time_log |
+| [twilightforest:stripped_time_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_time_wood) | cutting | twilightforest:time_wood |
+| [6x twilightforest:time_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_time_wood) | cutting | twilightforest:stripped_time_wood |
+| [twilightforest:stripped_transformation_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_transformation_log) | cutting | twilightforest:transformation_log |
+| [6x twilightforest:transformation_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_transformation_log) | cutting | twilightforest:stripped_transformation_log |
+| [twilightforest:stripped_transformation_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_transformation_wood) | cutting | twilightforest:transformation_wood |
+| [6x twilightforest:transformation_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_transformation_wood) | cutting | twilightforest:stripped_transformation_wood |
+| [twilightforest:stripped_twilight_oak_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_twilight_oak_log) | cutting | twilightforest:twilight_oak_log |
+| [6x twilightforest:twilight_oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_twilight_oak_log) | cutting | twilightforest:stripped_twilight_oak_log |
+| [twilightforest:stripped_twilight_oak_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_twilightforest_twilight_oak_wood) | cutting | twilightforest:twilight_oak_wood |
+| [6x twilightforest:twilight_oak_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_twilightforest_twilight_oak_wood) | cutting | twilightforest:stripped_twilight_oak_wood |
+| [upgrade_aquatic:stripped_driftwood_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_upgrade_aquatic_driftwood_log) | cutting | upgrade_aquatic:driftwood_log |
+| [6x upgrade_aquatic:driftwood_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_upgrade_aquatic_driftwood_log) | cutting | upgrade_aquatic:stripped_driftwood_log |
+| [upgrade_aquatic:stripped_river_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_upgrade_aquatic_river_log) | cutting | upgrade_aquatic:river_log |
+| [6x upgrade_aquatic:river_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_upgrade_aquatic_river_log) | cutting | upgrade_aquatic:stripped_river_log |
+| [upgrade_aquatic:stripped_river_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_upgrade_aquatic_river_wood) | cutting | upgrade_aquatic:river_wood |
+| [6x upgrade_aquatic:river_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_upgrade_aquatic_river_wood) | cutting | upgrade_aquatic:stripped_river_wood |
+| [witchery:stripped_alder_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_witchery_alder_log) | cutting | witchery:alder_log |
+| [6x witchery:alder_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_witchery_alder_log) | cutting | witchery:stripped_alder_log |
+| [witchery:stripped_alder_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_witchery_alder_wood) | cutting | witchery:alder_wood |
+| [6x witchery:alder_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_witchery_alder_wood) | cutting | witchery:stripped_alder_wood |
+| [witchery:stripped_hawthorn_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_witchery_hawthorn_log) | cutting | witchery:hawthorn_log |
+| [6x witchery:hawthorn_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_witchery_hawthorn_log) | cutting | witchery:stripped_hawthorn_log |
+| [witchery:stripped_hawthorn_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_witchery_hawthorn_wood) | cutting | witchery:hawthorn_wood |
+| [6x witchery:hawthorn_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_witchery_hawthorn_wood) | cutting | witchery:stripped_hawthorn_wood |
+| [witchery:stripped_rowan_log](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_witchery_rowan_log) | cutting | witchery:rowan_log |
+| [6x witchery:rowan_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_witchery_rowan_log) | cutting | witchery:stripped_rowan_log |
+| [witchery:stripped_rowan_wood](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_witchery_rowan_wood) | cutting | witchery:rowan_wood |
+| [6x witchery:rowan_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_witchery_rowan_wood) | cutting | witchery:stripped_rowan_wood |
+| [minecraft:stripped_bamboo_block](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fstrip_bamboo_block) | cutting | minecraft:bamboo_block |
+| [3x minecraft:bamboo_planks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsaw_bamboo) | cutting | minecraft:stripped_bamboo_block |
+| [minecraft:sand](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fgravel_to_sand) | milling | minecraft:gravel |
+| [create:wheat_flour](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fwheat_flour) | milling | minecraft:wheat |
+| [2x minecraft:dirt](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Frenewable_dirt) | compacting | minecraft:gravel + minecraft:clay_ball + {"fluid": "minecraft:water", "amount": 250} |
+| [minecraft:mud](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fmud) | mixing | minecraft:dirt + {"fluid": "minecraft:water", "amount": 250} |
+| [minecraft:clay_ball](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fmud_clay) | splashing | minecraft:mud |
+| [minecraft:soul_sand](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fsoul_sand) | haunting | minecraft:sand |
+| [minecraft:calcite](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fcalcite) | compacting | minecraft:bone_meal + minecraft:clay_ball |
+| [sophisticatedstorage:upgrade_base](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_upgrade_base) | shaped | kubejs:tk3_rotation_mechanism + create:iron_sheet + #minecraft:planks |
+| [sophisticatedbackpacks:upgrade_base](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_upgrade_base) | shaped | kubejs:tk3_rotation_mechanism + create:iron_sheet + #minecraft:planks |
+| [create:andesite_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fandesite_casing_manual) | shapeless | #c:stripped_logs + create:andesite_alloy |
+| [create:andesite_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fandesite_casing_automated) | deploying | #c:stripped_logs + create:andesite_alloy |
+| [create:iron_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Firon_sheet) | pressing | minecraft:iron_ingot |
+| [create:golden_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fgolden_sheet) | pressing | minecraft:gold_ingot |
+| [create:sand_paper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsand_paper) | shapeless | minecraft:paper + minecraft:sand |
+| [create:red_sand_paper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fred_sand_paper) | shapeless | minecraft:paper + minecraft:red_sand |
+| [create:andesite_alloy_block](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fandesite_alloy_block_packing) | shaped | create:andesite_alloy |
+| [9x create:andesite_alloy](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fandesite_alloy_unpacking) | shapeless | create:andesite_alloy_block |
+| [create:zinc_block](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_block_packing) | shaped | create:zinc_ingot |
+| [9x create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_ingot_unpacking) | shapeless | create:zinc_block |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_ingot_from_nuggets) | shaped | create:zinc_nugget |
+| [9x create:zinc_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_nugget_from_ingot) | shapeless | create:zinc_ingot |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_smelting_raw_ore) | smelting | #c:raw_materials/zinc |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_smelting_ore) | smelting | #c:ores/zinc |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_blasting_raw_ore) | blasting | #c:raw_materials/zinc |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_blasting_ore) | blasting | #c:ores/zinc |
+| [create:wrench](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fwrench) | shaped | create:iron_sheet + create:cogwheel + minecraft:stick |
+| [create:goggles](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fgoggles) | shaped | minecraft:glass + minecraft:string + create:andesite_alloy |
+| [create:whisk](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fwhisk) | shaped | create:andesite_alloy + create:iron_sheet |
+| [4x create:piston_extension_pole](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpiston_extension_pole) | shaped | minecraft:stick + create:andesite_alloy |
+| [4x create:gantry_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fgantry_shaft) | shaped | create:cogwheel + create:shaft |
+| [8x create:metal_girder](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fmetal_girder) | shaped | create:iron_sheet + create:andesite_alloy |
+| [4x create:metal_bracket](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fmetal_bracket) | shapeless | create:iron_sheet + create:andesite_alloy |
+| [4x create:wooden_bracket](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fwooden_bracket) | shapeless | #minecraft:planks + minecraft:stick |
+| [2x create:white_sail](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fwhite_sail) | shaped | #minecraft:wool + minecraft:stick + create:andesite_alloy |
+| [create:sail_frame](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsail_frame) | shapeless | create:white_sail |
+| [create:white_sail](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsail_from_frame) | shapeless | create:sail_frame + #minecraft:wool |
+| [create:super_glue](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsuper_glue) | shaped | minecraft:slime_ball + create:iron_sheet + minecraft:iron_nugget |
+| [create:sticky_mechanical_piston](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsticky_mechanical_piston) | deploying | create:mechanical_piston + minecraft:slime_ball |
+| [create:mechanical_piston](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpiston_unstick) | shapeless | create:sticky_mechanical_piston |
+| [create:secondary_linear_chassis](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsecondary_linear_chassis_conversion) | shapeless | create:linear_chassis |
+| [create:linear_chassis](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Flinear_chassis_conversion) | shapeless | create:secondary_linear_chassis |
+| [create:stressometer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fstressometer_conversion) | shapeless | create:speedometer |
+| [create:speedometer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fspeedometer_conversion) | shapeless | create:stressometer |
+| [create:vertical_gearbox](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fvertical_gearbox_conversion) | shapeless | create:gearbox |
+| [create:gearbox](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fgearbox_conversion) | shapeless | create:vertical_gearbox |
+| [create:hand_crank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fhand_crank) | shapeless | kubejs:tk3_kinetic_machine + minecraft:stick |
+| [create:turntable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fturntable) | shapeless | kubejs:tk3_kinetic_machine + create:cogwheel |
+| [2x create:sticker](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fsticker) | shapeless | kubejs:tk3_kinetic_machine + minecraft:slime_ball |
+| [create:filter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ffilter) | shaped | minecraft:iron_nugget + #minecraft:wool |
+| [2x create:minecart_coupling](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fminecart_coupling) | shaped | minecraft:iron_nugget + create:andesite_alloy + minecraft:slime_ball |
+| [create:clipboard](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_appliances_clipboard) | shaped | create:andesite_alloy + #minecraft:planks + minecraft:paper |
+| [create:crafting_blueprint](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_appliances_crafting_blueprint) | shapeless | minecraft:painting + minecraft:crafting_table |
+| [create:empty_schematic](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_schematics_empty_schematic) | shapeless | minecraft:paper + #c:dyes/light_blue |
+| [create:schematic_and_quill](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_schematics_schematic_and_quill) | shapeless | create:empty_schematic + #c:feathers |
+| [create:schematic_table](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_schematics_schematic_table) | shaped | minecraft:smooth_stone + #minecraft:wooden_slabs |
+| [create:placard](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_kinetics_placard) | shapeless | minecraft:item_frame + #c:plates/brass |
+| [create:desk_bell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_logistics_desk_bell) | shapeless | create:andesite_casing + #c:plates/gold |
+| [create:cuckoo_clock](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_kinetics_cuckoo_clock) | shaped | minecraft:clock + create:andesite_casing + #minecraft:planks |
+| [create:dough](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_appliances_dough) | shapeless | #c:flours/wheat + minecraft:water_bucket |
+| [2x create:tree_fertilizer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ftree_fertilizer) | shapeless | 2x #minecraft:small_flowers + minecraft:bone_meal + minecraft:clay_ball |
+| [4x create:dough](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fdough_bulk) | mixing | 4x create:wheat_flour + {"fluid": "minecraft:water", "amount": 1000} |
+| [4x create:cardboard](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcardboard) | compacting | 2x minecraft:paper + {"fluid": "minecraft:water", "amount": 250} |
+| [create:cardboard_block](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcardboard_block) | shaped | create:cardboard |
+| [4x create:cardboard](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcardboard_unpacking) | shapeless | create:cardboard_block |
+| [create:filter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ffilter_clear) | shapeless | create:filter |
+| [create:clipboard](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fclipboard_clear) | shapeless | create:clipboard |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 1 | 2x architects_palette:algal_blend | Shapeless crafting | minecraft:kelp + minecraft:clay_ball | `kubejs:tk3/tier_1/algal_blend` |
-| 1 | 4x architects_palette:algal_blend | mixing | minecraft:kelp + minecraft:clay_ball | `kubejs:tk3/tier_1/algal_blend_bulk` |
-| 1 | 2x create:andesite_alloy | Shapeless crafting | minecraft:andesite + architects_palette:algal_blend | `kubejs:tk3/tier_1/andesite_alloy` |
-| 1 | 4x create:andesite_alloy | mixing | minecraft:andesite + architects_palette:algal_blend | `kubejs:tk3/tier_1/andesite_alloy_bulk` |
-| 1 | kubejs:tk3_rotation_mechanism | sequence | #minecraft:wooden_slabs + create:andesite_alloy + create:andesite_alloy + betterend:iron_hammer | `kubejs:tk3/tier_1/rotation_mechanism_automated` |
-| 1 | 3x create:water_wheel | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/water_wheel` |
-| 1 | create:large_water_wheel | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/large_water_wheel` |
-| 1 | create:mechanical_press | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_press` |
-| 1 | create:mechanical_mixer | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_mixer` |
-| 1 | create:encased_fan | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/encased_fan` |
-| 1 | create:mechanical_saw | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_saw` |
-| 1 | create:mechanical_drill | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_drill` |
-| 1 | create:mechanical_bearing | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_bearing` |
-| 1 | create:mechanical_harvester | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_harvester` |
-| 1 | create:deployer | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/deployer` |
-| 1 | 2x create:basin | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/basin` |
-| 1 | 4x create:andesite_funnel | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/andesite_funnel` |
-| 1 | create:portable_storage_interface | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/portable_storage_interface` |
-| 1 | minecraft:gravel | milling | minecraft:cobblestone | `kubejs:tk3/tier_1/cobble_to_gravel` |
-| 1 | minecraft:clay_ball | splashing | minecraft:sand | `kubejs:tk3/tier_1/renewable_clay` |
-| 2 | kubejs:tk3_sealed_mechanism | sequence | kubejs:tk3_rotation_mechanism + create:copper_sheet + minecraft:slime_ball + farmersdelight:iron_knife | `kubejs:tk3/tier_2/tk3_sealed_mechanism` |
-| 2 | 16x create:fluid_pipe | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/fluid_pipe` |
-| 2 | create:mechanical_pump | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/mechanical_pump` |
-| 2 | 3x create:fluid_tank | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/fluid_tank` |
-| 2 | create:spout | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/spout` |
-| 2 | create:item_drain | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/item_drain` |
-| 2 | create:hose_pulley | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/hose_pulley` |
-| 2 | create:portable_fluid_interface | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/portable_fluid_interface` |
-| 2 | create:steam_engine | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/steam_engine` |
-| 2 | createaddition:rolling_mill | Shapeless crafting | kubejs:tk3_hydraulic_machine + create:mechanical_press + minecraft:copper_ingot | `kubejs:tk3/tier_2/rolling_mill` |
-| 2 | 2x minecraft:slime_ball | mixing | minecraft:kelp + minecraft:wheat + 250 mB minecraft:water | `kubejs:tk3/tier_2/renewable_sealant` |
-| 3 | 2x create:brass_ingot | mixing | minecraft:copper_ingot + create:zinc_ingot | `kubejs:tk3/tier_3/brass_ingot` |
-| 3 | create:precision_mechanism | sequence | kubejs:tk3_sealed_mechanism + create:brass_sheet + create:electron_tube + create:sand_paper | `kubejs:tk3/tier_3/precision_mechanism` |
-| 3 | 6x create:brass_funnel | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/brass_funnel` |
-| 3 | 6x create:brass_tunnel | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/brass_tunnel` |
-| 3 | create:mechanical_arm | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/mechanical_arm` |
-| 3 | create:rotation_speed_controller | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/rotation_speed_controller` |
-| 3 | 3x create:mechanical_crafter | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/mechanical_crafter` |
-| 3 | create:sequenced_gearshift | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/sequenced_gearshift` |
-| 3 | create:packager | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/packager` |
-| 3 | create:stock_link | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/stock_link` |
-| 3 | create:stock_ticker | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/stock_ticker` |
-| 3 | create:repackager | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/repackager` |
-| 3 | create:package_frogport | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/package_frogport` |
-| 3 | create_enchantment_industry:grindstone_drain | Shapeless crafting | create:precision_mechanism + minecraft:grindstone + create:brass_casing | `kubejs:tk3/tier_3/grindstone_drain` |
-| 3 | create_enchantment_industry:printer | Shapeless crafting | create:precision_mechanism + minecraft:book + create:mechanical_press | `kubejs:tk3/tier_3/printer` |
-| 3 | aeronautics:propeller_bearing | Shapeless crafting | create:precision_mechanism + create:mechanical_bearing + create:propeller | `kubejs:tk3/tier_3/propeller_bearing` |
-| 4 | ars_nouveau:enchanting_apparatus | Shapeless crafting | kubejs:tk3_precision_machine + minecraft:diamond + ars_nouveau:source_gem | `kubejs:tk3/tier_4/enchanting_apparatus` |
-| 4 | irons_spellbooks:arcane_essence | haunting | ars_nouveau:source_gem | `kubejs:tk3/tier_4/arcane_essence` |
-| 4 | kubejs:tk3_arcane_mechanism | sequence | create:precision_mechanism + ars_nouveau:source_gem + irons_spellbooks:arcane_essence + ars_nouveau:manipulation_essence + minecraft:gold_ingot + ars_nouveau:enchanters_sword | `kubejs:tk3/tier_4/tk3_arcane_mechanism` |
-| 4 | ars_nouveau:agronomic_sourcelink | apparatus | kubejs:tk3_arcane_machine + minecraft:wheat + ars_nouveau:source_gem | `kubejs:tk3/tier_4/agronomic_sourcelink` |
-| 4 | ars_nouveau:relay | apparatus | kubejs:tk3_arcane_machine + minecraft:redstone + ars_nouveau:source_gem | `kubejs:tk3/tier_4/relay` |
-| 4 | ars_nouveau:starbuncle_charm | apparatus | kubejs:tk3_arcane_machine + minecraft:gold_ingot + ars_nouveau:source_gem | `kubejs:tk3/tier_4/starbuncle_charm` |
-| 4 | ars_nouveau:whirlisprig_charm | apparatus | kubejs:tk3_arcane_machine + minecraft:oak_sapling + ars_nouveau:source_gem | `kubejs:tk3/tier_4/whirlisprig_charm` |
-| 4 | ars_nouveau:wixie_charm | apparatus | kubejs:tk3_arcane_machine + minecraft:cauldron + ars_nouveau:source_gem | `kubejs:tk3/tier_4/wixie_charm` |
-| 4 | irons_spellbooks:alchemist_cauldron | apparatus | kubejs:tk3_arcane_machine + minecraft:cauldron + ars_nouveau:source_gem | `kubejs:tk3/tier_4/alchemist_cauldron` |
-| 4 | irons_spellbooks:arcane_anvil | apparatus | kubejs:tk3_arcane_machine + minecraft:anvil + ars_nouveau:source_gem | `kubejs:tk3/tier_4/arcane_anvil` |
-| 4 | create_enchantment_industry:blaze_enchanter | apparatus | kubejs:tk3_arcane_machine + minecraft:enchanting_table + ars_nouveau:source_gem | `kubejs:tk3/tier_4/blaze_enchanter` |
-| 4 | 2x irons_spellbooks:common_ink | mixing | minecraft:ink_sac + irons_spellbooks:arcane_essence + 250 mB minecraft:water | `kubejs:tk3/tier_4/common_ink` |
-| 5 | 2x mekanism:ingot_steel | mixing | 2x minecraft:iron_ingot + minecraft:coal | `kubejs:tk3/tier_5/steel_bootstrap` |
-| 5 | mekanism:steel_casing | Shaped crafting | S = mekanism:ingot_steel, O = mekanism:ingot_osmium, P = kubejs:tk3_precision_machine, A = kubejs:tk3_arcane_machine · SPS / OAO / SSS | `kubejs:tk3/tier_5/steel_casing` |
-| 5 | mekanism:metallurgic_infuser | deploying | mekanism:steel_casing + ars_nouveau:wilden_tribute | `kubejs:tk3/tier_5/metallurgic_infuser` |
-| 5 | mekanism:enrichment_chamber | Shapeless crafting | mekanism:steel_casing + mekanism:alloy_infused + create:precision_mechanism | `kubejs:tk3/tier_5/enrichment_chamber` |
-| 5 | mekanism:crusher | Shapeless crafting | mekanism:steel_casing + minecraft:diamond + create:precision_mechanism | `kubejs:tk3/tier_5/crusher` |
-| 5 | mekanism:energized_smelter | Shapeless crafting | mekanism:steel_casing + minecraft:furnace + create:precision_mechanism | `kubejs:tk3/tier_5/energized_smelter` |
-| 5 | mekanismgenerators:heat_generator | Shapeless crafting | mekanism:steel_casing + minecraft:furnace + create:precision_mechanism | `kubejs:tk3/tier_5/heat_generator` |
-| 5 | createaddition:alternator | Shapeless crafting | mekanism:steel_casing + createaddition:copper_spool + create:precision_mechanism | `kubejs:tk3/tier_5/alternator` |
-| 5 | createaddition:electric_motor | Shapeless crafting | mekanism:steel_casing + createaddition:capacitor + create:precision_mechanism | `kubejs:tk3/tier_5/electric_motor` |
-| 5 | 2x mekanism:dust_iron | enriching | minecraft:raw_iron | `kubejs:tk3/tier_5/iron_refining` |
-| 5 | 2x mekanism:dust_copper | enriching | minecraft:raw_copper | `kubejs:tk3/tier_5/copper_refining` |
-| 5 | 4x mekanism:basic_universal_cable | Shapeless crafting | mekanism:ingot_steel + createaddition:copper_spool + minecraft:redstone | `kubejs:tk3/tier_5/basic_universal_cable` |
-| 5 | 4x mekanism:basic_mechanical_pipe | Shapeless crafting | mekanism:ingot_steel + create:fluid_pipe + minecraft:glass | `kubejs:tk3/tier_5/basic_mechanical_pipe` |
-| 5 | 4x mekanism:basic_logistical_transporter | Shapeless crafting | mekanism:ingot_steel + create:brass_funnel + minecraft:redstone | `kubejs:tk3/tier_5/basic_logistical_transporter` |
-| 1 | 8x create:shaft | Shapeless crafting | create:andesite_alloy + minecraft:stick | `kubejs:tk3/tier_1/shaft` |
-| 1 | 2x create:cogwheel | Shapeless crafting | create:shaft + #minecraft:planks | `kubejs:tk3/tier_1/cogwheel` |
-| 1 | create:large_cogwheel | Shapeless crafting | 2x create:cogwheel + #minecraft:planks | `kubejs:tk3/tier_1/large_cogwheel` |
-| 1 | 3x create:belt_connector | Shapeless crafting | 6x minecraft:dried_kelp | `kubejs:tk3/tier_1/belt_connector` |
-| 1 | create:propeller | Shaped crafting | S = create:iron_sheet, A = create:andesite_alloy ·  S  / SAS /  S  | `kubejs:tk3/tier_1/propeller` |
-| 1 | create:gearbox | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/gearbox` |
-| 1 | create:vertical_gearbox | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/vertical_gearbox` |
-| 1 | create:clutch | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/clutch` |
-| 1 | create:gearshift | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/gearshift` |
-| 1 | 3x create:encased_chain_drive | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/encased_chain_drive` |
-| 1 | create:adjustable_chain_gearshift | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/adjustable_chain_gearshift` |
-| 1 | create:mechanical_plough | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_plough` |
-| 1 | create:rope_pulley | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/rope_pulley` |
-| 1 | create:mechanical_piston | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/mechanical_piston` |
-| 1 | create:cart_assembler | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/cart_assembler` |
-| 1 | create:windmill_bearing | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/windmill_bearing` |
-| 1 | create:gantry_carriage | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/gantry_carriage` |
-| 1 | create:weighted_ejector | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/weighted_ejector` |
-| 1 | 4x create:linear_chassis | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/linear_chassis` |
-| 1 | 4x create:radial_chassis | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/radial_chassis` |
-| 1 | 4x create:andesite_tunnel | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/andesite_tunnel` |
-| 1 | 2x create:depot | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/depot` |
-| 1 | 6x create:chute | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/chute` |
-| 1 | create:speedometer | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/speedometer` |
-| 1 | create:analog_lever | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/tier_1/analog_lever` |
-| 2 | create:fluid_valve | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/fluid_valve` |
-| 2 | 6x create:copper_valve_handle | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/copper_valve_handle` |
-| 2 | create:steam_whistle | stonecutting | kubejs:tk3_hydraulic_machine | `kubejs:tk3/tier_2/steam_whistle` |
-| 2 | create:copper_backtank | Shapeless crafting | kubejs:tk3_sealed_mechanism + create:copper_casing + minecraft:copper_block | `kubejs:tk3/tier_2/copper_backtank` |
-| 2 | createaddition:capacitor | Shaped crafting | C = create:copper_sheet, R = minecraft:redstone, I = create:iron_sheet ·  C  / IRI /  C  | `kubejs:tk3/tier_2/capacitor` |
-| 3 | 2x create:content_observer | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/content_observer` |
-| 3 | 2x create:stockpile_switch | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/stockpile_switch` |
-| 3 | 3x create:smart_chute | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/smart_chute` |
-| 3 | 3x create:smart_fluid_pipe | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/smart_fluid_pipe` |
-| 3 | 2x create:display_link | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/display_link` |
-| 3 | 6x create:display_board | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/display_board` |
-| 3 | 4x create:redstone_link | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/redstone_link` |
-| 3 | create:elevator_pulley | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/elevator_pulley` |
-| 3 | create:contraption_controls | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/contraption_controls` |
-| 3 | create:track_station | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/track_station` |
-| 3 | 2x create:track_signal | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/track_signal` |
-| 3 | 2x create:track_observer | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/track_observer` |
-| 3 | create:controls | stonecutting | kubejs:tk3_precision_machine | `kubejs:tk3/tier_3/controls` |
-| 4 | ars_nouveau:relay_splitter | apparatus | kubejs:tk3_arcane_machine + ars_nouveau:relay + ars_nouveau:source_gem | `kubejs:tk3/tier_4/relay_splitter` |
-| 4 | ars_nouveau:relay_deposit | apparatus | kubejs:tk3_arcane_machine + minecraft:chest + ars_nouveau:source_gem | `kubejs:tk3/tier_4/relay_deposit` |
-| 4 | ars_nouveau:relay_collector | apparatus | kubejs:tk3_arcane_machine + minecraft:hopper + ars_nouveau:source_gem | `kubejs:tk3/tier_4/relay_collector` |
-| 4 | ars_nouveau:alchemical_sourcelink | apparatus | kubejs:tk3_arcane_machine + minecraft:brewing_stand + ars_nouveau:source_gem | `kubejs:tk3/tier_4/alchemical_sourcelink` |
-| 4 | ars_nouveau:mycelial_sourcelink | apparatus | kubejs:tk3_arcane_machine + minecraft:brown_mushroom + ars_nouveau:source_gem | `kubejs:tk3/tier_4/mycelial_sourcelink` |
-| 4 | create_enchantment_industry:mechanical_grindstone | apparatus | kubejs:tk3_arcane_machine + minecraft:grindstone + ars_nouveau:source_gem | `kubejs:tk3/tier_4/mechanical_grindstone` |
-| 4 | create_enchantment_industry:experience_hatch | apparatus | kubejs:tk3_arcane_machine + create:fluid_tank + ars_nouveau:source_gem | `kubejs:tk3/tier_4/experience_hatch` |
-| 5 | mekanism:basic_energy_cube | Shapeless crafting | mekanism:steel_casing + mekanism:alloy_infused + minecraft:redstone | `kubejs:tk3/tier_5/basic_energy_cube` |
-| 5 | mekanism:ingot_steel | mek smelting | mekanism:dust_steel | `kubejs:tk3/tier_5/steel_from_dust` |
+## Tier 2
 
-## Frames
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [kubejs:tk3_sealed_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Ftk3_sealed_mechanism) | sequence | kubejs:tk3_rotation_mechanism + create:copper_sheet + minecraft:slime_ball + farmersdelight:iron_knife |
+| [16x create:fluid_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Ffluid_pipe) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:mechanical_pump](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fmechanical_pump) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [3x create:fluid_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Ffluid_tank) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:spout](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fspout) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:item_drain](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fitem_drain) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:hose_pulley](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fhose_pulley) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:portable_fluid_interface](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fportable_fluid_interface) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:steam_engine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fsteam_engine) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [createaddition:rolling_mill](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Frolling_mill) | shapeless | kubejs:tk3_hydraulic_machine + create:mechanical_press + minecraft:copper_ingot |
+| [2x minecraft:slime_ball](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Frenewable_sealant) | mixing | minecraft:kelp + minecraft:wheat + {"fluid": "minecraft:water", "amount": 250} |
+| [create:fluid_valve](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Ffluid_valve) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [6x create:copper_valve_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fcopper_valve_handle) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:steam_whistle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fsteam_whistle) | stonecutting | kubejs:tk3_hydraulic_machine |
+| [create:copper_backtank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fcopper_backtank) | shapeless | kubejs:tk3_sealed_mechanism + create:copper_casing + minecraft:copper_block |
+| [createaddition:capacitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Fcapacitor) | shaped | create:copper_sheet + minecraft:redstone + create:iron_sheet |
+| [kubejs:tk3_hydraulic_machine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Fhydraulic_assembly) | deploying | create:copper_casing + kubejs:tk3_sealed_mechanism |
+| [minecraft:redstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_scoria) | milling | create:scoria |
+| [2x minecraft:redstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_scoria) | crushing | create:scoria |
+| [minecraft:coal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_scorchia) | milling | create:scorchia |
+| [2x minecraft:coal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_scorchia) | crushing | create:scorchia |
+| [3x create:copper_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_veridium) | milling | create:veridium |
+| [create:crushed_raw_copper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_veridium) | crushing | create:veridium |
+| [3x minecraft:iron_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_crimsite) | milling | create:crimsite |
+| [create:crushed_raw_iron](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_crimsite) | crushing | create:crimsite |
+| [minecraft:exposed_copper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fage_copper_block) | splashing | minecraft:copper_block |
+| [minecraft:weathered_copper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fage_exposed_copper) | splashing | minecraft:exposed_copper |
+| [minecraft:oxidized_copper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcompat%2Fage_weathered_copper) | splashing | minecraft:weathered_copper |
+| [sophisticatedstorage:pickup_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_pickup_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:hopper |
+| [sophisticatedstorage:filter_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_filter_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:paper |
+| [sophisticatedstorage:feeding_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_feeding_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:golden_carrot |
+| [sophisticatedstorage:pump_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_pump_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_hydraulic_machine + create:mechanical_pump |
+| [sophisticatedbackpacks:pickup_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_pickup_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:hopper |
+| [sophisticatedbackpacks:filter_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_filter_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:paper |
+| [sophisticatedbackpacks:feeding_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_feeding_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:golden_carrot |
+| [sophisticatedbackpacks:pump_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_pump_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_hydraulic_machine + create:mechanical_pump |
+| [sophisticatedstorage:copper_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_copper_chest) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:chest + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:iron_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_iron_chest) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:copper_chest + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:copper_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_copper_barrel) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:barrel + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:iron_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_iron_barrel) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:copper_barrel + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:limited_copper_barrel_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_copper_barrel_1) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_barrel_1 + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:limited_iron_barrel_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_iron_barrel_1) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_copper_barrel_1 + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:limited_copper_barrel_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_copper_barrel_2) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_barrel_2 + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:limited_iron_barrel_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_iron_barrel_2) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_copper_barrel_2 + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:limited_copper_barrel_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_copper_barrel_3) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_barrel_3 + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:limited_iron_barrel_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_iron_barrel_3) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_copper_barrel_3 + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:limited_copper_barrel_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_copper_barrel_4) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_barrel_4 + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:limited_iron_barrel_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_iron_barrel_4) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_copper_barrel_4 + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:copper_shulker_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_copper_shulker_box) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:shulker_box + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:iron_shulker_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_iron_shulker_box) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:copper_shulker_box + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedbackpacks:copper_backpack](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_copper_backpack) | sophisticatedbackpacks:backpack_upgrade | sophisticatedbackpacks:backpack + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedbackpacks:iron_backpack](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_iron_backpack) | sophisticatedbackpacks:backpack_upgrade | sophisticatedbackpacks:copper_backpack + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [sophisticatedstorage:basic_to_copper_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_basic_to_copper_tier_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_hydraulic_machine + minecraft:copper_ingot |
+| [sophisticatedstorage:copper_to_iron_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_copper_to_iron_tier_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [create:copper_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_casing_manual) | shapeless | #c:stripped_logs + minecraft:copper_ingot |
+| [create:copper_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_casing_automated) | deploying | #c:stripped_logs + minecraft:copper_ingot |
+| [create:copper_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_sheet) | pressing | minecraft:copper_ingot |
+| [minecraft:copper_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_ingot_from_nuggets) | shaped | create:copper_nugget |
+| [9x create:copper_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_nugget_from_ingot) | shapeless | minecraft:copper_ingot |
+| [2x create:item_vault](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fitem_vault) | shapeless | kubejs:tk3_hydraulic_machine + minecraft:chest |
+| [create:flywheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fflywheel) | shapeless | kubejs:tk3_hydraulic_machine + create:cogwheel |
+| [2x create:nozzle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fnozzle) | shapeless | kubejs:tk3_hydraulic_machine + create:iron_sheet |
+| [create:empty_blaze_burner](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fempty_blaze_burner) | shaped | create:iron_sheet + minecraft:netherrack |
+| [create:copper_diving_helmet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_diving_helmet) | shaped | create:copper_sheet + minecraft:glass |
+| [create:copper_diving_boots](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcopper_diving_boots) | shaped | create:copper_sheet + create:iron_sheet |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 1 | kubejs:tk3_kinetic_machine | Shaped crafting | A = create:andesite_alloy, C = create:andesite_casing, S = #minecraft:wooden_slabs · AAA / ACA / ASA | `kubejs:tk3/frames/kinetic_manual` |
-| 1 | kubejs:tk3_kinetic_machine | deploying | create:andesite_casing + kubejs:tk3_rotation_mechanism | `kubejs:tk3/frames/kinetic_automated` |
-| 2 | kubejs:tk3_hydraulic_machine | deploying | create:copper_casing + kubejs:tk3_sealed_mechanism | `kubejs:tk3/frames/hydraulic_assembly` |
-| 3 | kubejs:tk3_precision_machine | deploying | create:brass_casing + create:precision_mechanism | `kubejs:tk3/frames/precision_assembly` |
-| 4 | kubejs:tk3_arcane_machine | deploying | create_wizardry:arcane_casing + kubejs:tk3_arcane_mechanism | `kubejs:tk3/frames/arcane_calibration` |
-| 1 | create:millstone | stonecutting | kubejs:tk3_kinetic_machine | `kubejs:tk3/frames/create_millstone` |
-| 3 | 2x create:crushing_wheel | mechanical crafting | F = kubejs:tk3_precision_machine, A = create:andesite_alloy, P = #minecraft:planks ·  AAA  / AAPAA / APFPA / AAPAA /  AAA  | `kubejs:tk3/frames/create_crushing_wheel` |
-| 4 | create_wizardry:arcane_casing | apparatus | create:brass_casing + ars_nouveau:source_gem + irons_spellbooks:arcane_essence + minecraft:gold_ingot | `kubejs:tk3/frames/arcane_casing` |
+## Tier 3
 
-## Geology
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [2x create:brass_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fbrass_ingot) | mixing | minecraft:copper_ingot + create:zinc_ingot |
+| [create:precision_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fprecision_mechanism) | sequence | kubejs:tk3_sealed_mechanism + create:brass_sheet + create:electron_tube + create:sand_paper |
+| [6x create:brass_funnel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fbrass_funnel) | stonecutting | kubejs:tk3_precision_machine |
+| [6x create:brass_tunnel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fbrass_tunnel) | stonecutting | kubejs:tk3_precision_machine |
+| [create:mechanical_arm](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fmechanical_arm) | stonecutting | kubejs:tk3_precision_machine |
+| [create:rotation_speed_controller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Frotation_speed_controller) | stonecutting | kubejs:tk3_precision_machine |
+| [3x create:mechanical_crafter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fmechanical_crafter) | stonecutting | kubejs:tk3_precision_machine |
+| [create:sequenced_gearshift](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fsequenced_gearshift) | stonecutting | kubejs:tk3_precision_machine |
+| [create:packager](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fpackager) | stonecutting | kubejs:tk3_precision_machine |
+| [create:stock_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fstock_link) | stonecutting | kubejs:tk3_precision_machine |
+| [create:stock_ticker](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fstock_ticker) | stonecutting | kubejs:tk3_precision_machine |
+| [create:repackager](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Frepackager) | stonecutting | kubejs:tk3_precision_machine |
+| [create:package_frogport](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fpackage_frogport) | stonecutting | kubejs:tk3_precision_machine |
+| [create_enchantment_industry:grindstone_drain](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fgrindstone_drain) | shapeless | create:precision_mechanism + minecraft:grindstone + create:brass_casing |
+| [create_enchantment_industry:printer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fprinter) | shapeless | create:precision_mechanism + minecraft:book + create:mechanical_press |
+| [aeronautics:propeller_bearing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fpropeller_bearing) | shapeless | create:precision_mechanism + create:mechanical_bearing + create:propeller |
+| [2x create:content_observer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fcontent_observer) | stonecutting | kubejs:tk3_precision_machine |
+| [2x create:stockpile_switch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fstockpile_switch) | stonecutting | kubejs:tk3_precision_machine |
+| [3x create:smart_chute](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fsmart_chute) | stonecutting | kubejs:tk3_precision_machine |
+| [3x create:smart_fluid_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fsmart_fluid_pipe) | stonecutting | kubejs:tk3_precision_machine |
+| [2x create:display_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fdisplay_link) | stonecutting | kubejs:tk3_precision_machine |
+| [6x create:display_board](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fdisplay_board) | stonecutting | kubejs:tk3_precision_machine |
+| [4x create:redstone_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fredstone_link) | stonecutting | kubejs:tk3_precision_machine |
+| [create:elevator_pulley](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Felevator_pulley) | stonecutting | kubejs:tk3_precision_machine |
+| [create:contraption_controls](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fcontraption_controls) | stonecutting | kubejs:tk3_precision_machine |
+| [create:track_station](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Ftrack_station) | stonecutting | kubejs:tk3_precision_machine |
+| [2x create:track_signal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Ftrack_signal) | stonecutting | kubejs:tk3_precision_machine |
+| [2x create:track_observer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Ftrack_observer) | stonecutting | kubejs:tk3_precision_machine |
+| [create:controls](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fcontrols) | stonecutting | kubejs:tk3_precision_machine |
+| [kubejs:tk3_precision_machine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Fprecision_assembly) | deploying | create:brass_casing + create:precision_mechanism |
+| [2x create:crushing_wheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Fcreate_crushing_wheel) | mechanical_crafting | kubejs:tk3_precision_machine + create:andesite_alloy + #minecraft:planks |
+| [9x create:copper_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fwash_copper) | splashing | create:crushed_raw_copper |
+| [9x minecraft:iron_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fwash_iron) | splashing | create:crushed_raw_iron |
+| [3x create:zinc_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_asurine) | milling | create:asurine |
+| [create:crushed_raw_zinc](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_asurine) | crushing | create:asurine |
+| [9x create:zinc_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fwash_zinc) | splashing | create:crushed_raw_zinc |
+| [3x minecraft:gold_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fmilling_ochrum) | milling | create:ochrum |
+| [create:crushed_raw_gold](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fcrushing_ochrum) | crushing | create:ochrum |
+| [9x minecraft:gold_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fgeology%2Fwash_gold) | splashing | create:crushed_raw_gold |
+| [sophisticatedstorage:void_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_void_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + minecraft:lava_bucket |
+| [sophisticatedstorage:compacting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_compacting_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + create:mechanical_press |
+| [sophisticatedstorage:stonecutter_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_stonecutter_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + minecraft:stonecutter |
+| [sophisticatedstorage:crafting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_crafting_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + minecraft:crafting_table |
+| [sophisticatedstorage:magnet_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_magnet_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + minecraft:iron_ingot |
+| [sophisticatedstorage:advanced_compacting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_compacting_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:compacting_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_feeding_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_feeding_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:feeding_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_filter_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_filter_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:filter_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_hopper_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_hopper_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:hopper_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_jukebox_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_jukebox_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:jukebox_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_magnet_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_magnet_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:magnet_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_pickup_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_pickup_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:pickup_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_void_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_void_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:void_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedstorage:stack_upgrade_tier_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_stack_upgrade_tier_1) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedbackpacks:void_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_void_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_precision_machine + minecraft:lava_bucket |
+| [sophisticatedbackpacks:compacting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_compacting_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_precision_machine + create:mechanical_press |
+| [sophisticatedbackpacks:stonecutter_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_stonecutter_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_precision_machine + minecraft:stonecutter |
+| [sophisticatedbackpacks:crafting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_crafting_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_precision_machine + minecraft:crafting_table |
+| [sophisticatedbackpacks:magnet_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_magnet_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_precision_machine + minecraft:iron_ingot |
+| [sophisticatedbackpacks:advanced_compacting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_compacting_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:compacting_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_deposit_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_deposit_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:deposit_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_feeding_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_feeding_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:feeding_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_filter_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_filter_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:filter_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_jukebox_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_jukebox_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:jukebox_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_magnet_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_magnet_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:magnet_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_mob_catcher_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_mob_catcher_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:mob_catcher_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_pickup_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_pickup_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:pickup_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_refill_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_refill_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:refill_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_restock_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_restock_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:restock_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_tool_swapper_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_tool_swapper_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:tool_swapper_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_void_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_void_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:void_upgrade + kubejs:tk3_precision_machine + minecraft:redstone |
+| [sophisticatedbackpacks:stack_upgrade_tier_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_stack_upgrade_tier_1) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:upgrade_base + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:gold_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_gold_chest) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:iron_chest + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:gold_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_gold_barrel) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:iron_barrel + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:limited_gold_barrel_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_gold_barrel_1) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_iron_barrel_1 + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:limited_gold_barrel_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_gold_barrel_2) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_iron_barrel_2 + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:limited_gold_barrel_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_gold_barrel_3) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_iron_barrel_3 + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:limited_gold_barrel_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_gold_barrel_4) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_iron_barrel_4 + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:gold_shulker_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_gold_shulker_box) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:iron_shulker_box + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedbackpacks:gold_backpack](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_gold_backpack) | sophisticatedbackpacks:backpack_upgrade | sophisticatedbackpacks:iron_backpack + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:iron_to_gold_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_iron_to_gold_tier_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_precision_machine + minecraft:gold_ingot |
+| [sophisticatedstorage:controller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_controller) | shapeless | kubejs:tk3_precision_machine + minecraft:comparator + minecraft:chest |
+| [sophisticatedstorage:storage_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_storage_link) | shapeless | create:precision_mechanism + sophisticatedstorage:upgrade_base + minecraft:ender_pearl |
+| [sophisticatedstorage:storage_input](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_storage_input) | shapeless | create:precision_mechanism + sophisticatedstorage:upgrade_base + minecraft:hopper |
+| [sophisticatedstorage:storage_output](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_storage_output) | shapeless | create:precision_mechanism + sophisticatedstorage:upgrade_base + create:brass_funnel |
+| [sophisticatedstorage:storage_io](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_storage_io) | shapeless | create:precision_mechanism + sophisticatedstorage:upgrade_base + create:brass_tunnel |
+| [create:brass_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_casing_manual) | shapeless | #c:stripped_logs + create:brass_ingot |
+| [create:brass_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_casing_automated) | deploying | #c:stripped_logs + create:brass_ingot |
+| [create:brass_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_sheet) | pressing | create:brass_ingot |
+| [2x create:rose_quartz](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Frose_quartz_bulk) | mixing | 2x minecraft:quartz + 4x minecraft:redstone |
+| [create:rose_quartz](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Frose_quartz) | shapeless | minecraft:quartz + 4x minecraft:redstone |
+| [create:polished_rose_quartz](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpolished_rose_quartz) | sandpaper_polishing | create:rose_quartz |
+| [2x create:electron_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Felectron_tube) | shaped | create:polished_rose_quartz + minecraft:redstone + create:iron_sheet |
+| [create:electron_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Felectron_tube_automated) | deploying | create:iron_sheet + create:polished_rose_quartz |
+| [create:brass_block](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_block_packing) | shaped | create:brass_ingot |
+| [9x create:brass_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_ingot_unpacking) | shapeless | create:brass_block |
+| [create:brass_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_ingot_from_nuggets) | shaped | create:brass_nugget |
+| [9x create:brass_nugget](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_nugget_from_ingot) | shapeless | create:brass_ingot |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_smelting_crushed) | smelting | create:crushed_raw_zinc |
+| [create:zinc_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fzinc_blasting_crushed) | blasting | create:crushed_raw_zinc |
+| [create:brass_hand](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fbrass_hand) | shaped | create:andesite_alloy + create:brass_sheet |
+| [create:clockwork_bearing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fclockwork_bearing) | shapeless | kubejs:tk3_precision_machine + minecraft:clock |
+| [create:mechanical_roller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fmechanical_roller) | shapeless | kubejs:tk3_precision_machine + create:crushing_wheel |
+| [2x create:chain_conveyor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fchain_conveyor) | shapeless | kubejs:tk3_precision_machine + minecraft:chain |
+| [2x create:factory_gauge](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ffactory_gauge) | shapeless | kubejs:tk3_precision_machine + create:electron_tube |
+| [2x create:redstone_requester](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fredstone_requester) | shapeless | kubejs:tk3_precision_machine + create:stock_link |
+| [create:linked_controller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Flinked_controller) | shapeless | kubejs:tk3_precision_machine + create:redstone_link |
+| [create:schematicannon](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fschematicannon) | shapeless | kubejs:tk3_precision_machine + minecraft:dispenser |
+| [create:attribute_filter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fattribute_filter) | shaped | create:brass_sheet + create:filter + create:rose_quartz |
+| [create:package_filter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpackage_filter) | shaped | minecraft:paper + create:filter + create:electron_tube |
+| [2x create:pulse_repeater](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpulse_repeater) | shaped | minecraft:redstone + create:brass_sheet + minecraft:redstone_torch + create:iron_sheet |
+| [2x create:pulse_extender](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpulse_extender) | shaped | minecraft:redstone + create:brass_sheet + minecraft:comparator + create:iron_sheet |
+| [2x create:pulse_timer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpulse_timer) | shaped | minecraft:redstone + create:brass_sheet + minecraft:clock + create:iron_sheet |
+| [2x create:powered_latch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpowered_latch) | shaped | minecraft:redstone + create:brass_sheet + minecraft:lever + create:iron_sheet |
+| [2x create:powered_toggle_latch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpowered_toggle_latch) | shaped | minecraft:redstone + create:brass_sheet + minecraft:lever + create:iron_sheet |
+| [4x create:redstone_contact](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fredstone_contact) | shaped | minecraft:redstone + create:brass_sheet + minecraft:redstone + create:iron_sheet |
+| [4x create:nixie_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fnixie_tube) | shaped | minecraft:redstone + create:brass_sheet + minecraft:glass + create:iron_sheet |
+| [2x create:rose_quartz_lamp](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Frose_quartz_lamp) | shaped | minecraft:redstone + create:brass_sheet + minecraft:glowstone_dust + create:iron_sheet |
+| [create:transmitter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ftransmitter) | shaped | minecraft:lightning_rod + create:copper_sheet + minecraft:redstone |
+| [8x create:track](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ftrack) | deploying | minecraft:rail + create:brass_sheet |
+| [4x create:controller_rail](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcontroller_rail) | shaped | create:iron_sheet + minecraft:redstone + create:andesite_alloy + create:shaft |
+| [create:schedule](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fschedule) | shaped | minecraft:paper + create:electron_tube |
+| [4x create:crafter_slot_cover](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafter_slot_cover) | shapeless | create:brass_sheet + minecraft:paper |
+| [2x create:item_hatch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fitem_hatch) | shapeless | create:brass_sheet + minecraft:iron_trapdoor |
+| [create:peculiar_bell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fcrafting_curiosities_peculiar_bell) | shaped | #c:storage_blocks/brass + #c:plates/brass |
+| [create:attribute_filter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fattribute_filter_clear) | shapeless | create:attribute_filter |
+| [create:package_filter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fpackage_filter_clear) | shapeless | create:package_filter |
+| [create:schedule](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fschedule_clear) | shapeless | create:schedule |
+| [create:factory_gauge](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Ffactory_gauge_clear) | shapeless | create:factory_gauge |
+| [create:redstone_requester](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fredstone_requester_clear) | shapeless | create:redstone_requester |
+| [create:stock_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fstock_link_clear) | shapeless | create:stock_link |
+| [create:stock_ticker](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcreate%2Fstock_ticker_clear) | shapeless | create:stock_ticker |
+| [createminecolonies:colony_warehouse_stock_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateminecolonies_colony_warehouse_stock_link) | shapeless | create:stock_link + minecolonies:blockhutwarehouse + create:electron_tube |
+| [aeronautics:wooden_propeller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_wooden_propeller) | shapeless | create:propeller + #minecraft:planks |
+| [aeronautics:andesite_propeller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_andesite_propeller) | shapeless | create:propeller + create:andesite_alloy |
+| [create_enchantment_industry:mechanical_grindstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_crafting_mechanical_grindstone) | minecraft:crafting_shaped | kubejs:tk3_precision_machine + create:shaft |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 1 | minecraft:clay_ball | milling | minecraft:andesite | `kubejs:tk3/geology/milling_andesite` |
-| 1 | 2x minecraft:clay_ball | crushing | minecraft:andesite | `kubejs:tk3/geology/crushing_andesite` |
-| 1 | minecraft:quartz | milling | minecraft:diorite | `kubejs:tk3/geology/milling_diorite` |
-| 1 | 2x minecraft:quartz | crushing | minecraft:diorite | `kubejs:tk3/geology/crushing_diorite` |
-| 1 | minecraft:lapis_lazuli | milling | minecraft:granite | `kubejs:tk3/geology/milling_granite` |
-| 1 | 2x minecraft:lapis_lazuli | crushing | minecraft:granite | `kubejs:tk3/geology/crushing_granite` |
-| 1 | minecraft:bone_meal | milling | create:limestone | `kubejs:tk3/geology/milling_limestone` |
-| 1 | 2x minecraft:bone_meal | crushing | create:limestone | `kubejs:tk3/geology/crushing_limestone` |
-| 2 | minecraft:redstone | milling | create:scoria | `kubejs:tk3/geology/milling_scoria` |
-| 2 | 2x minecraft:redstone | crushing | create:scoria | `kubejs:tk3/geology/crushing_scoria` |
-| 2 | minecraft:coal | milling | create:scorchia | `kubejs:tk3/geology/milling_scorchia` |
-| 2 | 2x minecraft:coal | crushing | create:scorchia | `kubejs:tk3/geology/crushing_scorchia` |
-| 2 | 3x create:copper_nugget | milling | create:veridium | `kubejs:tk3/geology/milling_veridium` |
-| 2 | create:crushed_raw_copper | crushing | create:veridium | `kubejs:tk3/geology/crushing_veridium` |
-| 3 | 9x create:copper_nugget | splashing | create:crushed_raw_copper | `kubejs:tk3/geology/wash_copper` |
-| 2 | 3x minecraft:iron_nugget | milling | create:crimsite | `kubejs:tk3/geology/milling_crimsite` |
-| 2 | create:crushed_raw_iron | crushing | create:crimsite | `kubejs:tk3/geology/crushing_crimsite` |
-| 3 | 9x minecraft:iron_nugget | splashing | create:crushed_raw_iron | `kubejs:tk3/geology/wash_iron` |
-| 3 | 3x create:zinc_nugget | milling | create:asurine | `kubejs:tk3/geology/milling_asurine` |
-| 3 | create:crushed_raw_zinc | crushing | create:asurine | `kubejs:tk3/geology/crushing_asurine` |
-| 3 | 9x create:zinc_nugget | splashing | create:crushed_raw_zinc | `kubejs:tk3/geology/wash_zinc` |
-| 3 | 3x minecraft:gold_nugget | milling | create:ochrum | `kubejs:tk3/geology/milling_ochrum` |
-| 3 | create:crushed_raw_gold | crushing | create:ochrum | `kubejs:tk3/geology/crushing_ochrum` |
-| 3 | 9x minecraft:gold_nugget | splashing | create:crushed_raw_gold | `kubejs:tk3/geology/wash_gold` |
+## Tier 4
 
-## Compat
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [ars_nouveau:enchanting_apparatus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fenchanting_apparatus) | shapeless | kubejs:tk3_precision_machine + minecraft:diamond + ars_nouveau:source_gem |
+| [irons_spellbooks:arcane_essence](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Farcane_essence) | haunting | ars_nouveau:source_gem |
+| [kubejs:tk3_arcane_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Ftk3_arcane_mechanism) | sequence | create:precision_mechanism + ars_nouveau:source_gem + irons_spellbooks:arcane_essence + ars_nouveau:manipulation_essence + minecraft:gold_ingot + ars_nouveau:enchanters_sword |
+| [ars_nouveau:agronomic_sourcelink](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fagronomic_sourcelink) | apparatus | kubejs:tk3_arcane_machine + minecraft:wheat + ars_nouveau:source_gem |
+| [ars_nouveau:relay](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Frelay) | apparatus | kubejs:tk3_arcane_machine + minecraft:redstone + ars_nouveau:source_gem |
+| [ars_nouveau:starbuncle_charm](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fstarbuncle_charm) | apparatus | kubejs:tk3_arcane_machine + minecraft:gold_ingot + ars_nouveau:source_gem |
+| [ars_nouveau:whirlisprig_charm](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fwhirlisprig_charm) | apparatus | kubejs:tk3_arcane_machine + minecraft:oak_sapling + ars_nouveau:source_gem |
+| [ars_nouveau:wixie_charm](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fwixie_charm) | apparatus | kubejs:tk3_arcane_machine + minecraft:cauldron + ars_nouveau:source_gem |
+| [irons_spellbooks:alchemist_cauldron](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Falchemist_cauldron) | apparatus | kubejs:tk3_arcane_machine + minecraft:cauldron + ars_nouveau:source_gem |
+| [irons_spellbooks:arcane_anvil](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Farcane_anvil) | apparatus | kubejs:tk3_arcane_machine + minecraft:anvil + ars_nouveau:source_gem |
+| [create_enchantment_industry:blaze_enchanter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fblaze_enchanter) | apparatus | kubejs:tk3_arcane_machine + minecraft:enchanting_table + ars_nouveau:source_gem |
+| [2x irons_spellbooks:common_ink](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fcommon_ink) | mixing | minecraft:ink_sac + irons_spellbooks:arcane_essence + {"fluid": "minecraft:water", "amount": 250} |
+| [ars_nouveau:relay_splitter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Frelay_splitter) | apparatus | kubejs:tk3_arcane_machine + ars_nouveau:relay + ars_nouveau:source_gem |
+| [ars_nouveau:relay_deposit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Frelay_deposit) | apparatus | kubejs:tk3_arcane_machine + minecraft:chest + ars_nouveau:source_gem |
+| [ars_nouveau:relay_collector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Frelay_collector) | apparatus | kubejs:tk3_arcane_machine + minecraft:hopper + ars_nouveau:source_gem |
+| [ars_nouveau:alchemical_sourcelink](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Falchemical_sourcelink) | apparatus | kubejs:tk3_arcane_machine + minecraft:brewing_stand + ars_nouveau:source_gem |
+| [ars_nouveau:mycelial_sourcelink](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_4%2Fmycelial_sourcelink) | apparatus | kubejs:tk3_arcane_machine + minecraft:brown_mushroom + ars_nouveau:source_gem |
+| [kubejs:tk3_arcane_machine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Farcane_calibration) | deploying | create_wizardry:arcane_casing + kubejs:tk3_arcane_mechanism |
+| [irons_spellbooks:blank_rune](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_blank_rune) | compacting | minecraft:stone + irons_spellbooks:arcane_essence |
+| [2x irons_spellbooks:magic_cloth](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_magic_cloth) | mixing | #minecraft:wool + irons_spellbooks:arcane_essence + {"fluid": "minecraft:water", "amount": 250} |
+| [irons_spellbooks:arcane_ingot](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_arcane_ingot) | apparatus | minecraft:iron_ingot + ars_nouveau:source_gem + irons_spellbooks:arcane_essence + minecraft:gold_ingot |
+| [irons_spellbooks:fire_rune](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_fire_rune) | apparatus | irons_spellbooks:blank_rune + ars_nouveau:fire_essence + kubejs:tk3_arcane_mechanism |
+| [irons_spellbooks:ice_rune](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_ice_rune) | apparatus | irons_spellbooks:blank_rune + ars_nouveau:water_essence + kubejs:tk3_arcane_mechanism |
+| [irons_spellbooks:lightning_rune](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_lightning_rune) | apparatus | irons_spellbooks:blank_rune + ars_nouveau:air_essence + kubejs:tk3_arcane_mechanism |
+| [irons_spellbooks:nature_rune](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Firons_spellbooks_nature_rune) | apparatus | irons_spellbooks:blank_rune + ars_nouveau:earth_essence + kubejs:tk3_arcane_mechanism |
+| [irons_spellbooks:common_ink](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Fmana_ink) | cauldron_brew | minecraft:ink_sac |
+| [irons_spellbooks:common_ink](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fmagic%2Fbottle_common_ink) | cauldron_empty | minecraft:glass_bottle |
+| [sophisticatedstorage:xp_pump_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_xp_pump_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_arcane_machine + minecraft:experience_bottle |
+| [sophisticatedstorage:alchemy_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_alchemy_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_arcane_machine + minecraft:brewing_stand |
+| [sophisticatedstorage:advanced_alchemy_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_alchemy_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:alchemy_upgrade + kubejs:tk3_arcane_machine + minecraft:redstone |
+| [sophisticatedstorage:advanced_pump_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_advanced_pump_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:pump_upgrade + kubejs:tk3_arcane_machine + minecraft:redstone |
+| [sophisticatedbackpacks:xp_pump_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_xp_pump_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_arcane_machine + minecraft:experience_bottle |
+| [sophisticatedbackpacks:alchemy_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_alchemy_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_arcane_machine + minecraft:brewing_stand |
+| [sophisticatedbackpacks:advanced_alchemy_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_alchemy_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:alchemy_upgrade + kubejs:tk3_arcane_machine + minecraft:redstone |
+| [sophisticatedbackpacks:advanced_pump_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_advanced_pump_upgrade) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:pump_upgrade + kubejs:tk3_arcane_machine + minecraft:redstone |
+| [create_wizardry:arcane_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fframes%2Farcane_casing) | apparatus | create:brass_casing + ars_nouveau:source_gem + irons_spellbooks:arcane_essence + minecraft:gold_ingot |
+| [ars_creo:starbuncle_wheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fars_creo_starbuncle_wheel) | apparatus | kubejs:tk3_arcane_machine + ars_nouveau:starbuncle_charm + create:water_wheel |
+| [witchery:iron_witches_oven](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fwitchery_iron_witches_oven) | apparatus | kubejs:tk3_arcane_machine + minecraft:furnace + minecraft:iron_ingot |
+| [witchery:altar](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fwitchery_altar) | apparatus | kubejs:tk3_arcane_machine + ars_nouveau:source_gem + minecraft:stone |
+| [witchery:cauldron](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fwitchery_cauldron) | apparatus | kubejs:tk3_arcane_machine + minecraft:cauldron + irons_spellbooks:arcane_essence |
+| [witchery:spinning_wheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fwitchery_spinning_wheel) | apparatus | kubejs:tk3_arcane_machine + create:cogwheel + minecraft:string |
+| [create_wizardry:arcane_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_pressing_arcane_sheet) | create:pressing | irons_spellbooks:arcane_ingot |
+| [create_wizardry:arcane_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_filling_arcane_sheet) | create:filling | #create_wizardry:create_wizardry_buckets |
+| [4x create_wizardry:arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_arcane_pipe_from_pipe) | minecraft:crafting_shapeless | kubejs:tk3_arcane_machine + create:fluid_pipe |
+| [4x create_wizardry:arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_arcane_pipe_vertical) | minecraft:crafting_shaped | kubejs:tk3_arcane_machine + create_wizardry:arcane_sheet |
+| [4x create_wizardry:arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_arcane_pipe) | minecraft:crafting_shaped | kubejs:tk3_arcane_machine + create_wizardry:arcane_sheet |
+| [create_wizardry:arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_item_application_arcane_pipe) | create:item_application | kubejs:tk3_arcane_machine + create_wizardry:arcane_sheet |
+| [create_wizardry:arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_deploying_arcane_pipe) | create:deploying | kubejs:tk3_arcane_machine + create_wizardry:arcane_sheet |
+| [create_wizardry:arcane_pump](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_arcane_pump_from_pump) | minecraft:crafting_shapeless | kubejs:tk3_arcane_machine + create:mechanical_pump |
+| [create_wizardry:arcane_pump](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_arcane_pump) | minecraft:crafting_shapeless | kubejs:tk3_arcane_machine + create:cogwheel |
+| [create_wizardry:arcane_pump](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_item_application_arcane_pump) | create:item_application | kubejs:tk3_arcane_machine + create_wizardry:arcane_sheet |
+| [create_wizardry:arcane_pump](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_deploying_arcane_pump) | create:deploying | kubejs:tk3_arcane_machine + create_wizardry:arcane_sheet |
+| [create_enchantment_industry:experience_hatch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_experience_hatch) | deploying | kubejs:tk3_arcane_machine + create:experience_block |
+| [create_enchantment_industry:experience_lantern](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_crafting_experience_lantern) | minecraft:crafting_shaped | kubejs:tk3_arcane_machine + create:copper_casing + minecraft:sponge |
+| [create_enchantment_industry:brass_bookshelf](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_sequenced_assembly_brass_bookshelf) | create:sequenced_assembly | kubejs:tk3_arcane_machine |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 1 | alexscaves:stripped_pewen_log | cutting | alexscaves:pewen_log | `kubejs:tk3/compat/strip_alexscaves_pewen_log` |
-| 1 | 6x alexscaves:pewen_planks | cutting | alexscaves:stripped_pewen_log | `kubejs:tk3/compat/saw_alexscaves_pewen_log` |
-| 1 | alexscaves:stripped_pewen_wood | cutting | alexscaves:pewen_wood | `kubejs:tk3/compat/strip_alexscaves_pewen_wood` |
-| 1 | 6x alexscaves:pewen_planks | cutting | alexscaves:stripped_pewen_wood | `kubejs:tk3/compat/saw_alexscaves_pewen_wood` |
-| 1 | alexscaves:stripped_thornwood_log | cutting | alexscaves:thornwood_log | `kubejs:tk3/compat/strip_alexscaves_thornwood_log` |
-| 1 | 6x alexscaves:thornwood_planks | cutting | alexscaves:stripped_thornwood_log | `kubejs:tk3/compat/saw_alexscaves_thornwood_log` |
-| 1 | alexscaves:stripped_thornwood_wood | cutting | alexscaves:thornwood_wood | `kubejs:tk3/compat/strip_alexscaves_thornwood_wood` |
-| 1 | 6x alexscaves:thornwood_planks | cutting | alexscaves:stripped_thornwood_wood | `kubejs:tk3/compat/saw_alexscaves_thornwood_wood` |
-| 1 | atmospheric:stripped_aspen_log | cutting | atmospheric:aspen_log | `kubejs:tk3/compat/strip_atmospheric_aspen_log` |
-| 1 | 6x atmospheric:aspen_planks | cutting | atmospheric:stripped_aspen_log | `kubejs:tk3/compat/saw_atmospheric_aspen_log` |
-| 1 | atmospheric:stripped_aspen_wood | cutting | atmospheric:aspen_wood | `kubejs:tk3/compat/strip_atmospheric_aspen_wood` |
-| 1 | 6x atmospheric:aspen_planks | cutting | atmospheric:stripped_aspen_wood | `kubejs:tk3/compat/saw_atmospheric_aspen_wood` |
-| 1 | atmospheric:stripped_grimwood_log | cutting | atmospheric:grimwood_log | `kubejs:tk3/compat/strip_atmospheric_grimwood_log` |
-| 1 | 6x atmospheric:grimwood_planks | cutting | atmospheric:stripped_grimwood_log | `kubejs:tk3/compat/saw_atmospheric_grimwood_log` |
-| 1 | atmospheric:stripped_kousa_log | cutting | atmospheric:kousa_log | `kubejs:tk3/compat/strip_atmospheric_kousa_log` |
-| 1 | 6x atmospheric:kousa_planks | cutting | atmospheric:stripped_kousa_log | `kubejs:tk3/compat/saw_atmospheric_kousa_log` |
-| 1 | atmospheric:stripped_kousa_wood | cutting | atmospheric:kousa_wood | `kubejs:tk3/compat/strip_atmospheric_kousa_wood` |
-| 1 | 6x atmospheric:kousa_planks | cutting | atmospheric:stripped_kousa_wood | `kubejs:tk3/compat/saw_atmospheric_kousa_wood` |
-| 1 | atmospheric:stripped_laurel_log | cutting | atmospheric:laurel_log | `kubejs:tk3/compat/strip_atmospheric_laurel_log` |
-| 1 | 6x atmospheric:laurel_planks | cutting | atmospheric:stripped_laurel_log | `kubejs:tk3/compat/saw_atmospheric_laurel_log` |
-| 1 | atmospheric:stripped_laurel_wood | cutting | atmospheric:laurel_wood | `kubejs:tk3/compat/strip_atmospheric_laurel_wood` |
-| 1 | 6x atmospheric:laurel_planks | cutting | atmospheric:stripped_laurel_wood | `kubejs:tk3/compat/saw_atmospheric_laurel_wood` |
-| 1 | atmospheric:stripped_morado_log | cutting | atmospheric:morado_log | `kubejs:tk3/compat/strip_atmospheric_morado_log` |
-| 1 | 6x atmospheric:morado_planks | cutting | atmospheric:stripped_morado_log | `kubejs:tk3/compat/saw_atmospheric_morado_log` |
-| 1 | atmospheric:stripped_morado_wood | cutting | atmospheric:morado_wood | `kubejs:tk3/compat/strip_atmospheric_morado_wood` |
-| 1 | 6x atmospheric:morado_planks | cutting | atmospheric:stripped_morado_wood | `kubejs:tk3/compat/saw_atmospheric_morado_wood` |
-| 1 | atmospheric:stripped_rosewood_log | cutting | atmospheric:rosewood_log | `kubejs:tk3/compat/strip_atmospheric_rosewood_log` |
-| 1 | 6x atmospheric:rosewood_planks | cutting | atmospheric:stripped_rosewood_log | `kubejs:tk3/compat/saw_atmospheric_rosewood_log` |
-| 1 | atmospheric:stripped_yucca_log | cutting | atmospheric:yucca_log | `kubejs:tk3/compat/strip_atmospheric_yucca_log` |
-| 1 | 6x atmospheric:yucca_planks | cutting | atmospheric:stripped_yucca_log | `kubejs:tk3/compat/saw_atmospheric_yucca_log` |
-| 1 | atmospheric:stripped_yucca_wood | cutting | atmospheric:yucca_wood | `kubejs:tk3/compat/strip_atmospheric_yucca_wood` |
-| 1 | 6x atmospheric:yucca_planks | cutting | atmospheric:stripped_yucca_wood | `kubejs:tk3/compat/saw_atmospheric_yucca_wood` |
-| 1 | autumnity:stripped_maple_log | cutting | autumnity:maple_log | `kubejs:tk3/compat/strip_autumnity_maple_log` |
-| 1 | 6x autumnity:maple_planks | cutting | autumnity:stripped_maple_log | `kubejs:tk3/compat/saw_autumnity_maple_log` |
-| 1 | autumnity:stripped_maple_wood | cutting | autumnity:maple_wood | `kubejs:tk3/compat/strip_autumnity_maple_wood` |
-| 1 | 6x autumnity:maple_planks | cutting | autumnity:stripped_maple_wood | `kubejs:tk3/compat/saw_autumnity_maple_wood` |
-| 1 | 6x betterend:dragon_tree_planks | cutting | betterend:dragon_tree_log | `kubejs:tk3/compat/saw_betterend_dragon_tree_log` |
-| 1 | 6x betterend:end_lotus_planks | cutting | betterend:end_lotus_log | `kubejs:tk3/compat/saw_betterend_end_lotus_log` |
-| 1 | 6x betterend:end_lotus_planks | cutting | betterend:end_lotus_stem | `kubejs:tk3/compat/saw_betterend_end_lotus_stem` |
-| 1 | 6x betterend:helix_tree_planks | cutting | betterend:helix_tree_log | `kubejs:tk3/compat/saw_betterend_helix_tree_log` |
-| 1 | 6x betterend:jellyshroom_planks | cutting | betterend:jellyshroom_log | `kubejs:tk3/compat/saw_betterend_jellyshroom_log` |
-| 1 | 6x betterend:lacugrove_planks | cutting | betterend:lacugrove_log | `kubejs:tk3/compat/saw_betterend_lacugrove_log` |
-| 1 | 6x betterend:lucernia_planks | cutting | betterend:lucernia_log | `kubejs:tk3/compat/saw_betterend_lucernia_log` |
-| 1 | 6x betterend:mossy_glowshroom_planks | cutting | betterend:mossy_glowshroom_log | `kubejs:tk3/compat/saw_betterend_mossy_glowshroom_log` |
-| 1 | 6x betterend:pythadendron_planks | cutting | betterend:pythadendron_log | `kubejs:tk3/compat/saw_betterend_pythadendron_log` |
-| 1 | 6x betterend:tenanea_planks | cutting | betterend:tenanea_log | `kubejs:tk3/compat/saw_betterend_tenanea_log` |
-| 1 | 6x betterend:umbrella_tree_planks | cutting | betterend:umbrella_tree_log | `kubejs:tk3/compat/saw_betterend_umbrella_tree_log` |
-| 1 | 6x betternether:anchor_tree_planks | cutting | betternether:anchor_tree_log | `kubejs:tk3/compat/saw_betternether_anchor_tree_log` |
-| 1 | 6x betternether:gloomwood_dark_planks | cutting | betternether:gloomwood_dark_log | `kubejs:tk3/compat/saw_betternether_gloomwood_dark_log` |
-| 1 | 6x betternether:gloomwood_planks | cutting | betternether:gloomwood_log | `kubejs:tk3/compat/saw_betternether_gloomwood_log` |
-| 1 | 6x betternether:gloomwood_transition_planks | cutting | betternether:gloomwood_transition_log | `kubejs:tk3/compat/saw_betternether_gloomwood_transition_log` |
-| 1 | 6x betternether:mushroom_fir_planks | cutting | betternether:mushroom_fir_log | `kubejs:tk3/compat/saw_betternether_mushroom_fir_log` |
-| 1 | 6x betternether:mushroom_fir_planks | cutting | betternether:mushroom_fir_stem | `kubejs:tk3/compat/saw_betternether_mushroom_fir_stem` |
-| 1 | 6x betternether:nether_mushroom_planks | cutting | betternether:nether_mushroom_stem | `kubejs:tk3/compat/saw_betternether_nether_mushroom_stem` |
-| 1 | 6x betternether:nether_reed_planks | cutting | betternether:nether_reed_stem | `kubejs:tk3/compat/saw_betternether_nether_reed_stem` |
-| 1 | 6x betternether:nether_sakura_planks | cutting | betternether:nether_sakura_log | `kubejs:tk3/compat/saw_betternether_nether_sakura_log` |
-| 1 | 6x betternether:rubeus_planks | cutting | betternether:rubeus_log | `kubejs:tk3/compat/saw_betternether_rubeus_log` |
-| 1 | 6x betternether:stalagnate_planks | cutting | betternether:stalagnate_log | `kubejs:tk3/compat/saw_betternether_stalagnate_log` |
-| 1 | 6x betternether:stalagnate_planks | cutting | betternether:stalagnate_stem | `kubejs:tk3/compat/saw_betternether_stalagnate_stem` |
-| 1 | 6x betternether:wart_planks | cutting | betternether:wart_log | `kubejs:tk3/compat/saw_betternether_wart_log` |
-| 1 | 6x betternether:willow_planks | cutting | betternether:willow_log | `kubejs:tk3/compat/saw_betternether_willow_log` |
-| 1 | biomesoplenty:stripped_dead_log | cutting | biomesoplenty:dead_log | `kubejs:tk3/compat/strip_biomesoplenty_dead_log` |
-| 1 | 6x biomesoplenty:dead_planks | cutting | biomesoplenty:stripped_dead_log | `kubejs:tk3/compat/saw_biomesoplenty_dead_log` |
-| 1 | biomesoplenty:stripped_dead_wood | cutting | biomesoplenty:dead_wood | `kubejs:tk3/compat/strip_biomesoplenty_dead_wood` |
-| 1 | 6x biomesoplenty:dead_planks | cutting | biomesoplenty:stripped_dead_wood | `kubejs:tk3/compat/saw_biomesoplenty_dead_wood` |
-| 1 | biomesoplenty:stripped_empyreal_log | cutting | biomesoplenty:empyreal_log | `kubejs:tk3/compat/strip_biomesoplenty_empyreal_log` |
-| 1 | 6x biomesoplenty:empyreal_planks | cutting | biomesoplenty:stripped_empyreal_log | `kubejs:tk3/compat/saw_biomesoplenty_empyreal_log` |
-| 1 | biomesoplenty:stripped_empyreal_wood | cutting | biomesoplenty:empyreal_wood | `kubejs:tk3/compat/strip_biomesoplenty_empyreal_wood` |
-| 1 | 6x biomesoplenty:empyreal_planks | cutting | biomesoplenty:stripped_empyreal_wood | `kubejs:tk3/compat/saw_biomesoplenty_empyreal_wood` |
-| 1 | biomesoplenty:stripped_fir_log | cutting | biomesoplenty:fir_log | `kubejs:tk3/compat/strip_biomesoplenty_fir_log` |
-| 1 | 6x biomesoplenty:fir_planks | cutting | biomesoplenty:stripped_fir_log | `kubejs:tk3/compat/saw_biomesoplenty_fir_log` |
-| 1 | biomesoplenty:stripped_fir_wood | cutting | biomesoplenty:fir_wood | `kubejs:tk3/compat/strip_biomesoplenty_fir_wood` |
-| 1 | 6x biomesoplenty:fir_planks | cutting | biomesoplenty:stripped_fir_wood | `kubejs:tk3/compat/saw_biomesoplenty_fir_wood` |
-| 1 | biomesoplenty:stripped_hellbark_log | cutting | biomesoplenty:hellbark_log | `kubejs:tk3/compat/strip_biomesoplenty_hellbark_log` |
-| 1 | 6x biomesoplenty:hellbark_planks | cutting | biomesoplenty:stripped_hellbark_log | `kubejs:tk3/compat/saw_biomesoplenty_hellbark_log` |
-| 1 | biomesoplenty:stripped_hellbark_wood | cutting | biomesoplenty:hellbark_wood | `kubejs:tk3/compat/strip_biomesoplenty_hellbark_wood` |
-| 1 | 6x biomesoplenty:hellbark_planks | cutting | biomesoplenty:stripped_hellbark_wood | `kubejs:tk3/compat/saw_biomesoplenty_hellbark_wood` |
-| 1 | biomesoplenty:stripped_jacaranda_log | cutting | biomesoplenty:jacaranda_log | `kubejs:tk3/compat/strip_biomesoplenty_jacaranda_log` |
-| 1 | 6x biomesoplenty:jacaranda_planks | cutting | biomesoplenty:stripped_jacaranda_log | `kubejs:tk3/compat/saw_biomesoplenty_jacaranda_log` |
-| 1 | biomesoplenty:stripped_jacaranda_wood | cutting | biomesoplenty:jacaranda_wood | `kubejs:tk3/compat/strip_biomesoplenty_jacaranda_wood` |
-| 1 | 6x biomesoplenty:jacaranda_planks | cutting | biomesoplenty:stripped_jacaranda_wood | `kubejs:tk3/compat/saw_biomesoplenty_jacaranda_wood` |
-| 1 | biomesoplenty:stripped_magic_log | cutting | biomesoplenty:magic_log | `kubejs:tk3/compat/strip_biomesoplenty_magic_log` |
-| 1 | 6x biomesoplenty:magic_planks | cutting | biomesoplenty:stripped_magic_log | `kubejs:tk3/compat/saw_biomesoplenty_magic_log` |
-| 1 | biomesoplenty:stripped_magic_wood | cutting | biomesoplenty:magic_wood | `kubejs:tk3/compat/strip_biomesoplenty_magic_wood` |
-| 1 | 6x biomesoplenty:magic_planks | cutting | biomesoplenty:stripped_magic_wood | `kubejs:tk3/compat/saw_biomesoplenty_magic_wood` |
-| 1 | biomesoplenty:stripped_mahogany_log | cutting | biomesoplenty:mahogany_log | `kubejs:tk3/compat/strip_biomesoplenty_mahogany_log` |
-| 1 | 6x biomesoplenty:mahogany_planks | cutting | biomesoplenty:stripped_mahogany_log | `kubejs:tk3/compat/saw_biomesoplenty_mahogany_log` |
-| 1 | biomesoplenty:stripped_mahogany_wood | cutting | biomesoplenty:mahogany_wood | `kubejs:tk3/compat/strip_biomesoplenty_mahogany_wood` |
-| 1 | 6x biomesoplenty:mahogany_planks | cutting | biomesoplenty:stripped_mahogany_wood | `kubejs:tk3/compat/saw_biomesoplenty_mahogany_wood` |
-| 1 | biomesoplenty:stripped_maple_log | cutting | biomesoplenty:maple_log | `kubejs:tk3/compat/strip_biomesoplenty_maple_log` |
-| 1 | 6x biomesoplenty:maple_planks | cutting | biomesoplenty:stripped_maple_log | `kubejs:tk3/compat/saw_biomesoplenty_maple_log` |
-| 1 | biomesoplenty:stripped_maple_wood | cutting | biomesoplenty:maple_wood | `kubejs:tk3/compat/strip_biomesoplenty_maple_wood` |
-| 1 | 6x biomesoplenty:maple_planks | cutting | biomesoplenty:stripped_maple_wood | `kubejs:tk3/compat/saw_biomesoplenty_maple_wood` |
-| 1 | biomesoplenty:stripped_palm_log | cutting | biomesoplenty:palm_log | `kubejs:tk3/compat/strip_biomesoplenty_palm_log` |
-| 1 | 6x biomesoplenty:palm_planks | cutting | biomesoplenty:stripped_palm_log | `kubejs:tk3/compat/saw_biomesoplenty_palm_log` |
-| 1 | biomesoplenty:stripped_palm_wood | cutting | biomesoplenty:palm_wood | `kubejs:tk3/compat/strip_biomesoplenty_palm_wood` |
-| 1 | 6x biomesoplenty:palm_planks | cutting | biomesoplenty:stripped_palm_wood | `kubejs:tk3/compat/saw_biomesoplenty_palm_wood` |
-| 1 | biomesoplenty:stripped_pine_log | cutting | biomesoplenty:pine_log | `kubejs:tk3/compat/strip_biomesoplenty_pine_log` |
-| 1 | 6x biomesoplenty:pine_planks | cutting | biomesoplenty:stripped_pine_log | `kubejs:tk3/compat/saw_biomesoplenty_pine_log` |
-| 1 | biomesoplenty:stripped_pine_wood | cutting | biomesoplenty:pine_wood | `kubejs:tk3/compat/strip_biomesoplenty_pine_wood` |
-| 1 | 6x biomesoplenty:pine_planks | cutting | biomesoplenty:stripped_pine_wood | `kubejs:tk3/compat/saw_biomesoplenty_pine_wood` |
-| 1 | biomesoplenty:stripped_redwood_log | cutting | biomesoplenty:redwood_log | `kubejs:tk3/compat/strip_biomesoplenty_redwood_log` |
-| 1 | 6x biomesoplenty:redwood_planks | cutting | biomesoplenty:stripped_redwood_log | `kubejs:tk3/compat/saw_biomesoplenty_redwood_log` |
-| 1 | biomesoplenty:stripped_redwood_wood | cutting | biomesoplenty:redwood_wood | `kubejs:tk3/compat/strip_biomesoplenty_redwood_wood` |
-| 1 | 6x biomesoplenty:redwood_planks | cutting | biomesoplenty:stripped_redwood_wood | `kubejs:tk3/compat/saw_biomesoplenty_redwood_wood` |
-| 1 | biomesoplenty:stripped_umbran_log | cutting | biomesoplenty:umbran_log | `kubejs:tk3/compat/strip_biomesoplenty_umbran_log` |
-| 1 | 6x biomesoplenty:umbran_planks | cutting | biomesoplenty:stripped_umbran_log | `kubejs:tk3/compat/saw_biomesoplenty_umbran_log` |
-| 1 | biomesoplenty:stripped_umbran_wood | cutting | biomesoplenty:umbran_wood | `kubejs:tk3/compat/strip_biomesoplenty_umbran_wood` |
-| 1 | 6x biomesoplenty:umbran_planks | cutting | biomesoplenty:stripped_umbran_wood | `kubejs:tk3/compat/saw_biomesoplenty_umbran_wood` |
-| 1 | biomesoplenty:stripped_willow_log | cutting | biomesoplenty:willow_log | `kubejs:tk3/compat/strip_biomesoplenty_willow_log` |
-| 1 | 6x biomesoplenty:willow_planks | cutting | biomesoplenty:stripped_willow_log | `kubejs:tk3/compat/saw_biomesoplenty_willow_log` |
-| 1 | biomesoplenty:stripped_willow_wood | cutting | biomesoplenty:willow_wood | `kubejs:tk3/compat/strip_biomesoplenty_willow_wood` |
-| 1 | 6x biomesoplenty:willow_planks | cutting | biomesoplenty:stripped_willow_wood | `kubejs:tk3/compat/saw_biomesoplenty_willow_wood` |
-| 1 | biomeswevegone:stripped_aspen_log | cutting | biomeswevegone:aspen_log | `kubejs:tk3/compat/strip_biomeswevegone_aspen_log` |
-| 1 | 6x biomeswevegone:aspen_planks | cutting | biomeswevegone:stripped_aspen_log | `kubejs:tk3/compat/saw_biomeswevegone_aspen_log` |
-| 1 | biomeswevegone:stripped_aspen_wood | cutting | biomeswevegone:aspen_wood | `kubejs:tk3/compat/strip_biomeswevegone_aspen_wood` |
-| 1 | 6x biomeswevegone:aspen_planks | cutting | biomeswevegone:stripped_aspen_wood | `kubejs:tk3/compat/saw_biomeswevegone_aspen_wood` |
-| 1 | biomeswevegone:stripped_baobab_log | cutting | biomeswevegone:baobab_log | `kubejs:tk3/compat/strip_biomeswevegone_baobab_log` |
-| 1 | 6x biomeswevegone:baobab_planks | cutting | biomeswevegone:stripped_baobab_log | `kubejs:tk3/compat/saw_biomeswevegone_baobab_log` |
-| 1 | biomeswevegone:stripped_baobab_wood | cutting | biomeswevegone:baobab_wood | `kubejs:tk3/compat/strip_biomeswevegone_baobab_wood` |
-| 1 | 6x biomeswevegone:baobab_planks | cutting | biomeswevegone:stripped_baobab_wood | `kubejs:tk3/compat/saw_biomeswevegone_baobab_wood` |
-| 1 | biomeswevegone:stripped_blue_enchanted_log | cutting | biomeswevegone:blue_enchanted_log | `kubejs:tk3/compat/strip_biomeswevegone_blue_enchanted_log` |
-| 1 | 6x biomeswevegone:blue_enchanted_planks | cutting | biomeswevegone:stripped_blue_enchanted_log | `kubejs:tk3/compat/saw_biomeswevegone_blue_enchanted_log` |
-| 1 | biomeswevegone:stripped_blue_enchanted_wood | cutting | biomeswevegone:blue_enchanted_wood | `kubejs:tk3/compat/strip_biomeswevegone_blue_enchanted_wood` |
-| 1 | 6x biomeswevegone:blue_enchanted_planks | cutting | biomeswevegone:stripped_blue_enchanted_wood | `kubejs:tk3/compat/saw_biomeswevegone_blue_enchanted_wood` |
-| 1 | biomeswevegone:stripped_cika_log | cutting | biomeswevegone:cika_log | `kubejs:tk3/compat/strip_biomeswevegone_cika_log` |
-| 1 | 6x biomeswevegone:cika_planks | cutting | biomeswevegone:stripped_cika_log | `kubejs:tk3/compat/saw_biomeswevegone_cika_log` |
-| 1 | biomeswevegone:stripped_cika_wood | cutting | biomeswevegone:cika_wood | `kubejs:tk3/compat/strip_biomeswevegone_cika_wood` |
-| 1 | 6x biomeswevegone:cika_planks | cutting | biomeswevegone:stripped_cika_wood | `kubejs:tk3/compat/saw_biomeswevegone_cika_wood` |
-| 1 | biomeswevegone:stripped_cypress_log | cutting | biomeswevegone:cypress_log | `kubejs:tk3/compat/strip_biomeswevegone_cypress_log` |
-| 1 | 6x biomeswevegone:cypress_planks | cutting | biomeswevegone:stripped_cypress_log | `kubejs:tk3/compat/saw_biomeswevegone_cypress_log` |
-| 1 | biomeswevegone:stripped_cypress_wood | cutting | biomeswevegone:cypress_wood | `kubejs:tk3/compat/strip_biomeswevegone_cypress_wood` |
-| 1 | 6x biomeswevegone:cypress_planks | cutting | biomeswevegone:stripped_cypress_wood | `kubejs:tk3/compat/saw_biomeswevegone_cypress_wood` |
-| 1 | biomeswevegone:stripped_ebony_log | cutting | biomeswevegone:ebony_log | `kubejs:tk3/compat/strip_biomeswevegone_ebony_log` |
-| 1 | 6x biomeswevegone:ebony_planks | cutting | biomeswevegone:stripped_ebony_log | `kubejs:tk3/compat/saw_biomeswevegone_ebony_log` |
-| 1 | biomeswevegone:stripped_ebony_wood | cutting | biomeswevegone:ebony_wood | `kubejs:tk3/compat/strip_biomeswevegone_ebony_wood` |
-| 1 | 6x biomeswevegone:ebony_planks | cutting | biomeswevegone:stripped_ebony_wood | `kubejs:tk3/compat/saw_biomeswevegone_ebony_wood` |
-| 1 | biomeswevegone:stripped_fir_log | cutting | biomeswevegone:fir_log | `kubejs:tk3/compat/strip_biomeswevegone_fir_log` |
-| 1 | 6x biomeswevegone:fir_planks | cutting | biomeswevegone:stripped_fir_log | `kubejs:tk3/compat/saw_biomeswevegone_fir_log` |
-| 1 | biomeswevegone:stripped_fir_wood | cutting | biomeswevegone:fir_wood | `kubejs:tk3/compat/strip_biomeswevegone_fir_wood` |
-| 1 | 6x biomeswevegone:fir_planks | cutting | biomeswevegone:stripped_fir_wood | `kubejs:tk3/compat/saw_biomeswevegone_fir_wood` |
-| 1 | biomeswevegone:stripped_florus_stem | cutting | biomeswevegone:florus_stem | `kubejs:tk3/compat/strip_biomeswevegone_florus_stem` |
-| 1 | 6x biomeswevegone:florus_planks | cutting | biomeswevegone:stripped_florus_stem | `kubejs:tk3/compat/saw_biomeswevegone_florus_stem` |
-| 1 | biomeswevegone:stripped_florus_wood | cutting | biomeswevegone:florus_wood | `kubejs:tk3/compat/strip_biomeswevegone_florus_wood` |
-| 1 | 6x biomeswevegone:florus_planks | cutting | biomeswevegone:stripped_florus_wood | `kubejs:tk3/compat/saw_biomeswevegone_florus_wood` |
-| 1 | biomeswevegone:stripped_green_enchanted_log | cutting | biomeswevegone:green_enchanted_log | `kubejs:tk3/compat/strip_biomeswevegone_green_enchanted_log` |
-| 1 | 6x biomeswevegone:green_enchanted_planks | cutting | biomeswevegone:stripped_green_enchanted_log | `kubejs:tk3/compat/saw_biomeswevegone_green_enchanted_log` |
-| 1 | biomeswevegone:stripped_green_enchanted_wood | cutting | biomeswevegone:green_enchanted_wood | `kubejs:tk3/compat/strip_biomeswevegone_green_enchanted_wood` |
-| 1 | 6x biomeswevegone:green_enchanted_planks | cutting | biomeswevegone:stripped_green_enchanted_wood | `kubejs:tk3/compat/saw_biomeswevegone_green_enchanted_wood` |
-| 1 | biomeswevegone:stripped_holly_log | cutting | biomeswevegone:holly_log | `kubejs:tk3/compat/strip_biomeswevegone_holly_log` |
-| 1 | 6x biomeswevegone:holly_planks | cutting | biomeswevegone:stripped_holly_log | `kubejs:tk3/compat/saw_biomeswevegone_holly_log` |
-| 1 | biomeswevegone:stripped_holly_wood | cutting | biomeswevegone:holly_wood | `kubejs:tk3/compat/strip_biomeswevegone_holly_wood` |
-| 1 | 6x biomeswevegone:holly_planks | cutting | biomeswevegone:stripped_holly_wood | `kubejs:tk3/compat/saw_biomeswevegone_holly_wood` |
-| 1 | biomeswevegone:stripped_ironwood_log | cutting | biomeswevegone:ironwood_log | `kubejs:tk3/compat/strip_biomeswevegone_ironwood_log` |
-| 1 | 6x biomeswevegone:ironwood_planks | cutting | biomeswevegone:stripped_ironwood_log | `kubejs:tk3/compat/saw_biomeswevegone_ironwood_log` |
-| 1 | biomeswevegone:stripped_ironwood_wood | cutting | biomeswevegone:ironwood_wood | `kubejs:tk3/compat/strip_biomeswevegone_ironwood_wood` |
-| 1 | 6x biomeswevegone:ironwood_planks | cutting | biomeswevegone:stripped_ironwood_wood | `kubejs:tk3/compat/saw_biomeswevegone_ironwood_wood` |
-| 1 | biomeswevegone:stripped_jacaranda_log | cutting | biomeswevegone:jacaranda_log | `kubejs:tk3/compat/strip_biomeswevegone_jacaranda_log` |
-| 1 | 6x biomeswevegone:jacaranda_planks | cutting | biomeswevegone:stripped_jacaranda_log | `kubejs:tk3/compat/saw_biomeswevegone_jacaranda_log` |
-| 1 | biomeswevegone:stripped_jacaranda_wood | cutting | biomeswevegone:jacaranda_wood | `kubejs:tk3/compat/strip_biomeswevegone_jacaranda_wood` |
-| 1 | 6x biomeswevegone:jacaranda_planks | cutting | biomeswevegone:stripped_jacaranda_wood | `kubejs:tk3/compat/saw_biomeswevegone_jacaranda_wood` |
-| 1 | biomeswevegone:stripped_mahogany_log | cutting | biomeswevegone:mahogany_log | `kubejs:tk3/compat/strip_biomeswevegone_mahogany_log` |
-| 1 | 6x biomeswevegone:mahogany_planks | cutting | biomeswevegone:stripped_mahogany_log | `kubejs:tk3/compat/saw_biomeswevegone_mahogany_log` |
-| 1 | biomeswevegone:stripped_mahogany_wood | cutting | biomeswevegone:mahogany_wood | `kubejs:tk3/compat/strip_biomeswevegone_mahogany_wood` |
-| 1 | 6x biomeswevegone:mahogany_planks | cutting | biomeswevegone:stripped_mahogany_wood | `kubejs:tk3/compat/saw_biomeswevegone_mahogany_wood` |
-| 1 | biomeswevegone:stripped_maple_log | cutting | biomeswevegone:maple_log | `kubejs:tk3/compat/strip_biomeswevegone_maple_log` |
-| 1 | 6x biomeswevegone:maple_planks | cutting | biomeswevegone:stripped_maple_log | `kubejs:tk3/compat/saw_biomeswevegone_maple_log` |
-| 1 | biomeswevegone:stripped_maple_wood | cutting | biomeswevegone:maple_wood | `kubejs:tk3/compat/strip_biomeswevegone_maple_wood` |
-| 1 | 6x biomeswevegone:maple_planks | cutting | biomeswevegone:stripped_maple_wood | `kubejs:tk3/compat/saw_biomeswevegone_maple_wood` |
-| 1 | biomeswevegone:stripped_palm_log | cutting | biomeswevegone:palm_log | `kubejs:tk3/compat/strip_biomeswevegone_palm_log` |
-| 1 | 6x biomeswevegone:palm_planks | cutting | biomeswevegone:stripped_palm_log | `kubejs:tk3/compat/saw_biomeswevegone_palm_log` |
-| 1 | biomeswevegone:stripped_palm_wood | cutting | biomeswevegone:palm_wood | `kubejs:tk3/compat/strip_biomeswevegone_palm_wood` |
-| 1 | 6x biomeswevegone:palm_planks | cutting | biomeswevegone:stripped_palm_wood | `kubejs:tk3/compat/saw_biomeswevegone_palm_wood` |
-| 1 | biomeswevegone:stripped_pine_log | cutting | biomeswevegone:pine_log | `kubejs:tk3/compat/strip_biomeswevegone_pine_log` |
-| 1 | 6x biomeswevegone:pine_planks | cutting | biomeswevegone:stripped_pine_log | `kubejs:tk3/compat/saw_biomeswevegone_pine_log` |
-| 1 | biomeswevegone:stripped_pine_wood | cutting | biomeswevegone:pine_wood | `kubejs:tk3/compat/strip_biomeswevegone_pine_wood` |
-| 1 | 6x biomeswevegone:pine_planks | cutting | biomeswevegone:stripped_pine_wood | `kubejs:tk3/compat/saw_biomeswevegone_pine_wood` |
-| 1 | biomeswevegone:stripped_rainbow_eucalyptus_log | cutting | biomeswevegone:rainbow_eucalyptus_log | `kubejs:tk3/compat/strip_biomeswevegone_rainbow_eucalyptus_log` |
-| 1 | 6x biomeswevegone:rainbow_eucalyptus_planks | cutting | biomeswevegone:stripped_rainbow_eucalyptus_log | `kubejs:tk3/compat/saw_biomeswevegone_rainbow_eucalyptus_log` |
-| 1 | biomeswevegone:stripped_rainbow_eucalyptus_wood | cutting | biomeswevegone:rainbow_eucalyptus_wood | `kubejs:tk3/compat/strip_biomeswevegone_rainbow_eucalyptus_wood` |
-| 1 | 6x biomeswevegone:rainbow_eucalyptus_planks | cutting | biomeswevegone:stripped_rainbow_eucalyptus_wood | `kubejs:tk3/compat/saw_biomeswevegone_rainbow_eucalyptus_wood` |
-| 1 | biomeswevegone:stripped_redwood_log | cutting | biomeswevegone:redwood_log | `kubejs:tk3/compat/strip_biomeswevegone_redwood_log` |
-| 1 | 6x biomeswevegone:redwood_planks | cutting | biomeswevegone:stripped_redwood_log | `kubejs:tk3/compat/saw_biomeswevegone_redwood_log` |
-| 1 | biomeswevegone:stripped_redwood_wood | cutting | biomeswevegone:redwood_wood | `kubejs:tk3/compat/strip_biomeswevegone_redwood_wood` |
-| 1 | 6x biomeswevegone:redwood_planks | cutting | biomeswevegone:stripped_redwood_wood | `kubejs:tk3/compat/saw_biomeswevegone_redwood_wood` |
-| 1 | biomeswevegone:stripped_sakura_log | cutting | biomeswevegone:sakura_log | `kubejs:tk3/compat/strip_biomeswevegone_sakura_log` |
-| 1 | 6x biomeswevegone:sakura_planks | cutting | biomeswevegone:stripped_sakura_log | `kubejs:tk3/compat/saw_biomeswevegone_sakura_log` |
-| 1 | biomeswevegone:stripped_sakura_wood | cutting | biomeswevegone:sakura_wood | `kubejs:tk3/compat/strip_biomeswevegone_sakura_wood` |
-| 1 | 6x biomeswevegone:sakura_planks | cutting | biomeswevegone:stripped_sakura_wood | `kubejs:tk3/compat/saw_biomeswevegone_sakura_wood` |
-| 1 | biomeswevegone:stripped_skyris_log | cutting | biomeswevegone:skyris_log | `kubejs:tk3/compat/strip_biomeswevegone_skyris_log` |
-| 1 | 6x biomeswevegone:skyris_planks | cutting | biomeswevegone:stripped_skyris_log | `kubejs:tk3/compat/saw_biomeswevegone_skyris_log` |
-| 1 | biomeswevegone:stripped_skyris_wood | cutting | biomeswevegone:skyris_wood | `kubejs:tk3/compat/strip_biomeswevegone_skyris_wood` |
-| 1 | 6x biomeswevegone:skyris_planks | cutting | biomeswevegone:stripped_skyris_wood | `kubejs:tk3/compat/saw_biomeswevegone_skyris_wood` |
-| 1 | biomeswevegone:stripped_spirit_log | cutting | biomeswevegone:spirit_log | `kubejs:tk3/compat/strip_biomeswevegone_spirit_log` |
-| 1 | 6x biomeswevegone:spirit_planks | cutting | biomeswevegone:stripped_spirit_log | `kubejs:tk3/compat/saw_biomeswevegone_spirit_log` |
-| 1 | biomeswevegone:stripped_spirit_wood | cutting | biomeswevegone:spirit_wood | `kubejs:tk3/compat/strip_biomeswevegone_spirit_wood` |
-| 1 | 6x biomeswevegone:spirit_planks | cutting | biomeswevegone:stripped_spirit_wood | `kubejs:tk3/compat/saw_biomeswevegone_spirit_wood` |
-| 1 | biomeswevegone:stripped_white_mangrove_log | cutting | biomeswevegone:white_mangrove_log | `kubejs:tk3/compat/strip_biomeswevegone_white_mangrove_log` |
-| 1 | 6x biomeswevegone:white_mangrove_planks | cutting | biomeswevegone:stripped_white_mangrove_log | `kubejs:tk3/compat/saw_biomeswevegone_white_mangrove_log` |
-| 1 | biomeswevegone:stripped_white_mangrove_wood | cutting | biomeswevegone:white_mangrove_wood | `kubejs:tk3/compat/strip_biomeswevegone_white_mangrove_wood` |
-| 1 | 6x biomeswevegone:white_mangrove_planks | cutting | biomeswevegone:stripped_white_mangrove_wood | `kubejs:tk3/compat/saw_biomeswevegone_white_mangrove_wood` |
-| 1 | biomeswevegone:stripped_willow_log | cutting | biomeswevegone:willow_log | `kubejs:tk3/compat/strip_biomeswevegone_willow_log` |
-| 1 | 6x biomeswevegone:willow_planks | cutting | biomeswevegone:stripped_willow_log | `kubejs:tk3/compat/saw_biomeswevegone_willow_log` |
-| 1 | biomeswevegone:stripped_willow_wood | cutting | biomeswevegone:willow_wood | `kubejs:tk3/compat/strip_biomeswevegone_willow_wood` |
-| 1 | 6x biomeswevegone:willow_planks | cutting | biomeswevegone:stripped_willow_wood | `kubejs:tk3/compat/saw_biomeswevegone_willow_wood` |
-| 1 | biomeswevegone:stripped_witch_hazel_log | cutting | biomeswevegone:witch_hazel_log | `kubejs:tk3/compat/strip_biomeswevegone_witch_hazel_log` |
-| 1 | 6x biomeswevegone:witch_hazel_planks | cutting | biomeswevegone:stripped_witch_hazel_log | `kubejs:tk3/compat/saw_biomeswevegone_witch_hazel_log` |
-| 1 | biomeswevegone:stripped_witch_hazel_wood | cutting | biomeswevegone:witch_hazel_wood | `kubejs:tk3/compat/strip_biomeswevegone_witch_hazel_wood` |
-| 1 | 6x biomeswevegone:witch_hazel_planks | cutting | biomeswevegone:stripped_witch_hazel_wood | `kubejs:tk3/compat/saw_biomeswevegone_witch_hazel_wood` |
-| 1 | biomeswevegone:stripped_zelkova_log | cutting | biomeswevegone:zelkova_log | `kubejs:tk3/compat/strip_biomeswevegone_zelkova_log` |
-| 1 | 6x biomeswevegone:zelkova_planks | cutting | biomeswevegone:stripped_zelkova_log | `kubejs:tk3/compat/saw_biomeswevegone_zelkova_log` |
-| 1 | biomeswevegone:stripped_zelkova_wood | cutting | biomeswevegone:zelkova_wood | `kubejs:tk3/compat/strip_biomeswevegone_zelkova_wood` |
-| 1 | 6x biomeswevegone:zelkova_planks | cutting | biomeswevegone:stripped_zelkova_wood | `kubejs:tk3/compat/saw_biomeswevegone_zelkova_wood` |
-| 1 | bloomingnature:stripped_aspen_log | cutting | bloomingnature:aspen_log | `kubejs:tk3/compat/strip_bloomingnature_aspen_log` |
-| 1 | 6x bloomingnature:aspen_planks | cutting | bloomingnature:stripped_aspen_log | `kubejs:tk3/compat/saw_bloomingnature_aspen_log` |
-| 1 | bloomingnature:stripped_aspen_wood | cutting | bloomingnature:aspen_wood | `kubejs:tk3/compat/strip_bloomingnature_aspen_wood` |
-| 1 | 6x bloomingnature:aspen_planks | cutting | bloomingnature:stripped_aspen_wood | `kubejs:tk3/compat/saw_bloomingnature_aspen_wood` |
-| 1 | bloomingnature:stripped_baobab_log | cutting | bloomingnature:baobab_log | `kubejs:tk3/compat/strip_bloomingnature_baobab_log` |
-| 1 | 6x bloomingnature:baobab_planks | cutting | bloomingnature:stripped_baobab_log | `kubejs:tk3/compat/saw_bloomingnature_baobab_log` |
-| 1 | bloomingnature:stripped_baobab_wood | cutting | bloomingnature:baobab_wood | `kubejs:tk3/compat/strip_bloomingnature_baobab_wood` |
-| 1 | 6x bloomingnature:baobab_planks | cutting | bloomingnature:stripped_baobab_wood | `kubejs:tk3/compat/saw_bloomingnature_baobab_wood` |
-| 1 | bloomingnature:stripped_chestnut_log | cutting | bloomingnature:chestnut_log | `kubejs:tk3/compat/strip_bloomingnature_chestnut_log` |
-| 1 | 6x bloomingnature:chestnut_planks | cutting | bloomingnature:stripped_chestnut_log | `kubejs:tk3/compat/saw_bloomingnature_chestnut_log` |
-| 1 | bloomingnature:stripped_chestnut_wood | cutting | bloomingnature:chestnut_wood | `kubejs:tk3/compat/strip_bloomingnature_chestnut_wood` |
-| 1 | 6x bloomingnature:chestnut_planks | cutting | bloomingnature:stripped_chestnut_wood | `kubejs:tk3/compat/saw_bloomingnature_chestnut_wood` |
-| 1 | bloomingnature:stripped_cypress_log | cutting | bloomingnature:cypress_log | `kubejs:tk3/compat/strip_bloomingnature_cypress_log` |
-| 1 | 6x bloomingnature:cypress_planks | cutting | bloomingnature:stripped_cypress_log | `kubejs:tk3/compat/saw_bloomingnature_cypress_log` |
-| 1 | bloomingnature:stripped_cypress_wood | cutting | bloomingnature:cypress_wood | `kubejs:tk3/compat/strip_bloomingnature_cypress_wood` |
-| 1 | 6x bloomingnature:cypress_planks | cutting | bloomingnature:stripped_cypress_wood | `kubejs:tk3/compat/saw_bloomingnature_cypress_wood` |
-| 1 | bloomingnature:stripped_ebony_log | cutting | bloomingnature:ebony_log | `kubejs:tk3/compat/strip_bloomingnature_ebony_log` |
-| 1 | 6x bloomingnature:ebony_planks | cutting | bloomingnature:stripped_ebony_log | `kubejs:tk3/compat/saw_bloomingnature_ebony_log` |
-| 1 | bloomingnature:stripped_ebony_wood | cutting | bloomingnature:ebony_wood | `kubejs:tk3/compat/strip_bloomingnature_ebony_wood` |
-| 1 | 6x bloomingnature:ebony_planks | cutting | bloomingnature:stripped_ebony_wood | `kubejs:tk3/compat/saw_bloomingnature_ebony_wood` |
-| 1 | bloomingnature:stripped_fan_palm_log | cutting | bloomingnature:fan_palm_log | `kubejs:tk3/compat/strip_bloomingnature_fan_palm_log` |
-| 1 | 6x bloomingnature:fan_palm_planks | cutting | bloomingnature:stripped_fan_palm_log | `kubejs:tk3/compat/saw_bloomingnature_fan_palm_log` |
-| 1 | bloomingnature:stripped_fan_palm_wood | cutting | bloomingnature:fan_palm_wood | `kubejs:tk3/compat/strip_bloomingnature_fan_palm_wood` |
-| 1 | 6x bloomingnature:fan_palm_planks | cutting | bloomingnature:stripped_fan_palm_wood | `kubejs:tk3/compat/saw_bloomingnature_fan_palm_wood` |
-| 1 | bloomingnature:stripped_fir_log | cutting | bloomingnature:fir_log | `kubejs:tk3/compat/strip_bloomingnature_fir_log` |
-| 1 | 6x bloomingnature:fir_planks | cutting | bloomingnature:stripped_fir_log | `kubejs:tk3/compat/saw_bloomingnature_fir_log` |
-| 1 | bloomingnature:stripped_fir_wood | cutting | bloomingnature:fir_wood | `kubejs:tk3/compat/strip_bloomingnature_fir_wood` |
-| 1 | 6x bloomingnature:fir_planks | cutting | bloomingnature:stripped_fir_wood | `kubejs:tk3/compat/saw_bloomingnature_fir_wood` |
-| 1 | bloomingnature:stripped_larch_log | cutting | bloomingnature:larch_log | `kubejs:tk3/compat/strip_bloomingnature_larch_log` |
-| 1 | 6x bloomingnature:larch_planks | cutting | bloomingnature:stripped_larch_log | `kubejs:tk3/compat/saw_bloomingnature_larch_log` |
-| 1 | bloomingnature:stripped_larch_wood | cutting | bloomingnature:larch_wood | `kubejs:tk3/compat/strip_bloomingnature_larch_wood` |
-| 1 | 6x bloomingnature:larch_planks | cutting | bloomingnature:stripped_larch_wood | `kubejs:tk3/compat/saw_bloomingnature_larch_wood` |
-| 1 | bloomingnature:stripped_swamp_cypress_log | cutting | bloomingnature:swamp_cypress_log | `kubejs:tk3/compat/strip_bloomingnature_swamp_cypress_log` |
-| 1 | 6x bloomingnature:swamp_cypress_planks | cutting | bloomingnature:stripped_swamp_cypress_log | `kubejs:tk3/compat/saw_bloomingnature_swamp_cypress_log` |
-| 1 | bloomingnature:stripped_swamp_cypress_wood | cutting | bloomingnature:swamp_cypress_wood | `kubejs:tk3/compat/strip_bloomingnature_swamp_cypress_wood` |
-| 1 | 6x bloomingnature:swamp_cypress_planks | cutting | bloomingnature:stripped_swamp_cypress_wood | `kubejs:tk3/compat/saw_bloomingnature_swamp_cypress_wood` |
-| 1 | bloomingnature:stripped_swamp_oak_log | cutting | bloomingnature:swamp_oak_log | `kubejs:tk3/compat/strip_bloomingnature_swamp_oak_log` |
-| 1 | 6x bloomingnature:swamp_oak_planks | cutting | bloomingnature:stripped_swamp_oak_log | `kubejs:tk3/compat/saw_bloomingnature_swamp_oak_log` |
-| 1 | bloomingnature:stripped_swamp_oak_wood | cutting | bloomingnature:swamp_oak_wood | `kubejs:tk3/compat/strip_bloomingnature_swamp_oak_wood` |
-| 1 | 6x bloomingnature:swamp_oak_planks | cutting | bloomingnature:stripped_swamp_oak_wood | `kubejs:tk3/compat/saw_bloomingnature_swamp_oak_wood` |
-| 1 | 6x cataclysm:chorus_planks | cutting | cataclysm:chorus_stem | `kubejs:tk3/compat/saw_cataclysm_chorus_stem` |
-| 1 | environmental:stripped_pine_log | cutting | environmental:pine_log | `kubejs:tk3/compat/strip_environmental_pine_log` |
-| 1 | 6x environmental:pine_planks | cutting | environmental:stripped_pine_log | `kubejs:tk3/compat/saw_environmental_pine_log` |
-| 1 | environmental:stripped_pine_wood | cutting | environmental:pine_wood | `kubejs:tk3/compat/strip_environmental_pine_wood` |
-| 1 | 6x environmental:pine_planks | cutting | environmental:stripped_pine_wood | `kubejs:tk3/compat/saw_environmental_pine_wood` |
-| 1 | environmental:stripped_plum_log | cutting | environmental:plum_log | `kubejs:tk3/compat/strip_environmental_plum_log` |
-| 1 | 6x environmental:plum_planks | cutting | environmental:stripped_plum_log | `kubejs:tk3/compat/saw_environmental_plum_log` |
-| 1 | environmental:stripped_plum_wood | cutting | environmental:plum_wood | `kubejs:tk3/compat/strip_environmental_plum_wood` |
-| 1 | 6x environmental:plum_planks | cutting | environmental:stripped_plum_wood | `kubejs:tk3/compat/saw_environmental_plum_wood` |
-| 1 | environmental:stripped_willow_log | cutting | environmental:willow_log | `kubejs:tk3/compat/strip_environmental_willow_log` |
-| 1 | 6x environmental:willow_planks | cutting | environmental:stripped_willow_log | `kubejs:tk3/compat/saw_environmental_willow_log` |
-| 1 | environmental:stripped_willow_wood | cutting | environmental:willow_wood | `kubejs:tk3/compat/strip_environmental_willow_wood` |
-| 1 | 6x environmental:willow_planks | cutting | environmental:stripped_willow_wood | `kubejs:tk3/compat/saw_environmental_willow_wood` |
-| 1 | environmental:stripped_wisteria_log | cutting | environmental:wisteria_log | `kubejs:tk3/compat/strip_environmental_wisteria_log` |
-| 1 | 6x environmental:wisteria_planks | cutting | environmental:stripped_wisteria_log | `kubejs:tk3/compat/saw_environmental_wisteria_log` |
-| 1 | environmental:stripped_wisteria_wood | cutting | environmental:wisteria_wood | `kubejs:tk3/compat/strip_environmental_wisteria_wood` |
-| 1 | 6x environmental:wisteria_planks | cutting | environmental:stripped_wisteria_wood | `kubejs:tk3/compat/saw_environmental_wisteria_wood` |
-| 1 | 6x iceandfire:dreadwood_planks | cutting | iceandfire:dreadwood_log | `kubejs:tk3/compat/saw_iceandfire_dreadwood_log` |
-| 1 | minecraft:stripped_acacia_log | cutting | minecraft:acacia_log | `kubejs:tk3/compat/strip_minecraft_acacia_log` |
-| 1 | 6x minecraft:acacia_planks | cutting | minecraft:stripped_acacia_log | `kubejs:tk3/compat/saw_minecraft_acacia_log` |
-| 1 | minecraft:stripped_acacia_wood | cutting | minecraft:acacia_wood | `kubejs:tk3/compat/strip_minecraft_acacia_wood` |
-| 1 | 6x minecraft:acacia_planks | cutting | minecraft:stripped_acacia_wood | `kubejs:tk3/compat/saw_minecraft_acacia_wood` |
-| 1 | minecraft:stripped_birch_log | cutting | minecraft:birch_log | `kubejs:tk3/compat/strip_minecraft_birch_log` |
-| 1 | 6x minecraft:birch_planks | cutting | minecraft:stripped_birch_log | `kubejs:tk3/compat/saw_minecraft_birch_log` |
-| 1 | minecraft:stripped_birch_wood | cutting | minecraft:birch_wood | `kubejs:tk3/compat/strip_minecraft_birch_wood` |
-| 1 | 6x minecraft:birch_planks | cutting | minecraft:stripped_birch_wood | `kubejs:tk3/compat/saw_minecraft_birch_wood` |
-| 1 | minecraft:stripped_cherry_log | cutting | minecraft:cherry_log | `kubejs:tk3/compat/strip_minecraft_cherry_log` |
-| 1 | 6x minecraft:cherry_planks | cutting | minecraft:stripped_cherry_log | `kubejs:tk3/compat/saw_minecraft_cherry_log` |
-| 1 | minecraft:stripped_cherry_wood | cutting | minecraft:cherry_wood | `kubejs:tk3/compat/strip_minecraft_cherry_wood` |
-| 1 | 6x minecraft:cherry_planks | cutting | minecraft:stripped_cherry_wood | `kubejs:tk3/compat/saw_minecraft_cherry_wood` |
-| 1 | minecraft:stripped_crimson_hyphae | cutting | minecraft:crimson_hyphae | `kubejs:tk3/compat/strip_minecraft_crimson_hyphae` |
-| 1 | 6x minecraft:crimson_planks | cutting | minecraft:stripped_crimson_hyphae | `kubejs:tk3/compat/saw_minecraft_crimson_hyphae` |
-| 1 | minecraft:stripped_crimson_stem | cutting | minecraft:crimson_stem | `kubejs:tk3/compat/strip_minecraft_crimson_stem` |
-| 1 | 6x minecraft:crimson_planks | cutting | minecraft:stripped_crimson_stem | `kubejs:tk3/compat/saw_minecraft_crimson_stem` |
-| 1 | minecraft:stripped_dark_oak_log | cutting | minecraft:dark_oak_log | `kubejs:tk3/compat/strip_minecraft_dark_oak_log` |
-| 1 | 6x minecraft:dark_oak_planks | cutting | minecraft:stripped_dark_oak_log | `kubejs:tk3/compat/saw_minecraft_dark_oak_log` |
-| 1 | minecraft:stripped_dark_oak_wood | cutting | minecraft:dark_oak_wood | `kubejs:tk3/compat/strip_minecraft_dark_oak_wood` |
-| 1 | 6x minecraft:dark_oak_planks | cutting | minecraft:stripped_dark_oak_wood | `kubejs:tk3/compat/saw_minecraft_dark_oak_wood` |
-| 1 | minecraft:stripped_jungle_log | cutting | minecraft:jungle_log | `kubejs:tk3/compat/strip_minecraft_jungle_log` |
-| 1 | 6x minecraft:jungle_planks | cutting | minecraft:stripped_jungle_log | `kubejs:tk3/compat/saw_minecraft_jungle_log` |
-| 1 | minecraft:stripped_jungle_wood | cutting | minecraft:jungle_wood | `kubejs:tk3/compat/strip_minecraft_jungle_wood` |
-| 1 | 6x minecraft:jungle_planks | cutting | minecraft:stripped_jungle_wood | `kubejs:tk3/compat/saw_minecraft_jungle_wood` |
-| 1 | minecraft:stripped_mangrove_log | cutting | minecraft:mangrove_log | `kubejs:tk3/compat/strip_minecraft_mangrove_log` |
-| 1 | 6x minecraft:mangrove_planks | cutting | minecraft:stripped_mangrove_log | `kubejs:tk3/compat/saw_minecraft_mangrove_log` |
-| 1 | minecraft:stripped_mangrove_wood | cutting | minecraft:mangrove_wood | `kubejs:tk3/compat/strip_minecraft_mangrove_wood` |
-| 1 | 6x minecraft:mangrove_planks | cutting | minecraft:stripped_mangrove_wood | `kubejs:tk3/compat/saw_minecraft_mangrove_wood` |
-| 1 | minecraft:stripped_oak_log | cutting | minecraft:oak_log | `kubejs:tk3/compat/strip_minecraft_oak_log` |
-| 1 | 6x minecraft:oak_planks | cutting | minecraft:stripped_oak_log | `kubejs:tk3/compat/saw_minecraft_oak_log` |
-| 1 | minecraft:stripped_oak_wood | cutting | minecraft:oak_wood | `kubejs:tk3/compat/strip_minecraft_oak_wood` |
-| 1 | 6x minecraft:oak_planks | cutting | minecraft:stripped_oak_wood | `kubejs:tk3/compat/saw_minecraft_oak_wood` |
-| 1 | minecraft:stripped_spruce_log | cutting | minecraft:spruce_log | `kubejs:tk3/compat/strip_minecraft_spruce_log` |
-| 1 | 6x minecraft:spruce_planks | cutting | minecraft:stripped_spruce_log | `kubejs:tk3/compat/saw_minecraft_spruce_log` |
-| 1 | minecraft:stripped_spruce_wood | cutting | minecraft:spruce_wood | `kubejs:tk3/compat/strip_minecraft_spruce_wood` |
-| 1 | 6x minecraft:spruce_planks | cutting | minecraft:stripped_spruce_wood | `kubejs:tk3/compat/saw_minecraft_spruce_wood` |
-| 1 | minecraft:stripped_warped_hyphae | cutting | minecraft:warped_hyphae | `kubejs:tk3/compat/strip_minecraft_warped_hyphae` |
-| 1 | 6x minecraft:warped_planks | cutting | minecraft:stripped_warped_hyphae | `kubejs:tk3/compat/saw_minecraft_warped_hyphae` |
-| 1 | minecraft:stripped_warped_stem | cutting | minecraft:warped_stem | `kubejs:tk3/compat/strip_minecraft_warped_stem` |
-| 1 | 6x minecraft:warped_planks | cutting | minecraft:stripped_warped_stem | `kubejs:tk3/compat/saw_minecraft_warped_stem` |
-| 1 | quark:stripped_ancient_log | cutting | quark:ancient_log | `kubejs:tk3/compat/strip_quark_ancient_log` |
-| 1 | 6x quark:ancient_planks | cutting | quark:stripped_ancient_log | `kubejs:tk3/compat/saw_quark_ancient_log` |
-| 1 | quark:stripped_ancient_wood | cutting | quark:ancient_wood | `kubejs:tk3/compat/strip_quark_ancient_wood` |
-| 1 | 6x quark:ancient_planks | cutting | quark:stripped_ancient_wood | `kubejs:tk3/compat/saw_quark_ancient_wood` |
-| 1 | quark:stripped_azalea_log | cutting | quark:azalea_log | `kubejs:tk3/compat/strip_quark_azalea_log` |
-| 1 | 6x quark:azalea_planks | cutting | quark:stripped_azalea_log | `kubejs:tk3/compat/saw_quark_azalea_log` |
-| 1 | quark:stripped_azalea_wood | cutting | quark:azalea_wood | `kubejs:tk3/compat/strip_quark_azalea_wood` |
-| 1 | 6x quark:azalea_planks | cutting | quark:stripped_azalea_wood | `kubejs:tk3/compat/saw_quark_azalea_wood` |
-| 1 | quark:stripped_blossom_log | cutting | quark:blossom_log | `kubejs:tk3/compat/strip_quark_blossom_log` |
-| 1 | 6x quark:blossom_planks | cutting | quark:stripped_blossom_log | `kubejs:tk3/compat/saw_quark_blossom_log` |
-| 1 | quark:stripped_blossom_wood | cutting | quark:blossom_wood | `kubejs:tk3/compat/strip_quark_blossom_wood` |
-| 1 | 6x quark:blossom_planks | cutting | quark:stripped_blossom_wood | `kubejs:tk3/compat/saw_quark_blossom_wood` |
-| 1 | twilightforest:stripped_canopy_log | cutting | twilightforest:canopy_log | `kubejs:tk3/compat/strip_twilightforest_canopy_log` |
-| 1 | 6x twilightforest:canopy_planks | cutting | twilightforest:stripped_canopy_log | `kubejs:tk3/compat/saw_twilightforest_canopy_log` |
-| 1 | twilightforest:stripped_canopy_wood | cutting | twilightforest:canopy_wood | `kubejs:tk3/compat/strip_twilightforest_canopy_wood` |
-| 1 | 6x twilightforest:canopy_planks | cutting | twilightforest:stripped_canopy_wood | `kubejs:tk3/compat/saw_twilightforest_canopy_wood` |
-| 1 | twilightforest:stripped_dark_log | cutting | twilightforest:dark_log | `kubejs:tk3/compat/strip_twilightforest_dark_log` |
-| 1 | 6x twilightforest:dark_planks | cutting | twilightforest:stripped_dark_log | `kubejs:tk3/compat/saw_twilightforest_dark_log` |
-| 1 | twilightforest:stripped_dark_wood | cutting | twilightforest:dark_wood | `kubejs:tk3/compat/strip_twilightforest_dark_wood` |
-| 1 | 6x twilightforest:dark_planks | cutting | twilightforest:stripped_dark_wood | `kubejs:tk3/compat/saw_twilightforest_dark_wood` |
-| 1 | twilightforest:stripped_mangrove_log | cutting | twilightforest:mangrove_log | `kubejs:tk3/compat/strip_twilightforest_mangrove_log` |
-| 1 | 6x twilightforest:mangrove_planks | cutting | twilightforest:stripped_mangrove_log | `kubejs:tk3/compat/saw_twilightforest_mangrove_log` |
-| 1 | twilightforest:stripped_mangrove_wood | cutting | twilightforest:mangrove_wood | `kubejs:tk3/compat/strip_twilightforest_mangrove_wood` |
-| 1 | 6x twilightforest:mangrove_planks | cutting | twilightforest:stripped_mangrove_wood | `kubejs:tk3/compat/saw_twilightforest_mangrove_wood` |
-| 1 | twilightforest:stripped_mining_log | cutting | twilightforest:mining_log | `kubejs:tk3/compat/strip_twilightforest_mining_log` |
-| 1 | 6x twilightforest:mining_planks | cutting | twilightforest:stripped_mining_log | `kubejs:tk3/compat/saw_twilightforest_mining_log` |
-| 1 | twilightforest:stripped_mining_wood | cutting | twilightforest:mining_wood | `kubejs:tk3/compat/strip_twilightforest_mining_wood` |
-| 1 | 6x twilightforest:mining_planks | cutting | twilightforest:stripped_mining_wood | `kubejs:tk3/compat/saw_twilightforest_mining_wood` |
-| 1 | twilightforest:stripped_sorting_log | cutting | twilightforest:sorting_log | `kubejs:tk3/compat/strip_twilightforest_sorting_log` |
-| 1 | 6x twilightforest:sorting_planks | cutting | twilightforest:stripped_sorting_log | `kubejs:tk3/compat/saw_twilightforest_sorting_log` |
-| 1 | twilightforest:stripped_sorting_wood | cutting | twilightforest:sorting_wood | `kubejs:tk3/compat/strip_twilightforest_sorting_wood` |
-| 1 | 6x twilightforest:sorting_planks | cutting | twilightforest:stripped_sorting_wood | `kubejs:tk3/compat/saw_twilightforest_sorting_wood` |
-| 1 | twilightforest:stripped_time_log | cutting | twilightforest:time_log | `kubejs:tk3/compat/strip_twilightforest_time_log` |
-| 1 | 6x twilightforest:time_planks | cutting | twilightforest:stripped_time_log | `kubejs:tk3/compat/saw_twilightforest_time_log` |
-| 1 | twilightforest:stripped_time_wood | cutting | twilightforest:time_wood | `kubejs:tk3/compat/strip_twilightforest_time_wood` |
-| 1 | 6x twilightforest:time_planks | cutting | twilightforest:stripped_time_wood | `kubejs:tk3/compat/saw_twilightforest_time_wood` |
-| 1 | twilightforest:stripped_transformation_log | cutting | twilightforest:transformation_log | `kubejs:tk3/compat/strip_twilightforest_transformation_log` |
-| 1 | 6x twilightforest:transformation_planks | cutting | twilightforest:stripped_transformation_log | `kubejs:tk3/compat/saw_twilightforest_transformation_log` |
-| 1 | twilightforest:stripped_transformation_wood | cutting | twilightforest:transformation_wood | `kubejs:tk3/compat/strip_twilightforest_transformation_wood` |
-| 1 | 6x twilightforest:transformation_planks | cutting | twilightforest:stripped_transformation_wood | `kubejs:tk3/compat/saw_twilightforest_transformation_wood` |
-| 1 | twilightforest:stripped_twilight_oak_log | cutting | twilightforest:twilight_oak_log | `kubejs:tk3/compat/strip_twilightforest_twilight_oak_log` |
-| 1 | 6x twilightforest:twilight_oak_planks | cutting | twilightforest:stripped_twilight_oak_log | `kubejs:tk3/compat/saw_twilightforest_twilight_oak_log` |
-| 1 | twilightforest:stripped_twilight_oak_wood | cutting | twilightforest:twilight_oak_wood | `kubejs:tk3/compat/strip_twilightforest_twilight_oak_wood` |
-| 1 | 6x twilightforest:twilight_oak_planks | cutting | twilightforest:stripped_twilight_oak_wood | `kubejs:tk3/compat/saw_twilightforest_twilight_oak_wood` |
-| 1 | upgrade_aquatic:stripped_driftwood_log | cutting | upgrade_aquatic:driftwood_log | `kubejs:tk3/compat/strip_upgrade_aquatic_driftwood_log` |
-| 1 | 6x upgrade_aquatic:driftwood_planks | cutting | upgrade_aquatic:stripped_driftwood_log | `kubejs:tk3/compat/saw_upgrade_aquatic_driftwood_log` |
-| 1 | upgrade_aquatic:stripped_river_log | cutting | upgrade_aquatic:river_log | `kubejs:tk3/compat/strip_upgrade_aquatic_river_log` |
-| 1 | 6x upgrade_aquatic:river_planks | cutting | upgrade_aquatic:stripped_river_log | `kubejs:tk3/compat/saw_upgrade_aquatic_river_log` |
-| 1 | upgrade_aquatic:stripped_river_wood | cutting | upgrade_aquatic:river_wood | `kubejs:tk3/compat/strip_upgrade_aquatic_river_wood` |
-| 1 | 6x upgrade_aquatic:river_planks | cutting | upgrade_aquatic:stripped_river_wood | `kubejs:tk3/compat/saw_upgrade_aquatic_river_wood` |
-| 1 | witchery:stripped_alder_log | cutting | witchery:alder_log | `kubejs:tk3/compat/strip_witchery_alder_log` |
-| 1 | 6x witchery:alder_planks | cutting | witchery:stripped_alder_log | `kubejs:tk3/compat/saw_witchery_alder_log` |
-| 1 | witchery:stripped_alder_wood | cutting | witchery:alder_wood | `kubejs:tk3/compat/strip_witchery_alder_wood` |
-| 1 | 6x witchery:alder_planks | cutting | witchery:stripped_alder_wood | `kubejs:tk3/compat/saw_witchery_alder_wood` |
-| 1 | witchery:stripped_hawthorn_log | cutting | witchery:hawthorn_log | `kubejs:tk3/compat/strip_witchery_hawthorn_log` |
-| 1 | 6x witchery:hawthorn_planks | cutting | witchery:stripped_hawthorn_log | `kubejs:tk3/compat/saw_witchery_hawthorn_log` |
-| 1 | witchery:stripped_hawthorn_wood | cutting | witchery:hawthorn_wood | `kubejs:tk3/compat/strip_witchery_hawthorn_wood` |
-| 1 | 6x witchery:hawthorn_planks | cutting | witchery:stripped_hawthorn_wood | `kubejs:tk3/compat/saw_witchery_hawthorn_wood` |
-| 1 | witchery:stripped_rowan_log | cutting | witchery:rowan_log | `kubejs:tk3/compat/strip_witchery_rowan_log` |
-| 1 | 6x witchery:rowan_planks | cutting | witchery:stripped_rowan_log | `kubejs:tk3/compat/saw_witchery_rowan_log` |
-| 1 | witchery:stripped_rowan_wood | cutting | witchery:rowan_wood | `kubejs:tk3/compat/strip_witchery_rowan_wood` |
-| 1 | 6x witchery:rowan_planks | cutting | witchery:stripped_rowan_wood | `kubejs:tk3/compat/saw_witchery_rowan_wood` |
-| 1 | minecraft:stripped_bamboo_block | cutting | minecraft:bamboo_block | `kubejs:tk3/compat/strip_bamboo_block` |
-| 1 | 3x minecraft:bamboo_planks | cutting | minecraft:stripped_bamboo_block | `kubejs:tk3/compat/saw_bamboo` |
-| 1 | minecraft:sand | milling | minecraft:gravel | `kubejs:tk3/compat/gravel_to_sand` |
-| 1 | create:wheat_flour | milling | minecraft:wheat | `kubejs:tk3/compat/wheat_flour` |
-| 1 | 2x minecraft:dirt | compacting | minecraft:gravel + minecraft:clay_ball + 250 mB minecraft:water | `kubejs:tk3/compat/renewable_dirt` |
-| 1 | minecraft:mud | mixing | minecraft:dirt + 250 mB minecraft:water | `kubejs:tk3/compat/mud` |
-| 1 | minecraft:clay_ball | splashing | minecraft:mud | `kubejs:tk3/compat/mud_clay` |
-| 1 | minecraft:soul_sand | haunting | minecraft:sand | `kubejs:tk3/compat/soul_sand` |
-| 1 | minecraft:calcite | compacting | minecraft:bone_meal + minecraft:clay_ball | `kubejs:tk3/compat/calcite` |
-| 2 | minecraft:exposed_copper | splashing | minecraft:copper_block | `kubejs:tk3/compat/age_copper_block` |
-| 2 | minecraft:weathered_copper | splashing | minecraft:exposed_copper | `kubejs:tk3/compat/age_exposed_copper` |
-| 2 | minecraft:oxidized_copper | splashing | minecraft:weathered_copper | `kubejs:tk3/compat/age_weathered_copper` |
+## Tier 5
 
-## Magic
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [2x mekanism:ingot_steel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fsteel_bootstrap) | mixing | 2x minecraft:iron_ingot + minecraft:coal |
+| [mekanism:steel_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fsteel_casing) | shaped | mekanism:ingot_steel + mekanism:ingot_osmium + kubejs:tk3_precision_machine + kubejs:tk3_arcane_machine |
+| [mekanism:metallurgic_infuser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fmetallurgic_infuser) | deploying | mekanism:steel_casing + ars_nouveau:wilden_tribute |
+| [mekanism:enrichment_chamber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fenrichment_chamber) | shapeless | mekanism:steel_casing + mekanism:alloy_infused + create:precision_mechanism |
+| [mekanism:crusher](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fcrusher) | shapeless | mekanism:steel_casing + minecraft:diamond + create:precision_mechanism |
+| [mekanism:energized_smelter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fenergized_smelter) | shapeless | mekanism:steel_casing + minecraft:furnace + create:precision_mechanism |
+| [mekanismgenerators:heat_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fheat_generator) | shapeless | mekanism:steel_casing + minecraft:furnace + create:precision_mechanism |
+| [createaddition:alternator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Falternator) | shapeless | mekanism:steel_casing + createaddition:copper_spool + create:precision_mechanism |
+| [createaddition:electric_motor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Felectric_motor) | shapeless | mekanism:steel_casing + createaddition:capacitor + create:precision_mechanism |
+| [2x mekanism:dust_iron](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Firon_refining) | enriching | minecraft:raw_iron |
+| [2x mekanism:dust_copper](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fcopper_refining) | enriching | minecraft:raw_copper |
+| [4x mekanism:basic_universal_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fbasic_universal_cable) | shapeless | mekanism:ingot_steel + createaddition:copper_spool + minecraft:redstone |
+| [4x mekanism:basic_mechanical_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fbasic_mechanical_pipe) | shapeless | mekanism:ingot_steel + create:fluid_pipe + minecraft:glass |
+| [4x mekanism:basic_logistical_transporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fbasic_logistical_transporter) | shapeless | mekanism:ingot_steel + create:brass_funnel + minecraft:redstone |
+| [mekanism:basic_energy_cube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fbasic_energy_cube) | shapeless | mekanism:steel_casing + mekanism:alloy_infused + minecraft:redstone |
+| [mekanism:ingot_steel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_5%2Fsteel_from_dust) | mek_smelting | mekanism:dust_steel |
+| [sophisticatedstorage:smelting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_smelting_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_arcane_machine + minecraft:furnace |
+| [sophisticatedstorage:smoking_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_smoking_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_arcane_machine + minecraft:smoker |
+| [sophisticatedstorage:blasting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_blasting_upgrade) | shaped | sophisticatedstorage:upgrade_base + kubejs:tk3_arcane_machine + minecraft:blast_furnace |
+| [sophisticatedstorage:stack_upgrade_tier_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_stack_upgrade_tier_2) | sophisticatedcore:upgrade_next_tier | sophisticatedstorage:stack_upgrade_tier_1 + mekanism:steel_casing + mekanism:alloy_infused |
+| [sophisticatedbackpacks:smelting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_smelting_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_arcane_machine + minecraft:furnace |
+| [sophisticatedbackpacks:smoking_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_smoking_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_arcane_machine + minecraft:smoker |
+| [sophisticatedbackpacks:blasting_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_blasting_upgrade) | shaped | sophisticatedbackpacks:upgrade_base + kubejs:tk3_arcane_machine + minecraft:blast_furnace |
+| [sophisticatedbackpacks:stack_upgrade_tier_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_stack_upgrade_tier_2) | sophisticatedcore:upgrade_next_tier | sophisticatedbackpacks:stack_upgrade_tier_1 + mekanism:steel_casing + mekanism:alloy_infused |
+| [sophisticatedstorage:diamond_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_diamond_chest) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:gold_chest + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:diamond_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_diamond_barrel) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:gold_barrel + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:limited_diamond_barrel_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_diamond_barrel_1) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_gold_barrel_1 + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:limited_diamond_barrel_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_diamond_barrel_2) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_gold_barrel_2 + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:limited_diamond_barrel_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_diamond_barrel_3) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_gold_barrel_3 + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:limited_diamond_barrel_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_limited_diamond_barrel_4) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:limited_gold_barrel_4 + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:diamond_shulker_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_diamond_shulker_box) | sophisticatedstorage:storage_tier_upgrade | sophisticatedstorage:gold_shulker_box + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedbackpacks:diamond_backpack](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedbackpacks_diamond_backpack) | sophisticatedbackpacks:backpack_upgrade | sophisticatedbackpacks:gold_backpack + mekanism:steel_casing + minecraft:diamond |
+| [sophisticatedstorage:gold_to_diamond_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fstorage%2Fsophisticatedstorage_gold_to_diamond_tier_upgrade) | shaped | sophisticatedstorage:upgrade_base + mekanism:steel_casing + minecraft:diamond |
+| [2x mekanism:dust_gold](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fmekanism_dust_gold) | mek_enriching | minecraft:raw_gold |
+| [2x mekanism:dust_osmium](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fmekanism_dust_osmium) | mek_enriching | mekanism:raw_osmium |
+| [2x mekanism:dust_tin](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fmekanism_dust_tin) | mek_enriching | mekanism:raw_tin |
+| [2x mekanism:dust_lead](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fmekanism_dust_lead) | mek_enriching | mekanism:raw_lead |
+| [witchery:distillery](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fwitchery_distillery) | apparatus | mekanism:steel_casing + witchery:cauldron + create:fluid_pipe |
+| [3x createaddition:connector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_crafting_connector) | minecraft:crafting_shapeless | kubejs:tk3_arcane_machine + create:andesite_alloy + #c:slime_balls |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 4 | irons_spellbooks:blank_rune | compacting | minecraft:stone + irons_spellbooks:arcane_essence | `kubejs:tk3/magic/irons_spellbooks_blank_rune` |
-| 4 | 2x irons_spellbooks:magic_cloth | mixing | #minecraft:wool + irons_spellbooks:arcane_essence + 250 mB minecraft:water | `kubejs:tk3/magic/irons_spellbooks_magic_cloth` |
-| 4 | irons_spellbooks:arcane_ingot | apparatus | minecraft:iron_ingot + ars_nouveau:source_gem + irons_spellbooks:arcane_essence + minecraft:gold_ingot | `kubejs:tk3/magic/irons_spellbooks_arcane_ingot` |
-| 4 | irons_spellbooks:fire_rune | apparatus | irons_spellbooks:blank_rune + ars_nouveau:fire_essence + kubejs:tk3_arcane_mechanism | `kubejs:tk3/magic/irons_spellbooks_fire_rune` |
-| 4 | irons_spellbooks:ice_rune | apparatus | irons_spellbooks:blank_rune + ars_nouveau:water_essence + kubejs:tk3_arcane_mechanism | `kubejs:tk3/magic/irons_spellbooks_ice_rune` |
-| 4 | irons_spellbooks:lightning_rune | apparatus | irons_spellbooks:blank_rune + ars_nouveau:air_essence + kubejs:tk3_arcane_mechanism | `kubejs:tk3/magic/irons_spellbooks_lightning_rune` |
-| 4 | irons_spellbooks:nature_rune | apparatus | irons_spellbooks:blank_rune + ars_nouveau:earth_essence + kubejs:tk3_arcane_mechanism | `kubejs:tk3/magic/irons_spellbooks_nature_rune` |
-| 4 | create_wizardry:arcane_sheet | pressing | irons_spellbooks:arcane_ingot | `kubejs:tk3/magic/create_wizardry_arcane_sheet` |
-| 4 | create_wizardry:arcane_pump | apparatus | kubejs:tk3_arcane_machine + create:mechanical_pump + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/create_wizardry_arcane_pump` |
-| 4 | create_wizardry:arcane_pipe | apparatus | kubejs:tk3_arcane_machine + create:fluid_pipe + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/create_wizardry_arcane_pipe` |
-| 4 | create_wizardry:smart_arcane_pipe | apparatus | kubejs:tk3_arcane_machine + create:smart_fluid_pipe + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/create_wizardry_smart_arcane_pipe` |
-| 4 | create_wizardry:mana_siphon | apparatus | kubejs:tk3_arcane_machine + ars_nouveau:source_jar + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/create_wizardry_mana_siphon` |
-| 4 | create_wizardry:channeler | apparatus | kubejs:tk3_arcane_machine + irons_spellbooks:arcane_rune + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/create_wizardry_channeler` |
-| 4 | create_wizardry:blaze_caster | apparatus | kubejs:tk3_arcane_machine + minecraft:blaze_rod + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/create_wizardry_blaze_caster` |
-| 4 | ars_creo:starbuncle_wheel | apparatus | kubejs:tk3_arcane_machine + ars_nouveau:starbuncle_charm + create_wizardry:arcane_sheet + ars_nouveau:source_gem | `kubejs:tk3/magic/ars_creo_starbuncle_wheel` |
-| 4 | irons_spellbooks:common_ink | cauldron brew | minecraft:ink_sac | `kubejs:tk3/magic/mana_ink` |
-| 4 | irons_spellbooks:common_ink | cauldron empty | minecraft:glass_bottle | `kubejs:tk3/magic/bottle_common_ink` |
+## Tier 6
 
-## Storage
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [ae2:charger](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_charger) | shapeless | mekanism:steel_casing + ae2:certus_quartz_crystal + createaddition:capacitor |
+| [ae2:inscriber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_inscriber) | shapeless | mekanism:steel_casing + createaddition:electric_motor + minecraft:gold_ingot |
+| [ae2:charged_certus_quartz_crystal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_charged_certus_quartz_crystal) | ae_charger | ae2:certus_quartz_crystal |
+| [ae2:certus_quartz_dust](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fgrind_certus_quartz_crystal) | crushing | ae2:certus_quartz_crystal |
+| [ae2:fluix_dust](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fgrind_fluix_crystal) | crushing | ae2:fluix_crystal |
+| [ae2:printed_silicon](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_printed_silicon) | ae_print | ae2:silicon + ae2:silicon_press |
+| [ae2:printed_logic_processor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_printed_logic_processor) | ae_print | minecraft:gold_ingot + ae2:logic_processor_press |
+| [ae2:logic_processor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_logic_processor) | ae_processor | minecraft:redstone + ae2:printed_logic_processor + ae2:printed_silicon |
+| [ae2:printed_calculation_processor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_printed_calculation_processor) | ae_print | ae2:certus_quartz_crystal + ae2:calculation_processor_press |
+| [ae2:calculation_processor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_calculation_processor) | ae_processor | minecraft:redstone + ae2:printed_calculation_processor + ae2:printed_silicon |
+| [ae2:printed_engineering_processor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_printed_engineering_processor) | ae_print | minecraft:diamond + ae2:engineering_processor_press |
+| [ae2:engineering_processor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Flate_layers%2Fae2_engineering_processor) | ae_processor | minecraft:redstone + ae2:printed_engineering_processor + ae2:printed_silicon |
+| [kubejs:tk3_network_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fnetwork_mechanism) | sequence | create:precision_mechanism + mekanism:advanced_control_circuit + ae2:fluix_crystal + betterend:diamond_hammer |
+| [kubejs:tk3_network_chassis](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_6) | deploying | mekanism:steel_casing + kubejs:tk3_network_mechanism |
+| [betterend:diamond_hammer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fbetterend_diamond_hammer) | shaped | minecraft:diamond + mekanism:ingot_steel + minecraft:stick |
+| [farmersdelight:diamond_knife](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ffarmersdelight_diamond_knife) | shaped | minecraft:diamond + mekanism:ingot_steel |
+| [ae2:tiny_tnt](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_misc_tiny_tnt) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + minecraft:gunpowder |
+| [ae2:fluix_pearl](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_misc_fluixpearl) | minecraft:crafting_shaped | #c:dusts/fluix + #ae2:all_fluix + #c:ender_pearls |
+| [ae2:portable_fluid_cell_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_fluid_cell_1k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_1k + ae2:energy_cell + ae2:fluid_cell_housing |
+| [ae2:charged_staff](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_misctools_charged_staff) | minecraft:crafting_shaped | ae2:charged_certus_quartz_crystal + #c:ingots/iron |
+| [ae2:memory_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_network_memory_card) | minecraft:crafting_shaped | ae2:calculation_processor + #c:ingots/iron + #c:ingots/gold + #c:dusts/redstone |
+| [ae2:fluix_upgrade_smithing_template](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_fluix_upgrade_smithing_template) | minecraft:crafting_shapeless | minecraft:paper + #c:gems/fluix |
+| [ae2:network_tool](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_network_tool) | minecraft:crafting_shapeless | #ae2:illuminated_panel + #c:chests/wooden + #ae2:quartz_wrench + ae2:calculation_processor |
+| [ae2:portable_item_cell_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_item_cell_1k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_1k + ae2:energy_cell + ae2:item_cell_housing |
+| [ae2:view_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_view_cell_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + #ae2:all_certus_quartz |
+| [ae2:item_storage_cell_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_1k_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:cell_component_1k |
+| [ae2:fluid_cell_housing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_cell_housing) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + #c:ingots/copper |
+| [ae2:item_cell_housing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_cell_housing) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + #c:ingots/iron + #c:ingots/copper |
+| [ae2:fluid_storage_cell_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_1k_storage) | minecraft:crafting_shapeless | ae2:fluid_cell_housing + ae2:cell_component_1k |
+| [ae2:fluid_storage_cell_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_1k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_1k + #c:ingots/copper |
+| [ae2:item_storage_cell_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_1k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_1k + #c:ingots/iron + #c:ingots/copper |
+| [ae2:cell_component_1k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_components_cell_1k_part) | minecraft:crafting_shaped | #c:dusts/redstone + #ae2:all_certus_quartz + ae2:logic_processor |
+| [ae2:view_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_view_cell) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + #ae2:all_certus_quartz + #c:ingots/iron |
+| [8x ae2:red_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_red) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/red |
+| [8x ae2:light_blue_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_light_blue) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/light_blue |
+| [8x ae2:magenta_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_magenta) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/magenta |
+| [8x ae2:orange_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_orange) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/orange |
+| [8x ae2:white_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_white) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/white |
+| [8x ae2:brown_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_brown) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/brown |
+| [8x ae2:blue_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_blue) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/blue |
+| [8x ae2:purple_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_purple) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/purple |
+| [8x ae2:pink_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_pink) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/pink |
+| [8x ae2:orange_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_orange) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/orange |
+| [4x ae2:fluix_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_fluix) | minecraft:crafting_shapeless | ae2:quartz_fiber + #ae2:all_fluix + #ae2:all_fluix |
+| [8x ae2:green_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_green) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/green |
+| [8x ae2:yellow_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_yellow) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/yellow |
+| [8x ae2:gray_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_gray) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/gray |
+| [8x ae2:pink_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_pink) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/pink |
+| [8x ae2:orange_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_orange) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/orange |
+| [8x ae2:lime_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_lime) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/lime |
+| [8x ae2:lime_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_lime) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/lime |
+| [8x ae2:cyan_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_cyan) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/cyan |
+| [8x ae2:yellow_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_yellow) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/yellow |
+| [8x ae2:red_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_red) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/red |
+| [8x ae2:pink_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_pink) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/pink |
+| [8x ae2:black_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_black) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/black |
+| [8x ae2:pink_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_pink) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/pink |
+| [8x ae2:light_gray_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_light_gray) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/light_gray |
+| [8x ae2:blue_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_blue) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/blue |
+| [8x ae2:light_gray_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_light_gray) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/light_gray |
+| [8x ae2:yellow_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_yellow) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/yellow |
+| [8x ae2:red_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_red) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/red |
+| [8x ae2:red_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_red) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/red |
+| [8x ae2:blue_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_blue) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/blue |
+| [8x ae2:magenta_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_magenta) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/magenta |
+| [8x ae2:lime_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_lime) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/lime |
+| [8x ae2:cyan_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_cyan) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/cyan |
+| [ae2:fluix_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_fluix) | minecraft:crafting_shapeless | ae2:fluix_covered_cable + ae2:fluix_covered_cable + ae2:fluix_covered_cable + ae2:fluix_covered_cable |
+| [8x ae2:purple_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_purple) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/purple |
+| [8x ae2:blue_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_blue) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/blue |
+| [ae2:fluix_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_fluix_clean) | minecraft:crafting_shapeless | #ae2:smart_cable + ae2:fluix_smart_cable + #ae2:can_remove_color |
+| [8x ae2:purple_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_purple) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/purple |
+| [8x ae2:green_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_green) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/green |
+| [ae2:fluix_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_fluix) | minecraft:crafting_shapeless | #minecraft:wool + ae2:fluix_glass_cable |
+| [8x ae2:gray_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_gray) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/gray |
+| [8x ae2:light_gray_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_light_gray) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/light_gray |
+| [8x ae2:yellow_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_yellow) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/yellow |
+| [ae2:fluix_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_fluix) | minecraft:crafting_shapeless | ae2:fluix_covered_cable + #c:dusts/redstone + #c:dusts/glowstone |
+| [ae2:fluix_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_fluix_clean) | minecraft:crafting_shapeless | #ae2:covered_dense_cable + ae2:fluix_covered_dense_cable + #ae2:can_remove_color |
+| [8x ae2:green_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_green) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/green |
+| [8x ae2:red_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_red) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/red |
+| [8x ae2:brown_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_brown) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/brown |
+| [8x ae2:green_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_green) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/green |
+| [8x ae2:light_gray_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_light_gray) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/light_gray |
+| [8x ae2:light_blue_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_light_blue) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/light_blue |
+| [8x ae2:cyan_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_cyan) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/cyan |
+| [8x ae2:purple_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_purple) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/purple |
+| [8x ae2:black_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_black) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/black |
+| [8x ae2:purple_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_purple) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/purple |
+| [8x ae2:lime_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_lime) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/lime |
+| [8x ae2:black_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_black) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/black |
+| [8x ae2:cyan_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_cyan) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/cyan |
+| [8x ae2:gray_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_gray) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/gray |
+| [8x ae2:brown_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_brown) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/brown |
+| [8x ae2:lime_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_lime) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/lime |
+| [ae2:fluix_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_fluix_clean) | minecraft:crafting_shapeless | #ae2:covered_cable + ae2:fluix_covered_cable + #ae2:can_remove_color |
+| [ae2:fluix_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_fluix_clean) | minecraft:crafting_shapeless | #ae2:glass_cable + ae2:fluix_glass_cable + #ae2:can_remove_color |
+| [8x ae2:brown_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_brown) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/brown |
+| [8x ae2:blue_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_blue) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/blue |
+| [8x ae2:light_blue_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_light_blue) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/light_blue |
+| [8x ae2:yellow_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_yellow) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/yellow |
+| [ae2:fluix_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_fluix) | minecraft:crafting_shapeless | ae2:fluix_covered_dense_cable + #c:dusts/redstone + #c:dusts/glowstone |
+| [8x ae2:gray_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_gray) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/gray |
+| [8x ae2:green_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_green) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/green |
+| [8x ae2:white_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_white) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/white |
+| [8x ae2:orange_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_orange) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/orange |
+| [8x ae2:white_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_white) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/white |
+| [8x ae2:magenta_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_magenta) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/magenta |
+| [8x ae2:white_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_white) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/white |
+| [8x ae2:black_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_black) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/black |
+| [8x ae2:brown_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_brown) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/brown |
+| [8x ae2:light_gray_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_light_gray) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/light_gray |
+| [8x ae2:white_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_white) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/white |
+| [8x ae2:magenta_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_magenta) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/magenta |
+| [8x ae2:orange_glass_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_glass_orange) | minecraft:crafting_shaped | ae2:fluix_glass_cable + #c:dyes/orange |
+| [8x ae2:pink_smart_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_smart_pink) | minecraft:crafting_shaped | ae2:fluix_smart_cable + #c:dyes/pink |
+| [8x ae2:light_blue_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_light_blue) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/light_blue |
+| [8x ae2:magenta_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_magenta) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/magenta |
+| [ae2:fluix_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_from_smart) | minecraft:crafting_shapeless | ae2:fluix_smart_cable + ae2:fluix_smart_cable + ae2:fluix_smart_cable + ae2:fluix_smart_cable |
+| [ae2:fluix_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_fluix_clean) | minecraft:crafting_shapeless | #ae2:smart_dense_cable + ae2:fluix_smart_dense_cable + #ae2:can_remove_color |
+| [8x ae2:cyan_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_cyan) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/cyan |
+| [8x ae2:light_blue_smart_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_smart_light_blue) | minecraft:crafting_shaped | ae2:fluix_smart_dense_cable + #c:dyes/light_blue |
+| [8x ae2:black_covered_dense_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_dense_covered_black) | minecraft:crafting_shaped | ae2:fluix_covered_dense_cable + #c:dyes/black |
+| [8x ae2:gray_covered_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cables_covered_gray) | minecraft:crafting_shaped | ae2:fluix_covered_cable + #c:dyes/gray |
+| [ae2:dark_monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_panels_dark_monitor) | minecraft:crafting_shapeless | ae2:monitor |
+| [ae2:toggle_bus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_toggle_bus) | minecraft:crafting_shaped | #c:dusts/redstone + ae2:fluix_glass_cable + minecraft:lever |
+| [ae2:monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_panels_monitor) | minecraft:crafting_shapeless | ae2:semi_dark_monitor |
+| [ae2:cable_energy_acceptor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_energy_acceptor) | minecraft:crafting_shapeless | ae2:energy_acceptor |
+| [ae2:annihilation_plane](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_annihilation_plane_alt) | minecraft:crafting_shaped | #ae2:all_fluix + #c:ingots/iron + ae2:annihilation_core |
+| [ae2:terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_terminals) | minecraft:crafting_shapeless | ae2:formation_core + #ae2:illuminated_panel + ae2:logic_processor + ae2:annihilation_core |
+| [ae2:level_emitter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_level_emitter) | minecraft:crafting_shapeless | minecraft:redstone_torch + ae2:calculation_processor |
+| [ae2:pattern_access_terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_terminals_pattern_access) | minecraft:crafting_shapeless | #ae2:illuminated_panel + ae2:engineering_processor + #ae2:pattern_provider |
+| [ae2:export_bus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_export_bus) | minecraft:crafting_shaped | #c:ingots/iron + ae2:formation_core + minecraft:piston |
+| [ae2:formation_plane](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_formation_plane_alt) | minecraft:crafting_shaped | #c:ingots/iron + #ae2:all_fluix + ae2:formation_core |
+| [ae2:semi_dark_monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_panels_semi_dark_monitor_alt) | minecraft:crafting_shapeless | ae2:dark_monitor |
+| [3x ae2:semi_dark_monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_panels_semi_dark_monitor) | minecraft:crafting_shaped | #c:dusts/glowstone + ae2:quartz_glass + #c:ingots/iron + #c:dusts/redstone |
+| [ae2:conversion_monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_monitors_conversion) | minecraft:crafting_shapeless | ae2:formation_core + ae2:storage_monitor + ae2:annihilation_core |
+| [ae2:inverted_toggle_bus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_toggle_bus_inverted_alt) | minecraft:crafting_shapeless | ae2:toggle_bus |
+| [ae2:toggle_bus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_toggle_bus_alt) | minecraft:crafting_shapeless | ae2:inverted_toggle_bus |
+| [4x ae2:cable_anchor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_cable_anchor) | ae2:quartz_cutting | #ae2:knife + #ae2:metal_ingots |
+| [ae2:storage_bus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_storage_bus) | minecraft:crafting_shapeless | minecraft:piston + #ae2:interface + minecraft:piston |
+| [3x ae2:quartz_fiber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_quartz_fiber_part) | minecraft:crafting_shaped | #c:glass_blocks/cheap + #ae2:all_quartz_dust |
+| [ae2:crafting_terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_terminals_crafting) | minecraft:crafting_shapeless | ae2:terminal + minecraft:crafting_table + ae2:calculation_processor |
+| [ae2:import_bus](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_import_bus) | minecraft:crafting_shaped | ae2:annihilation_core + #c:ingots/iron + minecraft:piston |
+| [ae2:annihilation_plane](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_annihilation_plane_alt2) | minecraft:crafting_shaped | #c:ingots/iron + #ae2:all_fluix + ae2:annihilation_core |
+| [ae2:storage_monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_monitors_storage) | minecraft:crafting_shapeless | ae2:level_emitter + #ae2:illuminated_panel |
+| [ae2:formation_plane](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_formation_plane) | minecraft:crafting_shaped | #ae2:all_fluix + #c:ingots/iron + ae2:formation_core |
+| [ae2:me_p2p_tunnel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_tunnels_me) | minecraft:crafting_shaped | #c:ingots/iron + ae2:engineering_processor + #ae2:all_fluix |
+| [ae2:pattern_encoding_terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_terminals_pattern_encoding) | minecraft:crafting_shapeless | ae2:engineering_processor + ae2:crafting_terminal |
+| [ae2:energy_level_emitter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_parts_energy_level_emitter) | minecraft:crafting_shapeless | minecraft:redstone_torch + ae2:charged_certus_quartz_crystal + ae2:calculation_processor |
+| [ae2:dense_energy_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_energy_dense_energy_cell) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:calculation_processor |
+| [ae2:pattern_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_pattern_providers_interface_alt) | minecraft:crafting_shapeless | ae2:cable_pattern_provider |
+| [ae2:energy_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_energy_energy_cell) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:dusts/fluix + ae2:quartz_glass |
+| [ae2:io_port](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_io_port) | minecraft:crafting_shaped | #c:glass_blocks/cheap + ae2:drive + ae2:fluix_glass_cable + kubejs:tk3_network_chassis + ae2:logic_processor |
+| [ae2:interface](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_interfaces_interface) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:glass_blocks/cheap + ae2:annihilation_core + ae2:formation_core |
+| [ae2:chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_storage_chest) | minecraft:crafting_shaped | #c:glass_blocks/cheap + ae2:terminal + ae2:fluix_glass_cable + kubejs:tk3_network_chassis + #c:ingots/copper |
+| [ae2:energy_acceptor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_energy_energy_acceptor) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:quartz_glass + #c:ingots/copper |
+| [ae2:growth_accelerator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_crystal_processing_growth_accelerator) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:fluix_glass_cable + ae2:quartz_glass + ae2:fluix_block |
+| [ae2:pattern_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_pattern_providers_interface) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + minecraft:crafting_table + ae2:annihilation_core + ae2:formation_core |
+| [ae2:vibration_chamber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_energy_vibration_chamber) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + minecraft:furnace + ae2:energy_acceptor + #c:ingots/copper + #c:gems/fluix |
+| [ae2:cable_pattern_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_pattern_providers_interface_part) | minecraft:crafting_shapeless | ae2:pattern_provider |
+| [ae2:crank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_crank) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/copper |
+| [ae2:drive](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_storage_drive) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:engineering_processor + ae2:fluix_glass_cable |
+| [ae2:controller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_controller) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:fluix_crystal + ae2:engineering_processor |
+| [ae2:cell_workbench](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_cell_workbench) | minecraft:crafting_shaped | #minecraft:wool + ae2:calculation_processor + kubejs:tk3_network_chassis + #c:chests/wooden |
+| [ae2:interface](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_interfaces_interface_alt) | minecraft:crafting_shapeless | ae2:cable_interface |
+| [ae2:cable_interface](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_interfaces_interface_part) | minecraft:crafting_shapeless | ae2:interface |
+| [ae2:energy_acceptor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_energy_energy_acceptor_alt) | minecraft:crafting_shapeless | ae2:cable_energy_acceptor |
+| [ae2:crystal_resonance_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crystal_resonance_generator) | minecraft:crafting_shaped | #c:ingots/copper + ae2:fluix_block + kubejs:tk3_network_chassis + ae2:charged_certus_quartz_crystal |
+| [ae2:crafting_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_cpu_crafting_unit) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:calculation_processor + ae2:fluix_glass_cable + ae2:logic_processor |
+| [ae2:crafting_accelerator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_cpu_crafting_accelerator) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:engineering_processor |
+| [2x ae2:blank_pattern](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_patterns_blank) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/glowstone + #ae2:all_certus_quartz + #c:ingots/iron + #c:ingots/copper |
+| [ae2:crafting_monitor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_cpu_crafting_monitor) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:storage_monitor |
+| [ae2:1k_crafting_storage](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_1k_cpu_crafting_storage) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:cell_component_1k |
+| [ae2:molecular_assembler](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_molecular_assembler) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:quartz_glass + ae2:annihilation_core + minecraft:crafting_table + ae2:formation_core |
+| [ae2:guide](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_charger_guide) | ae2:charger | minecraft:book |
+| [ae2:engineering_processor_press](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_inscriber_engineering_processor_press) | ae2:inscriber | minecraft:iron_block + ae2:engineering_processor_press |
+| [ae2:logic_processor_press](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_inscriber_logic_processor_press) | ae2:inscriber | minecraft:iron_block + ae2:logic_processor_press |
+| [ae2:calculation_processor_press](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_inscriber_calculation_processor_press) | ae2:inscriber | minecraft:iron_block + ae2:calculation_processor_press |
+| [ae2:ender_dust](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_inscriber_ender_dust) | ae2:inscriber | minecraft:ender_pearl |
+| [2x ae2:quartz_fixture](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_quartz_fixture) | minecraft:crafting_shaped | ae2:charged_certus_quartz_crystal + kubejs:tk3_network_chassis |
+| [ae2:quartz_pillar](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_certus_quartz_pillar_from_stonecutting) | minecraft:stonecutting | ae2:cut_quartz_block |
+| [2x ae2:quartz_pillar](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_certus_quartz_pillar) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [4x ae2:quartz_bricks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_certus_quartz_bricks) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [ae2:light_detector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_light_detector) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:cable_anchor |
+| [2x ae2:quartz_fixture](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_quartz_fixture_from_anchors) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:cable_anchor |
+| [ae2:quartz_bricks](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_decorative_certus_quartz_bricks_from_stonecutting) | minecraft:stonecutting | ae2:cut_quartz_block |
+| [4x ae2:not_so_mysterious_cube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_not_so_mysterious_cube) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + ae2:smooth_sky_stone_block + ae2:calculation_processor_press + ae2:engineering_processor_press + ae2:logic_processor_press + ae2:silicon_press |
+| [6x ae2:quartz_brick_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_walls_quartz_bricks) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:quartz_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_walls_quartz_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:chiseled_quartz_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_walls_chiseled_quartz_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:fluix_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_walls_fluix_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:quartz_pillar_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_walls_quartz_pillar) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [4x ae2:quartz_brick_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_stairs_quartz_bricks) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [4x ae2:quartz_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_stairs_quartz_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [4x ae2:chiseled_quartz_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_stairs_chiseled_quartz_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [4x ae2:fluix_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_stairs_fluix_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [4x ae2:quartz_pillar_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_stairs_quartz_pillar) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:quartz_brick_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_slabs_quartz_bricks) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:quartz_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_slabs_quartz_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:chiseled_quartz_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_slabs_chiseled_quartz_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:fluix_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_slabs_fluix_block) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [6x ae2:quartz_pillar_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_shaped_slabs_quartz_pillar) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [ae2:crafting_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardcrafting) | minecraft:crafting_shapeless | minecraft:crafting_table + ae2:basic_card |
+| [2x ae2:advanced_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_advancedcard) | minecraft:crafting_shaped | #c:gems/diamond + #c:ingots/iron + #c:dusts/redstone + ae2:calculation_processor |
+| [ae2:energy_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardenergy) | minecraft:crafting_shaped | ae2:dense_energy_cell + ae2:advanced_card |
+| [2x ae2:basic_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_basiccard) | minecraft:crafting_shaped | #c:ingots/gold + #c:ingots/iron + #c:dusts/redstone + ae2:calculation_processor |
+| [ae2:redstone_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardredstone) | minecraft:crafting_shapeless | minecraft:redstone_torch + ae2:basic_card |
+| [ae2:equal_distribution_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_carddistribution) | minecraft:crafting_shapeless | ae2:advanced_card + ae2:calculation_processor |
+| [2x ae2:formation_core](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_formationcore) | minecraft:crafting_shaped | #ae2:all_certus_quartz + #c:dusts/fluix + ae2:logic_processor |
+| [2x ae2:annihilation_core](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_annihilationcore) | minecraft:crafting_shaped | #ae2:all_nether_quartz + #c:dusts/fluix + ae2:logic_processor |
+| [ae2:fuzzy_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardfuzzy) | minecraft:crafting_shapeless | ae2:advanced_card + #minecraft:wool |
+| [ae2:void_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardvoid) | minecraft:crafting_shapeless | ae2:calculation_processor + ae2:basic_card |
+| [ae2:inverter_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardinverter) | minecraft:crafting_shapeless | minecraft:redstone_torch + ae2:advanced_card |
+| [ae2:capacity_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardcapacity) | minecraft:crafting_shapeless | #ae2:all_certus_quartz + ae2:basic_card |
+| [ae2:speed_card](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_materials_cardspeed) | minecraft:crafting_shapeless | ae2:advanced_card + #ae2:all_fluix |
+| [ae2:chiseled_quartz_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_walls_chiseled_quartz_wall) | minecraft:stonecutting | ae2:chiseled_quartz_block |
+| [ae2:fluix_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_walls_fluix_wall) | minecraft:stonecutting | ae2:fluix_block |
+| [ae2:quartz_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_walls_quartz_wall) | minecraft:stonecutting | ae2:quartz_block |
+| [ae2:quartz_brick_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_walls_quartz_brick_wall) | minecraft:stonecutting | ae2:quartz_bricks |
+| [ae2:quartz_pillar_wall](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_walls_quartz_pillar_wall) | minecraft:stonecutting | ae2:quartz_pillar |
+| [ae2:chiseled_quartz_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_stairs_chiseled_quartz_stairs) | minecraft:stonecutting | ae2:chiseled_quartz_block |
+| [ae2:quartz_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_stairs_quartz_stairs) | minecraft:stonecutting | ae2:quartz_block |
+| [ae2:quartz_brick_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_stairs_quartz_brick_stairs) | minecraft:stonecutting | ae2:quartz_bricks |
+| [ae2:fluix_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_stairs_fluix_stairs) | minecraft:stonecutting | ae2:fluix_block |
+| [ae2:quartz_pillar_stairs](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_stairs_quartz_pillar_stairs) | minecraft:stonecutting | ae2:quartz_pillar |
+| [2x ae2:quartz_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_slabs_quartz_slab) | minecraft:stonecutting | ae2:quartz_block |
+| [2x ae2:chiseled_quartz_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_slabs_chiseled_quartz_slab) | minecraft:stonecutting | ae2:chiseled_quartz_block |
+| [2x ae2:quartz_brick_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_slabs_quartz_brick_slab) | minecraft:stonecutting | ae2:quartz_bricks |
+| [2x ae2:quartz_pillar_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_slabs_quartz_pillar_slab) | minecraft:stonecutting | ae2:quartz_pillar |
+| [2x ae2:fluix_slab](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_block_cutter_slabs_fluix_slab) | minecraft:stonecutting | ae2:fluix_block |
+| [4x mekanism:boiler_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_boiler_casing) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/steel |
+| [2x mekanism:boiler_valve](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_boiler_valve) | minecraft:crafting_shaped | mekanism:boiler_casing + kubejs:tk3_network_chassis |
+| [mekanism:cardboard_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_cardboard_box) | minecraft:crafting_shaped | kubejs:tk3_network_chassis |
+| [mekanism:chargepad](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chargepad) | mekanism:mek_data | kubejs:tk3_network_chassis + mekanism:energy_tablet + #c:ingots/steel |
+| [4x mekanism:dynamic_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_dynamic_tank) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/steel |
+| [2x mekanism:dynamic_valve](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_dynamic_valve) | minecraft:crafting_shaped | mekanism:dynamic_tank + kubejs:tk3_network_chassis |
+| [mekanism:electric_pump](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_electric_pump) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + minecraft:bucket + #c:ingots/osmium + mekanism:steel_casing |
+| [mekanism:fluidic_plenisher](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_fluidic_plenisher) | mekanism:mek_data | kubejs:tk3_network_chassis + #c:ingots/tin + mekanism:electric_pump |
+| [mekanism:formulaic_assemblicator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_formulaic_assemblicator) | minecraft:crafting_shaped | #c:chests/wooden + kubejs:tk3_network_chassis + minecraft:crafter + #c:ingots/steel + mekanism:steel_casing |
+| [mekanism:fuelwood_heater](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_fuelwood_heater) | minecraft:crafting_shaped | minecraft:furnace + kubejs:tk3_network_chassis + #c:ingots/steel + mekanism:steel_casing |
+| [mekanism:industrial_alarm](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_industrial_alarm) | minecraft:crafting_shaped | minecraft:redstone_lamp + kubejs:tk3_network_chassis + #c:ingots/lead |
+| [mekanism:logistical_sorter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_logistical_sorter) | minecraft:crafting_shaped | minecraft:piston + kubejs:tk3_network_chassis + #c:ingots/iron |
+| [mekanism:nutritional_liquifier](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_nutritional_liquifier) | minecraft:crafting_shaped | minecraft:bowl + kubejs:tk3_network_chassis + #c:dusts/redstone + mekanism:steel_casing |
+| [mekanism:oredictionificator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_oredictionificator) | minecraft:crafting_shaped | #c:chests/wooden + kubejs:tk3_network_chassis + #c:glass_panes + mekanism:dictionary + #c:ingots/steel |
+| [mekanism:painting_machine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_painting_machine) | minecraft:crafting_shaped | mekanism:dye_base + #mekanism:alloys/infused + kubejs:tk3_network_chassis + mekanism:steel_casing |
+| [mekanism:personal_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_personal_barrel) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:glass_blocks/cheap + #c:barrels/wooden + #c:ingots/steel |
+| [mekanism:personal_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_personal_chest) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:glass_blocks/cheap + #c:chests/wooden + #c:ingots/steel |
+| [mekanism:pigment_extractor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_pigment_extractor) | minecraft:crafting_shaped | minecraft:flint + kubejs:tk3_network_chassis + #c:dusts/redstone + mekanism:steel_casing |
+| [mekanism:precision_sawmill](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_precision_sawmill) | minecraft:crafting_shaped | #mekanism:alloys/infused + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:steel_casing |
+| [mekanism:pressure_disperser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_pressure_disperser) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #mekanism:alloys/infused + #c:ingots/steel |
+| [mekanism:resistive_heater](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_resistive_heater) | mekanism:mek_data | mekanism:energy_tablet + #c:ingots/tin + kubejs:tk3_network_chassis + mekanism:steel_casing |
+| [mekanism:security_desk](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_security_desk) | minecraft:crafting_shaped | mekanism:network_reader + kubejs:tk3_network_chassis + #c:glass_blocks/cheap + #c:ingots/steel + mekanism:steel_casing |
+| [mekanism:seismic_vibrator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_seismic_vibrator) | minecraft:crafting_shaped | #c:gems/lapis + kubejs:tk3_network_chassis + #c:ingots/tin + mekanism:steel_casing |
+| [4x mekanism:structural_glass](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_structural_glass) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/steel |
+| [mekanism:superheating_element](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_superheating_element) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/copper + mekanism:steel_casing |
+| [mekanism:basic_bin](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_bin_basic) | minecraft:crafting_shaped | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #mekanism:stone_crafting_materials |
+| [mekanism:advanced_control_circuit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_control_circuit_advanced) | minecraft:crafting_shaped | #mekanism:alloys/infused + #c:circuits/basic |
+| [mekanism:advanced_control_circuit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_control_circuit_infused_advanced) | mekanism:metallurgic_infusing | #c:circuits/basic; chemicals: {"chemical_input": {"amount": 60, "tag": "mekanism:redstone"}} |
+| [mekanism:basic_crushing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_crushing) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:crusher |
+| [mekanism:basic_enriching_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_enriching) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:enrichment_chamber |
+| [mekanism:basic_infusing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_infusing) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:metallurgic_infuser |
+| [mekanism:basic_sawing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_sawing) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:precision_sawmill |
+| [mekanism:basic_smelting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_smelting) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:energized_smelter |
+| [mekanism:basic_fluid_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_fluid_tank_basic) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/iron |
+| [mekanism:deepslate_fluorite_ore](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_fluorite_to_deepslate_ore) | mekanism:combining | 14x #c:dusts/fluorite + #c:cobblestones/deepslate |
+| [mekanism:deepslate_lead_ore](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_lead_ore_deepslate_from_raw) | mekanism:combining | 8x #c:raw_materials/lead + #c:cobblestones/deepslate |
+| [mekanism:deepslate_osmium_ore](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_osmium_ore_deepslate_from_raw) | mekanism:combining | 8x #c:raw_materials/osmium + #c:cobblestones/deepslate |
+| [mekanism:deepslate_tin_ore](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_tin_ore_deepslate_from_raw) | mekanism:combining | 8x #c:raw_materials/tin + #c:cobblestones/deepslate |
+| [mekanism:deepslate_uranium_ore](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_uranium_ore_deepslate_from_raw) | mekanism:combining | 8x #c:raw_materials/uranium + #c:cobblestones/deepslate |
+| [mekanism:basic_tier_installer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_tier_installer_basic) | minecraft:crafting_shaped | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + #minecraft:planks |
+| [2x mekanism:diversion_transporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_diversion_transporter) | minecraft:crafting_shaped | minecraft:iron_bars + kubejs:tk3_network_chassis + #c:ingots/steel |
+| [2x mekanism:restrictive_transporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_restrictive_transporter) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/steel |
+| [8x mekanism:basic_pressurized_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_pressurized_tube_basic) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/steel |
+| [8x mekanism:basic_thermodynamic_conductor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_thermodynamic_conductor_basic) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + #c:ingots/steel |
+| [mekanismgenerators:solar_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_solar_generator) | shapeless | kubejs:tk3_network_chassis + mekanism:alloy_infused + minecraft:glass |
+| [mekanismgenerators:advanced_solar_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_advanced_solar_generator) | shapeless | kubejs:tk3_network_chassis + mekanism:alloy_infused + minecraft:glass |
+| [mekanismgenerators:wind_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_wind_generator) | shapeless | kubejs:tk3_network_chassis + mekanism:alloy_infused + minecraft:glass |
+| [mekanismgenerators:bio_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_bio_generator) | shapeless | kubejs:tk3_network_chassis + mekanism:alloy_infused + minecraft:glass |
+| [ars_n_spells:spell_loom](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fars_n_spells_spell_loom) | apparatus | kubejs:tk3_network_chassis + irons_spellbooks:arcane_anvil + ars_nouveau:manipulation_essence |
+| [ars_n_spells:mana_infusion](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fars_n_spells_mana_infusion) | apparatus | kubejs:tk3_network_chassis + ars_nouveau:source_jar + irons_spellbooks:arcane_essence |
+| [apotheosis:salvaging_table](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fapotheosis_salvaging_table) | apparatus | kubejs:tk3_network_chassis + minecraft:anvil + ars_nouveau:manipulation_essence |
+| [apotheosis:reforging_table](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fapotheosis_reforging_table) | apparatus | kubejs:tk3_network_chassis + minecraft:anvil + apotheosis:gem_dust |
+| [apotheosis:gem_cutting_table](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fapotheosis_gem_cutting_table) | apparatus | kubejs:tk3_network_chassis + minecraft:diamond + apotheosis:gem_dust |
+| [2x createaddition:large_connector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_crafting_large_connector) | minecraft:crafting_shapeless | kubejs:tk3_network_chassis + create:andesite_alloy + create:andesite_alloy + #c:slime_balls |
+| [createaddition:redstone_relay](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_crafting_redstone_relay) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + create:electron_tube + #c:dusts/redstone + #c:stones |
+| [createaddition:digital_adapter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_crafting_digital_adapter) | minecraft:crafting_shapeless | kubejs:tk3_network_chassis + #c:plates/brass + minecraft:redstone_torch |
+| [createaddition:modular_accumulator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_crafting_modular_accumulator) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + createaddition:capacitor + #c:rods/copper + #c:wires/electrum |
+| [create_wizardry:smart_arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_smart_arcane_pipe) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + create:electron_tube + create_wizardry:arcane_pipe |
+| [create_wizardry:smart_arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_item_application_smart_arcane_pipe) | create:item_application | kubejs:tk3_network_chassis + create_wizardry:arcane_sheet |
+| [create_wizardry:smart_arcane_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_deploying_smart_arcane_pipe) | create:deploying | kubejs:tk3_network_chassis + create_wizardry:arcane_sheet |
+| [create_wizardry:channeler](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_channeler) | create:mechanical_crafting | kubejs:tk3_network_chassis + create:copper_sheet + irons_spellbooks:energized_core + minecraft:hopper + create:iron_sheet |
+| [create_wizardry:mana_siphon](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_mana_siphon) | create:mechanical_crafting | kubejs:tk3_network_chassis + create_wizardry:arcane_casing + create:item_drain + create_wizardry:arcane_pump |
+| [create_enchantment_industry:infuser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_crafting_infuser) | minecraft:crafting_shaped | kubejs:tk3_network_chassis + create:nixie_tube + create:spout |
+| [endrem:magical_eye](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fmagical_eye) | deploying | kubejs:tk3_network_mechanism + kubejs:tk3_verdant_sigil |
+| [sophisticatedstorage:stack_upgrade_tier_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_stack_upgrade_tier_3) | minecraft:crafting_shaped | #c:storage_blocks/gold + #c:ingots/gold + sophisticatedstorage:stack_upgrade_tier_2 |
+| [3x sophisticatedstorage:stack_upgrade_tier_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_storage_stack_upgrade_tier_3_from_backpack_stack_upgrade_tier_2) | minecraft:crafting_shaped | #minecraft:planks + sophisticatedbackpacks:stack_upgrade_tier_2 |
+| [sophisticatedbackpacks:stack_upgrade_tier_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedbackpacks_stack_upgrade_tier_3) | minecraft:crafting_shaped | #c:storage_blocks/diamond + sophisticatedbackpacks:stack_upgrade_tier_2 |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 1 | sophisticatedstorage:upgrade_base | Shaped crafting | M = kubejs:tk3_rotation_mechanism, I = create:iron_sheet, P = #minecraft:planks ·  I  / PMP /  I  | `kubejs:tk3/storage/sophisticatedstorage_upgrade_base` |
-| 2 | sophisticatedstorage:pickup_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = minecraft:hopper ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_pickup_upgrade` |
-| 2 | sophisticatedstorage:filter_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = minecraft:paper ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_filter_upgrade` |
-| 3 | sophisticatedstorage:void_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:lava_bucket ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_void_upgrade` |
-| 3 | sophisticatedstorage:compacting_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, E = create:mechanical_press ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_compacting_upgrade` |
-| 3 | sophisticatedstorage:stonecutter_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:stonecutter ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_stonecutter_upgrade` |
-| 3 | sophisticatedstorage:crafting_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:crafting_table ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_crafting_upgrade` |
-| 3 | sophisticatedstorage:magnet_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:iron_ingot ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_magnet_upgrade` |
-| 2 | sophisticatedstorage:feeding_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = minecraft:golden_carrot ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_feeding_upgrade` |
-| 2 | sophisticatedstorage:pump_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = create:mechanical_pump ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_pump_upgrade` |
-| 4 | sophisticatedstorage:xp_pump_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:experience_bottle ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade` |
-| 4 | sophisticatedstorage:alchemy_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:brewing_stand ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_alchemy_upgrade` |
-| 5 | sophisticatedstorage:smelting_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:furnace ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_smelting_upgrade` |
-| 5 | sophisticatedstorage:smoking_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:smoker ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_smoking_upgrade` |
-| 5 | sophisticatedstorage:blasting_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:blast_furnace ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedstorage_blasting_upgrade` |
-| 4 | sophisticatedstorage:advanced_alchemy_upgrade | wrapped | U = sophisticatedstorage:alchemy_upgrade, F = kubejs:tk3_arcane_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_alchemy_upgrade` |
-| 3 | sophisticatedstorage:advanced_compacting_upgrade | wrapped | U = sophisticatedstorage:compacting_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_compacting_upgrade` |
-| 3 | sophisticatedstorage:advanced_feeding_upgrade | wrapped | U = sophisticatedstorage:feeding_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_feeding_upgrade` |
-| 3 | sophisticatedstorage:advanced_filter_upgrade | wrapped | U = sophisticatedstorage:filter_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_filter_upgrade` |
-| 3 | sophisticatedstorage:advanced_hopper_upgrade | wrapped | U = sophisticatedstorage:hopper_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_hopper_upgrade` |
-| 3 | sophisticatedstorage:advanced_jukebox_upgrade | wrapped | U = sophisticatedstorage:jukebox_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_jukebox_upgrade` |
-| 3 | sophisticatedstorage:advanced_magnet_upgrade | wrapped | U = sophisticatedstorage:magnet_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_magnet_upgrade` |
-| 3 | sophisticatedstorage:advanced_pickup_upgrade | wrapped | U = sophisticatedstorage:pickup_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_pickup_upgrade` |
-| 4 | sophisticatedstorage:advanced_pump_upgrade | wrapped | U = sophisticatedstorage:pump_upgrade, F = kubejs:tk3_arcane_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_pump_upgrade` |
-| 3 | sophisticatedstorage:advanced_void_upgrade | wrapped | U = sophisticatedstorage:void_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_advanced_void_upgrade` |
-| 3 | sophisticatedstorage:stack_upgrade_tier_1 | wrapped | U = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot ·  M  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_stack_upgrade_tier_1` |
-| 5 | sophisticatedstorage:stack_upgrade_tier_2 | wrapped | U = sophisticatedstorage:stack_upgrade_tier_1, F = mekanism:steel_casing, M = mekanism:alloy_infused ·  M  /  U  /  F  | `kubejs:tk3/storage/sophisticatedstorage_stack_upgrade_tier_2` |
-| 1 | sophisticatedbackpacks:upgrade_base | Shaped crafting | M = kubejs:tk3_rotation_mechanism, I = create:iron_sheet, P = #minecraft:planks ·  I  / PMP /  I  | `kubejs:tk3/storage/sophisticatedbackpacks_upgrade_base` |
-| 2 | sophisticatedbackpacks:pickup_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = minecraft:hopper ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_pickup_upgrade` |
-| 2 | sophisticatedbackpacks:filter_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = minecraft:paper ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_filter_upgrade` |
-| 3 | sophisticatedbackpacks:void_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:lava_bucket ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_void_upgrade` |
-| 3 | sophisticatedbackpacks:compacting_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_precision_machine, E = create:mechanical_press ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_compacting_upgrade` |
-| 3 | sophisticatedbackpacks:stonecutter_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:stonecutter ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_stonecutter_upgrade` |
-| 3 | sophisticatedbackpacks:crafting_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:crafting_table ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_crafting_upgrade` |
-| 3 | sophisticatedbackpacks:magnet_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_precision_machine, E = minecraft:iron_ingot ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_magnet_upgrade` |
-| 2 | sophisticatedbackpacks:feeding_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = minecraft:golden_carrot ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_feeding_upgrade` |
-| 2 | sophisticatedbackpacks:pump_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_hydraulic_machine, E = create:mechanical_pump ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_pump_upgrade` |
-| 4 | sophisticatedbackpacks:xp_pump_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:experience_bottle ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_xp_pump_upgrade` |
-| 4 | sophisticatedbackpacks:alchemy_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:brewing_stand ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_alchemy_upgrade` |
-| 5 | sophisticatedbackpacks:smelting_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:furnace ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_smelting_upgrade` |
-| 5 | sophisticatedbackpacks:smoking_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:smoker ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_smoking_upgrade` |
-| 5 | sophisticatedbackpacks:blasting_upgrade | Shaped crafting | B = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_arcane_machine, E = minecraft:blast_furnace ·  E  /  B  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_blasting_upgrade` |
-| 4 | sophisticatedbackpacks:advanced_alchemy_upgrade | wrapped | U = sophisticatedbackpacks:alchemy_upgrade, F = kubejs:tk3_arcane_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_alchemy_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_compacting_upgrade | wrapped | U = sophisticatedbackpacks:compacting_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_compacting_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_deposit_upgrade | wrapped | U = sophisticatedbackpacks:deposit_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_deposit_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_feeding_upgrade | wrapped | U = sophisticatedbackpacks:feeding_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_feeding_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_filter_upgrade | wrapped | U = sophisticatedbackpacks:filter_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_filter_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_jukebox_upgrade | wrapped | U = sophisticatedbackpacks:jukebox_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_jukebox_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_magnet_upgrade | wrapped | U = sophisticatedbackpacks:magnet_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_magnet_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_mob_catcher_upgrade | wrapped | U = sophisticatedbackpacks:mob_catcher_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_mob_catcher_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_pickup_upgrade | wrapped | U = sophisticatedbackpacks:pickup_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_pickup_upgrade` |
-| 4 | sophisticatedbackpacks:advanced_pump_upgrade | wrapped | U = sophisticatedbackpacks:pump_upgrade, F = kubejs:tk3_arcane_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_pump_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_refill_upgrade | wrapped | U = sophisticatedbackpacks:refill_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_refill_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_restock_upgrade | wrapped | U = sophisticatedbackpacks:restock_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_restock_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_tool_swapper_upgrade | wrapped | U = sophisticatedbackpacks:tool_swapper_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_tool_swapper_upgrade` |
-| 3 | sophisticatedbackpacks:advanced_void_upgrade | wrapped | U = sophisticatedbackpacks:void_upgrade, F = kubejs:tk3_precision_machine, R = minecraft:redstone ·  R  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_advanced_void_upgrade` |
-| 3 | sophisticatedbackpacks:stack_upgrade_tier_1 | wrapped | U = sophisticatedbackpacks:upgrade_base, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot ·  M  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_stack_upgrade_tier_1` |
-| 5 | sophisticatedbackpacks:stack_upgrade_tier_2 | wrapped | U = sophisticatedbackpacks:stack_upgrade_tier_1, F = mekanism:steel_casing, M = mekanism:alloy_infused ·  M  /  U  /  F  | `kubejs:tk3/storage/sophisticatedbackpacks_stack_upgrade_tier_2` |
-| 2 | sophisticatedstorage:copper_chest | wrapped | S = sophisticatedstorage:chest, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_copper_chest` |
-| 2 | sophisticatedstorage:iron_chest | wrapped | S = sophisticatedstorage:copper_chest, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_iron_chest` |
-| 3 | sophisticatedstorage:gold_chest | wrapped | S = sophisticatedstorage:iron_chest, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_gold_chest` |
-| 5 | sophisticatedstorage:diamond_chest | wrapped | S = sophisticatedstorage:gold_chest, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_diamond_chest` |
-| 2 | sophisticatedstorage:copper_barrel | wrapped | S = sophisticatedstorage:barrel, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_copper_barrel` |
-| 2 | sophisticatedstorage:iron_barrel | wrapped | S = sophisticatedstorage:copper_barrel, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_iron_barrel` |
-| 3 | sophisticatedstorage:gold_barrel | wrapped | S = sophisticatedstorage:iron_barrel, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_gold_barrel` |
-| 5 | sophisticatedstorage:diamond_barrel | wrapped | S = sophisticatedstorage:gold_barrel, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_diamond_barrel` |
-| 2 | sophisticatedstorage:limited_copper_barrel_1 | wrapped | S = sophisticatedstorage:limited_barrel_1, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_1` |
-| 2 | sophisticatedstorage:limited_iron_barrel_1 | wrapped | S = sophisticatedstorage:limited_copper_barrel_1, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_1` |
-| 3 | sophisticatedstorage:limited_gold_barrel_1 | wrapped | S = sophisticatedstorage:limited_iron_barrel_1, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_1` |
-| 5 | sophisticatedstorage:limited_diamond_barrel_1 | wrapped | S = sophisticatedstorage:limited_gold_barrel_1, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_1` |
-| 2 | sophisticatedstorage:limited_copper_barrel_2 | wrapped | S = sophisticatedstorage:limited_barrel_2, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_2` |
-| 2 | sophisticatedstorage:limited_iron_barrel_2 | wrapped | S = sophisticatedstorage:limited_copper_barrel_2, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_2` |
-| 3 | sophisticatedstorage:limited_gold_barrel_2 | wrapped | S = sophisticatedstorage:limited_iron_barrel_2, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_2` |
-| 5 | sophisticatedstorage:limited_diamond_barrel_2 | wrapped | S = sophisticatedstorage:limited_gold_barrel_2, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_2` |
-| 2 | sophisticatedstorage:limited_copper_barrel_3 | wrapped | S = sophisticatedstorage:limited_barrel_3, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_3` |
-| 2 | sophisticatedstorage:limited_iron_barrel_3 | wrapped | S = sophisticatedstorage:limited_copper_barrel_3, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_3` |
-| 3 | sophisticatedstorage:limited_gold_barrel_3 | wrapped | S = sophisticatedstorage:limited_iron_barrel_3, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_3` |
-| 5 | sophisticatedstorage:limited_diamond_barrel_3 | wrapped | S = sophisticatedstorage:limited_gold_barrel_3, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_3` |
-| 2 | sophisticatedstorage:limited_copper_barrel_4 | wrapped | S = sophisticatedstorage:limited_barrel_4, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_copper_barrel_4` |
-| 2 | sophisticatedstorage:limited_iron_barrel_4 | wrapped | S = sophisticatedstorage:limited_copper_barrel_4, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_iron_barrel_4` |
-| 3 | sophisticatedstorage:limited_gold_barrel_4 | wrapped | S = sophisticatedstorage:limited_iron_barrel_4, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_gold_barrel_4` |
-| 5 | sophisticatedstorage:limited_diamond_barrel_4 | wrapped | S = sophisticatedstorage:limited_gold_barrel_4, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_limited_diamond_barrel_4` |
-| 2 | sophisticatedstorage:copper_shulker_box | wrapped | S = sophisticatedstorage:shulker_box, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_copper_shulker_box` |
-| 2 | sophisticatedstorage:iron_shulker_box | wrapped | S = sophisticatedstorage:copper_shulker_box, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_iron_shulker_box` |
-| 3 | sophisticatedstorage:gold_shulker_box | wrapped | S = sophisticatedstorage:iron_shulker_box, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_gold_shulker_box` |
-| 5 | sophisticatedstorage:diamond_shulker_box | wrapped | S = sophisticatedstorage:gold_shulker_box, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedstorage_diamond_shulker_box` |
-| 2 | sophisticatedbackpacks:copper_backpack | wrapped | S = sophisticatedbackpacks:backpack, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedbackpacks_copper_backpack` |
-| 2 | sophisticatedbackpacks:iron_backpack | wrapped | S = sophisticatedbackpacks:copper_backpack, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedbackpacks_iron_backpack` |
-| 3 | sophisticatedbackpacks:gold_backpack | wrapped | S = sophisticatedbackpacks:iron_backpack, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedbackpacks_gold_backpack` |
-| 5 | sophisticatedbackpacks:diamond_backpack | wrapped | S = sophisticatedbackpacks:gold_backpack, F = mekanism:steel_casing, M = minecraft:diamond · MFM / MSM / MMM | `kubejs:tk3/storage/sophisticatedbackpacks_diamond_backpack` |
-| 2 | sophisticatedstorage:basic_to_copper_tier_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_hydraulic_machine, M = minecraft:copper_ingot · MMM / MFM / MBM | `kubejs:tk3/storage/sophisticatedstorage_basic_to_copper_tier_upgrade` |
-| 2 | sophisticatedstorage:copper_to_iron_tier_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_hydraulic_machine, M = create:iron_sheet · MMM / MFM / MBM | `kubejs:tk3/storage/sophisticatedstorage_copper_to_iron_tier_upgrade` |
-| 3 | sophisticatedstorage:iron_to_gold_tier_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = kubejs:tk3_precision_machine, M = minecraft:gold_ingot · MMM / MFM / MBM | `kubejs:tk3/storage/sophisticatedstorage_iron_to_gold_tier_upgrade` |
-| 5 | sophisticatedstorage:gold_to_diamond_tier_upgrade | Shaped crafting | B = sophisticatedstorage:upgrade_base, F = mekanism:steel_casing, M = minecraft:diamond · MMM / MFM / MBM | `kubejs:tk3/storage/sophisticatedstorage_gold_to_diamond_tier_upgrade` |
-| 3 | sophisticatedstorage:controller | Shapeless crafting | kubejs:tk3_precision_machine + minecraft:comparator + minecraft:chest | `kubejs:tk3/storage/sophisticatedstorage_controller` |
-| 3 | sophisticatedstorage:storage_link | Shapeless crafting | create:precision_mechanism + sophisticatedstorage:upgrade_base + minecraft:ender_pearl | `kubejs:tk3/storage/sophisticatedstorage_storage_link` |
-| 3 | sophisticatedstorage:storage_input | Shapeless crafting | create:precision_mechanism + sophisticatedstorage:upgrade_base + minecraft:hopper | `kubejs:tk3/storage/sophisticatedstorage_storage_input` |
-| 3 | sophisticatedstorage:storage_output | Shapeless crafting | create:precision_mechanism + sophisticatedstorage:upgrade_base + create:brass_funnel | `kubejs:tk3/storage/sophisticatedstorage_storage_output` |
-| 3 | sophisticatedstorage:storage_io | Shapeless crafting | create:precision_mechanism + sophisticatedstorage:upgrade_base + create:brass_tunnel | `kubejs:tk3/storage/sophisticatedstorage_storage_io` |
+## Tier 7
 
-## Late Layers
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [kubejs:tk3_expedition_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fexpedition_mechanism) | sequence | kubejs:tk3_network_mechanism + ars_nouveau:manipulation_essence + mekanism:alloy_reinforced + farmersdelight:diamond_knife |
+| [kubejs:tk3_expedition_frame](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_7) | deploying | create_wizardry:arcane_casing + kubejs:tk3_expedition_mechanism |
+| [ae2:color_applicator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_network_color_applicator) | minecraft:crafting_shaped | ae2:formation_core + #c:ingots/iron + ae2:cell_component_4k + ae2:energy_cell |
+| [ae2:portable_fluid_cell_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_fluid_cell_4k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_4k + ae2:energy_cell + ae2:fluid_cell_housing |
+| [ae2:matter_cannon](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_matter_cannon) | minecraft:crafting_shaped | #c:ingots/iron + ae2:formation_core + ae2:cell_component_4k + ae2:energy_cell |
+| [ae2:portable_item_cell_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_item_cell_4k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_4k + ae2:energy_cell + ae2:item_cell_housing |
+| [ae2:fluid_storage_cell_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_4k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_4k + #c:ingots/copper |
+| [ae2:fluid_storage_cell_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_4k_storage) | minecraft:crafting_shapeless | ae2:fluid_cell_housing + ae2:cell_component_4k |
+| [ae2:item_storage_cell_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_4k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_4k + #c:ingots/iron + #c:ingots/copper |
+| [ae2:cell_component_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_components_cell_4k_part) | minecraft:crafting_shaped | #c:dusts/redstone + ae2:calculation_processor + ae2:cell_component_1k + ae2:quartz_glass |
+| [ae2:item_storage_cell_4k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_4k_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:cell_component_4k |
+| [2x ae2:wireless_booster](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_wireless_booster) | minecraft:crafting_shaped | #c:dusts/fluix + #ae2:all_certus_quartz + #c:dusts/ender_pearl + #c:ingots/iron |
+| [ae2:wireless_receiver](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_wireless_part) | minecraft:crafting_shaped | ae2:fluix_pearl + #c:ingots/iron + ae2:quartz_fiber |
+| [ae2:wireless_crafting_terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_wireless_crafting_terminal) | minecraft:crafting_shaped | ae2:wireless_receiver + ae2:crafting_terminal + ae2:dense_energy_cell |
+| [ae2:wireless_terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_wireless_terminal) | minecraft:crafting_shaped | ae2:wireless_receiver + ae2:terminal + ae2:dense_energy_cell |
+| [ae2:4k_crafting_storage](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_4k_cpu_crafting_storage) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:cell_component_4k |
+| [ae2:wireless_crafting_terminal](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_upgrade_wireless_crafting_terminal) | minecraft:crafting_shapeless | ae2:wireless_terminal + minecraft:crafting_table + ae2:calculation_processor |
+| [ae2:wireless_access_point](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_wireless_access_point) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + ae2:calculation_processor + ae2:fluix_glass_cable |
+| [mekanism:chemical_infuser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_infuser) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + mekanism:basic_chemical_tank + mekanism:steel_casing |
+| [mekanism:chemical_injection_chamber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_injection_chamber) | mekanism:mek_data | mekanism:purification_chamber + #mekanism:alloys/reinforced + kubejs:tk3_expedition_frame + #c:ingots/gold |
+| [mekanism:chemical_oxidizer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_oxidizer) | mekanism:mek_data | mekanism:dynamic_tank + #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #mekanism:personal_storage + mekanism:basic_chemical_tank |
+| [mekanism:electrolytic_separator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_electrolytic_separator) | minecraft:crafting_shaped | mekanism:electrolytic_core + #mekanism:alloys/infused + #c:ingots/iron + kubejs:tk3_expedition_frame |
+| [mekanism:hdpe_rod](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_hdpe_rod) | minecraft:crafting_shaped | mekanism:hdpe_pellet |
+| [mekanism:laser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_laser) | mekanism:mek_data | kubejs:tk3_expedition_frame + #mekanism:alloys/reinforced + mekanism:energy_tablet + mekanism:steel_casing |
+| [mekanism:laser_amplifier](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_laser_amplifier) | mekanism:mek_data | kubejs:tk3_expedition_frame + mekanism:basic_energy_cube + #c:ingots/steel |
+| [mekanism:laser_tractor_beam](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_laser_tractor_beam) | mekanism:mek_data | kubejs:tk3_expedition_frame + #mekanism:personal_storage |
+| [mekanism:modification_station](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_modification_station) | minecraft:crafting_shaped | #c:pellets/polonium + kubejs:tk3_network_chassis + mekanism:hdpe_sheet + #c:chests/wooden + mekanism:steel_casing |
+| [mekanism:osmium_compressor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_osmium_compressor) | minecraft:crafting_shaped | #mekanism:alloys/infused + minecraft:bucket + kubejs:tk3_expedition_frame + mekanism:steel_casing |
+| [mekanism:pigment_mixer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_pigment_mixer) | minecraft:crafting_shaped | mekanism:hdpe_rod + #mekanism:alloys/reinforced + kubejs:tk3_network_chassis + mekanism:steel_casing |
+| [mekanism:pressurized_reaction_chamber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_pressurized_reaction_chamber) | mekanism:mek_data | mekanism:dynamic_tank + #mekanism:alloys/infused + kubejs:tk3_expedition_frame + mekanism:enrichment_chamber + #c:ingots/steel + mekanism:basic_chemical_tank |
+| [mekanism:purification_chamber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_purification_chamber) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:enrichment_chamber |
+| [mekanism:rotary_condensentrator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_rotary_condensentrator) | mekanism:mek_data | mekanism:basic_fluid_tank + kubejs:tk3_expedition_frame + mekanism:energy_tablet + #c:glass_blocks/cheap + mekanism:basic_chemical_tank |
+| [mekanism:advanced_bin](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_bin_advanced) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + mekanism:basic_bin + #mekanism:stone_crafting_materials |
+| [mekanism:advanced_chemical_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_tank_advanced) | mekanism:mek_data | kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_chemical_tank |
+| [mekanism:basic_chemical_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_tank_basic) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:ingots/osmium |
+| [mekanism:elite_chemical_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_tank_elite) | mekanism:mek_data | kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:advanced_chemical_tank |
+| [mekanism:elite_control_circuit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_control_circuit_elite) | minecraft:crafting_shaped | #mekanism:alloys/reinforced + #c:circuits/advanced |
+| [mekanism:elite_control_circuit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_control_circuit_infused_elite) | mekanism:metallurgic_infusing | #c:circuits/advanced; chemicals: {"chemical_input": {"amount": 120, "tag": "mekanism:diamond"}} |
+| [mekanism:advanced_energy_cube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_energy_cube_advanced) | mekanism:mek_data | kubejs:tk3_expedition_frame + mekanism:energy_tablet + #c:ingots/osmium + mekanism:basic_energy_cube |
+| [mekanism:hdpe_sheet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_enriching_hdpe_sheet) | mekanism:enriching | 3x mekanism:hdpe_pellet |
+| [mekanism:advanced_compressing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_compressing) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_compressing_factory |
+| [mekanism:advanced_crushing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_crushing) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_crushing_factory |
+| [mekanism:advanced_enriching_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_enriching) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_enriching_factory |
+| [mekanism:advanced_infusing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_infusing) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_infusing_factory |
+| [mekanism:advanced_injecting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_injecting) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_injecting_factory |
+| [mekanism:advanced_purifying_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_purifying) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_purifying_factory |
+| [mekanism:advanced_sawing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_sawing) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_sawing_factory |
+| [mekanism:advanced_smelting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_smelting) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_smelting_factory |
+| [mekanism:basic_compressing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_compressing) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:osmium_compressor |
+| [mekanism:basic_injecting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_injecting) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:chemical_injection_chamber |
+| [mekanism:basic_purifying_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_purifying) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:purification_chamber |
+| [mekanism:advanced_fluid_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_fluid_tank_advanced) | mekanism:mek_data | kubejs:tk3_expedition_frame + #c:ingots/iron + mekanism:basic_fluid_tank |
+| [mekanism:alloy_atomic](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_metallurgic_infusing_alloy_atomic) | mekanism:metallurgic_infusing | #mekanism:alloys/reinforced; chemicals: {"chemical_input": {"amount": 40, "tag": "mekanism:refined_obsidian"}} |
+| [mekanism:alloy_reinforced](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_metallurgic_infusing_alloy_reinforced) | mekanism:metallurgic_infusing | #mekanism:alloys/infused; chemicals: {"chemical_input": {"amount": 20, "tag": "mekanism:diamond"}} |
+| [9x mekanism:ingot_refined_glowstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_glowstone_ingot_from_block) | minecraft:crafting_shapeless | mekanism:block_refined_glowstone |
+| [mekanism:ingot_refined_glowstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_glowstone_ingot_from_dust) | mekanism:compressing | #c:dusts/glowstone; chemicals: {"chemical_input": {"amount": 1, "chemical": "mekanism:osmium"}} |
+| [mekanism:ingot_refined_glowstone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_glowstone_ingot_from_nuggets) | minecraft:crafting_shaped | #c:nuggets/refined_glowstone + mekanism:nugget_refined_glowstone |
+| [mekanism:dust_refined_obsidian](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_obsidian_dust_from_ingot) | mekanism:crushing | #c:ingots/refined_obsidian |
+| [mekanism:dust_refined_obsidian](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_obsidian_dust_from_obsidian_dust) | mekanism:metallurgic_infusing | #c:dusts/obsidian; chemicals: {"chemical_input": {"amount": 10, "tag": "mekanism:diamond"}} |
+| [9x mekanism:ingot_refined_obsidian](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_obsidian_ingot_from_block) | minecraft:crafting_shapeless | mekanism:block_refined_obsidian |
+| [mekanism:ingot_refined_obsidian](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_obsidian_ingot_from_dust) | mekanism:compressing | #c:dusts/refined_obsidian; chemicals: {"chemical_input": {"amount": 1, "chemical": "mekanism:osmium"}} |
+| [mekanism:ingot_refined_obsidian](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_refined_obsidian_ingot_from_nuggets) | minecraft:crafting_shaped | #c:nuggets/refined_obsidian + mekanism:nugget_refined_obsidian |
+| [mekanism:hdpe_pellet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_reaction_substrate_ethene_oxygen) | mekanism:reaction | mekanism:substrate; chemicals: {"chemical_input": {"amount": 10, "chemical": "mekanism:oxygen"}, "fluid_input": {"amount": 50, "tag": "c:ethene"}} |
+| [8x mekanism:substrate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_reaction_substrate_water_ethene) | mekanism:reaction | mekanism:substrate; chemicals: {"chemical_input": {"amount": 100, "chemical": "mekanism:ethene"}, "fluid_input": {"amount": 200, "tag": "minecraft:water"}} |
+| [mekanism:substrate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_reaction_substrate_water_hydrogen) | mekanism:reaction | 2x #c:fuels/bio; chemicals: {"chemical_input": {"amount": 100, "chemical": "mekanism:hydrogen"}, "fluid_input": {"amount": 10, "tag": "minecraft:water"}} |
+| [4x mekanism:thermal_evaporation_block](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_thermal_evaporation_block) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:ingots/steel |
+| [mekanism:thermal_evaporation_controller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_thermal_evaporation_controller) | minecraft:crafting_shaped | mekanism:thermal_evaporation_block + minecraft:bucket + kubejs:tk3_expedition_frame + #c:glass_panes |
+| [mekanism:thermal_evaporation_valve](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_thermal_evaporation_valve) | minecraft:crafting_shaped | mekanism:thermal_evaporation_block + kubejs:tk3_expedition_frame |
+| [mekanism:advanced_tier_installer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_tier_installer_advanced) | minecraft:crafting_shaped | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + #minecraft:planks |
+| [8x mekanism:advanced_logistical_transporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_logistical_transporter_advanced) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + mekanism:basic_logistical_transporter |
+| [8x mekanism:advanced_mechanical_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_mechanical_pipe_advanced) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + mekanism:basic_mechanical_pipe |
+| [8x mekanism:advanced_pressurized_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_pressurized_tube_advanced) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + mekanism:basic_pressurized_tube |
+| [8x mekanism:advanced_thermodynamic_conductor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_thermodynamic_conductor_advanced) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + mekanism:basic_thermodynamic_conductor |
+| [8x mekanism:advanced_universal_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_universal_cable_advanced) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + mekanism:basic_universal_cable |
+| [mekanismgenerators:gas_burning_generator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_gas_burning_generator) | shapeless | kubejs:tk3_expedition_frame + mekanism:alloy_infused + minecraft:glass |
+| [ars_n_spells:mana_well](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fars_n_spells_mana_well) | apparatus | kubejs:tk3_expedition_frame + ars_nouveau:source_jar + irons_spellbooks:arcane_essence |
+| [apotheosis:augmenting_table](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fapotheosis_augmenting_table) | apparatus | kubejs:tk3_expedition_frame + apotheosis:reforging_table + apotheosis:arcane_sands |
+| [aeronautics:gyroscopic_propeller_bearing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_gyroscopic_propeller_bearing) | shapeless | kubejs:tk3_expedition_frame + aeronautics:propeller_bearing + create:rotation_speed_controller |
+| [aeronautics:smart_propeller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_smart_propeller) | shapeless | kubejs:tk3_expedition_frame + aeronautics:andesite_propeller + create:electron_tube |
+| [aeronautics:adjustable_burner](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_adjustable_burner) | shapeless | kubejs:tk3_expedition_frame + create:blaze_burner + create:fluid_valve |
+| [aeronautics:steam_vent](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_steam_vent) | shapeless | kubejs:tk3_expedition_frame + create:steam_engine + create:fluid_pipe |
+| [8x aeronautics:white_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_white_envelope) | compacting | minecraft:white_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:white_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_white_envelope_encased_shaft) | shapeless | aeronautics:white_envelope + create:shaft |
+| [8x aeronautics:orange_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_orange_envelope) | compacting | minecraft:orange_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:orange_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_orange_envelope_encased_shaft) | shapeless | aeronautics:orange_envelope + create:shaft |
+| [8x aeronautics:magenta_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_magenta_envelope) | compacting | minecraft:magenta_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:magenta_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_magenta_envelope_encased_shaft) | shapeless | aeronautics:magenta_envelope + create:shaft |
+| [8x aeronautics:light_blue_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_light_blue_envelope) | compacting | minecraft:light_blue_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:light_blue_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_light_blue_envelope_encased_shaft) | shapeless | aeronautics:light_blue_envelope + create:shaft |
+| [8x aeronautics:yellow_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_yellow_envelope) | compacting | minecraft:yellow_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:yellow_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_yellow_envelope_encased_shaft) | shapeless | aeronautics:yellow_envelope + create:shaft |
+| [8x aeronautics:lime_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_lime_envelope) | compacting | minecraft:lime_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:lime_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_lime_envelope_encased_shaft) | shapeless | aeronautics:lime_envelope + create:shaft |
+| [8x aeronautics:pink_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_pink_envelope) | compacting | minecraft:pink_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:pink_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_pink_envelope_encased_shaft) | shapeless | aeronautics:pink_envelope + create:shaft |
+| [8x aeronautics:gray_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_gray_envelope) | compacting | minecraft:gray_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:gray_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_gray_envelope_encased_shaft) | shapeless | aeronautics:gray_envelope + create:shaft |
+| [8x aeronautics:light_gray_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_light_gray_envelope) | compacting | minecraft:light_gray_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:light_gray_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_light_gray_envelope_encased_shaft) | shapeless | aeronautics:light_gray_envelope + create:shaft |
+| [8x aeronautics:cyan_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_cyan_envelope) | compacting | minecraft:cyan_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:cyan_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_cyan_envelope_encased_shaft) | shapeless | aeronautics:cyan_envelope + create:shaft |
+| [8x aeronautics:purple_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_purple_envelope) | compacting | minecraft:purple_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:purple_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_purple_envelope_encased_shaft) | shapeless | aeronautics:purple_envelope + create:shaft |
+| [8x aeronautics:blue_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_blue_envelope) | compacting | minecraft:blue_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:blue_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_blue_envelope_encased_shaft) | shapeless | aeronautics:blue_envelope + create:shaft |
+| [8x aeronautics:brown_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_brown_envelope) | compacting | minecraft:brown_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:brown_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_brown_envelope_encased_shaft) | shapeless | aeronautics:brown_envelope + create:shaft |
+| [8x aeronautics:green_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_green_envelope) | compacting | minecraft:green_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:green_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_green_envelope_encased_shaft) | shapeless | aeronautics:green_envelope + create:shaft |
+| [8x aeronautics:red_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_red_envelope) | compacting | minecraft:red_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:red_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_red_envelope_encased_shaft) | shapeless | aeronautics:red_envelope + create:shaft |
+| [8x aeronautics:black_envelope](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_black_envelope) | compacting | minecraft:black_wool + minecraft:string + kubejs:tk3_expedition_mechanism |
+| [aeronautics:black_envelope_encased_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_black_envelope_encased_shaft) | shapeless | aeronautics:black_envelope + create:shaft |
+| [createaddition:portable_energy_interface](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_crafting_portable_energy_interface) | minecraft:crafting_shapeless | kubejs:tk3_expedition_frame + create:chute + createaddition:copper_spool |
+| [createaddition:tesla_coil](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreateaddition_mechanical_crafting_tesla_coil) | create:mechanical_crafting | kubejs:tk3_expedition_frame + create:brass_casing + createaddition:capacitor + create:electron_tube + #c:plates/brass + createaddition:copper_spool |
+| [create_wizardry:blaze_caster](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_wizardry_blaze_caster) | deploying | kubejs:tk3_expedition_frame + create:blaze_burner |
+| [create_enchantment_industry:blaze_forger](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_blaze_forger) | deploying | kubejs:tk3_expedition_frame + create:blaze_burner |
+| [create_enchantment_industry:gem_cutter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcreate_enchantment_industry_crafting_gem_cutter) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:brass_ingot + minecraft:amethyst_shard |
+| [aeronautics:mounted_potato_cannon](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_mechanical_crafting_mounted_potato_cannon) | create:mechanical_crafting | kubejs:tk3_expedition_frame + minecraft:dried_kelp_block + create:fluid_pipe + #c:dusts/redstone + #c:plates/copper |
+| [simulated:altitude_sensor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_altitude_sensor) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + minecraft:paper + #c:plates/iron |
+| [simulated:analog_transmission](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_analog_transmission) | minecraft:crafting_shapeless | create:brass_casing + create:shaft + create:cogwheel + create:electron_tube |
+| [simulated:auger_cog](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_auger_cog_from_auger_shaft) | minecraft:crafting_shapeless | simulated:auger_shaft |
+| [2x simulated:auger_shaft](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_auger_shaft) | minecraft:crafting_shapeless | create:chute + create:shaft + #c:plates/iron |
+| [simulated:black_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_black_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:black_dye |
+| [simulated:blue_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_blue_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:blue_dye |
+| [simulated:brown_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_brown_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:brown_dye |
+| [simulated:contraption_diagram](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_contraption_diagram) | minecraft:crafting_shapeless | minecraft:paper + simulated:physics_assembler |
+| [simulated:copper_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_copper_handle) | minecraft:crafting_shapeless | simulated:iron_handle + #c:nuggets/copper |
+| [simulated:cyan_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_cyan_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:cyan_dye |
+| [simulated:directional_gearshift](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_directional_gearshift) | minecraft:crafting_shapeless | create:andesite_casing + create:cogwheel + minecraft:redstone_torch + create:shaft |
+| [simulated:directional_linked_receiver](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_directional_linked_receiver) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:plates/iron + create:brass_casing |
+| [simulated:gimbal_sensor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_gimbal_sensor) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + minecraft:compass + simulated:gyroscopic_mechanism |
+| [simulated:gray_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_gray_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:gray_dye |
+| [simulated:green_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_green_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:green_dye |
+| [simulated:iron_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_handle_undye) | minecraft:crafting_shapeless | #simulated:handle_variants |
+| [simulated:laser_pointer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_laser_pointer) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:andesite_casing + minecraft:redstone_torch |
+| [simulated:laser_sensor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_laser_sensor) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:andesite_casing + minecraft:tinted_glass |
+| [simulated:light_blue_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_light_blue_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:light_blue_dye |
+| [simulated:light_gray_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_light_gray_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:light_gray_dye |
+| [simulated:lime_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_lime_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:lime_dye |
+| [simulated:magenta_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_magenta_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:magenta_dye |
+| [simulated:modulating_linked_receiver](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_modulating_linked_receiver) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:plates/gold + create:brass_casing |
+| [simulated:navigation_table](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_navigation_table) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:precision_mechanism + create:brass_sheet |
+| [simulated:optical_sensor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_optical_sensor) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:brass_casing + create:electron_tube |
+| [simulated:orange_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_orange_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:orange_dye |
+| [simulated:physics_assembler](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_physics_assembler) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + minecraft:lever + create:andesite_casing |
+| [simulated:pink_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_pink_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:pink_dye |
+| [simulated:purple_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_purple_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:purple_dye |
+| [simulated:red_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_red_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:red_dye |
+| [simulated:red_portable_engine](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_red_portable_engine) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + simulated:engine_assembly + #c:plates/iron |
+| [simulated:redstone_accumulator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_redstone_accumulator) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:polished_rose_quartz + #c:dusts/redstone + #c:stones + minecraft:redstone_torch |
+| [simulated:redstone_inductor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_redstone_inductor) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:plates/copper + #c:dusts/redstone + #c:stones + minecraft:redstone_torch |
+| [simulated:redstone_magnet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_redstone_magnet) | minecraft:crafting_shapeless | #c:dusts/redstone + #c:plates/copper + create:industrial_iron_block |
+| [simulated:rope_connector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_rope_connector) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:industrial_iron_block |
+| [simulated:rope_coupling](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_rope_coupling) | minecraft:crafting_shaped | #c:nuggets/iron + #c:strings |
+| [simulated:rope_winch](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_rope_winch) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:plates/iron + create:industrial_iron_block |
+| [2x simulated:spring](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_spring) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + #c:plates/iron |
+| [simulated:steering_wheel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_steering_wheel) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:large_cogwheel + create:shaft |
+| [simulated:swivel_bearing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_swivel_bearing) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:industrial_iron_block + create:cogwheel |
+| [simulated:throttle_lever](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_throttle_lever) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + minecraft:stick |
+| [simulated:torsion_spring](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_torsion_spring) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + create:andesite_casing + simulated:spring |
+| [simulated:velocity_sensor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_velocity_sensor) | minecraft:crafting_shaped | kubejs:tk3_expedition_frame + minecraft:barrel + create:propeller |
+| [simulated:white_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_white_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:white_dye |
+| [4x simulated:white_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_white_nameplate) | minecraft:crafting_shapeless | minecraft:paper + minecraft:stick + create:andesite_alloy |
+| [2x simulated:white_symmetric_sail](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_white_symmetric_sail) | minecraft:crafting_shapeless | create:white_sail + create:white_sail |
+| [simulated:yellow_handle](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_yellow_handle) | minecraft:crafting_shapeless | simulated:iron_handle + minecraft:yellow_dye |
+| [simulated:black_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_black_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/black + #simulated:nameplate_items |
+| [simulated:blue_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_blue_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/blue + #simulated:nameplate_items |
+| [simulated:brown_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_brown_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/brown + #simulated:nameplate_items |
+| [simulated:cyan_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_cyan_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/cyan + #simulated:nameplate_items |
+| [simulated:gray_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_gray_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/gray + #simulated:nameplate_items |
+| [simulated:green_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_green_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/green + #simulated:nameplate_items |
+| [simulated:light_blue_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_light_blue_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/light_blue + #simulated:nameplate_items |
+| [simulated:light_gray_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_light_gray_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/light_gray + #simulated:nameplate_items |
+| [simulated:lime_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_lime_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/lime + #simulated:nameplate_items |
+| [simulated:magenta_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_magenta_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/magenta + #simulated:nameplate_items |
+| [simulated:orange_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_orange_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/orange + #simulated:nameplate_items |
+| [simulated:pink_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_pink_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/pink + #simulated:nameplate_items |
+| [simulated:purple_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_purple_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/purple + #simulated:nameplate_items |
+| [simulated:red_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_red_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/red + #simulated:nameplate_items |
+| [simulated:yellow_nameplate](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_crafting_yellow_nameplate_from_other_nameplate) | minecraft:crafting_shapeless | #c:dyes/yellow + #simulated:nameplate_items |
+| [simulated:honey_glue](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_filling_honey_glue) | create:filling | #c:plates/iron |
+| [2x simulated:docking_connector](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_mechanical_crafting_docking_connector) | create:mechanical_crafting | kubejs:tk3_expedition_frame + #c:plates/brass + create:chute + create:electron_tube + #c:plates/iron + minecraft:piston |
+| [simulated:linked_typewriter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_mechanical_crafting_linked_typewriter) | create:mechanical_crafting | kubejs:tk3_expedition_frame + #c:plates/gold + create:precision_mechanism + create:transmitter |
+| [simulated:plunger_launcher](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsimulated_mechanical_crafting_plunger_launcher) | create:mechanical_crafting | create:andesite_alloy + #c:ingots/copper + create:fluid_pipe + create:precision_mechanism + #c:slime_balls + simulated:rope_coupling |
+| [endrem:cryptic_eye](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fcryptic_eye) | deploying | kubejs:tk3_expedition_mechanism + kubejs:tk3_storm_core |
+| [sophisticatedstorage:copper_to_netherite_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_copper_to_netherite_tier_upgrade) | minecraft:crafting_shapeless | sophisticatedstorage:copper_to_diamond_tier_upgrade + #c:ingots/netherite |
+| [sophisticatedstorage:gold_to_netherite_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_gold_to_netherite_tier_upgrade) | minecraft:crafting_shapeless | sophisticatedstorage:gold_to_diamond_tier_upgrade + #c:ingots/netherite |
+| [sophisticatedstorage:iron_to_netherite_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_iron_to_netherite_tier_upgrade) | minecraft:crafting_shapeless | sophisticatedstorage:iron_to_diamond_tier_upgrade + #c:ingots/netherite |
+| [sophisticatedstorage:diamond_to_netherite_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_diamond_to_netherite_tier_upgrade) | minecraft:crafting_shapeless | minecraft:lever + #c:ingots/netherite |
+| [sophisticatedstorage:netherite_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_netherite_chest) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:diamond_chest + #c:ingots/netherite |
+| [sophisticatedstorage:netherite_shulker_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_netherite_shulker_from_netherite_chest) | sophisticatedstorage:shulker_box_from_chest | sophisticatedstorage:netherite_chest + kubejs:tk3_expedition_frame |
+| [sophisticatedstorage:limited_netherite_barrel_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_limited_netherite_barrel_3) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:limited_diamond_barrel_3 + #c:ingots/netherite |
+| [sophisticatedstorage:netherite_chest](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_double_netherite_chest) | sophisticatedstorage:double_chest_tier_upgrade_shapeless | sophisticatedstorage:diamond_chest + #c:ingots/netherite + #c:ingots/netherite |
+| [sophisticatedstorage:basic_to_netherite_tier_upgrade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_basic_to_netherite_tier_upgrade) | minecraft:crafting_shapeless | sophisticatedstorage:basic_to_diamond_tier_upgrade + #c:ingots/netherite |
+| [sophisticatedstorage:netherite_shulker_box](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_netherite_shulker_box) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:diamond_shulker_box + #c:ingots/netherite |
+| [sophisticatedstorage:netherite_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_netherite_barrel) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:diamond_barrel + #c:ingots/netherite |
+| [sophisticatedstorage:limited_netherite_barrel_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_limited_netherite_barrel_4) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:limited_diamond_barrel_4 + #c:ingots/netherite |
+| [sophisticatedstorage:limited_netherite_barrel_1](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_limited_netherite_barrel_1) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:limited_diamond_barrel_1 + #c:ingots/netherite |
+| [sophisticatedstorage:limited_netherite_barrel_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_limited_netherite_barrel_2) | sophisticatedstorage:storage_tier_upgrade_shapeless | sophisticatedstorage:limited_diamond_barrel_2 + #c:ingots/netherite |
+| [sophisticatedbackpacks:netherite_backpack](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedbackpacks_netherite_backpack) | sophisticatedbackpacks:smithing_backpack_upgrade | sophisticatedbackpacks:diamond_backpack + minecraft:netherite_ingot + minecraft:netherite_upgrade_smithing_template |
+| [alexscaves:quarry](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Falexscaves_quarry) | deploying | kubejs:tk3_expedition_frame + minecraft:iron_block |
+| [alexscaves:drain](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Falexscaves_drain) | deploying | kubejs:tk3_expedition_frame + minecraft:bucket |
+| [alexscaves:conversion_crucible](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Falexscaves_conversion_crucible) | apparatus | kubejs:tk3_expedition_frame + irons_spellbooks:arcane_essence + minecraft:amethyst_shard |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 5 | 2x mekanism:dust_gold | mek enriching | minecraft:raw_gold | `kubejs:tk3/late_layers/mekanism_dust_gold` |
-| 5 | 2x mekanism:dust_osmium | mek enriching | mekanism:raw_osmium | `kubejs:tk3/late_layers/mekanism_dust_osmium` |
-| 5 | 2x mekanism:dust_tin | mek enriching | mekanism:raw_tin | `kubejs:tk3/late_layers/mekanism_dust_tin` |
-| 5 | 2x mekanism:dust_lead | mek enriching | mekanism:raw_lead | `kubejs:tk3/late_layers/mekanism_dust_lead` |
+## Tier 8
 
-## Create
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [kubejs:tk3_containment_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fcontainment_mechanism) | sequence | kubejs:tk3_expedition_mechanism + mekanism:hdpe_sheet + mekanism:alloy_atomic + create:sand_paper |
+| [kubejs:tk3_containment_frame](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_8) | deploying | mekanism:steel_casing + kubejs:tk3_containment_mechanism |
+| [ae2:portable_item_cell_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_item_cell_16k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_16k + ae2:energy_cell + ae2:item_cell_housing |
+| [ae2:portable_fluid_cell_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_fluid_cell_16k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_16k + ae2:energy_cell + ae2:fluid_cell_housing |
+| [ae2:fluid_storage_cell_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_16k_storage) | minecraft:crafting_shapeless | ae2:fluid_cell_housing + ae2:cell_component_16k |
+| [ae2:fluid_storage_cell_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_16k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_16k + #c:ingots/copper |
+| [ae2:spatial_cell_component_16](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_components_0) | minecraft:crafting_shaped | #c:dusts/glowstone + ae2:spatial_cell_component_2 + ae2:engineering_processor |
+| [ae2:spatial_storage_cell_128](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_storage_cell_128_cubed) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:spatial_cell_component_128 + #c:ingots/iron |
+| [ae2:item_storage_cell_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_16k_storage) | minecraft:crafting_shapeless | ae2:cell_component_16k + ae2:item_cell_housing |
+| [ae2:spatial_storage_cell_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_storage_cell_2_cubed_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:spatial_cell_component_2 |
+| [ae2:spatial_cell_component_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_components) | minecraft:crafting_shaped | #c:dusts/glowstone + ae2:fluix_pearl + ae2:engineering_processor |
+| [ae2:spatial_storage_cell_128](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_storage_cell_128_cubed_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:spatial_cell_component_128 |
+| [ae2:spatial_storage_cell_16](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_storage_cell_16_cubed_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:spatial_cell_component_16 |
+| [ae2:spatial_storage_cell_16](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_storage_cell_16_cubed) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:spatial_cell_component_16 + #c:ingots/iron |
+| [ae2:spatial_storage_cell_2](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_storage_cell_2_cubed) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:spatial_cell_component_2 + #c:ingots/iron |
+| [ae2:item_storage_cell_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_16k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_16k + #c:ingots/iron + #c:ingots/copper |
+| [ae2:spatial_cell_component_128](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_spatial_components_1) | minecraft:crafting_shaped | #c:dusts/glowstone + ae2:spatial_cell_component_16 + ae2:engineering_processor |
+| [ae2:cell_component_16k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_components_cell_16k_part) | minecraft:crafting_shaped | #c:dusts/glowstone + ae2:calculation_processor + ae2:cell_component_4k + ae2:quartz_glass |
+| [ae2:condenser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_io_condenser) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + #c:glass_blocks/cheap + #c:dusts/fluix |
+| [ae2:spatial_anchor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_spatial_anchor) | minecraft:crafting_shaped | ae2:spatial_pylon + ae2:fluix_glass_cable + ae2:spatial_cell_component_128 + kubejs:tk3_containment_frame + ae2:engineering_processor |
+| [ae2:spatial_pylon](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_spatial_io_pylon) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + ae2:fluix_glass_cable + #c:dusts/fluix + #ae2:all_fluix |
+| [ae2:spatial_io_port](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_spatial_io_port) | minecraft:crafting_shaped | #c:glass_blocks/cheap + ae2:fluix_glass_cable + ae2:io_port + kubejs:tk3_containment_frame + ae2:engineering_processor |
+| [ae2:16k_crafting_storage](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_16k_cpu_crafting_storage) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:cell_component_16k |
+| [mekanism:chemical_crystallizer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_crystallizer) | minecraft:crafting_shaped | #c:gems/fluorite + kubejs:tk3_containment_frame + #c:ingots/refined_obsidian + mekanism:steel_casing |
+| [mekanism:chemical_dissolution_chamber](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_dissolution_chamber) | mekanism:mek_data | kubejs:tk3_containment_frame + #c:ingots/refined_obsidian + mekanism:basic_chemical_tank + mekanism:steel_casing |
+| [mekanism:chemical_washer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_washer) | mekanism:mek_data | mekanism:basic_fluid_tank + kubejs:tk3_containment_frame + #c:ingots/refined_obsidian + mekanism:basic_chemical_tank + mekanism:steel_casing |
+| [mekanism:combiner](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_combiner) | minecraft:crafting_shaped | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + mekanism:steel_casing + #mekanism:stone_crafting_materials |
+| [mekanism:digital_miner](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_digital_miner) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + mekanism:robit + mekanism:logistical_sorter + mekanism:teleportation_core + mekanism:steel_casing |
+| [mekanism:dimensional_stabilizer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_dimensional_stabilizer) | minecraft:crafting_shaped | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:storage_blocks/diamond + #c:ingots/refined_obsidian |
+| [mekanism:isotopic_centrifuge](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_isotopic_centrifuge) | mekanism:mek_data | kubejs:tk3_containment_frame + #c:ingots/lead + mekanism:basic_chemical_tank |
+| [mekanism:radioactive_waste_barrel](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_radioactive_waste_barrel) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + #c:ingots/steel |
+| [mekanism:solar_neutron_activator](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_solar_neutron_activator) | minecraft:crafting_shaped | mekanism:hdpe_sheet + #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/bronze + mekanism:steel_casing |
+| [mekanism:elite_bin](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_bin_elite) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + mekanism:advanced_bin + #mekanism:stone_crafting_materials |
+| [mekanism:ultimate_bin](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_bin_ultimate) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + mekanism:elite_bin + #mekanism:stone_crafting_materials |
+| [mekanism:ultimate_chemical_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_chemical_tank_ultimate) | mekanism:mek_data | kubejs:tk3_containment_frame + #c:ingots/osmium + mekanism:elite_chemical_tank |
+| [mekanism:ultimate_control_circuit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_control_circuit_infused_ultimate) | mekanism:metallurgic_infusing | #c:circuits/elite; chemicals: {"chemical_input": {"amount": 240, "tag": "mekanism:refined_obsidian"}} |
+| [mekanism:ultimate_control_circuit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_control_circuit_ultimate) | minecraft:crafting_shaped | #mekanism:alloys/atomic + #c:circuits/elite |
+| [mekanism:elite_energy_cube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_energy_cube_elite) | mekanism:mek_data | kubejs:tk3_containment_frame + mekanism:energy_tablet + #c:ingots/gold + mekanism:advanced_energy_cube |
+| [mekanism:ultimate_energy_cube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_energy_cube_ultimate) | mekanism:mek_data | kubejs:tk3_containment_frame + mekanism:energy_tablet + #c:gems/diamond + mekanism:elite_energy_cube |
+| [mekanism:advanced_combining_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_advanced_combining) | mekanism:mek_data | #mekanism:alloys/infused + kubejs:tk3_expedition_frame + #c:ingots/osmium + mekanism:basic_combining_factory |
+| [mekanism:basic_combining_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_basic_combining) | mekanism:mek_data | #mekanism:alloys/basic + kubejs:tk3_network_chassis + #c:ingots/iron + mekanism:combiner |
+| [mekanism:elite_combining_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_combining) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_combining_factory |
+| [mekanism:elite_compressing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_compressing) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_compressing_factory |
+| [mekanism:elite_crushing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_crushing) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_crushing_factory |
+| [mekanism:elite_enriching_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_enriching) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_enriching_factory |
+| [mekanism:elite_infusing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_infusing) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_infusing_factory |
+| [mekanism:elite_injecting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_injecting) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_injecting_factory |
+| [mekanism:elite_purifying_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_purifying) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_purifying_factory |
+| [mekanism:elite_sawing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_sawing) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_sawing_factory |
+| [mekanism:elite_smelting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_elite_smelting) | mekanism:mek_data | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + mekanism:advanced_smelting_factory |
+| [mekanism:ultimate_combining_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_combining) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_combining_factory |
+| [mekanism:ultimate_compressing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_compressing) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_compressing_factory |
+| [mekanism:ultimate_crushing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_crushing) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_crushing_factory |
+| [mekanism:ultimate_enriching_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_enriching) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_enriching_factory |
+| [mekanism:ultimate_infusing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_infusing) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_infusing_factory |
+| [mekanism:ultimate_injecting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_injecting) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_injecting_factory |
+| [mekanism:ultimate_purifying_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_purifying) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_purifying_factory |
+| [mekanism:ultimate_sawing_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_sawing) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_sawing_factory |
+| [mekanism:ultimate_smelting_factory](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_factory_ultimate_smelting) | mekanism:mek_data | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + mekanism:elite_smelting_factory |
+| [mekanism:elite_fluid_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_fluid_tank_elite) | mekanism:mek_data | kubejs:tk3_containment_frame + #c:ingots/iron + mekanism:advanced_fluid_tank |
+| [mekanism:ultimate_fluid_tank](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_fluid_tank_ultimate) | mekanism:mek_data | kubejs:tk3_containment_frame + #c:ingots/iron + mekanism:elite_fluid_tank |
+| [4x mekanism:induction_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_casing) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + #c:ingots/steel |
+| [2x mekanism:induction_port](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_port) | minecraft:crafting_shaped | mekanism:induction_casing + kubejs:tk3_containment_frame |
+| [mekanism:advanced_induction_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_cell_advanced) | mekanism:mek_data | kubejs:tk3_containment_frame + mekanism:energy_tablet + mekanism:basic_induction_cell |
+| [mekanism:basic_induction_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_cell_basic) | mekanism:mek_data | kubejs:tk3_containment_frame + mekanism:energy_tablet + #c:dusts/lithium |
+| [mekanism:elite_induction_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_cell_elite) | mekanism:mek_data | kubejs:tk3_containment_frame + mekanism:energy_tablet + mekanism:advanced_induction_cell |
+| [mekanism:ultimate_induction_cell](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_cell_ultimate) | mekanism:mek_data | kubejs:tk3_containment_frame + mekanism:energy_tablet + mekanism:elite_induction_cell |
+| [mekanism:advanced_induction_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_provider_advanced) | minecraft:crafting_shaped | mekanism:advanced_energy_cube + kubejs:tk3_containment_frame + mekanism:basic_induction_provider |
+| [mekanism:basic_induction_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_provider_basic) | minecraft:crafting_shaped | mekanism:basic_energy_cube + kubejs:tk3_containment_frame + #c:dusts/lithium |
+| [mekanism:elite_induction_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_provider_elite) | minecraft:crafting_shaped | mekanism:elite_energy_cube + kubejs:tk3_containment_frame + mekanism:advanced_induction_provider |
+| [mekanism:ultimate_induction_provider](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_induction_provider_ultimate) | minecraft:crafting_shaped | mekanism:ultimate_energy_cube + kubejs:tk3_containment_frame + mekanism:elite_induction_provider |
+| [mekanism:pellet_plutonium](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_lategame_plutonium_pellet_from_reaction) | mekanism:reaction | #c:dusts/fluorite; chemicals: {"chemical_input": {"amount": 1000, "chemical": "mekanism:plutonium"}, "fluid_input": {"amount": 1000, "tag": "minecraft:water"}} |
+| [mekanism:pellet_polonium](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_lategame_polonium_pellet_from_reaction) | mekanism:reaction | #c:dusts/fluorite; chemicals: {"chemical_input": {"amount": 1000, "chemical": "mekanism:polonium"}, "fluid_input": {"amount": 1000, "tag": "minecraft:water"}} |
+| [mekanism:elite_tier_installer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_tier_installer_elite) | minecraft:crafting_shaped | #mekanism:alloys/reinforced + kubejs:tk3_containment_frame + #c:ingots/gold + #minecraft:planks |
+| [mekanism:ultimate_tier_installer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_tier_installer_ultimate) | minecraft:crafting_shaped | #mekanism:alloys/atomic + kubejs:tk3_containment_frame + #c:gems/diamond + #minecraft:planks |
+| [8x mekanism:elite_logistical_transporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_logistical_transporter_elite) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:advanced_logistical_transporter |
+| [8x mekanism:ultimate_logistical_transporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_logistical_transporter_ultimate) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:elite_logistical_transporter |
+| [8x mekanism:elite_mechanical_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_mechanical_pipe_elite) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:advanced_mechanical_pipe |
+| [8x mekanism:ultimate_mechanical_pipe](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_mechanical_pipe_ultimate) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:elite_mechanical_pipe |
+| [8x mekanism:elite_pressurized_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_pressurized_tube_elite) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:advanced_pressurized_tube |
+| [8x mekanism:ultimate_pressurized_tube](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_pressurized_tube_ultimate) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:elite_pressurized_tube |
+| [8x mekanism:elite_thermodynamic_conductor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_thermodynamic_conductor_elite) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:advanced_thermodynamic_conductor |
+| [8x mekanism:ultimate_thermodynamic_conductor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_thermodynamic_conductor_ultimate) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:elite_thermodynamic_conductor |
+| [8x mekanism:elite_universal_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_universal_cable_elite) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:advanced_universal_cable |
+| [8x mekanism:ultimate_universal_cable](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_transmitter_universal_cable_ultimate) | minecraft:crafting_shaped | kubejs:tk3_containment_frame + mekanism:elite_universal_cable |
+| [4x mekanismgenerators:fission_reactor_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fission_reactor_casing) | stonecutting | kubejs:tk3_containment_frame |
+| [mekanismgenerators:fission_reactor_port](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fission_reactor_port) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:fission_reactor_logic_adapter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fission_reactor_logic_adapter) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:fission_fuel_assembly](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fission_fuel_assembly) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:control_rod_assembly](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_control_rod_assembly) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [4x mekanismgenerators:turbine_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_turbine_casing) | stonecutting | kubejs:tk3_containment_frame |
+| [mekanismgenerators:turbine_valve](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_turbine_valve) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:turbine_vent](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_turbine_vent) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:turbine_rotor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_turbine_rotor) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:turbine_blade](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_turbine_blade) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:electromagnetic_coil](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_electromagnetic_coil) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:rotational_complex](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_rotational_complex) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:saturating_condenser](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_saturating_condenser) | shapeless | kubejs:tk3_containment_frame + mekanism:alloy_atomic + minecraft:glass |
+| [4x mekanismgenerators:reactor_glass](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_reactor_glass) | stonecutting | kubejs:tk3_containment_frame |
+| [cataclysm_spellbooks:hellfire_forge](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fcataclysm_spellbooks_hellfire_forge) | apparatus | kubejs:tk3_containment_frame + irons_spellbooks:arcane_anvil + minecraft:netherite_ingot |
+| [endrem:nether_eye](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fnether_eye) | deploying | kubejs:tk3_containment_mechanism + kubejs:tk3_ember_core |
+| [3x sophisticatedstorage:stack_upgrade_tier_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_storage_stack_upgrade_tier_4_from_backpack_stack_upgrade_tier_3) | minecraft:crafting_shaped | #minecraft:planks + sophisticatedbackpacks:stack_upgrade_tier_3 |
+| [sophisticatedstorage:stack_upgrade_tier_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_stack_upgrade_tier_4) | minecraft:crafting_shaped | #c:storage_blocks/diamond + #c:gems/diamond + sophisticatedstorage:stack_upgrade_tier_3 |
+| [sophisticatedbackpacks:stack_upgrade_tier_3](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_backpack_stack_upgrade_tier_3_from_storage_stack_upgrade_tier_4) | minecraft:crafting_shaped | #c:leathers + sophisticatedstorage:stack_upgrade_tier_4 + #c:strings |
+| [sophisticatedbackpacks:stack_upgrade_tier_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedbackpacks_stack_upgrade_tier_4) | minecraft:crafting_shaped | #c:storage_blocks/netherite + sophisticatedbackpacks:stack_upgrade_tier_3 |
+| [iceandfire:dragonforge_fire_core_disabled](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_fire_core_disabled) | deploying | kubejs:tk3_containment_frame + iceandfire:dragonbone |
+| [iceandfire:dragonforge_fire_input](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_fire_input) | deploying | kubejs:tk3_containment_frame + minecraft:blaze_powder |
+| [4x iceandfire:dragonforge_fire_brick](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_fire_brick) | stonecutting | kubejs:tk3_containment_frame |
+| [iceandfire:dragonforge_ice_core_disabled](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_ice_core_disabled) | deploying | kubejs:tk3_containment_frame + iceandfire:dragonbone |
+| [iceandfire:dragonforge_ice_input](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_ice_input) | deploying | kubejs:tk3_containment_frame + minecraft:packed_ice |
+| [4x iceandfire:dragonforge_ice_brick](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_ice_brick) | stonecutting | kubejs:tk3_containment_frame |
+| [iceandfire:dragonforge_lightning_core_disabled](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_lightning_core_disabled) | deploying | kubejs:tk3_containment_frame + iceandfire:dragonbone |
+| [iceandfire:dragonforge_lightning_input](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_lightning_input) | deploying | kubejs:tk3_containment_frame + minecraft:amethyst_shard |
+| [4x iceandfire:dragonforge_lightning_brick](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Ficeandfire_dragonforge_lightning_brick) | stonecutting | kubejs:tk3_containment_frame |
+| [alexscaves:nuclear_furnace_component](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Falexscaves_nuclear_furnace_component) | deploying | kubejs:tk3_containment_frame + mekanism:alloy_atomic |
+| [alexscaves:nuclear_siren](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Falexscaves_nuclear_siren) | deploying | kubejs:tk3_containment_frame + minecraft:redstone |
 
-| Tier | Output | Method | Inputs | Recipe ID |
-|---|---|---|---|---|
-| 1 | create:andesite_casing | Shapeless crafting | #c:stripped_logs + create:andesite_alloy | `kubejs:tk3/create/andesite_casing_manual` |
-| 1 | create:andesite_casing | deploying | #c:stripped_logs + create:andesite_alloy | `kubejs:tk3/create/andesite_casing_automated` |
-| 2 | create:copper_casing | Shapeless crafting | #c:stripped_logs + minecraft:copper_ingot | `kubejs:tk3/create/copper_casing_manual` |
-| 2 | create:copper_casing | deploying | #c:stripped_logs + minecraft:copper_ingot | `kubejs:tk3/create/copper_casing_automated` |
-| 3 | create:brass_casing | Shapeless crafting | #c:stripped_logs + create:brass_ingot | `kubejs:tk3/create/brass_casing_manual` |
-| 3 | create:brass_casing | deploying | #c:stripped_logs + create:brass_ingot | `kubejs:tk3/create/brass_casing_automated` |
-| 1 | create:iron_sheet | pressing | minecraft:iron_ingot | `kubejs:tk3/create/iron_sheet` |
-| 2 | create:copper_sheet | pressing | minecraft:copper_ingot | `kubejs:tk3/create/copper_sheet` |
-| 1 | create:golden_sheet | pressing | minecraft:gold_ingot | `kubejs:tk3/create/golden_sheet` |
-| 3 | create:brass_sheet | pressing | create:brass_ingot | `kubejs:tk3/create/brass_sheet` |
-| 3 | 2x create:rose_quartz | mixing | 2x minecraft:quartz + 4x minecraft:redstone | `kubejs:tk3/create/rose_quartz_bulk` |
-| 3 | create:rose_quartz | Shapeless crafting | minecraft:quartz + 4x minecraft:redstone | `kubejs:tk3/create/rose_quartz` |
-| 3 | create:polished_rose_quartz | Sandpaper polishing | create:rose_quartz | `kubejs:tk3/create/polished_rose_quartz` |
-| 3 | 2x create:electron_tube | Shaped crafting | Q = create:polished_rose_quartz, R = minecraft:redstone, I = create:iron_sheet · QRQ /  I  | `kubejs:tk3/create/electron_tube` |
-| 3 | create:electron_tube | deploying | create:iron_sheet + create:polished_rose_quartz | `kubejs:tk3/create/electron_tube_automated` |
-| 1 | create:sand_paper | Shapeless crafting | minecraft:paper + minecraft:sand | `kubejs:tk3/create/sand_paper` |
-| 1 | create:red_sand_paper | Shapeless crafting | minecraft:paper + minecraft:red_sand | `kubejs:tk3/create/red_sand_paper` |
-| 1 | create:andesite_alloy_block | Shaped crafting | I = create:andesite_alloy · III / III / III | `kubejs:tk3/create/andesite_alloy_block_packing` |
-| 1 | 9x create:andesite_alloy | Shapeless crafting | create:andesite_alloy_block | `kubejs:tk3/create/andesite_alloy_unpacking` |
-| 1 | create:zinc_block | Shaped crafting | I = create:zinc_ingot · III / III / III | `kubejs:tk3/create/zinc_block_packing` |
-| 1 | 9x create:zinc_ingot | Shapeless crafting | create:zinc_block | `kubejs:tk3/create/zinc_ingot_unpacking` |
-| 1 | create:zinc_ingot | Shaped crafting | N = create:zinc_nugget · NNN / NNN / NNN | `kubejs:tk3/create/zinc_ingot_from_nuggets` |
-| 1 | 9x create:zinc_nugget | Shapeless crafting | create:zinc_ingot | `kubejs:tk3/create/zinc_nugget_from_ingot` |
-| 2 | minecraft:copper_ingot | Shaped crafting | N = create:copper_nugget · NNN / NNN / NNN | `kubejs:tk3/create/copper_ingot_from_nuggets` |
-| 2 | 9x create:copper_nugget | Shapeless crafting | minecraft:copper_ingot | `kubejs:tk3/create/copper_nugget_from_ingot` |
-| 3 | create:brass_block | Shaped crafting | I = create:brass_ingot · III / III / III | `kubejs:tk3/create/brass_block_packing` |
-| 3 | 9x create:brass_ingot | Shapeless crafting | create:brass_block | `kubejs:tk3/create/brass_ingot_unpacking` |
-| 3 | create:brass_ingot | Shaped crafting | N = create:brass_nugget · NNN / NNN / NNN | `kubejs:tk3/create/brass_ingot_from_nuggets` |
-| 3 | 9x create:brass_nugget | Shapeless crafting | create:brass_ingot | `kubejs:tk3/create/brass_nugget_from_ingot` |
-| 1 | create:zinc_ingot | Furnace smelting | #c:raw_materials/zinc | `kubejs:tk3/create/zinc_smelting_raw_ore` |
-| 1 | create:zinc_ingot | Furnace smelting | #c:ores/zinc | `kubejs:tk3/create/zinc_smelting_ore` |
-| 3 | create:zinc_ingot | Furnace smelting | create:crushed_raw_zinc | `kubejs:tk3/create/zinc_smelting_crushed` |
-| 1 | create:zinc_ingot | Blast furnace | #c:raw_materials/zinc | `kubejs:tk3/create/zinc_blasting_raw_ore` |
-| 1 | create:zinc_ingot | Blast furnace | #c:ores/zinc | `kubejs:tk3/create/zinc_blasting_ore` |
-| 3 | create:zinc_ingot | Blast furnace | create:crushed_raw_zinc | `kubejs:tk3/create/zinc_blasting_crushed` |
-| 1 | create:wrench | Shaped crafting | I = create:iron_sheet, C = create:cogwheel, S = minecraft:stick · II  / IC  /  S  | `kubejs:tk3/create/wrench` |
-| 1 | create:goggles | Shaped crafting | G = minecraft:glass, S = minecraft:string, A = create:andesite_alloy · GSG /  A  | `kubejs:tk3/create/goggles` |
-| 1 | create:whisk | Shaped crafting | A = create:andesite_alloy, I = create:iron_sheet ·  A  / IAI /  I  | `kubejs:tk3/create/whisk` |
-| 3 | create:brass_hand | Shaped crafting | A = create:andesite_alloy, B = create:brass_sheet ·  A  / BBB /  B  | `kubejs:tk3/create/brass_hand` |
-| 1 | 4x create:piston_extension_pole | Shaped crafting | S = minecraft:stick, A = create:andesite_alloy · S / A / S | `kubejs:tk3/create/piston_extension_pole` |
-| 1 | 4x create:gantry_shaft | Shaped crafting | C = create:cogwheel, S = create:shaft · C / S / C | `kubejs:tk3/create/gantry_shaft` |
-| 1 | 8x create:metal_girder | Shaped crafting | I = create:iron_sheet, A = create:andesite_alloy · III / AAA | `kubejs:tk3/create/metal_girder` |
-| 1 | 4x create:metal_bracket | Shapeless crafting | create:iron_sheet + create:andesite_alloy | `kubejs:tk3/create/metal_bracket` |
-| 1 | 4x create:wooden_bracket | Shapeless crafting | #minecraft:planks + minecraft:stick | `kubejs:tk3/create/wooden_bracket` |
-| 1 | 2x create:white_sail | Shaped crafting | W = #minecraft:wool, S = minecraft:stick, A = create:andesite_alloy · WS / SA | `kubejs:tk3/create/white_sail` |
-| 1 | create:sail_frame | Shapeless crafting | create:white_sail | `kubejs:tk3/create/sail_frame` |
-| 1 | create:white_sail | Shapeless crafting | create:sail_frame + #minecraft:wool | `kubejs:tk3/create/sail_from_frame` |
-| 1 | create:super_glue | Shaped crafting | S = minecraft:slime_ball, I = create:iron_sheet, N = minecraft:iron_nugget · SI / NS | `kubejs:tk3/create/super_glue` |
-| 1 | create:sticky_mechanical_piston | deploying | create:mechanical_piston + minecraft:slime_ball | `kubejs:tk3/create/sticky_mechanical_piston` |
-| 1 | create:mechanical_piston | Shapeless crafting | create:sticky_mechanical_piston | `kubejs:tk3/create/piston_unstick` |
-| 1 | create:secondary_linear_chassis | Shapeless crafting | create:linear_chassis | `kubejs:tk3/create/secondary_linear_chassis_conversion` |
-| 1 | create:linear_chassis | Shapeless crafting | create:secondary_linear_chassis | `kubejs:tk3/create/linear_chassis_conversion` |
-| 1 | create:stressometer | Shapeless crafting | create:speedometer | `kubejs:tk3/create/stressometer_conversion` |
-| 1 | create:speedometer | Shapeless crafting | create:stressometer | `kubejs:tk3/create/speedometer_conversion` |
-| 1 | create:vertical_gearbox | Shapeless crafting | create:gearbox | `kubejs:tk3/create/vertical_gearbox_conversion` |
-| 1 | create:gearbox | Shapeless crafting | create:vertical_gearbox | `kubejs:tk3/create/gearbox_conversion` |
-| 1 | create:hand_crank | Shapeless crafting | kubejs:tk3_kinetic_machine + minecraft:stick | `kubejs:tk3/create/hand_crank` |
-| 1 | create:turntable | Shapeless crafting | kubejs:tk3_kinetic_machine + create:cogwheel | `kubejs:tk3/create/turntable` |
-| 1 | 2x create:sticker | Shapeless crafting | kubejs:tk3_kinetic_machine + minecraft:slime_ball | `kubejs:tk3/create/sticker` |
-| 2 | 2x create:item_vault | Shapeless crafting | kubejs:tk3_hydraulic_machine + minecraft:chest | `kubejs:tk3/create/item_vault` |
-| 2 | create:flywheel | Shapeless crafting | kubejs:tk3_hydraulic_machine + create:cogwheel | `kubejs:tk3/create/flywheel` |
-| 2 | 2x create:nozzle | Shapeless crafting | kubejs:tk3_hydraulic_machine + create:iron_sheet | `kubejs:tk3/create/nozzle` |
-| 3 | create:clockwork_bearing | Shapeless crafting | kubejs:tk3_precision_machine + minecraft:clock | `kubejs:tk3/create/clockwork_bearing` |
-| 3 | create:mechanical_roller | Shapeless crafting | kubejs:tk3_precision_machine + create:crushing_wheel | `kubejs:tk3/create/mechanical_roller` |
-| 3 | 2x create:chain_conveyor | Shapeless crafting | kubejs:tk3_precision_machine + minecraft:chain | `kubejs:tk3/create/chain_conveyor` |
-| 3 | 2x create:factory_gauge | Shapeless crafting | kubejs:tk3_precision_machine + create:electron_tube | `kubejs:tk3/create/factory_gauge` |
-| 3 | 2x create:redstone_requester | Shapeless crafting | kubejs:tk3_precision_machine + create:stock_link | `kubejs:tk3/create/redstone_requester` |
-| 3 | create:linked_controller | Shapeless crafting | kubejs:tk3_precision_machine + create:redstone_link | `kubejs:tk3/create/linked_controller` |
-| 3 | create:schematicannon | Shapeless crafting | kubejs:tk3_precision_machine + minecraft:dispenser | `kubejs:tk3/create/schematicannon` |
-| 2 | create:empty_blaze_burner | Shaped crafting | I = create:iron_sheet, N = minecraft:netherrack ·  I  / INI /  I  | `kubejs:tk3/create/empty_blaze_burner` |
-| 2 | create:copper_diving_helmet | Shaped crafting | C = create:copper_sheet, G = minecraft:glass · CCC / G G | `kubejs:tk3/create/copper_diving_helmet` |
-| 2 | create:copper_diving_boots | Shaped crafting | C = create:copper_sheet, I = create:iron_sheet · C C / I I | `kubejs:tk3/create/copper_diving_boots` |
-| 1 | create:filter | Shaped crafting | I = minecraft:iron_nugget, W = #minecraft:wool · IWI | `kubejs:tk3/create/filter` |
-| 3 | create:attribute_filter | Shaped crafting | B = create:brass_sheet, F = create:filter, R = create:rose_quartz · BFB /  R  | `kubejs:tk3/create/attribute_filter` |
-| 3 | create:package_filter | Shaped crafting | P = minecraft:paper, F = create:filter, R = create:electron_tube · PFP /  R  | `kubejs:tk3/create/package_filter` |
-| 3 | 2x create:pulse_repeater | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:redstone_torch, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/pulse_repeater` |
-| 3 | 2x create:pulse_extender | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:comparator, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/pulse_extender` |
-| 3 | 2x create:pulse_timer | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:clock, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/pulse_timer` |
-| 3 | 2x create:powered_latch | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:lever, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/powered_latch` |
-| 3 | 2x create:powered_toggle_latch | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:lever, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/powered_toggle_latch` |
-| 3 | 4x create:redstone_contact | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:redstone, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/redstone_contact` |
-| 3 | 4x create:nixie_tube | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:glass, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/nixie_tube` |
-| 3 | 2x create:rose_quartz_lamp | Shaped crafting | R = minecraft:redstone, B = create:brass_sheet, E = minecraft:glowstone_dust, I = create:iron_sheet ·  R  / BEB /  I  | `kubejs:tk3/create/rose_quartz_lamp` |
-| 3 | create:transmitter | Shaped crafting | L = minecraft:lightning_rod, C = create:copper_sheet, R = minecraft:redstone ·  L  / CCC /  R  | `kubejs:tk3/create/transmitter` |
-| 3 | 8x create:track | deploying | minecraft:rail + create:brass_sheet | `kubejs:tk3/create/track` |
-| 3 | 4x create:controller_rail | Shaped crafting | I = create:iron_sheet, R = minecraft:redstone, A = create:andesite_alloy, S = create:shaft · IRI / ASA / IRI | `kubejs:tk3/create/controller_rail` |
-| 3 | create:schedule | Shaped crafting | P = minecraft:paper, E = create:electron_tube ·  P  / PEP /  P  | `kubejs:tk3/create/schedule` |
-| 1 | 2x create:minecart_coupling | Shaped crafting | I = minecraft:iron_nugget, A = create:andesite_alloy, S = minecraft:slime_ball ·  I  / ASA /  I  | `kubejs:tk3/create/minecart_coupling` |
-| 3 | 4x create:crafter_slot_cover | Shapeless crafting | create:brass_sheet + minecraft:paper | `kubejs:tk3/create/crafter_slot_cover` |
-| 3 | 2x create:item_hatch | Shapeless crafting | create:brass_sheet + minecraft:iron_trapdoor | `kubejs:tk3/create/item_hatch` |
-| 1 | create:clipboard | Shaped crafting | A = create:andesite_alloy, G = #minecraft:planks, P = minecraft:paper · A / P / G | `kubejs:tk3/create/crafting_appliances_clipboard` |
-| 1 | create:crafting_blueprint | Shapeless crafting | minecraft:painting + minecraft:crafting_table | `kubejs:tk3/create/crafting_appliances_crafting_blueprint` |
-| 1 | create:empty_schematic | Shapeless crafting | minecraft:paper + #c:dyes/light_blue | `kubejs:tk3/create/crafting_schematics_empty_schematic` |
-| 1 | create:schematic_and_quill | Shapeless crafting | create:empty_schematic + #c:feathers | `kubejs:tk3/create/crafting_schematics_schematic_and_quill` |
-| 1 | create:schematic_table | Shaped crafting | S = minecraft:smooth_stone, W = #minecraft:wooden_slabs · WWW /  S  /  S  | `kubejs:tk3/create/crafting_schematics_schematic_table` |
-| 1 | create:placard | Shapeless crafting | minecraft:item_frame + #c:plates/brass | `kubejs:tk3/create/crafting_kinetics_placard` |
-| 1 | create:desk_bell | Shapeless crafting | create:andesite_casing + #c:plates/gold | `kubejs:tk3/create/crafting_logistics_desk_bell` |
-| 3 | create:peculiar_bell | Shaped crafting | I = #c:storage_blocks/brass, P = #c:plates/brass · I / P | `kubejs:tk3/create/crafting_curiosities_peculiar_bell` |
-| 1 | create:cuckoo_clock | Shaped crafting | A = minecraft:clock, C = create:andesite_casing, S = #minecraft:planks · S / C / A | `kubejs:tk3/create/crafting_kinetics_cuckoo_clock` |
-| 1 | create:dough | Shapeless crafting | #c:flours/wheat + minecraft:water_bucket | `kubejs:tk3/create/crafting_appliances_dough` |
-| 1 | 2x create:tree_fertilizer | Shapeless crafting | 2x #minecraft:small_flowers + minecraft:bone_meal + minecraft:clay_ball | `kubejs:tk3/create/tree_fertilizer` |
-| 1 | 4x create:dough | mixing | 4x create:wheat_flour + 1000 mB minecraft:water | `kubejs:tk3/create/dough_bulk` |
-| 1 | 4x create:cardboard | compacting | 2x minecraft:paper + 250 mB minecraft:water | `kubejs:tk3/create/cardboard` |
-| 1 | create:cardboard_block | Shaped crafting | C = create:cardboard · CC / CC | `kubejs:tk3/create/cardboard_block` |
-| 1 | 4x create:cardboard | Shapeless crafting | create:cardboard_block | `kubejs:tk3/create/cardboard_unpacking` |
-| 1 | create:filter | Shapeless crafting | create:filter | `kubejs:tk3/create/filter_clear` |
-| 1 | create:clipboard | Shapeless crafting | create:clipboard | `kubejs:tk3/create/clipboard_clear` |
-| 3 | create:attribute_filter | Shapeless crafting | create:attribute_filter | `kubejs:tk3/create/attribute_filter_clear` |
-| 3 | create:package_filter | Shapeless crafting | create:package_filter | `kubejs:tk3/create/package_filter_clear` |
-| 3 | create:schedule | Shapeless crafting | create:schedule | `kubejs:tk3/create/schedule_clear` |
-| 3 | create:factory_gauge | Shapeless crafting | create:factory_gauge | `kubejs:tk3/create/factory_gauge_clear` |
-| 3 | create:redstone_requester | Shapeless crafting | create:redstone_requester | `kubejs:tk3/create/redstone_requester_clear` |
-| 3 | create:stock_link | Shapeless crafting | create:stock_link | `kubejs:tk3/create/stock_link_clear` |
-| 3 | create:stock_ticker | Shapeless crafting | create:stock_ticker | `kubejs:tk3/create/stock_ticker_clear` |
+## Tier 9
+
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [kubejs:tk3_singularity_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsingularity_mechanism) | sequence | kubejs:tk3_containment_mechanism + mekanism:pellet_polonium + ae2:singularity + ars_nouveau:enchanters_sword |
+| [kubejs:tk3_singularity_frame](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_9) | deploying | ae2:fluix_block + kubejs:tk3_singularity_mechanism |
+| [ae2:portable_item_cell_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_item_cell_64k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_64k + ae2:energy_cell + ae2:item_cell_housing |
+| [ae2:portable_fluid_cell_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_fluid_cell_64k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_64k + ae2:energy_cell + ae2:fluid_cell_housing |
+| [ae2:fluid_storage_cell_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_64k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_64k + #c:ingots/copper |
+| [ae2:item_storage_cell_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_64k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_64k + #c:ingots/iron + #c:ingots/copper |
+| [ae2:fluid_storage_cell_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_64k_storage) | minecraft:crafting_shapeless | ae2:fluid_cell_housing + ae2:cell_component_64k |
+| [ae2:item_storage_cell_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_64k_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:cell_component_64k |
+| [ae2:cell_component_64k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_components_cell_64k_part) | minecraft:crafting_shaped | #c:dusts/glowstone + ae2:calculation_processor + ae2:cell_component_16k + ae2:quartz_glass |
+| [ae2:quantum_ring](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_quantum_ring) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + ae2:logic_processor + ae2:engineering_processor + ae2:energy_cell + #ae2:smart_dense_cable |
+| [ae2:quantum_link](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_blocks_quantum_link) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + ae2:fluix_pearl |
+| [ae2:64k_crafting_storage](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_64k_cpu_crafting_storage) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:cell_component_64k |
+| [2x ae2:quantum_entangled_singularity](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_transform_entangled_singularity) | ae2:transform | ae2:singularity + #c:dusts/ender_pearl |
+| [2x ae2:quantum_entangled_singularity](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_transform_entangled_singularity_from_pearl) | ae2:transform | ae2:singularity + #c:ender_pearls |
+| [mekanism:antiprotonic_nucleosynthesizer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_antiprotonic_nucleosynthesizer) | minecraft:crafting_shaped | mekanism:alloy_atomic + #c:pellets/antimatter + kubejs:tk3_singularity_frame + mekanism:steel_casing |
+| [mekanism:qio_dashboard](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_dashboard) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + #c:glass_panes + #c:ingots/lead + mekanism:teleportation_core |
+| [mekanism:qio_drive_array](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_drive_array) | mekanism:mek_data | #mekanism:personal_storage + kubejs:tk3_singularity_frame + #c:glass_panes + #c:ender_pearls + mekanism:teleportation_core |
+| [mekanism:qio_drive_base](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_drive_base) | minecraft:crafting_shaped | #c:ender_pearls + kubejs:tk3_singularity_frame + #c:ingots/lead |
+| [mekanism:qio_drive_hyper_dense](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_drive_hyper_dense) | mekanism:mek_data | kubejs:tk3_singularity_frame + #c:pellets/plutonium + mekanism:qio_drive_base |
+| [mekanism:qio_drive_supermassive](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_drive_supermassive) | mekanism:mek_data | kubejs:tk3_singularity_frame + #c:pellets/polonium + mekanism:qio_drive_time_dilating |
+| [mekanism:qio_drive_time_dilating](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_drive_time_dilating) | mekanism:mek_data | kubejs:tk3_singularity_frame + #c:pellets/plutonium + mekanism:qio_drive_hyper_dense |
+| [mekanism:qio_exporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_exporter) | minecraft:crafting_shaped | minecraft:piston + #c:ender_pearls + kubejs:tk3_singularity_frame + #c:ingots/lead + mekanism:teleportation_core |
+| [mekanism:qio_importer](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_importer) | minecraft:crafting_shaped | minecraft:sticky_piston + #c:ender_pearls + kubejs:tk3_singularity_frame + #c:ingots/lead + mekanism:teleportation_core |
+| [mekanism:qio_redstone_adapter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_qio_redstone_adapter) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + #c:ender_pearls + #c:dusts/redstone + mekanism:teleportation_core + minecraft:redstone_torch |
+| [mekanism:quantum_entangloporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_quantum_entangloporter) | minecraft:crafting_shaped | #mekanism:alloys/atomic + kubejs:tk3_singularity_frame + #c:ingots/refined_obsidian + mekanism:teleportation_core |
+| [mekanism:sps_casing](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_sps_casing) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + #c:pellets/polonium + mekanism:hdpe_sheet |
+| [mekanism:sps_port](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_sps_port) | minecraft:crafting_shaped | mekanism:sps_casing + kubejs:tk3_singularity_frame |
+| [mekanism:supercharged_coil](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_supercharged_coil) | minecraft:crafting_shaped | mekanism:laser + #c:pellets/polonium + kubejs:tk3_singularity_frame + #c:ingots/copper |
+| [mekanism:teleporter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_teleporter) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + mekanism:teleportation_core + mekanism:steel_casing |
+| [9x mekanism:teleporter_frame](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_teleporter_frame) | minecraft:crafting_shaped | kubejs:tk3_singularity_frame + #c:ingots/refined_obsidian |
+| [mekanism:pellet_antimatter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_processing_lategame_antimatter_pellet_from_gas) | mekanism:crystallizing | ; chemicals: {"input": {"amount": 1000, "chemical": "mekanism:antimatter"}} |
+| [mekanismgenerators:fusion_reactor_controller](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fusion_reactor_controller) | shapeless | kubejs:tk3_singularity_frame + mekanism:alloy_atomic + minecraft:glass |
+| [4x mekanismgenerators:fusion_reactor_frame](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fusion_reactor_frame) | stonecutting | kubejs:tk3_singularity_frame |
+| [mekanismgenerators:fusion_reactor_port](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fusion_reactor_port) | shapeless | kubejs:tk3_singularity_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:fusion_reactor_logic_adapter](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_fusion_reactor_logic_adapter) | shapeless | kubejs:tk3_singularity_frame + mekanism:alloy_atomic + minecraft:glass |
+| [mekanismgenerators:laser_focus_matrix](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanismgenerators_laser_focus_matrix) | shapeless | kubejs:tk3_singularity_frame + mekanism:alloy_atomic + minecraft:glass |
+| [4x aeronautics:end_stone_powder](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Faeronautics_end_stone_powder) | crushing | minecraft:end_stone |
+| [aeronautics:levitite_blend](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Flevitite_blend) | create:mixing | 4x aeronautics:end_stone_powder + 2x create:zinc_nugget + {"fluid": "minecraft:water", "amount": 500} |
+| [endrem:corrupted_eye](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fcorrupted_eye) | deploying | kubejs:tk3_singularity_mechanism + kubejs:tk3_void_core |
+| [sophisticatedbackpacks:stack_upgrade_tier_4](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_backpack_stack_upgrade_tier_4_from_storage_stack_upgrade_tier_5) | minecraft:crafting_shaped | #c:leathers + sophisticatedstorage:stack_upgrade_tier_5 + #c:strings |
+| [sophisticatedstorage:stack_upgrade_tier_5](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_stack_upgrade_tier_5) | minecraft:crafting_shaped | #c:storage_blocks/netherite + #c:ingots/netherite + sophisticatedstorage:stack_upgrade_tier_4 |
+| [3x sophisticatedstorage:stack_upgrade_tier_5](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Faddons%2Fsophisticatedstorage_storage_stack_upgrade_tier_5_from_backpack_stack_upgrade_tier_4) | minecraft:crafting_shaped | #minecraft:planks + sophisticatedbackpacks:stack_upgrade_tier_4 |
+
+## Tier 10
+
+| Output | Method | Inputs / conditions |
+|---|---|---|
+| [kubejs:tk3_sovereign_mechanism](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsovereign_mechanism) | sequence | kubejs:tk3_singularity_mechanism + mekanism:pellet_antimatter + minecraft:dragon_breath + betterend:diamond_hammer |
+| [kubejs:tk3_sovereign_core](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_10) | deploying | mekanism:sps_casing + kubejs:tk3_sovereign_mechanism |
+| [ae2:portable_fluid_cell_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_fluid_cell_256k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_256k + ae2:energy_cell + ae2:fluid_cell_housing |
+| [ae2:portable_item_cell_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_tools_portable_item_cell_256k) | minecraft:crafting_shapeless | ae2:chest + ae2:cell_component_256k + ae2:energy_cell + ae2:item_cell_housing |
+| [ae2:item_storage_cell_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_256k_storage) | minecraft:crafting_shapeless | ae2:item_cell_housing + ae2:cell_component_256k |
+| [ae2:cell_component_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_components_cell_256k_part) | minecraft:crafting_shaped | #c:dusts/sky_stone + ae2:calculation_processor + ae2:cell_component_64k + ae2:quartz_glass |
+| [ae2:item_storage_cell_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_item_storage_cell_256k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_256k + #c:ingots/iron + #c:ingots/copper |
+| [ae2:fluid_storage_cell_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_256k) | minecraft:crafting_shaped | ae2:quartz_glass + #c:dusts/redstone + ae2:cell_component_256k + #c:ingots/copper |
+| [ae2:fluid_storage_cell_256k](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_cells_fluid_storage_cell_256k_storage) | minecraft:crafting_shapeless | ae2:fluid_cell_housing + ae2:cell_component_256k |
+| [ae2:256k_crafting_storage](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fae_network%2Fae2_network_crafting_256k_cpu_crafting_storage) | minecraft:crafting_shapeless | ae2:crafting_unit + ae2:cell_component_256k |
+| [mekanism:meka_tool](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_meka_tool) | minecraft:crafting_shaped | mekanism:atomic_disassembler + #c:pellets/polonium + kubejs:tk3_sovereign_core + mekanism:basic_induction_cell + mekanism:hdpe_sheet + mekanism:configurator |
+| [mekanism:mekasuit_bodyarmor](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_mekasuit_bodyarmor) | minecraft:crafting_shaped | minecraft:netherite_chestplate + #c:pellets/polonium + kubejs:tk3_sovereign_core + mekanism:basic_induction_cell + mekanism:hdpe_sheet |
+| [mekanism:mekasuit_boots](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_mekasuit_boots) | minecraft:crafting_shaped | minecraft:netherite_boots + #c:pellets/polonium + kubejs:tk3_sovereign_core + mekanism:basic_induction_cell + mekanism:hdpe_sheet |
+| [mekanism:mekasuit_helmet](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_mekasuit_helmet) | minecraft:crafting_shaped | minecraft:netherite_helmet + #c:pellets/polonium + kubejs:tk3_sovereign_core + mekanism:basic_induction_cell + mekanism:hdpe_sheet |
+| [mekanism:mekasuit_pants](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_mekasuit_pants) | minecraft:crafting_shaped | minecraft:netherite_leggings + #c:pellets/polonium + kubejs:tk3_sovereign_core + mekanism:basic_induction_cell + mekanism:hdpe_sheet |
+| [mekanism:module_attack_amplification_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_attack_amplification_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [2x mekanism:module_base](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_base) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:ingots/tin + #c:nuggets/bronze |
+| [mekanism:module_blasting_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_blasting_unit) | minecraft:crafting_shaped | minecraft:tnt + #c:alloys/ultimate + kubejs:tk3_sovereign_core + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_charge_distribution_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_charge_distribution_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_color_modulation_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_color_modulation_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + mekanism:hdpe_sheet + mekanism:pigment_mixer + mekanism:painting_machine + mekanism:module_base |
+| [mekanism:module_dosimeter_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_dosimeter_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_electrolytic_breathing_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_electrolytic_breathing_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_elytra_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_elytra_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + #c:pellets/antimatter + mekanism:module_base |
+| [mekanism:module_energy_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_energy_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_excavation_escalation_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_excavation_escalation_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_farming_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_farming_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_fortune_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_fortune_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:storage_blocks/diamond + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_frost_walker_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_frost_walker_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_geiger_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_geiger_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_gravitational_modulating_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_gravitational_modulating_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/ultimate + mekanism:ultimate_induction_provider + #c:pellets/antimatter + mekanism:module_base |
+| [mekanism:module_gyroscopic_stabilization_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_gyroscopic_stabilization_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_hydraulic_propulsion_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_hydraulic_propulsion_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + mekanism:energy_tablet + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_hydrostatic_repulsor_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_hydrostatic_repulsor_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_inhalation_purification_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_inhalation_purification_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base + mekanism:scuba_mask |
+| [mekanism:module_jetpack_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_jetpack_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_laser_dissipation_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_laser_dissipation_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_locomotive_boosting_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_locomotive_boosting_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + mekanism:energy_tablet + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_magnetic_attraction_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_magnetic_attraction_unit) | minecraft:crafting_shaped | minecraft:iron_bars + #c:alloys/elite + kubejs:tk3_sovereign_core + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_motorized_servo_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_motorized_servo_unit) | minecraft:crafting_shaped | minecraft:blue_ice + #c:alloys/elite + kubejs:tk3_sovereign_core + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_nutritional_injection_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_nutritional_injection_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_radiation_shielding_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_radiation_shielding_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_shearing_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_shearing_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/advanced + mekanism:hdpe_sheet + mekanism:module_base |
+| [mekanism:module_silk_touch_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_silk_touch_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + minecraft:diamond_pickaxe + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_soul_surfer_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_soul_surfer_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #minecraft:soul_fire_base_blocks + #c:pellets/polonium + mekanism:module_base |
+| [mekanism:module_teleportation_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_teleportation_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/ultimate + #c:pellets/antimatter + mekanism:module_base |
+| [mekanism:module_vein_mining_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_vein_mining_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base + minecraft:diamond_shovel + minecraft:diamond_axe |
+| [mekanism:module_vision_enhancement_unit](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Findustrial%2Fmekanism_module_vision_enhancement_unit) | minecraft:crafting_shaped | kubejs:tk3_sovereign_core + #c:alloys/elite + #c:pellets/polonium + mekanism:module_base |
+| [kubejs:tk3_sovereign_keystone](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsovereign_keystone) | sequence | kubejs:tk3_sovereign_core + kubejs:tk3_verdant_sigil + kubejs:tk3_storm_core + kubejs:tk3_ember_core + kubejs:tk3_void_core + ars_nouveau:enchanters_sword; four retained boss imprints |
 

@@ -10,7 +10,7 @@ Belts, Deployers, presses, mixers and processing machines turn raw materials int
 
 The starter **Kinetic Machine** has a manual crafting route: **7 Andesite Alloy + 1 Andesite Casing + 1 wooden slab**. Check the recipe catalogue for the exact pattern and current ingredient routes.
 
-**[FOLLOW CHAPTERS I–V →](../../progression/#chapters)** · [Open the visual workshop](../../workshop/)
+**[FOLLOW CHAPTERS I–X →](../../progression/#chapters)** · [Open the visual workshop](../../workshop/)
 
 **[OPEN CREATE PARTS & MACHINES →](../create/)**
 
@@ -27,13 +27,13 @@ Build dependable supplies of wood, crops and processed stone before adding more 
 
 ## Mekanism · the industrial layer
 
-**Mekanism** and **Mekanism Generators** are selected for later technology and power generation. Chapter V introduces the **Industrial Bridge**: steel, FE and Mekanism refining. Further industrial progression belongs beyond the current five-chapter workshop path.
+**Mekanism** and **Mekanism Generators** are selected for later technology and power generation. Chapter V introduces the **Industrial Bridge**: steel, FE and Mekanism refining. Chapter VI adds basic factories; VII adds chemistry and HDPE; VIII adds fission/turbines; IX adds fusion and SPS antimatter; X adds powered equipment.
 
 **Create Crafts & Additions** is the selected bridge between rotational machinery and FE technology. Follow the pack's progression recipes when connecting these systems.
 
 ## AE2 · storage & autocrafting
 
-**Applied Energistics 2** is the selected late-game storage and autocrafting network. Plan your factory around clearly separated inputs, outputs and intermediate products so a future network can request materials from the production lines you already built.
+**Applied Energistics 2** is the selected late-game storage and autocrafting network. Plan your factory around clearly separated inputs, outputs and intermediate products so your network can request materials from the production lines you already built.
 
 A storage network is most useful when the underlying production is reliable: keep renewable ingredients stocked and check that each process can finish without manual intervention.
 
@@ -48,3 +48,9 @@ A storage network is most useful when the underlying production is reliable: kee
 | **Create: MineColonies Link** | Colony supply requests connected to Create logistics |
 
 **[BACK TO FEATURES →](../features/)** · [Explore magic](../magic/) · [Build a kingdom](../kingdoms/)
+
+## Workshop access
+
+**VI:** 1k AE2, processing patterns, factories. **VII:** wireless / 4k cells, HDPE and airships. **VIII:** 16k cells, containment and fission. **IX:** 64k cells, End access, quantum links, fusion and antimatter. **X:** 256k cells, MekaSuit modules and the Sovereign Keystone.
+
+**[MODS & THEIR TIERS →](../tier-map/)** · [Exact paths](../../progression/#paths)

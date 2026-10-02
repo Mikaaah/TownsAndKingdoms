@@ -44,7 +44,7 @@ jobs:
                   time.sleep(5)
           with open('TK3/docs/progression_manifest.json') as f:
               recipes=json.load(f)['recipes']
-          authored_count=sum(r['tier'] <= 5 for r in recipes)
+          authored_count=len(recipes)
           assert live['authored_recipe_count']==authored_count and len(live['pages'])==11
           PY
 

@@ -43,3 +43,7 @@ These are the selected connections for T&K3. The exact unlocks and recipe routes
 Keep **arcane inputs**, **finished components** and **combat supplies** in clearly labelled storage. Check whether a recipe requires Source, a fluid, heat or a specific apparatus before supplying it automatically.
 
 **[BACK TO FEATURES →](../features/)** · [Automation field guide](../../automation/)
+
+## Follow the campaign
+
+**[ALL MODS, ADDONS & THEIR TIERS →](../tier-map/)** · **[TEN CHAPTER PATHS →](../../progression/#paths)**

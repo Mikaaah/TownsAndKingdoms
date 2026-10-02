@@ -6,7 +6,7 @@
 
 The **official Towns & Kingdoms wiki** is hosted on **GitHub Pages**. Explore the current **T&K3** guides or revisit the complete **T&K2** archive.
 
-**5 CHAPTERS** · **81 QUESTS** · **776 RECIPES**
+**10 CHAPTERS** · **159 QUESTS** · **1499 RECIPES**
 
 | ◆ T&K3 — CURRENT | II · T&K2 — ARCHIVE |
 |---|---|
@@ -16,5 +16,7 @@ The **official Towns & Kingdoms wiki** is hosted on **GitHub Pages**. Explore th
 | **[RECIPE WORKSHOP](https://mikaaah.github.io/TownsAndKingdoms/workshop/)** | [Mod list](https://mikaaah.github.io/TownsAndKingdoms/2.0/modlist/) |
 
 ### ⚙ BUILD YOUR WORKSHOP. GROW YOUR KINGDOM.
+
+[MODS & THEIR TIERS](https://mikaaah.github.io/TownsAndKingdoms/3.0/tier-map/)
 
 Follow the chapters, inspect recipes with **real item art and Create models**, and build reliable automation.

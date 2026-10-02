@@ -476,6 +476,87 @@
       "y": 5.0,
       "icon": "ars_nouveau:enchanters_sword",
       "rewards": []
+    },
+    {
+      "id": "1EA9BB30580966DF",
+      "title": "A living power source",
+      "description": [
+        "Connect Ars Creo to Create. Feed and configure the native Starbuncle wheel."
+      ],
+      "dependencies": [
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "E961496E447D0A01",
+          "type": "item",
+          "item": {
+            "id": "ars_creo:starbuncle_wheel",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 9.0,
+      "icon": "ars_creo:starbuncle_wheel",
+      "rewards": []
+    },
+    {
+      "id": "907B12548AF8B244",
+      "title": "A second kind of magic",
+      "description": [
+        "Start Witchery with the oven, altar, cauldron and spinning wheel. Modonomicon explains native rituals and environmental altar requirements."
+      ],
+      "dependencies": [
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "3DEFCA082D05C1D0",
+          "type": "item",
+          "item": {
+            "id": "witchery:iron_witches_oven",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 9.0,
+      "icon": "witchery:iron_witches_oven",
+      "rewards": []
+    },
+    {
+      "id": "5E9F53C1D7179AF1",
+      "title": "Mana in motion",
+      "description": [
+        "Pump native Wizardry mana into the cauldron ink line. Source and mana are separate resources."
+      ],
+      "dependencies": [
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "1E59A7CD20AD7196",
+          "type": "item",
+          "item": {
+            "id": "create_wizardry:arcane_pump",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 12.0,
+      "y": 9.0,
+      "icon": "create_wizardry:arcane_pump",
+      "rewards": []
     }
   ]
 }
