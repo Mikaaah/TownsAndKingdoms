@@ -128,7 +128,7 @@ def compile(r):
 required=sorted({oid(r['output'])for r in R}|{oid(v)for r in R for v in(r['inputs'].values()if isinstance(r['inputs'],dict)else r['inputs'])if isinstance(v,str)and not oid(v).startswith('#')})
 s='// priority: 0\n// Create 6.0.10 support layer: exact outputs and approved reversible utility recipes.\nServerEvents.recipes(event => {\n  '+j(required)+".forEach(id => { if (Item.of(id).isEmpty()) throw new Error('[TK3] Missing required item: '+id); });\n  "+j(sorted({oid(r['output'])for r in R}))+'.forEach(output => event.remove({output: output}));\n'+''.join('\n  // Tier '+str(r['tier'])+' · '+r['section']+'\n  '+compile(r)+'\n'for r in R)+'});\n'
 (root/'kubejs/server_scripts/recipes/tk3_create.js').write_text(s)
-p=root/'kubejs/server_scripts/recipes/tk3_whitelist.js';s=p.read_text();s=re.sub(r'  const allowed = .*?;\n',lambda _: '  const allowed = '+j(m['output_whitelist'])+';\n',s,count=1);p.write_text(s)
+p=root/'kubejs/server_scripts/recipes/tk3_whitelist.js';s=p.read_text();s=re.sub(r'\s*const allowed = \{[\s\S]*?\};\n',lambda _: '\n  const allowed = '+j(m['output_whitelist'])+';\n',s,count=1);p.write_text(s)
 p=root/'kubejs/server_scripts/progression/tk3_stages.js';s=p.read_text();start=s.index('\n[',s.index('})();'));end=s.index('\nAStages.addRestrictionForMod',start)
 s=s[:start]+''.join('\n'+j(items)+'.forEach(item => {\n  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_'+t+'", item)\n    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()\n    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);\n});\n'for t,items in m['gates'].items())+s[end:];p.write_text(s)
 audit=dict(create_version='6.0.10',added_recipes=len(R),added_outputs=len({oid(r['output'])for r in R}),total_recipes=len(m['recipes']),direct_create_inputs=sorted(used),natural_sources=sorted(natural),uncovered_inputs=sorted(missing),sections=dict(collections.Counter(r['section']for r in R)),recipes=[r['id']for r in R],notes=['All directly referenced Create inputs have an authored recipe or a named natural stone source.','Ore mining, worldgen stones, capturing blazes, fluids and decorative block families keep their deliberate native acquisition.','Reset recipes are explicitly retained; other recipes for controlled outputs are removed by the final whitelist.','No new custom item or block registries.'])
@@ -141,3 +141,7 @@ for p in recipe_dir.glob('*.js'):
  if p.name in ['tk3_whitelist.js','tk3_recipe_cleanup.js']:continue
  text=p.read_text();text=re.sub(r'  \[.*?\]\.forEach\(output => event\.remove\(\{output: output\}\)\);\n','',text);p.write_text(text)
 (recipe_dir/'tk3_recipe_cleanup.js').write_text('// priority: 10000\n// Remove controlled originals first. Registrations run at priority 0; the final allowlist runs last.\nServerEvents.recipes(event => {\n  '+j(sorted(m['output_whitelist']))+'.forEach(output => event.remove({output: output}));\n});\n')
+
+# Keep the source-style recipe sections and vertical ingredient layout on rebuild.
+import subprocess, sys
+subprocess.run([sys.executable, str(Path(__file__).with_name('format_recipes.py')), '--pack', str(root)], check=True)

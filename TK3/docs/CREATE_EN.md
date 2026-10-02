@@ -18,6 +18,8 @@ The cleanup pass is centralised so one subsystem cannot remove approved recipes 
 
 ## Rebuild & checks
 
+Install the developer formatter dependency with `python3 -m pip install jsbeautifier==2.0.3`; the builder applies the shared section style after generation. See [Editing recipe scripts](RECIPE_SCRIPT_STYLE.md).
+
 `python TK3/tools/extend_create.py --pack TK3 --create-jar /path/to/create-6.0.10.jar`
 
 `node TK3/tools/verify_create.cjs`
