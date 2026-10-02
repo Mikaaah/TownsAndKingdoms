@@ -61,7 +61,7 @@ This map follows the current selected mod list and every addon / support entry. 
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
-| Create | **I–X** | Native selected system, connected to its parent workshop below | Selected |
+| Create | **I–X** | Rotation I, fluids II, brass and precision III; mechanisms, frame construction and physical processing across the campaign | Selected |
 | Create Aeronautics | **III, VII, IX** | Stationary propellers III; powered ship hardware VII; End-stone lifting fluid IX | Selected |
 | Mekanism | **V–X** | Steel/FE V, basic factories VI, chemistry VII, containment VIII, SPS/QIO IX, powered equipment X | Selected |
 | Mekanism Generators | **V–IX** | Heat V, renewables VI, gas VII, fission/turbine VIII, fusion IX | Selected |
@@ -72,19 +72,19 @@ This map follows the current selected mod list and every addon / support entry. 
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
-| Cataclysm | **I–IX** | Native encounters; dragonforge / dragonsteel VIII; cave machinery VII and nuclear components VIII; core trials VI–IX | Selected |
-| Alex's Mobs (1.21.1 NeoForge community port) | **I–IX** | Native encounters; dragonforge / dragonsteel VIII; cave machinery VII and nuclear components VIII; core trials VI–IX | Selected |
-| Alex's Caves (1.21.1 NeoForge community port) | **I–IX** | Native encounters; dragonforge / dragonsteel VIII; cave machinery VII and nuclear components VIII; core trials VI–IX | Selected |
-| Ice and Fire: Community Edition | **I–IX** | Native encounters; dragonforge / dragonsteel VIII; cave machinery VII and nuclear components VIII; core trials VI–IX | Selected |
-| Bosses' Rise - Epic Souls-like Boss Fights | **I–IX** | Native encounters; dragonforge / dragonsteel VIII; cave machinery VII and nuclear components VIII; core trials VI–IX | Selected |
-| Mowzie's Mobs | **I–IX** | Native encounters; dragonforge / dragonsteel VIII; cave machinery VII and nuclear components VIII; core trials VI–IX | Selected |
+| Cataclysm | **VII–IX** | Required Harbinger VII, Ignis VIII and Ender Guardian IX trials and repeatable cores; other encounters retain native progression | Selected |
+| Alex's Mobs (1.21.1 NeoForge community port) | **I–X** | Native wildlife, creature interactions and materials; resources support farms and exploration | Selected |
+| Alex's Caves (1.21.1 NeoForge community port) | **I–X; VII–VIII workshops** | Native cave discovery and research; quarry, drain and conversion crucible VII; nuclear furnace components VIII; optional Forsaken trial VII | Selected |
+| Ice and Fire: Community Edition | **VII–VIII branch** | Optional dragon trial VII; containment-frame dragonforges and native dragonsteel production VIII; native dragons and blood materials | Selected |
+| Bosses' Rise - Epic Souls-like Boss Fights | **I–X; VII trial** | Native boss encounters and rewards; optional manually confirmed encounter branch in chapter VII | Selected |
+| Mowzie's Mobs | **I–X; III trial** | Native creatures and bosses; optional detected Wroughtnaut duel in chapter III | Selected |
 
 ### Exploration & World
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
 | FreeTerraForged — terrain / macro-landform generator | **I–X** | Native terrain, biomes and discoveries; timber compatibility and geological production | Selected |
-| Alex's Caves — cave biomes and underground exploration | **I–X** | Native terrain, biomes and discoveries; timber compatibility and geological production | Selected |
+| Alex's Caves — cave biomes and underground exploration | **I–X; VII–VIII workshops** | Native cave discovery and research; quarry, drain and conversion crucible VII; nuclear furnace components VIII; optional Forsaken trial VII | Selected |
 | Biomes O' Plenty | **I–X** | Native terrain, biomes and discoveries; timber compatibility and geological production | Selected |
 | Oh The Biomes We've Gone (BWG) | **I–X** | Native terrain, biomes and discoveries; timber compatibility and geological production | Selected |
 | Upgrade Aquatic | **I–X** | Native terrain, biomes and discoveries; timber compatibility and geological production | Selected |
@@ -103,14 +103,14 @@ This map follows the current selected mod list and every addon / support entry. 
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
-| The Twilight Forest | **VI / IX** | Twilight trial VI; End route IX with native progression | Selected |
-| BetterEnd: New Dawn — primary End biome/content layer, including the main island and End-city ecosystem | **VI / IX** | Twilight trial VI; End route IX with native progression | Selected |
+| The Twilight Forest | **VI** | Lich trial and Verdant Sigil VI; native portals, boss seals and forest adventure order | Selected |
+| BetterEnd: New Dawn — primary End biome/content layer, including the main island and End-city ecosystem | **IX** | End exploration after chapter VIII; native main island, city ecosystem, biomes and discoveries | Selected |
 | Nullscape — terrain-layer candidate | **Pending** | Listed test candidate; no new recipes or stages activated | Candidate |
 | YUNG's Better End Island — **rejected for T&K3**; unnecessary overlap with BetterEnd | **Excluded** | Outside the current selected baseline | Rejected |
 | End's Phantasm — **rejected for T&K3** | **Excluded** | Outside the current selected baseline | Rejected |
-| Amplified Nether — terrain layer | **VI / IX** | Twilight trial VI; End route IX with native progression | Selected |
-| BetterNether: New Dawn — primary Nether biome/content layer | **VI / IX** | Twilight trial VI; End route IX with native progression | Selected |
-| YUNG's Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility | **VI / IX** | Twilight trial VI; End route IX with native progression | Selected |
+| Amplified Nether — terrain layer | **II–X** | Native Nether exploration, blaze access and fortress discoveries; supplies heated metallurgy, magic and later chemistry | Selected |
+| BetterNether: New Dawn — primary Nether biome/content layer | **II–X** | Native Nether exploration, blaze access and fortress discoveries; supplies heated metallurgy, magic and later chemistry | Selected |
+| YUNG's Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility | **II–X** | Native Nether exploration, blaze access and fortress discoveries; supplies heated metallurgy, magic and later chemistry | Selected |
 | Gardens of the Dead — **rejected for T&K3** | **Excluded** | Outside the current selected baseline | Rejected |
 
 ### Towns & Kingdoms
@@ -206,11 +206,11 @@ This map follows the current selected mod list and every addon / support entry. 
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
-| Ars 'n Spells | **VI–IX** | Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks | Integration |
-| Alex's Caves: Spellbooks | **VI–IX** | Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks | Integration |
-| Cataclysm: Spellbooks | **VI–IX** | Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks | Integration |
-| Ice and Fire: Spellbooks | **VI–IX** | Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks | Integration |
-| Spellbooks of Twilight | **VI–IX** | Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks | Integration |
+| Ars 'n Spells | **VI–VII** | Spell Loom and Mana Infusion VI; Mana Well VII; native cross-mod spell rules | Integration |
+| Alex's Caves: Spellbooks | **VII** | Cave spellbook equipment in the expedition workshop; native biome discoveries and the optional Forsaken branch | Integration |
+| Cataclysm: Spellbooks | **VII–IX** | Expedition equipment VII; Ignis and Hellfire Forge VIII; void, abyss and cursium spellbook equipment IX | Integration |
+| Ice and Fire: Spellbooks | **VII–VIII** | Native dragon-spell branch alongside the dragon expedition VII and dragonforge workshop VIII | Integration |
+| Spellbooks of Twilight | **VI** | Forest spellbooks and equipment alongside the Twilight trial; native boss seals remain | Integration |
 
 ### Apotheosis bridges
 
@@ -234,10 +234,10 @@ This map follows the current selected mod list and every addon / support entry. 
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
-| Create Aeronautics: FTB Chunks Compat | **VII–X** | Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access | Integration |
-| Create Aeronautics: Mekanism Compatibility | **VII–X** | Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access | Integration |
-| Ars Sable | **VII–X** | Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access | Integration |
-| Waystones: Sable | **VII–X** | Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access | Integration |
+| Create Aeronautics: FTB Chunks Compat | **VII–X** | Native ship and claim protection compatibility when powered airships open in VII | Integration |
+| Create Aeronautics: Mekanism Compatibility | **VII–X** | Native Mekanism machine compatibility on moving ships, attached to airship access VII | Integration |
+| Ars Sable | **VII–X** | Native Ars spell compatibility with moving sublevels and ships, attached to airship access VII | Integration |
+| Waystones: Sable | **VII–X** | Native Waystone compatibility with moving sublevels and ships, attached to airship access VII | Integration |
 | IronSable - **candidate; test before locking** | **Pending** | Listed test candidate; no new recipes or stages activated | Candidate |
 
 ### FTB stack
@@ -257,7 +257,7 @@ This map follows the current selected mod list and every addon / support entry. 
 | Apothic Spawners | **All chapters** | Required support library; no independent crafting tier | Dependency |
 | Apothic Enchanting | **All chapters** | Required support library; no independent crafting tier | Dependency |
 
-### Iron's Spells stack
+### Iron’s Spells stack
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
@@ -281,7 +281,7 @@ This map follows the current selected mod list and every addon / support entry. 
 | Create | **All chapters** | Required support library; no independent crafting tier | Dependency |
 | Sable | **All chapters** | Required support library; no independent crafting tier | Dependency |
 
-### Alex's Mobs / Alex's Caves ports
+### Alex’s Mobs / Alex’s Caves ports
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|
@@ -302,7 +302,7 @@ This map follows the current selected mod list and every addon / support entry. 
 |---|---|---|---|
 | Integrated API | **All chapters** | Required support library; no independent crafting tier | Dependency |
 
-### YUNG's Better mods
+### YUNG’s Better mods
 
 | Mod / addon | Chapter access | Role | Status |
 |---|---|---|---|

@@ -82,7 +82,7 @@
       "name": "Create",
       "group": "Engineering & Automation",
       "tier": "I–X",
-      "role": "Native selected system, connected to its parent workshop below",
+      "role": "Rotation I, fluids II, brass and precision III; mechanisms, frame construction and physical processing across the campaign",
       "status": "Selected"
     },
     {
@@ -123,43 +123,43 @@
     {
       "name": "Cataclysm",
       "group": "Bosses & Mobs",
-      "tier": "I–IX",
-      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "tier": "VII–IX",
+      "role": "Required Harbinger VII, Ignis VIII and Ender Guardian IX trials and repeatable cores; other encounters retain native progression",
       "status": "Selected"
     },
     {
       "name": "Alex's Mobs (1.21.1 NeoForge community port)",
       "group": "Bosses & Mobs",
-      "tier": "I–IX",
-      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "tier": "I–X",
+      "role": "Native wildlife, creature interactions and materials; resources support farms and exploration",
       "status": "Selected"
     },
     {
       "name": "Alex's Caves (1.21.1 NeoForge community port)",
       "group": "Bosses & Mobs",
-      "tier": "I–IX",
-      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "tier": "I–X; VII–VIII workshops",
+      "role": "Native cave discovery and research; quarry, drain and conversion crucible VII; nuclear furnace components VIII; optional Forsaken trial VII",
       "status": "Selected"
     },
     {
       "name": "Ice and Fire: Community Edition",
       "group": "Bosses & Mobs",
-      "tier": "I–IX",
-      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "tier": "VII–VIII branch",
+      "role": "Optional dragon trial VII; containment-frame dragonforges and native dragonsteel production VIII; native dragons and blood materials",
       "status": "Selected"
     },
     {
       "name": "Bosses' Rise - Epic Souls-like Boss Fights",
       "group": "Bosses & Mobs",
-      "tier": "I–IX",
-      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "tier": "I–X; VII trial",
+      "role": "Native boss encounters and rewards; optional manually confirmed encounter branch in chapter VII",
       "status": "Selected"
     },
     {
       "name": "Mowzie's Mobs",
       "group": "Bosses & Mobs",
-      "tier": "I–IX",
-      "role": "Native world encounters; required core trials VI–IX, optional exploration branches",
+      "tier": "I–X; III trial",
+      "role": "Native creatures and bosses; optional detected Wroughtnaut duel in chapter III",
       "status": "Selected"
     },
     {
@@ -172,8 +172,8 @@
     {
       "name": "Alex's Caves — cave biomes and underground exploration",
       "group": "Exploration & World",
-      "tier": "I–X",
-      "role": "Native terrain, biomes and discoveries; timber compatibility and geological production",
+      "tier": "I–X; VII–VIII workshops",
+      "role": "Native cave discovery and research; quarry, drain and conversion crucible VII; nuclear furnace components VIII; optional Forsaken trial VII",
       "status": "Selected"
     },
     {
@@ -270,15 +270,15 @@
     {
       "name": "The Twilight Forest",
       "group": "Dimensions",
-      "tier": "VI / IX",
-      "role": "Twilight trial VI; End route IX with native progression",
+      "tier": "VI",
+      "role": "Lich trial and Verdant Sigil VI; native portals, boss seals and forest adventure order",
       "status": "Selected"
     },
     {
       "name": "BetterEnd: New Dawn — primary End biome/content layer, including the main island and End-city ecosystem",
       "group": "Dimensions",
-      "tier": "VI / IX",
-      "role": "Twilight trial VI; End route IX with native progression",
+      "tier": "IX",
+      "role": "End exploration after chapter VIII; native main island, city ecosystem, biomes and discoveries",
       "status": "Selected"
     },
     {
@@ -305,22 +305,22 @@
     {
       "name": "Amplified Nether — terrain layer",
       "group": "Dimensions",
-      "tier": "VI / IX",
-      "role": "Twilight trial VI; End route IX with native progression",
+      "tier": "II–X",
+      "role": "Native Nether exploration, blaze access and fortress discoveries; supplies heated metallurgy, magic and later chemistry",
       "status": "Selected"
     },
     {
       "name": "BetterNether: New Dawn — primary Nether biome/content layer",
       "group": "Dimensions",
-      "tier": "VI / IX",
-      "role": "Twilight trial VI; End route IX with native progression",
+      "tier": "II–X",
+      "role": "Native Nether exploration, blaze access and fortress discoveries; supplies heated metallurgy, magic and later chemistry",
       "status": "Selected"
     },
     {
       "name": "YUNG's Better Nether Fortresses — selected fortress overhaul; includes built-in optional Create compatibility",
       "group": "Dimensions",
-      "tier": "VI / IX",
-      "role": "Twilight trial VI; End route IX with native progression",
+      "tier": "II–X",
+      "role": "Native Nether exploration, blaze access and fortress discoveries; supplies heated metallurgy, magic and later chemistry",
       "status": "Selected"
     },
     {
@@ -641,36 +641,36 @@
     {
       "name": "Ars 'n Spells",
       "group": "Magic / content bridges",
-      "tier": "VI–IX",
-      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "tier": "VI–VII",
+      "role": "Spell Loom and Mana Infusion VI; Mana Well VII; native cross-mod spell rules",
       "status": "Integration"
     },
     {
       "name": "Alex's Caves: Spellbooks",
       "group": "Magic / content bridges",
-      "tier": "VI–IX",
-      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "tier": "VII",
+      "role": "Cave spellbook equipment in the expedition workshop; native biome discoveries and the optional Forsaken branch",
       "status": "Integration"
     },
     {
       "name": "Cataclysm: Spellbooks",
       "group": "Magic / content bridges",
-      "tier": "VI–IX",
-      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "tier": "VII–IX",
+      "role": "Expedition equipment VII; Ignis and Hellfire Forge VIII; void, abyss and cursium spellbook equipment IX",
       "status": "Integration"
     },
     {
       "name": "Ice and Fire: Spellbooks",
       "group": "Magic / content bridges",
-      "tier": "VI–IX",
-      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "tier": "VII–VIII",
+      "role": "Native dragon-spell branch alongside the dragon expedition VII and dragonforge workshop VIII",
       "status": "Integration"
     },
     {
       "name": "Spellbooks of Twilight",
       "group": "Magic / content bridges",
-      "tier": "VI–IX",
-      "role": "Spell Loom / Mana Infusion VI, Mana Well VII; native cave, dragon, Twilight and Cataclysm spellbooks",
+      "tier": "VI",
+      "role": "Forest spellbooks and equipment alongside the Twilight trial; native boss seals remain",
       "status": "Integration"
     },
     {
@@ -733,28 +733,28 @@
       "name": "Create Aeronautics: FTB Chunks Compat",
       "group": "Create Aeronautics / Sable bridges",
       "tier": "VII–X",
-      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "role": "Native ship and claim protection compatibility when powered airships open in VII",
       "status": "Integration"
     },
     {
       "name": "Create Aeronautics: Mekanism Compatibility",
       "group": "Create Aeronautics / Sable bridges",
       "tier": "VII–X",
-      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "role": "Native Mekanism machine compatibility on moving ships, attached to airship access VII",
       "status": "Integration"
     },
     {
       "name": "Ars Sable",
       "group": "Create Aeronautics / Sable bridges",
       "tier": "VII–X",
-      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "role": "Native Ars spell compatibility with moving sublevels and ships, attached to airship access VII",
       "status": "Integration"
     },
     {
       "name": "Waystones: Sable",
       "group": "Create Aeronautics / Sable bridges",
       "tier": "VII–X",
-      "role": "Ship / claims / Mekanism / spell / waypoint compatibility, attached to airship access",
+      "role": "Native Waystone compatibility with moving sublevels and ships, attached to airship access VII",
       "status": "Integration"
     },
     {
