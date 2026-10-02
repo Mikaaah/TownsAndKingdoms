@@ -4,7 +4,7 @@
 
 The selected T&K3 world combines large landscapes, distinctive ecosystems, dungeons and major encounters. Exploration and combat give your workshop a purpose beyond producing more machines.
 
-## ◆ Landscapes & caves
+## Landscapes & caves
 
 **FreeTerraForged** is the selected Overworld terrain foundation. **Biomes O' Plenty** and **Oh The Biomes We've Gone** provide the large biome libraries, with **Upgrade Aquatic**, **Atmospheric**, **Autumnity**, **Environmental** and **[Let's Do] BloomingNature** adding ecosystem variety.
 
@@ -16,7 +16,7 @@ The selected structure stack includes **Integrated Dungeons & Structures**, **In
 
 Major structures are intended to feel like discoveries. Prepare supplies, reserve space for loot and establish a safe route home before committing to a long expedition.
 
-## ⚔ Combat & equipment
+## Combat & equipment
 
 **Epic Fight** is the combat framework. **Weapons of Miracles** and **Simply Swords** are the selected weapon layers, while **Apotheosis** supplies the affix, gem, socket and salvage framework with T&K3-specific balance.
 

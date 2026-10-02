@@ -4,7 +4,7 @@
 
 T&K3 uses **Create** as its mechanical backbone. Later technology adds new processing and logistics options while keeping the earlier production chains useful.
 
-## ⚙ Create · build the backbone
+## Create · build the backbone
 
 Belts, Deployers, presses, mixers and processing machines turn raw materials into a repeatable production line. Mechanisms use **sequenced assembly**: follow the ordered operations, then use the completed mechanism to assemble the next machine frame.
 
@@ -23,13 +23,13 @@ Build dependable supplies of wood, crops and processed stone before adding more 
 | Produce stone and its processing yields | [Resource generators](../../automation/) |
 | Understand exact ingredients and order | [Recipe workshop](../../workshop/) |
 
-## ⚡ Mekanism · the industrial layer
+## Mekanism · the industrial layer
 
 **Mekanism** and **Mekanism Generators** are selected for later technology and power generation. Chapter V introduces the **Industrial Bridge**: steel, FE and Mekanism refining. Further industrial progression belongs beyond the current five-chapter workshop path.
 
 **Create Crafts & Additions** is the selected bridge between rotational machinery and FE technology. Follow the pack's progression recipes when connecting these systems.
 
-## ▣ AE2 · storage & autocrafting
+## AE2 · storage & autocrafting
 
 **Applied Energistics 2** is the selected late-game storage and autocrafting network. Plan your factory around clearly separated inputs, outputs and intermediate products so a future network can request materials from the production lines you already built.
 

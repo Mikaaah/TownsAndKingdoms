@@ -4,7 +4,7 @@
 
 T&K3 gives its magic systems different roles. **Ars Nouveau** is the primary arcane crafting and automation system; **Iron's Spells 'n Spellbooks** is the primary combat spellcasting system.
 
-## ✦ Ars Nouveau · arcane production
+## Ars Nouveau · arcane production
 
 Bring magic into your production chain with Ars Nouveau. **Chapter IV · Arcane Industry** connects Source, hybrid crafting and the Wilden trial to your existing workshop.
 
@@ -12,7 +12,7 @@ Use the chapter guide for the unlock order and the recipe workshop for exact inp
 
 **[OPEN THE CHAPTER GUIDE →](../../progression/#chapters)** · [Inspect arcane recipes](../../workshop/)
 
-## ✧ Iron's Spells · combat spellcasting
+## Iron's Spells · combat spellcasting
 
 **Iron's Spells 'n Spellbooks** is the selected spellcasting foundation for combat. Build your spellcasting character alongside the pack's equipment and class systems, and prepare for encounters with both your gear and your spells in mind.
 

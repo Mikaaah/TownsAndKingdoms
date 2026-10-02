@@ -4,7 +4,7 @@
 
 **MineColonies** is T&K3's selected settlement system. Build your town alongside the workshop that supplies it, and organise a shared home with the selected multiplayer tools.
 
-## ♜ MineColonies · your settlement
+## MineColonies · your settlement
 
 MineColonies is the foundation for colony building, citizens and settlement management. Plan space for the town as well as the factory: clear routes and organised supply areas make expansion easier to follow.
 
@@ -24,7 +24,7 @@ The selected **Create: MineColonies Link** connects colony supply requests to Cr
 
 Keep busy machine routes and frequently used walkways easy to distinguish. Label storage by what it supplies so teammates can help without having to learn every recipe chain first.
 
-## ◆ Teams & claims
+## Teams & claims
 
 **FTB Teams** is the selected group system and **FTB Chunks** is the selected claim system. Agree on your team's building area, shared storage and responsibilities before expanding a communal settlement.
 
