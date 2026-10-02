@@ -28,13 +28,15 @@ const uv=nativeModel('test',synthetic).children[0].children[0].geometry.getAttri
 close(uv.getX(0),4/64);close(uv.getY(0),1-48/64); // Native clockwise quarter turn.
 function stage(kind,mode='input'){
  const v=Object.create(Viewer.prototype);v.lib=lib;v.scene=new THREE.Scene();v.controls={target:new THREE.Vector3(),update(){}};v.camera=new THREE.PerspectiveCamera();v.render=()=>{};
- v.stage({kind,inputs:['minecraft:oak_slab','create:andesite_alloy'],output:'create:mechanical_press'},{mode,belt:'minecraft:oak_slab'},0);return v.scene;
+ v.stage({kind,inputs:['minecraft:oak_slab','create:andesite_alloy'],output:'create:mechanical_press'},{mode},0);return v.scene;
 }
 const direction=new THREE.Vector3(0,0,1);
 const sequence=stage('sequence'),deployer=sequence.children.find(n=>n.rotation.x!==0);assert.ok(deployer);
 const down=direction.clone().applyEuler(deployer.rotation);close(down.y,-1);close(down.z,0);
 const saw=stage('cutting').children[0];close(direction.clone().applyEuler(saw.rotation).y,1);
 const input=stage('stonecutting'),output=stage('stonecutting','output');
+close(input.children[1].material.map.offset.x,art.items['minecraft:oak_slab'].x/art.width);
+close(output.children[1].material.map.offset.x,art.items['create:mechanical_press'].x/art.width);
 assert.ok(input.children[1].isSprite);assert.ok(output.children[1].isSprite);
 assert.ok(input.children[1].position.x<-.8);assert.ok(output.children[1].position.x>.8);
 assert.ok(input.children[1].position.x+.325<-.5); // Icon stays outside the blade/block footprint.

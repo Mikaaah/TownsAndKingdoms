@@ -86,7 +86,7 @@ class Viewer{
   }else if(kind==='stonecutting'){
    // The input and output are UI icons beside the blade, not blocks balanced on it.
    this.put('minecraft:item/stonecutter',0,0,0,0,Math.PI/2);
-   this.sprite(step.belt||recipe.output,step.mode==='output'?1.2:-1.2,.3,.35);
+   this.sprite(step.mode==='output'?recipe.output:recipe.inputs[0],step.mode==='output'?1.2:-1.2,.3,.35);
   }else if(kind==='pressing'||kind==='cutting'){
    const model=kind==='pressing'?'create:item/mechanical_press':'create:item/mechanical_saw';this.put(model,0,kind==='pressing'?2:0,0,kind==='cutting'?-Math.PI/2:0);
    if(kind==='pressing')this.put('create:item/depot',0,0,0);this.sprite(step.belt||recipe.output,kind==='cutting'?(step.mode==='output'?.9:-.9):0,.8,0);
