@@ -10,3 +10,5 @@ body{font-family:Arial,Helvetica,sans-serif}a{color:#e8bbd0}strong,b{color:#fff}
 @media print{.wiki-sidebar{display:none}.wiki-content{margin:0}.scene{break-inside:avoid}.strip{display:none}}
 
 .visual-link{display:inline-flex;margin-top:8px;padding:6px 9px;border:1px solid #785069;border-radius:5px;color:var(--gold);font-size:9px;font-weight:800;letter-spacing:.04em;text-decoration:none}
+
+.scene:has([data-ready="false"]){height:auto;min-height:0;padding:14px}.scene:has([data-ready="false"]) + .scene-hint{display:none}

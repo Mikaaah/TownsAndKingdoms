@@ -272,6 +272,6 @@ Pack costs and chapter availability come from the current T&K3 recipe and quest 
 - [Sophisticated Storage: author description, upgrades and gallery](https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage)
 - [Sophisticated Storage: native Hopper Upgrade recipe](https://github.com/P3pp3rF1y/SophisticatedStorage/blob/1.21.x/src/generated/resources/data/sophisticatedstorage/recipe/hopper_upgrade.json)
 
-The diagrams on this page are labelled layout sketches. The workshop animations explain ordered recipe operations; they are not screenshots or an in-game Ponder addon. The storage photo is an example from P3pp3rF1y's official gallery.
+Use the height tables, component lists and first-test steps above to check your build. The recipe workshop shows the pack’s ingredients and operation order; hold **W** over supported Create items for the in-game placement demonstrations. The storage photo is an example from P3pp3rF1y's official gallery.
 
 <figure class="reference-photo"><img src="https://media.forgecdn.net/attachments/1039/948/trials-copper-combinations.png" loading="lazy" alt="Sophisticated Storage containers in the mod author's copper-themed gallery example"><figcaption>Storage example · P3pp3rF1y / Sophisticated Storage. <a href="https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage">Original gallery and mod description</a>.</figcaption></figure>
