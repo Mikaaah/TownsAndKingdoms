@@ -1,0 +1,275 @@
+{
+  "name": "Towns & Kingdoms",
+  "description": "A modded Minecraft adventure where engineering, magic and kingdoms grow together.",
+  "baseUrl": "https://mikaaah.github.io/TownsAndKingdoms/",
+  "repositoryUrl": "https://github.com/Mikaaah/TownsAndKingdoms",
+  "feedbackUrl": "https://github.com/Mikaaah/TownsAndKingdoms/issues",
+  "assets": {
+    "banner": "kingdom-landscape.png",
+    "logo": "logo_transparent.png",
+    "icon": "favicon.png",
+    "cover": "kingdom-icon.png"
+  },
+  "versions": {
+    "3.0": {
+      "label": "T&K3",
+      "status": "In development",
+      "platform": "Minecraft 1.21.1 · NeoForge"
+    },
+    "2.0": {
+      "label": "T&K2",
+      "status": "Legacy archive",
+      "platform": "Historical pack documentation"
+    }
+  },
+  "topNavigation": [
+    {
+      "route": "",
+      "label": "Home"
+    },
+    {
+      "route": "3.0/",
+      "label": "T&K3"
+    },
+    {
+      "route": "guides/",
+      "label": "Guides"
+    },
+    {
+      "route": "recipes/",
+      "label": "Recipes"
+    },
+    {
+      "route": "2.0/",
+      "label": "T&K2 archive"
+    }
+  ],
+  "groups": [
+    {
+      "id": "start",
+      "label": "Start here"
+    },
+    {
+      "id": "building",
+      "label": "Build & automate"
+    },
+    {
+      "id": "adventure",
+      "label": "Explore & grow"
+    },
+    {
+      "id": "reference",
+      "label": "Project reference"
+    },
+    {
+      "id": "legacy",
+      "label": "T&K2 archive"
+    }
+  ],
+  "pages": [
+    {
+      "route": "",
+      "title": "Your adventure starts here",
+      "summary": "Explore Towns & Kingdoms: a connected Minecraft world of workshops, magic, adventures and settlements.",
+      "category": "start",
+      "menu": false
+    },
+    {
+      "route": "3.0/",
+      "title": "Towns & Kingdoms 3",
+      "summary": "Get to know the new pack: Create connects your workshop to magic, digital storage, expeditions and the Sovereign project.",
+      "category": "start"
+    },
+    {
+      "route": "3.0/features/",
+      "title": "Features & systems",
+      "summary": "Find out how engineering, magic, exploration, towns and character growth connect in T&K3.",
+      "category": "start"
+    },
+    {
+      "route": "progression/",
+      "title": "Progression & machine frames",
+      "summary": "Follow the production path through ten chapters. Learn which mechanism and machine frame your next workshop needs.",
+      "category": "start"
+    },
+    {
+      "route": "chapters/",
+      "title": "Chapters & quests",
+      "summary": "All {{questCount}} quests across ten chapters, with goals, dependencies and permanent workshop rewards.",
+      "category": "start"
+    },
+    {
+      "route": "guides/",
+      "title": "Find a guide",
+      "summary": "Choose what you want to build, explore or understand. Each guide has a clear place in the campaign.",
+      "category": "start"
+    },
+    {
+      "route": "recipes/",
+      "title": "Recipe catalogue",
+      "summary": "Search {{recipeCount}} authored recipes by item, ingredient, tier and process. Open any recipe in the visual workshop.",
+      "category": "building"
+    },
+    {
+      "route": "workshop/",
+      "title": "Visual recipe workshop",
+      "summary": "Walk through a recipe one operation at a time: exact inputs, held tools, fluids and the finished output.",
+      "category": "building"
+    },
+    {
+      "route": "3.0/create/",
+      "title": "Create parts & machines",
+      "summary": "Find casings, plates, tools, power components, logistics and railway recipes around your Create workshop.",
+      "category": "building"
+    },
+    {
+      "route": "automation/",
+      "title": "Automation field guide",
+      "summary": "Build reliable farms and production lines. Start with collection, add buffers, and solve common factory bottlenecks.",
+      "category": "building"
+    },
+    {
+      "route": "3.0/engineering/",
+      "title": "Engineering & storage",
+      "summary": "Connect Create production to Mekanism processing and an AE2 storage and autocrafting network.",
+      "category": "building"
+    },
+    {
+      "route": "3.0/magic/",
+      "title": "Magic & spells",
+      "summary": "Explore Ars Nouveau, Iron’s Spells and Witchery, and see how their systems meet your workshop.",
+      "category": "adventure"
+    },
+    {
+      "route": "3.0/exploration/",
+      "title": "Exploration & combat",
+      "summary": "Understand the selected world, dungeon and boss systems, and prepare for the campaign’s trials.",
+      "category": "adventure"
+    },
+    {
+      "route": "3.0/kingdoms/",
+      "title": "Towns & multiplayer",
+      "summary": "Build settlements, manage shared supplies, protect your home and connect your group’s workshops.",
+      "category": "adventure"
+    },
+    {
+      "route": "3.0/skill-tree/",
+      "title": "Classes & professions",
+      "summary": "The current six-class design, eighteen subclasses and Mining, Logging, Farming and Fishing branches.",
+      "category": "adventure"
+    },
+    {
+      "route": "3.0/modlist/",
+      "title": "Mod list",
+      "summary": "Browse the selected T&K3 foundation by category. Candidate mods and integration decisions have their own notes.",
+      "category": "reference"
+    },
+    {
+      "route": "3.0/tier-map/",
+      "title": "Mods, addons & tiers",
+      "summary": "See each mod’s workshop access, role and selection status across the ten-chapter campaign.",
+      "category": "reference"
+    },
+    {
+      "route": "3.0/changelog/",
+      "title": "Changelog",
+      "summary": "Track the new pack’s foundation and documented development changes.",
+      "category": "reference"
+    },
+    {
+      "route": "3.0/comparison/",
+      "title": "T&K2 → T&K3 comparison",
+      "summary": "Review additions, removals and changes between the legacy pack and the new T&K3 foundation.",
+      "category": "reference"
+    },
+    {
+      "route": "3.0/selection-notes/",
+      "title": "Selection & development notes",
+      "summary": "Detailed selected mods, candidates, dependencies and compatibility decisions. Selected does not mean released or fully tested.",
+      "category": "reference"
+    },
+    {
+      "route": "3.0/credits/",
+      "title": "Artwork & credits",
+      "summary": "Credits and source releases for the official artwork, item textures and Create model viewer.",
+      "category": "reference"
+    },
+    {
+      "route": "3.0/progression/",
+      "title": "Progression overview",
+      "summary": "Choose a production path, follow the quests or look up an exact recipe.",
+      "category": "start",
+      "menu": false
+    },
+    {
+      "route": "2.0/",
+      "title": "Towns & Kingdoms 2 archive",
+      "summary": "The complete original wiki, preserved with its historical features, mod lists, updates and server instructions.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/features/",
+      "title": "Legacy features",
+      "summary": "The original T&K2 features, including exploration, colonies, magic and automation.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/modlist/",
+      "title": "Legacy mod list",
+      "summary": "The historical 1.20.1 mod list. These entries belong to T&K2.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/changelog/",
+      "title": "Legacy changelog",
+      "summary": "Original release numbers, fixes and additions, preserved in their historical context.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/a-new-world/",
+      "title": "A New World · legacy update",
+      "summary": "The original 1.20.1 update and its eleven-chapter direction.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/server-installation/",
+      "title": "Legacy server installation",
+      "summary": "The original server instructions. Check the legacy pack and platform before following them.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/progression/",
+      "title": "Legacy progression",
+      "summary": "This page was unfinished in the original wiki. Its original state is preserved here.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/screenshots/",
+      "title": "Legacy screenshots",
+      "summary": "This page was unfinished in the original wiki. Its original state is preserved here.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "2.0/original-home/",
+      "title": "Original wiki cover",
+      "summary": "The original four-image wiki cover, kept as part of the T&K2 archive.",
+      "version": "2.0",
+      "category": "legacy"
+    },
+    {
+      "route": "maintenance/preview/",
+      "title": "Responsive preview",
+      "summary": "Check a page at desktop, tablet or mobile width before sharing changes.",
+      "category": "reference",
+      "menu": false
+    }
+  ]
+}

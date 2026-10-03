@@ -5,6 +5,12 @@ on:
     branches: [main]
     paths:
       - 'TK3/player-guide/**'
+      - 'TK3/handbook-source/**'
+      - 'TK3/docs/**'
+      - 'TK3/tools/build_handbook.cjs'
+      - 'TK3/tools/verify_handbook.py'
+      - 'TK3/wiki-archive/**'
+      - 'TK3/kubejs/assets/kubejs/textures/item/**'
       - '.github/workflows/publish-player-guide.yml'
       - '.github/workflows/publish-tk3-wiki.yml'
   workflow_dispatch:
@@ -27,6 +33,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install handbook dependencies
+        working-directory: TK3/handbook-source
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Build and verify all pages
+        run: |
+          node TK3/tools/build_handbook.cjs
+          python3 TK3/tools/verify_handbook.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

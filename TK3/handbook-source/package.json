@@ -7,6 +7,8 @@
     "esbuild": "0.25.10"
   },
   "scripts": {
-    "test:models": "node tests/viewer-models.cjs"
+    "test:models": "node tests/viewer-models.cjs",
+    "build": "node ../tools/build_handbook.cjs",
+    "test:site": "python3 ../tools/verify_handbook.py"
   }
 }
