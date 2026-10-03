@@ -18,7 +18,7 @@
     if (query.length < 2) {status.textContent = 'Type at least two characters to search.'; return;}
     status.textContent = 'Searching…';
     try {
-      indexPromise ??= fetch(new URL('assets/search-index.json', root)).then(response => {if (!response.ok) throw Error('Search index unavailable'); return response.json();});
+      indexPromise ??= fetch(new URL('assets/search-index.json?v='+document.body.dataset.searchVersion, root)).then(response => {if (!response.ok) throw Error('Search index unavailable'); return response.json();});
       const pages = await indexPromise;
       if (sequence !== searchSequence) return;
       const terms = query.split(/\s+/);
