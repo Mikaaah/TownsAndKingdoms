@@ -13,7 +13,7 @@
   "versions": {
     "3.0": {
       "label": "T&K3",
-      "status": "In development",
+      "status": "Alpha 1.0",
       "platform": "Minecraft 1.21.1 · NeoForge"
     },
     "2.0": {
@@ -64,6 +64,14 @@
     {
       "id": "legacy",
       "label": "T&K2 archive"
+    },
+    {
+      "id": "magic",
+      "label": "Combat & magic"
+    },
+    {
+      "id": "catalogue",
+      "label": "Search catalogues"
     }
   ],
   "pages": [
@@ -138,7 +146,7 @@
       "route": "3.0/magic/",
       "title": "Magic & spells",
       "summary": "Explore Ars Nouveau, Iron’s Spells and Witchery, and see how their systems meet your workshop.",
-      "category": "adventure"
+      "category": "magic"
     },
     {
       "route": "3.0/exploration/",
@@ -155,13 +163,13 @@
     {
       "route": "3.0/skill-tree/",
       "title": "Classes & professions",
-      "summary": "The current six-class design, eighteen subclasses and Mining, Logging, Farming and Fishing branches.",
+      "summary": "Six classes, eighteen subclasses, seven professions, all paths and exact scripted bonuses.",
       "category": "adventure"
     },
     {
       "route": "3.0/modlist/",
       "title": "Mod list",
-      "summary": "Browse the selected T&K3 foundation by category. Candidate mods and integration decisions have their own notes.",
+      "summary": "The complete Alpha 1.0 selection, exclusively from the supplied modlist.html.",
       "category": "reference"
     },
     {
@@ -270,6 +278,71 @@
       "summary": "Check a page at desktop, tablet or mobile width before sharing changes.",
       "category": "reference",
       "menu": false
+    },
+    {
+      "route": "3.0/epic-fight/",
+      "title": "Epic Fight combat",
+      "summary": "Weapon families, fighting approaches, stamina, skills and the selected combat addons.",
+      "category": "magic",
+      "source": "guides/epic-fight.md"
+    },
+    {
+      "route": "3.0/irons-spells/",
+      "title": "Iron’s Spells & addons",
+      "summary": "Spellbooks, schools, scrolls, casting and the installed integration projects.",
+      "category": "magic",
+      "source": "guides/irons-spells.md"
+    },
+    {
+      "route": "3.0/ars-nouveau/",
+      "title": "Ars Nouveau spellcraft",
+      "summary": "Build glyph chains, generate Source and automate with helpers and selected addons.",
+      "category": "magic",
+      "source": "guides/ars-nouveau.md"
+    },
+    {
+      "route": "3.0/witchery/",
+      "title": "Witchery",
+      "summary": "Begin Just Another Witchery Remake: ovens, altar, brewing, rituals and advanced paths.",
+      "category": "magic",
+      "source": "guides/witchery.md"
+    },
+    {
+      "route": "3.0/artifacts-relics/",
+      "title": "Artifacts & Relics",
+      "summary": "Understand exploration accessories, relic progression and Reliquified integrations.",
+      "category": "magic",
+      "source": "guides/artifacts-relics.md"
+    },
+    {
+      "route": "3.0/skill-nodes/",
+      "title": "Skill node catalogue",
+      "summary": "Search every scripted node, stat bonus and prerequisite.",
+      "category": "catalogue"
+    },
+    {
+      "route": "3.0/spell-catalogue/",
+      "title": "Spell catalogue",
+      "summary": "Search the referenced base and addon spell definitions by school, mod and cast.",
+      "category": "catalogue"
+    },
+    {
+      "route": "3.0/glyph-catalogue/",
+      "title": "Ars glyph catalogue",
+      "summary": "Methods, effects and augments from the core source snapshot.",
+      "category": "catalogue"
+    },
+    {
+      "route": "3.0/accessory-catalogue/",
+      "title": "Accessory catalogue",
+      "summary": "Reference item names and registry IDs for Artifacts and Relics.",
+      "category": "catalogue"
+    },
+    {
+      "route": "3.0/witchery-topics/",
+      "title": "Witchery topic index",
+      "summary": "Find topics in the author’s Modonomicon book reference.",
+      "category": "catalogue"
     }
   ]
 }

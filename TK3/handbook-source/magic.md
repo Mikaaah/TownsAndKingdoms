@@ -2,6 +2,12 @@
 
 **GROW SOURCE. SHAPE COMPONENTS. EQUIP YOUR CHARACTER.**
 
+## Find your magic guide
+
+[Iron’s Spells & addons](../irons-spells/) · [Search spells](../spell-catalogue/) · [Ars Nouveau spellcraft](../ars-nouveau/) · [Core glyphs](../glyph-catalogue/) · [Witchery](../witchery/) · [Witchery topics](../witchery-topics/) · [Artifacts & Relics](../artifacts-relics/)
+
+The Alpha 1.0 project selection is taken from the supplied [modlist.html inventory](../modlist/). The detailed guides distinguish pack facts from upstream release references.
+
 ## Ars Nouveau · living automation
 
 Native first-Source generation is available before the custom workshop. In **chapter 4**, a Precision Machine bootstraps the Enchanting Apparatus. Assemble an **Arcane Mechanism**, make Wizardry’s Arcane Casing, and deploy the mechanism to create an **Arcane Machine**. This is a parallel branch alongside first FE and ME.

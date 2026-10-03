@@ -102,3 +102,13 @@ De controle telt alle pagina’s, controleert lokale bestanden en sectielinks, d
 Sla wijzigingen op in `main`. De bestaande workflow **Publish T&K3 player guide** installeert de build-afhankelijkheden, bouwt alle pagina’s, voert de controle uit en publiceert naar GitHub Pages. Bekijk de status onder Actions. Er is geen nieuw hostingplatform of database nodig.
 
 Voor de 3D-viewer hoef je niets opnieuw te bundelen bij tekst- of stijlwijzigingen. De bestaande gebundelde viewer en bronvermeldingen blijven behouden. Verander alleen de viewerbronnen als je ook de modeltests en asset-buildprocedure uitvoert.
+
+
+## Alpha-wiki en brongegevens
+
+- `data/alpha-mods.json` bevat alleen de projecten uit de aangeleverde `modlist.html`, inclusief de bronhash. Werk deze lijst bij bij een nieuwe alpha-export; jarversies en instellingen staan niet in dit bestand.
+- `guides/*.md` bevat de nieuwe spelersgidsen. De navigatie en `source` staan centraal in `site.config.json`. De catalogi worden door `wiki-guides.cjs` uit `data/*.json` opgebouwd.
+- Voor een gewijzigde skilltree: `node TK3/tools/extract_skilltree_guide.cjs /pad/naar/TK3_SkillTree.js`. Dit vernieuwt `data/skilltree.json`; bouw daarna de wiki. De extractor schrijft geen Minecraft-runtimebestanden.
+- Spell-, glyph-, item- en boekreferenties bevatten de gebruikte bronversie of commit. Vervang ze alleen na controle van de makerbron. Geef een reference release nooit automatisch het label geïnstalleerde packversie.
+- Controleer na een wijziging de nieuwe inhoud met `node TK3/tools/verify_wiki_guides.cjs`, bouw met `node TK3/tools/build_handbook.cjs` en draai de bestaande websitecontrole.
+- Zoekvelden combineren alle ingevoerde woorden; dropdowns filteren op exacte kolomwaarden. Tabellen blijven zonder JavaScript zichtbaar en kunnen met toetsenbord worden gescrold.

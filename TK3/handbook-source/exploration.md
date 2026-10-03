@@ -8,7 +8,7 @@ The selected T&K3 world combines large landscapes, distinctive ecosystems, dunge
 
 **FreeTerraForged** is the selected Overworld terrain foundation. **Biomes O' Plenty** and **Oh The Biomes We've Gone** provide the large biome libraries, with **Upgrade Aquatic**, **Atmospheric**, **Autumnity**, **Environmental** and **[Let's Do] BloomingNature** adding ecosystem variety.
 
-**Alex's Caves** provides the cave exploration layer. **Alex's Mobs** adds the selected wildlife and creature layer.
+**Alex's Caves (Unofficial Port)** provides the cave exploration layer. **Alex's Mobs** adds the selected wildlife and creature layer.
 
 ## Dungeons & structures
 
@@ -21,6 +21,8 @@ Major structures are intended to feel like discoveries. Prepare supplies, reserv
 **Epic Fight** is the combat framework. **Weapons of Miracles** and **Simply Swords** are the selected weapon layers, while **Apotheosis** supplies the affix, gem, socket and salvage framework with T&K3-specific balance.
 
 Check your **Controls** menu for the actual combat bindings. Choose equipment that fits your class and practise its combat behaviour before taking it into a major encounter.
+
+[Epic Fight combat guide](../epic-fight/) · [Artifacts & Relics](../artifacts-relics/)
 
 **[CHOOSE YOUR CHARACTER PATH →](../skill-tree/)** · [Explore combat magic](../magic/)
 
@@ -38,7 +40,7 @@ The selected boss and creature foundation includes **Cataclysm**, **Ice and Fire
 | **Nether** | Amplified Nether, BetterNether: New Dawn and YUNG's Better Nether Fortresses |
 | **End** | BetterEnd: New Dawn, with End Remastered in the access progression |
 
-The Nether and End selections are still being assembled for T&K3. **Nullscape** remains a terrain candidate rather than a confirmed addition. Follow the current quests for access requirements instead of relying on the old T&K2 guide.
+**Nullscape is included in the supplied Alpha 1.0 mod list.** Inclusion alone does not verify how its terrain generation combines with the other End projects. Follow the current quests and installed world configuration for access and world-generation behaviour.
 
 ## Travel & shared adventures
 

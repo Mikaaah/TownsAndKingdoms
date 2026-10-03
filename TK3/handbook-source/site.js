@@ -27,7 +27,7 @@
       for (const page of found.slice(0, 16)) {
         const link = document.createElement('a'), detail = document.createElement('small');
         link.href = new URL(page.route, root); link.textContent = page.title;
-        detail.textContent = `${page.version === '2.0' ? 'T&K2 · legacy' : 'T&K3 · in development'} · ${page.description}`;
+        detail.textContent = `${page.version === '2.0' ? 'T&K2 · legacy' : 'T&K3 · Alpha 1.0'} · ${page.description}`;
         link.append(detail); output.append(link);
       }
       status.textContent = found.length ? `${found.length} results${found.length > 16 ? ' · showing the first 16' : ''}` : 'No results. Try another item, system or guide name.';
@@ -72,7 +72,24 @@
   // Tables are readable without JS; scrolling containers become keyboard reachable.
   document.querySelectorAll('main table').forEach(table => {if (!table.parentElement.classList.contains('table-wrap')) {const wrap=document.createElement('div'); wrap.className='table-wrap'; table.before(wrap); wrap.append(table);}});
   document.querySelectorAll('.table-wrap').forEach(wrap => {wrap.tabIndex=0; wrap.setAttribute('role','region'); wrap.setAttribute('aria-label','Scrollable data table');});
-  if (/\/(modlist|tier-map|selection-notes)\/$/.test(location.pathname)) {
+  document.querySelectorAll('.wiki-catalogue').forEach(catalogue => {
+    const search=catalogue.querySelector('input[type="search"]');
+    const selects=[...catalogue.querySelectorAll('select[data-column]')];
+    const rows=[...catalogue.querySelectorAll('tbody tr')].map(row=>({row,text:row.textContent.toLowerCase(),cells:[...row.cells].map(cell=>cell.textContent)}));
+    function filter() {
+      const terms=search.value.trim().toLowerCase().split(/\s+/).filter(Boolean); let count=0;
+      for(const entry of rows) {
+        entry.row.hidden=!terms.every(term=>entry.text.includes(term))||!selects.every(select=>!select.value||entry.cells[Number(select.dataset.column)]===select.value);
+        if(!entry.row.hidden)count++;
+      }
+      catalogue.querySelector('.wiki-count').textContent=`${count} of ${rows.length} entries`;
+      catalogue.querySelector('[data-empty]').hidden=count>0;
+    }
+    search.addEventListener('input',filter);selects.forEach(select=>select.addEventListener('change',filter));
+    catalogue.querySelector('[data-reset]').addEventListener('click',()=>{search.value='';selects.forEach(select=>select.value='');filter();search.focus();});
+    filter();
+  });
+  if (/\/(modlist|tier-map|selection-notes)\/$/.test(location.pathname) && !document.querySelector('.wiki-catalogue')) {
     const tables = [...document.querySelectorAll('main table')];
     if (tables.length) {
       const form=document.createElement('div'), label=document.createElement('label'), filter=document.createElement('input'), result=document.createElement('p');
