@@ -41,7 +41,7 @@
   sidebar.querySelector('.menu-close').addEventListener('click', () => closeMenu()); scrim.addEventListener('click', () => closeMenu());
   sidebar.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu(false)));
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeMenu();
+    if (event.key === 'Escape') {if(dialog.open) dialog.close(); closeMenu();}
     if (event.key === '/' && !dialog.open && !/INPUT|SELECT|TEXTAREA/.test(event.target.tagName) && !event.target.isContentEditable) {event.preventDefault(); openSearch();}
     if (event.key === 'Tab' && document.body.classList.contains('nav-open')) {
       const focusable = [...sidebar.querySelectorAll('a,button,summary')].filter(element => element.getClientRects().length);

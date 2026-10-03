@@ -44,6 +44,7 @@ jobs:
         run: |
           node TK3/tools/build_handbook.cjs
           python3 TK3/tools/verify_handbook.py
+          npm run --prefix TK3/handbook-source test:models
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
