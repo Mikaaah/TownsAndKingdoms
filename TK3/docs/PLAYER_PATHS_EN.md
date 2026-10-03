@@ -1,212 +1,220 @@
-# Recipe paths
+# T&K3 · RECIPE PATHS
 
-Follow these routes to build each workshop. Use the recipe catalogue for exact ingredients and patterns. Native means an existing recipe or mechanic from Minecraft or one of the mods.
+Follow these paths in chapter order. **The mechanism is sequenced; the frame receives the mechanism in a Deployer.** Every listed recipe has its exact ingredients in the [Recipe Workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/).
 
-## Tier 1 · Algal & Kinetic
+## Chapter 1 · Andesite · Roots of Industry
 
-| Product | Inputs | Method | Yield |
-|---|---|---|---|
-| Algal Blend, manual | 1 kelp + 1 clay ball | Crafting | 2 |
-| Algal Blend, automated | 1 kelp + 1 clay ball | Mixer | 4 |
-| Andesite Alloy, manual | 1 andesite + 1 Algal Blend | Crafting | 2 |
-| Andesite Alloy, automated | 1 andesite + 1 Algal Blend | Mixer | 4 |
-| Kinetic Mechanism, automated | 1 wooden slab → deploy 1 Andesite Alloy → deploy a second alloy → deploy with Iron Hammer | Sequenced assembly | 1 |
-| Kinetic Machine, manual | 7 Andesite Alloy + 1 wooden slab + 1 Andesite Casing | Shaped crafting | 1 |
-| Kinetic Machine, automated | 1 Andesite Casing + 1 Kinetic Mechanism | Deployer | 1 |
-| Workshop machines | 1 Kinetic Machine | Stonecutting | Choose one recipe output |
+**Mechanical power, wood, crops and geological processing.**
 
-**First workshop:** native crafting table, furnace and stonecutter → manual blend and alloy → stripped log + alloy casing → raw-material frame → water wheel, shafts and cogs → press and basin → mixer and deployer → cheaper automated mechanisms and frames.
+**Algal Blend** — Kelp + clay makes two blend by hand, four in a mixer. Start a kelp farm beside your workshop.
 
-A vanilla stonecutter needs iron and stone, without a custom machine prerequisite. Mine the first iron or wash gravel. Press iron into sheets; craft the Wrench, Whisk and windmill parts using the explicit Create support recipes. The manual casing uses a stripped log and one Andesite Alloy; the automated casing uses the same materials in a Deployer. One frame can become three water wheels, two basins or one press, mixer or deployer. These are separate choices: stonecutting consumes the frame.
+**Andesite Alloy** — Andesite + blend makes two alloy by hand, four in a mixer. Original nugget alloy recipes are excluded.
 
-Saw processing follows log → stripped log → six planks. If the mod has no matching stripped variant, the saw produces planks directly. Bamboo blocks yield three planks. Native handcrafting remains the starting route.
+**Build the first frame** — Craft 7 alloy + slab + Andesite Casing in AAA / ACA / ASA. Cut separate frames into power, press, mixer and Deployer. This route needs no mechanism.
 
-## Tier 2 · Sealed & Hydraulic
+**Turn the wheel** — Stonecut one frame into three wheels. Connect shafts and gears; supply water.
 
-**Sealant:** 1 kelp + 1 wheat + 250 mB water → mixer → 2 slimeballs. Fill the first basin using a bucket; the recipe does not require a pump. Slime obtained from mobs is also an approved material source.
+**Assemble the workshop** — Stonecut a manual frame into the Deployer. Add mixer, press and basin. Keep two deployers for alloys and a third holding the ordinary hammer.
 
-**Sealed Mechanism:** Kinetic Mechanism → deploy copper sheet → deploy slimeball → finish with a deployer holding Farmer’s Delight Iron Knife. Three operations, one loop, guaranteed output.
+**Kinetic Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**Hydraulic Machine:** Copper Casing → deploy one Sealed Mechanism → Hydraulic Machine. Stonecut one frame into sixteen fluid pipes, three tanks, or a pump, spout, drain, hose pulley or another listed fluid device.
+**Kinetic Machine** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-## Tier 3 · Brass & Precision
+**Ordered mechanism path:** Any matching Wooden Slabs → deploy Andesite Alloy → deploy Andesite Alloy → finish with **Iron Hammer**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Frotation_mechanism_automated)
 
-**Brass:** an Empty Blaze Burner holding a captured blaze provides heat. Copper ingot + mined zinc ingot → heated mixer → 2 brass ingots. Press brass into sheets. Craft or mix Rose Quartz, polish it with Sand Paper (by hand or with a Deployer), then use a Press-produced Iron Sheet to make Electron Tubes.
+**Machine path:** Andesite Casing → deploy Kinetic Mechanism → **Kinetic Machine** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
-**Precision Mechanism:** Sealed Mechanism → deploy brass sheet → deploy Electron Tube → finish with a deployer holding Create Sand Paper. Three operations, one loop.
 
-**Precision Machine:** Brass Casing → deploy one Precision Mechanism → Precision Machine. Stonecut the frame into mechanical crafters, arms, controllers and smart logistics devices.
+## Chapter 2 · Copper · Fields & Fluids
 
-**Crushing Wheels:** 16 Andesite Alloy + 4 planks + 1 Precision Machine → mechanical crafting → 2 wheels. Build the crafters from a frame first; wheels are not required to make their own crafting machines. Milling starts earlier, while crushing improves geological yields from tier 3.
+**Copper, seals, fluids, irrigation and ocean minerals.**
 
-## Tier 4 · Arcane Industry
+**Cure the rubber** — Compact slime, dried kelp and 250 mB water. Mix one wheat, one kelp and 250 mB water into two slimeballs; supply the seals line.
 
-**Early materials:** native Imbuement Chamber → Source Gems and Ars essences. Source Gem → soul-fire fan haunting → Iron’s Arcane Essence. Native Source Jars and Volcanic/Vitalic Sourcelinks supply the first Source. These sourcelinks become available after chapter 3 and retain native recipes.
+**Ocean metallurgy** — Mix bone meal, kelp and water into calcium powder. Compact prismarine shard, copper sheet and powder into two alloy; rods supply the Conduit Cage.
 
-**Enchanting Apparatus:** Precision Machine + diamond + Source Gem → crafting. This makes the apparatus reachable before Arcane Machines.
+**Sealed Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:iron_knife. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**Arcane Mechanism:** Precision Mechanism → deploy Source Gem → deploy Arcane Essence → deploy Manipulation Essence → deploy gold ingot → finish with a deployer holding Ars Enchanter’s Sword. Five operations, one loop, one guaranteed mechanism.
+**Hydraulic Machine** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-**Arcane Casing:** Brass Casing as reagent; Source Gem, Arcane Essence and gold on pedestals → apparatus, 500 Source → Wizardry Arcane Casing.
+**Route fluids** — Cut a Hydraulic Machine into a pump. Keep separate tanks for water, milk and later XP.
 
-**Arcane Machine:** Wizardry Arcane Casing → deploy one Arcane Mechanism → Arcane Machine. Use it for the selected Source devices, automation charms and Wizardry machines. Native first-Source generation avoids a circular dependency.
+**Water the fields** — Use the frame-based sprinkler recipe, then connect water. The Slicer automates supported Farmer’s Delight cutting recipes using a held knife.
 
-**Runes and sheets:** stone + Arcane Essence → compacting → Blank Rune. Blank Rune as reagent, with the relevant Ars essence and an Arcane Mechanism → apparatus → fire, ice, lightning or nature rune. Iron ingot as reagent, with Source Gem, Arcane Essence and gold → apparatus → Arcane Ingot → pressing → Wizardry Arcane Sheet.
+**Ordered mechanism path:** Kinetic Mechanism → deploy Copper Sheet → deploy Cured Rubber → finish with **Iron Knife**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Ftk3_sealed_mechanism)
 
-**Ink, route A:** ink sac + Arcane Essence + 250 mB water → mixer → 2 Common Ink items.
+**Machine path:** Copper Casing → deploy Sealed Mechanism → **Hydraulic Machine** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
-**Ink, route B:** 250 mB Wizardry Mana + ink sac → alchemist cauldron → 250 mB Common Ink fluid. A glass bottle empties 250 mB into one Common Ink item.
 
-Higher inks, glyphs and combat progression retain their native routes. Complete the Wilden challenge to obtain the permanent industrial catalyst.
+## Chapter 3 · Brass · Into the Nether
 
-## Tier 5 · Steel & FE
+**Nether heat, brass logistics and Hypertubes.**
 
-**Steel bootstrap:** 2 iron ingots + 1 coal → heated mixer → 2 steel ingots.
+**Enter the Nether** — Chapter 2 unlocks Nether entry. Capture a Blaze in a burner before heated brass mixing.
 
-**Steel Casing:** 5 steel ingots + 2 osmium ingots + 1 Precision Machine + 1 Arcane Machine → shaped crafting. Find osmium in the world and use native smelting for the first ingots.
+**Heat the brass** — Heat copper and zinc in the basin. Press brass sheets and finish electron tubes for the precision sequence.
 
-**First power:** casing → Heat Generator and basic cables → FE. No FE is needed to construct the first generator.
+**Build smart logistics** — Precision frames supply brass sorting, mechanical crafting and automatic stocking.
 
-**Infuser:** Steel Casing + Wilden Tribute → deployer → Metallurgic Infuser. The held Tribute is retained. Iron with native redstone infusion produces Infused Alloy, opening the Enrichment Chamber.
+**Link the workshop** — Build the native tube sections; use precision frames for entrances and accelerators. Supply power and test a short route first.
 
-**Refining:** raw iron, copper, gold, osmium, tin or lead → enrichment → 2 dust → native smelting → 2 ingots. Native ingot-to-dust conversion and later ore chemistry remain available.
+**Precision Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**Second steel route:** native infuser processing → steel dust → the explicit Mekanism smelting recipe → steel ingot. Mixer steel and infuser steel are both deliberately approved.
+**Precision Machine** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-Alternator and Electric Motor connect rotation with FE. Native spool and rolling-mill support remains. Sophisticated diamond containers and Stack Upgrade 2 become available here. Container progression is copper → iron → gold → diamond; skip-tier routes are removed. Netherite arrives in chapter VII; higher stack tiers follow VI, VIII and IX. Omega and infinite upgrades stay unavailable.
+**Ordered mechanism path:** Sealed Mechanism → deploy Brass Sheet → deploy Electron Tube → finish with **Sand Paper**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Ftier_3%2Fprecision_mechanism)
 
+**Machine path:** Brass Casing → deploy Precision Mechanism → **Precision Machine** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
 
+## Chapter 4 · Inductive · The Connected Workshop
 
-## Tier 6 · The Connected Kingdom
+**First FE, AE2 networks, processors and parallel arcane automation.**
 
-**Precision production → advanced circuits → charged certus and fluix → Network Mechanism → Network Chassis → powered AE2 network.**
+**Bootstrap steel** — Heated mixing uses two iron ingots and coal for two steel. Five steel, two osmium and one Precision Machine produce Steel Casing; no FE or boss core is required.
 
-| Production | Exact route | Recipe |
-|---|---|---|
-| **Network Mechanism** | Precision Mechanism → Advanced Control Circuit → Fluix Crystal → Diamond Hammer; one sequence loop | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fnetwork_mechanism) |
-| **Network Chassis** | Steel Casing → deploy Network Mechanism | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_6) |
+**First powered processing** — Deploy a Precision Mechanism onto Steel Casing. Add Heat Generator and basic universal cables. Native infusing supplies circuits and alloys.
 
-Build the **Charger and Inscriber first** using their Steel Casing bootstrap recipes. Find certus quartz and the native presses through AE2 exploration. Print the circuits and silicon; combine them with redstone into processors. The first Network Mechanism only needs a Precision Mechanism, an Advanced Control Circuit, Fluix Crystal and the ordinary Diamond Hammer.
+**Charge certus** — Craft from Steel Casing, certus and Crafts & Additions Capacitor. Use FE to charge certus; native water conversion produces fluix crystals.
 
-**First network:** FE → Energy Acceptor → cable / Controller → Drive with 1k cells → Terminal. Add a Pattern Encoding Terminal, Pattern Provider, Molecular Assembler and 1k crafting CPU. Native AE2 channel limits, power, crystal growth and condenser requirements remain active. The network requests the existing production lines; it does not replace them.
+**Print the processors** — Steel Casing + Electric Motor + gold. All four press recipes are available from this chapter; use the normal Inscriber routes.
 
-**Optional branches:** basic Mekanism factories, Spell Loom, Mana Infusion, Apotheosis salvage/reforging/gem tables, colony warehouse logistics and Twilight spellbooks.
+**Inductive Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**Required trial:** defeat the Twilight Lich. Its quest awards a **Verdant Sigil**, also dropped by subsequent player kills. Complete the milestone to unlock VII.
+**Inductive Machine** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-## Tier 7 · Beyond the Horizon
+**Wire a small ME network** — Inductive Machine supplies the network devices. Begin with a terminal, drive, 1k cells and energy acceptor before expanding channels.
 
-**Network production → reinforced alloys → Expedition Mechanism → Expedition Frame → chemistry and controlled airships.**
+**Ordered mechanism path:** Precision Mechanism → deploy Capacitor → deploy Fluix Crystal → finish with **Iron Hammer**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fnetwork_mechanism)
 
-| Production | Exact route | Recipe |
-|---|---|---|
-| **Expedition Mechanism** | Network Mechanism → Manipulation Essence → Alloy Reinforced → Diamond Knife; one sequence loop | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fexpedition_mechanism) |
-| **Expedition Frame** | Arcane Casing → deploy Expedition Mechanism | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_7) |
+**Machine path:** Steel Casing → deploy Inductive Mechanism → **Inductive Machine** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
-Use native Mekanism diamond infusion for **Reinforced Alloy**, then refined obsidian infusion for **Atomic Alloy**. The **Electrolytic Separator**, Rotary Condensentrator, Chemical Infuser and Pressurised Reaction Chamber build the chemical branch.
 
-**HDPE:** renewable crops → Bio Fuel → substrate / ethylene PRC reaction → liquid ethylene through the Rotary Condensentrator → oxygen plus liquid ethylene and substrate in the second PRC reaction → HDPE pellets. **3 pellets → Enrichment Chamber → 1 sheet**, matching the inspected recipe. Keep fluids, chemicals and items in their correct pipes and tanks.
+## Chapter 5 · Ender · Beyond the Portal
 
-**First airship:** Expedition Frame → Physics Assembler and controls; add Gyroscopic Propeller Bearing, Smart Propeller and coloured envelopes. Native ship assembly and flight physics remain active. **One wool + one string + one Expedition Mechanism → compaction → 8 envelopes**. Test boarding, rotation, disassembly, claims and inventory returns before expanding. End-stone levitite is a chapter IX upgrade; it is not required for the hot-air envelope path.
+**End access, advanced Mekanism factories and Dragon’s Breath.**
 
-**Cave workshops:** Expedition Frame → native quarry / drain; apparatus construction opens the Conversion Crucible. Native biome research remains active.
+**Prepare the portal** — The four authored eye deployments use Inductive Mechanisms with Source Gem, pearl, Blaze Rod or crying obsidian. Other unique eyes keep native exploration sources. End Remastered still needs twelve different valid eyes.
 
-**Other branches:** wireless AE2, 4k cells, netherite Sophisticated containers, Mana Well, XP forging, Ice and Fire, Alex’s Caves and their spellbooks.
+**Claim the first Dragon Core** — Defeat the Ender Dragon after opening the portal. Claim the permanent Dragon Core from the detected Dragon trial quest; it is retained by final imprinting.
 
-**Required trial:** defeat the Harbinger for the reusable **Storm Core**. Finish VII to unlock containment.
+**Gather chorus** — Grow chorus on End Stone. Save Dragon’s Breath for Dragons Plus and the final workshop.
 
-## Tier 8 · Containment & Control
+**Scale the powered workshop** — Upgrade basic machines into advanced factories with their preserving native recipes. Advanced circuits become a regular supply line.
 
-**Expedition production → HDPE / Atomic Alloy → Containment Mechanism → Containment Frame → fission, turbine and polonium.**
+**Handle Dragon’s Breath** — Collect bottles during the fight. Dragons Plus keeps its actual breath filling, emptying and ending fan processes; use the fluid hatch for transport.
 
-| Production | Exact route | Recipe |
-|---|---|---|
-| **Containment Mechanism** | Expedition Mechanism → Hdpe Sheet → Alloy Atomic → Sand Paper; one sequence loop | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fcontainment_mechanism) |
-| **Containment Frame** | Steel Casing → deploy Containment Mechanism | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_8) |
+**Ender Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.
 
-Stonecut one Containment Frame into a batch of **4 reactor casings**, **4 turbine casings** or **4 reactor glass**. Build the other parts from their individual recipes. The native multiblock shapes, fuel mechanics and heat limits remain active.
+**Ender Machine** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-**Fissile fuel:** uranium → native sulfuric processing → uranium hexafluoride → Isotopic Centrifuge → fissile fuel. Supply the reactor with a complete coolant loop and prepare radioactive waste capacity before activation. The turbine uses its native rotors, blades, coils, pressure dispersers, condensers and vents. Return cooling water and prove the redstone shutdown before increasing burn rate.
+**Defeat Ender Dragon** — Defeat the Ender Dragon and claim the permanent Dragon Core from this quest. Keep the core for final imprinting; it is retained.
 
-**Next material:** nuclear waste → Solar Neutron Activator → polonium chemical → PRC with its native substrate and fluid inputs → Polonium Pellets. Keep those ingredients stocked for chapter IX. The recipes retain their native chemical quantities and energy behaviour.
+**Ordered mechanism path:** Inductive Mechanism → deploy Chorus Fruit → deploy Advanced Control Circuit → finish with **Diamond Knife**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fkubejs_tk3_ender_mechanism)
 
-**Dragonforge and cave furnace:** Containment Frames construct dragonforge cores, elemental inputs and brick batches, plus cave nuclear-furnace components. Native dragon, blood, multiblock, fuel and radiation rules remain active. Dragonsteel equipment is tier VIII.
+**Machine path:** Steel Casing → deploy Ender Mechanism → **Ender Machine** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
-**Storage:** 16k AE2 cells, Matter Condenser, Stack Upgrade 4 and advanced induction storage. The Digital Miner adds deliberate mining capacity.
 
-**Required trial:** defeat Ignis for the reusable **Ember Core**. The VIII milestone unlocks IX and **End entry**. End Remastered still requires its native unique-eye portal puzzle.
+## Chapter 6 · Reinforced · Chemical Engineering
 
-## Tier 9 · Singularity Engineering
+**HDPE, gases, chemical equipment and ME chemical storage.**
 
-**Polonium + a condenser singularity → Singularity Mechanism → Singularity Frame → fusion, quantum logistics and SPS antimatter.**
+**Grow the chemical feedstock** — Farm crops → crusher Bio Fuel → PRC with water and hydrogen → substrate/ethylene. Separate water into hydrogen and oxygen; liquefy ethylene and run the second PRC recipe for HDPE. Three pellets enrich into one sheet.
 
-| Production | Exact route | Recipe |
-|---|---|---|
-| **Singularity Mechanism** | Containment Mechanism → Pellet Polonium → Singularity → Enchanters Sword; one sequence loop | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsingularity_mechanism) |
-| **Singularity Frame** | Fluix Block → deploy Singularity Mechanism | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_9) |
+**Forge Shadow Steel** — Heat two steel, obsidian and chorus into two Shadow Steel. Press sheets; combine them with HDPE in the Reinforced Mechanism sequence.
 
-Complete the End Remastered puzzle and enter the End after VIII. **Defeat the dragon**, collect Dragon Breath and explore BetterEnd. Its environments and resources remain native.
+**Reinforced Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds mekanismtools:steel_paxel. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**Singularity:** use a powered native Matter Condenser with the required storage component and material conversion settings. A free crafting recipe is not added. Feed renewable overflow material rather than scarce production components.
+**Chemical Machine** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-**Fusion:** native heavy-water/deuterium and tritium production → fuel reserves → laser ignition → Fusion Reactor. Construct and configure the native laser, amplifier, ports and cooling. The Singularity Frame also constructs SPS parts, quantum links, teleportation and QIO alternatives.
+**Control the gas network** — Chemical Machines build advanced chemical equipment. Evaporation produces brine; separating brine gives chlorine. Infuse hydrogen + chlorine into hydrogen chloride.
 
-**Antimatter:** native polonium chemical + large FE supply → **Supercritical Phase Shifter** → antimatter chemical → Chemical Crystallizer → Antimatter Pellet. The inspected crystallizing recipe uses **1,000 mB antimatter per pellet**. There is no inexpensive crafting or mixing shortcut.
+**Store chemicals in ME** — Craft the chemical housing with Chemical Machines. Combine with an AE2 component; native preserving cell upgrades keep their stored chemicals.
 
-**Optional:** AE2 quantum links / 64k cells, levitite lifting-fluid production and Stack Upgrade 5. Levitite mixing uses 4 End Stone Powder, 2 Zinc Nuggets and 500 mB water, heated, yielding 500 mB fluid. Fill a container using the native fluid handling route.
+**Defeat Lich** — A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.
 
-**Required trial:** defeat the Ender Guardian for the reusable **Void Core**. Finish IX to unlock the final project.
+**Ordered mechanism path:** Ender Mechanism → deploy Shadow Steel Sheet → deploy Hdpe Sheet → finish with **Steel Paxel**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fkubejs_tk3_reinforced_mechanism)
 
-## Tier 10 · The Sovereign Project
+**Machine path:** Steel Casing → deploy Reinforced Mechanism → **Chemical Machine** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
-**Antimatter + Dragon Breath → Sovereign Mechanism → Sovereign Core → four retained boss imprints → Sovereign Keystone.**
 
-| Production | Exact route | Recipe |
-|---|---|---|
-| **Sovereign Mechanism** | Singularity Mechanism → Pellet Antimatter → Dragon Breath → Diamond Hammer; one sequence loop | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsovereign_mechanism) |
-| **Sovereign Core** | Sps Casing → deploy Sovereign Mechanism | [**OPEN RECIPE →**](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fframe_10) |
+## Chapter 7 · Integrated · Living Expeditions
 
-A Sovereign Mechanism consumes **one** Singularity Mechanism, **one** Antimatter Pellet and **one** Dragon Breath, then finishes with the Diamond Hammer. Deploy it onto an SPS Casing to produce a Sovereign Core.
+**Radiance, 16k storage, airships and expeditions.**
 
-**Final sequence:** Sovereign Core → Verdant Sigil → Storm Core → Ember Core → Void Core → Enchanter’s Sword → **Sovereign Keystone**. Each boss core **stays in its Deployer**. The final sword loses durability when ordinary; an earlier unbreakable reward also fits. One loop gives one guaranteed Keystone.
+**Refine the radiance** — Inject one Shadow Steel with 100 units hydrogen chloride per finished operation, then press the Refined Radiance. This is gas processing in the Chemical Injection Chamber.
 
-Demonstrate automated Create mechanisms, stable steel/HDPE/polonium/antimatter lines, and a supplied MineColonies warehouse. These setup tasks are **manual confirmations**; item ownership and boss defeats are detected.
+**Expedition Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**Optional equipment:** MekaSuit, Meka-Tool and native modules now require Sovereign construction materials. **256k AE2** storage is available if useful. Creative, omega and infinite shortcuts remain disabled.
+**Expedition Frame** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
 
-Complete the final milestone to receive the named **unbreakable Diamond Hammer** and continue building with the full campaign production system.
+**Expand remote automation** — Use 16k storage and wireless access to service the expedition workshop. Channels, energy and native wireless range still apply.
 
-## Finishing tools & rewards
+**Defeat The Harbinger** — A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.
 
-Ordinary tools are craftable **before** their chapter milestone. They lose durability in the finishing Deployer; an unbreakable reward fits the same ingredient and removes maintenance. Each player can claim each milestone once. The reward is useful production capacity, not an unlock token.
+**Ordered mechanism path:** Reinforced Mechanism → deploy Manipulation Essence → deploy Radiance Sheet → finish with **Diamond Knife**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fexpedition_mechanism)
 
-| Chapter | Finishing tool / reward |
-|---|---|
-| I | Iron Hammer / Workshop Hammer |
-| II | Iron Knife / Sealwright Knife |
-| III | Sand Paper / Precision Abrasive |
-| IV | Enchanter’s Sword / Arcane Engraver |
-| V | Additional Workshop Hammer for a parallel kinetic line |
-| VI | Diamond Hammer / Network Chassis Tool |
-| VII | Diamond Knife / Expedition Frame Tool |
-| VIII | Sand Paper / Containment Frame Tool |
-| IX | Enchanter’s Sword / Singularity Frame Tool |
-| X | Diamond Hammer / Sovereign Core Tool |
+**Machine path:** Arcane Casing → deploy Expedition Mechanism → **Expedition Frame** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
 
-All mechanisms require **sequenced assembly**. Only the first Kinetic Machine has a raw-material manual startup recipe. Later frames use a casing with one mechanism deployed onto it; construction then uses stonecutting, apparatus recipes or the explicitly listed frame-based crafting recipe. Mekanism factory and Sophisticated container upgrades keep their native data-preserving serializers.
 
-## Boss cores & the portal
+## Chapter 8 · Containment · Nuclear Control
 
-Kill quests grant the first core to each player. Further player kills drop additional copies, letting teams add parallel production capacity. Imprinting an eye and completing the final Keystone sequence **retain** the physical cores. Required chapter trials unlock the next chapter through their milestone; team members receive their completed stages when logging in.
+**Overcharge, fission, waste handling, turbines and spatial storage.**
 
-| Trial | Core | Approved retained imprint |
-|---|---|---|
-| Twilight Lich · VI | Verdant Sigil | Network Mechanism → Magical Eye |
-| Harbinger · VII | Storm Core | Expedition Mechanism → Cryptic Eye |
-| Ignis · VIII | Ember Core | Containment Mechanism → Nether Eye |
-| Ender Guardian · IX | Void Core | Singularity Mechanism → Corrupted Eye |
+**Infuse Overcharge Alloy** — Infuse Refined Radiance with 80 diamond infusion units per operation. Press sheets for the Containment Mechanism; no radioactive input is needed to build the first reactor.
 
-The other eyes keep their native adventure sources. End Remastered’s unique-eye requirement remains; End entry unlocks after VIII. Core drops, structure discoveries and native resource mechanics are deliberate sources, while controlled recipe outputs accept only their explicit approved recipe IDs.
+**Containment Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable.
 
-**[FULL MOD / TIER MAP →](https://mikaaah.github.io/TownsAndKingdoms/3.0/tier-map/)** · **[ALL RECIPES →](https://mikaaah.github.io/TownsAndKingdoms/workshop/)**
+**Containment Frame** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
+
+**Build fission safely** — Build reactor, cooling and turbine before adding fuel. Native uranium → yellow cake → uranium oxide → uranium hexafluoride → fissile fuel remains the fuel chain.
+
+**Separate radioactive waste** — Route waste away from normal gas storage. Use native barrels and solar neutron activation; never vent waste. Route polonium/plutonium with their native restrictions.
+
+**Defeat Ignis** — A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.
+
+**Ordered mechanism path:** Expedition Mechanism → deploy Hdpe Sheet → deploy Overcharge Sheet → finish with **Sand Paper**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fcontainment_mechanism)
+
+**Machine path:** Steel Casing → deploy Containment Mechanism → **Containment Frame** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
+
+
+## Chapter 9 · Singularity · Quantum Industry
+
+**Stargaze, retained Void imprint, SPS, fusion and quantum links.**
+
+**Build the SPS line** — Native waste processing and SPS produce antimatter. The native pellet recipe still costs 1000 units; there is no crafting shortcut.
+
+**Nucleosynthesize a Stargaze** — One AE2 Singularity + 10 antimatter units → one Stargaze Singularity in the Antiprotonic Nucleosynthesizer. Deploy a retained Void Core onto it, then use the Void-attuned Singularity with polonium for the next mechanism.
+
+**Singularity Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds ars_nouveau:enchanters_sword. Ordinary tools wear; the chapter reward version is unbreakable.
+
+**Singularity Frame** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
+
+**Power quantum production** — Fusion requires native deuterium/tritium and ignition. SPS and quantum networks consume real energy; size the power line for sustained production.
+
+**Link distant factories** — 64k storage and quantum bridges support distant production while preserving AE2’s native channels and link rules.
+
+**Defeat Ender Guardian** — A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.
+
+**Ordered mechanism path:** Containment Mechanism → deploy Pellet Polonium → deploy Void-attuned Singularity → finish with **Enchanters Sword**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsingularity_mechanism)
+
+**Machine path:** Fluix Block → deploy Singularity Mechanism → **Singularity Frame** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.
+
+
+## Chapter 10 · Sovereign · A Renewable Kingdom
+
+**Sovereign Keystone, 256k storage and advanced powered equipment.**
+
+**Imprint the Sovereign Keystone** — Deploy Verdant Sigil, Storm Core, Ember Core, Void Core and Dragon Core onto a Sovereign Core in one sequence. Every core is retained; finish using the ordinary Enchanter’s Sword.
+
+**Sovereign Mechanism** — Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:diamond_hammer. Ordinary tools wear; the chapter reward version is unbreakable.
+
+**Sovereign Core** — Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
+
+**Equip the industrial kingdom** — Sovereign Cores build the advanced equipment layer. Modules, energy and native upgrade components are still required.
+
+**Finish the large ME network** — Use native preserving upgrades to reach 256k. Storage capacity supports production; creative cells and infinity upgrades remain unavailable.
+
+**Ordered mechanism path:** Singularity Mechanism → deploy Pellet Antimatter → deploy Dragon Breath → finish with **Diamond Hammer**. **One loop, one guaranteed result.** [Open recipe →](https://mikaaah.github.io/TownsAndKingdoms/workshop/?recipe=kubejs%3Atk3%2Fcampaign%2Fsovereign_mechanism)
+
+**Machine path:** Sps Casing → deploy Sovereign Mechanism → **Sovereign Core** → the listed stonecutting, crafting, apparatus or preserving upgrade recipe.

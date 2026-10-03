@@ -28,7 +28,7 @@ Check your **Controls** menu for the actual combat bindings. Choose equipment th
 
 The selected boss and creature foundation includes **Cataclysm**, **Ice and Fire: Community Edition**, **Bosses' Rise** and **Mowzie's Mobs**.
 
-In the authored workshop route, the **Wilden trial** connects to Arcane Industry. For later boss-linked production, T&K3's direction is reusable catalysts: defeating a boss opens the route, and the physical catalyst provides production capacity.
+**Chapter 3 opens the Nether; chapter 5 opens the End.** End Remastered keeps its twelve unique-eye puzzle. Defeat the Dragon in chapter 5, Twilight Lich in chapter 6, Harbinger in chapter 7, Ignis in chapter 8 and Ender Guardian in chapter 9 for permanent cores. The core remains in retained deployment steps.
 
 ## Beyond the Overworld
 

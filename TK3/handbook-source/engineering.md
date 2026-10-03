@@ -1,56 +1,25 @@
 # ENGINEERING & STORAGE
 
-**FROM A SMALL WORKSHOP TO A CONNECTED FACTORY.**
-
-T&K3 uses **Create** as its mechanical backbone. Later technology adds new processing and logistics options while keeping the earlier production chains useful.
+**ANDESITE → COPPER → BRASS → FE & ME → ENDER → CHEMICAL → SOVEREIGN.**
 
 ## Create · build the backbone
 
-Belts, Deployers, presses, mixers and processing machines turn raw materials into a repeatable production line. Mechanisms use **sequenced assembly**: follow the ordered operations, then use the completed mechanism to assemble the next machine frame.
+Start with a **manual Kinetic Machine**, then sequence mechanisms and deploy them onto casings. Earlier factories keep supplying the later layers. **Slice & Dice** connects Farmer’s Delight cutting and irrigation; **Aquatic Ambitions** connects copper fluid handling with ocean minerals and conduit processing. **Hypertubes** joins the brass logistics workshop.
 
-The starter **Kinetic Machine** has a manual crafting route: **7 Andesite Alloy + 1 Andesite Casing + 1 wooden slab**. Check the recipe catalogue for the exact pattern and current ingredient routes.
+## Chapter 4 · first FE and ME
 
-**[FOLLOW CHAPTERS I–X →](../../progression/#chapters)** · [Open the visual workshop](../../workshop/)
+Bootstrap steel with heated mixing. Steel Casing and a Precision Mechanism make the first Metallurgic Infuser. Build a Heat Generator, cables, Charger and Inscriber before making the **Inductive Mechanism**. **Crafts & Additions** bridges rotational power and FE. AE2 starts with **1k storage, terminals, buses and processors**; the larger cells arrive later.
 
-**[OPEN CREATE PARTS & MACHINES →](../create/)**
+## Chapters 5–7 · factories and chemistry
 
-## Production before expansion
+**Chapter 5** opens the End and advanced factories. **Chapter 6** introduces HDPE, hydrogen, chlorine, hydrogen chloride and **Applied Mekanistics chemical cells**. The first gas machines use an Ender Machine, so HDPE is reachable before the Chemical Machine. **Chapter 7** treats Shadow Steel into Radiance and adds expedition airships, wireless access and 16k storage.
 
-Build dependable supplies of wood, crops and processed stone before adding more machines. Put an output buffer after each important process and keep your finishing tools available at their stations.
+## Chapters 8–10 · containment and quantum production
 
-| Factory goal | Read the guide |
-|---|---|
-| Collect early farm outputs | [Early item collection](../../automation/) |
-| Set up wood and crop production | [Farm layouts and practical build checks](../../automation/) |
-| Produce stone and its processing yields | [Resource generators](../../automation/) |
-| Understand exact ingredients and order | [Recipe workshop](../../workshop/) |
+Containment enables fission, turbines and waste handling. Build the first SPS from Containment Frames in chapter 9, then use native antimatter processing to make Stargaze Singularities. Fusion, quantum links and 64k storage support the line. Chapter 10 finishes with 256k storage, powered equipment and the Sovereign Keystone.
 
-## Mekanism · the industrial layer
+## Storage that stays useful
 
-**Mekanism** and **Mekanism Generators** are selected for later technology and power generation. Chapter V introduces the **Industrial Bridge**: steel, FE and Mekanism refining. Chapter VI adds basic factories; VII adds chemistry and HDPE; VIII adds fission/turbines; IX adds fusion and SPS antimatter; X adds powered equipment.
+**Sophisticated Storage & Backpacks** provide early collection, filtering, processing and upgrades. Their native preserving recipes keep contents and components. The **Create integration** lets supported storage upgrades work on contraptions. ME chemical cell upgrades also preserve their stored chemicals.
 
-**Create Crafts & Additions** is the selected bridge between rotational machinery and FE technology. Follow the pack's progression recipes when connecting these systems.
-
-## AE2 · storage & autocrafting
-
-**Applied Energistics 2** is the selected late-game storage and autocrafting network. Plan your factory around clearly separated inputs, outputs and intermediate products so your network can request materials from the production lines you already built.
-
-A storage network is most useful when the underlying production is reliable: keep renewable ingredients stocked and check that each process can finish without manual intervention.
-
-## Connected engineering
-
-| Selected mod or bridge | Its place in T&K3 |
-|---|---|
-| **Create Aeronautics** | Engineering and travel beyond a stationary workshop |
-| **Create: Enchantment Industry** | Create-based XP and enchanting processing |
-| **Ars Creo** / **Create: Ars Nouveau Compat** | Connections between Create and Ars Nouveau |
-| **Create: Wizardry** | Connections between Create and Iron's Spells |
-| **Create: MineColonies Link** | Colony supply requests connected to Create logistics |
-
-**[BACK TO FEATURES →](../features/)** · [Explore magic](../magic/) · [Build a kingdom](../kingdoms/)
-
-## Workshop access
-
-**VI:** 1k AE2, processing patterns, factories. **VII:** wireless / 4k cells, HDPE and airships. **VIII:** 16k cells, containment and fission. **IX:** 64k cells, End access, quantum links, fusion and antimatter. **X:** 256k cells, MekaSuit modules and the Sovereign Keystone.
-
-**[MODS & THEIR TIERS →](../tier-map/)** · [Exact paths](../../progression/#paths)
+**[TEN CHAPTER PATHS →](../../progression/#paths)** · [Exact recipes](../../recipes/) · [Automation guide](../../automation/) · [Mods & tiers](../tier-map/)

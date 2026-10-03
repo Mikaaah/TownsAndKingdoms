@@ -14,7 +14,7 @@ Start with **Create**: moving parts, ordered assembly and production lines you c
 
 ## Magic & spells
 
-**Ars Nouveau** gives arcane crafting and automation a place in your workshop. **Iron's Spells 'n Spellbooks** brings combat spellcasting, and **Just Another Witchery Remake** adds another magical tradition to discover.
+**Ars Nouveau** gives arcane crafting and automation a place in your workshop. **Iron's Spells 'n Spellbooks** brings combat spellcasting, and **Iron’s Gems ’n Jewelry** adds another magical tradition to discover.
 
 **[OPEN MAGIC & SPELLS →](../magic/)**
 

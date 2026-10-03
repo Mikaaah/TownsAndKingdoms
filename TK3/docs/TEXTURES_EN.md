@@ -1,15 +1,5 @@
-# Textures
+# T&K3 · ITEMS & ASSETS
 
-Six original 16×16 PNGs are copied unchanged from the supplied T&K2 `kubejs.zip`.
+The supplied ZIP provides the custom mechanism, unfinished mechanism, material and casing textures. **99 quest and information icons** are registered as items without crafting recipes. All animations retain their original `.png.mcmeta` files.
 
-| T&K3 item | Texture |
-|---|---|
-| Kinetic Mechanism (`tk3_rotation_mechanism`) | `rotation_mechanism.png` |
-| Sealed Mechanism | `sealed_mechanism.png` |
-| Incomplete Sealed Mechanism | `incomplete_sealed_mechanism.png` |
-
-Incomplete Kinetic Mechanism uses the original incomplete_rotation_mechanism.png. Incomplete Arcane Mechanism reuses incomplete_locomotive_mechanism.png. Both are now registered transitional items. Locomotive texture remains an available asset.
-
-Arcane Mechanism and its unfinished variant use the reused locomotive mechanism art from the T&K2 reference archive. Native Precision and Incomplete Precision keep their Create textures. Machine frames retain native casing/sourcestone models.
-
-Copy the assets directory during installation. The assembly revision adds two transitional items. A full restart is required; completed mechanism and milestone IDs remain stable.
+The asset catalog in `progression_manifest.json` records each item’s source and texture. Custom frames use native Create casings at chapters 1–3 and the supplied casing faces for later workshops. A full Minecraft restart registers new items and blocks.

@@ -6,7 +6,7 @@
 
 The **official Towns & Kingdoms wiki** is hosted on **GitHub Pages**. Explore the current **T&K3** guides or revisit the complete **T&K2** archive.
 
-**10 CHAPTERS** · **159 QUESTS** · **1499 RECIPES**
+**10 CHAPTERS** · **115 QUESTS** · **1709 RECIPES**
 
 | ◆ T&K3 — CURRENT | II · T&K2 — ARCHIVE |
 |---|---|

@@ -1,75 +1,10 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
 
-    [
-        "ae2:calculation_processor",
-        "ae2:calculation_processor_press",
-        "ae2:certus_quartz_crystal",
-        "ae2:certus_quartz_dust",
-        "ae2:charged_certus_quartz_crystal",
-        "ae2:charger",
-        "ae2:engineering_processor",
-        "ae2:engineering_processor_press",
-        "ae2:fluix_crystal",
-        "ae2:fluix_dust",
-        "ae2:inscriber",
-        "ae2:logic_processor",
-        "ae2:logic_processor_press",
-        "ae2:printed_calculation_processor",
-        "ae2:printed_engineering_processor",
-        "ae2:printed_logic_processor",
-        "ae2:printed_silicon",
-        "ae2:silicon",
-        "ae2:silicon_press",
-        "createaddition:capacitor",
-        "createaddition:electric_motor",
-        "mekanism:dust_gold",
-        "mekanism:dust_lead",
-        "mekanism:dust_osmium",
-        "mekanism:dust_tin",
-        "mekanism:raw_lead",
-        "mekanism:raw_osmium",
-        "mekanism:raw_tin",
-        "mekanism:steel_casing",
-        "minecraft:diamond",
-        "minecraft:gold_ingot",
-        "minecraft:raw_gold",
-        "minecraft:redstone"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
-
-    //->------------------------]  Tier 5 / Mekanism / Processing [------------------------<-//
-
-    // Dust Gold / Mek Enriching
-    event.recipes.mekanism.enriching(
-        "2x mekanism:dust_gold",
-        "minecraft:raw_gold")
-        .id("kubejs:tk3/late_layers/mekanism_dust_gold");
-
-    // Dust Osmium / Mek Enriching
-    event.recipes.mekanism.enriching(
-        "2x mekanism:dust_osmium",
-        "mekanism:raw_osmium")
-        .id("kubejs:tk3/late_layers/mekanism_dust_osmium");
-
-    // Dust Tin / Mek Enriching
-    event.recipes.mekanism.enriching(
-        "2x mekanism:dust_tin",
-        "mekanism:raw_tin")
-        .id("kubejs:tk3/late_layers/mekanism_dust_tin");
-
-    // Dust Lead / Mek Enriching
-    event.recipes.mekanism.enriching(
-        "2x mekanism:dust_lead",
-        "mekanism:raw_lead")
-        .id("kubejs:tk3/late_layers/mekanism_dust_lead");
-
-    //->------------------------]  Tier 6 / Ae2 / Crafting [------------------------<-//
+    //->------------------------]  Tier 4 / Ae2 / Crafting [------------------------<-//
 
     // Charger / Shapeless
     event.shapeless(
@@ -91,7 +26,7 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/late_layers/ae2_inscriber");
 
-    //->------------------------]  Tier 6 / Ae2 / Processing [------------------------<-//
+    //->------------------------]  Tier 4 / Ae2 / Processing [------------------------<-//
 
     // Charged Certus Quartz Crystal / Ae Charger
     AE2Recipes.charger(
@@ -181,5 +116,31 @@ ServerEvents.recipes(event => {
         "ae2:printed_silicon",
         "ae2:engineering_processor",
         "kubejs:tk3/late_layers/ae2_engineering_processor");
+
+    //->------------------------]  Tier 4 / Mekanism / Processing [------------------------<-//
+
+    // Dust Gold / Mek Enriching
+    event.recipes.mekanism.enriching(
+        "2x mekanism:dust_gold",
+        "minecraft:raw_gold")
+        .id("kubejs:tk3/late_layers/mekanism_dust_gold");
+
+    // Dust Osmium / Mek Enriching
+    event.recipes.mekanism.enriching(
+        "2x mekanism:dust_osmium",
+        "mekanism:raw_osmium")
+        .id("kubejs:tk3/late_layers/mekanism_dust_osmium");
+
+    // Dust Tin / Mek Enriching
+    event.recipes.mekanism.enriching(
+        "2x mekanism:dust_tin",
+        "mekanism:raw_tin")
+        .id("kubejs:tk3/late_layers/mekanism_dust_tin");
+
+    // Dust Lead / Mek Enriching
+    event.recipes.mekanism.enriching(
+        "2x mekanism:dust_lead",
+        "mekanism:raw_lead")
+        .id("kubejs:tk3/late_layers/mekanism_dust_lead");
 
 });

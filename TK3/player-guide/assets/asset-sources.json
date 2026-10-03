@@ -9,46 +9,6 @@
       "sha256": "499f6897d1837516680f3114072d8106e11c9adcd933fe5cf051b551089b0c99"
     },
     {
-      "namespace": "create",
-      "version": "6.0.10+mc1.21.1",
-      "source": "https://modrinth.com/mod/create",
-      "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
-      "license": "LicenseRef-Create-Mod-License",
-      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a"
-    },
-    {
-      "namespace": "mekanism",
-      "version": "10.7.19.85",
-      "source": "https://modrinth.com/mod/mekanism",
-      "url": "https://cdn.modrinth.com/data/Ce6I4WUE/versions/5KzzycBT/Mekanism-1.21.1-10.7.19.85.jar",
-      "license": "MIT",
-      "sha256": "004dbc9f3106f4d192aeaa1ee1190dd16ec9ca8059ed3d093b80034f4c574f43"
-    },
-    {
-      "namespace": "sophisticatedstorage",
-      "version": "1.21.1-1.6.0.2136",
-      "source": "https://modrinth.com/mod/sophisticated-storage",
-      "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/GvOv4X8M/sophisticatedstorage-1.21.1-1.6.0.2136.jar",
-      "license": "LicenseRef-All-Rights-Reserved",
-      "sha256": "ed0246ef868dc432558225fbd9fb52dfd581d8bc440f3352436c45f0c464fdf5"
-    },
-    {
-      "namespace": "sophisticatedbackpacks",
-      "version": "1.21.1-3.26.6.2174",
-      "source": "https://modrinth.com/mod/sophisticated-backpacks",
-      "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/pJxNzk4X/sophisticatedbackpacks-1.21.1-3.26.6.2174.jar",
-      "license": "LicenseRef-All-Rights-Reserved",
-      "sha256": "6240174bf8973c9453b87f2d71f5b9c907f418027e03c65dab62669d465c005b"
-    },
-    {
-      "namespace": "ars_nouveau",
-      "version": "5.13.2",
-      "source": "https://modrinth.com/mod/ars-nouveau",
-      "url": "https://cdn.modrinth.com/data/TKB6INcv/versions/1VWyxABY/ars_nouveau-1.21.1-5.13.2.jar",
-      "license": "GPL-3.0-only",
-      "sha256": "787b5e2ed6b0e5004285b27ab6c51f8b43edab6cb44c6eccf09452c4b3870dce"
-    },
-    {
       "namespace": "irons_spellbooks",
       "version": "1.21.1-3.16.3",
       "source": "https://modrinth.com/mod/irons-spells-n-spellbooks",
@@ -57,12 +17,12 @@
       "sha256": "55a290db9b966e0c5d2f5c051d50775f3db6375cdb52730c4da528bcf5d5daa0"
     },
     {
-      "namespace": "architects_palette",
-      "version": "1.4.0-beta.5N",
-      "source": "https://modrinth.com/mod/architects-palette",
-      "url": "https://cdn.modrinth.com/data/vt0VyseM/versions/mfYFPWxH/architects_palette-neoforge-1.21.1-1.4.0-beta.5.jar",
-      "license": "LicenseRef-All-Rights-Reserved",
-      "sha256": "60b43f0455c5de35d3f4502efd97847ea2d8712c85ce4961fa4879c61e0aed02"
+      "namespace": "create_aquatic_ambitions",
+      "version": "1.21.1-6.0.10-2.0.4",
+      "source": "https://modrinth.com/mod/create-aquatic-ambitions",
+      "url": "https://cdn.modrinth.com/data/9SyaPzp7/versions/DoI3PpXj/create_aquatic_ambitions-1.21.1-2.0.4.jar",
+      "license": "MIT",
+      "sha256": "d50180fd30dc7f034ea4ad5185d18cfa652457be1d8e7a45f0b491d0e6642d44"
     },
     {
       "namespace": "biomesoplenty",
@@ -73,16 +33,20 @@
       "sha256": "5f3c8d752c2e0464eca8c9527d8ffe498129fd37a2fe86a266b64c98371763b1"
     },
     {
-      "namespace": "biomeswevegone",
-      "version": "2.6.0-NeoForge",
-      "source": "https://modrinth.com/mod/oh-the-biomes-weve-gone",
-      "url": "https://cdn.modrinth.com/data/NTi7d3Xc/versions/aPEcdSHb/Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar",
-      "license": "LicenseRef-All-Rights-Reserved",
-      "sha256": "d63c45e82bb88d533119d9c814fa43738fd0cca5506c04daad774a1bf8946f93"
+      "namespace": "betternether",
+      "version": "21.0.27",
+      "source": "https://modrinth.com/mod/betternether-neoforge",
+      "url": "https://cdn.modrinth.com/data/fxX3RlL5/versions/MwTp39qc/BetterNether-21.0.27.jar",
+      "license": "MIT",
+      "sha256": "f4b08477bb68920f316d181111ed190759eea07cf9441b78c9150792c73954b4"
     },
     {
-      "namespace": "twilightforest",
-      "unavailable": "HTTP Error 404: Not Found"
+      "namespace": "sophisticatedbackpacks",
+      "version": "1.21.1-3.26.6.2174",
+      "source": "https://modrinth.com/mod/sophisticated-backpacks",
+      "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/pJxNzk4X/sophisticatedbackpacks-1.21.1-3.26.6.2174.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "6240174bf8973c9453b87f2d71f5b9c907f418027e03c65dab62669d465c005b"
     },
     {
       "namespace": "bloomingnature",
@@ -93,84 +57,12 @@
       "sha256": "16267d532bf651e93349785a8a8d43c40fa26e6a1f96f2e03428c88dd9b4eb25"
     },
     {
-      "namespace": "atmospheric",
-      "version": "7.0.1",
-      "source": "https://modrinth.com/mod/atmospheric",
-      "url": "https://cdn.modrinth.com/data/U9sJOFmJ/versions/XIvPRE4O/atmospheric-1.21.1-7.0.1.jar",
-      "license": "LicenseRef-Abnormals-License",
-      "sha256": "8b6ec8e5029f0a18b2c57301887342200f25cf657b8cdf6fdd40f08f4ad20444"
-    },
-    {
-      "namespace": "environmental",
-      "version": "5.0.1",
-      "source": "https://modrinth.com/mod/environmental",
-      "url": "https://cdn.modrinth.com/data/OqtiAZcV/versions/NdDV1AM8/environmental-1.21.1-5.0.1.jar",
-      "license": "LicenseRef-Abnormals-License",
-      "sha256": "d0578ab961461bc25ee59d86c44f3b90565e4782cab431dfd897f50080d5988b"
-    },
-    {
-      "namespace": "quark",
-      "version": "4.1-485",
-      "source": "https://modrinth.com/mod/quark",
-      "url": "https://cdn.modrinth.com/data/qnQsVE2z/versions/8uDGRJCr/Quark-4.1-485.jar",
-      "license": "CC-BY-NC-SA-3.0",
-      "sha256": "40808b4094b8e4987c14211f4c021ad42c3a4ac2543f6af4163b8020016b0925"
-    },
-    {
-      "namespace": "autumnity",
-      "version": "6.0.1",
-      "source": "https://modrinth.com/mod/autumnity",
-      "url": "https://cdn.modrinth.com/data/cRh6MJ6n/versions/9jUNvDKx/autumnity-1.21.1-6.0.1.jar",
-      "license": "LicenseRef-Abnormals-License",
-      "sha256": "6f63c19610a973e1dc1ac67714c7aa6c54848d62d1099eed13853abc0e034104"
-    },
-    {
-      "namespace": "upgrade_aquatic",
-      "version": "7.0.2",
-      "source": "https://modrinth.com/mod/upgrade-aquatic",
-      "url": "https://cdn.modrinth.com/data/gTuTFFyz/versions/9zf6y4e4/upgrade_aquatic-1.21.1-7.0.2.jar",
-      "license": "LicenseRef-Abnormals-License",
-      "sha256": "436e05528d6f477375d84ef60ab7d91ca9f38682cb8ec0a9a8d1984526c4402f"
-    },
-    {
-      "namespace": "betterend",
-      "version": "21.0.35",
-      "source": "https://modrinth.com/mod/betterend-neoforge",
-      "url": "https://cdn.modrinth.com/data/IcERKldh/versions/EGvZ3oiw/BetterEnd-21.0.35.jar",
-      "license": "MIT",
-      "sha256": "6f2e927bb7ca484e7699eefda2ee9292669905efed6df89ced0df5d2d20ac95b"
-    },
-    {
-      "namespace": "betternether",
-      "version": "21.0.27",
-      "source": "https://modrinth.com/mod/betternether-neoforge",
-      "url": "https://cdn.modrinth.com/data/fxX3RlL5/versions/MwTp39qc/BetterNether-21.0.27.jar",
-      "license": "MIT",
-      "sha256": "f4b08477bb68920f316d181111ed190759eea07cf9441b78c9150792c73954b4"
-    },
-    {
-      "namespace": "farmersdelight",
-      "version": "1.21.1-1.3.4",
-      "source": "https://modrinth.com/mod/farmers-delight",
-      "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/XTVZDOol/FarmersDelight-1.21.1-1.3.4.jar",
-      "license": "MIT",
-      "sha256": "139ad7696462c89c03eea463f805abffa552526c5dadaadae221dd9624cb197c"
-    },
-    {
-      "namespace": "createaddition",
-      "version": "neoforge-1.21.1-1.6.0",
-      "source": "https://modrinth.com/mod/createaddition",
-      "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/qPr8V4G2/createaddition-1.6.0.jar",
-      "license": "MIT",
-      "sha256": "41876c3780b70365a1848994d146a73423cc19fbe86485885795d9e7d855e7e9"
-    },
-    {
-      "namespace": "create_enchantment_industry",
-      "version": "2.4.2",
-      "source": "https://modrinth.com/mod/create-enchantment-industry",
-      "url": "https://cdn.modrinth.com/data/JWGBpFUP/versions/qUpvzZ83/create-enchantment-industry-2.4.2.jar",
-      "license": "LGPL-3.0-or-later",
-      "sha256": "81f192bb53888e01f87a82eaac2f261c93715f2221dbcf5d8a8d414f912f75ef"
+      "namespace": "appmek",
+      "version": "1.6.3",
+      "source": "https://modrinth.com/mod/applied-mekanistics",
+      "url": "https://cdn.modrinth.com/data/IiATswDj/versions/TpUCzFaW/Applied-Mekanistics-1.6.3.jar",
+      "license": "LGPL-3.0-only",
+      "sha256": "8946fea39451dbce8e709dedbef40a52ba337bdf7a25ac0c4b503800b1bf0773"
     },
     {
       "namespace": "create_wizardry",
@@ -181,20 +73,36 @@
       "sha256": "2aea2828a3a570414fd370f8be5f4cc4158a3c363b75becfa74bb58b6dadc852"
     },
     {
-      "namespace": "alexscaves",
-      "unavailable": "No 1.21.1 NeoForge release"
+      "namespace": "farmersdelight",
+      "version": "1.21.1-1.3.4",
+      "source": "https://modrinth.com/mod/farmers-delight",
+      "url": "https://cdn.modrinth.com/data/R2OftAxM/versions/XTVZDOol/FarmersDelight-1.21.1-1.3.4.jar",
+      "license": "MIT",
+      "sha256": "139ad7696462c89c03eea463f805abffa552526c5dadaadae221dd9624cb197c"
     },
     {
-      "namespace": "aeronautics",
-      "version": "1.3.2+mc1.21.1",
-      "source": "https://modrinth.com/mod/create-aeronautics",
-      "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/44pLdPGg/create-aeronautics-bundled-1.21.1-1.3.2.jar",
-      "license": "LicenseRef-Simulated-Project-License",
-      "sha256": "a3f330d4757640f8715d991a43eedb826e4d0e51558d859c843ae6693bd35f1e"
+      "namespace": "sophisticatedstoragecreateintegration",
+      "version": "1.21.1-0.1.21.209",
+      "source": "https://modrinth.com/mod/sophisticated-storage-create-integration",
+      "url": "https://cdn.modrinth.com/data/MJ0hdevs/versions/zG35SCtY/sophisticatedstoragecreateintegration-1.21.1-0.1.21.209.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "3eefe7d53e2e58c7b38c3ac6e7d257b75c2fc6c7a2d4926b613ee2dd00673ad6"
     },
     {
-      "namespace": "cataclysm",
-      "unavailable": "HTTP Error 404: Not Found"
+      "namespace": "mekanism",
+      "version": "10.7.19.85",
+      "source": "https://modrinth.com/mod/mekanism",
+      "url": "https://cdn.modrinth.com/data/Ce6I4WUE/versions/5KzzycBT/Mekanism-1.21.1-10.7.19.85.jar",
+      "license": "MIT",
+      "sha256": "004dbc9f3106f4d192aeaa1ee1190dd16ec9ca8059ed3d093b80034f4c574f43"
+    },
+    {
+      "namespace": "ae2",
+      "version": "19.2.18",
+      "source": "https://modrinth.com/mod/ae2",
+      "url": "https://cdn.modrinth.com/data/XxWD5pD3/versions/KDnFUmMm/appliedenergistics2-19.2.18.jar",
+      "license": "LicenseRef-Multiple",
+      "sha256": "df15a07f86ca1ca93aa66373f9d5d84dd3d4586631fceb38f4fbc85dad591e39"
     },
     {
       "namespace": "ars_creo",
@@ -205,31 +113,204 @@
       "sha256": "50f0fe5c5f855151c1482c1772ea94c2eaadc2b0c85c963bb9aeb421fc801e4f"
     },
     {
-      "namespace": "witchery",
-      "unavailable": "HTTP Error 404: Not Found"
+      "namespace": "supplementaries",
+      "version": "1.21.1-3.9.9",
+      "source": "https://modrinth.com/mod/supplementaries",
+      "url": "https://cdn.modrinth.com/data/fFEIiSDQ/versions/WrZWfRjP/supplementaries-1.21.1-3.9.9-neoforge.jar",
+      "license": "LicenseRef-Supplementaries-Team-License",
+      "sha256": "d6876ad959d0da4bab0ba182839a0af0e38ef3571345e5e7aea0be572f958e05"
     },
     {
-      "namespace": "iceandfire",
-      "unavailable": "HTTP Error 404: Not Found"
+      "namespace": "create",
+      "version": "6.0.10+mc1.21.1",
+      "source": "https://modrinth.com/mod/create",
+      "url": "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar",
+      "license": "LicenseRef-Create-Mod-License",
+      "sha256": "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a"
     },
     {
-      "namespace": "ae2",
-      "version": "19.2.18",
-      "source": "https://modrinth.com/mod/ae2",
-      "url": "https://cdn.modrinth.com/data/XxWD5pD3/versions/KDnFUmMm/appliedenergistics2-19.2.18.jar",
-      "license": "LicenseRef-Multiple",
-      "sha256": "df15a07f86ca1ca93aa66373f9d5d84dd3d4586631fceb38f4fbc85dad591e39"
+      "namespace": "betterend",
+      "version": "21.0.35",
+      "source": "https://modrinth.com/mod/betterend-neoforge",
+      "url": "https://cdn.modrinth.com/data/IcERKldh/versions/EGvZ3oiw/BetterEnd-21.0.35.jar",
+      "license": "MIT",
+      "sha256": "6f2e927bb7ca484e7699eefda2ee9292669905efed6df89ced0df5d2d20ac95b"
+    },
+    {
+      "namespace": "mekanismtools",
+      "version": "10.7.19.85",
+      "source": "https://modrinth.com/mod/mekanism-tools",
+      "url": "https://cdn.modrinth.com/data/tqQpq1lt/versions/v5zlSE9s/MekanismTools-1.21.1-10.7.19.85.jar",
+      "license": "MIT",
+      "sha256": "e1dbca7d70df150101da535f6ab4b165a2e402fde830d34df75b58d9aad24dd8"
+    },
+    {
+      "namespace": "aeronautics",
+      "version": "1.3.2+mc1.21.1",
+      "source": "https://modrinth.com/mod/create-aeronautics",
+      "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/44pLdPGg/create-aeronautics-bundled-1.21.1-1.3.2.jar",
+      "license": "LicenseRef-Simulated-Project-License",
+      "sha256": "a3f330d4757640f8715d991a43eedb826e4d0e51558d859c843ae6693bd35f1e"
+    },
+    {
+      "namespace": "create_ars_nouveau",
+      "version": "1.20.6",
+      "source": "https://modrinth.com/mod/create-ars-nouveau",
+      "url": "https://cdn.modrinth.com/data/edZTqBgP/versions/unM4rEAm/createarscompact-1.20.6.jar",
+      "license": "MIT",
+      "sha256": "db1cd6ed5927b2be87f3c06d9176f4e424d3650e5ca98f4de599897b94f72843"
+    },
+    {
+      "namespace": "quark",
+      "version": "4.1-485",
+      "source": "https://modrinth.com/mod/quark",
+      "url": "https://cdn.modrinth.com/data/qnQsVE2z/versions/8uDGRJCr/Quark-4.1-485.jar",
+      "license": "CC-BY-NC-SA-3.0",
+      "sha256": "40808b4094b8e4987c14211f4c021ad42c3a4ac2543f6af4163b8020016b0925"
+    },
+    {
+      "namespace": "createaddition",
+      "version": "neoforge-1.21.1-1.6.0",
+      "source": "https://modrinth.com/mod/createaddition",
+      "url": "https://cdn.modrinth.com/data/kU1G12Nn/versions/qPr8V4G2/createaddition-1.6.0.jar",
+      "license": "MIT",
+      "sha256": "41876c3780b70365a1848994d146a73423cc19fbe86485885795d9e7d855e7e9"
+    },
+    {
+      "namespace": "create_dragons_plus",
+      "version": "1.11.9",
+      "source": "https://modrinth.com/mod/create-dragons-plus",
+      "url": "https://cdn.modrinth.com/data/dzb1a5WV/versions/b0u9vk8C/CreateDragonsPlus-1.11.9.jar",
+      "license": "LGPL-3.0-or-later",
+      "sha256": "37f05a6775bbe811fe8c2833fa6289a1c704d0b25bdd5f239d343a5c6f62ed8a"
+    },
+    {
+      "namespace": "irons_jewelry",
+      "version": "1.21.1-2.0.2",
+      "source": "https://modrinth.com/mod/irons-jewelry",
+      "url": "https://cdn.modrinth.com/data/cTagjDuu/versions/MCWj9fXj/irons_jewelry-1.21.1-2.0.2.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "7413dd081598337133e55dd7c42ac3adff5213bceb56f10da6cfb5b52d57958e"
+    },
+    {
+      "namespace": "architects_palette",
+      "version": "1.4.0-beta.5N",
+      "source": "https://modrinth.com/mod/architects-palette",
+      "url": "https://cdn.modrinth.com/data/vt0VyseM/versions/mfYFPWxH/architects_palette-neoforge-1.21.1-1.4.0-beta.5.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "60b43f0455c5de35d3f4502efd97847ea2d8712c85ce4961fa4879c61e0aed02"
+    },
+    {
+      "namespace": "create_enchantment_industry",
+      "version": "2.4.2",
+      "source": "https://modrinth.com/mod/create-enchantment-industry",
+      "url": "https://cdn.modrinth.com/data/JWGBpFUP/versions/qUpvzZ83/create-enchantment-industry-2.4.2.jar",
+      "license": "LGPL-3.0-or-later",
+      "sha256": "81f192bb53888e01f87a82eaac2f261c93715f2221dbcf5d8a8d414f912f75ef"
+    },
+    {
+      "namespace": "chipped",
+      "version": "4.0.2",
+      "source": "https://modrinth.com/mod/chipped",
+      "url": "https://cdn.modrinth.com/data/BAscRYKm/versions/eqVowbGc/chipped-neoforge-1.21.1-4.0.2.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "18ac6fd6b30db4922ccc6ee8bea5b113f69587505b7529834f37ace506427291"
+    },
+    {
+      "namespace": "environmental",
+      "version": "5.0.1",
+      "source": "https://modrinth.com/mod/environmental",
+      "url": "https://cdn.modrinth.com/data/OqtiAZcV/versions/NdDV1AM8/environmental-1.21.1-5.0.1.jar",
+      "license": "LicenseRef-Abnormals-License",
+      "sha256": "d0578ab961461bc25ee59d86c44f3b90565e4782cab431dfd897f50080d5988b"
+    },
+    {
+      "namespace": "biomeswevegone",
+      "version": "2.6.0-NeoForge",
+      "source": "https://modrinth.com/mod/oh-the-biomes-weve-gone",
+      "url": "https://cdn.modrinth.com/data/NTi7d3Xc/versions/aPEcdSHb/Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "d63c45e82bb88d533119d9c814fa43738fd0cca5506c04daad774a1bf8946f93"
+    },
+    {
+      "namespace": "ars_nouveau",
+      "version": "5.13.2",
+      "source": "https://modrinth.com/mod/ars-nouveau",
+      "url": "https://cdn.modrinth.com/data/TKB6INcv/versions/1VWyxABY/ars_nouveau-1.21.1-5.13.2.jar",
+      "license": "GPL-3.0-only",
+      "sha256": "787b5e2ed6b0e5004285b27ab6c51f8b43edab6cb44c6eccf09452c4b3870dce"
+    },
+    {
+      "namespace": "hypertube",
+      "version": "0.6.0",
+      "source": "https://modrinth.com/mod/hypertube",
+      "url": "https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar",
+      "license": "Apache-2.0",
+      "sha256": "7bdb8979c7ff7d3b29f7a23771b6ae4870a6dcb7ce2e4a3214fdd6059aacace8"
+    },
+    {
+      "namespace": "upgrade_aquatic",
+      "version": "7.0.2",
+      "source": "https://modrinth.com/mod/upgrade-aquatic",
+      "url": "https://cdn.modrinth.com/data/gTuTFFyz/versions/9zf6y4e4/upgrade_aquatic-1.21.1-7.0.2.jar",
+      "license": "LicenseRef-Abnormals-License",
+      "sha256": "436e05528d6f477375d84ef60ab7d91ca9f38682cb8ec0a9a8d1984526c4402f"
+    },
+    {
+      "namespace": "autumnity",
+      "version": "6.0.1",
+      "source": "https://modrinth.com/mod/autumnity",
+      "url": "https://cdn.modrinth.com/data/cRh6MJ6n/versions/9jUNvDKx/autumnity-1.21.1-6.0.1.jar",
+      "license": "LicenseRef-Abnormals-License",
+      "sha256": "6f63c19610a973e1dc1ac67714c7aa6c54848d62d1099eed13853abc0e034104"
+    },
+    {
+      "namespace": "sliceanddice",
+      "version": "4.3.4",
+      "source": "https://modrinth.com/mod/slice-and-dice",
+      "url": "https://cdn.modrinth.com/data/GmjmRQ0A/versions/D6mQaFRW/sliceanddice-4.3.4-neoforge.jar",
+      "license": "LicenseRef-Custom",
+      "sha256": "b3982e89611761d7f1cdce90794cd88498a2c9e1447d8a1aba33ed831f3c9201"
+    },
+    {
+      "namespace": "atmospheric",
+      "version": "7.0.1",
+      "source": "https://modrinth.com/mod/atmospheric",
+      "url": "https://cdn.modrinth.com/data/U9sJOFmJ/versions/XIvPRE4O/atmospheric-1.21.1-7.0.1.jar",
+      "license": "LicenseRef-Abnormals-License",
+      "sha256": "8b6ec8e5029f0a18b2c57301887342200f25cf657b8cdf6fdd40f08f4ad20444"
+    },
+    {
+      "namespace": "sophisticatedstorage",
+      "version": "1.21.1-1.6.0.2136",
+      "source": "https://modrinth.com/mod/sophisticated-storage",
+      "url": "https://cdn.modrinth.com/data/hMlaZH8f/versions/GvOv4X8M/sophisticatedstorage-1.21.1-1.6.0.2136.jar",
+      "license": "LicenseRef-All-Rights-Reserved",
+      "sha256": "ed0246ef868dc432558225fbd9fb52dfd581d8bc440f3352436c45f0c464fdf5"
+    },
+    {
+      "namespace": "amendments",
+      "version": "1.21-2.1.10",
+      "source": "https://modrinth.com/mod/amendments",
+      "url": "https://cdn.modrinth.com/data/6iTJugQR/versions/OYfMeeUK/amendments-1.21-2.1.10-neoforge.jar",
+      "license": "LicenseRef-Supplementaries-Team-License-1.1",
+      "sha256": "a2cbc46342c5f466f3b6e244f8820aa01f9d8381586b2c008b72fb77ae56045e"
     }
   ],
-  "icon_count": 1416,
+  "icon_count": 1813,
   "missing_icons": [
     "ae2:annihilation_plane",
     "ae2:formation_plane",
     "ae2:memory_card",
     "aeronautics:levitite_blend",
+    "alexscaves:conversion_crucible",
+    "alexscaves:drain",
+    "alexscaves:nuclear_furnace_component",
+    "alexscaves:nuclear_siren",
     "alexscaves:pewen_log",
     "alexscaves:pewen_planks",
     "alexscaves:pewen_wood",
+    "alexscaves:quarry",
     "alexscaves:stripped_pewen_log",
     "alexscaves:stripped_pewen_wood",
     "alexscaves:stripped_thornwood_log",
@@ -243,11 +324,7 @@
     "apotheosis:gem_dust",
     "apotheosis:reforging_table",
     "apotheosis:salvaging_table",
-    "apothic_enchanting:pearl_endshelf",
     "ars_creo:starbuncle_wheel",
-    "ars_n_spells:mana_infusion",
-    "ars_n_spells:mana_well",
-    "ars_n_spells:spell_loom",
     "ars_nouveau:enchanters_sword",
     "ars_nouveau:enchanting_apparatus",
     "ars_nouveau:relay",
@@ -256,7 +333,6 @@
     "ars_nouveau:relay_splitter",
     "cataclysm:chorus_planks",
     "cataclysm:chorus_stem",
-    "cataclysm_spellbooks:hellfire_forge",
     "create:blaze_burner",
     "create:chain_conveyor",
     "create:copper_valve_handle",
@@ -271,11 +347,22 @@
     "create:water_wheel",
     "create_enchantment_industry:blaze_enchanter",
     "create_enchantment_industry:blaze_forger",
+    "createarscompact:sorcerer_cage",
     "createminecolonies:colony_warehouse_stock_link",
     "endrem:corrupted_eye",
     "endrem:cryptic_eye",
     "endrem:magical_eye",
     "endrem:nether_eye",
+    "iceandfire:dragonbone",
+    "iceandfire:dragonforge_fire_brick",
+    "iceandfire:dragonforge_fire_core_disabled",
+    "iceandfire:dragonforge_fire_input",
+    "iceandfire:dragonforge_ice_brick",
+    "iceandfire:dragonforge_ice_core_disabled",
+    "iceandfire:dragonforge_ice_input",
+    "iceandfire:dragonforge_lightning_brick",
+    "iceandfire:dragonforge_lightning_core_disabled",
+    "iceandfire:dragonforge_lightning_input",
     "iceandfire:dreadwood_log",
     "iceandfire:dreadwood_planks",
     "mekanism:advanced_combining_factory",
@@ -381,8 +468,15 @@
     "mekanismgenerators:turbine_valve",
     "mekanismgenerators:turbine_vent",
     "mekanismgenerators:wind_generator",
+    "mekanismtools:bronze_shield",
+    "mekanismtools:lapis_lazuli_shield",
+    "mekanismtools:osmium_shield",
+    "mekanismtools:refined_glowstone_shield",
+    "mekanismtools:refined_obsidian_shield",
+    "mekanismtools:steel_shield",
     "minecolonies:blockhutwarehouse",
     "minecraft:chest",
+    "minecraft:shield",
     "minecraft:water",
     "simulated:steering_wheel",
     "sophisticatedbackpacks:backpack",
@@ -477,27 +571,7 @@
     "twilightforest:transformation_wood",
     "twilightforest:twilight_oak_log",
     "twilightforest:twilight_oak_planks",
-    "twilightforest:twilight_oak_wood",
-    "witchery:alder_log",
-    "witchery:alder_planks",
-    "witchery:alder_wood",
-    "witchery:altar",
-    "witchery:cauldron",
-    "witchery:distillery",
-    "witchery:hawthorn_log",
-    "witchery:hawthorn_planks",
-    "witchery:hawthorn_wood",
-    "witchery:iron_witches_oven",
-    "witchery:rowan_log",
-    "witchery:rowan_planks",
-    "witchery:rowan_wood",
-    "witchery:spinning_wheel",
-    "witchery:stripped_alder_log",
-    "witchery:stripped_alder_wood",
-    "witchery:stripped_hawthorn_log",
-    "witchery:stripped_hawthorn_wood",
-    "witchery:stripped_rowan_log",
-    "witchery:stripped_rowan_wood"
+    "twilightforest:twilight_oak_wood"
   ],
-  "create_model_count": 22
+  "create_model_count": 29
 }

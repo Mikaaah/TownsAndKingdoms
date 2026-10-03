@@ -2,108 +2,103 @@
   "id": "4AD45EFF90652F33",
   "filename": "tk3_chapter_7",
   "group": "7427C3F538DF9198",
-  "title": "VII · Beyond the Horizon",
-  "subtitle": "Airships, chemical systems and purposeful exploration",
+  "title": "Integrated · Living Expeditions",
+  "subtitle": "Expedition Frame and connected production",
   "icon": "kubejs:tk3_expedition_frame",
   "order_index": 7,
   "default_hide_dependency_lines": false,
   "quests": [
     {
-      "id": "8A998D7C9591986D",
-      "title": "A stronger circuit",
+      "id": "47B7F7307CD559D6",
+      "title": "Workshop plan · Expedition Frame",
       "description": [
-        "Infuse the alloy using the native Mekanism chemical recipe. The separator and chemistry machines unlock here."
+        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
       ],
       "dependencies": [
         "DCEB2AF9B398CAEB"
       ],
       "tasks": [
         {
-          "id": "4F5545097182642A",
-          "type": "item",
-          "item": {
-            "id": "mekanism:alloy_reinforced",
-            "count": 1
-          },
-          "count": 8,
-          "consume_items": false
+          "id": "B53800C2B1C57375",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
-      "icon": "mekanism:alloy_reinforced",
+      "icon": "kubejs:tk3_expedition_frame",
       "rewards": []
     },
     {
-      "id": "E481B2F5A6E1E59F",
-      "title": "Expedition Mechanism",
+      "id": "DC154F8C70241863",
+      "title": "Refine the radiance",
       "description": [
-        "Network Mechanism → Manipulation Essence → Reinforced Alloy → Diamond Knife. Ordinary knives wear; the milestone reward does not."
+        "Inject one Shadow Steel with 100 units hydrogen chloride per finished operation, then press the Refined Radiance. This is gas processing in the Chemical Injection Chamber."
       ],
       "dependencies": [
-        "8A998D7C9591986D"
+        "47B7F7307CD559D6"
       ],
       "tasks": [
         {
-          "id": "6E2B328569C8694B",
+          "id": "BAE5402C8095B178",
           "type": "item",
           "item": {
-            "id": "kubejs:tk3_expedition_mechanism",
+            "id": "kubejs:tk3_radiance_sheet",
             "count": 1
           },
-          "count": 4,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
       "x": 3.0,
       "y": 0.0,
-      "icon": "kubejs:tk3_expedition_mechanism",
+      "icon": "kubejs:tk3_radiance_sheet",
       "rewards": []
     },
     {
-      "id": "A28BDA05B7679B3A",
-      "title": "Expedition Frame",
+      "id": "8BCF7F8F3766B09D",
+      "title": "Expedition Mechanism",
       "description": [
-        "Deploy the mechanism onto a Wizardry Arcane Casing. This frame powers the travel and chemistry layer."
+        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable."
       ],
       "dependencies": [
-        "E481B2F5A6E1E59F"
+        "DC154F8C70241863"
       ],
       "tasks": [
         {
-          "id": "7650D0DE71A8B6C6",
+          "id": "92224C23FCD0A30B",
           "type": "item",
           "item": {
-            "id": "kubejs:tk3_expedition_frame",
+            "id": "kubejs:tk3_expedition_mechanism",
             "count": 1
           },
-          "count": 2,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
       "x": 6.0,
       "y": 0.0,
-      "icon": "kubejs:tk3_expedition_frame",
+      "icon": "kubejs:tk3_expedition_mechanism",
       "rewards": []
     },
     {
-      "id": "E3782A0439D04871",
-      "title": "Separate with purpose",
+      "id": "DC419D774BA31874",
+      "title": "Expedition Frame",
       "description": [
-        "Water electrolysis starts the hydrogen/oxygen branch. Use native Mekanism chemicals and a chemical tank for buffering."
+        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
       ],
       "dependencies": [
-        "A28BDA05B7679B3A"
+        "8BCF7F8F3766B09D"
       ],
       "tasks": [
         {
-          "id": "FB86708EDC732FD7",
+          "id": "DABB3905A3D11498",
           "type": "item",
           "item": {
-            "id": "mekanism:electrolytic_separator",
+            "id": "kubejs:tk3_expedition_frame",
             "count": 1
           },
           "count": 1,
@@ -113,75 +108,21 @@
       "optional": false,
       "x": 9.0,
       "y": 0.0,
-      "icon": "mekanism:electrolytic_separator",
+      "icon": "kubejs:tk3_expedition_frame",
       "rewards": []
     },
     {
-      "id": "77928150F7DF0A07",
-      "title": "Polymers from a farm",
+      "id": "34ACF5A39BA4283A",
+      "title": "Build an expedition vessel",
       "description": [
-        "Grow biomass. Use the native substrate/ethylene reaction and the second HDPE recipe; return the substrate and keep oxygen available."
+        "Expedition Frames unlock actual airship controls. Start with a light hull, balanced propulsion, steering and fuel; Mekanism compatibility adds systems on the moving vessel."
       ],
       "dependencies": [
-        "E3782A0439D04871"
+        "DC419D774BA31874"
       ],
       "tasks": [
         {
-          "id": "18CB93D220A513DA",
-          "type": "item",
-          "item": {
-            "id": "mekanism:pressurized_reaction_chamber",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 12.0,
-      "y": 0.0,
-      "icon": "mekanism:pressurized_reaction_chamber",
-      "rewards": []
-    },
-    {
-      "id": "4AADDFC90C983277",
-      "title": "A flexible shell",
-      "description": [
-        "Enrich three HDPE pellets into one sheet. HDPE feeds chapter VIII containment."
-      ],
-      "dependencies": [
-        "77928150F7DF0A07"
-      ],
-      "tasks": [
-        {
-          "id": "7E535FEEB8E7FC83",
-          "type": "item",
-          "item": {
-            "id": "mekanism:hdpe_sheet",
-            "count": 1
-          },
-          "count": 8,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 0.0,
-      "y": 3.0,
-      "icon": "mekanism:hdpe_sheet",
-      "rewards": []
-    },
-    {
-      "id": "F29450B37D9B612F",
-      "title": "Controlled flight",
-      "description": [
-        "A stationary propeller was an early experiment. Build the gyroscopic bearing, smart propeller and an envelope to create controlled airships."
-      ],
-      "dependencies": [
-        "4AADDFC90C983277"
-      ],
-      "tasks": [
-        {
-          "id": "642D6B487E93FF78",
+          "id": "B7F32C241D338AAA",
           "type": "item",
           "item": {
             "id": "aeronautics:gyroscopic_propeller_bearing",
@@ -191,73 +132,24 @@
           "consume_items": false
         }
       ],
-      "optional": false,
-      "x": 3.0,
-      "y": 3.0,
+      "optional": true,
+      "x": 12.0,
+      "y": 0.0,
       "icon": "aeronautics:gyroscopic_propeller_bearing",
       "rewards": []
     },
     {
-      "id": "643F0FF258B651B4",
-      "title": "Lift from a compact line",
+      "id": "D4F91CE79DCC7DD7",
+      "title": "Expand remote automation",
       "description": [
-        "Compacting one white wool, one string and one Expedition Mechanism yields eight white envelopes. Other colours have matching explicit recipes."
+        "Use 16k storage and wireless access to service the expedition workshop. Channels, energy and native wireless range still apply."
       ],
       "dependencies": [
-        "F29450B37D9B612F"
+        "DC419D774BA31874"
       ],
       "tasks": [
         {
-          "id": "02545873EF272849",
-          "type": "item",
-          "item": {
-            "id": "aeronautics:white_envelope",
-            "count": 1
-          },
-          "count": 16,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 6.0,
-      "y": 3.0,
-      "icon": "aeronautics:white_envelope",
-      "rewards": []
-    },
-    {
-      "id": "26E2D8AEE7EAC1A8",
-      "title": "An actual expedition",
-      "description": [
-        "Build and test a small ship. Check claims, boarding, rotation, disassembly and returning inventories. This checkmark is a manual flight confirmation."
-      ],
-      "dependencies": [
-        "643F0FF258B651B4"
-      ],
-      "tasks": [
-        {
-          "id": "E4F8E2F67B042F09",
-          "type": "checkmark",
-          "title": "Confirm this production line works"
-        }
-      ],
-      "optional": false,
-      "x": 9.0,
-      "y": 3.0,
-      "icon": "kubejs:tk3_expedition_frame",
-      "rewards": []
-    },
-    {
-      "id": "C2648F2A0542B12E",
-      "title": "Keep the network nearby",
-      "description": [
-        "Native range and charging still apply. Use a wireless access point and security setup required by your AE2 version."
-      ],
-      "dependencies": [
-        "26E2D8AEE7EAC1A8"
-      ],
-      "tasks": [
-        {
-          "id": "90825FC6FC0D3413",
+          "id": "71DA77B52D041D44",
           "type": "item",
           "item": {
             "id": "ae2:wireless_terminal",
@@ -268,131 +160,115 @@
         }
       ],
       "optional": false,
-      "x": 12.0,
-      "y": 3.0,
+      "x": 0.0,
+      "y": 4.0,
       "icon": "ae2:wireless_terminal",
       "rewards": []
     },
     {
-      "id": "491B3B77F0088C07",
-      "title": "A second life for gear",
-      "description": [
-        "Recycle unwanted gear, preserve valuable affixes, and route XP into the native Enchantment Industry processing system."
-      ],
-      "dependencies": [
-        "C2648F2A0542B12E"
-      ],
-      "tasks": [
-        {
-          "id": "228DB7E36AE44463",
-          "type": "item",
-          "item": {
-            "id": "create_enchantment_industry:blaze_forger",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 0.0,
-      "y": 6.0,
-      "icon": "create_enchantment_industry:blaze_forger",
-      "rewards": []
-    },
-    {
-      "id": "6821DB355570D0D1",
-      "title": "Storage travels too",
-      "description": [
-        "Use the content-preserving upgrade recipe. The backpack grows with expeditions; infinite and creative upgrades remain disabled."
-      ],
-      "dependencies": [
-        "491B3B77F0088C07"
-      ],
-      "tasks": [
-        {
-          "id": "84968EF125DF4D10",
-          "type": "item",
-          "item": {
-            "id": "sophisticatedbackpacks:netherite_backpack",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 3.0,
-      "y": 6.0,
-      "icon": "sophisticatedbackpacks:netherite_backpack",
-      "rewards": []
-    },
-    {
       "id": "B1EC8B5E18AF1A4E",
-      "title": "Trial · The Harbinger",
+      "title": "Defeat The Harbinger",
       "description": [
-        "Defeat this boss. The kill task is detected and grants one reusable production core per player. Further player kills drop additional cores for parallel lines."
+        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
       ],
       "dependencies": [
-        "6821DB355570D0D1"
+        "47B7F7307CD559D6"
       ],
       "tasks": [
         {
-          "id": "6EB6D010317FEEFD",
+          "id": "1724DABECB19426A",
           "type": "kill",
           "entity": "cataclysm:the_harbinger",
           "value": 1
         }
       ],
       "optional": false,
-      "x": 6.0,
-      "y": 6.0,
-      "icon": "kubejs:tk3_expedition_frame",
-      "rewards": [
+      "x": 3.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_storm_core",
+      "rewards": []
+    },
+    {
+      "id": "A3A2B541FEA19ACC",
+      "title": "Keep the Storm Core",
+      "description": [
+        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+      ],
+      "dependencies": [
+        "B1EC8B5E18AF1A4E"
+      ],
+      "tasks": [
         {
-          "id": "6154CC66CFC6DDE6",
+          "id": "9FDE8483948DF80D",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_storm_core",
             "count": 1
           },
           "count": 1,
-          "team_reward": false
+          "consume_items": false
         }
-      ]
+      ],
+      "optional": true,
+      "x": 6.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_storm_core",
+      "rewards": []
     },
     {
-      "id": "BCC05513E2AD3BA9",
-      "title": "Milestone · Beyond the Horizon",
+      "id": "D1E33B1F2AF97D41",
+      "title": "Run the workshop continuously",
       "description": [
-        "Complete the working line and the required trial. This unlocks chapter 8. Reward: a named unbreakable finishing tool; one claim per player."
+        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
       ],
       "dependencies": [
-        "491B3B77F0088C07",
-        "6821DB355570D0D1",
+        "DC419D774BA31874",
+        "D4F91CE79DCC7DD7",
         "B1EC8B5E18AF1A4E"
       ],
       "tasks": [
         {
-          "id": "67A9A72EFACD513F",
+          "id": "64FA7689F1D76647",
           "type": "checkmark",
-          "title": "Confirm this production line works"
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
       "x": 9.0,
-      "y": 6.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_expedition_frame",
+      "rewards": []
+    },
+    {
+      "id": "BCC05513E2AD3BA9",
+      "title": "Complete chapter 7",
+      "description": [
+        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+      ],
+      "dependencies": [
+        "D1E33B1F2AF97D41"
+      ],
+      "tasks": [
+        {
+          "id": "8CA2C55F661B0B9E",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 12.0,
+      "y": 4.0,
       "icon": "kubejs:tk3_expedition_frame",
       "rewards": [
         {
-          "id": "AE528BAB25C71702",
+          "id": "E2FDBC4DBB044ED5",
           "type": "item",
           "item": {
             "id": "farmersdelight:diamond_knife",
             "count": 1,
             "components": {
               "minecraft:unbreakable": {},
-              "minecraft:custom_name": "{\"text\": \"Expedition Frame Tool\", \"color\": \"light_purple\", \"italic\": false}"
+              "minecraft:custom_name": "{\"text\": \"Expedition Frame Workshop Tool\", \"color\": \"light_purple\", \"italic\": false}"
             }
           },
           "count": 1,
@@ -401,63 +277,17 @@
       ]
     },
     {
-      "id": "A64F18AAAE7C4047",
-      "title": "An expedition meets a dragon",
+      "id": "CCF12F6425911E2B",
+      "title": "Cave expedition",
       "description": [
-        "Explore Ice and Fire and its spell bridge. Native dragon age and forge rules remain active."
+        "Explore Alex’s Caves and Alex’s Mobs for materials and encounters. Expedition machinery supports mining; discoveries keep their native sources."
       ],
       "dependencies": [
-        "DCEB2AF9B398CAEB"
+        "47B7F7307CD559D6"
       ],
       "tasks": [
         {
-          "id": "DBC801BEA691ECC1",
-          "type": "kill",
-          "entity": "iceandfire:fire_dragon",
-          "value": 1
-        }
-      ],
-      "optional": true,
-      "x": 12.0,
-      "y": 6.0,
-      "icon": "kubejs:tk3_expedition_frame",
-      "rewards": []
-    },
-    {
-      "id": "374640F3808B345D",
-      "title": "An expedition below ground",
-      "description": [
-        "Explore Alex’s Caves and its spellbooks. Native biome research remains the discovery path."
-      ],
-      "dependencies": [
-        "DCEB2AF9B398CAEB"
-      ],
-      "tasks": [
-        {
-          "id": "CD658E6EDB099EE4",
-          "type": "kill",
-          "entity": "alexscaves:forsaken",
-          "value": 1
-        }
-      ],
-      "optional": true,
-      "x": 0.0,
-      "y": 9.0,
-      "icon": "kubejs:tk3_expedition_frame",
-      "rewards": []
-    },
-    {
-      "id": "6CF65D569EDFC2E0",
-      "title": "The cave becomes a workshop",
-      "description": [
-        "Optional: use an Expedition Frame to construct the native quarry, drain and Conversion Crucible. Research, biome discovery and machine behaviour stay native."
-      ],
-      "dependencies": [
-        "DCEB2AF9B398CAEB"
-      ],
-      "tasks": [
-        {
-          "id": "B06C778A8C7C81EE",
+          "id": "A2174A3C42E86AFF",
           "type": "item",
           "item": {
             "id": "alexscaves:quarry",
@@ -468,31 +298,9 @@
         }
       ],
       "optional": true,
-      "x": 3.0,
-      "y": 9.0,
+      "x": 0.0,
+      "y": 8.0,
       "icon": "alexscaves:quarry",
-      "rewards": []
-    },
-    {
-      "id": "D20FE8A78722F0BA",
-      "title": "Another expedition trial",
-      "description": [
-        "Optional: complete a Bosses’ Rise encounter and confirm the trial. Prepare your combat gear and a safe route home. This is a manual confirmation."
-      ],
-      "dependencies": [
-        "DCEB2AF9B398CAEB"
-      ],
-      "tasks": [
-        {
-          "id": "3693319CA189C306",
-          "type": "checkmark",
-          "title": "Confirm the native encounter"
-        }
-      ],
-      "optional": true,
-      "x": 6.0,
-      "y": 9.0,
-      "icon": "kubejs:tk3_expedition_frame",
       "rewards": []
     }
   ]

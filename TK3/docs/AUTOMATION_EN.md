@@ -156,7 +156,7 @@ T&K3 changes lava/water stone generation using a foundation. The vertical order 
 
 **Keep the drill aligned with the generation cell.** The lens and frame are permanent foundation blocks, outside the breaking path.
 
-<div class="table-wrap"><table><thead><tr><th>Stone</th><th>Lens</th><th>Foundation / tier</th><th>Millstone yield</th><th>Crushing yield</th></tr></thead><tbody><tr><td>Andesite</td><td>Polished Andesite</td><td>Kinetic Machine · 1</td><td>1 × Clay Ball</td><td>2 × Clay Ball</td></tr><tr><td>Diorite</td><td>Quartz Block</td><td>Kinetic Machine · 1</td><td>1 × Quartz</td><td>2 × Quartz</td></tr><tr><td>Granite</td><td>Bricks</td><td>Kinetic Machine · 1</td><td>1 × Lapis Lazuli</td><td>2 × Lapis Lazuli</td></tr><tr><td>Limestone</td><td>Calcite</td><td>Kinetic Machine · 1</td><td>1 × Bone Meal</td><td>2 × Bone Meal</td></tr><tr><td>Scoria</td><td>Netherrack</td><td>Hydraulic Machine · 2</td><td>1 × Redstone</td><td>2 × Redstone</td></tr><tr><td>Scorchia</td><td>Blackstone</td><td>Hydraulic Machine · 2</td><td>1 × Coal</td><td>2 × Coal</td></tr><tr><td>Veridium</td><td>Copper Block</td><td>Hydraulic Machine · 2</td><td>3 × Copper Nugget</td><td>1 × Crushed Raw Copper → wash → 9 × Copper Nugget</td></tr><tr><td>Crimsite</td><td>Iron Block</td><td>Hydraulic Machine · 2</td><td>3 × Iron Nugget</td><td>1 × Crushed Raw Iron → wash → 9 × Iron Nugget</td></tr><tr><td>Asurine</td><td>Zinc Block</td><td>Precision Machine · 3</td><td>3 × Zinc Nugget</td><td>1 × Crushed Raw Zinc → wash → 9 × Zinc Nugget</td></tr><tr><td>Ochrum</td><td>Gold Block</td><td>Precision Machine · 3</td><td>3 × Gold Nugget</td><td>1 × Crushed Raw Gold → wash → 9 × Gold Nugget</td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th>Stone</th><th>Lens</th><th>Foundation / tier</th><th>Millstone yield</th><th>Crushing yield</th></tr></thead><tbody><tr><td>Andesite</td><td>Polished Andesite</td><td>Kinetic Machine · 1</td><td>1 × Clay Ball</td><td>2 × Clay Ball</td></tr><tr><td>Diorite</td><td>Quartz Block</td><td>Kinetic Machine · 1</td><td>1 × Quartz</td><td>2 × Quartz</td></tr><tr><td>Granite</td><td>Bricks</td><td>Kinetic Machine · 1</td><td>1 × Lapis Lazuli</td><td>2 × Lapis Lazuli</td></tr><tr><td>Limestone</td><td>Calcite</td><td>Kinetic Machine · 1</td><td>1 × Bone Meal</td><td>2 × Bone Meal</td></tr><tr><td>Scoria</td><td>Netherrack</td><td>Precision Machine · 3</td><td>1 × Redstone</td><td>2 × Redstone</td></tr><tr><td>Scorchia</td><td>Blackstone</td><td>Precision Machine · 3</td><td>1 × Coal</td><td>2 × Coal</td></tr><tr><td>Veridium</td><td>Copper Block</td><td>Hydraulic Machine · 2</td><td>3 × Copper Nugget</td><td>1 × Crushed Raw Copper → wash → 9 × Copper Nugget</td></tr><tr><td>Crimsite</td><td>Iron Block</td><td>Hydraulic Machine · 2</td><td>3 × Iron Nugget</td><td>1 × Crushed Raw Iron → wash → 9 × Iron Nugget</td></tr><tr><td>Asurine</td><td>Zinc Block</td><td>Precision Machine · 3</td><td>3 × Zinc Nugget</td><td>1 × Crushed Raw Zinc → wash → 9 × Zinc Nugget</td></tr><tr><td>Ochrum</td><td>Gold Block</td><td>Precision Machine · 3</td><td>3 × Gold Nugget</td><td>1 × Crushed Raw Gold → wash → 9 × Gold Nugget</td></tr></tbody></table></div>
 
 The table's generation tier is the **foundation** requirement. Crushing Wheels themselves require **tier 3**, even when a stone's foundation is available earlier. Metal stones become crushed raw metal when crushed, then wash into nine nuggets. For earlier production, mill the metal stones into three nuggets. Nine nuggets make one ingot.
 
@@ -186,7 +186,7 @@ A reusable depot and one Deployer can demonstrate the steps by changing the held
 
 ### Permanent workshop tools
 
-Chapters I–IV award unbreakable finishing tools once per player. Make ordinary tools first so the reward never blocks the chapter's own production. Normal tools lose one durability per finish. The reward fits the same recipe and removes tool replacement from that station. Chapter V gives a second permanent Iron Hammer for a parallel Kinetic line.
+Chapters I–X award unbreakable finishing tools once per player. Make ordinary tools first so the reward never blocks the chapter's own production. Normal tools lose one durability per finish. The reward fits the same recipe and removes tool replacement from that station. Chapter V gives a second permanent Iron Hammer for a parallel Kinetic line.
 
 Automated frames then use **casing → deploy one mechanism**. Stonecut the resulting frame into the working machine. Keep casing production and mechanism assembly as separate supply lines; combine them at the frame station.
 
@@ -212,7 +212,7 @@ For repeatable cutting, set the Saw's output filter. For multiple branches, plan
 
 ## Source and arcane automation
 
-**Tier 4** adds magical processing to the mechanical workshop. Begin with the native Imbuement Chamber, Source Jars and available first-Source generators. Volcanic/Vitalic Sourcelinks are available after chapter III; you do not need an Arcane Machine to start Source production.
+**Tier 4** adds magical processing to the mechanical workshop. Begin with the native Imbuement Chamber, Source Jars and available first-Source generators. Craft the bootstrap Agronomic Sourcelink from a Precision Machine, wheat, Source Gems and a Source Jar. Grow nearby crops to generate Source before the Arcane Machine.
 
 Make the Enchanting Apparatus from a Precision Machine, diamond and Source Gem. The visual recipe steps distinguish the **central reagent** from the **pedestal ingredients** and show the Source cost. Do not put all ingredients in the central block.
 
@@ -222,11 +222,11 @@ Store Source and ingredients before starting repeated recipes. An empty jar is n
 
 ## FE: extend the workshop, keep the early lines
 
-**Tier 5** starts with two iron ingots + coal in a heated Mixer → two steel ingots. Build the Steel Casing using that steel, mined osmium and the two listed earlier frames. The first Heat Generator can be built before you already have FE.
+**Tier 4** starts with two iron ingots + coal in a heated Mixer → two steel ingots. Build the Steel Casing using that steel, mined osmium and one Precision Machine. The first Heat Generator can be built before you already have FE.
 
-The Metallurgic Infuser is **Steel Casing → deploy with Wilden Tribute**. The Tribute remains in the Deployer's hand and provides reusable production capacity. Give the finished Infuser FE and the relevant native infusion material before processing.
+The Metallurgic Infuser is **Steel Casing → deploy a Precision Mechanism**. The mechanism is consumed; no boss catalyst or FE is required to build the first Infuser. Give the finished Infuser FE and the relevant native infusion material before processing.
 
-Enrichment turns the listed raw metals into two dust; native smelting makes two ingots. Keep steel, power and ore-refining branches buffered. Later Mekanism chemistry and AE2 networking follow after this bridge; they do not replace the first Create lines in chapters 1–5.
+Enrichment turns the listed raw metals into two dust; native smelting makes two ingots. Keep steel, power and ore-refining branches buffered. AE2 starts in the same chapter with a Charger and Inscriber, followed by the Inductive Machine and small ME network. Chemistry and HDPE arrive in chapter 6. Basic chemical tanks, tubes, separator, PRC and rotary machine use Ender Machines so the HDPE line can run before the Chemical Machine.
 
 ## A reliable factory checklist
 

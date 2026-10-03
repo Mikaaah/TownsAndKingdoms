@@ -38,9 +38,21 @@
 ### Magic
 - Ars Nouveau
 - Iron's Spells 'n Spellbooks
-- Just Another Witchery Remake
+- Iron’s Gems ’n Jewelry
 
 ### Engineering & Automation
+- Mekanism Tools
+- Slice & Dice
+- Aquatic Ambitions
+- Hypertubes
+- Mekanism Tools
+- Slice & Dice
+- Aquatic Ambitions
+- Hypertubes
+- Mekanism Tools
+- Slice & Dice
+- Aquatic Ambitions
+- Hypertubes
 - Create
 - Create Aeronautics
 - Mekanism
@@ -156,23 +168,37 @@
 
 ## Selected Create / technology integrations
 
-These are part of the intended progression/integration layer rather than standalone content bloat.
+The updated progression selection uses the following integrations. Exact recipe routes and chapters are recorded in [Mods & tiers](https://mikaaah.github.io/TownsAndKingdoms/3.0/tier-map/).
 
-- Create Crafts & Additions - bridge Create rotational power and FE-based technology
-- Ars Creo - Create + Ars Nouveau
-- Create: Ars Nouveau Compat - selected Create processing for Ars materials
-- Create: Wizardry - Create + Iron's Spells 'n Spellbooks
-- Create: Enchantment Industry - Create-based XP/enchanting processing
-- Mekanism Generators - Mekanism power-generation progression
-
-### KubeJS integration modules — locked core integrations
-- KubeJS Create — Create
-- KubeJS Mekanism — Mekanism
-- KubeJS Ars Nouveau — Ars Nouveau
-- KubeJS Iron's Spells — Iron's Spells 'n Spellbooks
-- Applied KubeJS — Applied Energistics 2
-
-**Decision:** These five KubeJS integration modules are part of the locked T&K3 core integration layer. They are not optional candidates. Exact compatible jar versions will be pinned when the assembled 1.21.1 NeoForge test instance is version-locked.
+- Create
+- Enchantment Industry
+- Slice & Dice
+- Crafts & Additions
+- MineColonies Link
+- Sophisticated Storage Create Integration
+- Create: Ars Nouveau Compat
+- Dragons Plus
+- Aeronautics
+- Compat Core
+- Hypertubes
+- Wizardry
+- Aquatic Ambitions
+- Mekanism
+- Mekanism Generators
+- Mekanism Tools
+- Aeronautics Mekanism Compat
+- Applied Energistics 2
+- Applied Mekanistics
+- KubeJS Ponder
+- LootJS
+- KubeJS Tweaks
+- KubeJS Curios
+- KubeJS Iron’s Spells
+- KubeJS Mekanism
+- KubeJS Ars Nouveau
+- Applied KubeJS
+- Create Heat JS
+- KubeJS Create
 
 ---
 
@@ -184,11 +210,10 @@ These are part of the intended progression/integration layer rather than standal
 - AStages Curios
 
 ### Magic / content bridges
-- Ars 'n Spells
-- Alex's Caves: Spellbooks
-- Cataclysm: Spellbooks
-- Ice and Fire: Spellbooks
-- Spellbooks of Twilight
+- Ars Creo
+- Create: Ars Nouveau Compat
+- Create: Wizardry
+- Iron’s Gems ’n Jewelry
 
 ### Apotheosis bridges
 - Apotheosis x Iron's Spellbooks Compat
@@ -234,11 +259,6 @@ Install only the **1.21.1 NeoForge** variants required by the selected mod versi
 - Iron's Lib
 - playerAnimator
 
-### Just Another Witchery Remake
-- Curios API
-- Kotlin for Forge
-- Modonomicon
-
 ### Create Aeronautics
 - Create
 - Sable
@@ -278,9 +298,9 @@ FTB Quests is the visible campaign/progression layer. AStages provides actual ga
 End Remastered is part of the End-access progression. Boss kills and other milestones can be used to gate required Eyes and End access.
 
 ### Create + Mekanism + AE2
-Create remains the compact mechanical/processing backbone. Mekanism is a later technology layer rather than an immediate replacement for Create.
+Create remains the compact mechanical/processing backbone. Mekanism begins in chapter 4 alongside AE2; advanced factories follow End access in chapter 5.
 
-Applied Energistics 2 is the main late-game storage, logistics and autocrafting network. AE2 should support the production chain rather than replace the intended Create/Mekanism processing progression.
+Applied Energistics 2 starts with the chapter 4 network and grows through chemical, spatial and quantum logistics. AE2 should support the production chain rather than replace the intended Create/Mekanism processing progression.
 
 Create Crafts & Additions must be progression-gated so the Alternator / Electric Motor loop does not bypass intended power progression.
 
@@ -348,3 +368,17 @@ The following are intentionally not finalized yet:
 - Final Epic Fight moveset compatibility matrix
 
 Do not fill these with random content mods just to make the list larger. Each addition should have a clear role in progression, worldbuilding, integration or multiplayer.
+
+- Architect’s Palette
+
+- Sophisticated Storage
+
+- Sophisticated Backpacks
+
+- Farmer’s Delight
+
+- Chipped
+
+- Amendments
+
+- Supplementaries

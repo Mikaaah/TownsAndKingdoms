@@ -30,7 +30,7 @@ for c in m['chapters']:
 # Follow component construction across frames; native world/chemical sources are boundaries.
 recipes=collections.defaultdict(list)
 for r in m['recipes']:recipes[oid(r['output'])].append(r)
-for t in range(6,11):
+for t in range(2,11):
  frame=m['frames'][str(t)];r=next(r for r in recipes[frame]if r['kind']=='deploying')
  mechanism=recipes[r['inputs'][1]][0];assert mechanism['kind']=='sequence' and mechanism['tier']==t
  assert minimum.get(oid(mechanism['inputs'][0]),1)<t
@@ -38,9 +38,9 @@ for t in range(6,11):
   if isinstance(x,str):assert minimum.get(oid(x),1)<=t,(t,x)
  assert not r.get('keep')
 bootstrap={out:next(r for r in recipes[out])for out in ('ae2:charger','ae2:inscriber','betterend:diamond_hammer','farmersdelight:diamond_knife')}
-for out,r in bootstrap.items():assert not any(isinstance(x,str)and oid(x)==m['frames']['6']for x in inputs(r)),out
-keystone=recipes['kubejs:tk3_sovereign_keystone'][0];assert keystone['keep_steps']==[0,1,2,3]
-assert len(m['campaign_extension']['bosses'])==4
+for out,r in bootstrap.items():assert not any(isinstance(x,str)and oid(x)==m['frames']['4']for x in inputs(r)),out
+keystone=recipes['kubejs:tk3_sovereign_keystone'][0];assert keystone['keep_steps']==[0,1,2,3,4]
+assert len(m['campaign_extension']['bosses'])==5
 assert 'mekanism:dust_iron'not in m['output_whitelist']
 assert not any(r['kind']in ('shaped','shapeless','mixing')and oid(r['output'])=='mekanism:pellet_antimatter'for r in m['recipes'])
 assert recipes['mekanism:hdpe_sheet'][0]['json']['input']['count']==3
@@ -68,10 +68,13 @@ if args.assets:
   assert changed<= {'key','ingredients','loops','ingredient'},(r['id'],changed)
   if edited['type']=='mekanism:mek_data'and'P'in original['key']:assert edited['key']['P']==original['key']['P']
   assert original['type']==edited['type'];native_checked+=1
-coverage=json.loads((root/'docs/mod_tier_audit.json').read_text());assert len(coverage['entries'])==140
-assert coverage['status_counts']['Candidate']==6
+coverage=json.loads((root/'docs/mod_tier_audit.json').read_text());assert len(coverage['entries'])==51
+assert coverage['status_counts']['Selected']==51
 stage=(root/'kubejs/server_scripts/progression/tk3_stages.js').read_text()
-assert '"tk3/end", "tk3_tier_9", "minecraft:the_end"'in stage
+assert '"tk3/end", "tk3_tier_5", "minecraft:the_end"'in stage
 loot=(root/'kubejs/server_scripts/loot/tk3_boss_cores.js').read_text()
-for b in m['campaign_extension']['bosses']:assert b['entity']in loot and b['item']in loot and '.killedByPlayer()'in loot
+for b in m['campaign_extension']['bosses']:
+ if b.get('source')=='quest reward':
+  q=next(q for c in m['chapters']for q in c['quests']if q['id']==b['quest']);assert any(r.get('item',{}).get('id')==b['item']for r in q['rewards'])
+ else:assert b['entity']in loot and b['item']in loot and '.killedByPlayer()'in loot
 print(f'PASS: {len(m["recipes"])} recipes; ten frame/component paths; ordinary-tool bootstraps; native chemical quantities; retained core steps; {len(coverage["entries"])} mod/addon/support entries; {native_checked} native JSON mirrors checked.')

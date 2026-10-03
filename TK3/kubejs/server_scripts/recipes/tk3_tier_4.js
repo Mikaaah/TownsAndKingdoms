@@ -1,68 +1,10 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
 
-    [
-        "ars_nouveau:agronomic_sourcelink",
-        "ars_nouveau:alchemical_sourcelink",
-        "ars_nouveau:enchanters_sword",
-        "ars_nouveau:enchanting_apparatus",
-        "ars_nouveau:manipulation_essence",
-        "ars_nouveau:mycelial_sourcelink",
-        "ars_nouveau:relay",
-        "ars_nouveau:relay_collector",
-        "ars_nouveau:relay_deposit",
-        "ars_nouveau:relay_splitter",
-        "ars_nouveau:source_gem",
-        "ars_nouveau:starbuncle_charm",
-        "ars_nouveau:whirlisprig_charm",
-        "ars_nouveau:wixie_charm",
-        "create:fluid_tank",
-        "create:precision_mechanism",
-        "create_enchantment_industry:blaze_enchanter",
-        "create_enchantment_industry:experience_hatch",
-        "create_enchantment_industry:mechanical_grindstone",
-        "irons_spellbooks:alchemist_cauldron",
-        "irons_spellbooks:arcane_anvil",
-        "irons_spellbooks:arcane_essence",
-        "irons_spellbooks:common_ink",
-        "kubejs:tk3_arcane_machine",
-        "kubejs:tk3_arcane_mechanism",
-        "kubejs:tk3_incomplete_arcane_mechanism",
-        "kubejs:tk3_precision_machine",
-        "minecraft:anvil",
-        "minecraft:brewing_stand",
-        "minecraft:brown_mushroom",
-        "minecraft:cauldron",
-        "minecraft:chest",
-        "minecraft:diamond",
-        "minecraft:enchanting_table",
-        "minecraft:gold_ingot",
-        "minecraft:grindstone",
-        "minecraft:hopper",
-        "minecraft:ink_sac",
-        "minecraft:oak_sapling",
-        "minecraft:redstone",
-        "minecraft:wheat"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
-
     //->------------------------]  Tier 4 / Materials / Apparatus [------------------------<-//
-
-    // Agronomic Sourcelink / Apparatus
-    event.recipes.ars_nouveau.enchanting_apparatus(
-        [
-            "minecraft:wheat",
-            "ars_nouveau:source_gem"
-        ],
-        "kubejs:tk3_arcane_machine",
-        "ars_nouveau:agronomic_sourcelink",
-        1000)
-        .id("kubejs:tk3/tier_4/agronomic_sourcelink");
 
     // Relay / Apparatus
     event.recipes.ars_nouveau.enchanting_apparatus(
@@ -196,6 +138,41 @@ ServerEvents.recipes(event => {
         1000)
         .id("kubejs:tk3/tier_4/mycelial_sourcelink");
 
+    //->------------------------]  Tier 4 / Materials / Deploying [------------------------<-//
+
+    // Metallurgic Infuser / Deploying
+    event.recipes.create.deploying(
+        [
+            "mekanism:metallurgic_infuser"
+        ],
+        [
+            "mekanism:steel_casing",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/metallurgic_infuser");
+
+    //->------------------------]  Tier 4 / Materials / Enriching [------------------------<-//
+
+    // Dust Iron / Enriching
+    event.recipes.mekanism.enriching(
+        "2x mekanism:dust_iron",
+        "minecraft:raw_iron")
+        .id("kubejs:tk3/tier_5/iron_refining");
+
+    // Dust Copper / Enriching
+    event.recipes.mekanism.enriching(
+        "2x mekanism:dust_copper",
+        "minecraft:raw_copper")
+        .id("kubejs:tk3/tier_5/copper_refining");
+
+    //->------------------------]  Tier 4 / Materials / Mek_Smelting [------------------------<-//
+
+    // Ingot Steel / Mek Smelting
+    event.recipes.mekanism.smelting(
+        "mekanism:ingot_steel",
+        "mekanism:dust_steel")
+        .id("kubejs:tk3/tier_5/steel_from_dust");
+
     //->------------------------]  Tier 4 / Materials / Mixing [------------------------<-//
 
     // Common Ink / Mixing
@@ -211,6 +188,19 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/tier_4/common_ink");
 
+    // Ingot Steel / Mixing
+    event.recipes.create.mixing(
+        [
+            "2x mekanism:ingot_steel"
+        ],
+        [
+            "minecraft:iron_ingot",
+            "minecraft:iron_ingot",
+            "minecraft:coal"
+        ])
+        .heated()
+        .id("kubejs:tk3/tier_5/steel_bootstrap");
+
     //->------------------------]  Tier 4 / Materials / Shapeless [------------------------<-//
 
     // Enchanting Apparatus / Shapeless
@@ -223,10 +213,140 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/tier_4/enchanting_apparatus");
 
+    // Enrichment Chamber / Shapeless
+    event.shapeless(
+        "mekanism:enrichment_chamber",
+        [
+            "mekanism:steel_casing",
+            "mekanism:alloy_infused",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/enrichment_chamber");
+
+    // Crusher / Shapeless
+    event.shapeless(
+        "mekanism:crusher",
+        [
+            "mekanism:steel_casing",
+            "minecraft:diamond",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/crusher");
+
+    // Energized Smelter / Shapeless
+    event.shapeless(
+        "mekanism:energized_smelter",
+        [
+            "mekanism:steel_casing",
+            "minecraft:furnace",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/energized_smelter");
+
+    // Heat Generator / Shapeless
+    event.shapeless(
+        "mekanismgenerators:heat_generator",
+        [
+            "mekanism:steel_casing",
+            "minecraft:furnace",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/heat_generator");
+
+    // Alternator / Shapeless
+    event.shapeless(
+        "createaddition:alternator",
+        [
+            "mekanism:steel_casing",
+            "createaddition:copper_spool",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/alternator");
+
+    // Electric Motor / Shapeless
+    event.shapeless(
+        "createaddition:electric_motor",
+        [
+            "mekanism:steel_casing",
+            "createaddition:capacitor",
+            "create:precision_mechanism"
+        ])
+        .id("kubejs:tk3/tier_5/electric_motor");
+
+    // Basic Universal Cable / Shapeless
+    event.shapeless(
+        "4x mekanism:basic_universal_cable",
+        [
+            "mekanism:ingot_steel",
+            "createaddition:copper_spool",
+            "minecraft:redstone"
+        ])
+        .id("kubejs:tk3/tier_5/basic_universal_cable");
+
+    // Basic Mechanical Pipe / Shapeless
+    event.shapeless(
+        "4x mekanism:basic_mechanical_pipe",
+        [
+            "mekanism:ingot_steel",
+            "create:fluid_pipe",
+            "minecraft:glass"
+        ])
+        .id("kubejs:tk3/tier_5/basic_mechanical_pipe");
+
+    // Basic Logistical Transporter / Shapeless
+    event.shapeless(
+        "4x mekanism:basic_logistical_transporter",
+        [
+            "mekanism:ingot_steel",
+            "create:brass_funnel",
+            "minecraft:redstone"
+        ])
+        .id("kubejs:tk3/tier_5/basic_logistical_transporter");
+
+    // Basic Energy Cube / Shapeless
+    event.shapeless(
+        "mekanism:basic_energy_cube",
+        [
+            "mekanism:steel_casing",
+            "mekanism:alloy_infused",
+            "minecraft:redstone"
+        ])
+        .id("kubejs:tk3/tier_5/basic_energy_cube");
+
+    //->------------------------]  Tier 4 / Tools & components [------------------------<-//
+
+    // Agronomic Sourcelink / Shaped
+    event.shaped(
+        "ars_nouveau:agronomic_sourcelink",
+        [
+            "WWW",
+            "GPG",
+            " S "
+        ], {
+            "W": "minecraft:wheat",
+            "G": "ars_nouveau:source_gem",
+            "P": "kubejs:tk3_precision_machine",
+            "S": "ars_nouveau:source_jar"
+        })
+        .id("kubejs:tk3/tier_4/agronomic_sourcelink");
+
+    // Steel Casing / Shaped
+    event.shaped(
+        "mekanism:steel_casing",
+        [
+            "SPS",
+            "O O",
+            "SSS"
+        ], {
+            "S": "mekanism:ingot_steel",
+            "O": "mekanism:ingot_osmium",
+            "P": "kubejs:tk3_precision_machine"
+        })
+        .id("kubejs:tk3/tier_5/steel_casing");
+
     //->------------------------]  Tier 4 / Mechanisms / Sequenced assembly [------------------------<-//
 
     // Arcane Mechanism / Sequence
-    // Final tool is durability-based. Do not keepHeldItem(): ordinary tools wear; unbreakable rewards do not.
     event.recipes.create.sequenced_assembly(
         [
             "kubejs:tk3_arcane_mechanism"

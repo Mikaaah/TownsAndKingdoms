@@ -1,54 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "ars_creo:starbuncle_wheel",
-        "ars_nouveau:air_essence",
-        "ars_nouveau:earth_essence",
-        "ars_nouveau:fire_essence",
-        "ars_nouveau:source_gem",
-        "ars_nouveau:source_jar",
-        "ars_nouveau:starbuncle_charm",
-        "ars_nouveau:water_essence",
-        "create:fluid_pipe",
-        "create:mechanical_pump",
-        "create:smart_fluid_pipe",
-        "create_wizardry:arcane_pipe",
-        "create_wizardry:arcane_pump",
-        "create_wizardry:arcane_sheet",
-        "create_wizardry:blaze_caster",
-        "create_wizardry:channeler",
-        "create_wizardry:mana_siphon",
-        "create_wizardry:smart_arcane_pipe",
-        "irons_spellbooks:arcane_essence",
-        "irons_spellbooks:arcane_ingot",
-        "irons_spellbooks:arcane_rune",
-        "irons_spellbooks:blank_rune",
-        "irons_spellbooks:common_ink",
-        "irons_spellbooks:fire_rune",
-        "irons_spellbooks:ice_rune",
-        "irons_spellbooks:lightning_rune",
-        "irons_spellbooks:magic_cloth",
-        "irons_spellbooks:nature_rune",
-        "kubejs:tk3_arcane_machine",
-        "kubejs:tk3_arcane_mechanism",
-        "minecraft:blaze_rod",
-        "minecraft:glass_bottle",
-        "minecraft:gold_ingot",
-        "minecraft:ink_sac",
-        "minecraft:iron_ingot",
-        "minecraft:stone"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
-
-    //->------------------------]  Tier 4 / Ars Creo / Processing [------------------------<-//
-
-    //->------------------------]  Tier 4 / Create Wizardry / Processing [------------------------<-//
 
     //->------------------------]  Tier 4 / Irons Spellbooks / Processing [------------------------<-//
 
@@ -140,6 +94,8 @@ ServerEvents.recipes(event => {
         Fluid.of("create_wizardry:mana",
             250))
         .id("kubejs:tk3/magic/mana_ink");
+
+    //->------------------------]  Tier 5 / Irons Spellbooks / Processing [------------------------<-//
 
     // Common Ink / Cauldron Empty
     event.recipes.irons_spellbooks.alchemist_cauldron_empty(

@@ -1,67 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "architects_palette:algal_blend",
-        "betterend:iron_hammer",
-        "create:adjustable_chain_gearshift",
-        "create:analog_lever",
-        "create:andesite_alloy",
-        "create:andesite_funnel",
-        "create:andesite_tunnel",
-        "create:basin",
-        "create:belt_connector",
-        "create:cart_assembler",
-        "create:chute",
-        "create:clutch",
-        "create:cogwheel",
-        "create:deployer",
-        "create:depot",
-        "create:encased_chain_drive",
-        "create:encased_fan",
-        "create:gantry_carriage",
-        "create:gearbox",
-        "create:gearshift",
-        "create:iron_sheet",
-        "create:large_cogwheel",
-        "create:large_water_wheel",
-        "create:linear_chassis",
-        "create:mechanical_bearing",
-        "create:mechanical_drill",
-        "create:mechanical_harvester",
-        "create:mechanical_mixer",
-        "create:mechanical_piston",
-        "create:mechanical_plough",
-        "create:mechanical_press",
-        "create:mechanical_saw",
-        "create:portable_storage_interface",
-        "create:propeller",
-        "create:radial_chassis",
-        "create:rope_pulley",
-        "create:shaft",
-        "create:speedometer",
-        "create:vertical_gearbox",
-        "create:water_wheel",
-        "create:weighted_ejector",
-        "create:windmill_bearing",
-        "kubejs:tk3_incomplete_rotation_mechanism",
-        "kubejs:tk3_kinetic_machine",
-        "kubejs:tk3_rotation_mechanism",
-        "minecraft:andesite",
-        "minecraft:clay_ball",
-        "minecraft:cobblestone",
-        "minecraft:dried_kelp",
-        "minecraft:gravel",
-        "minecraft:kelp",
-        "minecraft:sand",
-        "minecraft:stick"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 1 / Materials / Mixing [------------------------<-//
 
@@ -166,7 +107,6 @@ ServerEvents.recipes(event => {
     //->------------------------]  Tier 1 / Mechanisms / Sequenced assembly [------------------------<-//
 
     // Kinetic Mechanism / Sequence
-    // Final tool is durability-based. Do not keepHeldItem(): ordinary tools wear; unbreakable rewards do not.
     event.recipes.create.sequenced_assembly(
         [
             "kubejs:tk3_rotation_mechanism"

@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "tiers": [
+    {
+      "tier": 1,
+      "reachable_targets": [
+        "kubejs:tk3_rotation_mechanism",
+        "kubejs:tk3_kinetic_machine"
+      ]
+    },
+    {
+      "tier": 2,
+      "reachable_targets": [
+        "kubejs:tk3_sealed_mechanism",
+        "kubejs:tk3_hydraulic_machine"
+      ]
+    },
+    {
+      "tier": 3,
+      "reachable_targets": [
+        "create:precision_mechanism",
+        "kubejs:tk3_precision_machine"
+      ]
+    },
+    {
+      "tier": 4,
+      "reachable_targets": [
+        "kubejs:tk3_network_mechanism",
+        "kubejs:tk3_network_chassis",
+        "mekanism:metallurgic_infuser",
+        "ae2:charger",
+        "ae2:inscriber",
+        "ars_nouveau:agronomic_sourcelink",
+        "kubejs:tk3_arcane_machine"
+      ]
+    },
+    {
+      "tier": 5,
+      "reachable_targets": [
+        "kubejs:tk3_ender_mechanism",
+        "kubejs:tk3_ender_machine"
+      ]
+    },
+    {
+      "tier": 6,
+      "reachable_targets": [
+        "kubejs:tk3_reinforced_mechanism",
+        "kubejs:tk3_chemical_machine",
+        "mekanism:hdpe_sheet",
+        "mekanism:pressurized_reaction_chamber",
+        "mekanism:electrolytic_separator"
+      ]
+    },
+    {
+      "tier": 7,
+      "reachable_targets": [
+        "kubejs:tk3_expedition_mechanism",
+        "kubejs:tk3_expedition_frame"
+      ]
+    },
+    {
+      "tier": 8,
+      "reachable_targets": [
+        "kubejs:tk3_containment_mechanism",
+        "kubejs:tk3_containment_frame"
+      ]
+    },
+    {
+      "tier": 9,
+      "reachable_targets": [
+        "kubejs:tk3_singularity_mechanism",
+        "kubejs:tk3_singularity_frame",
+        "mekanism:sps_casing",
+        "mekanism:antiprotonic_nucleosynthesizer",
+        "kubejs:tk3_stargaze_singularity"
+      ]
+    },
+    {
+      "tier": 10,
+      "reachable_targets": [
+        "kubejs:tk3_sovereign_mechanism",
+        "kubejs:tk3_sovereign_core"
+      ]
+    }
+  ],
+  "boundary": "Native world sources, unmapped tags and energy balance require Minecraft integration testing."
+}

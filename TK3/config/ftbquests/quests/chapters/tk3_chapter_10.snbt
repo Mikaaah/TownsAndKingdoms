@@ -2,225 +2,46 @@
   "id": "C3C4EE5EFEBE5FFC",
   "filename": "tk3_chapter_10",
   "group": "7427C3F538DF9198",
-  "title": "X · The Sovereign Project",
-  "subtitle": "Join every workshop into a renewable kingdom",
+  "title": "Sovereign · A Renewable Kingdom",
+  "subtitle": "Sovereign Core and connected production",
   "icon": "kubejs:tk3_sovereign_core",
   "order_index": 10,
   "default_hide_dependency_lines": false,
   "quests": [
     {
-      "id": "10100519D861D098",
-      "title": "Sovereign Mechanism",
+      "id": "048DD0D80436286A",
+      "title": "Workshop plan · Sovereign Core",
       "description": [
-        "Singularity Mechanism → Antimatter Pellet → Dragon Breath → Diamond Hammer. This last production line consumes no boss drops."
+        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
       ],
       "dependencies": [
         "DD2408B49260ECA5"
       ],
       "tasks": [
         {
-          "id": "5C5A37B3859518B9",
-          "type": "item",
-          "item": {
-            "id": "kubejs:tk3_sovereign_mechanism",
-            "count": 1
-          },
-          "count": 4,
-          "consume_items": false
+          "id": "75FBB6993724F9CC",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
-      "icon": "kubejs:tk3_sovereign_mechanism",
-      "rewards": []
-    },
-    {
-      "id": "EC4F165D5A774C75",
-      "title": "Sovereign Core",
-      "description": [
-        "Deploy a Sovereign Mechanism onto an SPS Casing. The resulting core is a physical input to the final project and the highest equipment tier."
-      ],
-      "dependencies": [
-        "10100519D861D098"
-      ],
-      "tasks": [
-        {
-          "id": "B01D2F113D7EC6AE",
-          "type": "item",
-          "item": {
-            "id": "kubejs:tk3_sovereign_core",
-            "count": 1
-          },
-          "count": 2,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 3.0,
-      "y": 0.0,
       "icon": "kubejs:tk3_sovereign_core",
       "rewards": []
     },
     {
-      "id": "AC139F114A561520",
-      "title": "An industrial suit",
+      "id": "11202848E5630522",
+      "title": "Imprint the Sovereign Keystone",
       "description": [
-        "Optional: build the native powered suit through the tier-aware data-preserving recipe. Create, magic and chemistry still supply its infrastructure."
+        "Deploy Verdant Sigil, Storm Core, Ember Core, Void Core and Dragon Core onto a Sovereign Core in one sequence. Every core is retained; finish using the ordinary Enchanter’s Sword."
       ],
       "dependencies": [
-        "EC4F165D5A774C75"
+        "048DD0D80436286A"
       ],
       "tasks": [
         {
-          "id": "1A80D9A8DEDFC7DC",
-          "type": "item",
-          "item": {
-            "id": "mekanism:mekasuit_bodyarmor",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 6.0,
-      "y": 0.0,
-      "icon": "mekanism:mekasuit_bodyarmor",
-      "rewards": []
-    },
-    {
-      "id": "CEB0A8587378E661",
-      "title": "One tool, powered",
-      "description": [
-        "Optional: configure modules for your role instead of assuming all modules are free. High equipment recipes use the Sovereign Core."
-      ],
-      "dependencies": [
-        "EC4F165D5A774C75"
-      ],
-      "tasks": [
-        {
-          "id": "5F226DA75F2EFF7B",
-          "type": "item",
-          "item": {
-            "id": "mekanism:meka_tool",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 9.0,
-      "y": 0.0,
-      "icon": "mekanism:meka_tool",
-      "rewards": []
-    },
-    {
-      "id": "CA1B50BFB755EBF9",
-      "title": "A final storage tier",
-      "description": [
-        "Optional: expand storage only when the network needs it. Infinite and creative alternatives remain unavailable."
-      ],
-      "dependencies": [
-        "EC4F165D5A774C75"
-      ],
-      "tasks": [
-        {
-          "id": "D3A5CDA7DECC3FA5",
-          "type": "item",
-          "item": {
-            "id": "ae2:cell_component_256k",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 12.0,
-      "y": 0.0,
-      "icon": "ae2:cell_component_256k",
-      "rewards": []
-    },
-    {
-      "id": "1B09D48201B94532",
-      "title": "The workshop still matters",
-      "description": [
-        "Confirm automated production of kinetic, sealed, precision and arcane mechanisms. Use actual recipe batches in AE2 patterns."
-      ],
-      "dependencies": [
-        "EC4F165D5A774C75"
-      ],
-      "tasks": [
-        {
-          "id": "B489F5A7DB4D5F2C",
-          "type": "checkmark",
-          "title": "Confirm this production line works"
-        }
-      ],
-      "optional": false,
-      "x": 0.0,
-      "y": 3.0,
-      "icon": "kubejs:tk3_sovereign_core",
-      "rewards": []
-    },
-    {
-      "id": "ED8E13A82BFC864D",
-      "title": "Industry closes its loop",
-      "description": [
-        "Confirm steel, HDPE, polonium and antimatter production with buffers, waste handling and return paths."
-      ],
-      "dependencies": [
-        "1B09D48201B94532"
-      ],
-      "tasks": [
-        {
-          "id": "504136DAB275F0D7",
-          "type": "checkmark",
-          "title": "Confirm this production line works"
-        }
-      ],
-      "optional": false,
-      "x": 3.0,
-      "y": 3.0,
-      "icon": "kubejs:tk3_sovereign_core",
-      "rewards": []
-    },
-    {
-      "id": "8F06566A0D8CCBAA",
-      "title": "A kingdom has supplies",
-      "description": [
-        "Maintain a MineColonies warehouse supply line through Create logistics and provide food and building materials from renewable farms."
-      ],
-      "dependencies": [
-        "ED8E13A82BFC864D"
-      ],
-      "tasks": [
-        {
-          "id": "34D483C5AA03CF6C",
-          "type": "checkmark",
-          "title": "Confirm this production line works"
-        }
-      ],
-      "optional": false,
-      "x": 6.0,
-      "y": 3.0,
-      "icon": "kubejs:tk3_sovereign_core",
-      "rewards": []
-    },
-    {
-      "id": "1507DBDB120678B8",
-      "title": "The Sovereign Keystone",
-      "description": [
-        "Sequence a Sovereign Core through four separate boss-core deployments: Verdant Sigil, Storm Core, Ember Core, Void Core. Each core stays in its Deployer. Finish with an Enchanter’s Sword; one guaranteed Keystone."
-      ],
-      "dependencies": [
-        "8F06566A0D8CCBAA"
-      ],
-      "tasks": [
-        {
-          "id": "203D0D4C41A29B12",
+          "id": "8C415CB44AB2B060",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_sovereign_keystone",
@@ -231,49 +52,206 @@
         }
       ],
       "optional": false,
-      "x": 9.0,
-      "y": 3.0,
+      "x": 3.0,
+      "y": 0.0,
       "icon": "kubejs:tk3_sovereign_keystone",
       "rewards": []
     },
     {
-      "id": "502988B461C73519",
-      "title": "Milestone · The Sovereign Project",
+      "id": "A2F7B45A45898E5F",
+      "title": "Sovereign Mechanism",
       "description": [
-        "The Sovereign Keystone joins the mechanical, magical, digital, nuclear and exploration workshops. Continue building your kingdom with the complete production system. Reward: a named unbreakable finishing tool; one claim per player."
+        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:diamond_hammer. Ordinary tools wear; the chapter reward version is unbreakable."
       ],
       "dependencies": [
-        "ED8E13A82BFC864D",
-        "8F06566A0D8CCBAA",
-        "1507DBDB120678B8"
+        "11202848E5630522"
       ],
       "tasks": [
         {
-          "id": "0554C420BAB40F33",
-          "type": "checkmark",
-          "title": "Confirm this production line works"
+          "id": "1721FA18FC3DDD3B",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_sovereign_mechanism",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_sovereign_mechanism",
+      "rewards": []
+    },
+    {
+      "id": "94FE0E1F50545C0B",
+      "title": "Sovereign Core",
+      "description": [
+        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+      ],
+      "dependencies": [
+        "A2F7B45A45898E5F"
+      ],
+      "tasks": [
+        {
+          "id": "CFB2E179641A0C82",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_sovereign_core",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 9.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_sovereign_core",
+      "rewards": []
+    },
+    {
+      "id": "DF8CD8E80FF1BEBC",
+      "title": "Equip the industrial kingdom",
+      "description": [
+        "Sovereign Cores build the advanced equipment layer. Modules, energy and native upgrade components are still required."
+      ],
+      "dependencies": [
+        "94FE0E1F50545C0B"
+      ],
+      "tasks": [
+        {
+          "id": "5E826CCAF17C0A73",
+          "type": "item",
+          "item": {
+            "id": "mekanism:meka_tool",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
         }
       ],
       "optional": false,
       "x": 12.0,
-      "y": 3.0,
+      "y": 0.0,
+      "icon": "mekanism:meka_tool",
+      "rewards": []
+    },
+    {
+      "id": "7EB5D20B6EA27606",
+      "title": "Finish the large ME network",
+      "description": [
+        "Use native preserving upgrades to reach 256k. Storage capacity supports production; creative cells and infinity upgrades remain unavailable."
+      ],
+      "dependencies": [
+        "94FE0E1F50545C0B"
+      ],
+      "tasks": [
+        {
+          "id": "5300AB6C71135205",
+          "type": "item",
+          "item": {
+            "id": "ae2:item_storage_cell_256k",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 4.0,
+      "icon": "ae2:item_storage_cell_256k",
+      "rewards": []
+    },
+    {
+      "id": "9D5F5CBAB5E5175A",
+      "title": "Run the workshop continuously",
+      "description": [
+        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+      ],
+      "dependencies": [
+        "94FE0E1F50545C0B",
+        "DF8CD8E80FF1BEBC",
+        "7EB5D20B6EA27606"
+      ],
+      "tasks": [
+        {
+          "id": "5E0FA82F8E86203A",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_sovereign_core",
+      "rewards": []
+    },
+    {
+      "id": "502988B461C73519",
+      "title": "Complete chapter 10",
+      "description": [
+        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+      ],
+      "dependencies": [
+        "9D5F5CBAB5E5175A"
+      ],
+      "tasks": [
+        {
+          "id": "4649906D1BD8CE34",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 6.0,
+      "y": 4.0,
       "icon": "kubejs:tk3_sovereign_core",
       "rewards": [
         {
-          "id": "3A812455DC5876BA",
+          "id": "AC242BC290B2A43C",
           "type": "item",
           "item": {
             "id": "betterend:diamond_hammer",
             "count": 1,
             "components": {
               "minecraft:unbreakable": {},
-              "minecraft:custom_name": "{\"text\": \"Sovereign Core Tool\", \"color\": \"light_purple\", \"italic\": false}"
+              "minecraft:custom_name": "{\"text\": \"Sovereign Core Workshop Tool\", \"color\": \"light_purple\", \"italic\": false}"
             }
           },
           "count": 1,
           "team_reward": false
         }
       ]
+    },
+    {
+      "id": "72B5209695E2DD48",
+      "title": "Useful settlement details",
+      "description": [
+        "Supplementaries and Amendments supply practical building and interaction tools. Waystones support travel alongside airships and quantum links."
+      ],
+      "dependencies": [
+        "048DD0D80436286A"
+      ],
+      "tasks": [
+        {
+          "id": "52FAE450640D1018",
+          "type": "item",
+          "item": {
+            "id": "supplementaries:rope",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 4.0,
+      "icon": "supplementaries:rope",
+      "rewards": []
     }
   ]
 }

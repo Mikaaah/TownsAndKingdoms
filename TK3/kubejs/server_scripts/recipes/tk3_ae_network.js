@@ -1,10 +1,10 @@
 // priority: 0
-// T&K3 chapters 1–10 / ae_network
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
 
-    //->------------------------]  Tier 6 / Network construction & storage [------------------------<-//
+    //->------------------------]  Tier 4 / Network construction & storage [------------------------<-//
 
     // Tiny Tnt / Native
     event.custom({
@@ -3290,8 +3290,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/ae_network/ae2_network_blocks_crystal_processing_growth_accelerator"
-    );
+        "kubejs:tk3/ae_network/ae2_network_blocks_crystal_processing_growth_accelerator");
 
     // Pattern Provider / Native
     event.custom({
@@ -4703,7 +4702,7 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae_network/ae2_block_cutter_slabs_fluix_slab");
 
-    //->------------------------]  Tier 7 / Network construction & storage [------------------------<-//
+    //->------------------------]  Tier 6 / Network construction & storage [------------------------<-//
 
     // Color Applicator / Native
     event.custom({
@@ -5074,34 +5073,7 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae_network/ae2_network_upgrade_wireless_crafting_terminal");
 
-    // Wireless Access Point / Native
-    event.custom({
-            "type": "minecraft:crafting_shaped",
-            "category": "misc",
-            "key": {
-                "a": {
-                    "item": "kubejs:tk3_expedition_frame"
-                },
-                "b": {
-                    "item": "ae2:calculation_processor"
-                },
-                "c": {
-                    "item": "ae2:fluix_glass_cable"
-                }
-            },
-            "pattern": [
-                "a",
-                "b",
-                "c"
-            ],
-            "result": {
-                "count": 1,
-                "id": "ae2:wireless_access_point"
-            }
-        })
-        .id("kubejs:tk3/ae_network/ae2_network_wireless_access_point");
-
-    //->------------------------]  Tier 8 / Network construction & storage [------------------------<-//
+    //->------------------------]  Tier 7 / Network construction & storage [------------------------<-//
 
     // Portable Item Cell 16K / Native
     event.custom({
@@ -5189,6 +5161,131 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae_network/ae2_network_cells_fluid_storage_cell_16k");
 
+    // Item Storage Cell 16K / Native
+    event.custom({
+            "type": "minecraft:crafting_shapeless",
+            "category": "misc",
+            "ingredients": [{
+                    "item": "ae2:cell_component_16k"
+                }, {
+                    "item": "ae2:item_cell_housing"
+                }],
+            "result": {
+                "count": 1,
+                "id": "ae2:item_storage_cell_16k"
+            }
+        })
+        .id("kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_16k_storage");
+
+    // Item Storage Cell 16K / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "a": {
+                    "item": "ae2:quartz_glass"
+                },
+                "b": {
+                    "tag": "c:dusts/redstone"
+                },
+                "c": {
+                    "item": "ae2:cell_component_16k"
+                },
+                "d": {
+                    "tag": "c:ingots/iron"
+                },
+                "e": {
+                    "tag": "c:ingots/copper"
+                }
+            },
+            "pattern": [
+                "aba",
+                "bcb",
+                "ded"
+            ],
+            "result": {
+                "count": 1,
+                "id": "ae2:item_storage_cell_16k"
+            }
+        })
+        .id("kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_16k");
+
+    // Cell Component 16K / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "a": {
+                    "tag": "c:dusts/glowstone"
+                },
+                "b": {
+                    "item": "ae2:calculation_processor"
+                },
+                "c": {
+                    "item": "ae2:cell_component_4k"
+                },
+                "d": {
+                    "item": "ae2:quartz_glass"
+                }
+            },
+            "pattern": [
+                "aba",
+                "cdc",
+                "aca"
+            ],
+            "result": {
+                "count": 1,
+                "id": "ae2:cell_component_16k"
+            }
+        })
+        .id(
+        "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_16k_part");
+
+    // 16K Crafting Storage / Native
+    event.custom({
+            "type": "minecraft:crafting_shapeless",
+            "category": "misc",
+            "ingredients": [{
+                    "item": "ae2:crafting_unit"
+                }, {
+                    "item": "ae2:cell_component_16k"
+                }],
+            "result": {
+                "count": 1,
+                "id": "ae2:16k_crafting_storage"
+            }
+        })
+        .id("kubejs:tk3/ae_network/ae2_network_crafting_16k_cpu_crafting_storage");
+
+    // Wireless Access Point / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "a": {
+                    "item": "kubejs:tk3_expedition_frame"
+                },
+                "b": {
+                    "item": "ae2:calculation_processor"
+                },
+                "c": {
+                    "item": "ae2:fluix_glass_cable"
+                }
+            },
+            "pattern": [
+                "a",
+                "b",
+                "c"
+            ],
+            "result": {
+                "count": 1,
+                "id": "ae2:wireless_access_point"
+            }
+        })
+        .id("kubejs:tk3/ae_network/ae2_network_wireless_access_point");
+
+    //->------------------------]  Tier 8 / Network construction & storage [------------------------<-//
+
     // Spatial Cell Component 16 / Native
     event.custom({
             "type": "minecraft:crafting_shaped",
@@ -5245,22 +5342,6 @@ ServerEvents.recipes(event => {
             }
         })
         .id("kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_128_cubed");
-
-    // Item Storage Cell 16K / Native
-    event.custom({
-            "type": "minecraft:crafting_shapeless",
-            "category": "misc",
-            "ingredients": [{
-                    "item": "ae2:cell_component_16k"
-                }, {
-                    "item": "ae2:item_cell_housing"
-                }],
-            "result": {
-                "count": 1,
-                "id": "ae2:item_storage_cell_16k"
-            }
-        })
-        .id("kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_16k_storage");
 
     // Spatial Storage Cell 2 / Native
     event.custom({
@@ -5320,8 +5401,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_128_cubed_storage"
-    );
+        "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_128_cubed_storage");
 
     // Spatial Storage Cell 16 / Native
     event.custom({
@@ -5338,8 +5418,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_16_cubed_storage"
-    );
+        "kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_16_cubed_storage");
 
     // Spatial Storage Cell 16 / Native
     event.custom({
@@ -5401,39 +5480,6 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae_network/ae2_network_cells_spatial_storage_cell_2_cubed");
 
-    // Item Storage Cell 16K / Native
-    event.custom({
-            "type": "minecraft:crafting_shaped",
-            "category": "misc",
-            "key": {
-                "a": {
-                    "item": "ae2:quartz_glass"
-                },
-                "b": {
-                    "tag": "c:dusts/redstone"
-                },
-                "c": {
-                    "item": "ae2:cell_component_16k"
-                },
-                "d": {
-                    "tag": "c:ingots/iron"
-                },
-                "e": {
-                    "tag": "c:ingots/copper"
-                }
-            },
-            "pattern": [
-                "aba",
-                "bcb",
-                "ded"
-            ],
-            "result": {
-                "count": 1,
-                "id": "ae2:item_storage_cell_16k"
-            }
-        })
-        .id("kubejs:tk3/ae_network/ae2_network_cells_item_storage_cell_16k");
-
     // Spatial Cell Component 128 / Native
     event.custom({
             "type": "minecraft:crafting_shaped",
@@ -5460,38 +5506,6 @@ ServerEvents.recipes(event => {
             }
         })
         .id("kubejs:tk3/ae_network/ae2_network_cells_spatial_components_1");
-
-    // Cell Component 16K / Native
-    event.custom({
-            "type": "minecraft:crafting_shaped",
-            "category": "misc",
-            "key": {
-                "a": {
-                    "tag": "c:dusts/glowstone"
-                },
-                "b": {
-                    "item": "ae2:calculation_processor"
-                },
-                "c": {
-                    "item": "ae2:cell_component_4k"
-                },
-                "d": {
-                    "item": "ae2:quartz_glass"
-                }
-            },
-            "pattern": [
-                "aba",
-                "cdc",
-                "aca"
-            ],
-            "result": {
-                "count": 1,
-                "id": "ae2:cell_component_16k"
-            }
-        })
-        .id(
-        "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_16k_part"
-    );
 
     // Condenser / Native
     event.custom({
@@ -5615,22 +5629,6 @@ ServerEvents.recipes(event => {
             }
         })
         .id("kubejs:tk3/ae_network/ae2_network_blocks_spatial_io_port");
-
-    // 16K Crafting Storage / Native
-    event.custom({
-            "type": "minecraft:crafting_shapeless",
-            "category": "misc",
-            "ingredients": [{
-                    "item": "ae2:crafting_unit"
-                }, {
-                    "item": "ae2:cell_component_16k"
-                }],
-            "result": {
-                "count": 1,
-                "id": "ae2:16k_crafting_storage"
-            }
-        })
-        .id("kubejs:tk3/ae_network/ae2_network_crafting_16k_cpu_crafting_storage");
 
     //->------------------------]  Tier 9 / Network construction & storage [------------------------<-//
 
@@ -5798,8 +5796,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_64k_part"
-    );
+        "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_64k_part");
 
     // Quantum Ring / Native
     event.custom({
@@ -5997,8 +5994,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_256k_part"
-    );
+        "kubejs:tk3/ae_network/ae2_network_cells_item_storage_components_cell_256k_part");
 
     // Item Storage Cell 256K / Native
     event.custom({

@@ -1,145 +1,8 @@
 // priority: 0
-// Create 6.0.10 support layer: exact outputs and approved reversible utility recipes.
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "create:andesite_alloy",
-        "create:andesite_alloy_block",
-        "create:andesite_casing",
-        "create:attribute_filter",
-        "create:brass_block",
-        "create:brass_casing",
-        "create:brass_hand",
-        "create:brass_ingot",
-        "create:brass_nugget",
-        "create:brass_sheet",
-        "create:cardboard",
-        "create:cardboard_block",
-        "create:chain_conveyor",
-        "create:clipboard",
-        "create:clockwork_bearing",
-        "create:cogwheel",
-        "create:controller_rail",
-        "create:copper_casing",
-        "create:copper_diving_boots",
-        "create:copper_diving_helmet",
-        "create:copper_nugget",
-        "create:copper_sheet",
-        "create:crafter_slot_cover",
-        "create:crafting_blueprint",
-        "create:crushed_raw_zinc",
-        "create:crushing_wheel",
-        "create:cuckoo_clock",
-        "create:desk_bell",
-        "create:dough",
-        "create:electron_tube",
-        "create:empty_blaze_burner",
-        "create:empty_schematic",
-        "create:factory_gauge",
-        "create:filter",
-        "create:flywheel",
-        "create:gantry_shaft",
-        "create:gearbox",
-        "create:goggles",
-        "create:golden_sheet",
-        "create:hand_crank",
-        "create:iron_sheet",
-        "create:item_hatch",
-        "create:item_vault",
-        "create:linear_chassis",
-        "create:linked_controller",
-        "create:mechanical_piston",
-        "create:mechanical_roller",
-        "create:metal_bracket",
-        "create:metal_girder",
-        "create:minecart_coupling",
-        "create:nixie_tube",
-        "create:nozzle",
-        "create:package_filter",
-        "create:peculiar_bell",
-        "create:piston_extension_pole",
-        "create:placard",
-        "create:polished_rose_quartz",
-        "create:powered_latch",
-        "create:powered_toggle_latch",
-        "create:pulse_extender",
-        "create:pulse_repeater",
-        "create:pulse_timer",
-        "create:red_sand_paper",
-        "create:redstone_contact",
-        "create:redstone_link",
-        "create:redstone_requester",
-        "create:rose_quartz",
-        "create:rose_quartz_lamp",
-        "create:sail_frame",
-        "create:sand_paper",
-        "create:schedule",
-        "create:schematic_and_quill",
-        "create:schematic_table",
-        "create:schematicannon",
-        "create:secondary_linear_chassis",
-        "create:shaft",
-        "create:speedometer",
-        "create:sticker",
-        "create:sticky_mechanical_piston",
-        "create:stock_link",
-        "create:stock_ticker",
-        "create:stressometer",
-        "create:super_glue",
-        "create:track",
-        "create:transmitter",
-        "create:tree_fertilizer",
-        "create:turntable",
-        "create:vertical_gearbox",
-        "create:wheat_flour",
-        "create:whisk",
-        "create:white_sail",
-        "create:wooden_bracket",
-        "create:wrench",
-        "create:zinc_block",
-        "create:zinc_ingot",
-        "create:zinc_nugget",
-        "kubejs:tk3_hydraulic_machine",
-        "kubejs:tk3_kinetic_machine",
-        "kubejs:tk3_precision_machine",
-        "minecraft:bone_meal",
-        "minecraft:chain",
-        "minecraft:chest",
-        "minecraft:clay_ball",
-        "minecraft:clock",
-        "minecraft:comparator",
-        "minecraft:copper_ingot",
-        "minecraft:crafting_table",
-        "minecraft:dispenser",
-        "minecraft:glass",
-        "minecraft:glowstone_dust",
-        "minecraft:gold_ingot",
-        "minecraft:iron_ingot",
-        "minecraft:iron_nugget",
-        "minecraft:iron_trapdoor",
-        "minecraft:item_frame",
-        "minecraft:lever",
-        "minecraft:lightning_rod",
-        "minecraft:netherrack",
-        "minecraft:painting",
-        "minecraft:paper",
-        "minecraft:quartz",
-        "minecraft:rail",
-        "minecraft:red_sand",
-        "minecraft:redstone",
-        "minecraft:redstone_torch",
-        "minecraft:sand",
-        "minecraft:slime_ball",
-        "minecraft:smooth_stone",
-        "minecraft:stick",
-        "minecraft:string",
-        "minecraft:water_bucket"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 1 / Casings [------------------------<-//
 
@@ -209,19 +72,6 @@ ServerEvents.recipes(event => {
             "A": "create:andesite_alloy"
         })
         .id("kubejs:tk3/create/goggles");
-
-    // Super Glue / Shaped
-    event.shaped(
-        "create:super_glue",
-        [
-            "SI",
-            "NS"
-        ], {
-            "S": "minecraft:slime_ball",
-            "I": "create:iron_sheet",
-            "N": "minecraft:iron_nugget"
-        })
-        .id("kubejs:tk3/create/super_glue");
 
     // Clipboard / Shaped
     event.shaped(
@@ -353,19 +203,6 @@ ServerEvents.recipes(event => {
                 1000)
         ])
         .id("kubejs:tk3/create/dough_bulk");
-
-    //->------------------------]  Tier 1 / Filters [------------------------<-//
-
-    // Filter / Shaped
-    event.shaped(
-        "create:filter",
-        [
-            "IWI"
-        ], {
-            "I": "minecraft:iron_nugget",
-            "W": "#minecraft:wool"
-        })
-        .id("kubejs:tk3/create/filter");
 
     //->------------------------]  Tier 1 / Material packing [------------------------<-//
 
@@ -627,25 +464,6 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/create/sail_from_frame");
 
-    // Sticky Mechanical Piston / Deploying
-    event.recipes.create.deploying(
-        [
-            "create:sticky_mechanical_piston"
-        ],
-        [
-            "create:mechanical_piston",
-            "minecraft:slime_ball"
-        ])
-        .id("kubejs:tk3/create/sticky_mechanical_piston");
-
-    // Mechanical Piston / Shapeless
-    event.shapeless(
-        "create:mechanical_piston",
-        [
-            "create:sticky_mechanical_piston"
-        ])
-        .id("kubejs:tk3/create/piston_unstick");
-
     // Turntable / Shapeless
     event.shapeless(
         "create:turntable",
@@ -654,29 +472,6 @@ ServerEvents.recipes(event => {
             "create:cogwheel"
         ])
         .id("kubejs:tk3/create/turntable");
-
-    // Sticker / Shapeless
-    event.shapeless(
-        "2x create:sticker",
-        [
-            "kubejs:tk3_kinetic_machine",
-            "minecraft:slime_ball"
-        ])
-        .id("kubejs:tk3/create/sticker");
-
-    // Minecart Coupling / Shaped
-    event.shaped(
-        "2x create:minecart_coupling",
-        [
-            " I ",
-            "ASA",
-            " I "
-        ], {
-            "I": "minecraft:iron_nugget",
-            "A": "create:andesite_alloy",
-            "S": "minecraft:slime_ball"
-        })
-        .id("kubejs:tk3/create/minecart_coupling");
 
     //->------------------------]  Tier 1 / Workshop utilities [------------------------<-//
 
@@ -800,6 +595,21 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/create/copper_casing_automated");
 
+    //->------------------------]  Tier 2 / Tools [------------------------<-//
+
+    // Super Glue / Shaped
+    event.shaped(
+        "create:super_glue",
+        [
+            "SI",
+            "NS"
+        ], {
+            "S": "minecraft:slime_ball",
+            "I": "create:iron_sheet",
+            "N": "minecraft:iron_nugget"
+        })
+        .id("kubejs:tk3/create/super_glue");
+
     //->------------------------]  Tier 2 / Diving equipment [------------------------<-//
 
     // Copper Diving Helmet / Shaped
@@ -825,6 +635,19 @@ ServerEvents.recipes(event => {
             "I": "create:iron_sheet"
         })
         .id("kubejs:tk3/create/copper_diving_boots");
+
+    //->------------------------]  Tier 2 / Filters [------------------------<-//
+
+    // Filter / Shaped
+    event.shaped(
+        "create:filter",
+        [
+            "IWI"
+        ], {
+            "I": "minecraft:iron_nugget",
+            "W": "#minecraft:wool"
+        })
+        .id("kubejs:tk3/create/filter");
 
     //->------------------------]  Tier 2 / Fluids & heat [------------------------<-//
 
@@ -897,6 +720,34 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 2 / Wind & contraptions [------------------------<-//
 
+    // Sticky Mechanical Piston / Deploying
+    event.recipes.create.deploying(
+        [
+            "create:sticky_mechanical_piston"
+        ],
+        [
+            "create:mechanical_piston",
+            "minecraft:slime_ball"
+        ])
+        .id("kubejs:tk3/create/sticky_mechanical_piston");
+
+    // Mechanical Piston / Shapeless
+    event.shapeless(
+        "create:mechanical_piston",
+        [
+            "create:sticky_mechanical_piston"
+        ])
+        .id("kubejs:tk3/create/piston_unstick");
+
+    // Sticker / Shapeless
+    event.shapeless(
+        "2x create:sticker",
+        [
+            "kubejs:tk3_kinetic_machine",
+            "minecraft:slime_ball"
+        ])
+        .id("kubejs:tk3/create/sticker");
+
     // Flywheel / Shapeless
     event.shapeless(
         "create:flywheel",
@@ -905,6 +756,20 @@ ServerEvents.recipes(event => {
             "create:cogwheel"
         ])
         .id("kubejs:tk3/create/flywheel");
+
+    // Minecart Coupling / Shaped
+    event.shaped(
+        "2x create:minecart_coupling",
+        [
+            " I ",
+            "ASA",
+            " I "
+        ], {
+            "I": "minecraft:iron_nugget",
+            "A": "create:andesite_alloy",
+            "S": "minecraft:slime_ball"
+        })
+        .id("kubejs:tk3/create/minecart_coupling");
 
     //->------------------------]  Tier 3 / Casings [------------------------<-//
 

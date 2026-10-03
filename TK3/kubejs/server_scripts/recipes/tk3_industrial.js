@@ -1,16 +1,56 @@
 // priority: 0
-// T&K3 chapters 1–10 / industrial
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
 
-    //->------------------------]  Tier 6 / Generator devices [------------------------<-//
+    //->------------------------]  Tier 4 / Mekanism / Native infusion [------------------------<-//
+
+    // Basic Control Circuit / Native
+    event.custom({
+            "type": "mekanism:metallurgic_infusing",
+            "chemical_input": {
+                "amount": 20,
+                "tag": "mekanism:redstone"
+            },
+            "item_input": {
+                "count": 1,
+                "tag": "c:ingots/osmium"
+            },
+            "output": {
+                "count": 1,
+                "id": "mekanism:basic_control_circuit"
+            },
+            "per_tick_usage": false
+        })
+        .id("kubejs:tk3/industrial/control_circuit_basic");
+
+    // Alloy Infused / Native
+    event.custom({
+            "type": "mekanism:metallurgic_infusing",
+            "chemical_input": {
+                "amount": 10,
+                "tag": "mekanism:redstone"
+            },
+            "item_input": {
+                "count": 1,
+                "tag": "c:ingots/copper"
+            },
+            "output": {
+                "count": 1,
+                "id": "mekanism:alloy_infused"
+            },
+            "per_tick_usage": false
+        })
+        .id("kubejs:tk3/industrial/metallurgic_infusing_alloy_infused");
+
+    //->------------------------]  Tier 5 / Generator devices [------------------------<-//
 
     // Solar Generator / Shapeless
     event.shapeless(
         "mekanismgenerators:solar_generator",
         [
-            "kubejs:tk3_network_chassis",
+            "kubejs:tk3_ender_machine",
             "mekanism:alloy_infused",
             "minecraft:glass"
         ])
@@ -20,7 +60,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "mekanismgenerators:advanced_solar_generator",
         [
-            "kubejs:tk3_network_chassis",
+            "kubejs:tk3_ender_machine",
             "mekanism:alloy_infused",
             "minecraft:glass"
         ])
@@ -30,7 +70,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "mekanismgenerators:wind_generator",
         [
-            "kubejs:tk3_network_chassis",
+            "kubejs:tk3_ender_machine",
             "mekanism:alloy_infused",
             "minecraft:glass"
         ])
@@ -40,13 +80,13 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "mekanismgenerators:bio_generator",
         [
-            "kubejs:tk3_network_chassis",
+            "kubejs:tk3_ender_machine",
             "mekanism:alloy_infused",
             "minecraft:glass"
         ])
         .id("kubejs:tk3/industrial/mekanismgenerators_bio_generator");
 
-    //->------------------------]  Tier 6 / Mekanism / Machines & materials [------------------------<-//
+    //->------------------------]  Tier 5 / Mekanism / Machines & materials [------------------------<-//
 
     // Boiler Casing / Native
     event.custom({
@@ -54,7 +94,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "I": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -81,7 +121,7 @@ ServerEvents.recipes(event => {
                     "item": "mekanism:boiler_casing"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 }
             },
             "pattern": [
@@ -102,7 +142,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 }
             },
             "pattern": [
@@ -122,7 +162,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "E": {
                     "item": "mekanism:energy_tablet"
@@ -148,7 +188,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -175,7 +215,7 @@ ServerEvents.recipes(event => {
                     "item": "mekanism:dynamic_tank"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 }
             },
             "pattern": [
@@ -196,7 +236,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "B": {
                     "item": "minecraft:bucket"
@@ -226,7 +266,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/tin"
@@ -256,7 +296,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:chests/wooden"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "P": {
                     "item": "minecraft:crafter"
@@ -289,7 +329,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:furnace"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -319,7 +359,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:redstone_lamp"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/lead"
@@ -346,7 +386,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:piston"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -373,7 +413,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:bowl"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "R": {
                     "tag": "c:dusts/redstone"
@@ -403,7 +443,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:chests/wooden"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "G": {
                     "tag": "c:glass_panes"
@@ -439,7 +479,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "X": {
                     "item": "mekanism:steel_casing"
@@ -463,7 +503,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "G": {
                     "tag": "c:glass_blocks/cheap"
@@ -493,7 +533,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "G": {
                     "tag": "c:glass_blocks/cheap"
@@ -526,7 +566,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:flint"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "R": {
                     "tag": "c:dusts/redstone"
@@ -556,7 +596,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -583,7 +623,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "A": {
                     "tag": "mekanism:alloys/infused"
@@ -616,7 +656,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:ingots/tin"
                 },
                 "R": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "X": {
                     "item": "mekanism:steel_casing"
@@ -643,7 +683,7 @@ ServerEvents.recipes(event => {
                     "item": "mekanism:network_reader"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "G": {
                     "tag": "c:glass_blocks/cheap"
@@ -676,7 +716,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:gems/lapis"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/tin"
@@ -703,7 +743,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "G": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -727,7 +767,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/copper"
@@ -757,7 +797,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "_": {
                     "tag": "mekanism:stone_crafting_materials"
@@ -825,7 +865,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -855,7 +895,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -885,7 +925,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -915,7 +955,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -945,7 +985,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -972,7 +1012,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -1089,7 +1129,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/basic"
                 },
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -1119,7 +1159,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:iron_bars"
                 },
                 "R": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -1143,7 +1183,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -1165,7 +1205,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -1187,7 +1227,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -1203,19 +1243,19 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/industrial/mekanism_transmitter_thermodynamic_conductor_basic");
 
-    //->------------------------]  Tier 7 / Generator devices [------------------------<-//
+    //->------------------------]  Tier 6 / Generator devices [------------------------<-//
 
     // Gas Burning Generator / Shapeless
     event.shapeless(
         "mekanismgenerators:gas_burning_generator",
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_machine",
             "mekanism:alloy_infused",
             "minecraft:glass"
         ])
         .id("kubejs:tk3/industrial/mekanismgenerators_gas_burning_generator");
 
-    //->------------------------]  Tier 7 / Mekanism / Machines & materials [------------------------<-//
+    //->------------------------]  Tier 6 / Mekanism / Machines & materials [------------------------<-//
 
     // Chemical Infuser / Native
     event.custom({
@@ -1226,7 +1266,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "T": {
                     "item": "mekanism:basic_chemical_tank"
@@ -1259,7 +1299,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/reinforced"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/gold"
@@ -1289,7 +1329,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "tag": "mekanism:personal_storage"
@@ -1325,7 +1365,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:ingots/iron"
                 },
                 "R": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 }
             },
             "pattern": [
@@ -1366,7 +1406,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "A": {
                     "tag": "mekanism:alloys/reinforced"
@@ -1396,7 +1436,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "E": {
                     "item": "mekanism:basic_energy_cube"
@@ -1423,7 +1463,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "tag": "mekanism:personal_storage"
@@ -1485,7 +1525,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:bucket"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "X": {
                     "item": "mekanism:steel_casing"
@@ -1545,7 +1585,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "P": {
                     "item": "mekanism:enrichment_chamber"
@@ -1578,7 +1618,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "O": {
                     "tag": "c:ingots/osmium"
@@ -1608,7 +1648,7 @@ ServerEvents.recipes(event => {
                     "item": "mekanism:basic_fluid_tank"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "E": {
                     "item": "mekanism:energy_tablet"
@@ -1641,7 +1681,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "item": "mekanism:basic_bin"
@@ -1668,7 +1708,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "O": {
                     "tag": "c:ingots/osmium"
@@ -1695,7 +1735,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "O": {
                     "tag": "c:ingots/osmium"
@@ -1719,7 +1759,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "O": {
                     "tag": "c:ingots/osmium"
@@ -1787,7 +1827,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "E": {
                     "item": "mekanism:energy_tablet"
@@ -1834,7 +1874,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -1864,7 +1904,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -1894,7 +1934,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -1924,7 +1964,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -1954,7 +1994,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -1984,7 +2024,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -2014,7 +2054,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -2044,7 +2084,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -2161,7 +2201,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/iron"
@@ -2276,8 +2316,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/industrial/mekanism_processing_refined_glowstone_ingot_from_nuggets"
-    );
+        "kubejs:tk3/industrial/mekanism_processing_refined_glowstone_ingot_from_nuggets");
 
     // Dust Refined Obsidian / Native
     event.custom({
@@ -2311,8 +2350,7 @@ ServerEvents.recipes(event => {
             "per_tick_usage": false
         })
         .id(
-        "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_dust_from_obsidian_dust"
-    );
+        "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_dust_from_obsidian_dust");
 
     // Ingot Refined Obsidian / Native
     event.custom({
@@ -2370,8 +2408,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_ingot_from_nuggets"
-    );
+        "kubejs:tk3/industrial/mekanism_processing_refined_obsidian_ingot_from_nuggets");
 
     // Hdpe Pellet / Native
     event.custom({
@@ -2458,7 +2495,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "I": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "S": {
                     "tag": "c:ingots/steel"
@@ -2488,7 +2525,7 @@ ServerEvents.recipes(event => {
                     "item": "minecraft:bucket"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 },
                 "G": {
                     "tag": "c:glass_panes"
@@ -2515,7 +2552,7 @@ ServerEvents.recipes(event => {
                     "item": "mekanism:thermal_evaporation_block"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_ender_machine"
                 }
             },
             "pattern": [
@@ -2539,7 +2576,7 @@ ServerEvents.recipes(event => {
                     "tag": "mekanism:alloys/infused"
                 },
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "I": {
                     "tag": "c:ingots/osmium"
@@ -2566,7 +2603,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "item": "mekanism:basic_logistical_transporter"
@@ -2590,7 +2627,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "item": "mekanism:basic_mechanical_pipe"
@@ -2614,7 +2651,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "item": "mekanism:basic_pressurized_tube"
@@ -2638,7 +2675,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "item": "mekanism:basic_thermodynamic_conductor"
@@ -2662,7 +2699,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_machine"
                 },
                 "P": {
                     "item": "mekanism:basic_universal_cable"
@@ -4219,8 +4256,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/industrial/mekanism_processing_lategame_plutonium_pellet_from_reaction"
-    );
+        "kubejs:tk3/industrial/mekanism_processing_lategame_plutonium_pellet_from_reaction");
 
     // Pellet Polonium / Native
     event.custom({
@@ -4248,8 +4284,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/industrial/mekanism_processing_lategame_polonium_pellet_from_reaction"
-    );
+        "kubejs:tk3/industrial/mekanism_processing_lategame_polonium_pellet_from_reaction");
 
     // Elite Tier Installer / Native
     event.custom({
@@ -4615,7 +4650,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:pellets/antimatter"
                 },
                 "C": {
-                    "item": "kubejs:tk3_singularity_frame"
+                    "item": "kubejs:tk3_containment_frame"
                 },
                 "X": {
                     "item": "mekanism:steel_casing"
@@ -4939,7 +4974,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_singularity_frame"
+                    "item": "kubejs:tk3_containment_frame"
                 },
                 "A": {
                     "tag": "c:pellets/polonium"
@@ -4969,7 +5004,7 @@ ServerEvents.recipes(event => {
                     "item": "mekanism:sps_casing"
                 },
                 "C": {
-                    "item": "kubejs:tk3_singularity_frame"
+                    "item": "kubejs:tk3_containment_frame"
                 }
             },
             "pattern": [
@@ -4996,7 +5031,7 @@ ServerEvents.recipes(event => {
                     "tag": "c:pellets/polonium"
                 },
                 "C": {
-                    "item": "kubejs:tk3_singularity_frame"
+                    "item": "kubejs:tk3_containment_frame"
                 },
                 "c": {
                     "tag": "c:ingots/copper"
@@ -5078,8 +5113,7 @@ ServerEvents.recipes(event => {
             }
         })
         .id(
-        "kubejs:tk3/industrial/mekanism_processing_lategame_antimatter_pellet_from_gas"
-    );
+        "kubejs:tk3/industrial/mekanism_processing_lategame_antimatter_pellet_from_gas");
 
     //->------------------------]  Tier 10 / Mekanism / Machines & materials [------------------------<-//
 

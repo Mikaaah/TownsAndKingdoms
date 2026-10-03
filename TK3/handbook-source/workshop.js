@@ -16,12 +16,13 @@ let selected,steps=[],current=0,timer;
 const all=data.recipes;
 const familyNames={core:'Chapter workshop',frames:'Machine frames',create:'Create parts & utilities',geology:'Stone processing',compat:'Timber & vanilla',magic:'Magic integrations',storage:'Storage & backpacks',late_layers:'Industrial refining',campaign:'Campaign mechanisms & frames',addons:'Selected addons',ae_network:'AE2 network',industrial:'Mekanism industry'};
 let limit=80;
+function chemicalLabel(v,fluid=false){if(v.amount)return v.amount+(fluid?' mB ':' units ')+pretty(v.chemical||v.fluid||(v.tag?'#'+v.tag:v.id));return JSON.stringify(v)}
 function describe(r){const a=ingredients(r),result=label(r.fluid_output||r.output),process=methods[r.kind]||r.kind;
 if(r.kind==='native'){
  const type=r.serializer||r.json.type;const craft=type.includes('crafting')||type==='mekanism:mek_data'||type.includes('sophisticated');
- const chemical=Object.entries(r.chemical_inputs||{}).map(([k,v])=>k.replaceAll('_',' ')+': '+JSON.stringify(v)).join('; ');
+ const chemical=Object.entries(r.chemical_inputs||{}).map(([k,v])=>chemicalLabel(v,k.includes('fluid'))).join('; ');
  const steps=[{title:'Gather the inputs',text:a.length?a.map(label).join(' + '):'Supply the chemical or fluid inputs listed below.',mode:'craft'},
- {title:words(type.split(':')[1]),text:craft?'Use the exact pattern below. '+(type==='mekanism:mek_data'||type.includes('sophisticated')?'This native serializer preserves the existing machine or container data.':'The listed frame is a construction ingredient.'):'Use the native '+words(type.split(':')[1])+' process. '+(r.heated?'Provide heat. ':'')+chemical+' Native energy, fluid and chemical rules remain active.',mode:'craft'}];
+ {title:words(type.split(':')[1]),text:craft?'Use the exact pattern below. '+(type==='mekanism:mek_data'||type.includes('sophisticated')?'The upgrade preserves the existing machine or container data.':'The listed frame is a construction ingredient.'):'Use the native '+words(type.split(':')[1])+' process. '+(r.heated?'Provide heat. ':'')+chemical+(r.json.per_tick_usage===false?' Amounts are per completed operation.':'')+' Native energy, fluid and chemical rules remain active.',mode:'craft'}];
  if(r.json.sequence)r.json.sequence.forEach((x,i)=>steps.push({title:'Native operation '+(i+1)+' · '+words(x.type.split(':')[1]),text:JSON.stringify(x.ingredients||[])+'; follow the native intermediate item and '+r.json.loops+' loop(s).',mode:'craft'}));
  steps.push({title:'Collect '+result,text:r.fluid_output?'Collect the listed fluid amount with native pipes or a tank; fill containers separately.':'Collect the listed output; keep machine inputs and outputs on separate sides.',mode:'output',belt:r.output});return steps;
 }
@@ -53,7 +54,7 @@ if(['shaped','wrapped','mechanical_crafting','shapeless','stonecutting'].include
 const mode=['mixing','compacting'].includes(r.kind)?'basin':['splashing','haunting'].includes(r.kind)?'fan':r.kind.startsWith('cauldron')?'cauldron':'machine';
 const supply=a.map(label);if(r.base)supply.unshift(label(r.base));if(r.fluid)supply.unshift(label(r.fluid));
 let note='Provide the inputs to the '+process+' setup.';
-if(r.kind==='mixing')note='Put ingredients in a Basin below a powered Mixer. '+(r.heat?'Provide a heated Blaze Burner below the Basin.':'No heat is required.');
+if(r.kind==='mixing')note='Put ingredients in a Basin below a powered Mixer. '+(r.heated?'Provide a heated Blaze Burner below the Basin.':'No heat is required.');
 if(r.kind==='compacting')note='Put the ingredients and any listed fluid in a Basin beneath a powered Mechanical Press.';
 if(r.kind==='splashing')note='Send fan airflow through water and across the input. Keep it in the processing area until washing finishes.';
 if(r.kind==='haunting')note='Send fan airflow through soul fire and across the input. Keep it in the processing area until haunting finishes.';
@@ -68,7 +69,7 @@ if(['enriching','mek_enriching'].includes(r.kind))note='Feed the raw material in
 if(r.kind==='mek_smelting')note='Use the FE-powered Mekanism smelting process for this explicit recipe.';
 if(r.kind==='cauldron_brew')note='Use the Alchemist Cauldron with the listed base fluid and item. The output is fluid, ready for a separate bottling operation.';
 if(r.kind==='cauldron_empty')note='Use a glass bottle with the listed ink fluid in the Alchemist Cauldron to obtain the bottled item.';
-return[{title:'Supply the inputs',text:supply.join(' + '),mode,belt:r.inputs[0]},{title:process+(r.heat?' · Heated':''),text:note,mode,belt:r.inputs[0]},{title:'Collect '+result,text:r.fluid_output?'This output is '+r.fluid_output.amount+' mB of fluid. Follow the bottling recipe to obtain an item.':'Extract the listed quantity into storage. Reserve any material needed by another line.',mode:'output',belt:r.output}];
+return[{title:'Supply the inputs',text:supply.join(' + '),mode,belt:r.inputs[0]},{title:process+(r.heated?' · Heated':''),text:note,mode,belt:r.inputs[0]},{title:'Collect '+result,text:r.fluid_output?'This output is '+r.fluid_output.amount+' mB of fluid. Follow the bottling recipe to obtain an item.':'Extract the listed quantity into storage. Reserve any material needed by another line.',mode:'output',belt:r.output}];
 }
 function art(id,size=40){return window.TK3ItemArt?window.TK3ItemArt.create(id,size):add('span',document.createElement('div'),{class:'item-symbol'},'◆')}
 function flowCard(parent,title,value){const c=add('div',parent,{class:'flow-card'});add('p',c,{class:'eyebrow'},title);const a=item(value);c.append(art(a.fluid?'minecraft:water_bucket':a.id,48));add('strong',c,{},label(value));}
@@ -95,7 +96,7 @@ if(r.held_tool){const c=add('div',chips,{class:'ingredient-chip'});c.append(art(
 if(r.base)add('div',chips,{class:'ingredient-chip'},label(r.base)+' · base fluid');if(r.fluid)add('div',chips,{class:'ingredient-chip'},label(r.fluid)+' · cauldron fluid');
 for(const [key,value]of Object.entries(r.chemical_inputs||{}))add('div',chips,{class:'ingredient-chip'},key.replaceAll('_',' ')+': '+JSON.stringify(value));if(r.chemical_outputs&&Object.keys(r.chemical_outputs).length)add('div',chips,{class:'ingredient-chip'},'Native chemical byproducts: '+JSON.stringify(r.chemical_outputs));
 const pattern=el('recipe-pattern');pattern.replaceChildren();pattern.hidden=!r.pattern;if(r.pattern){pattern.style.gridTemplateColumns=`repeat(${r.pattern[0].length}, 1fr)`;for(const row of r.pattern)for(const k of row){const v=r.inputs[k];const slot=add('span',pattern,{class:k===' '?'empty':'','title':v?label(v):'Empty slot'});if(v)slot.append(art(item(v).id,40));}}
-const note=[];if(r.chemical_inputs&&Object.keys(r.chemical_inputs).length)note.push('Chemical / fluid inputs: '+JSON.stringify(r.chemical_inputs));if(r.keep_steps?.length)note.push('All four boss cores are retained.');if(r.kind==='sequence')note.push('One loop · guaranteed result · '+(r.inputs.length-1)+' ordered operations.');if(r.heat)note.push('Requires a heated Blaze Burner.');if(r.source!==undefined)note.push(r.source+' Source; first ingredient is the central reagent.');if(r.keep)note.push('The held catalyst is retained.');if(r.kind==='crushing')note.push('Crushing Wheels unlock in tier 3.');if(r.tier>1)note.push('Complete the previous chapter milestone to access this production tier.');if(r.native)note.push('Native recipe; the Upgrade Base uses T&K3’s tier 1 recipe.');el('recipe-conditions').textContent=note.join(' ');
+const note=[];if(r.chemical_inputs&&Object.keys(r.chemical_inputs).length)note.push('Chemical / fluid inputs: '+Object.entries(r.chemical_inputs).map(([k,v])=>chemicalLabel(v,k.includes('fluid'))).join('; '));if(r.keep_steps?.length)note.push('All five boss cores are retained.');if(r.kind==='sequence')note.push('One loop · guaranteed result · '+(r.inputs.length-1)+' ordered operations.');if(r.heat)note.push('Requires a heated Blaze Burner.');if(r.source!==undefined)note.push(r.source+' Source; first ingredient is the central reagent.');if(r.keep)note.push('The held catalyst is retained.');if(r.kind==='crushing')note.push('Crushing Wheels unlock in tier 3.');if(r.tier>1)note.push('Complete the previous chapter milestone to access this production tier.');if(r.native)note.push('Native recipe; the Upgrade Base uses T&K3’s tier 1 recipe.');el('recipe-conditions').textContent=note.join(' ');
 const related=el('recipe-related');related.replaceChildren();const inputIDs=ingredients(r).map(a=>a.id);
 for(const id of [...new Set(inputIDs)]){
  const sources=all.filter(x=>item(x.output).id===id&&x.id!==r.id);

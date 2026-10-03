@@ -186,7 +186,7 @@ A reusable depot and one Deployer can demonstrate the steps by changing the held
 
 ### Permanent workshop tools
 
-Chapters I–IV award unbreakable finishing tools once per player. Make ordinary tools first so the reward never blocks the chapter's own production. Normal tools lose one durability per finish. The reward fits the same recipe and removes tool replacement from that station. Chapter V gives a second permanent Iron Hammer for a parallel Kinetic line.
+Chapters I–X award unbreakable finishing tools once per player. Make ordinary tools first so the reward never blocks the chapter's own production. Normal tools lose one durability per finish. The reward fits the same recipe and removes tool replacement from that station. Chapter V gives a second permanent Iron Hammer for a parallel Kinetic line.
 
 Automated frames then use **casing → deploy one mechanism**. Stonecut the resulting frame into the working machine. Keep casing production and mechanism assembly as separate supply lines; combine them at the frame station.
 
@@ -200,7 +200,7 @@ For a continuous line, connect a water supply with the Hydraulic-tier fluid mach
 
 A wheat mill produces flour, which is a different item and does not satisfy this slime recipe. Route raw wheat to slime before the remainder goes to food processing.
 
-[Visualise the slime recipe](../workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Frenewable_slime)
+[Visualise the slime recipe](../workshop/?recipe=kubejs%3Atk3%2Ftier_2%2Frenewable_sealant)
 
 ## Brass and smart logistics
 
@@ -212,7 +212,7 @@ For repeatable cutting, set the Saw's output filter. For multiple branches, plan
 
 ## Source and arcane automation
 
-**Tier 4** adds magical processing to the mechanical workshop. Begin with the native Imbuement Chamber, Source Jars and available first-Source generators. Volcanic/Vitalic Sourcelinks are available after chapter III; you do not need an Arcane Machine to start Source production.
+**Tier 4** adds magical processing to the mechanical workshop. Begin with the native Imbuement Chamber, Source Jars and available first-Source generators. Craft the bootstrap Agronomic Sourcelink from a Precision Machine, wheat, Source Gems and a Source Jar. Grow nearby crops to generate Source before the Arcane Machine.
 
 Make the Enchanting Apparatus from a Precision Machine, diamond and Source Gem. The visual recipe steps distinguish the **central reagent** from the **pedestal ingredients** and show the Source cost. Do not put all ingredients in the central block.
 
@@ -222,11 +222,11 @@ Store Source and ingredients before starting repeated recipes. An empty jar is n
 
 ## FE: extend the workshop, keep the early lines
 
-**Tier 5** starts with two iron ingots + coal in a heated Mixer → two steel ingots. Build the Steel Casing using that steel, mined osmium and the two listed earlier frames. The first Heat Generator can be built before you already have FE.
+**Tier 4** starts with two iron ingots + coal in a heated Mixer → two steel ingots. Build the Steel Casing using that steel, mined osmium and one Precision Machine. The first Heat Generator can be built before you already have FE.
 
-The Metallurgic Infuser is **Steel Casing → deploy with Wilden Tribute**. The Tribute remains in the Deployer's hand and provides reusable production capacity. Give the finished Infuser FE and the relevant native infusion material before processing.
+The Metallurgic Infuser is **Steel Casing → deploy a Precision Mechanism**. The mechanism is consumed; no boss catalyst or FE is required to build the first Infuser. Give the finished Infuser FE and the relevant native infusion material before processing.
 
-Enrichment turns the listed raw metals into two dust; native smelting makes two ingots. Keep steel, power and ore-refining branches buffered. Later Mekanism chemistry and AE2 networking follow after this bridge; they do not replace the first Create lines in chapters 1–5.
+Enrichment turns the listed raw metals into two dust; native smelting makes two ingots. Keep steel, power and ore-refining branches buffered. AE2 starts in the same chapter with a Charger and Inscriber, followed by the Inductive Machine and small ME network. Chemistry and HDPE arrive in chapter 6. Basic chemical tanks, tubes, separator, PRC and rotary machine use Ender Machines so the HDPE line can run before the Chemical Machine.
 
 ## A reliable factory checklist
 

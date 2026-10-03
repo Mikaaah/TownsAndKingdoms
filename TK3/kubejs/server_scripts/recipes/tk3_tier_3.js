@@ -1,57 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "aeronautics:propeller_bearing",
-        "create:brass_casing",
-        "create:brass_funnel",
-        "create:brass_ingot",
-        "create:brass_sheet",
-        "create:brass_tunnel",
-        "create:content_observer",
-        "create:contraption_controls",
-        "create:controls",
-        "create:display_board",
-        "create:display_link",
-        "create:electron_tube",
-        "create:elevator_pulley",
-        "create:incomplete_precision_mechanism",
-        "create:mechanical_arm",
-        "create:mechanical_bearing",
-        "create:mechanical_crafter",
-        "create:mechanical_press",
-        "create:package_frogport",
-        "create:packager",
-        "create:precision_mechanism",
-        "create:propeller",
-        "create:redstone_link",
-        "create:repackager",
-        "create:rotation_speed_controller",
-        "create:sand_paper",
-        "create:sequenced_gearshift",
-        "create:smart_chute",
-        "create:smart_fluid_pipe",
-        "create:stock_link",
-        "create:stock_ticker",
-        "create:stockpile_switch",
-        "create:track_observer",
-        "create:track_signal",
-        "create:track_station",
-        "create:zinc_ingot",
-        "create_enchantment_industry:grindstone_drain",
-        "create_enchantment_industry:printer",
-        "kubejs:tk3_precision_machine",
-        "kubejs:tk3_sealed_mechanism",
-        "minecraft:book",
-        "minecraft:copper_ingot",
-        "minecraft:grindstone"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 3 / Materials / Mixing [------------------------<-//
 
@@ -99,10 +50,25 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/tier_3/propeller_bearing");
 
+    //->------------------------]  Tier 3 / Tools & components [------------------------<-//
+
+    // Capacitor / Shaped
+    event.shaped(
+        "createaddition:capacitor",
+        [
+            " C ",
+            "IRI",
+            " C "
+        ], {
+            "C": "create:copper_sheet",
+            "R": "minecraft:redstone",
+            "I": "create:iron_sheet"
+        })
+        .id("kubejs:tk3/tier_2/capacitor");
+
     //->------------------------]  Tier 3 / Mechanisms / Sequenced assembly [------------------------<-//
 
     // Precision Mechanism / Sequence
-    // Final tool is durability-based. Do not keepHeldItem(): ordinary tools wear; unbreakable rewards do not.
     event.recipes.create.sequenced_assembly(
         [
             "create:precision_mechanism"

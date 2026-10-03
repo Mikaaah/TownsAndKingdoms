@@ -2,29 +2,34 @@
 from pathlib import Path
 from zipfile import ZipFile
 from io import BytesIO
-import json, re, math, functools
+import json, re, math, functools, argparse
 import numpy as np
 from PIL import Image
 
 ROOT=Path(__file__).resolve().parent
+PACK=ROOT.parent
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--jars',type=Path,default=ROOT/'mod-assets')
+args=parser.parse_args()
 OUT=ROOT/'visual-assets'; OUT.mkdir(exist_ok=True)
 archives=[]
-for p in sorted((ROOT/'mod-assets').glob('*.source.json')):
+for p in sorted(args.jars.glob('*.source.json')):
     jar=p.with_name(p.name.replace('.source.json','.jar'))
     if jar.exists(): archives.append(ZipFile(jar))
     if jar.exists():
         outer=ZipFile(jar)
         for nested in outer.namelist():
             if nested.startswith('META-INF/jarjar/') and nested.endswith('.jar'): archives.append(ZipFile(BytesIO(outer.read(nested))))
-archives.append(ZipFile(ROOT.parent/'project_sources/02-kubejs.zip'))
+
 files={}
 for z in archives:
     for name in z.namelist():
         key=name.removeprefix('kubejs/')
         if key.startswith('assets/') and key.endswith(('.json','.png')):files[key]=(z,name)
 # Current mechanism textures take precedence over the historical pack.
-for p in (ROOT.parent/'build/TK3_Campaign/kubejs/assets').rglob('*.png'):
-    files['assets/'+str(p.relative_to(ROOT.parent/'build/TK3_Campaign/kubejs/assets'))]=p
+for p in (PACK/'kubejs/assets').rglob('*'):
+    if not p.is_file():continue
+    files['assets/'+str(p.relative_to(PACK/'kubejs/assets'))]=p
 
 def raw(key):
     entry=files.get(key)
@@ -129,7 +134,7 @@ def icon(d):
             zbuffer[ymin:ymax+1,xmin:xmax+1][mask]=depth[mask]
     return Image.fromarray(pixels)
 
-manifest=json.loads((ROOT.parent/'build/TK3_Campaign/docs/progression_manifest.json').read_text())
+manifest=json.loads((PACK/'docs/progression_manifest.json').read_text())
 ids=set()
 def collect(value):
     if isinstance(value,str) and ':' in value:
@@ -144,10 +149,10 @@ for r in manifest['recipes']:
 ids.update(['create:portable_storage_interface','create:mechanical_harvester','create:mechanical_saw','create:mechanical_bearing','create:deployer','minecraft:oak_sapling','minecraft:water_bucket','minecraft:stonecutter','minecraft:chest','sophisticatedstorage:hopper_upgrade','minecraft:hopper','minecraft:oak_planks','minecraft:oak_slab'])
 custom_models={}
 custom_textures={}
-for script in (ROOT.parent/'build/TK3_Campaign/kubejs/startup_scripts').glob('*.js'):
+for script in (PACK/'kubejs/startup_scripts').glob('*.js'):
     text=script.read_text()
-    for name,parent in re.findall(r'event\.create\([\"\']([^\"\']+)[\"\']\).*?\.parentModel\([\"\']([^\"\']+)[\"\']\)',text):custom_models['kubejs:'+name]=parent
-    for name,tex in re.findall(r'event\.create\([\"\']([^\"\']+)[\"\']\).*?\.texture\([\"\']([^\"\']+)[\"\']\)',text):custom_textures['kubejs:'+name]=tex
+    for name,parent in re.findall(r'event\.create\([\"\']([^\"\']+)[\"\']\).*?\.parentModel\([\"\']([^\"\']+)[\"\']\)',text,re.S):custom_models['kubejs:'+name]=parent
+    for name,tex in re.findall(r'event\.create\([\"\']([^\"\']+)[\"\']\).*?\.texture\([\"\']([^\"\']+)[\"\']\)',text,re.S):custom_textures['kubejs:'+name]=tex
 ids.update(custom_models);ids.update(custom_textures)
 tags={'#c:stripped_logs':'minecraft:stripped_oak_log','#minecraft:wool':'minecraft:white_wool','#c:plates/iron':'create:iron_sheet','#c:flours/wheat':'create:wheat_flour','#minecraft:wooden_slabs':'minecraft:oak_slab','#minecraft:planks':'minecraft:oak_planks','#minecraft:logs':'minecraft:oak_log','#minecraft:logs_that_burn':'minecraft:oak_log'}
 sprites=[];lookup={};missing=[]
@@ -180,6 +185,8 @@ for ns in {i.lstrip('#').split(':')[0] for i in ids}:
         except Exception:pass
 names={id:languages.get('item.'+id.replace(':','.'),languages.get('block.'+id.replace(':','.'))) for id in lookup}
 names={k:v for k,v in names.items() if v}
+names.update({id:row['name'] for id,row in manifest['asset_catalog'].items()})
+names.update({manifest['frames'][str(t)]:label for t,label in manifest['frame_labels'].items()})
 names.update({'kubejs:tk3_kinetic_machine':'Kinetic Machine','kubejs:tk3_hydraulic_machine':'Hydraulic Machine','kubejs:tk3_precision_machine':'Precision Machine','kubejs:tk3_arcane_machine':'Arcane Machine','kubejs:tk3_rotation_mechanism':'Kinetic Mechanism'})
 (OUT/'item-art.json').write_text(json.dumps({'width':atlas.width,'height':atlas.height,'tile':64,'items':lookup,'names':names},separators=(',',':')))
 
@@ -202,6 +209,6 @@ for i,id in enumerate(sorted(textures)):
     texlookup[id]={'x':i%8*64,'y':i//8*64}
 blockatlas.save(OUT/'model-atlas.png',optimize=True)
 (OUT/'create-models.json').write_text(json.dumps({'models':models,'textures':texlookup,'width':blockatlas.width,'height':blockatlas.height},separators=(',',':')))
-sources=json.loads((ROOT/'mod-assets/sources.json').read_text())
+sources=[json.loads(p.read_text())for p in args.jars.glob('*.source.json')]
 (OUT/'asset-sources.json').write_text(json.dumps({'sources':sources,'icon_count':len(lookup),'missing_icons':missing,'create_model_count':len(models)},indent=2))
 print('REAL ICONS',len(lookup),'UNAVAILABLE',len(missing),'CREATE MODELS',len(models),'BLOCK TEXTURES',len(textures))

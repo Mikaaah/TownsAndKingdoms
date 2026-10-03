@@ -1,49 +1,23 @@
-# MAGIC & SPELLS
+# MAGIC & ARCANE INDUSTRY
 
-**A SPELLBOOK FOR THE ADVENTURE. AN ARCANE WORKSHOP AT HOME.**
+**GROW SOURCE. SHAPE COMPONENTS. EQUIP YOUR CHARACTER.**
 
-T&K3 gives its magic systems different roles. **Ars Nouveau** is the primary arcane crafting and automation system; **Iron's Spells 'n Spellbooks** is the primary combat spellcasting system.
+## Ars Nouveau · living automation
 
-## Ars Nouveau · arcane production
+Native first-Source generation is available before the custom workshop. In **chapter 4**, a Precision Machine bootstraps the Enchanting Apparatus. Assemble an **Arcane Mechanism**, make Wizardry’s Arcane Casing, and deploy the mechanism to create an **Arcane Machine**. This is a parallel branch alongside first FE and ME.
 
-Bring magic into your production chain with Ars Nouveau. **Chapter IV · Arcane Industry** connects Source, hybrid crafting and the Wilden trial to your existing workshop.
+Use Source links, relays, Whirlisprigs and other native automation helpers. **Ars Creo** and **Create: Ars Nouveau Compat** connect Ars with machinery and contraptions. Ars material recipes use the actual addon serializers and Source costs.
 
-Use the chapter guide for the unlock order and the recipe workshop for exact inputs. Arcane recipes can involve a different apparatus or resource from an ordinary crafting table, so check the method before building your supply line.
+## Iron’s Spells · spellcasting and materials
 
-**[OPEN THE CHAPTER GUIDE →](../../progression/#chapters)** · [Inspect arcane recipes](../../workshop/)
+Use native spellbooks, spell progression and combat gear alongside factory development. **Create: Wizardry** connects Mana, arcane sheets, runes and Iron’s cauldron processing to the factory. Check Source, heat and fluid requirements before connecting automation.
 
-## Iron's Spells · combat spellcasting
+## Iron’s Gems ’n Jewelry
 
-**Iron's Spells 'n Spellbooks** is the selected spellcasting foundation for combat. Build your spellcasting character alongside the pack's equipment and class systems, and prepare for encounters with both your gear and your spells in mind.
+The **chapter 2 Jewelcrafting Station** uses the copper workshop. Its guide, scroll recipes, gemstones and jewelry data keep their native systems. Jewelcrafting supports equipment without becoming a compulsory ingredient in every machine.
 
-**[EXPLORE CLASSES & PROFESSIONS →](../skill-tree/)** · [Read exploration & combat](../exploration/)
+## Reusable boss catalysts
 
-## Rituals & another magical path
+The Dragon, Twilight Lich, Harbinger, Ignis and Ender Guardian supply the five permanent imprints. Their retained deployment recipes improve throughput or attune a late component. The final Keystone records all five cores without consuming them.
 
-**Just Another Witchery Remake** is part of the selected magic foundation. Its role sits alongside Ars Nouveau and Iron's Spells; use the in-game information and current pack recipes as this part of T&K3 develops.
-
-## Magic connected to the wider pack
-
-| Selected integration | Connection |
-|---|---|
-| **Ars Creo** | Ars Nouveau and Create |
-| **Create: Ars Nouveau Compat** | Create processing for Ars materials |
-| **Create: Wizardry** | Create and Iron's Spells |
-| **Ars 'n Spells** | Ars Nouveau and Iron's Spells |
-| **Alex's Caves: Spellbooks** | Cave content and spellbooks |
-| **Cataclysm: Spellbooks** | Cataclysm and spellbooks |
-| **Ice and Fire: Spellbooks** | Ice and Fire and spellbooks |
-| **Spellbooks of Twilight** | Twilight Forest and spellbooks |
-| **Apotheosis x Iron's Spellbooks Compat** | Spellbook equipment and Apotheosis |
-
-These are the selected connections for T&K3. The exact unlocks and recipe routes follow the chapter progression as each layer is developed.
-
-## A useful workshop habit
-
-Keep **arcane inputs**, **finished components** and **combat supplies** in clearly labelled storage. Check whether a recipe requires Source, a fluid, heat or a specific apparatus before supplying it automatically.
-
-**[BACK TO FEATURES →](../features/)** · [Automation field guide](../../automation/)
-
-## Follow the campaign
-
-**[ALL MODS, ADDONS & THEIR TIERS →](../tier-map/)** · **[TEN CHAPTER PATHS →](../../progression/#paths)**
+**[CHAPTER PATHS →](../../progression/#paths)** · [Recipe workshop](../../workshop/) · [Exploration & combat](../exploration/) · [Mods & tiers](../tier-map/)

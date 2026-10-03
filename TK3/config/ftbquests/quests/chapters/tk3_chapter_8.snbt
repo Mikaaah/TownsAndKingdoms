@@ -2,343 +2,301 @@
   "id": "2A44FE00BA909F7C",
   "filename": "tk3_chapter_8",
   "group": "7427C3F538DF9198",
-  "title": "VIII · Containment & Control",
-  "subtitle": "Fission, advanced storage and safe nuclear production",
+  "title": "Containment · Nuclear Control",
+  "subtitle": "Containment Frame and connected production",
   "icon": "kubejs:tk3_containment_frame",
   "order_index": 8,
   "default_hide_dependency_lines": false,
   "quests": [
     {
-      "id": "D1C578AFF106C42E",
-      "title": "Containment Mechanism",
+      "id": "158C2D1A41CA9EBC",
+      "title": "Workshop plan · Containment Frame",
       "description": [
-        "Expedition Mechanism → HDPE Sheet → Atomic Alloy → Sand Paper. One loop per finished mechanism."
+        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
       ],
       "dependencies": [
         "BCC05513E2AD3BA9"
       ],
       "tasks": [
         {
-          "id": "D8B7118A4E64682D",
+          "id": "1DE392F3A5390BA4",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_containment_frame",
+      "rewards": []
+    },
+    {
+      "id": "CB8A69D5BCFBEAC9",
+      "title": "Infuse Overcharge Alloy",
+      "description": [
+        "Infuse Refined Radiance with 80 diamond infusion units per operation. Press sheets for the Containment Mechanism; no radioactive input is needed to build the first reactor."
+      ],
+      "dependencies": [
+        "158C2D1A41CA9EBC"
+      ],
+      "tasks": [
+        {
+          "id": "357641D86A4B1836",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_overcharge_sheet",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 3.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_overcharge_sheet",
+      "rewards": []
+    },
+    {
+      "id": "EE017EC0DF7FB23F",
+      "title": "Containment Mechanism",
+      "description": [
+        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable."
+      ],
+      "dependencies": [
+        "CB8A69D5BCFBEAC9"
+      ],
+      "tasks": [
+        {
+          "id": "90772474DCF3F65D",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_containment_mechanism",
             "count": 1
           },
-          "count": 4,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
-      "x": 0.0,
+      "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_containment_mechanism",
       "rewards": []
     },
     {
-      "id": "946F9E0F4AC2DD54",
+      "id": "FBDB3D038D6B12D5",
       "title": "Containment Frame",
       "description": [
-        "Deploy the mechanism onto a Steel Casing. Stonecut frames into batches of reactor casing and turbine casing."
+        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
       ],
       "dependencies": [
-        "D1C578AFF106C42E"
+        "EE017EC0DF7FB23F"
       ],
       "tasks": [
         {
-          "id": "57DF6AEA617B4291",
+          "id": "5F1B0C39098ADB8D",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_containment_frame",
             "count": 1
           },
-          "count": 4,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 3.0,
-      "y": 0.0,
-      "icon": "kubejs:tk3_containment_frame",
-      "rewards": []
-    },
-    {
-      "id": "776C3DD4DD57D086",
-      "title": "Prepare fissile fuel",
-      "description": [
-        "Use the native uranium → sulfuric chemistry → uranium hexafluoride → fissile fuel chain. Machines retain their verified native chemical serializers."
-      ],
-      "dependencies": [
-        "946F9E0F4AC2DD54"
-      ],
-      "tasks": [
-        {
-          "id": "375A7569DCD54542",
-          "type": "item",
-          "item": {
-            "id": "mekanism:isotopic_centrifuge",
-            "count": 1
-          },
           "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
-      "x": 6.0,
+      "x": 9.0,
       "y": 0.0,
-      "icon": "mekanism:isotopic_centrifuge",
+      "icon": "kubejs:tk3_containment_frame",
       "rewards": []
     },
     {
-      "id": "51EE794D9AA955C4",
-      "title": "A contained reactor",
+      "id": "10EBEBFE659F7A04",
+      "title": "Build fission safely",
       "description": [
-        "Build a fission reactor with fuel assemblies, control rods, port and logic adapter. Provide a full coolant loop before activation."
+        "Build reactor, cooling and turbine before adding fuel. Native uranium → yellow cake → uranium oxide → uranium hexafluoride → fissile fuel remains the fuel chain."
       ],
       "dependencies": [
-        "776C3DD4DD57D086"
+        "FBDB3D038D6B12D5"
       ],
       "tasks": [
         {
-          "id": "FA8D579F6DC4AA34",
+          "id": "3E86999C85CE5EB4",
           "type": "item",
           "item": {
             "id": "mekanismgenerators:fission_reactor_casing",
             "count": 1
           },
-          "count": 16,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
-      "x": 9.0,
+      "x": 12.0,
       "y": 0.0,
       "icon": "mekanismgenerators:fission_reactor_casing",
       "rewards": []
     },
     {
-      "id": "6B7E9261C1C78AD8",
-      "title": "Recover the steam",
+      "id": "937C5BB6BA19D917",
+      "title": "Separate radioactive waste",
       "description": [
-        "Use the native turbine multiblock with rotors, blades, coils, vents and condensers. Return cooling water; test the shutdown before raising burn rate."
+        "Route waste away from normal gas storage. Use native barrels and solar neutron activation; never vent waste. Route polonium/plutonium with their native restrictions."
       ],
       "dependencies": [
-        "51EE794D9AA955C4"
+        "FBDB3D038D6B12D5"
       ],
       "tasks": [
         {
-          "id": "3E5D8E74C30CEDA3",
-          "type": "item",
-          "item": {
-            "id": "mekanismgenerators:turbine_casing",
-            "count": 1
-          },
-          "count": 16,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 12.0,
-      "y": 0.0,
-      "icon": "mekanismgenerators:turbine_casing",
-      "rewards": []
-    },
-    {
-      "id": "9250A5F666A78882",
-      "title": "Waste is part of the recipe",
-      "description": [
-        "Prepare waste capacity and safe handling. This is a manual setup confirmation, not an automatic radiation measurement."
-      ],
-      "dependencies": [
-        "6B7E9261C1C78AD8"
-      ],
-      "tasks": [
-        {
-          "id": "F3F0AFBFB69FA3C5",
+          "id": "E85D915E8A80E84D",
           "type": "item",
           "item": {
             "id": "mekanism:radioactive_waste_barrel",
             "count": 1
           },
-          "count": 4,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
       "x": 0.0,
-      "y": 3.0,
+      "y": 4.0,
       "icon": "mekanism:radioactive_waste_barrel",
       "rewards": []
     },
     {
-      "id": "0580EBADC0FED36E",
-      "title": "Sunlight after fission",
+      "id": "47C1C61DB74D770B",
+      "title": "Move controlled spaces",
       "description": [
-        "Nuclear waste → Solar Neutron Activator → polonium → Pressurised Reaction Chamber → pellets, using native Mekanism processing. This feeds the next mechanism."
+        "Spatial storage is an optional branch after containment. Check channels and power before transferring a volume."
       ],
       "dependencies": [
-        "9250A5F666A78882"
+        "FBDB3D038D6B12D5"
       ],
       "tasks": [
         {
-          "id": "97B5DF4FA39D573F",
+          "id": "251B3D0522A8FA4C",
           "type": "item",
           "item": {
-            "id": "mekanism:pellet_polonium",
+            "id": "ae2:spatial_io_port",
             "count": 1
           },
-          "count": 2,
+          "count": 1,
           "consume_items": false
         }
       ],
-      "optional": false,
+      "optional": true,
       "x": 3.0,
-      "y": 3.0,
-      "icon": "mekanism:pellet_polonium",
-      "rewards": []
-    },
-    {
-      "id": "9D5D4AB193AD0C20",
-      "title": "One warehouse, many items",
-      "description": [
-        "Larger cells and a Matter Condenser are now available. A singularity still needs the native condenser energy/material requirement."
-      ],
-      "dependencies": [
-        "0580EBADC0FED36E"
-      ],
-      "tasks": [
-        {
-          "id": "0B302BE6B1385525",
-          "type": "item",
-          "item": {
-            "id": "ae2:cell_component_16k",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 6.0,
-      "y": 3.0,
-      "icon": "ae2:cell_component_16k",
-      "rewards": []
-    },
-    {
-      "id": "AF987F876F485BCD",
-      "title": "A planned worksite",
-      "description": [
-        "Use deliberate filters and a defined work area. The miner improves mining capacity; it does not replace required boss defeats."
-      ],
-      "dependencies": [
-        "9D5D4AB193AD0C20"
-      ],
-      "tasks": [
-        {
-          "id": "99D595D536487D32",
-          "type": "item",
-          "item": {
-            "id": "mekanism:digital_miner",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 9.0,
-      "y": 3.0,
-      "icon": "mekanism:digital_miner",
-      "rewards": []
-    },
-    {
-      "id": "3033458CACE20953",
-      "title": "Prove the shutdown",
-      "description": [
-        "Confirm coolant, waste, redstone shutdown and inventory overflow control all work. Start at a low burn rate and increase only with stable cooling."
-      ],
-      "dependencies": [
-        "AF987F876F485BCD"
-      ],
-      "tasks": [
-        {
-          "id": "4DC3C9D7D2008F17",
-          "type": "checkmark",
-          "title": "Confirm this production line works"
-        }
-      ],
-      "optional": false,
-      "x": 12.0,
-      "y": 3.0,
-      "icon": "kubejs:tk3_containment_frame",
+      "y": 4.0,
+      "icon": "ae2:spatial_io_port",
       "rewards": []
     },
     {
       "id": "92F27CBC4799C649",
-      "title": "Trial · Ignis",
+      "title": "Defeat Ignis",
       "description": [
-        "Defeat this boss. The kill task is detected and grants one reusable production core per player. Further player kills drop additional cores for parallel lines."
+        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
       ],
       "dependencies": [
-        "3033458CACE20953"
+        "158C2D1A41CA9EBC"
       ],
       "tasks": [
         {
-          "id": "38D9550BDB80F2CA",
+          "id": "AC293A3B1FA3278D",
           "type": "kill",
           "entity": "cataclysm:ignis",
           "value": 1
         }
       ],
       "optional": false,
-      "x": 0.0,
-      "y": 6.0,
-      "icon": "kubejs:tk3_containment_frame",
-      "rewards": [
+      "x": 6.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_ember_core",
+      "rewards": []
+    },
+    {
+      "id": "F60AFD3121DA0AE1",
+      "title": "Keep the Ember Core",
+      "description": [
+        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+      ],
+      "dependencies": [
+        "92F27CBC4799C649"
+      ],
+      "tasks": [
         {
-          "id": "4F4F7D9C092C0FF9",
+          "id": "D0BBB02B75633FB2",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_ember_core",
             "count": 1
           },
           "count": 1,
-          "team_reward": false
+          "consume_items": false
         }
-      ]
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_ember_core",
+      "rewards": []
     },
     {
-      "id": "91CC6BEFB3017B3F",
-      "title": "Milestone · Containment & Control",
+      "id": "0AEE00E4D969977A",
+      "title": "Run the workshop continuously",
       "description": [
-        "Complete the working line and the required trial. This unlocks chapter 9. Reward: a named unbreakable finishing tool; one claim per player."
+        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
       ],
       "dependencies": [
-        "AF987F876F485BCD",
-        "3033458CACE20953",
+        "FBDB3D038D6B12D5",
+        "10EBEBFE659F7A04",
+        "937C5BB6BA19D917",
         "92F27CBC4799C649"
       ],
       "tasks": [
         {
-          "id": "98926F50DA6B650D",
+          "id": "2F57D7A55136F739",
           "type": "checkmark",
-          "title": "Confirm this production line works"
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
-      "x": 3.0,
-      "y": 6.0,
+      "x": 12.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_containment_frame",
+      "rewards": []
+    },
+    {
+      "id": "91CC6BEFB3017B3F",
+      "title": "Complete chapter 8",
+      "description": [
+        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+      ],
+      "dependencies": [
+        "0AEE00E4D969977A"
+      ],
+      "tasks": [
+        {
+          "id": "08F8C7E07F88197C",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 8.0,
       "icon": "kubejs:tk3_containment_frame",
       "rewards": [
         {
-          "id": "1F8F4CA138931CE3",
+          "id": "0FCC5FCC2194F8E0",
           "type": "item",
           "item": {
             "id": "create:sand_paper",
             "count": 1,
             "components": {
               "minecraft:unbreakable": {},
-              "minecraft:custom_name": "{\"text\": \"Containment Frame Tool\", \"color\": \"light_purple\", \"italic\": false}"
+              "minecraft:custom_name": "{\"text\": \"Containment Frame Workshop Tool\", \"color\": \"light_purple\", \"italic\": false}"
             }
           },
           "count": 1,
@@ -347,20 +305,20 @@
       ]
     },
     {
-      "id": "53FF98DC60B88016",
-      "title": "A forge with a living flame",
+      "id": "57F56D3601CB198C",
+      "title": "Dragonforges",
       "description": [
-        "Optional: build the native dragonforge multiblock from Containment Frames. Supply the correct dragon and native blood/material recipes; dragonsteel remains a forge product."
+        "Ice & Fire forging requires the corresponding living dragon and forge multiblock. Custom frames supply parts; they do not replace the dragon."
       ],
       "dependencies": [
-        "BCC05513E2AD3BA9"
+        "158C2D1A41CA9EBC"
       ],
       "tasks": [
         {
-          "id": "BC5E4EE02DEA6D69",
+          "id": "AC1391B1C101AD08",
           "type": "item",
           "item": {
-            "id": "iceandfire:dragonforge_fire_core_disabled",
+            "id": "iceandfire:dragonforge_fire_input",
             "count": 1
           },
           "count": 1,
@@ -368,36 +326,9 @@
         }
       ],
       "optional": true,
-      "x": 6.0,
-      "y": 6.0,
-      "icon": "iceandfire:dragonforge_fire_core_disabled",
-      "rewards": []
-    },
-    {
-      "id": "49CDA44587739F53",
-      "title": "A second contained furnace",
-      "description": [
-        "Optional: assemble the native cave nuclear furnace using containment-tier components. Native fuel and radiation behaviour still apply."
-      ],
-      "dependencies": [
-        "BCC05513E2AD3BA9"
-      ],
-      "tasks": [
-        {
-          "id": "BD34194373CD7DA8",
-          "type": "item",
-          "item": {
-            "id": "alexscaves:nuclear_furnace_component",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 9.0,
-      "y": 6.0,
-      "icon": "alexscaves:nuclear_furnace_component",
+      "x": 3.0,
+      "y": 8.0,
+      "icon": "iceandfire:dragonforge_fire_input",
       "rewards": []
     }
   ]

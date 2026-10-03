@@ -1,43 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "create:copper_backtank",
-        "create:copper_casing",
-        "create:copper_sheet",
-        "create:copper_valve_handle",
-        "create:fluid_pipe",
-        "create:fluid_tank",
-        "create:fluid_valve",
-        "create:hose_pulley",
-        "create:iron_sheet",
-        "create:item_drain",
-        "create:mechanical_press",
-        "create:mechanical_pump",
-        "create:portable_fluid_interface",
-        "create:spout",
-        "create:steam_engine",
-        "create:steam_whistle",
-        "createaddition:capacitor",
-        "createaddition:rolling_mill",
-        "farmersdelight:iron_knife",
-        "kubejs:tk3_hydraulic_machine",
-        "kubejs:tk3_incomplete_sealed_mechanism",
-        "kubejs:tk3_rotation_mechanism",
-        "kubejs:tk3_sealed_mechanism",
-        "minecraft:copper_block",
-        "minecraft:copper_ingot",
-        "minecraft:kelp",
-        "minecraft:redstone",
-        "minecraft:slime_ball",
-        "minecraft:wheat"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 2 / Materials / Mixing [------------------------<-//
 
@@ -76,26 +41,9 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/tier_2/copper_backtank");
 
-    //->------------------------]  Tier 2 / Tools & components [------------------------<-//
-
-    // Capacitor / Shaped
-    event.shaped(
-        "createaddition:capacitor",
-        [
-            " C ",
-            "IRI",
-            " C "
-        ], {
-            "C": "create:copper_sheet",
-            "R": "minecraft:redstone",
-            "I": "create:iron_sheet"
-        })
-        .id("kubejs:tk3/tier_2/capacitor");
-
     //->------------------------]  Tier 2 / Mechanisms / Sequenced assembly [------------------------<-//
 
     // Sealed Mechanism / Sequence
-    // Final tool is durability-based. Do not keepHeldItem(): ordinary tools wear; unbreakable rewards do not.
     event.recipes.create.sequenced_assembly(
         [
             "kubejs:tk3_sealed_mechanism"
@@ -116,7 +64,7 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_sealed_mechanism",
-                    "minecraft:slime_ball"
+                    "kubejs:tk3_rubber"
                 ]),
             event.recipes.create.deploying(
                 [

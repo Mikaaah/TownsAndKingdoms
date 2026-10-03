@@ -1,32 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "ars_nouveau:source_gem",
-        "create:andesite_alloy",
-        "create:andesite_casing",
-        "create:brass_casing",
-        "create:copper_casing",
-        "create:crushing_wheel",
-        "create:millstone",
-        "create:precision_mechanism",
-        "create_wizardry:arcane_casing",
-        "irons_spellbooks:arcane_essence",
-        "kubejs:tk3_arcane_machine",
-        "kubejs:tk3_arcane_mechanism",
-        "kubejs:tk3_hydraulic_machine",
-        "kubejs:tk3_kinetic_machine",
-        "kubejs:tk3_precision_machine",
-        "kubejs:tk3_rotation_mechanism",
-        "kubejs:tk3_sealed_mechanism",
-        "minecraft:gold_ingot"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 1 / Machine frames [------------------------<-//
 

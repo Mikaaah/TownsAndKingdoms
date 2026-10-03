@@ -2,133 +2,154 @@
   "id": "414EACB3E95685A1",
   "filename": "tk3_chapter_2",
   "group": "7427C3F538DF9198",
-  "title": "II · Copperworks",
-  "subtitle": "Sealed assembly, tanks and fluid handling",
-  "icon": "create:fluid_tank",
+  "title": "Copper · Fields & Fluids",
+  "subtitle": "Hydraulic Machine and connected production",
+  "icon": "kubejs:tk3_hydraulic_machine",
   "order_index": 2,
   "default_hide_dependency_lines": false,
   "quests": [
     {
-      "id": "15CC448AB1E4BAC2",
-      "title": "Flatten copper",
+      "id": "F47CF308EDE8D9E1",
+      "title": "Workshop plan · Hydraulic Machine",
       "description": [
-        "Press copper ingots. This is the first layer that needs an actual processing machine."
+        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
       ],
       "dependencies": [
         "B0A94968CD02DE8A"
       ],
       "tasks": [
         {
-          "id": "52A6657666600917",
-          "type": "item",
-          "item": {
-            "id": "create:copper_sheet",
-            "count": 1
-          },
-          "count": 16,
-          "consume_items": false
+          "id": "56A5AB09CA65CAEC",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
-      "icon": "create:copper_sheet",
+      "icon": "kubejs:tk3_hydraulic_machine",
       "rewards": []
     },
     {
-      "id": "5B7E70BE8CCED21E",
-      "title": "Renewable sealant",
+      "id": "EA2C4591FD4136DA",
+      "title": "Cure the rubber",
       "description": [
-        "Mix one kelp and one wheat with 250 mB water into two slimeballs. Natural slime is also valid; no mandatory rubber mod."
+        "Compact slime, dried kelp and 250 mB water. Mix one wheat, one kelp and 250 mB water into two slimeballs; supply the seals line."
       ],
       "dependencies": [
-        "15CC448AB1E4BAC2"
+        "F47CF308EDE8D9E1"
       ],
       "tasks": [
         {
-          "id": "BB697128D53020D5",
+          "id": "CAFCDE58DBBE2D21",
           "type": "item",
           "item": {
-            "id": "minecraft:slime_ball",
+            "id": "kubejs:tk3_rubber",
             "count": 1
           },
-          "count": 8,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
       "x": 3.0,
       "y": 0.0,
-      "icon": "minecraft:slime_ball",
+      "icon": "kubejs:tk3_rubber",
       "rewards": []
     },
     {
-      "id": "E4D81B893175BE33",
-      "title": "Sealed Mechanism",
+      "id": "0BC7139100518ACF",
+      "title": "Ocean metallurgy",
       "description": [
-        "Kinetic Mechanism → deploy copper sheet → deploy slimeball → deploy with a Farmer’s Delight Iron Knife. One loop; the knife finishes the seal and loses one durability instead of being consumed."
+        "Mix bone meal, kelp and water into calcium powder. Compact prismarine shard, copper sheet and powder into two alloy; rods supply the Conduit Cage."
       ],
       "dependencies": [
-        "5B7E70BE8CCED21E",
-        "B2D7C7B325F4BC1A"
+        "EA2C4591FD4136DA"
       ],
       "tasks": [
         {
-          "id": "9139A771827554FE",
+          "id": "42F0B0E14368ECBF",
           "type": "item",
           "item": {
-            "id": "kubejs:tk3_sealed_mechanism",
+            "id": "create_aquatic_ambitions:prismarine_alloy",
             "count": 1
           },
-          "count": 4,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
       "x": 6.0,
       "y": 0.0,
-      "icon": "kubejs:tk3_sealed_mechanism",
+      "icon": "create_aquatic_ambitions:prismarine_alloy",
       "rewards": []
     },
     {
-      "id": "104AD0106EB83BB2",
-      "title": "Direct the flow",
+      "id": "9CAA477668A63D6F",
+      "title": "Sealed Mechanism",
       "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → 16x create:fluid_pipe. Follow the recipe viewer for the exact pattern and conditions."
+        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:iron_knife. Ordinary tools wear; the chapter reward version is unbreakable."
       ],
       "dependencies": [
-        "EB3E450104C36315"
+        "0BC7139100518ACF"
       ],
       "tasks": [
         {
-          "id": "E7E257BE691BFCD7",
+          "id": "16A2A820253898C5",
           "type": "item",
           "item": {
-            "id": "create:fluid_pipe",
+            "id": "kubejs:tk3_sealed_mechanism",
             "count": 1
           },
-          "count": 16,
+          "count": 1,
           "consume_items": false
         }
       ],
       "optional": false,
       "x": 9.0,
       "y": 0.0,
-      "icon": "create:fluid_pipe",
+      "icon": "kubejs:tk3_sealed_mechanism",
       "rewards": []
     },
     {
-      "id": "7992E0877CF59872",
-      "title": "Move water",
+      "id": "CB8CED3D790F258F",
+      "title": "Hydraulic Machine",
       "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → create:mechanical_pump. Follow the recipe viewer for the exact pattern and conditions."
+        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
       ],
       "dependencies": [
-        "104AD0106EB83BB2"
+        "9CAA477668A63D6F"
       ],
       "tasks": [
         {
-          "id": "64E713E510380397",
+          "id": "032F37D4C1334554",
+          "type": "item",
+          "item": {
+            "id": "kubejs:tk3_hydraulic_machine",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": false,
+      "x": 12.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_hydraulic_machine",
+      "rewards": []
+    },
+    {
+      "id": "39519A20908534FD",
+      "title": "Route fluids",
+      "description": [
+        "Cut a Hydraulic Machine into a pump. Keep separate tanks for water, milk and later XP."
+      ],
+      "dependencies": [
+        "CB8CED3D790F258F"
+      ],
+      "tasks": [
+        {
+          "id": "4C5D6FA0B17146C8",
           "type": "item",
           "item": {
             "id": "create:mechanical_pump",
@@ -140,52 +161,25 @@
       ],
       "optional": false,
       "x": 0.0,
-      "y": 3.0,
+      "y": 4.0,
       "icon": "create:mechanical_pump",
       "rewards": []
     },
     {
-      "id": "2DE7670F89BBE0ED",
-      "title": "Buffer fluids",
+      "id": "21AC3ACC58C334AD",
+      "title": "Water the fields",
       "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → 3x create:fluid_tank. Follow the recipe viewer for the exact pattern and conditions."
+        "Use the frame-based sprinkler recipe, then connect water. The Slicer automates supported Farmer’s Delight cutting recipes using a held knife."
       ],
       "dependencies": [
-        "7992E0877CF59872"
+        "CB8CED3D790F258F"
       ],
       "tasks": [
         {
-          "id": "7F3F8BBDD27618C7",
+          "id": "86E8B3AEC80C298C",
           "type": "item",
           "item": {
-            "id": "create:fluid_tank",
-            "count": 1
-          },
-          "count": 4,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 3.0,
-      "y": 3.0,
-      "icon": "create:fluid_tank",
-      "rewards": []
-    },
-    {
-      "id": "96762A0A6EB94C17",
-      "title": "Fill on the line",
-      "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → create:spout. Follow the recipe viewer for the exact pattern and conditions."
-      ],
-      "dependencies": [
-        "2DE7670F89BBE0ED"
-      ],
-      "tasks": [
-        {
-          "id": "D5CD9B0BA205D7F6",
-          "type": "item",
-          "item": {
-            "id": "create:spout",
+            "id": "sliceanddice:sprinkler",
             "count": 1
           },
           "count": 1,
@@ -193,177 +187,27 @@
         }
       ],
       "optional": false,
-      "x": 6.0,
-      "y": 3.0,
-      "icon": "create:spout",
-      "rewards": []
-    },
-    {
-      "id": "1307DAF82846B205",
-      "title": "Recover fluids",
-      "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → create:item_drain. Follow the recipe viewer for the exact pattern and conditions."
-      ],
-      "dependencies": [
-        "2DE7670F89BBE0ED"
-      ],
-      "tasks": [
-        {
-          "id": "E86BA321E59119D0",
-          "type": "item",
-          "item": {
-            "id": "create:item_drain",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 9.0,
-      "y": 3.0,
-      "icon": "create:item_drain",
-      "rewards": []
-    },
-    {
-      "id": "65A5EA6D875751F2",
-      "title": "Reach a reservoir",
-      "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → create:hose_pulley. Follow the recipe viewer for the exact pattern and conditions."
-      ],
-      "dependencies": [
-        "7992E0877CF59872"
-      ],
-      "tasks": [
-        {
-          "id": "EE2934054D33B283",
-          "type": "item",
-          "item": {
-            "id": "create:hose_pulley",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 0.0,
-      "y": 6.0,
-      "icon": "create:hose_pulley",
-      "rewards": []
-    },
-    {
-      "id": "D180E879988C1A1E",
-      "title": "Expand rotational power",
-      "description": [
-        "Use the stonecutting recipe: kubejs:tk3_hydraulic_machine → create:steam_engine. Follow the recipe viewer for the exact pattern and conditions."
-      ],
-      "dependencies": [
-        "2DE7670F89BBE0ED"
-      ],
-      "tasks": [
-        {
-          "id": "719D6F4DF51F6040",
-          "type": "item",
-          "item": {
-            "id": "create:steam_engine",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
       "x": 3.0,
-      "y": 6.0,
-      "icon": "create:steam_engine",
+      "y": 4.0,
+      "icon": "sliceanddice:sprinkler",
       "rewards": []
     },
     {
-      "id": "DE007A40E6AC5B0D",
-      "title": "Wires for later",
+      "id": "70D9B468C368FFFA",
+      "title": "Run the workshop continuously",
       "description": [
-        "Prepare native copper wire/spools for the FE transition. Alternators and motors remain locked until chapter V."
+        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
       ],
       "dependencies": [
-        "E4D81B893175BE33"
+        "CB8CED3D790F258F",
+        "39519A20908534FD",
+        "21AC3ACC58C334AD"
       ],
       "tasks": [
         {
-          "id": "703DE1C492D6AA87",
-          "type": "item",
-          "item": {
-            "id": "createaddition:rolling_mill",
-            "count": 1
-          },
-          "count": 1,
-          "consume_items": false
-        }
-      ],
-      "optional": true,
-      "x": 6.0,
-      "y": 6.0,
-      "icon": "createaddition:rolling_mill",
-      "rewards": []
-    },
-    {
-      "id": "60278B0905A64DC9",
-      "title": "Milestone · A sealed production line",
-      "description": [
-        "Run the sealed-mechanism sequence and maintain a working fluid buffer. Confirm after the line works. Unlocks brass logistics and precision machines. Reward: unbreakable Sealwright Knife. Install it in the finishing deployer; it accepts the same recipe as the ordinary tool and removes replacement maintenance."
-      ],
-      "dependencies": [
-        "96762A0A6EB94C17",
-        "2DE7670F89BBE0ED",
-        "EB3E450104C36315",
-        "B2D7C7B325F4BC1A"
-      ],
-      "tasks": [
-        {
-          "id": "726BE9B13537FFB5",
+          "id": "E9DDC40FCBBABFD1",
           "type": "checkmark",
-          "title": "Confirm the described setup works"
-        }
-      ],
-      "optional": false,
-      "x": 9.0,
-      "y": 6.0,
-      "icon": "create:fluid_tank",
-      "rewards": [
-        {
-          "id": "AC3E316D2306F9AB",
-          "type": "item",
-          "item": {
-            "id": "farmersdelight:iron_knife",
-            "count": 1,
-            "components": {
-              "minecraft:unbreakable": {},
-              "minecraft:custom_name": "{\"text\": \"Sealwright Knife\", \"color\": \"light_purple\", \"italic\": false}"
-            }
-          },
-          "count": 1,
-          "team_reward": false
-        }
-      ]
-    },
-    {
-      "id": "EB3E450104C36315",
-      "title": "Hydraulic Machine",
-      "description": [
-        "Place a Copper Casing on a belt or depot and deploy one Sealed Mechanism onto it. Stonecut the resulting frame into sixteen pipes, three tanks, or one pump/spout."
-      ],
-      "dependencies": [
-        "E4D81B893175BE33"
-      ],
-      "tasks": [
-        {
-          "id": "F12D1CE163310E31",
-          "type": "item",
-          "item": {
-            "id": "kubejs:tk3_hydraulic_machine",
-            "count": 1
-          },
-          "count": 1
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
@@ -373,52 +217,94 @@
       "rewards": []
     },
     {
-      "id": "DEB1294FE308A6EE",
-      "title": "Copperworks geology",
+      "id": "60278B0905A64DC9",
+      "title": "Complete chapter 2",
       "description": [
-        "Onder de steen: lens, daaronder Hydraulic Machine. Netherrack → scoria/redstone; blackstone → scorchia/coal; copper block → veridium/copper; iron block → crimsite/iron. Mill voor de eerste materialen. Crushing is pas tier 3."
+        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
       ],
       "dependencies": [
-        "EB3E450104C36315"
+        "70D9B468C368FFFA"
       ],
       "tasks": [
         {
-          "id": "E88D435B2D596F5A",
+          "id": "6382041E68AC07BF",
           "type": "checkmark",
-          "title": "Controleer dat de beschreven opstelling werkt"
+          "title": "Confirm the working setup"
         }
       ],
-      "optional": true,
-      "x": 6.0,
-      "y": 10.0,
+      "optional": false,
+      "x": 9.0,
+      "y": 4.0,
       "icon": "kubejs:tk3_hydraulic_machine",
-      "rewards": []
-    },
-    {
-      "id": "B2D7C7B325F4BC1A",
-      "title": "Tools of the workshop · Sealwright Knife",
-      "description": [
-        "Craft an ordinary farmersdelight:iron_knife. It is the final deployer-held tool for this chapter’s mechanism sequence. Use normal tools to finish the chapter; claim the named unbreakable version at the milestone and replace the tool in your deployer."
-      ],
-      "dependencies": [
-        "5B7E70BE8CCED21E"
-      ],
-      "tasks": [
+      "rewards": [
         {
-          "id": "1829F5CB5CF07ABB",
+          "id": "E2E9F7F9F1492152",
           "type": "item",
           "item": {
             "id": "farmersdelight:iron_knife",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Hydraulic Machine Workshop Tool\", \"color\": \"light_purple\", \"italic\": false}"
+            }
+          },
+          "count": 1,
+          "team_reward": false
+        }
+      ]
+    },
+    {
+      "id": "FC0DDB9C57D6688B",
+      "title": "Ocean workshop",
+      "description": [
+        "Upgrade Aquatic supplies the aquatic world. Build a Conduit Cage, then follow the addon’s actual channeling recipes; its conduit ingredient comes from ocean exploration."
+      ],
+      "dependencies": [
+        "F47CF308EDE8D9E1"
+      ],
+      "tasks": [
+        {
+          "id": "ED9ACA2FE65230D7",
+          "type": "item",
+          "item": {
+            "id": "create_aquatic_ambitions:mechanical_conduit",
             "count": 1
           },
           "count": 1,
           "consume_items": false
         }
       ],
-      "optional": false,
-      "x": 9.0,
-      "y": 5.0,
-      "icon": "farmersdelight:iron_knife",
+      "optional": true,
+      "x": 12.0,
+      "y": 4.0,
+      "icon": "create_aquatic_ambitions:mechanical_conduit",
+      "rewards": []
+    },
+    {
+      "id": "5B89EF1EB562A8A6",
+      "title": "Iron’s Gems ’n Jewelry",
+      "description": [
+        "Craft the station and guide. Jewel effects and jewelry components keep their native scroll and jewelcrafting systems."
+      ],
+      "dependencies": [
+        "F47CF308EDE8D9E1"
+      ],
+      "tasks": [
+        {
+          "id": "F2513B0658C77A37",
+          "type": "item",
+          "item": {
+            "id": "irons_jewelry:jewelcrafting_station",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 8.0,
+      "icon": "irons_jewelry:jewelcrafting_station",
       "rewards": []
     }
   ]

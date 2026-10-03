@@ -1,38 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "create:asurine",
-        "create:copper_nugget",
-        "create:crimsite",
-        "create:crushed_raw_copper",
-        "create:crushed_raw_gold",
-        "create:crushed_raw_iron",
-        "create:crushed_raw_zinc",
-        "create:limestone",
-        "create:ochrum",
-        "create:scorchia",
-        "create:scoria",
-        "create:veridium",
-        "create:zinc_nugget",
-        "minecraft:andesite",
-        "minecraft:bone_meal",
-        "minecraft:clay_ball",
-        "minecraft:coal",
-        "minecraft:diorite",
-        "minecraft:gold_nugget",
-        "minecraft:granite",
-        "minecraft:iron_nugget",
-        "minecraft:lapis_lazuli",
-        "minecraft:quartz",
-        "minecraft:redstone"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 1 / Resource processing / Crushing [------------------------<-//
 
@@ -120,26 +90,6 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 2 / Resource processing / Crushing [------------------------<-//
 
-    // Redstone / Crushing
-    event.recipes.create.crushing(
-        [
-            "2x minecraft:redstone"
-        ],
-        [
-            "create:scoria"
-        ])
-        .id("kubejs:tk3/geology/crushing_scoria");
-
-    // Coal / Crushing
-    event.recipes.create.crushing(
-        [
-            "2x minecraft:coal"
-        ],
-        [
-            "create:scorchia"
-        ])
-        .id("kubejs:tk3/geology/crushing_scorchia");
-
     // Crushed Raw Copper / Crushing
     event.recipes.create.crushing(
         [
@@ -161,26 +111,6 @@ ServerEvents.recipes(event => {
         .id("kubejs:tk3/geology/crushing_crimsite");
 
     //->------------------------]  Tier 2 / Resource processing / Milling [------------------------<-//
-
-    // Redstone / Milling
-    event.recipes.create.milling(
-        [
-            "minecraft:redstone"
-        ],
-        [
-            "create:scoria"
-        ])
-        .id("kubejs:tk3/geology/milling_scoria");
-
-    // Coal / Milling
-    event.recipes.create.milling(
-        [
-            "minecraft:coal"
-        ],
-        [
-            "create:scorchia"
-        ])
-        .id("kubejs:tk3/geology/milling_scorchia");
 
     // Copper Nugget / Milling
     event.recipes.create.milling(
@@ -204,6 +134,26 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 3 / Resource processing / Crushing [------------------------<-//
 
+    // Redstone / Crushing
+    event.recipes.create.crushing(
+        [
+            "2x minecraft:redstone"
+        ],
+        [
+            "create:scoria"
+        ])
+        .id("kubejs:tk3/geology/crushing_scoria");
+
+    // Coal / Crushing
+    event.recipes.create.crushing(
+        [
+            "2x minecraft:coal"
+        ],
+        [
+            "create:scorchia"
+        ])
+        .id("kubejs:tk3/geology/crushing_scorchia");
+
     // Crushed Raw Zinc / Crushing
     event.recipes.create.crushing(
         [
@@ -225,6 +175,26 @@ ServerEvents.recipes(event => {
         .id("kubejs:tk3/geology/crushing_ochrum");
 
     //->------------------------]  Tier 3 / Resource processing / Milling [------------------------<-//
+
+    // Redstone / Milling
+    event.recipes.create.milling(
+        [
+            "minecraft:redstone"
+        ],
+        [
+            "create:scoria"
+        ])
+        .id("kubejs:tk3/geology/milling_scoria");
+
+    // Coal / Milling
+    event.recipes.create.milling(
+        [
+            "minecraft:coal"
+        ],
+        [
+            "create:scorchia"
+        ])
+        .id("kubejs:tk3/geology/milling_scorchia");
 
     // Zinc Nugget / Milling
     event.recipes.create.milling(

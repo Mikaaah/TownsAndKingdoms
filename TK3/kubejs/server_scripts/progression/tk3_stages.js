@@ -1,112 +1,867 @@
 // ProbeJS-confirmed AStages and FTB XMod Compat methods.
 // Chapter quest progress is team based; machine access is per player.
 // Synchronise at login so offline members receive the same completed milestones.
-(function () {
-  const milestones = [{"quest": "B0A94968CD02DE8A", "stage": "tk3_tier_2"}, {"quest": "60278B0905A64DC9", "stage": "tk3_tier_3"}, {"quest": "B81077B20C8371D3", "stage": "tk3_tier_4"}, {"quest": "1CD504854E287D44", "stage": "tk3_tier_5"}, {"quest": "4B5E0820B553B7C9", "stage": "tk3_tier_6"}, {"quest": "DCEB2AF9B398CAEB", "stage": "tk3_tier_7"}, {"quest": "BCC05513E2AD3BA9", "stage": "tk3_tier_8"}, {"quest": "91CC6BEFB3017B3F", "stage": "tk3_tier_9"}, {"quest": "DD2408B49260ECA5", "stage": "tk3_tier_10"}, {"quest": "D5FDACA2A14DE92D", "stage": "tk3_boss_verdant_sigil"}, {"quest": "B1EC8B5E18AF1A4E", "stage": "tk3_boss_storm_core"}, {"quest": "92F27CBC4799C649", "stage": "tk3_boss_ember_core"}, {"quest": "1EAF5BC1918535CA", "stage": "tk3_boss_void_core"}];
-  function sync(player) {
-    const data = FTBQuests.getServerDataFromPlayer(player);
-    milestones.forEach(m => {
-      if (data.isCompleted(m.quest) && !AStages.playerHasStage(player, m.stage)) {
-        AStages.addStageToPlayer(player, m.stage);
-      }
-    });
-  }
-  PlayerEvents.loggedIn(event => sync(event.player));
-  milestones.forEach(m => FTBQuestsEvents.completed(m.quest, event => {
-    event.onlineMembers.forEach(player => sync(player));
-  }));
+(function() {
+    const milestones = [{
+        "quest": "B0A94968CD02DE8A",
+        "stage": "tk3_tier_2"
+    }, {
+        "quest": "60278B0905A64DC9",
+        "stage": "tk3_tier_3"
+    }, {
+        "quest": "B81077B20C8371D3",
+        "stage": "tk3_tier_4"
+    }, {
+        "quest": "1CD504854E287D44",
+        "stage": "tk3_tier_5"
+    }, {
+        "quest": "4B5E0820B553B7C9",
+        "stage": "tk3_tier_6"
+    }, {
+        "quest": "DCEB2AF9B398CAEB",
+        "stage": "tk3_tier_7"
+    }, {
+        "quest": "BCC05513E2AD3BA9",
+        "stage": "tk3_tier_8"
+    }, {
+        "quest": "91CC6BEFB3017B3F",
+        "stage": "tk3_tier_9"
+    }, {
+        "quest": "DD2408B49260ECA5",
+        "stage": "tk3_tier_10"
+    }, {
+        "quest": "4585DD0797591621",
+        "stage": "tk3_boss_dragon_core"
+    }, {
+        "quest": "D5FDACA2A14DE92D",
+        "stage": "tk3_boss_verdant_sigil"
+    }, {
+        "quest": "B1EC8B5E18AF1A4E",
+        "stage": "tk3_boss_storm_core"
+    }, {
+        "quest": "92F27CBC4799C649",
+        "stage": "tk3_boss_ember_core"
+    }, {
+        "quest": "1EAF5BC1918535CA",
+        "stage": "tk3_boss_void_core"
+    }];
+
+    function sync(player) {
+        const data = FTBQuests.getServerDataFromPlayer(player);
+        milestones.forEach(m => {
+            if (data.isCompleted(m.quest) && !AStages.playerHasStage(player, m.stage)) {
+                AStages.addStageToPlayer(player, m.stage);
+            }
+        });
+    }
+    PlayerEvents.loggedIn(event => sync(event.player));
+    milestones.forEach(m => FTBQuestsEvents.completed(m.quest, event => {
+        event.onlineMembers.forEach(player => sync(player));
+    }));
 })();
 
 
-["create:blaze_burner", "create:copper_backtank", "create:copper_casing", "create:copper_diving_boots", "create:copper_diving_helmet", "create:copper_nugget", "create:copper_sheet", "create:copper_valve_handle", "create:empty_blaze_burner", "create:fluid_pipe", "create:fluid_tank", "create:fluid_valve", "create:flywheel", "create:hose_pulley", "create:item_drain", "create:item_vault", "create:mechanical_pump", "create:nozzle", "create:portable_fluid_interface", "create:spout", "create:steam_engine", "create:steam_whistle", "createaddition:capacitor", "createaddition:rolling_mill", "kubejs:tk3_hydraulic_machine", "kubejs:tk3_sealed_mechanism", "sophisticatedbackpacks:copper_backpack", "sophisticatedbackpacks:feeding_upgrade", "sophisticatedbackpacks:filter_upgrade", "sophisticatedbackpacks:iron_backpack", "sophisticatedbackpacks:pickup_upgrade", "sophisticatedbackpacks:pump_upgrade", "sophisticatedstorage:basic_to_copper_tier_upgrade", "sophisticatedstorage:copper_barrel", "sophisticatedstorage:copper_chest", "sophisticatedstorage:copper_shulker_box", "sophisticatedstorage:copper_to_iron_tier_upgrade", "sophisticatedstorage:feeding_upgrade", "sophisticatedstorage:filter_upgrade", "sophisticatedstorage:iron_barrel", "sophisticatedstorage:iron_chest", "sophisticatedstorage:iron_shulker_box", "sophisticatedstorage:limited_copper_barrel_1", "sophisticatedstorage:limited_copper_barrel_2", "sophisticatedstorage:limited_copper_barrel_3", "sophisticatedstorage:limited_copper_barrel_4", "sophisticatedstorage:limited_iron_barrel_1", "sophisticatedstorage:limited_iron_barrel_2", "sophisticatedstorage:limited_iron_barrel_3", "sophisticatedstorage:limited_iron_barrel_4", "sophisticatedstorage:pickup_upgrade", "sophisticatedstorage:pump_upgrade"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_2", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+
+
+
+
+
+
+["create:blaze_burner", "create:copper_backtank", "create:copper_casing",
+    "create:copper_diving_boots", "create:copper_diving_helmet", "create:copper_nugget",
+    "create:copper_sheet", "create:copper_valve_handle", "create:crushed_raw_copper",
+    "create:crushed_raw_iron", "create:empty_blaze_burner", "create:fluid_pipe",
+    "create:fluid_tank", "create:fluid_valve", "create:flywheel", "create:hose_pulley",
+    "create:item_drain", "create:item_vault", "create:mechanical_pump", "create:minecart_coupling",
+    "create:nozzle", "create:portable_fluid_interface", "create:spout", "create:steam_engine",
+    "create:steam_whistle", "create:sticker", "create:sticky_mechanical_piston",
+    "create:super_glue", "create:veridium", "create_aquatic_ambitions:calcium_rich_powder",
+    "create_aquatic_ambitions:mechanical_conduit", "create_aquatic_ambitions:prismarine_alloy",
+    "create_aquatic_ambitions:prismarine_alloy_block",
+    "create_aquatic_ambitions:prismarine_alloy_rod", "create_aquatic_ambitions:spiky_shell",
+    "create_dragons_plus:fluid_hatch", "createaddition:rolling_mill", "farmersdelight:rich_soil",
+    "irons_jewelry:garnet", "irons_jewelry:jewelcrafting_guide",
+    "irons_jewelry:jewelcrafting_station", "irons_jewelry:moonstone", "irons_jewelry:necklace",
+    "irons_jewelry:onyx", "irons_jewelry:peridot", "irons_jewelry:recipe", "irons_jewelry:ring",
+    "irons_jewelry:ruby", "irons_jewelry:sapphire", "irons_jewelry:topaz",
+    "kubejs:tk3_hydraulic_machine", "kubejs:tk3_rubber", "kubejs:tk3_sealed_mechanism",
+    "minecraft:blue_ice", "minecraft:brain_coral", "minecraft:brain_coral_block",
+    "minecraft:brain_coral_fan", "minecraft:breeze_rod", "minecraft:bubble_coral",
+    "minecraft:bubble_coral_block", "minecraft:bubble_coral_fan", "minecraft:copper_ingot",
+    "minecraft:exposed_chiseled_copper", "minecraft:exposed_copper",
+    "minecraft:exposed_copper_bulb", "minecraft:exposed_copper_door",
+    "minecraft:exposed_copper_grate", "minecraft:exposed_copper_trapdoor",
+    "minecraft:exposed_cut_copper", "minecraft:exposed_cut_copper_slab",
+    "minecraft:exposed_cut_copper_stairs", "minecraft:fire_coral", "minecraft:fire_coral_block",
+    "minecraft:fire_coral_fan", "minecraft:heart_of_the_sea", "minecraft:horn_coral",
+    "minecraft:horn_coral_block", "minecraft:horn_coral_fan", "minecraft:iron_nugget",
+    "minecraft:oxidized_chiseled_copper", "minecraft:oxidized_copper",
+    "minecraft:oxidized_copper_bulb", "minecraft:oxidized_copper_door",
+    "minecraft:oxidized_copper_grate", "minecraft:oxidized_copper_trapdoor",
+    "minecraft:oxidized_cut_copper", "minecraft:oxidized_cut_copper_slab",
+    "minecraft:oxidized_cut_copper_stairs", "minecraft:packed_ice", "minecraft:prismarine_crystals",
+    "minecraft:prismarine_shard", "minecraft:slime_ball", "minecraft:trident",
+    "minecraft:tube_coral", "minecraft:tube_coral_block", "minecraft:tube_coral_fan",
+    "minecraft:weathered_chiseled_copper", "minecraft:weathered_copper",
+    "minecraft:weathered_copper_bulb", "minecraft:weathered_copper_door",
+    "minecraft:weathered_copper_grate", "minecraft:weathered_copper_trapdoor",
+    "minecraft:weathered_cut_copper", "minecraft:weathered_cut_copper_slab",
+    "minecraft:weathered_cut_copper_stairs", "minecraft:wet_sponge", "sliceanddice:floor_sprinkler",
+    "sliceanddice:sprinkler", "sophisticatedbackpacks:copper_backpack",
+    "sophisticatedbackpacks:feeding_upgrade", "sophisticatedbackpacks:filter_upgrade",
+    "sophisticatedbackpacks:iron_backpack", "sophisticatedbackpacks:pickup_upgrade",
+    "sophisticatedbackpacks:pump_upgrade", "sophisticatedstorage:basic_to_copper_tier_upgrade",
+    "sophisticatedstorage:copper_barrel", "sophisticatedstorage:copper_chest",
+    "sophisticatedstorage:copper_shulker_box", "sophisticatedstorage:copper_to_iron_tier_upgrade",
+    "sophisticatedstorage:feeding_upgrade", "sophisticatedstorage:filter_upgrade",
+    "sophisticatedstorage:iron_barrel", "sophisticatedstorage:iron_chest",
+    "sophisticatedstorage:iron_shulker_box", "sophisticatedstorage:limited_copper_barrel_1",
+    "sophisticatedstorage:limited_copper_barrel_2", "sophisticatedstorage:limited_copper_barrel_3",
+    "sophisticatedstorage:limited_copper_barrel_4", "sophisticatedstorage:limited_iron_barrel_1",
+    "sophisticatedstorage:limited_iron_barrel_2", "sophisticatedstorage:limited_iron_barrel_3",
+    "sophisticatedstorage:limited_iron_barrel_4", "sophisticatedstorage:pickup_upgrade",
+    "sophisticatedstorage:pump_upgrade", "upgrade_aquatic:acan_coral",
+    "upgrade_aquatic:acan_coral_block", "upgrade_aquatic:acan_coral_fan",
+    "upgrade_aquatic:branch_coral", "upgrade_aquatic:branch_coral_block",
+    "upgrade_aquatic:branch_coral_fan", "upgrade_aquatic:chrome_coral",
+    "upgrade_aquatic:chrome_coral_block", "upgrade_aquatic:chrome_coral_fan",
+    "upgrade_aquatic:finger_coral", "upgrade_aquatic:finger_coral_block",
+    "upgrade_aquatic:finger_coral_fan", "upgrade_aquatic:moss_coral",
+    "upgrade_aquatic:moss_coral_block", "upgrade_aquatic:moss_coral_fan",
+    "upgrade_aquatic:petal_coral", "upgrade_aquatic:petal_coral_block",
+    "upgrade_aquatic:petal_coral_fan", "upgrade_aquatic:pillow_coral",
+    "upgrade_aquatic:pillow_coral_block", "upgrade_aquatic:pillow_coral_fan",
+    "upgrade_aquatic:rock_coral", "upgrade_aquatic:rock_coral_fan", "upgrade_aquatic:silk_coral",
+    "upgrade_aquatic:silk_coral_fan", "upgrade_aquatic:star_coral", "upgrade_aquatic:star_coral_fan"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_2",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["aeronautics:andesite_propeller", "aeronautics:aviators_goggles", "aeronautics:propeller_bearing", "aeronautics:wooden_propeller", "create:attribute_filter", "create:brass_block", "create:brass_casing", "create:brass_funnel", "create:brass_hand", "create:brass_ingot", "create:brass_nugget", "create:brass_sheet", "create:brass_tunnel", "create:chain_conveyor", "create:clockwork_bearing", "create:content_observer", "create:contraption_controls", "create:controller_rail", "create:controls", "create:crafter_slot_cover", "create:display_board", "create:display_link", "create:electron_tube", "create:elevator_pulley", "create:factory_gauge", "create:item_hatch", "create:linked_controller", "create:mechanical_arm", "create:mechanical_crafter", "create:mechanical_roller", "create:nixie_tube", "create:package_filter", "create:package_frogport", "create:packager", "create:peculiar_bell", "create:polished_rose_quartz", "create:powered_latch", "create:powered_toggle_latch", "create:pulse_extender", "create:pulse_repeater", "create:pulse_timer", "create:redstone_contact", "create:redstone_link", "create:redstone_requester", "create:repackager", "create:rose_quartz", "create:rose_quartz_lamp", "create:rotation_speed_controller", "create:schedule", "create:schematicannon", "create:sequenced_gearshift", "create:smart_chute", "create:smart_fluid_pipe", "create:stock_link", "create:stock_ticker", "create:stockpile_switch", "create:track", "create:track_observer", "create:track_signal", "create:track_station", "create:transmitter", "create_enchantment_industry:grindstone_drain", "create_enchantment_industry:mechanical_grindstone", "create_enchantment_industry:printer", "kubejs:tk3_precision_machine", "sophisticatedbackpacks:advanced_compacting_upgrade", "sophisticatedbackpacks:advanced_deposit_upgrade", "sophisticatedbackpacks:advanced_feeding_upgrade", "sophisticatedbackpacks:advanced_filter_upgrade", "sophisticatedbackpacks:advanced_jukebox_upgrade", "sophisticatedbackpacks:advanced_magnet_upgrade", "sophisticatedbackpacks:advanced_mob_catcher_upgrade", "sophisticatedbackpacks:advanced_pickup_upgrade", "sophisticatedbackpacks:advanced_refill_upgrade", "sophisticatedbackpacks:advanced_restock_upgrade", "sophisticatedbackpacks:advanced_tool_swapper_upgrade", "sophisticatedbackpacks:advanced_void_upgrade", "sophisticatedbackpacks:compacting_upgrade", "sophisticatedbackpacks:crafting_upgrade", "sophisticatedbackpacks:gold_backpack", "sophisticatedbackpacks:magnet_upgrade", "sophisticatedbackpacks:stack_upgrade_tier_1", "sophisticatedbackpacks:stonecutter_upgrade", "sophisticatedbackpacks:void_upgrade", "sophisticatedstorage:advanced_compacting_upgrade", "sophisticatedstorage:advanced_feeding_upgrade", "sophisticatedstorage:advanced_filter_upgrade", "sophisticatedstorage:advanced_hopper_upgrade", "sophisticatedstorage:advanced_jukebox_upgrade", "sophisticatedstorage:advanced_magnet_upgrade", "sophisticatedstorage:advanced_pickup_upgrade", "sophisticatedstorage:advanced_void_upgrade", "sophisticatedstorage:compacting_upgrade", "sophisticatedstorage:controller", "sophisticatedstorage:crafting_upgrade", "sophisticatedstorage:gold_barrel", "sophisticatedstorage:gold_chest", "sophisticatedstorage:gold_shulker_box", "sophisticatedstorage:iron_to_gold_tier_upgrade", "sophisticatedstorage:limited_gold_barrel_1", "sophisticatedstorage:limited_gold_barrel_2", "sophisticatedstorage:limited_gold_barrel_3", "sophisticatedstorage:limited_gold_barrel_4", "sophisticatedstorage:magnet_upgrade", "sophisticatedstorage:stack_upgrade_tier_1", "sophisticatedstorage:stonecutter_upgrade", "sophisticatedstorage:storage_input", "sophisticatedstorage:storage_io", "sophisticatedstorage:storage_link", "sophisticatedstorage:storage_output", "sophisticatedstorage:void_upgrade"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_3", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["aeronautics:andesite_propeller", "aeronautics:aviators_goggles", "aeronautics:propeller_bearing",
+    "aeronautics:wooden_propeller", "chipped:tinkering_table", "create:attribute_filter",
+    "create:brass_block", "create:brass_casing", "create:brass_funnel", "create:brass_hand",
+    "create:brass_ingot", "create:brass_nugget", "create:brass_sheet", "create:brass_tunnel",
+    "create:chain_conveyor", "create:clockwork_bearing", "create:content_observer",
+    "create:contraption_controls", "create:controller_rail", "create:controls",
+    "create:crafter_slot_cover", "create:crushed_raw_gold", "create:crushed_raw_zinc",
+    "create:crushing_wheel", "create:display_board", "create:display_link", "create:electron_tube",
+    "create:elevator_pulley", "create:factory_gauge", "create:item_hatch",
+    "create:linked_controller", "create:mechanical_arm", "create:mechanical_crafter",
+    "create:mechanical_roller", "create:nixie_tube", "create:package_filter",
+    "create:package_frogport", "create:packager", "create:peculiar_bell",
+    "create:polished_rose_quartz", "create:powered_latch", "create:powered_toggle_latch",
+    "create:precision_mechanism", "create:pulse_extender", "create:pulse_repeater",
+    "create:pulse_timer", "create:redstone_contact", "create:redstone_link",
+    "create:redstone_requester", "create:repackager", "create:rose_quartz",
+    "create:rose_quartz_lamp", "create:rotation_speed_controller", "create:schedule",
+    "create:schematicannon", "create:sequenced_gearshift", "create:smart_chute",
+    "create:smart_fluid_pipe", "create:stock_link", "create:stock_ticker",
+    "create:stockpile_switch", "create:track", "create:track_observer", "create:track_signal",
+    "create:track_station", "create:transmitter",
+    "create_dragons_plus:blaze_upgrade_smithing_template", "create_dragons_plus:fragile_fluid_tank",
+    "create_dragons_plus:levitite_fragile_fluid_tank",
+    "create_enchantment_industry:grindstone_drain",
+    "create_enchantment_industry:mechanical_grindstone", "create_enchantment_industry:printer",
+    "create_hypertube:hypertube", "create_hypertube:hypertube_accelerator",
+    "create_hypertube:hypertube_entrance", "create_hypertube:hypertube_funnel",
+    "create_hypertube:hypertube_junction", "create_hypertube:redstone_detector_tube_attachment",
+    "create_hypertube:tube_scanner_attachment", "create_hypertube:tube_scanner_unfinished",
+    "createaddition:capacitor", "createminecolonies:colony_warehouse_stock_link",
+    "kubejs:tk3_precision_machine", "minecraft:coal", "minecraft:gold_nugget", "minecraft:redstone",
+    "sophisticatedbackpacks:advanced_compacting_upgrade",
+    "sophisticatedbackpacks:advanced_deposit_upgrade",
+    "sophisticatedbackpacks:advanced_feeding_upgrade",
+    "sophisticatedbackpacks:advanced_filter_upgrade",
+    "sophisticatedbackpacks:advanced_jukebox_upgrade",
+    "sophisticatedbackpacks:advanced_magnet_upgrade",
+    "sophisticatedbackpacks:advanced_mob_catcher_upgrade",
+    "sophisticatedbackpacks:advanced_pickup_upgrade",
+    "sophisticatedbackpacks:advanced_refill_upgrade",
+    "sophisticatedbackpacks:advanced_restock_upgrade",
+    "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
+    "sophisticatedbackpacks:advanced_void_upgrade", "sophisticatedbackpacks:compacting_upgrade",
+    "sophisticatedbackpacks:crafting_upgrade", "sophisticatedbackpacks:gold_backpack",
+    "sophisticatedbackpacks:magnet_upgrade", "sophisticatedbackpacks:stack_upgrade_tier_1",
+    "sophisticatedbackpacks:stonecutter_upgrade", "sophisticatedbackpacks:void_upgrade",
+    "sophisticatedstorage:advanced_compacting_upgrade",
+    "sophisticatedstorage:advanced_feeding_upgrade", "sophisticatedstorage:advanced_filter_upgrade",
+    "sophisticatedstorage:advanced_hopper_upgrade", "sophisticatedstorage:advanced_jukebox_upgrade",
+    "sophisticatedstorage:advanced_magnet_upgrade", "sophisticatedstorage:advanced_pickup_upgrade",
+    "sophisticatedstorage:advanced_void_upgrade", "sophisticatedstorage:compacting_upgrade",
+    "sophisticatedstorage:controller", "sophisticatedstorage:crafting_upgrade",
+    "sophisticatedstorage:gold_barrel", "sophisticatedstorage:gold_chest",
+    "sophisticatedstorage:gold_shulker_box", "sophisticatedstorage:iron_to_gold_tier_upgrade",
+    "sophisticatedstorage:limited_gold_barrel_1", "sophisticatedstorage:limited_gold_barrel_2",
+    "sophisticatedstorage:limited_gold_barrel_3", "sophisticatedstorage:limited_gold_barrel_4",
+    "sophisticatedstorage:magnet_upgrade", "sophisticatedstorage:stack_upgrade_tier_1",
+    "sophisticatedstorage:stonecutter_upgrade", "sophisticatedstorage:storage_input",
+    "sophisticatedstorage:storage_io", "sophisticatedstorage:storage_link",
+    "sophisticatedstorage:storage_output", "sophisticatedstorage:void_upgrade"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_3",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["ars_creo:starbuncle_wheel", "ars_nouveau:agronomic_sourcelink", "ars_nouveau:alchemical_sourcelink", "ars_nouveau:bookwyrm_charm", "ars_nouveau:drygmy_charm", "ars_nouveau:enchanting_apparatus", "ars_nouveau:mycelial_sourcelink", "ars_nouveau:relay", "ars_nouveau:relay_collector", "ars_nouveau:relay_deposit", "ars_nouveau:relay_splitter", "ars_nouveau:starbuncle_charm", "ars_nouveau:vitalic_sourcelink", "ars_nouveau:volcanic_sourcelink", "ars_nouveau:whirlisprig_charm", "ars_nouveau:wixie_charm", "create_enchantment_industry:blaze_enchanter", "create_enchantment_industry:brass_bookshelf", "create_enchantment_industry:experience_hatch", "create_enchantment_industry:experience_lantern", "create_wizardry:arcane_casing", "create_wizardry:arcane_pipe", "create_wizardry:arcane_pump", "create_wizardry:arcane_sheet", "irons_spellbooks:alchemist_cauldron", "irons_spellbooks:arcane_anvil", "kubejs:tk3_arcane_machine", "kubejs:tk3_arcane_mechanism", "sophisticatedbackpacks:advanced_alchemy_upgrade", "sophisticatedbackpacks:advanced_pump_upgrade", "sophisticatedbackpacks:alchemy_upgrade", "sophisticatedbackpacks:xp_pump_upgrade", "sophisticatedstorage:advanced_alchemy_upgrade", "sophisticatedstorage:advanced_pump_upgrade", "sophisticatedstorage:alchemy_upgrade", "sophisticatedstorage:xp_pump_upgrade", "witchery:altar", "witchery:cauldron", "witchery:iron_witches_oven", "witchery:spinning_wheel"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_4", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["ae2:1k_crafting_storage", "ae2:advanced_card", "ae2:annihilation_core", "ae2:annihilation_plane",
+    "ae2:basic_card", "ae2:black_covered_cable", "ae2:black_covered_dense_cable",
+    "ae2:black_glass_cable", "ae2:black_lumen_paint_ball", "ae2:black_paint_ball",
+    "ae2:black_smart_cable", "ae2:black_smart_dense_cable", "ae2:blank_pattern",
+    "ae2:blue_covered_cable", "ae2:blue_covered_dense_cable", "ae2:blue_glass_cable",
+    "ae2:blue_lumen_paint_ball", "ae2:blue_paint_ball", "ae2:blue_smart_cable",
+    "ae2:blue_smart_dense_cable", "ae2:brown_covered_cable", "ae2:brown_covered_dense_cable",
+    "ae2:brown_glass_cable", "ae2:brown_lumen_paint_ball", "ae2:brown_paint_ball",
+    "ae2:brown_smart_cable", "ae2:brown_smart_dense_cable", "ae2:cable_anchor", "ae2:cable_bus",
+    "ae2:cable_energy_acceptor", "ae2:cable_interface", "ae2:cable_pattern_provider",
+    "ae2:calculation_processor", "ae2:calculation_processor_press", "ae2:capacity_card",
+    "ae2:cell_component_1k", "ae2:cell_workbench", "ae2:certus_quartz_axe",
+    "ae2:certus_quartz_crystal", "ae2:certus_quartz_cutting_knife", "ae2:certus_quartz_dust",
+    "ae2:certus_quartz_hoe", "ae2:certus_quartz_pickaxe", "ae2:certus_quartz_shovel",
+    "ae2:certus_quartz_sword", "ae2:certus_quartz_wrench", "ae2:charged_certus_quartz_crystal",
+    "ae2:charged_staff", "ae2:charger", "ae2:chest", "ae2:chipped_budding_quartz",
+    "ae2:chiseled_quartz_block", "ae2:chiseled_quartz_slab", "ae2:chiseled_quartz_stairs",
+    "ae2:chiseled_quartz_wall", "ae2:controller", "ae2:conversion_monitor",
+    "ae2:crafting_accelerator", "ae2:crafting_card", "ae2:crafting_monitor", "ae2:crafting_pattern",
+    "ae2:crafting_terminal", "ae2:crafting_unit", "ae2:crank", "ae2:crystal_resonance_generator",
+    "ae2:cut_quartz_block", "ae2:cut_quartz_slab", "ae2:cut_quartz_stairs", "ae2:cut_quartz_wall",
+    "ae2:cyan_covered_cable", "ae2:cyan_covered_dense_cable", "ae2:cyan_glass_cable",
+    "ae2:cyan_lumen_paint_ball", "ae2:cyan_paint_ball", "ae2:cyan_smart_cable",
+    "ae2:cyan_smart_dense_cable", "ae2:damaged_budding_quartz", "ae2:dark_monitor",
+    "ae2:debug_cube_gen", "ae2:debug_energy_gen", "ae2:debug_eraser", "ae2:debug_item_gen",
+    "ae2:debug_meteorite_placer", "ae2:debug_phantom_node", "ae2:debug_replicator_card",
+    "ae2:dense_energy_cell", "ae2:drive", "ae2:ender_dust", "ae2:energy_acceptor",
+    "ae2:energy_card", "ae2:energy_cell", "ae2:energy_level_emitter", "ae2:engineering_processor",
+    "ae2:engineering_processor_press", "ae2:entropy_manipulator", "ae2:equal_distribution_card",
+    "ae2:export_bus", "ae2:facade", "ae2:fe_p2p_tunnel", "ae2:flawed_budding_quartz",
+    "ae2:flawless_budding_quartz", "ae2:fluid_cell_housing", "ae2:fluid_p2p_tunnel",
+    "ae2:fluid_storage_cell_1k", "ae2:fluix_axe", "ae2:fluix_block", "ae2:fluix_covered_cable",
+    "ae2:fluix_covered_dense_cable", "ae2:fluix_crystal", "ae2:fluix_dust", "ae2:fluix_glass_cable",
+    "ae2:fluix_hoe", "ae2:fluix_pearl", "ae2:fluix_pickaxe", "ae2:fluix_shovel", "ae2:fluix_slab",
+    "ae2:fluix_smart_cable", "ae2:fluix_smart_dense_cable", "ae2:fluix_stairs", "ae2:fluix_sword",
+    "ae2:fluix_upgrade_smithing_template", "ae2:fluix_wall", "ae2:formation_core",
+    "ae2:formation_plane", "ae2:fuzzy_card", "ae2:gray_covered_cable",
+    "ae2:gray_covered_dense_cable", "ae2:gray_glass_cable", "ae2:gray_lumen_paint_ball",
+    "ae2:gray_paint_ball", "ae2:gray_smart_cable", "ae2:gray_smart_dense_cable",
+    "ae2:green_covered_cable", "ae2:green_covered_dense_cable", "ae2:green_glass_cable",
+    "ae2:green_lumen_paint_ball", "ae2:green_paint_ball", "ae2:green_smart_cable",
+    "ae2:green_smart_dense_cable", "ae2:growth_accelerator", "ae2:guide", "ae2:import_bus",
+    "ae2:inscriber", "ae2:interface", "ae2:inverted_toggle_bus", "ae2:inverter_card", "ae2:io_port",
+    "ae2:item_cell_housing", "ae2:item_p2p_tunnel", "ae2:item_storage_cell_1k",
+    "ae2:large_quartz_bud", "ae2:level_emitter", "ae2:light_blue_covered_cable",
+    "ae2:light_blue_covered_dense_cable", "ae2:light_blue_glass_cable",
+    "ae2:light_blue_lumen_paint_ball", "ae2:light_blue_paint_ball", "ae2:light_blue_smart_cable",
+    "ae2:light_blue_smart_dense_cable", "ae2:light_detector", "ae2:light_gray_covered_cable",
+    "ae2:light_gray_covered_dense_cable", "ae2:light_gray_glass_cable",
+    "ae2:light_gray_lumen_paint_ball", "ae2:light_gray_paint_ball", "ae2:light_gray_smart_cable",
+    "ae2:light_gray_smart_dense_cable", "ae2:light_p2p_tunnel", "ae2:lime_covered_cable",
+    "ae2:lime_covered_dense_cable", "ae2:lime_glass_cable", "ae2:lime_lumen_paint_ball",
+    "ae2:lime_paint_ball", "ae2:lime_smart_cable", "ae2:lime_smart_dense_cable",
+    "ae2:logic_processor", "ae2:logic_processor_press", "ae2:magenta_covered_cable",
+    "ae2:magenta_covered_dense_cable", "ae2:magenta_glass_cable", "ae2:magenta_lumen_paint_ball",
+    "ae2:magenta_paint_ball", "ae2:magenta_smart_cable", "ae2:magenta_smart_dense_cable",
+    "ae2:matrix_frame", "ae2:matter_ball", "ae2:me_p2p_tunnel", "ae2:medium_quartz_bud",
+    "ae2:memory_card", "ae2:meteorite_compass", "ae2:missing_content", "ae2:molecular_assembler",
+    "ae2:monitor", "ae2:mysterious_cube", "ae2:name_press", "ae2:nether_quartz_axe",
+    "ae2:nether_quartz_cutting_knife", "ae2:nether_quartz_hoe", "ae2:nether_quartz_pickaxe",
+    "ae2:nether_quartz_shovel", "ae2:nether_quartz_sword", "ae2:nether_quartz_wrench",
+    "ae2:network_tool", "ae2:not_so_mysterious_cube", "ae2:orange_covered_cable",
+    "ae2:orange_covered_dense_cable", "ae2:orange_glass_cable", "ae2:orange_lumen_paint_ball",
+    "ae2:orange_paint_ball", "ae2:orange_smart_cable", "ae2:orange_smart_dense_cable", "ae2:paint",
+    "ae2:pattern_access_terminal", "ae2:pattern_encoding_terminal", "ae2:pattern_provider",
+    "ae2:pink_covered_cable", "ae2:pink_covered_dense_cable", "ae2:pink_glass_cable",
+    "ae2:pink_lumen_paint_ball", "ae2:pink_paint_ball", "ae2:pink_smart_cable",
+    "ae2:pink_smart_dense_cable", "ae2:portable_fluid_cell_1k", "ae2:portable_item_cell_1k",
+    "ae2:printed_calculation_processor", "ae2:printed_engineering_processor",
+    "ae2:printed_logic_processor", "ae2:printed_silicon", "ae2:processing_pattern",
+    "ae2:purple_covered_cable", "ae2:purple_covered_dense_cable", "ae2:purple_glass_cable",
+    "ae2:purple_lumen_paint_ball", "ae2:purple_paint_ball", "ae2:purple_smart_cable",
+    "ae2:purple_smart_dense_cable", "ae2:quartz_block", "ae2:quartz_brick_slab",
+    "ae2:quartz_brick_stairs", "ae2:quartz_brick_wall", "ae2:quartz_bricks", "ae2:quartz_cluster",
+    "ae2:quartz_fiber", "ae2:quartz_fixture", "ae2:quartz_glass", "ae2:quartz_pillar",
+    "ae2:quartz_pillar_slab", "ae2:quartz_pillar_stairs", "ae2:quartz_pillar_wall",
+    "ae2:quartz_slab", "ae2:quartz_stairs", "ae2:quartz_vibrant_glass", "ae2:quartz_wall",
+    "ae2:red_covered_cable", "ae2:red_covered_dense_cable", "ae2:red_glass_cable",
+    "ae2:red_lumen_paint_ball", "ae2:red_paint_ball", "ae2:red_smart_cable",
+    "ae2:red_smart_dense_cable", "ae2:redstone_card", "ae2:redstone_p2p_tunnel",
+    "ae2:semi_dark_monitor", "ae2:silicon", "ae2:silicon_press", "ae2:sky_dust",
+    "ae2:sky_stone_block", "ae2:sky_stone_brick", "ae2:sky_stone_brick_slab",
+    "ae2:sky_stone_brick_stairs", "ae2:sky_stone_brick_wall", "ae2:sky_stone_chest",
+    "ae2:sky_stone_slab", "ae2:sky_stone_small_brick", "ae2:sky_stone_small_brick_slab",
+    "ae2:sky_stone_small_brick_stairs", "ae2:sky_stone_small_brick_wall", "ae2:sky_stone_stairs",
+    "ae2:sky_stone_tank", "ae2:sky_stone_wall", "ae2:small_quartz_bud",
+    "ae2:smithing_table_pattern", "ae2:smooth_quartz_block", "ae2:smooth_quartz_slab",
+    "ae2:smooth_quartz_stairs", "ae2:smooth_quartz_wall", "ae2:smooth_sky_stone_block",
+    "ae2:smooth_sky_stone_chest", "ae2:smooth_sky_stone_slab", "ae2:smooth_sky_stone_stairs",
+    "ae2:smooth_sky_stone_wall", "ae2:speed_card", "ae2:stonecutting_pattern", "ae2:storage_bus",
+    "ae2:storage_monitor", "ae2:terminal", "ae2:tiny_tnt", "ae2:toggle_bus",
+    "ae2:vibration_chamber", "ae2:view_cell", "ae2:void_card", "ae2:white_covered_cable",
+    "ae2:white_covered_dense_cable", "ae2:white_glass_cable", "ae2:white_lumen_paint_ball",
+    "ae2:white_paint_ball", "ae2:white_smart_cable", "ae2:white_smart_dense_cable",
+    "ae2:wrapped_generic_stack", "ae2:yellow_covered_cable", "ae2:yellow_covered_dense_cable",
+    "ae2:yellow_glass_cable", "ae2:yellow_lumen_paint_ball", "ae2:yellow_paint_ball",
+    "ae2:yellow_smart_cable", "ae2:yellow_smart_dense_cable", "ars_creo:starbuncle_wheel",
+    "ars_nouveau:agronomic_sourcelink", "ars_nouveau:alchemical_sourcelink",
+    "ars_nouveau:bookwyrm_charm", "ars_nouveau:drygmy_charm", "ars_nouveau:enchanting_apparatus",
+    "ars_nouveau:mycelial_sourcelink", "ars_nouveau:relay", "ars_nouveau:relay_collector",
+    "ars_nouveau:relay_deposit", "ars_nouveau:relay_splitter", "ars_nouveau:starbuncle_charm",
+    "ars_nouveau:vitalic_sourcelink", "ars_nouveau:volcanic_sourcelink",
+    "ars_nouveau:whirlisprig_charm", "ars_nouveau:wixie_charm",
+    "create_enchantment_industry:blaze_enchanter", "create_enchantment_industry:brass_bookshelf",
+    "create_enchantment_industry:experience_hatch",
+    "create_enchantment_industry:experience_lantern", "create_wizardry:arcane_casing",
+    "create_wizardry:arcane_pipe", "create_wizardry:arcane_pump", "create_wizardry:arcane_sheet",
+    "createaddition:alternator", "createaddition:connector", "createaddition:electric_motor",
+    "createarscompact:abjuration_essence_crate", "createarscompact:air_essence_crate",
+    "createarscompact:brass_whisk", "createarscompact:conjuration_essence_crate",
+    "createarscompact:earth_essence_crate", "createarscompact:fire_essence_crate",
+    "createarscompact:incomplete_source_engine", "createarscompact:manipulation_essence_crate",
+    "createarscompact:polished_amethyst", "createarscompact:sorcerer_blaze_burner",
+    "createarscompact:sorcerer_cage", "createarscompact:source_casing",
+    "createarscompact:source_encased_cogwheel", "createarscompact:source_encased_large_cogwheel",
+    "createarscompact:source_encased_shaft", "createarscompact:source_engine",
+    "createarscompact:source_mechanical_drill", "createarscompact:source_mechanical_mixer",
+    "createarscompact:source_mechanical_press", "createarscompact:source_mechanical_saw",
+    "createarscompact:source_tank", "createarscompact:source_tube",
+    "createarscompact:water_essence_crate", "irons_spellbooks:alchemist_cauldron",
+    "irons_spellbooks:arcane_anvil", "irons_spellbooks:arcane_essence",
+    "irons_spellbooks:arcane_ingot", "irons_spellbooks:blank_rune", "irons_spellbooks:common_ink",
+    "irons_spellbooks:fire_rune", "irons_spellbooks:ice_rune", "irons_spellbooks:lightning_rune",
+    "irons_spellbooks:magic_cloth", "irons_spellbooks:nature_rune", "kubejs:tk3_arcane_machine",
+    "kubejs:tk3_arcane_mechanism", "kubejs:tk3_network_chassis", "kubejs:tk3_network_mechanism",
+    "mekanism:alloy_infused", "mekanism:atomic_disassembler", "mekanism:basic_control_circuit",
+    "mekanism:basic_energy_cube", "mekanism:basic_logistical_transporter",
+    "mekanism:basic_mechanical_pipe", "mekanism:basic_universal_cable", "mekanism:bio_fuel",
+    "mekanism:block_bio_fuel", "mekanism:block_bronze", "mekanism:block_charcoal",
+    "mekanism:block_fluorite", "mekanism:block_lead", "mekanism:block_osmium",
+    "mekanism:block_raw_lead", "mekanism:block_raw_osmium", "mekanism:block_raw_tin",
+    "mekanism:block_raw_uranium", "mekanism:block_refined_glowstone",
+    "mekanism:block_refined_obsidian", "mekanism:block_salt", "mekanism:block_steel",
+    "mekanism:block_tin", "mekanism:block_uranium", "mekanism:bounding_block",
+    "mekanism:brine_bucket", "mekanism:canteen", "mekanism:chlorine_bucket",
+    "mekanism:clump_copper", "mekanism:clump_gold", "mekanism:clump_iron", "mekanism:clump_lead",
+    "mekanism:clump_osmium", "mekanism:clump_tin", "mekanism:clump_uranium",
+    "mekanism:configuration_card", "mekanism:configurator", "mekanism:crafting_formula",
+    "mekanism:creative_bin", "mekanism:creative_chemical_tank", "mekanism:creative_energy_cube",
+    "mekanism:creative_fluid_tank", "mekanism:crusher", "mekanism:crystal_copper",
+    "mekanism:crystal_gold", "mekanism:crystal_iron", "mekanism:crystal_lead",
+    "mekanism:crystal_osmium", "mekanism:crystal_tin", "mekanism:crystal_uranium",
+    "mekanism:dictionary", "mekanism:dirty_dust_copper", "mekanism:dirty_dust_gold",
+    "mekanism:dirty_dust_iron", "mekanism:dirty_dust_lead", "mekanism:dirty_dust_osmium",
+    "mekanism:dirty_dust_tin", "mekanism:dirty_dust_uranium", "mekanism:dirty_netherite_scrap",
+    "mekanism:dosimeter", "mekanism:dust_bronze", "mekanism:dust_charcoal", "mekanism:dust_coal",
+    "mekanism:dust_copper", "mekanism:dust_diamond", "mekanism:dust_emerald",
+    "mekanism:dust_fluorite", "mekanism:dust_gold", "mekanism:dust_iron",
+    "mekanism:dust_lapis_lazuli", "mekanism:dust_lead", "mekanism:dust_lithium",
+    "mekanism:dust_netherite", "mekanism:dust_obsidian", "mekanism:dust_osmium",
+    "mekanism:dust_quartz", "mekanism:dust_steel", "mekanism:dust_sulfur", "mekanism:dust_tin",
+    "mekanism:dust_uranium", "mekanism:dye_base", "mekanism:electric_bow",
+    "mekanism:energized_smelter", "mekanism:energy_tablet", "mekanism:enriched_carbon",
+    "mekanism:enriched_diamond", "mekanism:enriched_gold", "mekanism:enriched_iron",
+    "mekanism:enriched_redstone", "mekanism:enriched_refined_obsidian", "mekanism:enriched_tin",
+    "mekanism:enrichment_chamber", "mekanism:ethene_bucket", "mekanism:flamethrower",
+    "mekanism:fluorite_gem", "mekanism:fluorite_ore", "mekanism:free_runners",
+    "mekanism:free_runners_armored", "mekanism:gauge_dropper", "mekanism:geiger_counter",
+    "mekanism:hazmat_boots", "mekanism:hazmat_gown", "mekanism:hazmat_mask",
+    "mekanism:hazmat_pants", "mekanism:heavy_water_bucket", "mekanism:hydrofluoric_acid_bucket",
+    "mekanism:hydrogen_bucket", "mekanism:hydrogen_chloride_bucket", "mekanism:ingot_bronze",
+    "mekanism:ingot_lead", "mekanism:ingot_osmium", "mekanism:ingot_steel", "mekanism:ingot_tin",
+    "mekanism:ingot_uranium", "mekanism:jetpack", "mekanism:jetpack_armored", "mekanism:lead_ore",
+    "mekanism:lithium_bucket", "mekanism:metallurgic_infuser", "mekanism:network_reader",
+    "mekanism:nugget_bronze", "mekanism:nugget_lead", "mekanism:nugget_osmium",
+    "mekanism:nugget_steel", "mekanism:nugget_tin", "mekanism:nugget_uranium",
+    "mekanism:nutritional_paste_bucket", "mekanism:osmium_ore", "mekanism:oxygen_bucket",
+    "mekanism:raw_lead", "mekanism:raw_osmium", "mekanism:raw_tin", "mekanism:raw_uranium",
+    "mekanism:reprocessed_fissile_fragment", "mekanism:robit", "mekanism:salt", "mekanism:sawdust",
+    "mekanism:scuba_mask", "mekanism:scuba_tank", "mekanism:seismic_reader",
+    "mekanism:shard_copper", "mekanism:shard_gold", "mekanism:shard_iron", "mekanism:shard_lead",
+    "mekanism:shard_osmium", "mekanism:shard_tin", "mekanism:shard_uranium",
+    "mekanism:sodium_bucket", "mekanism:steam_bucket", "mekanism:steel_casing",
+    "mekanism:sulfur_dioxide_bucket", "mekanism:sulfur_trioxide_bucket",
+    "mekanism:sulfuric_acid_bucket", "mekanism:superheated_sodium_bucket", "mekanism:tin_ore",
+    "mekanism:upgrade_anchor", "mekanism:upgrade_chemical", "mekanism:upgrade_energy",
+    "mekanism:upgrade_filter", "mekanism:upgrade_muffling", "mekanism:upgrade_speed",
+    "mekanism:upgrade_stone_generator", "mekanism:uranium_hexafluoride_bucket",
+    "mekanism:uranium_ore", "mekanism:uranium_oxide_bucket", "mekanism:yellow_cake_uranium",
+    "mekanismgenerators:bioethanol_bucket", "mekanismgenerators:deuterium_bucket",
+    "mekanismgenerators:heat_generator", "mekanismgenerators:hohlraum",
+    "mekanismgenerators:solar_panel", "mekanismgenerators:tritium_bucket",
+    "mekanismtools:bronze_axe", "mekanismtools:bronze_boots", "mekanismtools:bronze_chestplate",
+    "mekanismtools:bronze_helmet", "mekanismtools:bronze_hoe", "mekanismtools:bronze_leggings",
+    "mekanismtools:bronze_paxel", "mekanismtools:bronze_pickaxe", "mekanismtools:bronze_shield",
+    "mekanismtools:bronze_shovel", "mekanismtools:bronze_sword", "mekanismtools:gold_paxel",
+    "mekanismtools:iron_paxel", "mekanismtools:lapis_lazuli_axe",
+    "mekanismtools:lapis_lazuli_boots", "mekanismtools:lapis_lazuli_chestplate",
+    "mekanismtools:lapis_lazuli_helmet", "mekanismtools:lapis_lazuli_hoe",
+    "mekanismtools:lapis_lazuli_leggings", "mekanismtools:lapis_lazuli_paxel",
+    "mekanismtools:lapis_lazuli_pickaxe", "mekanismtools:lapis_lazuli_shield",
+    "mekanismtools:lapis_lazuli_shovel", "mekanismtools:lapis_lazuli_sword",
+    "mekanismtools:osmium_axe", "mekanismtools:osmium_boots", "mekanismtools:osmium_chestplate",
+    "mekanismtools:osmium_helmet", "mekanismtools:osmium_hoe", "mekanismtools:osmium_leggings",
+    "mekanismtools:osmium_paxel", "mekanismtools:osmium_pickaxe", "mekanismtools:osmium_shield",
+    "mekanismtools:osmium_shovel", "mekanismtools:osmium_sword", "mekanismtools:steel_axe",
+    "mekanismtools:steel_boots", "mekanismtools:steel_chestplate", "mekanismtools:steel_helmet",
+    "mekanismtools:steel_hoe", "mekanismtools:steel_leggings", "mekanismtools:steel_paxel",
+    "mekanismtools:steel_pickaxe", "mekanismtools:steel_shield", "mekanismtools:steel_shovel",
+    "mekanismtools:steel_sword", "mekanismtools:stone_paxel", "mekanismtools:wood_paxel",
+    "sophisticatedbackpacks:advanced_alchemy_upgrade",
+    "sophisticatedbackpacks:advanced_pump_upgrade", "sophisticatedbackpacks:alchemy_upgrade",
+    "sophisticatedbackpacks:blasting_upgrade", "sophisticatedbackpacks:diamond_backpack",
+    "sophisticatedbackpacks:smelting_upgrade", "sophisticatedbackpacks:smoking_upgrade",
+    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_1_conversion",
+    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_2_conversion",
+    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_3_conversion",
+    "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_4_conversion",
+    "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_2_conversion",
+    "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_3_conversion",
+    "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_4_conversion",
+    "sophisticatedbackpacks:stack_upgrade_tier_2",
+    "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_3_conversion",
+    "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_4_conversion",
+    "sophisticatedbackpacks:stack_upgrade_tier_3_to_tier_4_conversion",
+    "sophisticatedbackpacks:xp_pump_upgrade", "sophisticatedstorage:advanced_alchemy_upgrade",
+    "sophisticatedstorage:advanced_pump_upgrade", "sophisticatedstorage:alchemy_upgrade",
+    "sophisticatedstorage:basic_to_diamond_tier_upgrade",
+    "sophisticatedstorage:basic_to_gold_tier_upgrade",
+    "sophisticatedstorage:basic_to_iron_tier_upgrade", "sophisticatedstorage:blasting_upgrade",
+    "sophisticatedstorage:copper_to_diamond_tier_upgrade",
+    "sophisticatedstorage:copper_to_gold_tier_upgrade", "sophisticatedstorage:diamond_barrel",
+    "sophisticatedstorage:diamond_chest", "sophisticatedstorage:diamond_shulker_box",
+    "sophisticatedstorage:gold_to_diamond_tier_upgrade",
+    "sophisticatedstorage:iron_to_diamond_tier_upgrade",
+    "sophisticatedstorage:limited_diamond_barrel_1",
+    "sophisticatedstorage:limited_diamond_barrel_2",
+    "sophisticatedstorage:limited_diamond_barrel_3",
+    "sophisticatedstorage:limited_diamond_barrel_4", "sophisticatedstorage:smelting_upgrade",
+    "sophisticatedstorage:smoking_upgrade", "sophisticatedstorage:stack_upgrade_tier_1_plus",
+    "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_2_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_3_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_4_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_5_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_to_tier_1_plus_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_to_tier_2_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_to_tier_3_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_to_tier_4_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_1_to_tier_5_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_2",
+    "sophisticatedstorage:stack_upgrade_tier_2_to_tier_3_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_2_to_tier_4_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_2_to_tier_5_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_3_to_tier_4_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_3_to_tier_5_conversion",
+    "sophisticatedstorage:stack_upgrade_tier_4_to_tier_5_conversion",
+    "sophisticatedstorage:xp_pump_upgrade"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_4",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["createaddition:alternator", "createaddition:connector", "createaddition:electric_motor", "mekanism:alloy_infused", "mekanism:basic_control_circuit", "mekanism:basic_energy_cube", "mekanism:basic_logistical_transporter", "mekanism:basic_mechanical_pipe", "mekanism:basic_universal_cable", "mekanism:block_bio_fuel", "mekanism:block_bronze", "mekanism:block_charcoal", "mekanism:block_fluorite", "mekanism:block_lead", "mekanism:block_osmium", "mekanism:block_raw_lead", "mekanism:block_raw_osmium", "mekanism:block_raw_tin", "mekanism:block_raw_uranium", "mekanism:block_refined_glowstone", "mekanism:block_refined_obsidian", "mekanism:block_salt", "mekanism:block_steel", "mekanism:block_tin", "mekanism:block_uranium", "mekanism:creative_bin", "mekanism:creative_chemical_tank", "mekanism:creative_energy_cube", "mekanism:creative_fluid_tank", "mekanism:crusher", "mekanism:dust_bronze", "mekanism:dust_charcoal", "mekanism:dust_coal", "mekanism:dust_copper", "mekanism:dust_diamond", "mekanism:dust_emerald", "mekanism:dust_fluorite", "mekanism:dust_gold", "mekanism:dust_iron", "mekanism:dust_lapis_lazuli", "mekanism:dust_lead", "mekanism:dust_lithium", "mekanism:dust_netherite", "mekanism:dust_obsidian", "mekanism:dust_osmium", "mekanism:dust_quartz", "mekanism:dust_steel", "mekanism:dust_sulfur", "mekanism:dust_tin", "mekanism:dust_uranium", "mekanism:energized_smelter", "mekanism:enrichment_chamber", "mekanism:ingot_bronze", "mekanism:ingot_lead", "mekanism:ingot_osmium", "mekanism:ingot_steel", "mekanism:ingot_tin", "mekanism:ingot_uranium", "mekanism:metallurgic_infuser", "mekanism:nugget_bronze", "mekanism:nugget_lead", "mekanism:nugget_osmium", "mekanism:nugget_refined_glowstone", "mekanism:nugget_refined_obsidian", "mekanism:nugget_steel", "mekanism:nugget_tin", "mekanism:nugget_uranium", "mekanism:raw_lead", "mekanism:raw_osmium", "mekanism:raw_tin", "mekanism:raw_uranium", "mekanism:steel_casing", "mekanismgenerators:heat_generator", "sophisticatedbackpacks:blasting_upgrade", "sophisticatedbackpacks:diamond_backpack", "sophisticatedbackpacks:smelting_upgrade", "sophisticatedbackpacks:smoking_upgrade", "sophisticatedbackpacks:stack_upgrade_tier_2", "sophisticatedstorage:blasting_upgrade", "sophisticatedstorage:diamond_barrel", "sophisticatedstorage:diamond_chest", "sophisticatedstorage:diamond_shulker_box", "sophisticatedstorage:gold_to_diamond_tier_upgrade", "sophisticatedstorage:limited_diamond_barrel_1", "sophisticatedstorage:limited_diamond_barrel_2", "sophisticatedstorage:limited_diamond_barrel_3", "sophisticatedstorage:limited_diamond_barrel_4", "sophisticatedstorage:smelting_upgrade", "sophisticatedstorage:smoking_upgrade", "sophisticatedstorage:stack_upgrade_tier_2", "witchery:distillery"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_5", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["aeronautics:end_stone_powder", "aeronautics:levitite_blend", "betterend:diamond_hammer",
+    "endrem:corrupted_eye", "endrem:cryptic_eye", "endrem:magical_eye", "endrem:nether_eye",
+    "farmersdelight:diamond_knife", "farmersdelight:hot_cocoa", "kubejs:tk3_dragon_core",
+    "kubejs:tk3_ender_machine", "kubejs:tk3_ender_mechanism", "mekanism:advanced_control_circuit",
+    "mekanism:basic_bin", "mekanism:basic_crushing_factory", "mekanism:basic_enriching_factory",
+    "mekanism:basic_fluid_tank", "mekanism:basic_infusing_factory",
+    "mekanism:basic_pressurized_tube", "mekanism:basic_sawing_factory",
+    "mekanism:basic_smelting_factory", "mekanism:basic_thermodynamic_conductor",
+    "mekanism:basic_tier_installer", "mekanism:boiler_casing", "mekanism:boiler_valve",
+    "mekanism:cardboard_box", "mekanism:chargepad", "mekanism:deepslate_fluorite_ore",
+    "mekanism:deepslate_lead_ore", "mekanism:deepslate_osmium_ore", "mekanism:deepslate_tin_ore",
+    "mekanism:deepslate_uranium_ore", "mekanism:diversion_transporter", "mekanism:dynamic_tank",
+    "mekanism:dynamic_valve", "mekanism:electric_pump", "mekanism:fluidic_plenisher",
+    "mekanism:formulaic_assemblicator", "mekanism:fuelwood_heater", "mekanism:industrial_alarm",
+    "mekanism:logistical_sorter", "mekanism:nutritional_liquifier", "mekanism:oredictionificator",
+    "mekanism:painting_machine", "mekanism:personal_barrel", "mekanism:personal_chest",
+    "mekanism:pigment_extractor", "mekanism:precision_sawmill", "mekanism:pressure_disperser",
+    "mekanism:resistive_heater", "mekanism:restrictive_transporter", "mekanism:security_desk",
+    "mekanism:seismic_vibrator", "mekanism:structural_glass", "mekanism:superheating_element",
+    "mekanismgenerators:advanced_solar_generator", "mekanismgenerators:bio_generator",
+    "mekanismgenerators:solar_generator", "mekanismgenerators:wind_generator",
+    "mekanismtools:diamond_paxel", "mekanismtools:netherite_paxel", "minecraft:chorus_fruit",
+    "minecraft:dragon_breath", "minecraft:end_stone", "minecraft:end_stone_brick_slab",
+    "minecraft:end_stone_brick_stairs", "minecraft:end_stone_brick_wall",
+    "minecraft:end_stone_bricks", "minecraft:glass_bottle", "minecraft:phantom_membrane"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_5",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["ae2:1k_crafting_storage", "ae2:advanced_card", "ae2:annihilation_core", "ae2:annihilation_plane", "ae2:basic_card", "ae2:black_covered_cable", "ae2:black_covered_dense_cable", "ae2:black_glass_cable", "ae2:black_lumen_paint_ball", "ae2:black_paint_ball", "ae2:black_smart_cable", "ae2:black_smart_dense_cable", "ae2:blank_pattern", "ae2:blue_covered_cable", "ae2:blue_covered_dense_cable", "ae2:blue_glass_cable", "ae2:blue_lumen_paint_ball", "ae2:blue_paint_ball", "ae2:blue_smart_cable", "ae2:blue_smart_dense_cable", "ae2:brown_covered_cable", "ae2:brown_covered_dense_cable", "ae2:brown_glass_cable", "ae2:brown_lumen_paint_ball", "ae2:brown_paint_ball", "ae2:brown_smart_cable", "ae2:brown_smart_dense_cable", "ae2:cable_anchor", "ae2:cable_bus", "ae2:cable_energy_acceptor", "ae2:cable_interface", "ae2:cable_pattern_provider", "ae2:calculation_processor", "ae2:calculation_processor_press", "ae2:capacity_card", "ae2:cell_component_1k", "ae2:cell_workbench", "ae2:certus_quartz_axe", "ae2:certus_quartz_crystal", "ae2:certus_quartz_cutting_knife", "ae2:certus_quartz_dust", "ae2:certus_quartz_hoe", "ae2:certus_quartz_pickaxe", "ae2:certus_quartz_shovel", "ae2:certus_quartz_sword", "ae2:certus_quartz_wrench", "ae2:charged_certus_quartz_crystal", "ae2:charged_staff", "ae2:charger", "ae2:chest", "ae2:chipped_budding_quartz", "ae2:chiseled_quartz_block", "ae2:chiseled_quartz_slab", "ae2:chiseled_quartz_stairs", "ae2:chiseled_quartz_wall", "ae2:controller", "ae2:conversion_monitor", "ae2:crafting_accelerator", "ae2:crafting_card", "ae2:crafting_monitor", "ae2:crafting_pattern", "ae2:crafting_terminal", "ae2:crafting_unit", "ae2:crank", "ae2:crystal_resonance_generator", "ae2:cut_quartz_block", "ae2:cut_quartz_slab", "ae2:cut_quartz_stairs", "ae2:cut_quartz_wall", "ae2:cyan_covered_cable", "ae2:cyan_covered_dense_cable", "ae2:cyan_glass_cable", "ae2:cyan_lumen_paint_ball", "ae2:cyan_paint_ball", "ae2:cyan_smart_cable", "ae2:cyan_smart_dense_cable", "ae2:damaged_budding_quartz", "ae2:dark_monitor", "ae2:debug_cube_gen", "ae2:debug_energy_gen", "ae2:debug_eraser", "ae2:debug_item_gen", "ae2:debug_meteorite_placer", "ae2:debug_phantom_node", "ae2:debug_replicator_card", "ae2:dense_energy_cell", "ae2:drive", "ae2:ender_dust", "ae2:energy_acceptor", "ae2:energy_card", "ae2:energy_cell", "ae2:energy_level_emitter", "ae2:engineering_processor", "ae2:engineering_processor_press", "ae2:entropy_manipulator", "ae2:equal_distribution_card", "ae2:export_bus", "ae2:facade", "ae2:fe_p2p_tunnel", "ae2:flawed_budding_quartz", "ae2:flawless_budding_quartz", "ae2:fluid_cell_housing", "ae2:fluid_p2p_tunnel", "ae2:fluid_storage_cell_1k", "ae2:fluix_axe", "ae2:fluix_block", "ae2:fluix_covered_cable", "ae2:fluix_covered_dense_cable", "ae2:fluix_crystal", "ae2:fluix_dust", "ae2:fluix_glass_cable", "ae2:fluix_hoe", "ae2:fluix_pearl", "ae2:fluix_pickaxe", "ae2:fluix_shovel", "ae2:fluix_slab", "ae2:fluix_smart_cable", "ae2:fluix_smart_dense_cable", "ae2:fluix_stairs", "ae2:fluix_sword", "ae2:fluix_upgrade_smithing_template", "ae2:fluix_wall", "ae2:formation_core", "ae2:formation_plane", "ae2:fuzzy_card", "ae2:gray_covered_cable", "ae2:gray_covered_dense_cable", "ae2:gray_glass_cable", "ae2:gray_lumen_paint_ball", "ae2:gray_paint_ball", "ae2:gray_smart_cable", "ae2:gray_smart_dense_cable", "ae2:green_covered_cable", "ae2:green_covered_dense_cable", "ae2:green_glass_cable", "ae2:green_lumen_paint_ball", "ae2:green_paint_ball", "ae2:green_smart_cable", "ae2:green_smart_dense_cable", "ae2:growth_accelerator", "ae2:guide", "ae2:import_bus", "ae2:inscriber", "ae2:interface", "ae2:inverted_toggle_bus", "ae2:inverter_card", "ae2:io_port", "ae2:item_cell_housing", "ae2:item_p2p_tunnel", "ae2:item_storage_cell_1k", "ae2:large_quartz_bud", "ae2:level_emitter", "ae2:light_blue_covered_cable", "ae2:light_blue_covered_dense_cable", "ae2:light_blue_glass_cable", "ae2:light_blue_lumen_paint_ball", "ae2:light_blue_paint_ball", "ae2:light_blue_smart_cable", "ae2:light_blue_smart_dense_cable", "ae2:light_detector", "ae2:light_gray_covered_cable", "ae2:light_gray_covered_dense_cable", "ae2:light_gray_glass_cable", "ae2:light_gray_lumen_paint_ball", "ae2:light_gray_paint_ball", "ae2:light_gray_smart_cable", "ae2:light_gray_smart_dense_cable", "ae2:light_p2p_tunnel", "ae2:lime_covered_cable", "ae2:lime_covered_dense_cable", "ae2:lime_glass_cable", "ae2:lime_lumen_paint_ball", "ae2:lime_paint_ball", "ae2:lime_smart_cable", "ae2:lime_smart_dense_cable", "ae2:logic_processor", "ae2:logic_processor_press", "ae2:magenta_covered_cable", "ae2:magenta_covered_dense_cable", "ae2:magenta_glass_cable", "ae2:magenta_lumen_paint_ball", "ae2:magenta_paint_ball", "ae2:magenta_smart_cable", "ae2:magenta_smart_dense_cable", "ae2:matrix_frame", "ae2:matter_ball", "ae2:me_p2p_tunnel", "ae2:medium_quartz_bud", "ae2:memory_card", "ae2:meteorite_compass", "ae2:missing_content", "ae2:molecular_assembler", "ae2:monitor", "ae2:mysterious_cube", "ae2:name_press", "ae2:nether_quartz_axe", "ae2:nether_quartz_cutting_knife", "ae2:nether_quartz_hoe", "ae2:nether_quartz_pickaxe", "ae2:nether_quartz_shovel", "ae2:nether_quartz_sword", "ae2:nether_quartz_wrench", "ae2:network_tool", "ae2:not_so_mysterious_cube", "ae2:orange_covered_cable", "ae2:orange_covered_dense_cable", "ae2:orange_glass_cable", "ae2:orange_lumen_paint_ball", "ae2:orange_paint_ball", "ae2:orange_smart_cable", "ae2:orange_smart_dense_cable", "ae2:paint", "ae2:pattern_access_terminal", "ae2:pattern_encoding_terminal", "ae2:pattern_provider", "ae2:pink_covered_cable", "ae2:pink_covered_dense_cable", "ae2:pink_glass_cable", "ae2:pink_lumen_paint_ball", "ae2:pink_paint_ball", "ae2:pink_smart_cable", "ae2:pink_smart_dense_cable", "ae2:portable_fluid_cell_1k", "ae2:portable_item_cell_1k", "ae2:printed_calculation_processor", "ae2:printed_engineering_processor", "ae2:printed_logic_processor", "ae2:printed_silicon", "ae2:processing_pattern", "ae2:purple_covered_cable", "ae2:purple_covered_dense_cable", "ae2:purple_glass_cable", "ae2:purple_lumen_paint_ball", "ae2:purple_paint_ball", "ae2:purple_smart_cable", "ae2:purple_smart_dense_cable", "ae2:quartz_block", "ae2:quartz_brick_slab", "ae2:quartz_brick_stairs", "ae2:quartz_brick_wall", "ae2:quartz_bricks", "ae2:quartz_cluster", "ae2:quartz_fiber", "ae2:quartz_fixture", "ae2:quartz_glass", "ae2:quartz_pillar", "ae2:quartz_pillar_slab", "ae2:quartz_pillar_stairs", "ae2:quartz_pillar_wall", "ae2:quartz_slab", "ae2:quartz_stairs", "ae2:quartz_vibrant_glass", "ae2:quartz_wall", "ae2:red_covered_cable", "ae2:red_covered_dense_cable", "ae2:red_glass_cable", "ae2:red_lumen_paint_ball", "ae2:red_paint_ball", "ae2:red_smart_cable", "ae2:red_smart_dense_cable", "ae2:redstone_card", "ae2:redstone_p2p_tunnel", "ae2:semi_dark_monitor", "ae2:silicon", "ae2:silicon_press", "ae2:sky_dust", "ae2:sky_stone_block", "ae2:sky_stone_brick", "ae2:sky_stone_brick_slab", "ae2:sky_stone_brick_stairs", "ae2:sky_stone_brick_wall", "ae2:sky_stone_chest", "ae2:sky_stone_slab", "ae2:sky_stone_small_brick", "ae2:sky_stone_small_brick_slab", "ae2:sky_stone_small_brick_stairs", "ae2:sky_stone_small_brick_wall", "ae2:sky_stone_stairs", "ae2:sky_stone_tank", "ae2:sky_stone_wall", "ae2:small_quartz_bud", "ae2:smithing_table_pattern", "ae2:smooth_quartz_block", "ae2:smooth_quartz_slab", "ae2:smooth_quartz_stairs", "ae2:smooth_quartz_wall", "ae2:smooth_sky_stone_block", "ae2:smooth_sky_stone_chest", "ae2:smooth_sky_stone_slab", "ae2:smooth_sky_stone_stairs", "ae2:smooth_sky_stone_wall", "ae2:speed_card", "ae2:stonecutting_pattern", "ae2:storage_bus", "ae2:storage_monitor", "ae2:terminal", "ae2:tiny_tnt", "ae2:toggle_bus", "ae2:vibration_chamber", "ae2:view_cell", "ae2:void_card", "ae2:white_covered_cable", "ae2:white_covered_dense_cable", "ae2:white_glass_cable", "ae2:white_lumen_paint_ball", "ae2:white_paint_ball", "ae2:white_smart_cable", "ae2:white_smart_dense_cable", "ae2:wrapped_generic_stack", "ae2:yellow_covered_cable", "ae2:yellow_covered_dense_cable", "ae2:yellow_glass_cable", "ae2:yellow_lumen_paint_ball", "ae2:yellow_paint_ball", "ae2:yellow_smart_cable", "ae2:yellow_smart_dense_cable", "apotheosis:gem_cutting_table", "apotheosis:reforging_table", "apotheosis:salvaging_table", "ars_n_spells:mana_infusion", "ars_n_spells:spell_loom", "create_enchantment_industry:infuser", "create_wizardry:channeler", "create_wizardry:mana_siphon", "create_wizardry:smart_arcane_pipe", "createaddition:digital_adapter", "createaddition:large_connector", "createaddition:modular_accumulator", "createaddition:redstone_relay", "kubejs:tk3_network_chassis", "kubejs:tk3_network_mechanism", "mekanism:advanced_control_circuit", "mekanism:atomic_disassembler", "mekanism:basic_bin", "mekanism:basic_crushing_factory", "mekanism:basic_enriching_factory", "mekanism:basic_fluid_tank", "mekanism:basic_infusing_factory", "mekanism:basic_pressurized_tube", "mekanism:basic_sawing_factory", "mekanism:basic_smelting_factory", "mekanism:basic_thermodynamic_conductor", "mekanism:basic_tier_installer", "mekanism:bio_fuel", "mekanism:boiler_casing", "mekanism:boiler_valve", "mekanism:bounding_block", "mekanism:brine_bucket", "mekanism:canteen", "mekanism:cardboard_box", "mekanism:chargepad", "mekanism:chlorine_bucket", "mekanism:clump_copper", "mekanism:clump_gold", "mekanism:clump_iron", "mekanism:clump_lead", "mekanism:clump_osmium", "mekanism:clump_tin", "mekanism:clump_uranium", "mekanism:configuration_card", "mekanism:configurator", "mekanism:crafting_formula", "mekanism:crystal_copper", "mekanism:crystal_gold", "mekanism:crystal_iron", "mekanism:crystal_lead", "mekanism:crystal_osmium", "mekanism:crystal_tin", "mekanism:crystal_uranium", "mekanism:deepslate_fluorite_ore", "mekanism:deepslate_lead_ore", "mekanism:deepslate_osmium_ore", "mekanism:deepslate_tin_ore", "mekanism:deepslate_uranium_ore", "mekanism:dictionary", "mekanism:dirty_dust_copper", "mekanism:dirty_dust_gold", "mekanism:dirty_dust_iron", "mekanism:dirty_dust_lead", "mekanism:dirty_dust_osmium", "mekanism:dirty_dust_tin", "mekanism:dirty_dust_uranium", "mekanism:dirty_netherite_scrap", "mekanism:diversion_transporter", "mekanism:dosimeter", "mekanism:dye_base", "mekanism:dynamic_tank", "mekanism:dynamic_valve", "mekanism:electric_bow", "mekanism:electric_pump", "mekanism:energy_tablet", "mekanism:enriched_carbon", "mekanism:enriched_diamond", "mekanism:enriched_gold", "mekanism:enriched_iron", "mekanism:enriched_redstone", "mekanism:enriched_refined_obsidian", "mekanism:enriched_tin", "mekanism:ethene_bucket", "mekanism:flamethrower", "mekanism:fluidic_plenisher", "mekanism:fluorite_gem", "mekanism:fluorite_ore", "mekanism:formulaic_assemblicator", "mekanism:free_runners", "mekanism:free_runners_armored", "mekanism:fuelwood_heater", "mekanism:gauge_dropper", "mekanism:geiger_counter", "mekanism:hazmat_boots", "mekanism:hazmat_gown", "mekanism:hazmat_mask", "mekanism:hazmat_pants", "mekanism:heavy_water_bucket", "mekanism:hydrofluoric_acid_bucket", "mekanism:hydrogen_bucket", "mekanism:hydrogen_chloride_bucket", "mekanism:industrial_alarm", "mekanism:jetpack", "mekanism:jetpack_armored", "mekanism:lead_ore", "mekanism:lithium_bucket", "mekanism:logistical_sorter", "mekanism:network_reader", "mekanism:nutritional_liquifier", "mekanism:nutritional_paste_bucket", "mekanism:oredictionificator", "mekanism:osmium_ore", "mekanism:oxygen_bucket", "mekanism:painting_machine", "mekanism:personal_barrel", "mekanism:personal_chest", "mekanism:pigment_extractor", "mekanism:precision_sawmill", "mekanism:pressure_disperser", "mekanism:reprocessed_fissile_fragment", "mekanism:resistive_heater", "mekanism:restrictive_transporter", "mekanism:robit", "mekanism:salt", "mekanism:sawdust", "mekanism:scuba_mask", "mekanism:scuba_tank", "mekanism:security_desk", "mekanism:seismic_reader", "mekanism:seismic_vibrator", "mekanism:shard_copper", "mekanism:shard_gold", "mekanism:shard_iron", "mekanism:shard_lead", "mekanism:shard_osmium", "mekanism:shard_tin", "mekanism:shard_uranium", "mekanism:sodium_bucket", "mekanism:steam_bucket", "mekanism:structural_glass", "mekanism:sulfur_dioxide_bucket", "mekanism:sulfur_trioxide_bucket", "mekanism:sulfuric_acid_bucket", "mekanism:superheated_sodium_bucket", "mekanism:superheating_element", "mekanism:tin_ore", "mekanism:upgrade_anchor", "mekanism:upgrade_chemical", "mekanism:upgrade_energy", "mekanism:upgrade_filter", "mekanism:upgrade_muffling", "mekanism:upgrade_speed", "mekanism:upgrade_stone_generator", "mekanism:uranium_hexafluoride_bucket", "mekanism:uranium_ore", "mekanism:uranium_oxide_bucket", "mekanism:yellow_cake_uranium", "mekanismgenerators:advanced_solar_generator", "mekanismgenerators:bio_generator", "mekanismgenerators:bioethanol_bucket", "mekanismgenerators:deuterium_bucket", "mekanismgenerators:hohlraum", "mekanismgenerators:solar_generator", "mekanismgenerators:solar_panel", "mekanismgenerators:tritium_bucket", "mekanismgenerators:wind_generator", "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_1_conversion", "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_2_conversion", "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_3_conversion", "sophisticatedbackpacks:stack_upgrade_starter_tier_to_tier_4_conversion", "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_2_conversion", "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_3_conversion", "sophisticatedbackpacks:stack_upgrade_tier_1_to_tier_4_conversion", "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_3_conversion", "sophisticatedbackpacks:stack_upgrade_tier_2_to_tier_4_conversion", "sophisticatedbackpacks:stack_upgrade_tier_3", "sophisticatedbackpacks:stack_upgrade_tier_3_to_tier_4_conversion", "sophisticatedstorage:basic_to_diamond_tier_upgrade", "sophisticatedstorage:basic_to_gold_tier_upgrade", "sophisticatedstorage:basic_to_iron_tier_upgrade", "sophisticatedstorage:copper_to_diamond_tier_upgrade", "sophisticatedstorage:copper_to_gold_tier_upgrade", "sophisticatedstorage:iron_to_diamond_tier_upgrade", "sophisticatedstorage:stack_upgrade_tier_1_plus", "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_2_conversion", "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_3_conversion", "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_4_conversion", "sophisticatedstorage:stack_upgrade_tier_1_plus_to_tier_5_conversion", "sophisticatedstorage:stack_upgrade_tier_1_to_tier_1_plus_conversion", "sophisticatedstorage:stack_upgrade_tier_1_to_tier_2_conversion", "sophisticatedstorage:stack_upgrade_tier_1_to_tier_3_conversion", "sophisticatedstorage:stack_upgrade_tier_1_to_tier_4_conversion", "sophisticatedstorage:stack_upgrade_tier_1_to_tier_5_conversion", "sophisticatedstorage:stack_upgrade_tier_2_to_tier_3_conversion", "sophisticatedstorage:stack_upgrade_tier_2_to_tier_4_conversion", "sophisticatedstorage:stack_upgrade_tier_2_to_tier_5_conversion", "sophisticatedstorage:stack_upgrade_tier_3", "sophisticatedstorage:stack_upgrade_tier_3_to_tier_4_conversion", "sophisticatedstorage:stack_upgrade_tier_3_to_tier_5_conversion", "sophisticatedstorage:stack_upgrade_tier_4_to_tier_5_conversion", "twilight_spellbooks:aurora_phylactery", "twilight_spellbooks:aurora_shard", "twilight_spellbooks:boreal_bow", "twilight_spellbooks:boreal_staff", "twilight_spellbooks:carminite_heart", "twilight_spellbooks:carminite_mantle", "twilight_spellbooks:carminite_spell_book", "twilight_spellbooks:deaths_essence", "twilight_spellbooks:exanimated_lich_boots", "twilight_spellbooks:exanimated_lich_chestplate", "twilight_spellbooks:exanimated_lich_helmet", "twilight_spellbooks:exanimated_lich_leggings", "twilight_spellbooks:exanimated_lich_loot_bag", "twilight_spellbooks:exanimated_spell_book", "twilight_spellbooks:fiery_mage_boots", "twilight_spellbooks:fiery_mage_chestplate", "twilight_spellbooks:fiery_mage_helmet", "twilight_spellbooks:fiery_mage_leggings", "twilight_spellbooks:fiery_ring", "twilight_spellbooks:fiery_spell_book", "twilight_spellbooks:frost_essence", "twilight_spellbooks:ironwood_helve", "twilight_spellbooks:ironwood_ring", "twilight_spellbooks:ironwood_spellbook", "twilight_spellbooks:knightmetal_brace", "twilight_spellbooks:knightmetal_mage_boots", "twilight_spellbooks:knightmetal_mage_chestplate", "twilight_spellbooks:knightmetal_mage_helmet", "twilight_spellbooks:knightmetal_mage_leggings", "twilight_spellbooks:knightmetal_ring", "twilight_spellbooks:knightmetal_spellbook", "twilight_spellbooks:knightmetal_staff", "twilight_spellbooks:lich_greatsword", "twilight_spellbooks:lich_phylactery", "twilight_spellbooks:maze_butcher", "twilight_spellbooks:naga_mantle", "twilight_spellbooks:ominous_blazer", "twilight_spellbooks:regenerating_chop", "twilight_spellbooks:snow_queen_spell_book", "twilight_spellbooks:snow_silver_ingot", "twilight_spellbooks:steeleaf_sheath", "twilight_spellbooks:steeleaf_staff", "twilight_spellbooks:tarnished_lich_crown", "twilight_spellbooks:tarnished_queen_crown", "twilight_spellbooks:thorn_rose_ring", "twilight_spellbooks:ultimate_scepter", "twilight_spellbooks:yeti_brace"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_6", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["ae2:4k_crafting_storage", "ae2:cell_component_4k", "ae2:color_applicator",
+    "ae2:fluid_storage_cell_4k", "ae2:item_storage_cell_4k", "ae2:matter_cannon",
+    "ae2:portable_fluid_cell_4k", "ae2:portable_item_cell_4k", "ae2:wireless_booster",
+    "ae2:wireless_crafting_terminal", "ae2:wireless_receiver", "ae2:wireless_terminal",
+    "apotheosis:gem_cutting_table", "apotheosis:reforging_table", "apotheosis:salvaging_table",
+    "appmek:chemical_cell_housing", "appmek:chemical_p2p_tunnel", "appmek:chemical_storage_cell_1k",
+    "appmek:chemical_storage_cell_4k", "appmek:portable_chemical_cell_1k",
+    "appmek:portable_chemical_cell_4k", "create_enchantment_industry:infuser",
+    "create_wizardry:channeler", "create_wizardry:mana_siphon", "create_wizardry:smart_arcane_pipe",
+    "createaddition:digital_adapter", "createaddition:large_connector",
+    "createaddition:modular_accumulator", "createaddition:redstone_relay",
+    "kubejs:tk3_chemical_machine", "kubejs:tk3_reinforced_mechanism", "kubejs:tk3_shadow_sheet",
+    "kubejs:tk3_shadow_steel", "mekanism:advanced_bin", "mekanism:advanced_chemical_tank",
+    "mekanism:advanced_compressing_factory", "mekanism:advanced_crushing_factory",
+    "mekanism:advanced_energy_cube", "mekanism:advanced_enriching_factory",
+    "mekanism:advanced_fluid_tank", "mekanism:advanced_infusing_factory",
+    "mekanism:advanced_injecting_factory", "mekanism:advanced_logistical_transporter",
+    "mekanism:advanced_mechanical_pipe", "mekanism:advanced_pressurized_tube",
+    "mekanism:advanced_purifying_factory", "mekanism:advanced_sawing_factory",
+    "mekanism:advanced_smelting_factory", "mekanism:advanced_thermodynamic_conductor",
+    "mekanism:advanced_tier_installer", "mekanism:advanced_universal_cable",
+    "mekanism:alloy_atomic", "mekanism:alloy_reinforced", "mekanism:basic_chemical_tank",
+    "mekanism:basic_compressing_factory", "mekanism:basic_injecting_factory",
+    "mekanism:basic_purifying_factory", "mekanism:chemical_infuser",
+    "mekanism:chemical_injection_chamber", "mekanism:chemical_oxidizer",
+    "mekanism:dust_refined_obsidian", "mekanism:electrolytic_separator",
+    "mekanism:elite_chemical_tank", "mekanism:elite_control_circuit", "mekanism:hdpe_pellet",
+    "mekanism:hdpe_rod", "mekanism:hdpe_sheet", "mekanism:ingot_refined_glowstone",
+    "mekanism:ingot_refined_obsidian", "mekanism:laser", "mekanism:laser_amplifier",
+    "mekanism:laser_tractor_beam", "mekanism:modification_station",
+    "mekanism:nugget_refined_glowstone", "mekanism:nugget_refined_obsidian",
+    "mekanism:osmium_compressor", "mekanism:pigment_mixer", "mekanism:pressurized_reaction_chamber",
+    "mekanism:purification_chamber", "mekanism:rotary_condensentrator", "mekanism:substrate",
+    "mekanism:thermal_evaporation_block", "mekanism:thermal_evaporation_controller",
+    "mekanism:thermal_evaporation_valve", "mekanismgenerators:gas_burning_generator",
+    "mekanismtools:refined_glowstone_axe", "mekanismtools:refined_glowstone_boots",
+    "mekanismtools:refined_glowstone_chestplate", "mekanismtools:refined_glowstone_helmet",
+    "mekanismtools:refined_glowstone_hoe", "mekanismtools:refined_glowstone_leggings",
+    "mekanismtools:refined_glowstone_paxel", "mekanismtools:refined_glowstone_pickaxe",
+    "mekanismtools:refined_glowstone_shield", "mekanismtools:refined_glowstone_shovel",
+    "mekanismtools:refined_glowstone_sword", "mekanismtools:refined_obsidian_axe",
+    "mekanismtools:refined_obsidian_boots", "mekanismtools:refined_obsidian_chestplate",
+    "mekanismtools:refined_obsidian_helmet", "mekanismtools:refined_obsidian_hoe",
+    "mekanismtools:refined_obsidian_leggings", "mekanismtools:refined_obsidian_paxel",
+    "mekanismtools:refined_obsidian_pickaxe", "mekanismtools:refined_obsidian_shield",
+    "mekanismtools:refined_obsidian_shovel", "mekanismtools:refined_obsidian_sword",
+    "sophisticatedbackpacks:stack_upgrade_tier_3", "sophisticatedstorage:stack_upgrade_tier_3"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_6",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["ae2:4k_crafting_storage", "ae2:cell_component_4k", "ae2:color_applicator", "ae2:fluid_storage_cell_4k", "ae2:item_storage_cell_4k", "ae2:matter_cannon", "ae2:portable_fluid_cell_4k", "ae2:portable_item_cell_4k", "ae2:wireless_access_point", "ae2:wireless_booster", "ae2:wireless_crafting_terminal", "ae2:wireless_receiver", "ae2:wireless_terminal", "aeronautics:adjustable_burner", "aeronautics:black_envelope", "aeronautics:black_envelope_encased_shaft", "aeronautics:blue_envelope", "aeronautics:blue_envelope_encased_shaft", "aeronautics:brown_envelope", "aeronautics:brown_envelope_encased_shaft", "aeronautics:cyan_envelope", "aeronautics:cyan_envelope_encased_shaft", "aeronautics:gray_envelope", "aeronautics:gray_envelope_encased_shaft", "aeronautics:green_envelope", "aeronautics:green_envelope_encased_shaft", "aeronautics:gyroscopic_propeller_bearing", "aeronautics:levitite", "aeronautics:levitite_blend_bucket", "aeronautics:light_blue_envelope", "aeronautics:light_blue_envelope_encased_shaft", "aeronautics:light_gray_envelope", "aeronautics:light_gray_envelope_encased_shaft", "aeronautics:lime_envelope", "aeronautics:lime_envelope_encased_shaft", "aeronautics:magenta_envelope", "aeronautics:magenta_envelope_encased_shaft", "aeronautics:mounted_potato_cannon", "aeronautics:music_disc_cloud_skipper", "aeronautics:orange_envelope", "aeronautics:orange_envelope_encased_shaft", "aeronautics:pearlescent_levitite", "aeronautics:pink_envelope", "aeronautics:pink_envelope_encased_shaft", "aeronautics:purple_envelope", "aeronautics:purple_envelope_encased_shaft", "aeronautics:red_envelope", "aeronautics:red_envelope_encased_shaft", "aeronautics:smart_propeller", "aeronautics:steam_vent", "aeronautics:white_envelope", "aeronautics:white_envelope_encased_shaft", "aeronautics:yellow_envelope", "aeronautics:yellow_envelope_encased_shaft", "alexs_caves_spellbooks:dinosaurium", "alexs_caves_spellbooks:dread_robes_boots", "alexs_caves_spellbooks:dread_robes_chestplate", "alexs_caves_spellbooks:dread_robes_helmet", "alexs_caves_spellbooks:dread_robes_leggings", "alexs_caves_spellbooks:elder_vallumraptor_hide", "alexs_caves_spellbooks:primordial_mage_chestplate", "alexs_caves_spellbooks:primordial_mage_helmet", "alexs_caves_spellbooks:primordial_mage_leggings", "alexs_caves_spellbooks:vallumraptor_hide", "apotheosis:augmenting_table", "ars_n_spells:mana_well", "cataclysm_spellbooks:bloom_stone_chestplate", "cataclysm_spellbooks:bloom_stone_greaves", "cataclysm_spellbooks:bloom_stone_hat", "cataclysm_spellbooks:bloom_stone_skirt", "cataclysm_spellbooks:bloom_stone_staff", "cataclysm_spellbooks:codex_of_malice_spell_book", "cataclysm_spellbooks:coral_staff", "cataclysm_spellbooks:desert_spell_book", "cataclysm_spellbooks:engineer_boots", "cataclysm_spellbooks:engineer_hood", "cataclysm_spellbooks:engineer_leggings", "cataclysm_spellbooks:engineer_suit", "cataclysm_spellbooks:excelsius_greaves", "cataclysm_spellbooks:excelsius_leggings", "cataclysm_spellbooks:excelsius_power_chestplate", "cataclysm_spellbooks:excelsius_power_visors", "cataclysm_spellbooks:excelsius_resist_chestplate", "cataclysm_spellbooks:excelsius_resist_visors", "cataclysm_spellbooks:excelsius_speed_chestplate", "cataclysm_spellbooks:excelsius_speed_visors", "cataclysm_spellbooks:fake_wudjets_staff", "cataclysm_spellbooks:leviathans_blessing", "cataclysm_spellbooks:monstrous_flamberge", "cataclysm_spellbooks:monstrous_wizard_hat", "cataclysm_spellbooks:pharaoh_chestplate", "cataclysm_spellbooks:pharaoh_greaves", "cataclysm_spellbooks:pharaoh_helmet", "cataclysm_spellbooks:pharaoh_leggings", "cataclysm_spellbooks:soul_brazier", "cataclysm_spellbooks:spirit_sunderer", "cataclysm_spellbooks:technomancy_upgrade_orb", "create_enchantment_industry:blaze_forger", "create_enchantment_industry:gem_cutter", "create_wizardry:blaze_caster", "createaddition:portable_energy_interface", "createaddition:tesla_coil", "kubejs:tk3_expedition_frame", "kubejs:tk3_expedition_mechanism", "mekanism:advanced_bin", "mekanism:advanced_chemical_tank", "mekanism:advanced_compressing_factory", "mekanism:advanced_crushing_factory", "mekanism:advanced_energy_cube", "mekanism:advanced_enriching_factory", "mekanism:advanced_fluid_tank", "mekanism:advanced_infusing_factory", "mekanism:advanced_injecting_factory", "mekanism:advanced_logistical_transporter", "mekanism:advanced_mechanical_pipe", "mekanism:advanced_pressurized_tube", "mekanism:advanced_purifying_factory", "mekanism:advanced_sawing_factory", "mekanism:advanced_smelting_factory", "mekanism:advanced_thermodynamic_conductor", "mekanism:advanced_tier_installer", "mekanism:advanced_universal_cable", "mekanism:alloy_atomic", "mekanism:alloy_reinforced", "mekanism:basic_chemical_tank", "mekanism:basic_compressing_factory", "mekanism:basic_injecting_factory", "mekanism:basic_purifying_factory", "mekanism:chemical_infuser", "mekanism:chemical_injection_chamber", "mekanism:chemical_oxidizer", "mekanism:dust_refined_obsidian", "mekanism:electrolytic_core", "mekanism:electrolytic_separator", "mekanism:elite_chemical_tank", "mekanism:elite_control_circuit", "mekanism:hdpe_elytra", "mekanism:hdpe_pellet", "mekanism:hdpe_rod", "mekanism:hdpe_sheet", "mekanism:hdpe_stick", "mekanism:ingot_refined_glowstone", "mekanism:ingot_refined_obsidian", "mekanism:laser", "mekanism:laser_amplifier", "mekanism:laser_tractor_beam", "mekanism:modification_station", "mekanism:osmium_compressor", "mekanism:pigment_mixer", "mekanism:pressurized_reaction_chamber", "mekanism:purification_chamber", "mekanism:rotary_condensentrator", "mekanism:substrate", "mekanism:thermal_evaporation_block", "mekanism:thermal_evaporation_controller", "mekanism:thermal_evaporation_valve", "mekanismgenerators:gas_burning_generator", "simulated:altitude_sensor", "simulated:analog_transmission", "simulated:auger_cog", "simulated:auger_shaft", "simulated:black_handle", "simulated:black_nameplate", "simulated:black_portable_engine", "simulated:blue_handle", "simulated:blue_nameplate", "simulated:blue_portable_engine", "simulated:brown_handle", "simulated:brown_nameplate", "simulated:brown_portable_engine", "simulated:contraption_diagram", "simulated:copper_handle", "simulated:creative_physics_staff", "simulated:cyan_handle", "simulated:cyan_nameplate", "simulated:cyan_portable_engine", "simulated:directional_gearshift", "simulated:directional_linked_receiver", "simulated:docking_connector", "simulated:engine_assembly", "simulated:gimbal_sensor", "simulated:gray_handle", "simulated:gray_nameplate", "simulated:gray_portable_engine", "simulated:green_handle", "simulated:green_nameplate", "simulated:green_portable_engine", "simulated:gyroscopic_mechanism", "simulated:honey_glue", "simulated:incomplete_engine_assembly", "simulated:incomplete_gyroscopic_mechanism", "simulated:iron_handle", "simulated:laser_pointer", "simulated:laser_sensor", "simulated:light_blue_handle", "simulated:light_blue_nameplate", "simulated:light_blue_portable_engine", "simulated:light_gray_handle", "simulated:light_gray_nameplate", "simulated:light_gray_portable_engine", "simulated:lime_handle", "simulated:lime_nameplate", "simulated:lime_portable_engine", "simulated:linked_typewriter", "simulated:magenta_handle", "simulated:magenta_nameplate", "simulated:magenta_portable_engine", "simulated:modulating_linked_receiver", "simulated:navigation_table", "simulated:optical_sensor", "simulated:orange_handle", "simulated:orange_nameplate", "simulated:orange_portable_engine", "simulated:physics_assembler", "simulated:pink_handle", "simulated:pink_nameplate", "simulated:pink_portable_engine", "simulated:plunger_launcher", "simulated:purple_handle", "simulated:purple_nameplate", "simulated:purple_portable_engine", "simulated:red_handle", "simulated:red_nameplate", "simulated:red_portable_engine", "simulated:redstone_accumulator", "simulated:redstone_inductor", "simulated:redstone_magnet", "simulated:rope_connector", "simulated:rope_coupling", "simulated:rope_winch", "simulated:spring", "simulated:steering_wheel", "simulated:swivel_bearing", "simulated:throttle_lever", "simulated:torsion_spring", "simulated:velocity_sensor", "simulated:white_handle", "simulated:white_nameplate", "simulated:white_portable_engine", "simulated:white_symmetric_sail", "simulated:yellow_handle", "simulated:yellow_nameplate", "simulated:yellow_portable_engine", "sophisticatedbackpacks:infinity_upgrade", "sophisticatedbackpacks:netherite_backpack", "sophisticatedbackpacks:stack_upgrade_omega_tier", "sophisticatedbackpacks:survival_infinity_upgrade", "sophisticatedstorage:basic_to_netherite_tier_upgrade", "sophisticatedstorage:copper_to_netherite_tier_upgrade", "sophisticatedstorage:diamond_to_netherite_tier_upgrade", "sophisticatedstorage:gold_to_netherite_tier_upgrade", "sophisticatedstorage:infinity_upgrade", "sophisticatedstorage:iron_to_netherite_tier_upgrade", "sophisticatedstorage:limited_netherite_barrel_1", "sophisticatedstorage:limited_netherite_barrel_2", "sophisticatedstorage:limited_netherite_barrel_3", "sophisticatedstorage:limited_netherite_barrel_4", "sophisticatedstorage:netherite_barrel", "sophisticatedstorage:netherite_chest", "sophisticatedstorage:netherite_shulker_box", "sophisticatedstorage:stack_upgrade_omega_tier", "sophisticatedstorage:survival_infinity_upgrade"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_7", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["ae2:16k_crafting_storage", "ae2:cell_component_16k", "ae2:fluid_storage_cell_16k",
+    "ae2:item_storage_cell_16k", "ae2:portable_fluid_cell_16k", "ae2:portable_item_cell_16k",
+    "ae2:wireless_access_point", "aeronautics:adjustable_burner", "aeronautics:black_envelope",
+    "aeronautics:black_envelope_encased_shaft", "aeronautics:blue_envelope",
+    "aeronautics:blue_envelope_encased_shaft", "aeronautics:brown_envelope",
+    "aeronautics:brown_envelope_encased_shaft", "aeronautics:cyan_envelope",
+    "aeronautics:cyan_envelope_encased_shaft", "aeronautics:gray_envelope",
+    "aeronautics:gray_envelope_encased_shaft", "aeronautics:green_envelope",
+    "aeronautics:green_envelope_encased_shaft", "aeronautics:gyroscopic_propeller_bearing",
+    "aeronautics:levitite", "aeronautics:levitite_blend_bucket", "aeronautics:light_blue_envelope",
+    "aeronautics:light_blue_envelope_encased_shaft", "aeronautics:light_gray_envelope",
+    "aeronautics:light_gray_envelope_encased_shaft", "aeronautics:lime_envelope",
+    "aeronautics:lime_envelope_encased_shaft", "aeronautics:magenta_envelope",
+    "aeronautics:magenta_envelope_encased_shaft", "aeronautics:mounted_potato_cannon",
+    "aeronautics:music_disc_cloud_skipper", "aeronautics:orange_envelope",
+    "aeronautics:orange_envelope_encased_shaft", "aeronautics:pearlescent_levitite",
+    "aeronautics:pink_envelope", "aeronautics:pink_envelope_encased_shaft",
+    "aeronautics:purple_envelope", "aeronautics:purple_envelope_encased_shaft",
+    "aeronautics:red_envelope", "aeronautics:red_envelope_encased_shaft",
+    "aeronautics:smart_propeller", "aeronautics:steam_vent", "aeronautics:white_envelope",
+    "aeronautics:white_envelope_encased_shaft", "aeronautics:yellow_envelope",
+    "aeronautics:yellow_envelope_encased_shaft", "alexscaves:conversion_crucible",
+    "alexscaves:drain", "alexscaves:quarry", "apotheosis:augmenting_table",
+    "appmek:chemical_storage_cell_16k", "appmek:portable_chemical_cell_16k",
+    "create_enchantment_industry:blaze_forger", "create_enchantment_industry:gem_cutter",
+    "create_wizardry:blaze_caster", "createaddition:portable_energy_interface",
+    "createaddition:tesla_coil", "kubejs:tk3_expedition_frame", "kubejs:tk3_expedition_mechanism",
+    "kubejs:tk3_radiance_sheet", "kubejs:tk3_refined_radiance", "mekanism:electrolytic_core",
+    "mekanism:hdpe_elytra", "mekanism:hdpe_stick", "simulated:altitude_sensor",
+    "simulated:analog_transmission", "simulated:auger_cog", "simulated:auger_shaft",
+    "simulated:black_handle", "simulated:black_nameplate", "simulated:black_portable_engine",
+    "simulated:blue_handle", "simulated:blue_nameplate", "simulated:blue_portable_engine",
+    "simulated:brown_handle", "simulated:brown_nameplate", "simulated:brown_portable_engine",
+    "simulated:contraption_diagram", "simulated:copper_handle", "simulated:creative_physics_staff",
+    "simulated:cyan_handle", "simulated:cyan_nameplate", "simulated:cyan_portable_engine",
+    "simulated:directional_gearshift", "simulated:directional_linked_receiver",
+    "simulated:docking_connector", "simulated:engine_assembly", "simulated:gimbal_sensor",
+    "simulated:gray_handle", "simulated:gray_nameplate", "simulated:gray_portable_engine",
+    "simulated:green_handle", "simulated:green_nameplate", "simulated:green_portable_engine",
+    "simulated:gyroscopic_mechanism", "simulated:honey_glue",
+    "simulated:incomplete_engine_assembly", "simulated:incomplete_gyroscopic_mechanism",
+    "simulated:iron_handle", "simulated:laser_pointer", "simulated:laser_sensor",
+    "simulated:light_blue_handle", "simulated:light_blue_nameplate",
+    "simulated:light_blue_portable_engine", "simulated:light_gray_handle",
+    "simulated:light_gray_nameplate", "simulated:light_gray_portable_engine",
+    "simulated:lime_handle", "simulated:lime_nameplate", "simulated:lime_portable_engine",
+    "simulated:linked_typewriter", "simulated:magenta_handle", "simulated:magenta_nameplate",
+    "simulated:magenta_portable_engine", "simulated:modulating_linked_receiver",
+    "simulated:navigation_table", "simulated:optical_sensor", "simulated:orange_handle",
+    "simulated:orange_nameplate", "simulated:orange_portable_engine", "simulated:physics_assembler",
+    "simulated:pink_handle", "simulated:pink_nameplate", "simulated:pink_portable_engine",
+    "simulated:plunger_launcher", "simulated:purple_handle", "simulated:purple_nameplate",
+    "simulated:purple_portable_engine", "simulated:red_handle", "simulated:red_nameplate",
+    "simulated:red_portable_engine", "simulated:redstone_accumulator",
+    "simulated:redstone_inductor", "simulated:redstone_magnet", "simulated:rope_connector",
+    "simulated:rope_coupling", "simulated:rope_winch", "simulated:spring",
+    "simulated:steering_wheel", "simulated:swivel_bearing", "simulated:throttle_lever",
+    "simulated:torsion_spring", "simulated:velocity_sensor", "simulated:white_handle",
+    "simulated:white_nameplate", "simulated:white_portable_engine",
+    "simulated:white_symmetric_sail", "simulated:yellow_handle", "simulated:yellow_nameplate",
+    "simulated:yellow_portable_engine", "sophisticatedbackpacks:infinity_upgrade",
+    "sophisticatedbackpacks:netherite_backpack", "sophisticatedbackpacks:stack_upgrade_omega_tier",
+    "sophisticatedbackpacks:survival_infinity_upgrade",
+    "sophisticatedstorage:basic_to_netherite_tier_upgrade",
+    "sophisticatedstorage:copper_to_netherite_tier_upgrade",
+    "sophisticatedstorage:diamond_to_netherite_tier_upgrade",
+    "sophisticatedstorage:gold_to_netherite_tier_upgrade", "sophisticatedstorage:infinity_upgrade",
+    "sophisticatedstorage:iron_to_netherite_tier_upgrade",
+    "sophisticatedstorage:limited_netherite_barrel_1",
+    "sophisticatedstorage:limited_netherite_barrel_2",
+    "sophisticatedstorage:limited_netherite_barrel_3",
+    "sophisticatedstorage:limited_netherite_barrel_4", "sophisticatedstorage:netherite_barrel",
+    "sophisticatedstorage:netherite_chest", "sophisticatedstorage:netherite_shulker_box",
+    "sophisticatedstorage:stack_upgrade_omega_tier",
+    "sophisticatedstorage:survival_infinity_upgrade"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_7",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["ae2:16k_crafting_storage", "ae2:cell_component_16k", "ae2:condenser", "ae2:fluid_storage_cell_16k", "ae2:item_storage_cell_16k", "ae2:portable_fluid_cell_16k", "ae2:portable_item_cell_16k", "ae2:singularity", "ae2:spatial_anchor", "ae2:spatial_cell_component_128", "ae2:spatial_cell_component_16", "ae2:spatial_cell_component_2", "ae2:spatial_io_port", "ae2:spatial_pylon", "ae2:spatial_storage_cell_128", "ae2:spatial_storage_cell_16", "ae2:spatial_storage_cell_2", "cataclysm_spellbooks:hellfire_forge", "cataclysm_spellbooks:ignis_boots", "cataclysm_spellbooks:ignis_chestplate", "cataclysm_spellbooks:ignis_chestplate_elytra", "cataclysm_spellbooks:ignis_helmet", "cataclysm_spellbooks:ignis_leggings", "cataclysm_spellbooks:ignis_spell_book", "kubejs:tk3_containment_frame", "kubejs:tk3_containment_mechanism", "mekanism:advanced_combining_factory", "mekanism:advanced_induction_cell", "mekanism:advanced_induction_provider", "mekanism:basic_combining_factory", "mekanism:basic_induction_cell", "mekanism:basic_induction_provider", "mekanism:chemical_crystallizer", "mekanism:chemical_dissolution_chamber", "mekanism:chemical_washer", "mekanism:combiner", "mekanism:digital_miner", "mekanism:dimensional_stabilizer", "mekanism:elite_bin", "mekanism:elite_combining_factory", "mekanism:elite_compressing_factory", "mekanism:elite_crushing_factory", "mekanism:elite_energy_cube", "mekanism:elite_enriching_factory", "mekanism:elite_fluid_tank", "mekanism:elite_induction_cell", "mekanism:elite_induction_provider", "mekanism:elite_infusing_factory", "mekanism:elite_injecting_factory", "mekanism:elite_logistical_transporter", "mekanism:elite_mechanical_pipe", "mekanism:elite_pressurized_tube", "mekanism:elite_purifying_factory", "mekanism:elite_sawing_factory", "mekanism:elite_smelting_factory", "mekanism:elite_thermodynamic_conductor", "mekanism:elite_tier_installer", "mekanism:elite_universal_cable", "mekanism:induction_casing", "mekanism:induction_port", "mekanism:isotopic_centrifuge", "mekanism:pellet_plutonium", "mekanism:pellet_polonium", "mekanism:radioactive_waste_barrel", "mekanism:solar_neutron_activator", "mekanism:ultimate_bin", "mekanism:ultimate_chemical_tank", "mekanism:ultimate_combining_factory", "mekanism:ultimate_compressing_factory", "mekanism:ultimate_control_circuit", "mekanism:ultimate_crushing_factory", "mekanism:ultimate_energy_cube", "mekanism:ultimate_enriching_factory", "mekanism:ultimate_fluid_tank", "mekanism:ultimate_induction_cell", "mekanism:ultimate_induction_provider", "mekanism:ultimate_infusing_factory", "mekanism:ultimate_injecting_factory", "mekanism:ultimate_logistical_transporter", "mekanism:ultimate_mechanical_pipe", "mekanism:ultimate_pressurized_tube", "mekanism:ultimate_purifying_factory", "mekanism:ultimate_sawing_factory", "mekanism:ultimate_smelting_factory", "mekanism:ultimate_thermodynamic_conductor", "mekanism:ultimate_tier_installer", "mekanism:ultimate_universal_cable", "mekanismgenerators:control_rod_assembly", "mekanismgenerators:electromagnetic_coil", "mekanismgenerators:fission_fuel_assembly", "mekanismgenerators:fission_reactor_casing", "mekanismgenerators:fission_reactor_logic_adapter", "mekanismgenerators:fission_reactor_port", "mekanismgenerators:reactor_glass", "mekanismgenerators:rotational_complex", "mekanismgenerators:saturating_condenser", "mekanismgenerators:turbine_blade", "mekanismgenerators:turbine_casing", "mekanismgenerators:turbine_rotor", "mekanismgenerators:turbine_valve", "mekanismgenerators:turbine_vent", "sophisticatedbackpacks:stack_upgrade_tier_4", "sophisticatedstorage:stack_upgrade_tier_4"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_8", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["ae2:condenser", "ae2:singularity", "ae2:spatial_anchor", "ae2:spatial_cell_component_128",
+    "ae2:spatial_cell_component_16", "ae2:spatial_cell_component_2", "ae2:spatial_io_port",
+    "ae2:spatial_pylon", "ae2:spatial_storage_cell_128", "ae2:spatial_storage_cell_16",
+    "ae2:spatial_storage_cell_2", "alexscaves:nuclear_furnace_component",
+    "alexscaves:nuclear_siren", "iceandfire:dragonforge_fire_brick",
+    "iceandfire:dragonforge_fire_core", "iceandfire:dragonforge_fire_core_disabled",
+    "iceandfire:dragonforge_fire_input", "iceandfire:dragonforge_ice_brick",
+    "iceandfire:dragonforge_ice_core", "iceandfire:dragonforge_ice_core_disabled",
+    "iceandfire:dragonforge_ice_input", "iceandfire:dragonforge_lightning_brick",
+    "iceandfire:dragonforge_lightning_core", "iceandfire:dragonforge_lightning_core_disabled",
+    "iceandfire:dragonforge_lightning_input", "iceandfire:dragonsteel_fire_axe",
+    "iceandfire:dragonsteel_fire_block", "iceandfire:dragonsteel_fire_boots",
+    "iceandfire:dragonsteel_fire_chestplate", "iceandfire:dragonsteel_fire_helmet",
+    "iceandfire:dragonsteel_fire_hoe", "iceandfire:dragonsteel_fire_ingot",
+    "iceandfire:dragonsteel_fire_leggings", "iceandfire:dragonsteel_fire_pickaxe",
+    "iceandfire:dragonsteel_fire_shovel", "iceandfire:dragonsteel_fire_sword",
+    "iceandfire:dragonsteel_ice_axe", "iceandfire:dragonsteel_ice_block",
+    "iceandfire:dragonsteel_ice_boots", "iceandfire:dragonsteel_ice_chestplate",
+    "iceandfire:dragonsteel_ice_helmet", "iceandfire:dragonsteel_ice_hoe",
+    "iceandfire:dragonsteel_ice_ingot", "iceandfire:dragonsteel_ice_leggings",
+    "iceandfire:dragonsteel_ice_pickaxe", "iceandfire:dragonsteel_ice_shovel",
+    "iceandfire:dragonsteel_ice_sword", "iceandfire:dragonsteel_lightning_axe",
+    "iceandfire:dragonsteel_lightning_block", "iceandfire:dragonsteel_lightning_boots",
+    "iceandfire:dragonsteel_lightning_chestplate", "iceandfire:dragonsteel_lightning_helmet",
+    "iceandfire:dragonsteel_lightning_hoe", "iceandfire:dragonsteel_lightning_ingot",
+    "iceandfire:dragonsteel_lightning_leggings", "iceandfire:dragonsteel_lightning_pickaxe",
+    "iceandfire:dragonsteel_lightning_shovel", "iceandfire:dragonsteel_lightning_sword",
+    "kubejs:tk3_containment_frame", "kubejs:tk3_containment_mechanism",
+    "kubejs:tk3_overcharge_alloy", "kubejs:tk3_overcharge_sheet",
+    "mekanism:advanced_combining_factory", "mekanism:advanced_induction_cell",
+    "mekanism:advanced_induction_provider", "mekanism:basic_combining_factory",
+    "mekanism:basic_induction_cell", "mekanism:basic_induction_provider",
+    "mekanism:chemical_crystallizer", "mekanism:chemical_dissolution_chamber",
+    "mekanism:chemical_washer", "mekanism:combiner", "mekanism:digital_miner",
+    "mekanism:dimensional_stabilizer", "mekanism:elite_bin", "mekanism:elite_combining_factory",
+    "mekanism:elite_compressing_factory", "mekanism:elite_crushing_factory",
+    "mekanism:elite_energy_cube", "mekanism:elite_enriching_factory", "mekanism:elite_fluid_tank",
+    "mekanism:elite_induction_cell", "mekanism:elite_induction_provider",
+    "mekanism:elite_infusing_factory", "mekanism:elite_injecting_factory",
+    "mekanism:elite_logistical_transporter", "mekanism:elite_mechanical_pipe",
+    "mekanism:elite_pressurized_tube", "mekanism:elite_purifying_factory",
+    "mekanism:elite_sawing_factory", "mekanism:elite_smelting_factory",
+    "mekanism:elite_thermodynamic_conductor", "mekanism:elite_tier_installer",
+    "mekanism:elite_universal_cable", "mekanism:induction_casing", "mekanism:induction_port",
+    "mekanism:isotopic_centrifuge", "mekanism:pellet_plutonium", "mekanism:pellet_polonium",
+    "mekanism:radioactive_waste_barrel", "mekanism:solar_neutron_activator",
+    "mekanism:ultimate_bin", "mekanism:ultimate_chemical_tank",
+    "mekanism:ultimate_combining_factory", "mekanism:ultimate_compressing_factory",
+    "mekanism:ultimate_control_circuit", "mekanism:ultimate_crushing_factory",
+    "mekanism:ultimate_energy_cube", "mekanism:ultimate_enriching_factory",
+    "mekanism:ultimate_fluid_tank", "mekanism:ultimate_induction_cell",
+    "mekanism:ultimate_induction_provider", "mekanism:ultimate_infusing_factory",
+    "mekanism:ultimate_injecting_factory", "mekanism:ultimate_logistical_transporter",
+    "mekanism:ultimate_mechanical_pipe", "mekanism:ultimate_pressurized_tube",
+    "mekanism:ultimate_purifying_factory", "mekanism:ultimate_sawing_factory",
+    "mekanism:ultimate_smelting_factory", "mekanism:ultimate_thermodynamic_conductor",
+    "mekanism:ultimate_tier_installer", "mekanism:ultimate_universal_cable",
+    "mekanismgenerators:control_rod_assembly", "mekanismgenerators:electromagnetic_coil",
+    "mekanismgenerators:fission_fuel_assembly", "mekanismgenerators:fission_reactor_casing",
+    "mekanismgenerators:fission_reactor_logic_adapter", "mekanismgenerators:fission_reactor_port",
+    "mekanismgenerators:reactor_glass", "mekanismgenerators:rotational_complex",
+    "mekanismgenerators:saturating_condenser", "mekanismgenerators:turbine_blade",
+    "mekanismgenerators:turbine_casing", "mekanismgenerators:turbine_rotor",
+    "mekanismgenerators:turbine_valve", "mekanismgenerators:turbine_vent",
+    "sophisticatedbackpacks:stack_upgrade_tier_4", "sophisticatedstorage:stack_upgrade_tier_4"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_8",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["ae2:64k_crafting_storage", "ae2:cell_component_64k", "ae2:fluid_storage_cell_64k", "ae2:item_storage_cell_64k", "ae2:portable_fluid_cell_64k", "ae2:portable_item_cell_64k", "ae2:quantum_entangled_singularity", "ae2:quantum_link", "ae2:quantum_ring", "aeronautics:end_stone_powder", "aeronautics:levitite_blend", "cataclysm_spellbooks:abyss_spell_book", "cataclysm_spellbooks:abyssal_rune", "cataclysm_spellbooks:abyssal_upgrade_orb", "cataclysm_spellbooks:abyssal_warlock_boots", "cataclysm_spellbooks:abyssal_warlock_chestplate", "cataclysm_spellbooks:abyssal_warlock_helmet", "cataclysm_spellbooks:abyssal_warlock_leggings", "cataclysm_spellbooks:abyssal_warlock_mask", "cataclysm_spellbooks:cursium_mage_boots", "cataclysm_spellbooks:cursium_mage_chestplate", "cataclysm_spellbooks:cursium_mage_circlet", "cataclysm_spellbooks:cursium_mage_elytra", "cataclysm_spellbooks:cursium_mage_skirt", "cataclysm_spellbooks:void_staff", "kubejs:tk3_singularity_frame", "kubejs:tk3_singularity_mechanism", "mekanism:antiprotonic_nucleosynthesizer", "mekanism:pellet_antimatter", "mekanism:portable_qio_dashboard", "mekanism:portable_teleporter", "mekanism:qio_dashboard", "mekanism:qio_drive_array", "mekanism:qio_drive_base", "mekanism:qio_drive_hyper_dense", "mekanism:qio_drive_supermassive", "mekanism:qio_drive_time_dilating", "mekanism:qio_exporter", "mekanism:qio_importer", "mekanism:qio_redstone_adapter", "mekanism:quantum_entangloporter", "mekanism:sps_casing", "mekanism:sps_port", "mekanism:supercharged_coil", "mekanism:teleportation_core", "mekanism:teleporter", "mekanism:teleporter_frame", "mekanismgenerators:fusion_fuel_bucket", "mekanismgenerators:fusion_reactor_controller", "mekanismgenerators:fusion_reactor_frame", "mekanismgenerators:fusion_reactor_logic_adapter", "mekanismgenerators:fusion_reactor_port", "mekanismgenerators:laser_focus_matrix", "sophisticatedstorage:stack_upgrade_tier_5"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_9", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["ae2:64k_crafting_storage", "ae2:cell_component_64k", "ae2:fluid_storage_cell_64k",
+    "ae2:item_storage_cell_64k", "ae2:portable_fluid_cell_64k", "ae2:portable_item_cell_64k",
+    "ae2:quantum_entangled_singularity", "ae2:quantum_link", "ae2:quantum_ring",
+    "appmek:chemical_storage_cell_64k", "appmek:portable_chemical_cell_64k",
+    "kubejs:tk3_singularity_frame", "kubejs:tk3_singularity_mechanism",
+    "kubejs:tk3_stargaze_singularity", "kubejs:tk3_void_attuned_singularity",
+    "mekanism:antiprotonic_nucleosynthesizer", "mekanism:pellet_antimatter",
+    "mekanism:portable_qio_dashboard", "mekanism:portable_teleporter", "mekanism:qio_dashboard",
+    "mekanism:qio_drive_array", "mekanism:qio_drive_base", "mekanism:qio_drive_hyper_dense",
+    "mekanism:qio_drive_supermassive", "mekanism:qio_drive_time_dilating", "mekanism:qio_exporter",
+    "mekanism:qio_importer", "mekanism:qio_redstone_adapter", "mekanism:quantum_entangloporter",
+    "mekanism:sps_casing", "mekanism:sps_port", "mekanism:supercharged_coil",
+    "mekanism:teleportation_core", "mekanism:teleporter", "mekanism:teleporter_frame",
+    "mekanismgenerators:fusion_fuel_bucket", "mekanismgenerators:fusion_reactor_controller",
+    "mekanismgenerators:fusion_reactor_frame", "mekanismgenerators:fusion_reactor_logic_adapter",
+    "mekanismgenerators:fusion_reactor_port", "mekanismgenerators:laser_focus_matrix",
+    "sophisticatedstorage:stack_upgrade_tier_5"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_9",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-["ae2:256k_crafting_storage", "ae2:cell_component_256k", "ae2:fluid_storage_cell_256k", "ae2:item_storage_cell_256k", "ae2:portable_fluid_cell_256k", "ae2:portable_item_cell_256k", "kubejs:tk3_sovereign_core", "kubejs:tk3_sovereign_keystone", "kubejs:tk3_sovereign_mechanism", "mekanism:meka_tool", "mekanism:mekasuit_bodyarmor", "mekanism:mekasuit_boots", "mekanism:mekasuit_helmet", "mekanism:mekasuit_pants", "mekanism:module_attack_amplification_unit", "mekanism:module_base", "mekanism:module_blasting_unit", "mekanism:module_charge_distribution_unit", "mekanism:module_color_modulation_unit", "mekanism:module_dosimeter_unit", "mekanism:module_electrolytic_breathing_unit", "mekanism:module_elytra_unit", "mekanism:module_energy_unit", "mekanism:module_excavation_escalation_unit", "mekanism:module_farming_unit", "mekanism:module_fortune_unit", "mekanism:module_frost_walker_unit", "mekanism:module_geiger_unit", "mekanism:module_gravitational_modulating_unit", "mekanism:module_gyroscopic_stabilization_unit", "mekanism:module_hydraulic_propulsion_unit", "mekanism:module_hydrostatic_repulsor_unit", "mekanism:module_inhalation_purification_unit", "mekanism:module_jetpack_unit", "mekanism:module_laser_dissipation_unit", "mekanism:module_locomotive_boosting_unit", "mekanism:module_magnetic_attraction_unit", "mekanism:module_motorized_servo_unit", "mekanism:module_nutritional_injection_unit", "mekanism:module_radiation_shielding_unit", "mekanism:module_shearing_unit", "mekanism:module_silk_touch_unit", "mekanism:module_soul_surfer_unit", "mekanism:module_teleportation_unit", "mekanism:module_vein_mining_unit", "mekanism:module_vision_enhancement_unit", "mekanismgenerators:module_geothermal_generator_unit", "mekanismgenerators:module_solar_recharging_unit"].forEach(item => {
-  AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_10", item)
-    .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-    .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+["ae2:256k_crafting_storage", "ae2:cell_component_256k", "ae2:fluid_storage_cell_256k",
+    "ae2:item_storage_cell_256k", "ae2:portable_fluid_cell_256k", "ae2:portable_item_cell_256k",
+    "appmek:chemical_storage_cell_256k", "appmek:portable_chemical_cell_256k",
+    "kubejs:tk3_sovereign_core", "kubejs:tk3_sovereign_keystone", "kubejs:tk3_sovereign_mechanism",
+    "mekanism:meka_tool", "mekanism:mekasuit_bodyarmor", "mekanism:mekasuit_boots",
+    "mekanism:mekasuit_helmet", "mekanism:mekasuit_pants",
+    "mekanism:module_attack_amplification_unit", "mekanism:module_base",
+    "mekanism:module_blasting_unit", "mekanism:module_charge_distribution_unit",
+    "mekanism:module_color_modulation_unit", "mekanism:module_dosimeter_unit",
+    "mekanism:module_electrolytic_breathing_unit", "mekanism:module_elytra_unit",
+    "mekanism:module_energy_unit", "mekanism:module_excavation_escalation_unit",
+    "mekanism:module_farming_unit", "mekanism:module_fortune_unit",
+    "mekanism:module_frost_walker_unit", "mekanism:module_geiger_unit",
+    "mekanism:module_gravitational_modulating_unit",
+    "mekanism:module_gyroscopic_stabilization_unit", "mekanism:module_hydraulic_propulsion_unit",
+    "mekanism:module_hydrostatic_repulsor_unit", "mekanism:module_inhalation_purification_unit",
+    "mekanism:module_jetpack_unit", "mekanism:module_laser_dissipation_unit",
+    "mekanism:module_locomotive_boosting_unit", "mekanism:module_magnetic_attraction_unit",
+    "mekanism:module_motorized_servo_unit", "mekanism:module_nutritional_injection_unit",
+    "mekanism:module_radiation_shielding_unit", "mekanism:module_shearing_unit",
+    "mekanism:module_silk_touch_unit", "mekanism:module_soul_surfer_unit",
+    "mekanism:module_teleportation_unit", "mekanism:module_vein_mining_unit",
+    "mekanism:module_vision_enhancement_unit",
+    "mekanismgenerators:module_geothermal_generator_unit",
+    "mekanismgenerators:module_solar_recharging_unit"
+].forEach(item => {
+    AStages.addRestrictionForItem("tk3/device/" + item.replace(":", "/"), "tk3_tier_10",
+            item)
+        .allowPickup()
+        .allowInventoryStorage()
+        .allowContainerStorage()
+        .showInRecipeViewer()
+        .setCanBePlaced(false)
+        .setCanItemBeRightClicked(false)
+        .setCanInteractWithBlock(false);
 });
 
-AStages.addRestrictionForMod("tk3/industry/mekanism", "tk3_tier_5", "mekanism", "mekanismgenerators")
-  .allowPickup().allowInventoryStorage().allowContainerStorage().allowMining().allowLeftClick().showInRecipeViewer()
-  .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+AStages.addRestrictionForMod("tk3/industry/mekanism", "tk3_tier_4", "mekanism",
+        "mekanismgenerators")
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .allowMining()
+    .allowLeftClick()
+    .showInRecipeViewer()
+    .setCanBePlaced(false)
+    .setCanItemBeRightClicked(false)
+    .setCanInteractWithBlock(false);
 
-AStages.addRestrictionForMod("tk3/late/ae2", "tk3_tier_6", "ae2")
-  .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-  .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
+AStages.addRestrictionForMod("tk3/network/ae2", "tk3_tier_4", "ae2")
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .allowMining()
+    .allowLeftClick()
+    .showInRecipeViewer()
+    .setCanBePlaced(false)
+    .setCanItemBeRightClicked(false)
+    .setCanInteractWithBlock(false);
 
-// Exact ProbeJS dimension signature; native unique-eye portal puzzle remains active.
-AStages.addRestrictionForDimension("tk3/end", "tk3_tier_9", "minecraft:the_end");
+AStages.addRestrictionForDimension("tk3/nether", "tk3_tier_3", "minecraft:the_nether");
 
-AStages.addRestrictionForItem("tk3/boss/verdant_sigil", "tk3_boss_verdant_sigil", "kubejs:tk3_verdant_sigil")
-  .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-  .setCanItemBeRightClicked(false);
+AStages.addRestrictionForDimension("tk3/end", "tk3_tier_5", "minecraft:the_end");
+
+AStages.addRestrictionForItem("tk3/boss/dragon_core", "tk3_boss_dragon_core",
+        "kubejs:tk3_dragon_core")
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .showInRecipeViewer()
+    .setCanItemBeRightClicked(false);
+
+AStages.addRestrictionForItem("tk3/boss/verdant_sigil", "tk3_boss_verdant_sigil",
+        "kubejs:tk3_verdant_sigil")
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .showInRecipeViewer()
+    .setCanItemBeRightClicked(false);
 
 AStages.addRestrictionForItem("tk3/boss/storm_core", "tk3_boss_storm_core", "kubejs:tk3_storm_core")
-  .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-  .setCanItemBeRightClicked(false);
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .showInRecipeViewer()
+    .setCanItemBeRightClicked(false);
 
 AStages.addRestrictionForItem("tk3/boss/ember_core", "tk3_boss_ember_core", "kubejs:tk3_ember_core")
-  .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-  .setCanItemBeRightClicked(false);
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .showInRecipeViewer()
+    .setCanItemBeRightClicked(false);
 
 AStages.addRestrictionForItem("tk3/boss/void_core", "tk3_boss_void_core", "kubejs:tk3_void_core")
-  .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-  .setCanItemBeRightClicked(false);
-
-["alexscaves:nuclear_furnace_component", "alexscaves:nuclear_siren", "iceandfire:dragonforge_fire_brick", "iceandfire:dragonforge_fire_core", "iceandfire:dragonforge_fire_core_disabled", "iceandfire:dragonforge_fire_input", "iceandfire:dragonforge_ice_brick", "iceandfire:dragonforge_ice_core", "iceandfire:dragonforge_ice_core_disabled", "iceandfire:dragonforge_ice_input", "iceandfire:dragonforge_lightning_brick", "iceandfire:dragonforge_lightning_core", "iceandfire:dragonforge_lightning_core_disabled", "iceandfire:dragonforge_lightning_input", "iceandfire:dragonsteel_fire_axe", "iceandfire:dragonsteel_fire_block", "iceandfire:dragonsteel_fire_boots", "iceandfire:dragonsteel_fire_chestplate", "iceandfire:dragonsteel_fire_helmet", "iceandfire:dragonsteel_fire_hoe", "iceandfire:dragonsteel_fire_ingot", "iceandfire:dragonsteel_fire_leggings", "iceandfire:dragonsteel_fire_pickaxe", "iceandfire:dragonsteel_fire_shovel", "iceandfire:dragonsteel_fire_sword", "iceandfire:dragonsteel_ice_axe", "iceandfire:dragonsteel_ice_block", "iceandfire:dragonsteel_ice_boots", "iceandfire:dragonsteel_ice_chestplate", "iceandfire:dragonsteel_ice_helmet", "iceandfire:dragonsteel_ice_hoe", "iceandfire:dragonsteel_ice_ingot", "iceandfire:dragonsteel_ice_leggings", "iceandfire:dragonsteel_ice_pickaxe", "iceandfire:dragonsteel_ice_shovel", "iceandfire:dragonsteel_ice_sword", "iceandfire:dragonsteel_lightning_axe", "iceandfire:dragonsteel_lightning_block", "iceandfire:dragonsteel_lightning_boots", "iceandfire:dragonsteel_lightning_chestplate", "iceandfire:dragonsteel_lightning_helmet", "iceandfire:dragonsteel_lightning_hoe", "iceandfire:dragonsteel_lightning_ingot", "iceandfire:dragonsteel_lightning_leggings", "iceandfire:dragonsteel_lightning_pickaxe", "iceandfire:dragonsteel_lightning_shovel", "iceandfire:dragonsteel_lightning_sword"].forEach(item => {
-    AStages.addRestrictionForItem("tk3/exploration/" + item.replace(":", "/"), "tk3_tier_8", item)
-        .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-        .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
-});
-
-["alexscaves:conversion_crucible", "alexscaves:drain", "alexscaves:quarry"].forEach(item => {
-    AStages.addRestrictionForItem("tk3/exploration/" + item.replace(":", "/"), "tk3_tier_7", item)
-        .allowPickup().allowInventoryStorage().allowContainerStorage().showInRecipeViewer()
-        .setCanBePlaced(false).setCanItemBeRightClicked(false).setCanInteractWithBlock(false);
-});
+    .allowPickup()
+    .allowInventoryStorage()
+    .allowContainerStorage()
+    .showInRecipeViewer()
+    .setCanItemBeRightClicked(false);

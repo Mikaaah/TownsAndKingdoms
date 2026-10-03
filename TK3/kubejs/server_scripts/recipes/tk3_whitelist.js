@@ -177,6 +177,8 @@ ServerEvents.recipes(event => {
         "ae2:crank": [
             "kubejs:tk3/ae_network/ae2_network_blocks_crank"
         ],
+        "ae2:creative_energy_cell": [],
+        "ae2:creative_storage_cell": [],
         "ae2:crystal_resonance_generator": [
             "kubejs:tk3/ae_network/ae2_network_crystal_resonance_generator"
         ],
@@ -198,6 +200,14 @@ ServerEvents.recipes(event => {
         "ae2:dark_monitor": [
             "kubejs:tk3/ae_network/ae2_network_parts_panels_dark_monitor"
         ],
+        "ae2:debug_card": [],
+        "ae2:debug_cube_gen": [],
+        "ae2:debug_energy_gen": [],
+        "ae2:debug_eraser": [],
+        "ae2:debug_item_gen": [],
+        "ae2:debug_meteorite_placer": [],
+        "ae2:debug_phantom_node": [],
+        "ae2:debug_replicator_card": [],
         "ae2:dense_energy_cell": [
             "kubejs:tk3/ae_network/ae2_network_blocks_energy_dense_energy_cell"
         ],
@@ -883,6 +893,21 @@ ServerEvents.recipes(event => {
         "aeronautics:yellow_envelope_encased_shaft": [
             "kubejs:tk3/addons/aeronautics_yellow_envelope_encased_shaft"
         ],
+        "alexscaves:conversion_crucible": [
+            "kubejs:tk3/addons/alexscaves_conversion_crucible"
+        ],
+        "alexscaves:drain": [
+            "kubejs:tk3/addons/alexscaves_drain"
+        ],
+        "alexscaves:nuclear_furnace_component": [
+            "kubejs:tk3/addons/alexscaves_nuclear_furnace_component"
+        ],
+        "alexscaves:nuclear_siren": [
+            "kubejs:tk3/addons/alexscaves_nuclear_siren"
+        ],
+        "alexscaves:quarry": [
+            "kubejs:tk3/addons/alexscaves_quarry"
+        ],
         "apotheosis:augmenting_table": [
             "kubejs:tk3/addons/apotheosis_augmenting_table"
         ],
@@ -895,21 +920,45 @@ ServerEvents.recipes(event => {
         "apotheosis:salvaging_table": [
             "kubejs:tk3/addons/apotheosis_salvaging_table"
         ],
+        "appmek:chemical_cell_housing": [
+            "kubejs:tk3/addons/appmek_chemical_cell_housing"
+        ],
+        "appmek:chemical_storage_cell_16k": [
+            "kubejs:tk3/addons/appmek_chemical_storage_cell_16k"
+        ],
+        "appmek:chemical_storage_cell_1k": [
+            "kubejs:tk3/addons/appmek_chemical_storage_cell_1k"
+        ],
+        "appmek:chemical_storage_cell_256k": [
+            "kubejs:tk3/addons/appmek_upgrade_chemical_storage_cell_64k_to_256k"
+        ],
+        "appmek:chemical_storage_cell_4k": [
+            "kubejs:tk3/addons/appmek_upgrade_chemical_storage_cell_1k_to_4k"
+        ],
+        "appmek:chemical_storage_cell_64k": [
+            "kubejs:tk3/addons/appmek_chemical_storage_cell_64k"
+        ],
+        "appmek:portable_chemical_cell_16k": [
+            "kubejs:tk3/addons/appmek_portable_chemical_cell_16k"
+        ],
+        "appmek:portable_chemical_cell_1k": [
+            "kubejs:tk3/addons/appmek_portable_chemical_cell_1k"
+        ],
+        "appmek:portable_chemical_cell_256k": [
+            "kubejs:tk3/addons/appmek_portable_chemical_cell_256k"
+        ],
+        "appmek:portable_chemical_cell_4k": [
+            "kubejs:tk3/addons/appmek_upgrade_portable_chemical_cell_1k_to_4k"
+        ],
+        "appmek:portable_chemical_cell_64k": [
+            "kubejs:tk3/addons/appmek_upgrade_portable_chemical_cell_1k_to_64k"
+        ],
         "architects_palette:algal_blend": [
             "kubejs:tk3/tier_1/algal_blend",
             "kubejs:tk3/tier_1/algal_blend_bulk"
         ],
         "ars_creo:starbuncle_wheel": [
             "kubejs:tk3/addons/ars_creo_starbuncle_wheel"
-        ],
-        "ars_n_spells:mana_infusion": [
-            "kubejs:tk3/addons/ars_n_spells_mana_infusion"
-        ],
-        "ars_n_spells:mana_well": [
-            "kubejs:tk3/addons/ars_n_spells_mana_well"
-        ],
-        "ars_n_spells:spell_loom": [
-            "kubejs:tk3/addons/ars_n_spells_spell_loom"
         ],
         "ars_nouveau:agronomic_sourcelink": [
             "kubejs:tk3/tier_4/agronomic_sourcelink"
@@ -947,8 +996,23 @@ ServerEvents.recipes(event => {
         "betterend:diamond_hammer": [
             "kubejs:tk3/addons/betterend_diamond_hammer"
         ],
-        "cataclysm_spellbooks:hellfire_forge": [
-            "kubejs:tk3/addons/cataclysm_spellbooks_hellfire_forge"
+        "chipped:alchemy_bench": [
+            "kubejs:tk3/addons/minecraft_workbench_alchemy_bench"
+        ],
+        "chipped:botanist_workbench": [
+            "kubejs:tk3/addons/minecraft_workbench_botanist_workbench"
+        ],
+        "chipped:carpenters_table": [
+            "kubejs:tk3/addons/minecraft_workbench_carpenters_table"
+        ],
+        "chipped:glassblower": [
+            "kubejs:tk3/addons/minecraft_workbench_glassblower"
+        ],
+        "chipped:mason_table": [
+            "kubejs:tk3/addons/minecraft_workbench_mason_table"
+        ],
+        "chipped:tinkering_table": [
+            "kubejs:tk3/addons/minecraft_workbench_tinkering_table"
         ],
         "create:adjustable_chain_gearshift": [
             "kubejs:tk3/tier_1/adjustable_chain_gearshift"
@@ -1082,6 +1146,10 @@ ServerEvents.recipes(event => {
         "create:crafting_blueprint": [
             "kubejs:tk3/create/crafting_appliances_crafting_blueprint"
         ],
+        "create:creative_blaze_cake": [],
+        "create:creative_crate": [],
+        "create:creative_fluid_tank": [],
+        "create:creative_motor": [],
         "create:crushing_wheel": [
             "kubejs:tk3/frames/create_crushing_wheel"
         ],
@@ -1423,6 +1491,9 @@ ServerEvents.recipes(event => {
         "create:turntable": [
             "kubejs:tk3/create/turntable"
         ],
+        "create:veridium": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_smelting_veridium"
+        ],
         "create:vertical_gearbox": [
             "kubejs:tk3/tier_1/vertical_gearbox",
             "kubejs:tk3/create/vertical_gearbox_conversion"
@@ -1467,6 +1538,36 @@ ServerEvents.recipes(event => {
             "kubejs:tk3/geology/wash_zinc",
             "kubejs:tk3/create/zinc_nugget_from_ingot"
         ],
+        "create_aquatic_ambitions:calcium_rich_powder": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_calcium_rich_powder"
+        ],
+        "create_aquatic_ambitions:mechanical_conduit": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_crafting_materials_mechanical_conduit"
+        ],
+        "create_aquatic_ambitions:prismarine_alloy": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_prismarine_alloy"
+        ],
+        "create_aquatic_ambitions:prismarine_alloy_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_crafting_materials_prismarine_alloy_block"
+        ],
+        "create_aquatic_ambitions:prismarine_alloy_rod": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_crafting_materials_prismarine_alloy_rod"
+        ],
+        "create_aquatic_ambitions:spiky_shell": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_suspicious_rock"
+        ],
+        "create_dragons_plus:blaze_upgrade_smithing_template": [
+            "kubejs:tk3/addons/create_dragons_plus_crafting_blaze_upgrade_smithing_template"
+        ],
+        "create_dragons_plus:fluid_hatch": [
+            "kubejs:tk3/addons/create_dragons_plus_crafting_fluid_hatch"
+        ],
+        "create_dragons_plus:fragile_fluid_tank": [
+            "kubejs:tk3/addons/create_dragons_plus_crafting_fragile_fluid_tank"
+        ],
+        "create_dragons_plus:levitite_fragile_fluid_tank": [
+            "kubejs:tk3/addons/create_dragons_plus_crafting_levitite_fragile_fluid_tank"
+        ],
         "create_enchantment_industry:blaze_enchanter": [
             "kubejs:tk3/tier_4/blaze_enchanter"
         ],
@@ -1476,6 +1577,7 @@ ServerEvents.recipes(event => {
         "create_enchantment_industry:brass_bookshelf": [
             "kubejs:tk3/addons/create_enchantment_industry_sequenced_assembly_brass_bookshelf"
         ],
+        "create_enchantment_industry:creative_bookshelf": [],
         "create_enchantment_industry:experience_hatch": [
             "kubejs:tk3/addons/create_enchantment_industry_experience_hatch"
         ],
@@ -1496,6 +1598,27 @@ ServerEvents.recipes(event => {
         ],
         "create_enchantment_industry:printer": [
             "kubejs:tk3/tier_3/printer"
+        ],
+        "create_hypertube:hypertube": [
+            "kubejs:tk3/addons/create_hypertube_hypertube"
+        ],
+        "create_hypertube:hypertube_accelerator": [
+            "kubejs:tk3/addons/create_hypertube_hyper_accelerator_small_cogwheel"
+        ],
+        "create_hypertube:hypertube_entrance": [
+            "kubejs:tk3/addons/create_hypertube_hypertube_entrance"
+        ],
+        "create_hypertube:hypertube_funnel": [
+            "kubejs:tk3/addons/create_hypertube_hypertube_funnel"
+        ],
+        "create_hypertube:hypertube_junction": [
+            "kubejs:tk3/addons/create_hypertube_hypertube_junction"
+        ],
+        "create_hypertube:redstone_detector_tube_attachment": [
+            "kubejs:tk3/addons/create_hypertube_redstone_detector_tube_attachment"
+        ],
+        "create_hypertube:tube_scanner_attachment": [
+            "kubejs:tk3/addons/create_hypertube_sequenced_assembly_tube_scanner"
         ],
         "create_wizardry:arcane_casing": [
             "kubejs:tk3/frames/arcane_casing"
@@ -1564,6 +1687,39 @@ ServerEvents.recipes(event => {
         "createaddition:tesla_coil": [
             "kubejs:tk3/addons/createaddition_mechanical_crafting_tesla_coil"
         ],
+        "createarscompact:brass_whisk": [
+            "kubejs:tk3/addons/createarscompact_brass_whisk"
+        ],
+        "createarscompact:polished_amethyst": [
+            "kubejs:tk3/addons/createarscompact_polished_amethyst"
+        ],
+        "createarscompact:sorcerer_cage": [
+            "kubejs:tk3/addons/createarscompact_sorcerer_cage"
+        ],
+        "createarscompact:source_casing": [
+            "kubejs:tk3/addons/createarscompact_source_casing"
+        ],
+        "createarscompact:source_engine": [
+            "kubejs:tk3/addons/createarscompact_source_engine"
+        ],
+        "createarscompact:source_mechanical_drill": [
+            "kubejs:tk3/addons/createarscompact_source_mechanical_drill"
+        ],
+        "createarscompact:source_mechanical_mixer": [
+            "kubejs:tk3/addons/createarscompact_source_mechanical_mixer"
+        ],
+        "createarscompact:source_mechanical_press": [
+            "kubejs:tk3/addons/createarscompact_source_mechanical_press"
+        ],
+        "createarscompact:source_mechanical_saw": [
+            "kubejs:tk3/addons/createarscompact_source_mechanical_saw"
+        ],
+        "createarscompact:source_tank": [
+            "kubejs:tk3/addons/createarscompact_source_tank"
+        ],
+        "createarscompact:source_tube": [
+            "kubejs:tk3/addons/createarscompact_source_tube"
+        ],
         "createminecolonies:colony_warehouse_stock_link": [
             "kubejs:tk3/addons/createminecolonies_colony_warehouse_stock_link"
         ],
@@ -1581,6 +1737,48 @@ ServerEvents.recipes(event => {
         ],
         "farmersdelight:diamond_knife": [
             "kubejs:tk3/addons/farmersdelight_diamond_knife"
+        ],
+        "farmersdelight:hot_cocoa": [
+            "kubejs:tk3/addons/sliceanddice_filling_hot_cocoa_from_fluid"
+        ],
+        "farmersdelight:rich_soil": [
+            "kubejs:tk3/addons/sliceanddice_filling_rich_soil"
+        ],
+        "iceandfire:dragonforge_fire_brick": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_fire_brick"
+        ],
+        "iceandfire:dragonforge_fire_core": [],
+        "iceandfire:dragonforge_fire_core_disabled": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_fire_core_disabled"
+        ],
+        "iceandfire:dragonforge_fire_input": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_fire_input"
+        ],
+        "iceandfire:dragonforge_ice_brick": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_ice_brick"
+        ],
+        "iceandfire:dragonforge_ice_core": [],
+        "iceandfire:dragonforge_ice_core_disabled": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_ice_core_disabled"
+        ],
+        "iceandfire:dragonforge_ice_input": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_ice_input"
+        ],
+        "iceandfire:dragonforge_lightning_brick": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick"
+        ],
+        "iceandfire:dragonforge_lightning_core": [],
+        "iceandfire:dragonforge_lightning_core_disabled": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_core_disabled"
+        ],
+        "iceandfire:dragonforge_lightning_input": [
+            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_input"
+        ],
+        "irons_jewelry:jewelcrafting_guide": [
+            "kubejs:tk3/addons/irons_jewelry_jewelcrafting_guide"
+        ],
+        "irons_jewelry:jewelcrafting_station": [
+            "kubejs:tk3/addons/irons_jewelry_jewelcrafting_station"
         ],
         "irons_spellbooks:alchemist_cauldron": [
             "kubejs:tk3/tier_4/alchemist_cauldron"
@@ -1623,11 +1821,20 @@ ServerEvents.recipes(event => {
         "kubejs:tk3_arcane_mechanism": [
             "kubejs:tk3/tier_4/tk3_arcane_mechanism"
         ],
+        "kubejs:tk3_chemical_machine": [
+            "kubejs:tk3/campaign/kubejs_tk3_chemical_machine"
+        ],
         "kubejs:tk3_containment_frame": [
             "kubejs:tk3/campaign/frame_8"
         ],
         "kubejs:tk3_containment_mechanism": [
             "kubejs:tk3/campaign/containment_mechanism"
+        ],
+        "kubejs:tk3_ender_machine": [
+            "kubejs:tk3/campaign/kubejs_tk3_ender_machine"
+        ],
+        "kubejs:tk3_ender_mechanism": [
+            "kubejs:tk3/campaign/kubejs_tk3_ender_mechanism"
         ],
         "kubejs:tk3_expedition_frame": [
             "kubejs:tk3/campaign/frame_7"
@@ -1648,14 +1855,41 @@ ServerEvents.recipes(event => {
         "kubejs:tk3_network_mechanism": [
             "kubejs:tk3/campaign/network_mechanism"
         ],
+        "kubejs:tk3_overcharge_alloy": [
+            "kubejs:tk3/campaign/kubejs_tk3_overcharge_alloy",
+            "kubejs:tk3/campaign/kubejs_tk3_overcharge_alloy_imprinted"
+        ],
+        "kubejs:tk3_overcharge_sheet": [
+            "kubejs:tk3/campaign/kubejs_tk3_overcharge_sheet",
+            "kubejs:tk3/campaign/kubejs_tk3_overcharge_sheet_imprinted"
+        ],
         "kubejs:tk3_precision_machine": [
             "kubejs:tk3/frames/precision_assembly"
+        ],
+        "kubejs:tk3_radiance_sheet": [
+            "kubejs:tk3/campaign/kubejs_tk3_radiance_sheet",
+            "kubejs:tk3/campaign/kubejs_tk3_radiance_sheet_imprinted"
+        ],
+        "kubejs:tk3_refined_radiance": [
+            "kubejs:tk3/campaign/kubejs_tk3_refined_radiance"
+        ],
+        "kubejs:tk3_reinforced_mechanism": [
+            "kubejs:tk3/campaign/kubejs_tk3_reinforced_mechanism"
         ],
         "kubejs:tk3_rotation_mechanism": [
             "kubejs:tk3/tier_1/rotation_mechanism_automated"
         ],
+        "kubejs:tk3_rubber": [
+            "kubejs:tk3/campaign/kubejs_tk3_rubber"
+        ],
         "kubejs:tk3_sealed_mechanism": [
             "kubejs:tk3/tier_2/tk3_sealed_mechanism"
+        ],
+        "kubejs:tk3_shadow_sheet": [
+            "kubejs:tk3/campaign/kubejs_tk3_shadow_sheet"
+        ],
+        "kubejs:tk3_shadow_steel": [
+            "kubejs:tk3/campaign/kubejs_tk3_shadow_steel"
         ],
         "kubejs:tk3_singularity_frame": [
             "kubejs:tk3/campaign/frame_9"
@@ -1671,6 +1905,12 @@ ServerEvents.recipes(event => {
         ],
         "kubejs:tk3_sovereign_mechanism": [
             "kubejs:tk3/campaign/sovereign_mechanism"
+        ],
+        "kubejs:tk3_stargaze_singularity": [
+            "kubejs:tk3/campaign/kubejs_tk3_stargaze_singularity"
+        ],
+        "kubejs:tk3_void_attuned_singularity": [
+            "kubejs:tk3/campaign/kubejs_tk3_void_attuned_singularity"
         ],
         "mekanism:advanced_bin": [
             "kubejs:tk3/industrial/mekanism_bin_advanced"
@@ -1742,6 +1982,9 @@ ServerEvents.recipes(event => {
         "mekanism:alloy_atomic": [
             "kubejs:tk3/industrial/mekanism_metallurgic_infusing_alloy_atomic"
         ],
+        "mekanism:alloy_infused": [
+            "kubejs:tk3/industrial/metallurgic_infusing_alloy_infused"
+        ],
         "mekanism:alloy_reinforced": [
             "kubejs:tk3/industrial/mekanism_metallurgic_infusing_alloy_reinforced"
         ],
@@ -1759,6 +2002,9 @@ ServerEvents.recipes(event => {
         ],
         "mekanism:basic_compressing_factory": [
             "kubejs:tk3/industrial/mekanism_factory_basic_compressing"
+        ],
+        "mekanism:basic_control_circuit": [
+            "kubejs:tk3/industrial/control_circuit_basic"
         ],
         "mekanism:basic_crushing_factory": [
             "kubejs:tk3/industrial/mekanism_factory_basic_crushing"
@@ -1844,6 +2090,10 @@ ServerEvents.recipes(event => {
         "mekanism:combiner": [
             "kubejs:tk3/industrial/mekanism_combiner"
         ],
+        "mekanism:creative_bin": [],
+        "mekanism:creative_chemical_tank": [],
+        "mekanism:creative_energy_cube": [],
+        "mekanism:creative_fluid_tank": [],
         "mekanism:crusher": [
             "kubejs:tk3/tier_5/crusher"
         ],
@@ -2133,6 +2383,21 @@ ServerEvents.recipes(event => {
         "mekanism:module_vision_enhancement_unit": [
             "kubejs:tk3/industrial/mekanism_module_vision_enhancement_unit"
         ],
+        "mekanism:nugget_bronze": [
+            "kubejs:tk3/addons/mekanismtools_bronze_nugget_from_blasting"
+        ],
+        "mekanism:nugget_osmium": [
+            "kubejs:tk3/addons/mekanismtools_osmium_nugget_from_blasting"
+        ],
+        "mekanism:nugget_refined_glowstone": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_nugget_from_blasting"
+        ],
+        "mekanism:nugget_refined_obsidian": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_nugget_from_blasting"
+        ],
+        "mekanism:nugget_steel": [
+            "kubejs:tk3/addons/mekanismtools_steel_nugget_from_blasting"
+        ],
         "mekanism:nutritional_liquifier": [
             "kubejs:tk3/industrial/mekanism_nutritional_liquifier"
         ],
@@ -2408,6 +2673,249 @@ ServerEvents.recipes(event => {
         "mekanismgenerators:wind_generator": [
             "kubejs:tk3/industrial/mekanismgenerators_wind_generator"
         ],
+        "mekanismtools:bronze_axe": [
+            "kubejs:tk3/addons/mekanismtools_bronze_tools_axe"
+        ],
+        "mekanismtools:bronze_boots": [
+            "kubejs:tk3/addons/mekanismtools_bronze_armor_boots"
+        ],
+        "mekanismtools:bronze_chestplate": [
+            "kubejs:tk3/addons/mekanismtools_bronze_armor_chestplate"
+        ],
+        "mekanismtools:bronze_helmet": [
+            "kubejs:tk3/addons/mekanismtools_bronze_armor_helmet"
+        ],
+        "mekanismtools:bronze_hoe": [
+            "kubejs:tk3/addons/mekanismtools_bronze_tools_hoe"
+        ],
+        "mekanismtools:bronze_leggings": [
+            "kubejs:tk3/addons/mekanismtools_bronze_armor_leggings"
+        ],
+        "mekanismtools:bronze_paxel": [
+            "kubejs:tk3/addons/mekanismtools_bronze_tools_paxel"
+        ],
+        "mekanismtools:bronze_pickaxe": [
+            "kubejs:tk3/addons/mekanismtools_bronze_tools_pickaxe"
+        ],
+        "mekanismtools:bronze_shield": [
+            "kubejs:tk3/addons/mekanismtools_bronze_shield"
+        ],
+        "mekanismtools:bronze_shovel": [
+            "kubejs:tk3/addons/mekanismtools_bronze_tools_shovel"
+        ],
+        "mekanismtools:bronze_sword": [
+            "kubejs:tk3/addons/mekanismtools_bronze_tools_sword"
+        ],
+        "mekanismtools:diamond_paxel": [
+            "kubejs:tk3/addons/mekanismtools_diamond_paxel"
+        ],
+        "mekanismtools:gold_paxel": [
+            "kubejs:tk3/addons/mekanismtools_gold_paxel"
+        ],
+        "mekanismtools:iron_paxel": [
+            "kubejs:tk3/addons/mekanismtools_iron_paxel"
+        ],
+        "mekanismtools:lapis_lazuli_axe": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_tools_axe"
+        ],
+        "mekanismtools:lapis_lazuli_boots": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_armor_boots"
+        ],
+        "mekanismtools:lapis_lazuli_chestplate": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_armor_chestplate"
+        ],
+        "mekanismtools:lapis_lazuli_helmet": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_armor_helmet"
+        ],
+        "mekanismtools:lapis_lazuli_hoe": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_tools_hoe"
+        ],
+        "mekanismtools:lapis_lazuli_leggings": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_armor_leggings"
+        ],
+        "mekanismtools:lapis_lazuli_paxel": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_tools_paxel"
+        ],
+        "mekanismtools:lapis_lazuli_pickaxe": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_tools_pickaxe"
+        ],
+        "mekanismtools:lapis_lazuli_shield": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_shield"
+        ],
+        "mekanismtools:lapis_lazuli_shovel": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_tools_shovel"
+        ],
+        "mekanismtools:lapis_lazuli_sword": [
+            "kubejs:tk3/addons/mekanismtools_lapis_lazuli_tools_sword"
+        ],
+        "mekanismtools:netherite_paxel": [
+            "kubejs:tk3/addons/mekanismtools_netherite_paxel"
+        ],
+        "mekanismtools:osmium_axe": [
+            "kubejs:tk3/addons/mekanismtools_osmium_tools_axe"
+        ],
+        "mekanismtools:osmium_boots": [
+            "kubejs:tk3/addons/mekanismtools_osmium_armor_boots"
+        ],
+        "mekanismtools:osmium_chestplate": [
+            "kubejs:tk3/addons/mekanismtools_osmium_armor_chestplate"
+        ],
+        "mekanismtools:osmium_helmet": [
+            "kubejs:tk3/addons/mekanismtools_osmium_armor_helmet"
+        ],
+        "mekanismtools:osmium_hoe": [
+            "kubejs:tk3/addons/mekanismtools_osmium_tools_hoe"
+        ],
+        "mekanismtools:osmium_leggings": [
+            "kubejs:tk3/addons/mekanismtools_osmium_armor_leggings"
+        ],
+        "mekanismtools:osmium_paxel": [
+            "kubejs:tk3/addons/mekanismtools_osmium_tools_paxel"
+        ],
+        "mekanismtools:osmium_pickaxe": [
+            "kubejs:tk3/addons/mekanismtools_osmium_tools_pickaxe"
+        ],
+        "mekanismtools:osmium_shield": [
+            "kubejs:tk3/addons/mekanismtools_osmium_shield"
+        ],
+        "mekanismtools:osmium_shovel": [
+            "kubejs:tk3/addons/mekanismtools_osmium_tools_shovel"
+        ],
+        "mekanismtools:osmium_sword": [
+            "kubejs:tk3/addons/mekanismtools_osmium_tools_sword"
+        ],
+        "mekanismtools:refined_glowstone_axe": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_tools_axe"
+        ],
+        "mekanismtools:refined_glowstone_boots": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_armor_boots"
+        ],
+        "mekanismtools:refined_glowstone_chestplate": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_armor_chestplate"
+        ],
+        "mekanismtools:refined_glowstone_helmet": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_armor_helmet"
+        ],
+        "mekanismtools:refined_glowstone_hoe": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_tools_hoe"
+        ],
+        "mekanismtools:refined_glowstone_leggings": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_armor_leggings"
+        ],
+        "mekanismtools:refined_glowstone_paxel": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_tools_paxel"
+        ],
+        "mekanismtools:refined_glowstone_pickaxe": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_tools_pickaxe"
+        ],
+        "mekanismtools:refined_glowstone_shield": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_shield"
+        ],
+        "mekanismtools:refined_glowstone_shovel": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_tools_shovel"
+        ],
+        "mekanismtools:refined_glowstone_sword": [
+            "kubejs:tk3/addons/mekanismtools_refined_glowstone_tools_sword"
+        ],
+        "mekanismtools:refined_obsidian_axe": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_tools_axe"
+        ],
+        "mekanismtools:refined_obsidian_boots": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_armor_boots"
+        ],
+        "mekanismtools:refined_obsidian_chestplate": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_armor_chestplate"
+        ],
+        "mekanismtools:refined_obsidian_helmet": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_armor_helmet"
+        ],
+        "mekanismtools:refined_obsidian_hoe": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_tools_hoe"
+        ],
+        "mekanismtools:refined_obsidian_leggings": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_armor_leggings"
+        ],
+        "mekanismtools:refined_obsidian_paxel": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_tools_paxel"
+        ],
+        "mekanismtools:refined_obsidian_pickaxe": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_tools_pickaxe"
+        ],
+        "mekanismtools:refined_obsidian_shield": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_shield"
+        ],
+        "mekanismtools:refined_obsidian_shovel": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_tools_shovel"
+        ],
+        "mekanismtools:refined_obsidian_sword": [
+            "kubejs:tk3/addons/mekanismtools_refined_obsidian_tools_sword"
+        ],
+        "mekanismtools:steel_axe": [
+            "kubejs:tk3/addons/mekanismtools_steel_tools_axe"
+        ],
+        "mekanismtools:steel_boots": [
+            "kubejs:tk3/addons/mekanismtools_steel_armor_boots"
+        ],
+        "mekanismtools:steel_chestplate": [
+            "kubejs:tk3/addons/mekanismtools_steel_armor_chestplate"
+        ],
+        "mekanismtools:steel_helmet": [
+            "kubejs:tk3/addons/mekanismtools_steel_armor_helmet"
+        ],
+        "mekanismtools:steel_hoe": [
+            "kubejs:tk3/addons/mekanismtools_steel_tools_hoe"
+        ],
+        "mekanismtools:steel_leggings": [
+            "kubejs:tk3/addons/mekanismtools_steel_armor_leggings"
+        ],
+        "mekanismtools:steel_paxel": [
+            "kubejs:tk3/addons/mekanismtools_steel_tools_paxel"
+        ],
+        "mekanismtools:steel_pickaxe": [
+            "kubejs:tk3/addons/mekanismtools_steel_tools_pickaxe"
+        ],
+        "mekanismtools:steel_shield": [
+            "kubejs:tk3/addons/mekanismtools_steel_shield"
+        ],
+        "mekanismtools:steel_shovel": [
+            "kubejs:tk3/addons/mekanismtools_steel_tools_shovel"
+        ],
+        "mekanismtools:steel_sword": [
+            "kubejs:tk3/addons/mekanismtools_steel_tools_sword"
+        ],
+        "mekanismtools:stone_paxel": [
+            "kubejs:tk3/addons/mekanismtools_stone_paxel"
+        ],
+        "mekanismtools:wood_paxel": [
+            "kubejs:tk3/addons/mekanismtools_wood_paxel"
+        ],
+        "minecraft:blue_ice": [
+            "kubejs:tk3/addons/create_dragons_plus_freezing_blue_ice_from_packed_ice"
+        ],
+        "minecraft:brain_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_brain_coral_revival"
+        ],
+        "minecraft:brain_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_brain_coral_block"
+        ],
+        "minecraft:brain_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_brain_coral_fan_revival"
+        ],
+        "minecraft:breeze_rod": [
+            "kubejs:tk3/addons/create_dragons_plus_freezing_breeze_rod_from_blaze_rod"
+        ],
+        "minecraft:bubble_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_bubble_coral_revival"
+        ],
+        "minecraft:bubble_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_bubble_coral_block"
+        ],
+        "minecraft:bubble_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_bubble_coral_fan_revival"
+        ],
+        "minecraft:chorus_fruit": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_chorus_fruit_from_apple"
+        ],
         "minecraft:clay_ball": [
             "kubejs:tk3/tier_1/renewable_clay",
             "kubejs:tk3/geology/milling_andesite",
@@ -2417,11 +2925,152 @@ ServerEvents.recipes(event => {
         "minecraft:copper_ingot": [
             "kubejs:tk3/create/copper_ingot_from_nuggets"
         ],
+        "minecraft:dragon_breath": [
+            "kubejs:tk3/addons/create_dragons_plus_filling_dragon_breath"
+        ],
+        "minecraft:end_stone": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_end_stone_from_cobblestone"
+        ],
+        "minecraft:end_stone_brick_slab": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_end_stone_brick_slab_from_stone_brick_slab"
+        ],
+        "minecraft:end_stone_brick_stairs": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_end_stone_brick_stairs_from_stone_brick_stairs"
+        ],
+        "minecraft:end_stone_brick_wall": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_end_stone_brick_wall_from_stone_brick_wall"
+        ],
+        "minecraft:end_stone_bricks": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_end_stone_bricks_from_stone_bricks"
+        ],
+        "minecraft:exposed_chiseled_copper": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_chiseled_copper"
+        ],
+        "minecraft:exposed_copper_bulb": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_copper_bulb"
+        ],
+        "minecraft:exposed_copper_door": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_copper_door"
+        ],
+        "minecraft:exposed_copper_grate": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_copper_grate"
+        ],
+        "minecraft:exposed_copper_trapdoor": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_copper_trapdoor"
+        ],
+        "minecraft:exposed_cut_copper": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_cut_copper"
+        ],
+        "minecraft:exposed_cut_copper_slab": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_cut_copper_slab"
+        ],
+        "minecraft:exposed_cut_copper_stairs": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_exposed_cut_copper_stairs"
+        ],
+        "minecraft:fire_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_fire_coral_revival"
+        ],
+        "minecraft:fire_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_fire_coral_block"
+        ],
+        "minecraft:fire_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_fire_coral_fan_revival"
+        ],
+        "minecraft:glass_bottle": [
+            "kubejs:tk3/addons/create_dragons_plus_emptying_dragon_breath"
+        ],
         "minecraft:gravel": [
             "kubejs:tk3/tier_1/cobble_to_gravel"
         ],
+        "minecraft:heart_of_the_sea": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_heart_of_the_sea"
+        ],
+        "minecraft:horn_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_horn_coral_revival"
+        ],
+        "minecraft:horn_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_horn_coral_block"
+        ],
+        "minecraft:horn_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_horn_coral_fan_revival"
+        ],
+        "minecraft:oxidized_chiseled_copper": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_chiseled_copper"
+        ],
+        "minecraft:oxidized_copper_bulb": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_copper_bulb"
+        ],
+        "minecraft:oxidized_copper_door": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_copper_door"
+        ],
+        "minecraft:oxidized_copper_grate": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_copper_grate"
+        ],
+        "minecraft:oxidized_copper_trapdoor": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_copper_trapdoor"
+        ],
+        "minecraft:oxidized_cut_copper": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_cut_copper"
+        ],
+        "minecraft:oxidized_cut_copper_slab": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_cut_copper_slab"
+        ],
+        "minecraft:oxidized_cut_copper_stairs": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_oxidized_cut_copper_stairs"
+        ],
+        "minecraft:packed_ice": [
+            "kubejs:tk3/addons/create_dragons_plus_freezing_packed_ice_from_ice"
+        ],
+        "minecraft:phantom_membrane": [
+            "kubejs:tk3/addons/create_dragons_plus_ending_phantom_membrane_from_leathers"
+        ],
+        "minecraft:prismarine_crystals": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_prismarine_crystals"
+        ],
+        "minecraft:prismarine_shard": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_prismarine"
+        ],
         "minecraft:slime_ball": [
             "kubejs:tk3/tier_2/renewable_sealant"
+        ],
+        "minecraft:trident": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_crafting_materials_trident"
+        ],
+        "minecraft:tube_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_tube_coral_revival"
+        ],
+        "minecraft:tube_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_tube_coral_block"
+        ],
+        "minecraft:tube_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_tube_coral_fan_revival"
+        ],
+        "minecraft:weathered_chiseled_copper": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_chiseled_copper"
+        ],
+        "minecraft:weathered_copper_bulb": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_copper_bulb"
+        ],
+        "minecraft:weathered_copper_door": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_copper_door"
+        ],
+        "minecraft:weathered_copper_grate": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_copper_grate"
+        ],
+        "minecraft:weathered_copper_trapdoor": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_copper_trapdoor"
+        ],
+        "minecraft:weathered_cut_copper": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_cut_copper"
+        ],
+        "minecraft:weathered_cut_copper_slab": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_cut_copper_slab"
+        ],
+        "minecraft:weathered_cut_copper_stairs": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_weathered_cut_copper_stairs"
+        ],
+        "minecraft:wet_sponge": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_wet_sponge_revival"
         ],
         "simulated:altitude_sensor": [
             "kubejs:tk3/addons/simulated_altitude_sensor"
@@ -2620,6 +3269,15 @@ ServerEvents.recipes(event => {
         ],
         "simulated:yellow_nameplate": [
             "kubejs:tk3/addons/simulated_crafting_yellow_nameplate_from_other_nameplate"
+        ],
+        "sliceanddice:floor_sprinkler": [
+            "kubejs:tk3/addons/minecraft_sprinkler_conversion_1"
+        ],
+        "sliceanddice:slicer": [
+            "kubejs:tk3/addons/sliceanddice_slicer"
+        ],
+        "sliceanddice:sprinkler": [
+            "kubejs:tk3/addons/minecraft_sprinkler_conversion_0"
         ],
         "sophisticatedbackpacks:advanced_alchemy_upgrade": [
             "kubejs:tk3/storage/sophisticatedbackpacks_advanced_alchemy_upgrade"
@@ -3017,85 +3675,87 @@ ServerEvents.recipes(event => {
         "sophisticatedstorage:xp_pump_upgrade": [
             "kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade"
         ],
-        "witchery:altar": [
-            "kubejs:tk3/addons/witchery_altar"
+        "upgrade_aquatic:acan_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_acan_coral"
         ],
-        "witchery:cauldron": [
-            "kubejs:tk3/addons/witchery_cauldron"
+        "upgrade_aquatic:acan_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_acan_coral_block"
         ],
-        "witchery:distillery": [
-            "kubejs:tk3/addons/witchery_distillery"
+        "upgrade_aquatic:acan_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_acan_coral_fan"
         ],
-        "witchery:iron_witches_oven": [
-            "kubejs:tk3/addons/witchery_iron_witches_oven"
+        "upgrade_aquatic:branch_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_branch_coral"
         ],
-        "witchery:spinning_wheel": [
-            "kubejs:tk3/addons/witchery_spinning_wheel"
+        "upgrade_aquatic:branch_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_branch_coral_block"
         ],
-        "iceandfire:dragonforge_fire_core_disabled": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_fire_core_disabled"
+        "upgrade_aquatic:branch_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_branch_coral_fan"
         ],
-        "iceandfire:dragonforge_fire_input": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_fire_input"
+        "upgrade_aquatic:chrome_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_chrome_coral"
         ],
-        "iceandfire:dragonforge_fire_brick": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_fire_brick"
+        "upgrade_aquatic:chrome_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_chrome_coral_block"
         ],
-        "iceandfire:dragonforge_ice_core_disabled": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_ice_core_disabled"
+        "upgrade_aquatic:chrome_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_chrome_coral_fan"
         ],
-        "iceandfire:dragonforge_ice_input": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_ice_input"
+        "upgrade_aquatic:finger_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_finger_coral"
         ],
-        "iceandfire:dragonforge_ice_brick": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_ice_brick"
+        "upgrade_aquatic:finger_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_finger_coral_block"
         ],
-        "iceandfire:dragonforge_lightning_core_disabled": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_core_disabled"
+        "upgrade_aquatic:finger_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_finger_coral_fan"
         ],
-        "iceandfire:dragonforge_lightning_input": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_input"
+        "upgrade_aquatic:moss_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_moss_coral"
         ],
-        "iceandfire:dragonforge_lightning_brick": [
-            "kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick"
+        "upgrade_aquatic:moss_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_moss_coral_block"
         ],
-        "alexscaves:quarry": [
-            "kubejs:tk3/addons/alexscaves_quarry"
+        "upgrade_aquatic:moss_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_moss_coral_fan"
         ],
-        "alexscaves:drain": [
-            "kubejs:tk3/addons/alexscaves_drain"
+        "upgrade_aquatic:petal_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_petal_coral"
         ],
-        "alexscaves:nuclear_furnace_component": [
-            "kubejs:tk3/addons/alexscaves_nuclear_furnace_component"
+        "upgrade_aquatic:petal_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_petal_coral_block"
         ],
-        "alexscaves:nuclear_siren": [
-            "kubejs:tk3/addons/alexscaves_nuclear_siren"
+        "upgrade_aquatic:petal_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_petal_coral_fan"
         ],
-        "alexscaves:conversion_crucible": [
-            "kubejs:tk3/addons/alexscaves_conversion_crucible"
+        "upgrade_aquatic:pillow_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_pillow_coral"
         ],
-        "ae2:debug_phantom_node": [],
-        "create:creative_blaze_cake": [],
-        "create:creative_fluid_tank": [],
-        "ae2:creative_storage_cell": [],
-        "ae2:debug_replicator_card": [],
-        "create:creative_motor": [],
-        "ae2:debug_meteorite_placer": [],
-        "mekanism:creative_chemical_tank": [],
-        "ae2:debug_eraser": [],
-        "create:creative_crate": [],
-        "create_enchantment_industry:creative_bookshelf": [],
-        "ae2:debug_item_gen": [],
-        "mekanism:creative_fluid_tank": [],
-        "mekanism:creative_bin": [],
-        "ae2:debug_card": [],
-        "mekanism:creative_energy_cube": [],
-        "ae2:creative_energy_cell": [],
-        "ae2:debug_cube_gen": [],
-        "ae2:debug_energy_gen": [],
-        "iceandfire:dragonforge_fire_core": [],
-        "iceandfire:dragonforge_ice_core": [],
-        "iceandfire:dragonforge_lightning_core": []
+        "upgrade_aquatic:pillow_coral_block": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_pillow_coral_block"
+        ],
+        "upgrade_aquatic:pillow_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_pillow_coral_fan"
+        ],
+        "upgrade_aquatic:rock_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_rock_coral"
+        ],
+        "upgrade_aquatic:rock_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_rock_coral_fan"
+        ],
+        "upgrade_aquatic:silk_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_silk_coral"
+        ],
+        "upgrade_aquatic:silk_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_silk_coral_fan"
+        ],
+        "upgrade_aquatic:star_coral": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_star_coral"
+        ],
+        "upgrade_aquatic:star_coral_fan": [
+            "kubejs:tk3/addons/create_aquatic_ambitions_channeling_upgrade_aquatic_star_coral_fan"
+        ]
     };
     const processing = [{
             "type": "create:milling",
@@ -7090,75 +7750,51 @@ ServerEvents.recipes(event => {
         }, {
             "type": "create:cutting",
             "input": "witchery:alder_log",
-            "ids": [
-                "kubejs:tk3/compat/strip_witchery_alder_log"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:stripped_alder_log",
-            "ids": [
-                "kubejs:tk3/compat/saw_witchery_alder_log"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:alder_wood",
-            "ids": [
-                "kubejs:tk3/compat/strip_witchery_alder_wood"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:stripped_alder_wood",
-            "ids": [
-                "kubejs:tk3/compat/saw_witchery_alder_wood"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:hawthorn_log",
-            "ids": [
-                "kubejs:tk3/compat/strip_witchery_hawthorn_log"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:stripped_hawthorn_log",
-            "ids": [
-                "kubejs:tk3/compat/saw_witchery_hawthorn_log"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:hawthorn_wood",
-            "ids": [
-                "kubejs:tk3/compat/strip_witchery_hawthorn_wood"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:stripped_hawthorn_wood",
-            "ids": [
-                "kubejs:tk3/compat/saw_witchery_hawthorn_wood"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:rowan_log",
-            "ids": [
-                "kubejs:tk3/compat/strip_witchery_rowan_log"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:stripped_rowan_log",
-            "ids": [
-                "kubejs:tk3/compat/saw_witchery_rowan_log"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:rowan_wood",
-            "ids": [
-                "kubejs:tk3/compat/strip_witchery_rowan_wood"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "witchery:stripped_rowan_wood",
-            "ids": [
-                "kubejs:tk3/compat/saw_witchery_rowan_wood"
-            ]
+            "ids": []
         }, {
             "type": "create:cutting",
             "input": "minecraft:bamboo_block",

@@ -2,26 +2,26 @@
   "id": "D27400183DD05044",
   "filename": "tk3_chapter_9",
   "group": "7427C3F538DF9198",
-  "title": "IX · Singularity Engineering",
-  "subtitle": "End access, fusion and antimatter without a grind wall",
+  "title": "Singularity · Quantum Industry",
+  "subtitle": "Singularity Frame and connected production",
   "icon": "kubejs:tk3_singularity_frame",
   "order_index": 9,
   "default_hide_dependency_lines": false,
   "quests": [
     {
-      "id": "EA83C234E82B5DFD",
-      "title": "The End is earned",
+      "id": "B38C9EEBD3329786",
+      "title": "Workshop plan · Singularity Frame",
       "description": [
-        "Chapter VIII and the Ignis trial unlock End entry. End Remastered still requires its native unique-eye portal puzzle; reusable boss imprint recipes provide four deliberate eye routes."
+        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
       ],
       "dependencies": [
         "91CC6BEFB3017B3F"
       ],
       "tasks": [
         {
-          "id": "BB6D6EC53A610B5B",
+          "id": "DF5D0FF3D3027816",
           "type": "checkmark",
-          "title": "Confirm this production line works"
+          "title": "Confirm the working setup"
         }
       ],
       "optional": false,
@@ -31,43 +31,47 @@
       "rewards": []
     },
     {
-      "id": "499F50BD501D4488",
-      "title": "A kingdom beyond the portal",
+      "id": "C0DAFECBF3411114",
+      "title": "Build the SPS line",
       "description": [
-        "Defeat the Ender Dragon. Gather dragon breath and explore BetterEnd using the native environment."
+        "Native waste processing and SPS produce antimatter. The native pellet recipe still costs 1000 units; there is no crafting shortcut."
       ],
       "dependencies": [
-        "EA83C234E82B5DFD"
+        "B38C9EEBD3329786"
       ],
       "tasks": [
         {
-          "id": "29A91D43C8C0F50C",
-          "type": "kill",
-          "entity": "minecraft:ender_dragon",
-          "value": 1
+          "id": "FE38C758EAFB3626",
+          "type": "item",
+          "item": {
+            "id": "mekanism:sps_casing",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
         }
       ],
       "optional": false,
       "x": 3.0,
       "y": 0.0,
-      "icon": "kubejs:tk3_singularity_frame",
+      "icon": "mekanism:sps_casing",
       "rewards": []
     },
     {
-      "id": "2E7818FC4EDDF8BB",
-      "title": "A controlled singularity",
+      "id": "62515C77E5CF82DA",
+      "title": "Nucleosynthesize a Stargaze",
       "description": [
-        "Produce this in the native Matter Condenser. Choose overflow resources deliberately instead of deleting scarce production components."
+        "One AE2 Singularity + 10 antimatter units → one Stargaze Singularity in the Antiprotonic Nucleosynthesizer. Deploy a retained Void Core onto it, then use the Void-attuned Singularity with polonium for the next mechanism."
       ],
       "dependencies": [
-        "499F50BD501D4488"
+        "C0DAFECBF3411114"
       ],
       "tasks": [
         {
-          "id": "E6E7E97B0DB25300",
+          "id": "A4D206AEB13ADFA6",
           "type": "item",
           "item": {
-            "id": "ae2:singularity",
+            "id": "kubejs:tk3_stargaze_singularity",
             "count": 1
           },
           "count": 1,
@@ -77,27 +81,27 @@
       "optional": false,
       "x": 6.0,
       "y": 0.0,
-      "icon": "ae2:singularity",
+      "icon": "kubejs:tk3_stargaze_singularity",
       "rewards": []
     },
     {
-      "id": "A918E586BEB30DD3",
+      "id": "440135A1AF97963D",
       "title": "Singularity Mechanism",
       "description": [
-        "Containment Mechanism → Polonium Pellet → AE2 Singularity → Enchanter’s Sword. Use the apparatus-backed sword from the earlier magic workshop."
+        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds ars_nouveau:enchanters_sword. Ordinary tools wear; the chapter reward version is unbreakable."
       ],
       "dependencies": [
-        "2E7818FC4EDDF8BB"
+        "62515C77E5CF82DA"
       ],
       "tasks": [
         {
-          "id": "E6EC0DAE8AD36E4A",
+          "id": "481A6312C186B08D",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_singularity_mechanism",
             "count": 1
           },
-          "count": 4,
+          "count": 1,
           "consume_items": false
         }
       ],
@@ -108,23 +112,23 @@
       "rewards": []
     },
     {
-      "id": "DE0B4BF4661B14EF",
+      "id": "C3CF0249BE5B955C",
       "title": "Singularity Frame",
       "description": [
-        "Deploy a Singularity Mechanism onto a Fluix Block. It builds quantum logistics, fusion and the SPS layer."
+        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
       ],
       "dependencies": [
-        "A918E586BEB30DD3"
+        "440135A1AF97963D"
       ],
       "tasks": [
         {
-          "id": "D9D3BB84120C7F6A",
+          "id": "0E1420A603A09B19",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_singularity_frame",
             "count": 1
           },
-          "count": 4,
+          "count": 1,
           "consume_items": false
         }
       ],
@@ -135,17 +139,17 @@
       "rewards": []
     },
     {
-      "id": "C8AE02A213EA476B",
-      "title": "Fuel from two directions",
+      "id": "4071EFEAA0B4826C",
+      "title": "Power quantum production",
       "description": [
-        "Native deuterium and tritium production feed fusion. Bring a charged laser/laser amplifier, suitable cooling and a fuel reserve."
+        "Fusion requires native deuterium/tritium and ignition. SPS and quantum networks consume real energy; size the power line for sustained production."
       ],
       "dependencies": [
-        "DE0B4BF4661B14EF"
+        "C3CF0249BE5B955C"
       ],
       "tasks": [
         {
-          "id": "071D28A7AAB2E95C",
+          "id": "9C3EE35C716947E5",
           "type": "item",
           "item": {
             "id": "mekanismgenerators:fusion_reactor_controller",
@@ -157,52 +161,25 @@
       ],
       "optional": false,
       "x": 0.0,
-      "y": 3.0,
+      "y": 4.0,
       "icon": "mekanismgenerators:fusion_reactor_controller",
       "rewards": []
     },
     {
-      "id": "81893C42B45FBF6D",
-      "title": "Contain the impossible",
+      "id": "441218FF23DE39C8",
+      "title": "Link distant factories",
       "description": [
-        "Build the native Supercritical Phase Shifter and supercharged coils. It requires polonium and substantial FE; both remain meaningful production inputs."
+        "64k storage and quantum bridges support distant production while preserving AE2’s native channels and link rules."
       ],
       "dependencies": [
-        "C8AE02A213EA476B"
+        "C3CF0249BE5B955C"
       ],
       "tasks": [
         {
-          "id": "637C31AE8596F5B3",
+          "id": "490686B130CF868F",
           "type": "item",
           "item": {
-            "id": "mekanism:sps_casing",
-            "count": 1
-          },
-          "count": 16,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 3.0,
-      "y": 3.0,
-      "icon": "mekanism:sps_casing",
-      "rewards": []
-    },
-    {
-      "id": "D4AA211C12EDDD43",
-      "title": "An honest antimatter line",
-      "description": [
-        "Produce antimatter through the native SPS, then crystallise it into a pellet. There is no cheap mixing or crafting shortcut."
-      ],
-      "dependencies": [
-        "81893C42B45FBF6D"
-      ],
-      "tasks": [
-        {
-          "id": "079B026EE83C698C",
-          "type": "item",
-          "item": {
-            "id": "mekanism:pellet_antimatter",
+            "id": "ae2:quantum_ring",
             "count": 1
           },
           "count": 1,
@@ -210,66 +187,117 @@
         }
       ],
       "optional": false,
-      "x": 6.0,
-      "y": 3.0,
-      "icon": "mekanism:pellet_antimatter",
-      "rewards": []
-    },
-    {
-      "id": "3D4B7B5D1A918672",
-      "title": "A distant network",
-      "description": [
-        "Use the native paired entangled singularity process. Quantum links transport a network; separate power and chunk availability still matter."
-      ],
-      "dependencies": [
-        "D4AA211C12EDDD43"
-      ],
-      "tasks": [
-        {
-          "id": "D7B5C58AFDB0B327",
-          "type": "item",
-          "item": {
-            "id": "ae2:quantum_ring",
-            "count": 1
-          },
-          "count": 8,
-          "consume_items": false
-        }
-      ],
-      "optional": false,
-      "x": 9.0,
-      "y": 3.0,
+      "x": 3.0,
+      "y": 4.0,
       "icon": "ae2:quantum_ring",
       "rewards": []
     },
     {
       "id": "1EAF5BC1918535CA",
-      "title": "Trial · Ender Guardian",
+      "title": "Defeat Ender Guardian",
       "description": [
-        "Defeat this boss. The kill task is detected and grants one reusable production core per player. Further player kills drop additional cores for parallel lines."
+        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
       ],
       "dependencies": [
-        "3D4B7B5D1A918672"
+        "B38C9EEBD3329786"
       ],
       "tasks": [
         {
-          "id": "881C6D2EBA187BF9",
+          "id": "D74DADBE0B00EDFC",
           "type": "kill",
           "entity": "cataclysm:ender_guardian",
           "value": 1
         }
       ],
       "optional": false,
-      "x": 12.0,
-      "y": 3.0,
-      "icon": "kubejs:tk3_singularity_frame",
-      "rewards": [
+      "x": 6.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_void_core",
+      "rewards": []
+    },
+    {
+      "id": "4AFA996B86872BD4",
+      "title": "Keep the Void Core",
+      "description": [
+        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+      ],
+      "dependencies": [
+        "1EAF5BC1918535CA"
+      ],
+      "tasks": [
         {
-          "id": "DD78E93EB33682F5",
+          "id": "87D44FC1553D0C53",
           "type": "item",
           "item": {
             "id": "kubejs:tk3_void_core",
             "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 9.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_void_core",
+      "rewards": []
+    },
+    {
+      "id": "212C96D0B82DD548",
+      "title": "Run the workshop continuously",
+      "description": [
+        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+      ],
+      "dependencies": [
+        "C3CF0249BE5B955C",
+        "4071EFEAA0B4826C",
+        "441218FF23DE39C8",
+        "1EAF5BC1918535CA"
+      ],
+      "tasks": [
+        {
+          "id": "45DE8012948850B8",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 12.0,
+      "y": 4.0,
+      "icon": "kubejs:tk3_singularity_frame",
+      "rewards": []
+    },
+    {
+      "id": "DD2408B49260ECA5",
+      "title": "Complete chapter 9",
+      "description": [
+        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+      ],
+      "dependencies": [
+        "212C96D0B82DD548"
+      ],
+      "tasks": [
+        {
+          "id": "5B98B301611C26AA",
+          "type": "checkmark",
+          "title": "Confirm the working setup"
+        }
+      ],
+      "optional": false,
+      "x": 0.0,
+      "y": 8.0,
+      "icon": "kubejs:tk3_singularity_frame",
+      "rewards": [
+        {
+          "id": "4669F9B897740BF8",
+          "type": "item",
+          "item": {
+            "id": "ars_nouveau:enchanters_sword",
+            "count": 1,
+            "components": {
+              "minecraft:unbreakable": {},
+              "minecraft:custom_name": "{\"text\": \"Singularity Frame Workshop Tool\", \"color\": \"light_purple\", \"italic\": false}"
+            }
           },
           "count": 1,
           "team_reward": false
@@ -277,43 +305,26 @@
       ]
     },
     {
-      "id": "DD2408B49260ECA5",
-      "title": "Milestone · Singularity Engineering",
+      "id": "7F334B7B47C8B52F",
+      "title": "Boss encounters",
       "description": [
-        "Complete the working line and the required trial. This unlocks chapter 10. Reward: a named unbreakable finishing tool; one claim per player."
+        "Cataclysm, Bosses’ Rise and Mowzie’s Mobs remain combat destinations. Only the explicitly listed core-bearing bosses are mandatory milestones."
       ],
       "dependencies": [
-        "D4AA211C12EDDD43",
-        "3D4B7B5D1A918672",
-        "1EAF5BC1918535CA"
+        "B38C9EEBD3329786"
       ],
       "tasks": [
         {
-          "id": "B6F40A442D0114DA",
+          "id": "2B681F9B3EED2473",
           "type": "checkmark",
-          "title": "Confirm this production line works"
+          "title": "Confirm the working setup"
         }
       ],
-      "optional": false,
-      "x": 0.0,
-      "y": 6.0,
+      "optional": true,
+      "x": 3.0,
+      "y": 8.0,
       "icon": "kubejs:tk3_singularity_frame",
-      "rewards": [
-        {
-          "id": "B59C0A28AA9809F8",
-          "type": "item",
-          "item": {
-            "id": "ars_nouveau:enchanters_sword",
-            "count": 1,
-            "components": {
-              "minecraft:unbreakable": {},
-              "minecraft:custom_name": "{\"text\": \"Singularity Frame Tool\", \"color\": \"light_purple\", \"italic\": false}"
-            }
-          },
-          "count": 1,
-          "team_reward": false
-        }
-      ]
+      "rewards": []
     }
   ]
 }

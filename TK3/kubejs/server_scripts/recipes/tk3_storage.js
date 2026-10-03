@@ -1,160 +1,8 @@
 // priority: 0
-// T&K3 1.21.1 · assembly revision
+// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
-
-    [
-        "create:brass_funnel",
-        "create:brass_tunnel",
-        "create:iron_sheet",
-        "create:mechanical_press",
-        "create:mechanical_pump",
-        "create:precision_mechanism",
-        "kubejs:tk3_arcane_machine",
-        "kubejs:tk3_hydraulic_machine",
-        "kubejs:tk3_precision_machine",
-        "kubejs:tk3_rotation_mechanism",
-        "mekanism:alloy_infused",
-        "mekanism:steel_casing",
-        "minecraft:blast_furnace",
-        "minecraft:brewing_stand",
-        "minecraft:chest",
-        "minecraft:comparator",
-        "minecraft:copper_ingot",
-        "minecraft:crafting_table",
-        "minecraft:diamond",
-        "minecraft:ender_pearl",
-        "minecraft:experience_bottle",
-        "minecraft:furnace",
-        "minecraft:gold_ingot",
-        "minecraft:golden_carrot",
-        "minecraft:hopper",
-        "minecraft:iron_ingot",
-        "minecraft:lava_bucket",
-        "minecraft:paper",
-        "minecraft:redstone",
-        "minecraft:smoker",
-        "minecraft:stonecutter",
-        "sophisticatedbackpacks:advanced_alchemy_upgrade",
-        "sophisticatedbackpacks:advanced_compacting_upgrade",
-        "sophisticatedbackpacks:advanced_deposit_upgrade",
-        "sophisticatedbackpacks:advanced_feeding_upgrade",
-        "sophisticatedbackpacks:advanced_filter_upgrade",
-        "sophisticatedbackpacks:advanced_jukebox_upgrade",
-        "sophisticatedbackpacks:advanced_magnet_upgrade",
-        "sophisticatedbackpacks:advanced_mob_catcher_upgrade",
-        "sophisticatedbackpacks:advanced_pickup_upgrade",
-        "sophisticatedbackpacks:advanced_pump_upgrade",
-        "sophisticatedbackpacks:advanced_refill_upgrade",
-        "sophisticatedbackpacks:advanced_restock_upgrade",
-        "sophisticatedbackpacks:advanced_tool_swapper_upgrade",
-        "sophisticatedbackpacks:advanced_void_upgrade",
-        "sophisticatedbackpacks:alchemy_upgrade",
-        "sophisticatedbackpacks:backpack",
-        "sophisticatedbackpacks:blasting_upgrade",
-        "sophisticatedbackpacks:compacting_upgrade",
-        "sophisticatedbackpacks:copper_backpack",
-        "sophisticatedbackpacks:crafting_upgrade",
-        "sophisticatedbackpacks:deposit_upgrade",
-        "sophisticatedbackpacks:diamond_backpack",
-        "sophisticatedbackpacks:feeding_upgrade",
-        "sophisticatedbackpacks:filter_upgrade",
-        "sophisticatedbackpacks:gold_backpack",
-        "sophisticatedbackpacks:iron_backpack",
-        "sophisticatedbackpacks:jukebox_upgrade",
-        "sophisticatedbackpacks:magnet_upgrade",
-        "sophisticatedbackpacks:mob_catcher_upgrade",
-        "sophisticatedbackpacks:pickup_upgrade",
-        "sophisticatedbackpacks:pump_upgrade",
-        "sophisticatedbackpacks:refill_upgrade",
-        "sophisticatedbackpacks:restock_upgrade",
-        "sophisticatedbackpacks:smelting_upgrade",
-        "sophisticatedbackpacks:smoking_upgrade",
-        "sophisticatedbackpacks:stack_upgrade_tier_1",
-        "sophisticatedbackpacks:stack_upgrade_tier_2",
-        "sophisticatedbackpacks:stonecutter_upgrade",
-        "sophisticatedbackpacks:tool_swapper_upgrade",
-        "sophisticatedbackpacks:upgrade_base",
-        "sophisticatedbackpacks:void_upgrade",
-        "sophisticatedbackpacks:xp_pump_upgrade",
-        "sophisticatedstorage:advanced_alchemy_upgrade",
-        "sophisticatedstorage:advanced_compacting_upgrade",
-        "sophisticatedstorage:advanced_feeding_upgrade",
-        "sophisticatedstorage:advanced_filter_upgrade",
-        "sophisticatedstorage:advanced_hopper_upgrade",
-        "sophisticatedstorage:advanced_jukebox_upgrade",
-        "sophisticatedstorage:advanced_magnet_upgrade",
-        "sophisticatedstorage:advanced_pickup_upgrade",
-        "sophisticatedstorage:advanced_pump_upgrade",
-        "sophisticatedstorage:advanced_void_upgrade",
-        "sophisticatedstorage:alchemy_upgrade",
-        "sophisticatedstorage:barrel",
-        "sophisticatedstorage:basic_to_copper_tier_upgrade",
-        "sophisticatedstorage:blasting_upgrade",
-        "sophisticatedstorage:chest",
-        "sophisticatedstorage:compacting_upgrade",
-        "sophisticatedstorage:controller",
-        "sophisticatedstorage:copper_barrel",
-        "sophisticatedstorage:copper_chest",
-        "sophisticatedstorage:copper_shulker_box",
-        "sophisticatedstorage:copper_to_iron_tier_upgrade",
-        "sophisticatedstorage:crafting_upgrade",
-        "sophisticatedstorage:diamond_barrel",
-        "sophisticatedstorage:diamond_chest",
-        "sophisticatedstorage:diamond_shulker_box",
-        "sophisticatedstorage:feeding_upgrade",
-        "sophisticatedstorage:filter_upgrade",
-        "sophisticatedstorage:gold_barrel",
-        "sophisticatedstorage:gold_chest",
-        "sophisticatedstorage:gold_shulker_box",
-        "sophisticatedstorage:gold_to_diamond_tier_upgrade",
-        "sophisticatedstorage:hopper_upgrade",
-        "sophisticatedstorage:iron_barrel",
-        "sophisticatedstorage:iron_chest",
-        "sophisticatedstorage:iron_shulker_box",
-        "sophisticatedstorage:iron_to_gold_tier_upgrade",
-        "sophisticatedstorage:jukebox_upgrade",
-        "sophisticatedstorage:limited_barrel_1",
-        "sophisticatedstorage:limited_barrel_2",
-        "sophisticatedstorage:limited_barrel_3",
-        "sophisticatedstorage:limited_barrel_4",
-        "sophisticatedstorage:limited_copper_barrel_1",
-        "sophisticatedstorage:limited_copper_barrel_2",
-        "sophisticatedstorage:limited_copper_barrel_3",
-        "sophisticatedstorage:limited_copper_barrel_4",
-        "sophisticatedstorage:limited_diamond_barrel_1",
-        "sophisticatedstorage:limited_diamond_barrel_2",
-        "sophisticatedstorage:limited_diamond_barrel_3",
-        "sophisticatedstorage:limited_diamond_barrel_4",
-        "sophisticatedstorage:limited_gold_barrel_1",
-        "sophisticatedstorage:limited_gold_barrel_2",
-        "sophisticatedstorage:limited_gold_barrel_3",
-        "sophisticatedstorage:limited_gold_barrel_4",
-        "sophisticatedstorage:limited_iron_barrel_1",
-        "sophisticatedstorage:limited_iron_barrel_2",
-        "sophisticatedstorage:limited_iron_barrel_3",
-        "sophisticatedstorage:limited_iron_barrel_4",
-        "sophisticatedstorage:magnet_upgrade",
-        "sophisticatedstorage:pickup_upgrade",
-        "sophisticatedstorage:pump_upgrade",
-        "sophisticatedstorage:shulker_box",
-        "sophisticatedstorage:smelting_upgrade",
-        "sophisticatedstorage:smoking_upgrade",
-        "sophisticatedstorage:stack_upgrade_tier_1",
-        "sophisticatedstorage:stack_upgrade_tier_2",
-        "sophisticatedstorage:stonecutter_upgrade",
-        "sophisticatedstorage:storage_input",
-        "sophisticatedstorage:storage_io",
-        "sophisticatedstorage:storage_link",
-        "sophisticatedstorage:storage_output",
-        "sophisticatedstorage:upgrade_base",
-        "sophisticatedstorage:void_upgrade",
-        "sophisticatedstorage:xp_pump_upgrade"
-    ].forEach(id => {
-            if (Item.of(id)
-                    .isEmpty()) throw new Error('[TK3] Missing required item: ' + id);
-        });
 
     //->------------------------]  Tier 1 / Sophisticatedbackpacks / Crafting [------------------------<-//
 
@@ -1996,6 +1844,48 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_alchemy_upgrade");
 
+    // Smelting Upgrade / Shaped
+    event.shaped(
+        "sophisticatedbackpacks:smelting_upgrade",
+        [
+            " E ",
+            " B ",
+            " F "
+        ], {
+            "B": "sophisticatedbackpacks:upgrade_base",
+            "F": "kubejs:tk3_arcane_machine",
+            "E": "minecraft:furnace"
+        })
+        .id("kubejs:tk3/storage/sophisticatedbackpacks_smelting_upgrade");
+
+    // Smoking Upgrade / Shaped
+    event.shaped(
+        "sophisticatedbackpacks:smoking_upgrade",
+        [
+            " E ",
+            " B ",
+            " F "
+        ], {
+            "B": "sophisticatedbackpacks:upgrade_base",
+            "F": "kubejs:tk3_arcane_machine",
+            "E": "minecraft:smoker"
+        })
+        .id("kubejs:tk3/storage/sophisticatedbackpacks_smoking_upgrade");
+
+    // Blasting Upgrade / Shaped
+    event.shaped(
+        "sophisticatedbackpacks:blasting_upgrade",
+        [
+            " E ",
+            " B ",
+            " F "
+        ], {
+            "B": "sophisticatedbackpacks:upgrade_base",
+            "F": "kubejs:tk3_arcane_machine",
+            "E": "minecraft:blast_furnace"
+        })
+        .id("kubejs:tk3/storage/sophisticatedbackpacks_blasting_upgrade");
+
     // Advanced Alchemy Upgrade / Wrapped
     event.custom({
             "type": "sophisticatedcore:upgrade_next_tier",
@@ -2057,142 +1947,6 @@ ServerEvents.recipes(event => {
                 }]
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_advanced_pump_upgrade");
-
-    //->------------------------]  Tier 4 / Sophisticatedstorage / Crafting [------------------------<-//
-
-    // Xp Pump Upgrade / Shaped
-    event.shaped(
-        "sophisticatedstorage:xp_pump_upgrade",
-        [
-            " E ",
-            " B ",
-            " F "
-        ], {
-            "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
-            "E": "minecraft:experience_bottle"
-        })
-        .id("kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade");
-
-    // Alchemy Upgrade / Shaped
-    event.shaped(
-        "sophisticatedstorage:alchemy_upgrade",
-        [
-            " E ",
-            " B ",
-            " F "
-        ], {
-            "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
-            "E": "minecraft:brewing_stand"
-        })
-        .id("kubejs:tk3/storage/sophisticatedstorage_alchemy_upgrade");
-
-    // Advanced Alchemy Upgrade / Wrapped
-    event.custom({
-            "type": "sophisticatedcore:upgrade_next_tier",
-            "category": "misc",
-            "pattern": [
-                " R ",
-                " U ",
-                " F "
-            ],
-            "key": {
-                "U": {
-                    "item": "sophisticatedstorage:alchemy_upgrade"
-                },
-                "F": {
-                    "item": "kubejs:tk3_arcane_machine"
-                },
-                "R": {
-                    "item": "minecraft:redstone"
-                }
-            },
-            "result": {
-                "id": "sophisticatedstorage:advanced_alchemy_upgrade",
-                "count": 1
-            },
-            "neoforge:conditions": [{
-                    "type": "sophisticatedcore:item_enabled",
-                    "itemRegistryName": "sophisticatedstorage:advanced_alchemy_upgrade"
-                }]
-        })
-        .id("kubejs:tk3/storage/sophisticatedstorage_advanced_alchemy_upgrade");
-
-    // Advanced Pump Upgrade / Wrapped
-    event.custom({
-            "type": "sophisticatedcore:upgrade_next_tier",
-            "category": "misc",
-            "pattern": [
-                " R ",
-                " U ",
-                " F "
-            ],
-            "key": {
-                "U": {
-                    "item": "sophisticatedstorage:pump_upgrade"
-                },
-                "F": {
-                    "item": "kubejs:tk3_arcane_machine"
-                },
-                "R": {
-                    "item": "minecraft:redstone"
-                }
-            },
-            "result": {
-                "id": "sophisticatedstorage:advanced_pump_upgrade",
-                "count": 1
-            },
-            "neoforge:conditions": [{
-                    "type": "sophisticatedcore:item_enabled",
-                    "itemRegistryName": "sophisticatedstorage:advanced_pump_upgrade"
-                }]
-        })
-        .id("kubejs:tk3/storage/sophisticatedstorage_advanced_pump_upgrade");
-
-    //->------------------------]  Tier 5 / Sophisticatedbackpacks / Crafting [------------------------<-//
-
-    // Smelting Upgrade / Shaped
-    event.shaped(
-        "sophisticatedbackpacks:smelting_upgrade",
-        [
-            " E ",
-            " B ",
-            " F "
-        ], {
-            "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
-            "E": "minecraft:furnace"
-        })
-        .id("kubejs:tk3/storage/sophisticatedbackpacks_smelting_upgrade");
-
-    // Smoking Upgrade / Shaped
-    event.shaped(
-        "sophisticatedbackpacks:smoking_upgrade",
-        [
-            " E ",
-            " B ",
-            " F "
-        ], {
-            "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
-            "E": "minecraft:smoker"
-        })
-        .id("kubejs:tk3/storage/sophisticatedbackpacks_smoking_upgrade");
-
-    // Blasting Upgrade / Shaped
-    event.shaped(
-        "sophisticatedbackpacks:blasting_upgrade",
-        [
-            " E ",
-            " B ",
-            " F "
-        ], {
-            "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
-            "E": "minecraft:blast_furnace"
-        })
-        .id("kubejs:tk3/storage/sophisticatedbackpacks_blasting_upgrade");
 
     // Stack Upgrade Tier 2 / Wrapped
     event.custom({
@@ -2256,7 +2010,35 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_diamond_backpack");
 
-    //->------------------------]  Tier 5 / Sophisticatedstorage / Crafting [------------------------<-//
+    //->------------------------]  Tier 4 / Sophisticatedstorage / Crafting [------------------------<-//
+
+    // Xp Pump Upgrade / Shaped
+    event.shaped(
+        "sophisticatedstorage:xp_pump_upgrade",
+        [
+            " E ",
+            " B ",
+            " F "
+        ], {
+            "B": "sophisticatedstorage:upgrade_base",
+            "F": "kubejs:tk3_arcane_machine",
+            "E": "minecraft:experience_bottle"
+        })
+        .id("kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade");
+
+    // Alchemy Upgrade / Shaped
+    event.shaped(
+        "sophisticatedstorage:alchemy_upgrade",
+        [
+            " E ",
+            " B ",
+            " F "
+        ], {
+            "B": "sophisticatedstorage:upgrade_base",
+            "F": "kubejs:tk3_arcane_machine",
+            "E": "minecraft:brewing_stand"
+        })
+        .id("kubejs:tk3/storage/sophisticatedstorage_alchemy_upgrade");
 
     // Smelting Upgrade / Shaped
     event.shaped(
@@ -2299,6 +2081,68 @@ ServerEvents.recipes(event => {
             "E": "minecraft:blast_furnace"
         })
         .id("kubejs:tk3/storage/sophisticatedstorage_blasting_upgrade");
+
+    // Advanced Alchemy Upgrade / Wrapped
+    event.custom({
+            "type": "sophisticatedcore:upgrade_next_tier",
+            "category": "misc",
+            "pattern": [
+                " R ",
+                " U ",
+                " F "
+            ],
+            "key": {
+                "U": {
+                    "item": "sophisticatedstorage:alchemy_upgrade"
+                },
+                "F": {
+                    "item": "kubejs:tk3_arcane_machine"
+                },
+                "R": {
+                    "item": "minecraft:redstone"
+                }
+            },
+            "result": {
+                "id": "sophisticatedstorage:advanced_alchemy_upgrade",
+                "count": 1
+            },
+            "neoforge:conditions": [{
+                    "type": "sophisticatedcore:item_enabled",
+                    "itemRegistryName": "sophisticatedstorage:advanced_alchemy_upgrade"
+                }]
+        })
+        .id("kubejs:tk3/storage/sophisticatedstorage_advanced_alchemy_upgrade");
+
+    // Advanced Pump Upgrade / Wrapped
+    event.custom({
+            "type": "sophisticatedcore:upgrade_next_tier",
+            "category": "misc",
+            "pattern": [
+                " R ",
+                " U ",
+                " F "
+            ],
+            "key": {
+                "U": {
+                    "item": "sophisticatedstorage:pump_upgrade"
+                },
+                "F": {
+                    "item": "kubejs:tk3_arcane_machine"
+                },
+                "R": {
+                    "item": "minecraft:redstone"
+                }
+            },
+            "result": {
+                "id": "sophisticatedstorage:advanced_pump_upgrade",
+                "count": 1
+            },
+            "neoforge:conditions": [{
+                    "type": "sophisticatedcore:item_enabled",
+                    "itemRegistryName": "sophisticatedstorage:advanced_pump_upgrade"
+                }]
+        })
+        .id("kubejs:tk3/storage/sophisticatedstorage_advanced_pump_upgrade");
 
     // Stack Upgrade Tier 2 / Wrapped
     event.custom({
