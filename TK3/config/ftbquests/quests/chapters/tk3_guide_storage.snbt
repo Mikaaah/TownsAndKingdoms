@@ -1,0 +1,325 @@
+{
+  "id": "17561A6BE2D911A6",
+  "group": "377CA5D05B315B14",
+  "icon": "kubejs:tk3_quest_satchel",
+  "order_index": 44,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "1C810133157B5A8C",
+      "title": "&f&lSort by what you do next&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fUse named storage for crops, stone, processed metals, mechanisms, tools and expedition loot. Sophisticated Storage and Backpacks add useful upgrades, while ME arrives with Chapter IV.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep an incoming-materials chest so explorers can unload before sorting.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "5F8552A5DD884592",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_satchel",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "345DF7DDC2EBADDE",
+      "title": "&f&lA Backpack&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain a Backpack for supplies and discoveries.",
+        "",
+        "&fA backpack gives your expeditions a dedicated inventory and upgrade system. Inspect its upgrade slots and tier recipe before adding features.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLeave a few empty slots for discoveries rather than filling every slot with emergency supplies.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C"
+      ],
+      "tasks": [
+        {
+          "id": "160BD11902091862",
+          "type": "item",
+          "item": {
+            "id": "sophisticatedbackpacks:backpack",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "sophisticatedbackpacks:backpack",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "subtitle": "&7ITEM GOAL"
+    },
+    {
+      "id": "144A770BFAD4170E",
+      "title": "&f&lThe Hopper Upgrade&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain and configure a Hopper Upgrade.",
+        "",
+        "&fA Hopper Upgrade transfers between adjacent inventories using its configuration. It is useful for early machine input and output handling; it does not replace a Pickup Upgrade’s dropped-item job.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSet filters and test the transfer direction with a small item stack.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C"
+      ],
+      "tasks": [
+        {
+          "id": "37B3B4A8CB9820B3",
+          "type": "item",
+          "item": {
+            "id": "sophisticatedstorage:hopper_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "sophisticatedstorage:hopper_upgrade",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "subtitle": "&7ITEM GOAL"
+    },
+    {
+      "id": "2D993B872C3B51E0",
+      "title": "&f&lThe Pickup Upgrade&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain a Backpack Pickup Upgrade and inspect its settings.",
+        "",
+        "&fUse the Pickup Upgrade for dropped-item collection under its actual range and filter rules. Check the correct storage or backpack variant instead of assuming every upgrade fits both.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest with a few dropped items before relying on it for an entire farm.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "1AA051C83B99405A",
+          "type": "item",
+          "item": {
+            "id": "sophisticatedbackpacks:pickup_upgrade",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "sophisticatedbackpacks:pickup_upgrade",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "subtitle": "&7ITEM GOAL · TIER 2+"
+    },
+    {
+      "id": "4920B0FADC82FEB2",
+      "title": "&f&lKeep the important things&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFilter what goes into each buffer. Planting stock, tools, boss catalysts and finished mechanisms need different destinations from ordinary overflow.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep your core inventory out of automatic disposal and void-upgrade routes.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C"
+      ],
+      "tasks": [
+        {
+          "id": "0C5F144195F1F41A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_satchel",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "6EEBF048369C6E7C",
+      "title": "&f&lUpgrade the stored inventory&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fUse the supported tier and upgrade recipes shown in JEI. The managed preserving recipes retain native inventory components; inspect the intended result before upgrading your main container.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest an upgrade on a small spare container first.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C"
+      ],
+      "tasks": [
+        {
+          "id": "763CB09D010B9068",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_satchel",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "284A2C06A402A811",
+      "title": "&f&lStorage that moves&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe selected Sophisticated Create integrations support their corresponding contraption inventory features. Test one supported container and transfer arrangement before turning it into a full harvesting system.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fWatch the inventory during movement and when unloading.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C"
+      ],
+      "tasks": [
+        {
+          "id": "594022165F73CF6A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_satchel",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "73E65ED5F8E16ACF",
+      "title": "&f&lHand off to ME cleanly&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fWhen Chapter IV opens digital storage, decide which buffers remain local and what moves into ME. Local food, tools and recovery materials are still useful when the network is unavailable.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a visible reserve for the equipment that restores power or storage access.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C810133157B5A8C",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "60EAD62A1E0A3AB7",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_satchel",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_storage"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lStorage, Backpacks & Collection&r",
+  "subtitle": [
+    "Useful upgrades early · digital storage later"
+  ]
+}

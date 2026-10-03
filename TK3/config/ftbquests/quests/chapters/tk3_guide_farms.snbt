@@ -1,0 +1,436 @@
+{
+  "id": "728AD1163ECEB710",
+  "group": "377CA5D05B315B14",
+  "icon": "kubejs:tk3_quest_job_cook",
+  "order_index": 43,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "6748CF14BADC0D38",
+      "title": "&f&lFood and industry share the fields&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fYour crops can feed players, colony workers and the factory. Wheat and kelp support slime and seals; later crop processing supplies Bio Fuel. Plan separate food, planting and industrial buffers.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA factory should receive the surplus, not consume the farm’s last planting materials.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "45850A7D046C7C20",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "3D65F87E439DA7FF",
+      "title": "&f&lA farm with a clear job&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChoose a crop your team uses and build a small farm with access to water, collection and a planting reserve. Check the crop’s actual growing rules and available harvesting methods.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fMake each field’s destination visible with a sign or labelled chest.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "24F369691847E954",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "41ADAB8492116EA3",
+      "title": "&f&lThe useful kelp patch&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fKelp feeds Algal Blend, the slime route and aquatic calcium production. Build collection first and keep the factory’s intake separate from a spare growing area.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe manual blend route starts your workshop; mixing improves its yield later.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "5FD7E76BADC8EE17",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "5FD290A205F7F8BA",
+      "title": "&f&lA proper cutting station&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFarmer’s Delight cutting recipes use their listed tool and output rules. Start with the native board, inspect recipes in JEI and later automate supported cuts with Slice & Dice.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep ingredients and the cutting tool nearby so manual food prep remains easy.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "7EE0A33B34A3D2B0",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "5AD93D3CB98E0740",
+      "title": "&f&lThe Stove&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain a Stove and prepare a place for the kitchen.",
+        "",
+        "&fUse Farmer’s Delight’s native cooking setup and recipes to prepare repeatable meals. Plan the input supply and finished-meal storage before adding automatic transfers.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fChoose a meal whose ingredients are already renewable in your settlement.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "08E63DACCA296A81",
+          "type": "item",
+          "item": {
+            "id": "farmersdelight:stove",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "farmersdelight:stove",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "subtitle": "&7ITEM GOAL"
+    },
+    {
+      "id": "267D64780256C02B",
+      "title": "&f&lMore kitchens, more choices&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fFarm & Charm, Bakery, Brewery, Candlelight and BloomingNature add selected farming, food or decoration content. Inspect each mod’s actual recipe stations rather than treating every dish as a Farmer’s Delight pot recipe.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPick one useful recipe from each system you want to build, instead of stocking every ingredient at once.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "35D42F5BBD5EB46A",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "18E3C9955DF6C3AA",
+      "title": "&f&lKeep animal feed in reserve&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPlan shelter, breeding supplies and collection around the animals you actually keep. Store animal feed apart from the crop input that the factory consumes.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLeave safe access for manual care even if parts of the collection become automatic.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "676C77E188207BE2",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "1E8A78D5D23F7417",
+      "title": "&f&lThe Copper irrigation project&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChapter II includes the frame-based Sprinkler and hydraulic machinery. Follow the installed Sprinkler’s water requirements, then test a small field before expanding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fInspect water supply and collection when evaluating the field’s performance.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "709AA0977C3B5C7B",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 2+"
+    },
+    {
+      "id": "7C9363789E53BCEF",
+      "title": "&f&lA farm that feeds the sealing line&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fConnect wheat and kelp reserves to the water-fed mixer route: one wheat, one kelp and 250 mB water produce two slimeballs. Use the output for Rubber Compound and Copper-tier mechanisms.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fProtect meal ingredients and replanting stock with separate buffers.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "6FFEB963BB61244F",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 2+"
+    },
+    {
+      "id": "5601454D34EF2835",
+      "title": "&f&lFood surplus becomes feedstock&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChapter VI turns suitable farm output into Mekanism Bio Fuel and the native substrate/ethylene/HDPE chain. Use JEI to choose a supported crop input; keep food-grade output available for people too.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBegin with the Ender Machine bootstrap equipment before planning Chemical Machine upgrades.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38",
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "673C9D90E1BF97D0",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 6+"
+    },
+    {
+      "id": "0D4CF3C3FC917450",
+      "title": "&f&lA kitchen the whole team can use&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild a repeatable meal line with ingredient storage, the proper cooking station and finished-food collection. Demonstrate several batches and stock the expedition locker.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPlace a small manual prep area next to the automated line.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6748CF14BADC0D38"
+      ],
+      "tasks": [
+        {
+          "id": "3EE5FA7764063D70",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_farms"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lFields, Food & the Kitchen&r",
+  "subtitle": [
+    "Farmer’s Delight, Slice & Dice and the selected Let’s Do cooking mods"
+  ]
+}

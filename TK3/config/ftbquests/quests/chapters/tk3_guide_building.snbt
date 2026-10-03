@@ -1,0 +1,243 @@
+{
+  "id": "5E8FF85053713AC5",
+  "group": "377CA5D05B315B14",
+  "icon": "kubejs:tk3_quest_lantern",
+  "order_index": 46,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "692C289D7B40C0C9",
+      "title": "&f&lA building with a clear purpose&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fGive each building a job, a palette and room for access. Separate noisy processing, storage, food and magical experiments, then connect them with readable paths.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse a limited palette with one accent material so the workshop remains easy to navigate.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "008570D50C18EA9C",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_building"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "41EAB777014AEBC5",
+      "title": "&f&lThe Carpenter’s Table&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain a Carpenter’s Table and inspect its decorative options.",
+        "",
+        "&fChipped workbenches turn supported materials into decorative variants. Inspect which workbench handles your chosen palette and keep these choices distinct from progression frames.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest a wall section before producing the entire building palette.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "692C289D7B40C0C9"
+      ],
+      "tasks": [
+        {
+          "id": "21DCC5210229EA13",
+          "type": "item",
+          "item": {
+            "id": "chipped:carpenters_table",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "chipped:carpenters_table",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_building"
+      ],
+      "subtitle": "&7ITEM GOAL"
+    },
+    {
+      "id": "4A5512309A93E914",
+      "title": "&f&lArchitect’s Palette in the workshop&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fArchitect’s Palette provides building materials and the Algal Blend used by the early industrial route. Decorative variants do not replace the required mechanism or frame in a machine recipe.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve enough kelp and clay for progression before committing them to a large build.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "692C289D7B40C0C9"
+      ],
+      "tasks": [
+        {
+          "id": "6A4542ACD3798CC0",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_building"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "618FAF002821E437",
+      "title": "&f&lDetails that help people&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fSupplementaries and Amendments add practical building and interaction details. Choose actual supported items for signs, lighting, displays or useful room functions by reading their tooltips and recipes.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA clear label beside an ingredient buffer is a useful part of the build.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "692C289D7B40C0C9"
+      ],
+      "tasks": [
+        {
+          "id": "722A35AC82DFDE7D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_building"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "60EBE4046B861179",
+      "title": "&f&lDesign for maintenance&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fLeave room to reach machine faces, filters, tanks and tool-holding deployers. Add walkways through a factory so expanding a line does not cut off the rest of the building.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPlan vertical access before stacking a second processing floor.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "692C289D7B40C0C9"
+      ],
+      "tasks": [
+        {
+          "id": "12FFAD3D6BBC5B96",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_building"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "389D065A21C0981B",
+      "title": "&f&lFinish a readable workshop room&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild a room with a consistent palette, visible storage labels, a clear machine flow and safe access to every important input and output.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep the raw-input end and finished-output end recognizable at a glance.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "692C289D7B40C0C9"
+      ],
+      "tasks": [
+        {
+          "id": "695A6FFDDBA47036",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_building"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lBuilders & Practical Details&r",
+  "subtitle": [
+    "Chipped, Architect’s Palette, Supplementaries and Amendments"
+  ]
+}

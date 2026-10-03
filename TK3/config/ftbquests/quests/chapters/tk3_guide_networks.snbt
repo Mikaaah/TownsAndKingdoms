@@ -1,0 +1,361 @@
+{
+  "id": "7DE09D2C015CFAC9",
+  "group": "7427C3F538DF9198",
+  "icon": "kubejs:tk3_quest_questinductive",
+  "order_index": 33,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "1289DCCC86D7A75C",
+      "title": "&f&lThree systems, three jobs&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fCreate rotation runs the mechanical workshop. FE powers electric machinery. AE2 stores items and coordinates crafting. Mekanism chemicals add another material layer; a power cable is not a chemical pipe.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild a small working example of each connection before combining them.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "1A243C10BA252B88",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "50B5B94F7ED14460",
+      "title": "&f&lStart electric power with precision&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fChapter IV begins with heated steel, Steel Casing and Precision Mechanisms. These bootstrap powered processing, a Heat Generator, basic cables, the AE2 Charger and Inscriber before the Inductive Machine exists.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFollow Chapter IV’s order to avoid planning a machine that needs the component it is supposed to produce.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "67AC8A4CB17EA5A1",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 4+"
+    },
+    {
+      "id": "5AC989DDD1CACD30",
+      "title": "&f&lConfigure inputs and outputs&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fMekanism machines have side and transfer settings. Give energy, items and chemicals the appropriate connections, then verify a single operation. Upgrading a machine is not a substitute for configuring it.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fIf the recipe is correct but no progress starts, inspect the machine’s energy and side screens.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "742C2A905576FF55",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "53DF5123BEF237D9",
+      "title": "&f&lYour first ME network&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBegin with power input, a terminal, a drive and a small storage cell. Add automation only after you can insert and retrieve materials reliably. The native network’s energy and channel rules still apply.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep frequently used ingredients in the network and a small recovery reserve outside it.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "11808C15C3C6DB35",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "25098AA3D74F4364",
+      "title": "&f&lTeach a process, then request it&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fAutocrafting needs a valid pattern, a supported execution device and somewhere for the result to return. Distinguish a crafting pattern from a processing recipe that runs in an external machine.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest a single requested batch with empty machine inputs before building many parallel interfaces.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "1E84D9C66AD85938",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "27A59A50EAF3186E",
+      "title": "&f&lUpgrades preserve what matters&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe managed storage and factory upgrades retain their native component-preserving recipe behavior. Use the supported upgrade route to keep stored contents and configuration rather than substituting an arbitrary shaped recipe.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fMake a backup before testing major inventory upgrades on your main world.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C"
+      ],
+      "tasks": [
+        {
+          "id": "0901C2CF0DB91176",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "01CD0634E3143F0C",
+      "title": "&f&lChemical storage is its own layer&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fApplied Mekanistics adds chemical network storage alongside AE2. Chapter VI introduces the managed chemical housing and native preserving cell upgrades. Use compatible chemical storage and transfers rather than putting a gas into an item cell.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep each chemical line labelled. Hydrogen, chlorine and hydrogen chloride have different jobs.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "509410106AD94E39",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 6+"
+    },
+    {
+      "id": "01EFDAD513378219",
+      "title": "&f&lFeed only what a machine needs&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fKeep background production and on-demand production distinct. A permanent supply line can fill a buffer; a request-based line should return precisely the expected result to the network.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve some basic materials so a request does not consume all of your startup stock.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "1ACDD8FD9B60D965",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 6+"
+    },
+    {
+      "id": "753778B35B2202D2",
+      "title": "&f&lA remote factory still needs service&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fWireless and quantum links help with remote storage access, but their native energy, range, channel and linking rules remain. Remote machines also need working world loading under your instance’s settings.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest insertion, retrieval and production while you are away from the workshop.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1289DCCC86D7A75C",
+        "91CC6BEFB3017B3F"
+      ],
+      "tasks": [
+        {
+          "id": "6169A7A8ACDE6C8C",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questinductive",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_networks"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 9+"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lPower & Digital Logistics&r",
+  "subtitle": [
+    "Chapter IV onward · Mekanism, AE2 and Applied Mekanistics"
+  ]
+}

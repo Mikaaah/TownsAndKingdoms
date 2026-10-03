@@ -1,0 +1,325 @@
+{
+  "id": "09CD36F42C1C3A38",
+  "group": "7427C3F538DF9198",
+  "icon": "kubejs:tk3_quest_rope",
+  "order_index": 34,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "19998A9E3AE0C0AE",
+      "title": "&f&lChoose the route for the job&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fRoads, Create transport, Hypertubes, Waystones and Aeronautics serve different kinds of travel and cargo. Plan stations and delivery inventories before adding long routes.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fStart with a short route between two known inventories or safe landing points.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "3B9EC1E6CE4EB207",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2E556C559FF76986",
+      "title": "&f&lTest a short Hypertube route&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChapter III supplies precision-based entrances and accelerators alongside native tube sections. Build a short accessible route, supply its required power and test both ends before extending it.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLeave room around entrances so you can service the route.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "087084DF0BB2640A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 3+"
+    },
+    {
+      "id": "69796A731256F7AA",
+      "title": "&f&lGive a route a useful cargo job&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse Create’s supported transport components and Ponder to plan track, stations and cargo handling. Tie each destination to a real buffer, such as crop delivery or timber collection.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fConfirm unloading before adding another stop.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "3A72E4FEDA4D52DF",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 3+"
+    },
+    {
+      "id": "0202FA2010A3901E",
+      "title": "&f&lSupply the colony through the workshop&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fCreate: MineColonies Link is selected to connect workshop logistics with colony requests. Inspect the installed link’s supported blocks and in-game guidance, then test one requested material with a small supply.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fGive the colony a dedicated buffer so settlement demand does not consume the entire mechanism line.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "130E6559207C3F92",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 3+"
+    },
+    {
+      "id": "752F5687616074DF",
+      "title": "&f&lBuild the first expedition vessel&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChapter VII introduces Expedition Frames for Aeronautics controls. Plan a light hull, balanced propulsion, steering, fuel or power, and cargo access. Follow the addon’s actual supported setup.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest turning, stopping and cargo access close to home before crossing a long distance.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "DCEB2AF9B398CAEB"
+      ],
+      "tasks": [
+        {
+          "id": "6599D205EAE34AF9",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 7+"
+    },
+    {
+      "id": "4FEF05079AF54B81",
+      "title": "&f&lPower and processing aboard&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fAeronautics Mekanism compatibility provides the selected moving-vessel integration. Check which blocks and networks are supported in the installed versions, then test one electric machine aboard before expanding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fObserve power, inputs and outputs during movement as well as while parked.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "DCEB2AF9B398CAEB"
+      ],
+      "tasks": [
+        {
+          "id": "1BF784D9472C4C6B",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 7+"
+    },
+    {
+      "id": "09F33FC1349B68F4",
+      "title": "&f&lTravel and magic aboard&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe current selection includes Aeronautics integrations for FTB Chunks, Iron’s Spells and Waystones: Sable. Read each installed addon’s supported behavior and settings before relying on claims, spell effects or travel from a moving vessel.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest the exact interaction on a short trip with a safe landing point.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "DCEB2AF9B398CAEB"
+      ],
+      "tasks": [
+        {
+          "id": "1B9B549C8966A8B8",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 7+"
+    },
+    {
+      "id": "73FEDB04B3253A67",
+      "title": "&f&lBuild a resupply outpost&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fMake a remote stop with fuel or energy, food, storage and repair supplies. Record the approach route and a safe landing area so the next expedition starts prepared.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLeave an emergency return option for the crew.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "19998A9E3AE0C0AE",
+        "DCEB2AF9B398CAEB"
+      ],
+      "tasks": [
+        {
+          "id": "68DC48E5CB6460ED",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_rope",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_transport"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 7+"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lRoutes, Rails & Airships&r",
+  "subtitle": [
+    "A connected kingdom · Brass transport and Integrated expeditions"
+  ]
+}

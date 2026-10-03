@@ -52,7 +52,7 @@ def verify():
     manifest=json.loads((PACK/'docs/progression_manifest.json').read_text())
     ids=[recipe['id'] for recipe in manifest['recipes']]
     if set(pages[OUT/'recipes/index.html'].recipes)!=set(ids): errors.append('Catalogue does not match canonical recipes')
-    quests={f'quest-{quest["id"]}' for chapter in manifest['chapters'] for quest in chapter['quests']}
+    quests={f'quest-{quest["id"]}' for chapter in manifest['chapters']+manifest.get('guide_chapters',[]) for quest in chapter['quests']}
     if not quests.issubset(pages[OUT/'chapters/index.html'].ids): errors.append('Missing campaign quests')
     for source in (PACK/'wiki-archive/2026-10-02').glob('*.md'):
         if source.read_bytes()!=(OUT/'archive'/source.name).read_bytes(): errors.append('Archive changed: '+source.name)

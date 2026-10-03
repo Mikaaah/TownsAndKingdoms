@@ -1,18 +1,21 @@
 {
   "id": "414EACB3E95685A1",
-  "filename": "tk3_chapter_2",
   "group": "7427C3F538DF9198",
-  "title": "Copper · Fields & Fluids",
-  "subtitle": "Hydraulic Machine and connected production",
   "icon": "kubejs:tk3_hydraulic_machine",
   "order_index": 2,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "F47CF308EDE8D9E1",
-      "title": "Workshop plan · Hydraulic Machine",
+      "title": "&f&lWorkshop plan · Hydraulic Machine&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop."
       ],
       "dependencies": [
         "B0A94968CD02DE8A"
@@ -21,20 +24,33 @@
         {
           "id": "56A5AB09CA65CAEC",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_hydraulic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "EA2C4591FD4136DA",
-      "title": "Cure the rubber",
+      "title": "&f&lCure the rubber&r",
       "description": [
-        "Compact slime, dried kelp and 250 mB water. Mix one wheat, one kelp and 250 mB water into two slimeballs; supply the seals line."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCompact slime, dried kelp and 250 mB water. Mix one wheat, one kelp and 250 mB water into two slimeballs; supply the seals line.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop."
       ],
       "dependencies": [
         "F47CF308EDE8D9E1"
@@ -55,13 +71,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "kubejs:tk3_rubber",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "0BC7139100518ACF",
-      "title": "Ocean metallurgy",
+      "title": "&f&lOcean metallurgy&r",
       "description": [
-        "Mix bone meal, kelp and water into calcium powder. Compact prismarine shard, copper sheet and powder into two alloy; rods supply the Conduit Cage."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fMix bone meal, kelp and water into calcium powder. Compact prismarine shard, copper sheet and powder into two alloy; rods supply the Conduit Cage.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop."
       ],
       "dependencies": [
         "EA2C4591FD4136DA"
@@ -82,13 +109,33 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "create_aquatic_ambitions:prismarine_alloy",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "9CAA477668A63D6F",
-      "title": "Sealed Mechanism",
+      "title": "&f&lSealed Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:iron_knife. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Sealed Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:iron_knife. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Kinetic Mechanism.",
+        "&62. &fDeploy Copper Sheet.",
+        "&63. &fDeploy Cured Rubber.",
+        "&64. &fFinish under a Deployer holding Iron Knife.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "0BC7139100518ACF"
@@ -109,13 +156,29 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_sealed_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "CB8CED3D790F258F",
-      "title": "Hydraulic Machine",
+      "title": "&f&lHydraulic Machine&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Copper Casing on the belt or depot.",
+        "&62. &fDeploy Sealed Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "9CAA477668A63D6F"
@@ -136,13 +199,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "kubejs:tk3_hydraulic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "39519A20908534FD",
-      "title": "Route fluids",
+      "title": "&f&lRoute fluids&r",
       "description": [
-        "Cut a Hydraulic Machine into a pump. Keep separate tanks for water, milk and later XP."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCut a Hydraulic Machine into a pump. Keep separate tanks for water, milk and later XP.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop."
       ],
       "dependencies": [
         "CB8CED3D790F258F"
@@ -163,13 +237,24 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "create:mechanical_pump",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "21AC3ACC58C334AD",
-      "title": "Water the fields",
+      "title": "&f&lWater the fields&r",
       "description": [
-        "Use the frame-based sprinkler recipe, then connect water. The Slicer automates supported Farmer’s Delight cutting recipes using a held knife."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUse the frame-based sprinkler recipe, then connect water. The Slicer automates supported Farmer’s Delight cutting recipes using a held knife.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop."
       ],
       "dependencies": [
         "CB8CED3D790F258F"
@@ -190,13 +275,31 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "sliceanddice:sprinkler",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "70D9B468C368FFFA",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "CB8CED3D790F258F",
@@ -214,13 +317,24 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_hydraulic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "60278B0905A64DC9",
-      "title": "Complete chapter 2",
+      "title": "&6&l◆ COMPLETE CHAPTER 2&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "70D9B468C368FFFA"
@@ -251,13 +365,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "FC0DDB9C57D6688B",
-      "title": "Ocean workshop",
+      "title": "&f&lOcean workshop&r",
       "description": [
-        "Upgrade Aquatic supplies the aquatic world. Build a Conduit Cage, then follow the addon’s actual channeling recipes; its conduit ingredient comes from ocean exploration."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUpgrade Aquatic supplies the aquatic world. Build a Conduit Cage, then follow the addon’s actual channeling recipes; its conduit ingredient comes from ocean exploration.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "F47CF308EDE8D9E1"
@@ -278,13 +408,27 @@
       "x": 12.0,
       "y": 4.0,
       "icon": "create_aquatic_ambitions:mechanical_conduit",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "5B89EF1EB562A8A6",
-      "title": "Iron’s Gems ’n Jewelry",
+      "title": "&f&lIron’s Gems ’n Jewelry&r",
       "description": [
-        "Craft the station and guide. Jewel effects and jewelry components keep their native scroll and jewelcrafting systems."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCraft the station and guide. Jewel effects and jewelry components keep their native scroll and jewelcrafting systems.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate water, crop supplies and sealing ingredients. Keep enough prismarine for the aquatic workshop.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "F47CF308EDE8D9E1"
@@ -305,7 +449,19 @@
       "x": 0.0,
       "y": 8.0,
       "icon": "irons_jewelry:jewelcrafting_station",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_2"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b02 ◆ &f&lCopper · Fields & Fluids&r",
+  "subtitle": [
+    "Hydraulic Machine and connected production"
   ]
 }

@@ -1,18 +1,21 @@
 {
   "id": "C3C4EE5EFEBE5FFC",
-  "filename": "tk3_chapter_10",
   "group": "7427C3F538DF9198",
-  "title": "Sovereign · A Renewable Kingdom",
-  "subtitle": "Sovereign Core and connected production",
   "icon": "kubejs:tk3_sovereign_core",
   "order_index": 10,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "048DD0D80436286A",
-      "title": "Workshop plan · Sovereign Core",
+      "title": "&f&lWorkshop plan · Sovereign Core&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep all five core catalysts and test the complete input chain before scaling Sovereign production."
       ],
       "dependencies": [
         "DD2408B49260ECA5"
@@ -21,20 +24,33 @@
         {
           "id": "75FBB6993724F9CC",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_sovereign_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "11202848E5630522",
-      "title": "Imprint the Sovereign Keystone",
+      "title": "&f&lImprint the Sovereign Keystone&r",
       "description": [
-        "Deploy Verdant Sigil, Storm Core, Ember Core, Void Core and Dragon Core onto a Sovereign Core in one sequence. Every core is retained; finish using the ordinary Enchanter’s Sword."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy Verdant Sigil, Storm Core, Ember Core, Void Core and Dragon Core onto a Sovereign Core in one sequence. Every core is retained; finish using the ordinary Enchanter’s Sword.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep all five core catalysts and test the complete input chain before scaling Sovereign production."
       ],
       "dependencies": [
         "048DD0D80436286A"
@@ -55,13 +71,33 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "kubejs:tk3_sovereign_keystone",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "A2F7B45A45898E5F",
-      "title": "Sovereign Mechanism",
+      "title": "&f&lSovereign Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:diamond_hammer. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Sovereign Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:diamond_hammer. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Singularity Mechanism.",
+        "&62. &fDeploy Pellet Antimatter.",
+        "&63. &fDeploy Dragon Breath.",
+        "&64. &fFinish under a Deployer holding Diamond Hammer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "11202848E5630522"
@@ -82,13 +118,29 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_sovereign_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "94FE0E1F50545C0B",
-      "title": "Sovereign Core",
+      "title": "&f&lSovereign Core&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Sps Casing on the belt or depot.",
+        "&62. &fDeploy Sovereign Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "A2F7B45A45898E5F"
@@ -109,13 +161,24 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_sovereign_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "DF8CD8E80FF1BEBC",
-      "title": "Equip the industrial kingdom",
+      "title": "&f&lEquip the industrial kingdom&r",
       "description": [
-        "Sovereign Cores build the advanced equipment layer. Modules, energy and native upgrade components are still required."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fSovereign Cores build the advanced equipment layer. Modules, energy and native upgrade components are still required.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep all five core catalysts and test the complete input chain before scaling Sovereign production."
       ],
       "dependencies": [
         "94FE0E1F50545C0B"
@@ -136,13 +199,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "mekanism:meka_tool",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "7EB5D20B6EA27606",
-      "title": "Finish the large ME network",
+      "title": "&f&lFinish the large ME network&r",
       "description": [
-        "Use native preserving upgrades to reach 256k. Storage capacity supports production; creative cells and infinity upgrades remain unavailable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUse native preserving upgrades to reach 256k. Storage capacity supports production; creative cells and infinity upgrades remain unavailable.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep all five core catalysts and test the complete input chain before scaling Sovereign production."
       ],
       "dependencies": [
         "94FE0E1F50545C0B"
@@ -163,13 +237,31 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "ae2:item_storage_cell_256k",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "9D5F5CBAB5E5175A",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep all five core catalysts and test the complete input chain before scaling Sovereign production.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "94FE0E1F50545C0B",
@@ -187,13 +279,24 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "kubejs:tk3_sovereign_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "502988B461C73519",
-      "title": "Complete chapter 10",
+      "title": "&6&l◆ COMPLETE CHAPTER 10&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim the unbreakable Sovereign workshop tool. All ten workshop tiers are complete; continue settlement projects, exploration and renewable production.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "9D5F5CBAB5E5175A"
@@ -224,13 +327,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "72B5209695E2DD48",
-      "title": "Useful settlement details",
+      "title": "&f&lUseful settlement details&r",
       "description": [
-        "Supplementaries and Amendments supply practical building and interaction tools. Waystones support travel alongside airships and quantum links."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fSupplementaries and Amendments supply practical building and interaction tools. Waystones support travel alongside airships and quantum links.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep all five core catalysts and test the complete input chain before scaling Sovereign production.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "048DD0D80436286A"
@@ -251,7 +370,19 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "supplementaries:rope",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_10"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b10 ◆ &f&lSovereign · A Renewable Kingdom&r",
+  "subtitle": [
+    "Sovereign Core and connected production"
   ]
 }

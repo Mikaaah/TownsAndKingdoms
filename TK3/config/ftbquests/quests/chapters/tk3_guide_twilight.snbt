@@ -1,0 +1,243 @@
+{
+  "id": "5F54AB10F9A5CBDB",
+  "group": "6EEE595FC184DBEA",
+  "icon": "kubejs:tk3_quest_lantern",
+  "order_index": 40,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "6239A70A4006AE8E",
+      "title": "&f&lFollow the forest’s own progression&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fTwilight Forest has its own entry and boss progression. Use the native guide, advancements and in-world clues to understand the next destination. The campaign’s Verdant Sigil comes from the Lich player kill.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA workshop tier does not skip the forest’s earlier native progression requirements.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "761A76A35F912E27",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_twilight"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1FC21CCC6EEF58B9",
+      "title": "&f&lPrepare the forest journey&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fRead the installed portal requirements, bring food and a return plan, and mark your entry location. Leave space for discoveries instead of bringing every workshop tool.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a spare recovery kit on the home side of the portal.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6239A70A4006AE8E"
+      ],
+      "tasks": [
+        {
+          "id": "3473FB56589CE802",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_twilight"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "1D46E395C6FADE0E",
+      "title": "&f&lYour first forest objective&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fComplete an early native forest objective and read the advancement or guide that explains the next one. Record a route and useful materials for a return visit.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse native progression feedback when a biome or boss is inaccessible.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6239A70A4006AE8E"
+      ],
+      "tasks": [
+        {
+          "id": "13583233B17ABCB8",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_twilight"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "58943EB584B90C02",
+      "title": "&f&lPrepare for the Lich trial&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fComplete the forest’s preceding requirements, find the Lich destination and review your loadout. Chapter VI contains the campaign kill task; its authored player-kill loot gives the Verdant Sigil.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTake a reliable ranged or spell option if your chosen approach needs one.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6239A70A4006AE8E",
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "4807203E5BDFCAD6",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_twilight"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 6+"
+    },
+    {
+      "id": "2E198CD61EF784D5",
+      "title": "&f&lForest relics and spellbooks&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe selected Reliquified Twilight Forest and Twilight Forest: Spellbooks integrations add their own discoveries. Inspect what you actually find and follow each item’s native upgrade or acquisition rules.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep promising equipment even if it suits another teammate’s class better.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6239A70A4006AE8E"
+      ],
+      "tasks": [
+        {
+          "id": "0F14032D84ABFC08",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_twilight"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "66C7F3E30E42B2DB",
+      "title": "&f&lA reusable forest route&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fRecord entry, cleared objectives, useful materials and an unfinished destination in the town library. Bring home enough supplies to make the next trip a planned expedition.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSeparate progression trophies and crafting supplies when sorting the haul.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6239A70A4006AE8E"
+      ],
+      "tasks": [
+        {
+          "id": "366427A7247DD87A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_lantern",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_twilight"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lInto the Twilight Forest&r",
+  "subtitle": [
+    "Native adventure order · Lich catalyst from Chapter VI"
+  ]
+}

@@ -1,6 +1,40 @@
 {
-"chapter_groups": [{
-"id": "7427C3F538DF9198",
-"title": "Towns & Kingdoms 3 · Campaign"
-}]
+  "chapter_groups": [
+    {
+      "id": "56F01DA5C0AF1307",
+      "title": "&6◆ &f&lTOWN SQUARE&r",
+      "icon": "kubejs:tk3_quest_bell",
+      "order_index": 0
+    },
+    {
+      "id": "575460F7017FAB16",
+      "title": "&d◆ &f&lCHARACTER PATHS&r",
+      "icon": "kubejs:tk3_quest_jobs",
+      "order_index": 1
+    },
+    {
+      "id": "7427C3F538DF9198",
+      "title": "&b◆ &f&lMECHANICAL QUESTS&r",
+      "icon": "kubejs:tk3_quest_hammer",
+      "order_index": 2
+    },
+    {
+      "id": "7F5849963E10B878",
+      "title": "&5◆ &f&lTHE MAGICAL QUESTS&r",
+      "icon": "kubejs:tk3_quest_scroll",
+      "order_index": 3
+    },
+    {
+      "id": "6EEE595FC184DBEA",
+      "title": "&a◆ &f&lADVENTURE QUESTS&r",
+      "icon": "kubejs:tk3_quest_map",
+      "order_index": 4
+    },
+    {
+      "id": "377CA5D05B315B14",
+      "title": "&e◆ &f&lKINGDOM LIFE&r",
+      "icon": "kubejs:tk3_quest_lantern",
+      "order_index": 5
+    }
+  ]
 }

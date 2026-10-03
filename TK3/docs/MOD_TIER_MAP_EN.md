@@ -1,6 +1,6 @@
 # T&K3 · MODS & THEIR TIERS
 
-**10 CHAPTERS · 115 QUESTS · 1709 RECIPES**
+**10 PROGRESSION CHAPTERS · 27 GUIDE PAGES · 353 QUESTS · 1709 RECIPES**
 
 The current progression selection is grouped by its actual workshop role. Native world, combat and building systems remain available alongside the chapter spine. Integration libraries do not need artificial crafting items to earn a place in the pack.
 

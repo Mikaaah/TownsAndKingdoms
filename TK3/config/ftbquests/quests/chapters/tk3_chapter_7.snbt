@@ -1,18 +1,21 @@
 {
   "id": "4AD45EFF90652F33",
-  "filename": "tk3_chapter_7",
   "group": "7427C3F538DF9198",
-  "title": "Integrated · Living Expeditions",
-  "subtitle": "Expedition Frame and connected production",
   "icon": "kubejs:tk3_expedition_frame",
   "order_index": 7,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "47B7F7307CD559D6",
-      "title": "Workshop plan · Expedition Frame",
+      "title": "&f&lWorkshop plan · Expedition Frame&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight."
       ],
       "dependencies": [
         "DCEB2AF9B398CAEB"
@@ -21,20 +24,33 @@
         {
           "id": "B53800C2B1C57375",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_expedition_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "DC154F8C70241863",
-      "title": "Refine the radiance",
+      "title": "&f&lRefine the radiance&r",
       "description": [
-        "Inject one Shadow Steel with 100 units hydrogen chloride per finished operation, then press the Refined Radiance. This is gas processing in the Chemical Injection Chamber."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fInject one Shadow Steel with 100 units hydrogen chloride per finished operation, then press the Refined Radiance. This is gas processing in the Chemical Injection Chamber.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight."
       ],
       "dependencies": [
         "47B7F7307CD559D6"
@@ -55,13 +71,33 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "kubejs:tk3_radiance_sheet",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "8BCF7F8F3766B09D",
-      "title": "Expedition Mechanism",
+      "title": "&f&lExpedition Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Expedition Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Reinforced Mechanism.",
+        "&62. &fDeploy Manipulation Essence.",
+        "&63. &fDeploy Radiance Sheet.",
+        "&64. &fFinish under a Deployer holding Diamond Knife.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "DC154F8C70241863"
@@ -82,13 +118,29 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_expedition_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "DC419D774BA31874",
-      "title": "Expedition Frame",
+      "title": "&f&lExpedition Frame&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Arcane Casing on the belt or depot.",
+        "&62. &fDeploy Expedition Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "8BCF7F8F3766B09D"
@@ -109,13 +161,26 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_expedition_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "34ACF5A39BA4283A",
-      "title": "Build an expedition vessel",
+      "title": "&f&lBuild an expedition vessel&r",
       "description": [
-        "Expedition Frames unlock actual airship controls. Start with a light hull, balanced propulsion, steering and fuel; Mekanism compatibility adds systems on the moving vessel."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fExpedition Frames unlock actual airship controls. Start with a light hull, balanced propulsion, steering and fuel; Mekanism compatibility adds systems on the moving vessel.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "DC419D774BA31874"
@@ -136,13 +201,25 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "aeronautics:gyroscopic_propeller_bearing",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "D4F91CE79DCC7DD7",
-      "title": "Expand remote automation",
+      "title": "&f&lExpand remote automation&r",
       "description": [
-        "Use 16k storage and wireless access to service the expedition workshop. Channels, energy and native wireless range still apply."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUse 16k storage and wireless access to service the expedition workshop. Channels, energy and native wireless range still apply.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight."
       ],
       "dependencies": [
         "DC419D774BA31874"
@@ -163,13 +240,24 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "ae2:wireless_terminal",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "B1EC8B5E18AF1A4E",
-      "title": "Defeat The Harbinger",
+      "title": "&f&lDefeat The Harbinger&r",
       "description": [
-        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fA player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight."
       ],
       "dependencies": [
         "47B7F7307CD559D6"
@@ -186,13 +274,29 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "kubejs:tk3_storm_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "A3A2B541FEA19ACC",
-      "title": "Keep the Storm Core",
+      "title": "&f&lKeep the Storm Core&r",
       "description": [
-        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBoss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fDo not route boss catalysts into void upgrades, disposal or general ingredient consumption.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "B1EC8B5E18AF1A4E"
@@ -213,13 +317,32 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_storm_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "D1E33B1F2AF97D41",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "DC419D774BA31874",
@@ -237,13 +360,24 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "kubejs:tk3_expedition_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "BCC05513E2AD3BA9",
-      "title": "Complete chapter 7",
+      "title": "&6&l◆ COMPLETE CHAPTER 7&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "D1E33B1F2AF97D41"
@@ -274,13 +408,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "CCF12F6425911E2B",
-      "title": "Cave expedition",
+      "title": "&f&lCave expedition&r",
       "description": [
-        "Explore Alex’s Caves and Alex’s Mobs for materials and encounters. Expedition machinery supports mining; discoveries keep their native sources."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fExplore Alex’s Caves and Alex’s Mobs for materials and encounters. Expedition machinery supports mining; discoveries keep their native sources.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHydrogen chloride comes from the chemical network. Test an expedition vessel close to home before a long flight.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "47B7F7307CD559D6"
@@ -301,7 +451,19 @@
       "x": 0.0,
       "y": 8.0,
       "icon": "alexscaves:quarry",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_7"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b07 ◆ &f&lIntegrated · Living Expeditions&r",
+  "subtitle": [
+    "Expedition Frame and connected production"
   ]
 }

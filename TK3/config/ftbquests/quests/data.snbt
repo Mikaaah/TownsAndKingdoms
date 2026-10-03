@@ -1,8 +1,10 @@
 {
-"version": 13,
-"title": "Towns & Kingdoms 3",
-"icon": "create:precision_mechanism",
-"default_consume_items": false,
-"default_autoclaim_rewards": "disabled",
-"progression_mode": "linear"
+  "version": 13,
+  "default_consume_items": false,
+  "default_autoclaim_rewards": "disabled",
+  "default_team_reward": false,
+  "default_quest_shape": "circle",
+  "fallback_locale": "en_us",
+  "icon": "kubejs:tk3_quest_logo",
+  "progression_mode": "linear"
 }

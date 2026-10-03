@@ -1,18 +1,21 @@
 {
   "id": "385173DB173FB2DC",
-  "filename": "tk3_chapter_5",
   "group": "7427C3F538DF9198",
-  "title": "Ender · Beyond the Portal",
-  "subtitle": "Ender Machine and connected production",
   "icon": "kubejs:tk3_ender_machine",
   "order_index": 5,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "243A2D8B26B15B0F",
-      "title": "Workshop plan · Ender Machine",
+      "title": "&f&lWorkshop plan · Ender Machine&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "1CD504854E287D44"
@@ -21,20 +24,33 @@
         {
           "id": "652E935031736ADF",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_ender_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "DBE218996F56B585",
-      "title": "Prepare the portal",
+      "title": "&f&lPrepare the portal&r",
       "description": [
-        "The four authored eye deployments use Inductive Mechanisms with Source Gem, pearl, Blaze Rod or crying obsidian. Other unique eyes keep native exploration sources. End Remastered still needs twelve different valid eyes."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fThe four authored eye deployments use Inductive Mechanisms with Source Gem, pearl, Blaze Rod or crying obsidian. Other unique eyes keep native exploration sources. End Remastered still needs twelve different valid eyes.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "243A2D8B26B15B0F"
@@ -55,13 +71,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "endrem:magical_eye",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "B5BA8280D4AECFAF",
-      "title": "Claim the first Dragon Core",
+      "title": "&f&lClaim the first Dragon Core&r",
       "description": [
-        "Defeat the Ender Dragon after opening the portal. Claim the permanent Dragon Core from the detected Dragon trial quest; it is retained by final imprinting."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDefeat the Ender Dragon after opening the portal. Claim the permanent Dragon Core from the detected Dragon trial quest; it is retained by final imprinting.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "DBE218996F56B585"
@@ -82,13 +109,24 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_dragon_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "3FB34BA7EEC8EE67",
-      "title": "Gather chorus",
+      "title": "&f&lGather chorus&r",
       "description": [
-        "Grow chorus on End Stone. Save Dragon’s Breath for Dragons Plus and the final workshop."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fGrow chorus on End Stone. Save Dragon’s Breath for Dragons Plus and the final workshop.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "B5BA8280D4AECFAF"
@@ -109,13 +147,24 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "minecraft:chorus_fruit",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "6B7EC89A2ABE4ECE",
-      "title": "Scale the powered workshop",
+      "title": "&f&lScale the powered workshop&r",
       "description": [
-        "Upgrade basic machines into advanced factories with their preserving native recipes. Advanced circuits become a regular supply line."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUpgrade basic machines into advanced factories with their preserving native recipes. Advanced circuits become a regular supply line.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "3FB34BA7EEC8EE67"
@@ -136,13 +185,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "mekanism:advanced_control_circuit",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "0C90503C07977AD3",
-      "title": "Handle Dragon’s Breath",
+      "title": "&f&lHandle Dragon’s Breath&r",
       "description": [
-        "Collect bottles during the fight. Dragons Plus keeps its actual breath filling, emptying and ending fan processes; use the fluid hatch for transport."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCollect bottles during the fight. Dragons Plus keeps its actual breath filling, emptying and ending fan processes; use the fluid hatch for transport.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "6B7EC89A2ABE4ECE"
@@ -163,13 +223,33 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "minecraft:dragon_breath",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "F4C37D676518CF6C",
-      "title": "Ender Mechanism",
+      "title": "&f&lEnder Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Ender Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Inductive Mechanism.",
+        "&62. &fDeploy Chorus Fruit.",
+        "&63. &fDeploy Advanced Control Circuit.",
+        "&64. &fFinish under a Deployer holding Diamond Knife.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "0C90503C07977AD3"
@@ -190,13 +270,29 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "kubejs:tk3_ender_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1342A22EAEF2A5F1",
-      "title": "Ender Machine",
+      "title": "&f&lEnder Machine&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Steel Casing on the belt or depot.",
+        "&62. &fDeploy Ender Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "F4C37D676518CF6C"
@@ -217,13 +313,24 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_ender_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "4585DD0797591621",
-      "title": "Defeat Ender Dragon",
+      "title": "&f&lDefeat Ender Dragon&r",
       "description": [
-        "Defeat the Ender Dragon and claim the permanent Dragon Core from this quest. Keep the core for final imprinting; it is retained."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDefeat the Ender Dragon and claim the permanent Dragon Core from this quest. Keep the core for final imprinting; it is retained.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production."
       ],
       "dependencies": [
         "243A2D8B26B15B0F"
@@ -251,13 +358,29 @@
           "count": 1,
           "team_reward": true
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "B340B48C9041AED2",
-      "title": "Keep the Dragon Core",
+      "title": "&f&lKeep the Dragon Core&r",
       "description": [
-        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBoss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fDo not route boss catalysts into void upgrades, disposal or general ingredient consumption.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "4585DD0797591621"
@@ -278,13 +401,32 @@
       "x": 12.0,
       "y": 4.0,
       "icon": "kubejs:tk3_dragon_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "9FE616E7B77FA439",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "1342A22EAEF2A5F1",
@@ -301,13 +443,24 @@
       "x": 0.0,
       "y": 8.0,
       "icon": "kubejs:tk3_ender_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "4B5E0820B553B7C9",
-      "title": "Complete chapter 5",
+      "title": "&6&l◆ COMPLETE CHAPTER 5&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "9FE616E7B77FA439"
@@ -338,13 +491,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "42894C987D71F311",
-      "title": "XP and enchantments",
+      "title": "&f&lXP and enchantments&r",
       "description": [
-        "Collect and route native liquid XP. Enchanting Industry and Apotheosis retain their actual experience and enchantment rules."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCollect and route native liquid XP. Enchanting Industry and Apotheosis retain their actual experience and enchantment rules.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct portal eyes and reserve the first Dragon Core for reusable production.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "243A2D8B26B15B0F"
@@ -365,7 +534,19 @@
       "x": 6.0,
       "y": 8.0,
       "icon": "create_enchantment_industry:blaze_enchanter",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_5"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b05 ◆ &f&lEnder · Beyond the Portal&r",
+  "subtitle": [
+    "Ender Machine and connected production"
   ]
 }

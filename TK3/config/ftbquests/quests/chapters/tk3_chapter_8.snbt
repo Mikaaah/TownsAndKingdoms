@@ -1,18 +1,21 @@
 {
   "id": "2A44FE00BA909F7C",
-  "filename": "tk3_chapter_8",
   "group": "7427C3F538DF9198",
-  "title": "Containment · Nuclear Control",
-  "subtitle": "Containment Frame and connected production",
   "icon": "kubejs:tk3_containment_frame",
   "order_index": 8,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "158C2D1A41CA9EBC",
-      "title": "Workshop plan · Containment Frame",
+      "title": "&f&lWorkshop plan · Containment Frame&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input."
       ],
       "dependencies": [
         "BCC05513E2AD3BA9"
@@ -21,20 +24,33 @@
         {
           "id": "1DE392F3A5390BA4",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_containment_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "CB8A69D5BCFBEAC9",
-      "title": "Infuse Overcharge Alloy",
+      "title": "&f&lInfuse Overcharge Alloy&r",
       "description": [
-        "Infuse Refined Radiance with 80 diamond infusion units per operation. Press sheets for the Containment Mechanism; no radioactive input is needed to build the first reactor."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fInfuse Refined Radiance with 80 diamond infusion units per operation. Press sheets for the Containment Mechanism; no radioactive input is needed to build the first reactor.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input."
       ],
       "dependencies": [
         "158C2D1A41CA9EBC"
@@ -55,13 +71,33 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "kubejs:tk3_overcharge_sheet",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "EE017EC0DF7FB23F",
-      "title": "Containment Mechanism",
+      "title": "&f&lContainment Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Containment Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Expedition Mechanism.",
+        "&62. &fDeploy Hdpe Sheet.",
+        "&63. &fDeploy Overcharge Sheet.",
+        "&64. &fFinish under a Deployer holding Sand Paper.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "CB8A69D5BCFBEAC9"
@@ -82,13 +118,29 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_containment_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "FBDB3D038D6B12D5",
-      "title": "Containment Frame",
+      "title": "&f&lContainment Frame&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Steel Casing on the belt or depot.",
+        "&62. &fDeploy Containment Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "EE017EC0DF7FB23F"
@@ -109,13 +161,24 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_containment_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "10EBEBFE659F7A04",
-      "title": "Build fission safely",
+      "title": "&f&lBuild fission safely&r",
       "description": [
-        "Build reactor, cooling and turbine before adding fuel. Native uranium → yellow cake → uranium oxide → uranium hexafluoride → fissile fuel remains the fuel chain."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBuild reactor, cooling and turbine before adding fuel. Native uranium → yellow cake → uranium oxide → uranium hexafluoride → fissile fuel remains the fuel chain.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input."
       ],
       "dependencies": [
         "FBDB3D038D6B12D5"
@@ -136,13 +199,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "mekanismgenerators:fission_reactor_casing",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "937C5BB6BA19D917",
-      "title": "Separate radioactive waste",
+      "title": "&f&lSeparate radioactive waste&r",
       "description": [
-        "Route waste away from normal gas storage. Use native barrels and solar neutron activation; never vent waste. Route polonium/plutonium with their native restrictions."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fRoute waste away from normal gas storage. Use native barrels and solar neutron activation; never vent waste. Route polonium/plutonium with their native restrictions.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input."
       ],
       "dependencies": [
         "FBDB3D038D6B12D5"
@@ -163,13 +237,26 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "mekanism:radioactive_waste_barrel",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "47C1C61DB74D770B",
-      "title": "Move controlled spaces",
+      "title": "&f&lMove controlled spaces&r",
       "description": [
-        "Spatial storage is an optional branch after containment. Check channels and power before transferring a volume."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fSpatial storage is an optional branch after containment. Check channels and power before transferring a volume.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "FBDB3D038D6B12D5"
@@ -190,13 +277,25 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "ae2:spatial_io_port",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "92F27CBC4799C649",
-      "title": "Defeat Ignis",
+      "title": "&f&lDefeat Ignis&r",
       "description": [
-        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fA player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input."
       ],
       "dependencies": [
         "158C2D1A41CA9EBC"
@@ -213,13 +312,29 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_ember_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "F60AFD3121DA0AE1",
-      "title": "Keep the Ember Core",
+      "title": "&f&lKeep the Ember Core&r",
       "description": [
-        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBoss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fDo not route boss catalysts into void upgrades, disposal or general ingredient consumption.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "92F27CBC4799C649"
@@ -240,13 +355,32 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "kubejs:tk3_ember_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "0AEE00E4D969977A",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "FBDB3D038D6B12D5",
@@ -265,13 +399,24 @@
       "x": 12.0,
       "y": 4.0,
       "icon": "kubejs:tk3_containment_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "91CC6BEFB3017B3F",
-      "title": "Complete chapter 8",
+      "title": "&6&l◆ COMPLETE CHAPTER 8&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "0AEE00E4D969977A"
@@ -302,13 +447,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "57F56D3601CB198C",
-      "title": "Dragonforges",
+      "title": "&f&lDragonforges&r",
       "description": [
-        "Ice & Fire forging requires the corresponding living dragon and forge multiblock. Custom frames supply parts; they do not replace the dragon."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fIce & Fire forging requires the corresponding living dragon and forge multiblock. Custom frames supply parts; they do not replace the dragon.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild cooling and waste handling before fuel production. The first containment equipment needs no radioactive input.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "158C2D1A41CA9EBC"
@@ -329,7 +490,19 @@
       "x": 3.0,
       "y": 8.0,
       "icon": "iceandfire:dragonforge_fire_input",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_8"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b08 ◆ &f&lContainment · Nuclear Control&r",
+  "subtitle": [
+    "Containment Frame and connected production"
   ]
 }

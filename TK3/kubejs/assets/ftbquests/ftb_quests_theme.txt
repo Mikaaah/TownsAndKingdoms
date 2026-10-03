@@ -1,0 +1,32 @@
+// Towns & Kingdoms 3 · questbook palette
+// FTB Quests merges these overrides with its bundled theme.
+[*]
+quest_view_title: #D5B9FF
+quest_completed_color: #8FCB9B
+quest_started_color: #D5ACFF
+quest_not_started_color: #B5A0D2
+quest_locked_color: #665971
+dependency_line_completed_color: #8FCB9B
+dependency_line_uncompleted_color: #A586C4
+dependency_line_unavailable_color: #51465F
+dependency_line_requires_color: #E4C681
+dependency_line_required_for_color: #C49EFF
+selected_chapter_highlight_1: #A986D4
+selected_chapter_highlight_2: #D9C7EE
+
+[#tk3_milestone]
+quest_view_title: #E4C681
+quest_not_started_color: #C3A465
+
+[#tk3_class_warrior]
+quest_view_title: #E05A47
+[#tk3_class_ranger]
+quest_view_title: #5DAE68
+[#tk3_class_rogue]
+quest_view_title: #9A6BC5
+[#tk3_class_mage]
+quest_view_title: #55CFEA
+[#tk3_class_cleric]
+quest_view_title: #F1D776
+[#tk3_class_occultist]
+quest_view_title: #9B4B70

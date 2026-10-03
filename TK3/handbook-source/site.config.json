@@ -95,7 +95,7 @@
     {
       "route": "chapters/",
       "title": "Chapters & quests",
-      "summary": "All {{questCount}} quests across ten chapters, with goals, dependencies and permanent workshop rewards.",
+      "summary": "All {{questCount}} quests: ten progression chapters, tutorials, classes, professions, mod guides and settlement projects.",
       "category": "start"
     },
     {

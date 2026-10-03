@@ -1,0 +1,398 @@
+{
+  "id": "3DA2623620D25F39",
+  "group": "7F5849963E10B878",
+  "icon": "kubejs:tk3_quest_bookopen",
+  "order_index": 35,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "217B1848E6453CAD",
+      "title": "&f&lLearn Ars on its own terms&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fArs Nouveau combines a spellbook, glyphs, Source and automation devices. Use its in-game guide and JEI together. Your class’s Iron’s spell attributes do not automatically describe every Ars spell or Source device.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fStart with one useful spell and one reliable Source supply.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0026839E2A19D617",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "04959E0FC9641AD0",
+      "title": "&f&lA first spellbook&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFollow the native spellbook recipe and upgrade requirements shown in JEI. Read the guide’s instructions for making and editing a spell, then test a simple combination in a safe area.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep spell testing away from crops, settlers and important machine rooms.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD"
+      ],
+      "tasks": [
+        {
+          "id": "5D290B22A84A7B4A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "0FE3519293895ABD",
+      "title": "&f&lRead glyphs before combining them&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fGlyphs describe how a spell starts, what it does and how it is modified. Inspect the available glyphs and their costs before building a complicated sequence.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA short spell whose effects you understand is easier to improve.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD"
+      ],
+      "tasks": [
+        {
+          "id": "4C37871DCB505365",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "447275F4492FB0AC",
+      "title": "&f&lSource is a production supply&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fSourcelinks generate Source under their own conditions and jars hold it for supported devices. The Chapter IV Agronomic Sourcelink bootstrap uses wheat, Source Gems, a Source Jar and a Precision Machine.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep Source generation close enough to the actual consumers under Ars’s native transfer rules.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "2765AE5294FF2D14",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 4+"
+    },
+    {
+      "id": "13BD43BF8BC6197B",
+      "title": "&f&lA parallel arcane workshop&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fA Precision Machine bootstraps the Enchanting Apparatus before the custom Arcane Machine. Produce Arcane Casing and its sequenced mechanism, then deploy the mechanism onto the casing. This is a supporting branch alongside electric industry.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe Arcane Machine is not a prerequisite for starting the first Source supply.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "3ADBB7F3B88E89C5",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "1E65FDD48E0BD757",
+      "title": "&f&lHelpers with clear jobs&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fArs automation helpers each have their own binding and task rules. Give a helper one supported job and a visible destination, then test collection before adding more work.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep the output inventory accessible so you can see whether the helper is collecting or stalled.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "65EBB3D1667E6DEC",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "4640DACA2970A575",
+      "title": "&f&lArs Creo · Starbuncle Wheel&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fArs Creo’s Starbuncle Wheel adds a real Ars/Create connection. Follow its native operating rules and Ponder or in-game guide, then test it on a small rotating setup.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCheck the wheel’s actual operating conditions instead of treating Source as a universal replacement for every power system.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "6F6F5EE76C5FC9AC",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "14611BCC84919F75",
+      "title": "&f&lCreate and Source together&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fCreate: Ars Nouveau compatibility and Wizardry are selected workshop integrations. Inspect each actual recipe and machine tooltip to see whether the process needs rotation, Source, a spell or more than one system.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLabel Source connections separately from water, liquid XP and other fluid lines.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "11A4343A80C6E2E9",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    },
+    {
+      "id": "51C77A50622FA337",
+      "title": "&f&lMagical equipment and relics&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fReliquified Ars Nouveau and Ars ’n Spells extend selected equipment or compatibility systems. Read the item’s own effects and restrictions; an Ars item and an Iron’s spellbook still have distinct rules.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest one supported effect at a time when comparing a hybrid loadout.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD"
+      ],
+      "tasks": [
+        {
+          "id": "1763775F91921A66",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "3FD9C996C3ED542D",
+      "title": "&f&lA living supply line&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild one Ars-assisted crop, collection or processing setup whose output feeds the workshop or storehouse. Include Source supply, the helper or device and a collection buffer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep manual access to the buffer so the team can service the line.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "217B1848E6453CAD",
+        "B81077B20C8371D3"
+      ],
+      "tasks": [
+        {
+          "id": "2C460AD889FF8D0D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_bookopen",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_ars"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 4+"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lArs Nouveau · The Living Workshop&r",
+  "subtitle": [
+    "Spells, Source and magical automation alongside the factory"
+  ]
+}

@@ -1,0 +1,256 @@
+{
+  "id": "15A76C7204A7F51C",
+  "group": "56F01DA5C0AF1307",
+  "icon": "kubejs:tk3_quest_torch",
+  "order_index": 21,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "35A555D8D89382FA",
+      "title": "&f&lChoose a place to begin&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fLook for access to water, space for crops and a level workshop footprint. Leave room for belts, tanks, a stone generator and later machine rooms rather than fitting every process into your bedroom.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fSet up shelter and a bed.",
+        "&62. &fMark a workshop area.",
+        "&63. &fReserve a separate storage corner.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA workshop next to the farm shortens the first wheat and kelp supply routes.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "3B2F9793A79BFBEF",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_torch",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_first_days"
+      ],
+      "shape": "square",
+      "size": 1.4,
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "0C0C20356D043CF8",
+      "title": "&f&lKeep your expedition fed&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild a steady food supply before traveling far. Farmer’s Delight and the selected cooking mods offer useful meal choices. Check a meal’s tooltip and available ingredients before planning mass production.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCarry one reliable food stack and reserve special meals for longer trips.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "35A555D8D89382FA"
+      ],
+      "tasks": [
+        {
+          "id": "36015FABFDDF142B",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_cook",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_first_days"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "528AC548C569B457",
+      "title": "&f&lThe first industrial crops&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fWheat and kelp serve both food and machine progression. Clay feeds Algal Blend, and limestone processing can supply bone meal. Keep seeds and replanting stock out of the factory’s consumption buffer.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPlant wheat.",
+        "&62. &fStart a kelp patch in water.",
+        "&63. &fReserve a chest for crops and seeds.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA small reliable farm is more useful than a large farm with nowhere for its harvest to go.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "35A555D8D89382FA"
+      ],
+      "tasks": [
+        {
+          "id": "17966F370FE0BEBF",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_torch",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_first_days"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "43935EB38B16F0E6",
+      "title": "&f&lHandcraft the starting frame&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fChapter I deliberately starts before automated mechanisms. Seven Andesite Alloy, a wooden slab and Andesite Casing craft the first Kinetic Machine. Use the manual route to obtain the machines that will automate the mechanisms.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fMake Algal Blend and Andesite Alloy.",
+        "&62. &fCraft the manual Kinetic Machine.",
+        "&63. &fStonecut the required starter equipment.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBudget several starting frames: each stonecut machine choice consumes its own frame.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "35A555D8D89382FA"
+      ],
+      "tasks": [
+        {
+          "id": "2DD1B5656754615D",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_torch",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_first_days"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "481FEC28EE03D3D2",
+      "title": "&f&lGive every process an output&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fA chest, hopper or an appropriate collection upgrade turns a working machine into a useful supply line. Decide where items arrive and what should happen when that inventory fills.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fHopper Upgrades transfer to adjacent inventories. Pickup Upgrades collect dropped items; these are different jobs.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "35A555D8D89382FA"
+      ],
+      "tasks": [
+        {
+          "id": "028A1A86A86C9ABF",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_sack",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_first_days"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "4A6AF6464F3A9F3C",
+      "title": "&f&lA working first workshop&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFinish a compact area with water power, a press, a mixer and deployers. Leave paths to access filters and replace tools. Continue Chapter I for the exact progression goals.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLabel the ingredient buffers so you can return after an expedition and understand your own factory.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "35A555D8D89382FA"
+      ],
+      "tasks": [
+        {
+          "id": "6B725F33B8DF249A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_torch",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_first_days"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lThe First Few Days&r",
+  "subtitle": [
+    "Shelter, supplies and a workshop that can grow"
+  ]
+}

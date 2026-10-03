@@ -1,38 +1,54 @@
 {
   "id": "B67D7DBBCDDED52D",
-  "filename": "tk3_chapter_1",
   "group": "7427C3F538DF9198",
-  "title": "Andesite · Roots of Industry",
-  "subtitle": "Kinetic Machine and connected production",
   "icon": "kubejs:tk3_kinetic_machine",
   "order_index": 1,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "5494F4CB9AF0890F",
-      "title": "Workshop plan · Kinetic Machine",
+      "title": "&f&lWorkshop plan · Kinetic Machine&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fStart with the manual Kinetic Machine. It gives you the powered equipment needed to automate mechanisms. This first tier needs no previous milestone.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
       ],
       "dependencies": [],
       "tasks": [
         {
           "id": "2EF8A4D062254313",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_kinetic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "99B3475C4DF0D941",
-      "title": "Algal Blend",
+      "title": "&f&lAlgal Blend&r",
       "description": [
-        "Kelp + clay makes two blend by hand, four in a mixer. Start a kelp farm beside your workshop."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fKelp + clay makes two blend by hand, four in a mixer. Start a kelp farm beside your workshop.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
       ],
       "dependencies": [
         "5494F4CB9AF0890F"
@@ -53,13 +69,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "architects_palette:algal_blend",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1D753529D556D6DB",
-      "title": "Andesite Alloy",
+      "title": "&f&lAndesite Alloy&r",
       "description": [
-        "Andesite + blend makes two alloy by hand, four in a mixer. Original nugget alloy recipes are excluded."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fAndesite + blend makes two alloy by hand, four in a mixer. Original nugget alloy recipes are excluded.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
       ],
       "dependencies": [
         "99B3475C4DF0D941"
@@ -80,13 +107,24 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "create:andesite_alloy",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1B588633702F98A6",
-      "title": "Build the first frame",
+      "title": "&f&lBuild the first frame&r",
       "description": [
-        "Craft 7 alloy + slab + Andesite Casing in AAA / ACA / ASA. Cut separate frames into power, press, mixer and Deployer. This route needs no mechanism."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCraft 7 alloy + slab + Andesite Casing in AAA / ACA / ASA. Cut separate frames into power, press, mixer and Deployer. This route needs no mechanism.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
       ],
       "dependencies": [
         "1D753529D556D6DB"
@@ -107,13 +145,24 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_kinetic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "E04A18BDDDC24298",
-      "title": "Turn the wheel",
+      "title": "&f&lTurn the wheel&r",
       "description": [
-        "Stonecut one frame into three wheels. Connect shafts and gears; supply water."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fStonecut one frame into three wheels. Connect shafts and gears; supply water.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
       ],
       "dependencies": [
         "1B588633702F98A6"
@@ -134,13 +183,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "create:water_wheel",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "2D4C276157B50541",
-      "title": "Assemble the workshop",
+      "title": "&f&lAssemble the workshop&r",
       "description": [
-        "Stonecut a manual frame into the Deployer. Add mixer, press and basin. Keep two deployers for alloys and a third holding the ordinary hammer."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fStonecut a manual frame into the Deployer. Add mixer, press and basin. Keep two deployers for alloys and a third holding the ordinary hammer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
       ],
       "dependencies": [
         "E04A18BDDDC24298"
@@ -161,13 +221,33 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "create:deployer",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "5414921A0D3DEFE9",
-      "title": "Kinetic Mechanism",
+      "title": "&f&lKinetic Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Kinetic Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with any matching wooden slabs.",
+        "&62. &fDeploy Andesite Alloy.",
+        "&63. &fDeploy Andesite Alloy.",
+        "&64. &fFinish under a Deployer holding Iron Hammer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "2D4C276157B50541"
@@ -188,13 +268,29 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "kubejs:tk3_rotation_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "2988658D06CB9D16",
-      "title": "Kinetic Machine",
+      "title": "&f&lKinetic Machine&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Andesite Casing on the belt or depot.",
+        "&62. &fDeploy Kinetic Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "5414921A0D3DEFE9"
@@ -215,13 +311,31 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_kinetic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "95CFF7A3CE498CEB",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "2988658D06CB9D16"
@@ -237,13 +351,24 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "kubejs:tk3_kinetic_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "B0A94968CD02DE8A",
-      "title": "Complete chapter 1",
+      "title": "&6&l◆ COMPLETE CHAPTER 1&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "95CFF7A3CE498CEB"
@@ -274,13 +399,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "7E4C49B0B3CC4236",
-      "title": "Farmer’s Delight",
+      "title": "&f&lFarmer’s Delight&r",
       "description": [
-        "Use cutting and cooking for food. Feed wheat, kelp and bone meal to the industrial crop lines."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUse cutting and cooking for food. Feed wheat, kelp and bone meal to the industrial crop lines.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "5494F4CB9AF0890F"
@@ -301,13 +442,27 @@
       "x": 0.0,
       "y": 8.0,
       "icon": "farmersdelight:stove",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "A4E248CF31726769",
-      "title": "Chipped & Architect’s Palette",
+      "title": "&f&lChipped & Architect’s Palette&r",
       "description": [
-        "Decorative workbenches and palette blocks are building choices. They do not substitute for progression frames."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDecorative workbenches and palette blocks are building choices. They do not substitute for progression frames.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "5494F4CB9AF0890F"
@@ -328,13 +483,27 @@
       "x": 3.0,
       "y": 8.0,
       "icon": "chipped:carpenters_table",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "4D32AEA50E7A61D1",
-      "title": "Collect items early",
+      "title": "&f&lCollect items early&r",
       "description": [
-        "A Hopper Upgrade pulls from and pushes to adjacent inventories. Use the Pickup Upgrade for loose dropped items; check its own range and filters."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fA Hopper Upgrade pulls from and pushes to adjacent inventories. Use the Pickup Upgrade for loose dropped items; check its own range and filters.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "5494F4CB9AF0890F"
@@ -355,7 +524,19 @@
       "x": 6.0,
       "y": 8.0,
       "icon": "sophisticatedstorage:hopper_upgrade",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_1"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b01 ◆ &f&lAndesite · Roots of Industry&r",
+  "subtitle": [
+    "Kinetic Machine and connected production"
   ]
 }

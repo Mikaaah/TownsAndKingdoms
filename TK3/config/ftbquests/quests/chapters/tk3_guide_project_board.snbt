@@ -1,0 +1,318 @@
+{
+  "id": "5909027F9B892503",
+  "group": "56F01DA5C0AF1307",
+  "icon": "kubejs:tk3_quest_questboard",
+  "order_index": 22,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "1438C9A211981242",
+      "title": "&f&lPick a shared project&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThis board is a collection of voluntary settlement goals. Choose projects that suit your team and current tier. The checkmarks record your work; the campaign milestones remain in Mechanical Quests.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fWrite the project owner and required supplies on signs at the construction site.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "4FA5503783592AD8",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "0CA9A1A234F4E043",
+      "title": "&f&lThe town storehouse&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild a central room with named storage, an incoming materials area and a tools shelf. Keep personal equipment apart from community ingredients.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve separate shelves for unfinished mechanisms and reusable boss cores.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "086B377ACD762D84",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "526C465358930220",
+      "title": "&f&lThe public kitchen&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fConnect a crop store to a kitchen, prepare a repeatable meal and create an accessible food reserve for builders and adventurers.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep seeds, animal feed and the next recipe batch in separate buffers.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "4FEF5094437A8C75",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "51102544A98CD812",
+      "title": "&f&lThe workshop road&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fConnect the workshop, homes and farms with a lit road. Leave clearance for carts, contraptions and future transport stations.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild the path before placing machines across the route.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "63160501AD7C914E",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "3C81767A4499AD8E",
+      "title": "&f&lThe guild library&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fCreate a place for mod guides, enchanting supplies and the team’s build notes. Give magic experiments their own work surface.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPut a sign beside each area listing its main ingredients and purpose.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "6E2EFFA6C69D97D0",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "1139DA158CD685AE",
+      "title": "&f&lThe training yard&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPrepare a safe practice area away from villagers and factory equipment. Test weapon moves, spells and mobility before a difficult expedition.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse the selected Dummy mod for controlled equipment comparisons when its target is available.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "7F654DBE03590453",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "7E4312F28D41AA58",
+      "title": "&f&lThe expedition locker&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPrepare shared supplies for a trip: food, spare tools, blocks, a return plan and free loot space. Add a board for destinations and discovered structures.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a recovery kit at home instead of carrying every useful item into the same fight.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "084E8302A7DDFB6E",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "41180601E897DDA7",
+      "title": "&f&lThe kingdom museum&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fDisplay important discoveries, decorative blocks and notes about boss victories. Keep working progression catalysts in secure storage rather than using them as disposable decorations.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fMake a labelled display copy where possible and retain the production original.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1438C9A211981242"
+      ],
+      "tasks": [
+        {
+          "id": "21BDE8762A3D7EEC",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questboard",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_project_board"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lThe Town Project Board&r",
+  "subtitle": [
+    "Optional community builds · use the board as your settlement checklist"
+  ]
+}

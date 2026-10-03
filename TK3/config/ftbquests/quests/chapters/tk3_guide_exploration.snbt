@@ -1,0 +1,356 @@
+{
+  "id": "55A1B7272D5521E3",
+  "group": "6EEE595FC184DBEA",
+  "icon": "kubejs:tk3_quest_job_explorer",
+  "order_index": 38,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "2E1508AF93DE3FC2",
+      "title": "&f&lExplore with a purpose&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fChoose a destination for a useful discovery: crop, building palette, spell, equipment or workshop ingredient. Bring supplies, inventory space and a plan for returning home.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRecord discoveries you cannot use yet; they may become useful in a later tier.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "77DC970039ED60B1",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2A15888BF835CC87",
+      "title": "&f&lA world of building palettes&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBiomes O’ Plenty, Oh The Biomes We’ve Gone, Atmospheric, Environmental, Autumnity and other selected world mods add places and materials to explore. Bring home a palette sample and note its location.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCheck whether a plant can be grown at home before committing to a long repeat trip.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "313A6867631C1D43",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "412EE3BCD151D10E",
+      "title": "&f&lDiscover a new structure&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fIntegrated structures, YUNG’s improvements and the selected dungeon additions create exploration destinations. Approach carefully, identify an exit and distinguish ordinary loot from a boss objective.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fMark the entrance and unfinished rooms on your map.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "73DAA5BBFCE7A72B",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "205A3B8314EB0674",
+      "title": "&f&lLooting as a team&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fLootr is selected for supported personal-loot containers. Read the actual container feedback and server settings rather than assuming every chest in the world behaves the same.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fAgree on rules for ordinary shared chests and expedition supplies.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "5B4CE7D6FFCB8F03",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1341E6D02D148D4C",
+      "title": "&f&lA useful travel stop&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fWaystones and the selected Better Party integrations support travel arrangements under their actual settings. Establish a safe stop and check activation, cost and party access before relying on it as the only return route.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fGive destinations clear names that the whole team can recognize.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "221E51726E4B6D70",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "6C0DD39F1C878FBE",
+      "title": "&f&lThe Brass expedition&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fNether entry begins after Chapter II. Find the ingredients and Blaze access required by the Brass workshop, then record a safe return path. BetterNether and the selected Nether world changes provide further destinations.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCapture a Blaze in the appropriate burner when preparing heated brass production.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2",
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "1F9E44C1EFE728AA",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 3+"
+    },
+    {
+      "id": "049F7F0955E03448",
+      "title": "&f&lDiscover an Alex’s Cave&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fAlex’s Caves and its selected spell integration offer biome-specific discoveries. Follow their actual guide and discovery mechanics, identify the biome’s hazards and return with one useful finding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fStock supplies for the conditions of the cave you are visiting.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "352E7E4CFC1D10AC",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "3A390C76D74D0B03",
+      "title": "&f&lA bestiary entry&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fAlex’s Mobs, Mowzie’s Mobs, Ice & Fire and the selected encounter mods bring creatures with different behaviors. Observe one new creature, read available guidance and record how to approach or avoid it.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fAn unfamiliar creature is not automatically safe because it looks peaceful.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "4197E05D37E96FE1",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "6FAED59CCEF3B9ED",
+      "title": "&f&lBring the discovery home&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fSort an expedition’s haul into food, building materials, gear, magic and progression supplies. Record where rare materials came from so the next trip has a clear purpose.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLeave room in the incoming-materials area before the team returns with full backpacks.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2E1508AF93DE3FC2"
+      ],
+      "tasks": [
+        {
+          "id": "74E4CC4C289BAE50",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_exploration"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lThe Explorer’s Journal&r",
+  "subtitle": [
+    "Worlds, structures, travel and a safe return"
+  ]
+}

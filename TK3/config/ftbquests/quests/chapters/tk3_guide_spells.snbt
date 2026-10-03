@@ -1,0 +1,395 @@
+{
+  "id": "35159DAF2C158BF3",
+  "group": "7F5849963E10B878",
+  "icon": "kubejs:tk3_quest_scroll",
+  "order_index": 36,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "1734C8B9EC584093",
+      "title": "&f&lBuild a useful spell loadout&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fIron’s Spells ’n Spellbooks uses its own spells, schools, mana and equipment. Start with a damage option and a utility or recovery option, then compare their costs and cooldowns.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fYour spell’s actual school matters more than the visual color of its effect.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "5807546990EAD247",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "67564F0CEE5FF10C",
+      "title": "&f&lLearn the scroll and book rules&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse found or crafted scrolls and the supported spellbook stations according to their native requirements. Inspect rarity, level, slots and prerequisites before committing a valuable scroll.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a record of the spells you already use so you do not replace a useful utility spell by accident.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "7251DA65A6D73924",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "7A1EDD7FEF5AE53D",
+      "title": "&f&lMana, casting time and cooldown&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fMana capacity, regeneration, casting time and cooldown are different limits. A bigger mana pool does not guarantee faster recovery between fights. Read your gear and skill node effects together.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest several casts in succession and watch what becomes the bottleneck.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "0F81544224040E0C",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "27088544AB5A7B7E",
+      "title": "&f&lSpecialize by school&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe current classes support Holy, Blood, Ender, Eldritch, Fire, Ice and Lightning themes in different ways. Read a spell’s tooltip to confirm that it belongs to the school you are building around.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe relevant attribute must exist in the installed mod version for a school-specific bonus to apply.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "151DFECCE6931DCD",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "58E7B91E9FC3F988",
+      "title": "&f&lBrewing and spell supplies&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe selected Iron’s KubeJS bridge manages supported cauldron recipes while native spell systems remain. Inspect the exact recipe and fluid requirement in JEI before building a potion or reagent supply.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep brewing inputs and finished bottles in separate storage.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "32917D5C2A8F0874",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "6C6FF048DC8F1A8A",
+      "title": "&f&lThe Jewelcrafting Guide&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain and read the Jewelcrafting Guide.",
+        "",
+        "&fIron’s Gems ’n Jewelry keeps its native jewel and component systems. Chapter II supplies the station and guide. Read the actual jewel and component effects before assembling equipment for your class.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse the station recipe and guide together; a jewel’s effect depends on the resulting equipment.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "75385804C9A0D8A5",
+          "type": "item",
+          "item": {
+            "id": "irons_jewelry:jewelcrafting_guide",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "irons_jewelry:jewelcrafting_guide",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "subtitle": "&7ITEM GOAL · TIER 2+"
+    },
+    {
+      "id": "5077E82C56904527",
+      "title": "&f&lSpells found through adventure&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fAlex’s Caves: Spellbooks, Cataclysm: Spellbooks and Twilight Forest: Spellbooks connect magic to their corresponding adventures. Inspect the installed addon’s JEI entries and discovery rules, then choose one spell to pursue.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLet your current workshop access and combat readiness guide the destination.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "0FDE42E54708C7D8",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "1ECC89779AD08841",
+      "title": "&f&lExpanded spell schools and effects&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fGeomancy Plus, Archaion: Echoes of the Fallen and Echoing Magic: Esoteric Spells of the Fallen are selected spell additions. Read each spell’s real school, acquisition route and effect. The questbook does not invent an unlock item for these native spells.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCompare new spells in the training yard before relying on them during a boss fight.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "204CEC55027E84D4",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "6D2BA0F7EF423407",
+      "title": "&f&lMatch spellcraft to a class&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fMage favors sustained or elemental casting, Cleric favors Holy and recovery themes, and Occultist favors Blood, summons or void schools. Rogue and Warrior hybrid paths can support specific effects without making every spell a melee bonus.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRead the class and subclass root penalties before choosing your final equipment.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "1CA1835A0B73BCC0",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "516923EFBE3E1099",
+      "title": "&f&lA complete spellcraft trial&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fEquip your chosen book and accessories, test a damage spell and a utility or recovery spell, then finish an ordinary expedition without exhausting your supply plan.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBring normal food and equipment too; spells are part of the loadout.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1734C8B9EC584093"
+      ],
+      "tasks": [
+        {
+          "id": "3E82499543D7BCC1",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_spells"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lIron’s Spells · The Spellcraft Hall&r",
+  "subtitle": [
+    "Schools, mana, scrolls, jewelry and selected spell addons"
+  ]
+}

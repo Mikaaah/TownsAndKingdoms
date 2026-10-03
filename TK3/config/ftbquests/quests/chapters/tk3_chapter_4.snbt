@@ -1,18 +1,21 @@
 {
   "id": "37CE91EE749CE647",
-  "filename": "tk3_chapter_4",
   "group": "7427C3F538DF9198",
-  "title": "Inductive · The Connected Workshop",
-  "subtitle": "Inductive Machine and connected production",
   "icon": "kubejs:tk3_network_chassis",
   "order_index": 4,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "1BF8FD74975C2CD0",
-      "title": "Workshop plan · Inductive Machine",
+      "title": "&f&lWorkshop plan · Inductive Machine&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment."
       ],
       "dependencies": [
         "B81077B20C8371D3"
@@ -21,20 +24,33 @@
         {
           "id": "CBE8FEA80197597E",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_network_chassis",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "70537923DAFF07C8",
-      "title": "Bootstrap steel",
+      "title": "&f&lBootstrap steel&r",
       "description": [
-        "Heated mixing uses two iron ingots and coal for two steel. Five steel, two osmium and one Precision Machine produce Steel Casing; no FE or boss core is required."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fHeated mixing uses two iron ingots and coal for two steel. Five steel, two osmium and one Precision Machine produce Steel Casing; no FE or boss core is required.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment."
       ],
       "dependencies": [
         "1BF8FD74975C2CD0"
@@ -55,13 +71,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "mekanism:ingot_steel",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "C7F128596F0C07EE",
-      "title": "First powered processing",
+      "title": "&f&lFirst powered processing&r",
       "description": [
-        "Deploy a Precision Mechanism onto Steel Casing. Add Heat Generator and basic universal cables. Native infusing supplies circuits and alloys."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy a Precision Mechanism onto Steel Casing. Add Heat Generator and basic universal cables. Native infusing supplies circuits and alloys.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment."
       ],
       "dependencies": [
         "70537923DAFF07C8"
@@ -82,13 +109,24 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "mekanism:metallurgic_infuser",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "D3B31F5815AD5CE1",
-      "title": "Charge certus",
+      "title": "&f&lCharge certus&r",
       "description": [
-        "Craft from Steel Casing, certus and Crafts & Additions Capacitor. Use FE to charge certus; native water conversion produces fluix crystals."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCraft from Steel Casing, certus and Crafts & Additions Capacitor. Use FE to charge certus; native water conversion produces fluix crystals.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment."
       ],
       "dependencies": [
         "C7F128596F0C07EE"
@@ -109,13 +147,24 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "ae2:charger",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "FA4B7E64CE1F51F9",
-      "title": "Print the processors",
+      "title": "&f&lPrint the processors&r",
       "description": [
-        "Steel Casing + Electric Motor + gold. All four press recipes are available from this chapter; use the normal Inscriber routes."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fSteel Casing + Electric Motor + gold. All four press recipes are available from this chapter; use the normal Inscriber routes.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment."
       ],
       "dependencies": [
         "D3B31F5815AD5CE1"
@@ -136,13 +185,26 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "ae2:inscriber",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "F95513CFFB01B5ED",
-      "title": "Build a parallel arcane workshop",
+      "title": "&f&lBuild a parallel arcane workshop&r",
       "description": [
-        "Precision Machine bootstraps the apparatus. Bootstrap the Agronomic Sourcelink from wheat, Source Gems, a Source Jar and a Precision Machine. Make Arcane Casing and the sequenced Arcane Mechanism, then deploy the mechanism. Magic supports the factory alongside FE."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fPrecision Machine bootstraps the apparatus. Bootstrap the Agronomic Sourcelink from wheat, Source Gems, a Source Jar and a Precision Machine. Make Arcane Casing and the sequenced Arcane Mechanism, then deploy the mechanism. Magic supports the factory alongside FE.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "FA4B7E64CE1F51F9"
@@ -163,13 +225,34 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "kubejs:tk3_arcane_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "E4C6A33E5D3C2A71",
-      "title": "Inductive Mechanism",
+      "title": "&f&lInductive Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Inductive Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Precision Mechanism.",
+        "&62. &fDeploy Capacitor.",
+        "&63. &fDeploy Fluix Crystal.",
+        "&64. &fFinish under a Deployer holding Iron Hammer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "FA4B7E64CE1F51F9"
@@ -190,13 +273,29 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "kubejs:tk3_network_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "0418E87054862F63",
-      "title": "Inductive Machine",
+      "title": "&f&lInductive Machine&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Steel Casing on the belt or depot.",
+        "&62. &fDeploy Inductive Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "E4C6A33E5D3C2A71"
@@ -217,13 +316,24 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_network_chassis",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1A2D3D82C21F0B1A",
-      "title": "Wire a small ME network",
+      "title": "&f&lWire a small ME network&r",
       "description": [
-        "Inductive Machine supplies the network devices. Begin with a terminal, drive, 1k cells and energy acceptor before expanding channels."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fInductive Machine supplies the network devices. Begin with a terminal, drive, 1k cells and energy acceptor before expanding channels.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment."
       ],
       "dependencies": [
         "0418E87054862F63"
@@ -244,13 +354,31 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "ae2:drive",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "8ACDBEC1188BD4DF",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "0418E87054862F63",
@@ -267,13 +395,24 @@
       "x": 12.0,
       "y": 4.0,
       "icon": "kubejs:tk3_network_chassis",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1CD504854E287D44",
-      "title": "Complete chapter 4",
+      "title": "&6&l◆ COMPLETE CHAPTER 4&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "8ACDBEC1188BD4DF"
@@ -304,13 +443,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "41B43091FC8DB955",
-      "title": "Ars automation",
+      "title": "&f&lArs automation&r",
       "description": [
-        "Automate farms with Ars, and route output into Create or ME. Native Source generation is available before the custom arcane frame."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fAutomate farms with Ars, and route output into Create or ME. Native Source generation is available before the custom arcane frame.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "1BF8FD74975C2CD0"
@@ -331,13 +486,27 @@
       "x": 3.0,
       "y": 8.0,
       "icon": "ars_nouveau:whirlisprig_charm",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "177D081EF98F0391",
-      "title": "Ars Creo",
+      "title": "&f&lArs Creo&r",
       "description": [
-        "Use the real Starbuncle Wheel to support a contraption; feed it through Ars’ native rules."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fUse the real Starbuncle Wheel to support a contraption; feed it through Ars’ native rules.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "1BF8FD74975C2CD0"
@@ -358,13 +527,27 @@
       "x": 6.0,
       "y": 8.0,
       "icon": "ars_creo:starbuncle_wheel",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "331F889F687D88E5",
-      "title": "Powered tools",
+      "title": "&f&lPowered tools&r",
       "description": [
-        "Mekanism Tools supplies normal equipment and the later chemical assembly tool."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fMekanism Tools supplies normal equipment and the later chemical assembly tool.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap with Precision Machines and heated steel before requesting Inductive or Arcane equipment.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "1BF8FD74975C2CD0"
@@ -385,7 +568,19 @@
       "x": 9.0,
       "y": 8.0,
       "icon": "mekanismtools:steel_paxel",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_4"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b04 ◆ &f&lInductive · The Connected Workshop&r",
+  "subtitle": [
+    "Inductive Machine and connected production"
   ]
 }

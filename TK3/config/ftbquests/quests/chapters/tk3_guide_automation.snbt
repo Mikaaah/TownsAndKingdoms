@@ -1,0 +1,612 @@
+{
+  "id": "195A7CF1722F738B",
+  "group": "7427C3F538DF9198",
+  "icon": "kubejs:tk3_quest_hammer",
+  "order_index": 32,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "361CFFD75A6AFDD5",
+      "title": "&f&lA factory starts with the flow&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fPlan every line from raw input to useful output. Give each step its machine, power, ingredient buffer and collection point. Chapters I–X provide the recipes; this page helps make those recipes run continuously.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest one batch before connecting a large farm or bulk storage buffer.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "5708A0649E1BC0E9",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "5C18E21ED6A34AC6",
+      "title": "&f&lRotation, speed and stress&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fCreate machinery needs a connected rotating network. Speed changes can also change stress requirements. Inspect the machine and network feedback before adding more equipment or gearing up.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fWhen a line stalls, check the output, rotation and stress status before rebuilding the recipe.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "462465B2F7C20959",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1F33C1297940DB17",
+      "title": "&f&lBuild the assembly in order&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fT&K3 mechanisms use one-loop sequenced assembly. Put the base onto a belt or depot and carry it through the operations in the recipe’s exact order. The Kinetic Mechanism starts from a wooden slab, receives Andesite Alloy twice and finishes under an iron hammer.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock each operation from a labelled buffer.",
+        "&62. &fPlace the listed finishing tool in the last Deployer.",
+        "&63. &fRun one complete item and inspect the finished output.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA wrong ingredient or skipped operation leaves an incomplete item instead of a finished mechanism.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "070E4C42A48910BB",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "3FA4B67FEEA86782",
+      "title": "&f&lTools need a supply plan&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fOrdinary finishing tools wear during assembly. Chapter rewards replace that maintenance with a named unbreakable version per player. Until then, keep an accessible replacement buffer and inspect the final Deployer when production stops.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep combat tools out of the automatic ingredient feed.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "4E2B773CCFBB8A19",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7EBC9C739384C57D",
+      "title": "&f&lDeploy the mechanism onto its casing&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fA machine frame is assembled by deploying its mechanism onto the matching casing. Stonecutting then turns a frame into a selected machine. It consumes that frame, so a list of stonecut outputs is a menu of separate choices.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fProduce the correct casing.",
+        "&62. &fDeploy its matching mechanism.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOnly the first Kinetic Machine has the expensive raw-material startup shortcut.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "5BE97F6179188A46",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "308D66077A414141",
+      "title": "&f&lRenewable stone and elements&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild a water/lava cobblestone or stone generator. Place the selector directly below the newly generated block and its correct frame one block below the selector. The custom generator changes the new stone into the selected geological block.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fChoose a row from the wiki’s generator table.",
+        "&62. &fPlace selector and frame in the two blocks below the generation position.",
+        "&63. &fRun the generator and collect its output.",
+        "&64. &fMill the early material or crush it once Chapter III is available.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA missing selector or wrong frame gives the ordinary generator result. Obsidian remains obsidian.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "226EFEF23DA235A3",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_ponder_stone_generation",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "181EC0E543D426FD",
+      "title": "&f&lGive each stone a destination&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fAndesite supplies clay, Diorite quartz, Granite lapis and Limestone bone meal. Veridium supplies copper and Crimsite iron. In Brass, Scoria supplies redstone, Scorchia coal, Asurine zinc and Ochrum gold. Milling and crushing have their own listed yields.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep the generator’s raw output apart from processed dusts and metals. Crushing Wheels start in Chapter III.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "6031AFC1E3F35873",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "4D9BC82EAF764CBA",
+      "title": "&f&lA renewable wood line&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fA Create tree farm needs harvesting, sapling supply, replanting and output transfer. Plan each job before scaling the contraption. Supported wood processing cuts logs into stripped logs, then six planks.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fTest the selected tree type on a small area.",
+        "&62. &fAdd harvesting and replanting.",
+        "&63. &fTransfer the harvest into a wood buffer.",
+        "&64. &fSend only the needed logs into processing.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a protected sapling reserve so downstream crafting cannot eat the next planting batch.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "0B17B84B5AEF0D98",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "283B33242F7C7681",
+      "title": "&f&lWheat and kelp become slime&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe authored mixer route uses one wheat, one kelp and 250 mB water to produce two slimeballs. Slime and dried kelp then feed Rubber Compound, making the early sealing line renewable.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPump water into a dedicated buffer and keep surplus wheat available for food.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "586264CFFBD0A0E7",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 2+"
+    },
+    {
+      "id": "6631F964A35480EC",
+      "title": "&f&lFans and processing conditions&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fWashing, haunting and other fan processes depend on the correct fan setup and recipe. Use JEI and Ponder to check the required medium and placement. Do not assume every crushed item has a washing result.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFilter the output and test one item before attaching the entire ore store.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "53428DF7FCC11501",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "35991A6495F991A9",
+      "title": "&f&lSlice & Dice in the kitchen&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe Slicer automates supported Farmer’s Delight cutting recipes with the appropriate held knife. The Sprinkler belongs to the field-and-fluid tier. Inspect the actual supported cutting recipe and water arrangement before scaling.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPut a knife replacement plan next to the kitchen ingredients.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "767865819D34B803",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 2+"
+    },
+    {
+      "id": "5DF56A263A761E2A",
+      "title": "&f&lStorage on a contraption&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fThe selected Sophisticated integrations connect storage and backpacks to Create systems. Test the supported inventory on a small contraption and confirm which upgrades and transfers work there.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fVerify that cargo leaves the moving inventory before extending the farm.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "07D8B4BC1E7FA2FF",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "773322A64003CBA0",
+      "title": "&f&lLiquid experience and enchantments&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fEnchantment Industry gives experience-processing equipment and its native enchanting rules. Use the Chapter V routes, keep XP apart from water and other fluids, and check the selected recipe for the desired operation.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA liquid XP supply does not make every enchantment free or remove native requirements.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "7A88332BF738CCBC",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 5+"
+    },
+    {
+      "id": "5AB9B90A9F1BA41F",
+      "title": "&f&lBuffers before clever logistics&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse small input buffers, exact filters and a visible overflow plan. Brass-tier logistics can supply requested ingredients, but they still need available stock and working transfers.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA buffer near the machine makes it easier to see whether the failure is production or transport.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5",
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "44C85A1893B004D8",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 15.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 3+"
+    },
+    {
+      "id": "381B4AA20F1A6756",
+      "title": "&f&lRun a useful line unattended&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChoose one renewable workshop material. Connect resource production, processing and storage, then let several complete batches run without hand-feeding ingredients.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fChoose an alloy, mechanism, crop or wood line.",
+        "&62. &fAdd filters and input reserves.",
+        "&63. &fTest repeated batches and output collection.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fInspect the line again when the output buffer is nearly full.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "361CFFD75A6AFDD5"
+      ],
+      "tasks": [
+        {
+          "id": "29A57BB898F6D129",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 15.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_automation"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lAutomation Workshop&r",
+  "subtitle": [
+    "Materials → mechanism → casing → machine · build reliable supply lines"
+  ]
+}

@@ -1,0 +1,1117 @@
+[
+  {
+    "name": "Sophisticated Storage (by P3pp3rF1y)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage",
+    "slug": "sophisticated-storage"
+  },
+  {
+    "name": "AllTheLeaks (Memory Leak Fix) (by Uncandango)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/alltheleaks",
+    "slug": "alltheleaks"
+  },
+  {
+    "name": "WorldWeaver: New Dawn (by Raijin2312)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/worldweaver-neoforge",
+    "slug": "worldweaver-neoforge"
+  },
+  {
+    "name": "Reliquified Artifacts (by SSKirillSS)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/reliquified-artifacts",
+    "slug": "reliquified-artifacts"
+  },
+  {
+    "name": "Create: Enchantment Industry (by DragonsPlus)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry",
+    "slug": "create-enchantment-industry"
+  },
+  {
+    "name": "Epic Fight (by maninthe_home)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/epic-fight-mod",
+    "slug": "epic-fight-mod"
+  },
+  {
+    "name": "ShatterLib | OctoLib (by SSKirillSS)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/shatterbyte-lib",
+    "slug": "shatterbyte-lib"
+  },
+  {
+    "name": "Simply Swords [Fabric & Forge] (by sweenuss)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/simply-swords",
+    "slug": "simply-swords"
+  },
+  {
+    "name": "LootJS: KubeJS Addon (by Lytho)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lootjs",
+    "slug": "lootjs"
+  },
+  {
+    "name": "ImmediatelyFast (by RaphiMC)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/immediatelyfast",
+    "slug": "immediatelyfast"
+  },
+  {
+    "name": "FerriteCore ((Neo)Forge) (by malte0811)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ferritecore",
+    "slug": "ferritecore"
+  },
+  {
+    "name": "AStages Curios (by _Kessy_)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/astages-curios",
+    "slug": "astages-curios"
+  },
+  {
+    "name": "GuideME (by shartte)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/guideme",
+    "slug": "guideme"
+  },
+  {
+    "name": "Blueprint (by TeamAbnormals)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/blueprint",
+    "slug": "blueprint"
+  },
+  {
+    "name": "YUNG's Better Nether Fortresses (NeoForge) [1.20.4 - 1.21.1 ONLY] (by YUNGNICKYOUNG)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-nether-fortresses-neoforge",
+    "slug": "yungs-better-nether-fortresses-neoforge"
+  },
+  {
+    "name": "KubeJS Ars Nouveau (by BobVarioa)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-ars-nouveau",
+    "slug": "kubejs-ars-nouveau"
+  },
+  {
+    "name": "WunderLib: New Dawn (by Raijin2312)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/wunderlib-neoforge",
+    "slug": "wunderlib-neoforge"
+  },
+  {
+    "name": "Ars Creo (by baileyholl2)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ars-creo",
+    "slug": "ars-creo"
+  },
+  {
+    "name": "Athena (by terrariumearth)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/athena",
+    "slug": "athena"
+  },
+  {
+    "name": "Reliquified Ars Nouveau (by SSKirillSS)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/reliquified-ars-nouveau",
+    "slug": "reliquified-ars-nouveau"
+  },
+  {
+    "name": "Create Slice & Dice (by possible_triangle)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/slice-and-dice",
+    "slug": "slice-and-dice"
+  },
+  {
+    "name": "Better Party X Waystones (by MrStilu2k6)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-party-x-waystones",
+    "slug": "better-party-x-waystones"
+  },
+  {
+    "name": "Architect's Palette (by Jsburg)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/architects-palette",
+    "slug": "architects-palette"
+  },
+  {
+    "name": "Better Party X FTB Teams (by MrStilu2k6)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-party-x-ftb-teams",
+    "slug": "better-party-x-ftb-teams"
+  },
+  {
+    "name": "KubeJS Tweaks (by Uncandango)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-tweaks",
+    "slug": "kubejs-tweaks"
+  },
+  {
+    "name": "TownTalk (by Raycoms)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/towntalk",
+    "slug": "towntalk"
+  },
+  {
+    "name": "Alex's Caves (Unofficial Port) (by Raguto)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/alexs-caves-unofficial-port",
+    "slug": "alexs-caves-unofficial-port"
+  },
+  {
+    "name": "Apotheosis (by Shadows_of_Fire)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apotheosis",
+    "slug": "apotheosis"
+  },
+  {
+    "name": "Balm (by BlayTheNinth)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/balm",
+    "slug": "balm"
+  },
+  {
+    "name": "ParCool! ~ Minecraft Parkour ~ (by alRex_U)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/parcool",
+    "slug": "parcool"
+  },
+  {
+    "name": "Apothic Enchanting (by Shadows_of_Fire)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-enchanting",
+    "slug": "apothic-enchanting"
+  },
+  {
+    "name": "YUNG's API (NeoForge) [1.20.4-1.21.1 ONLY] (by YUNGNICKYOUNG)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/yungs-api-neoforge",
+    "slug": "yungs-api-neoforge"
+  },
+  {
+    "name": "AppleSkin (by squeek502)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/appleskin",
+    "slug": "appleskin"
+  },
+  {
+    "name": "Sable (by ryanhcode)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sable",
+    "slug": "sable"
+  },
+  {
+    "name": "BetterNether: New Dawn (by Raijin2312)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/betternether-neoforge",
+    "slug": "betternether-neoforge"
+  },
+  {
+    "name": "Spawn (by Ninnih)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/spawn-mod",
+    "slug": "spawn-mod"
+  },
+  {
+    "name": "GTBC's Geomancy Plus - Iron's Spells Addon (by GameTechBC)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/gtbcs-geomancy-plus",
+    "slug": "gtbcs-geomancy-plus"
+  },
+  {
+    "name": "KubeJS Additions (by ILIKEPIEFOO2)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-additions",
+    "slug": "kubejs-additions"
+  },
+  {
+    "name": "Sophisticated Storage Create Integration (by P3pp3rF1y)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage-create-integration",
+    "slug": "sophisticated-storage-create-integration"
+  },
+  {
+    "name": "Ars Nouveau (by baileyholl2)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ars-nouveau",
+    "slug": "ars-nouveau"
+  },
+  {
+    "name": "Apotheosis x Iron's Spellbooks Compat (by MuonR)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apotheosis-x-irons-spellbooks-compat",
+    "slug": "apotheosis-x-irons-spellbooks-compat"
+  },
+  {
+    "name": "Just Another Witchery Remake (by MrSterner_)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/just-another-witchery-remake",
+    "slug": "just-another-witchery-remake"
+  },
+  {
+    "name": "FancyMenu (by Keksuccino)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fancymenu",
+    "slug": "fancymenu"
+  },
+  {
+    "name": "Biomes O' Plenty (by Forstride)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty",
+    "slug": "biomes-o-plenty"
+  },
+  {
+    "name": "[Let's Do] Candlelight - Farm&Charm Compat (by satisfy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-candlelight-farm-charm-compat",
+    "slug": "lets-do-candlelight-farm-charm-compat"
+  },
+  {
+    "name": "Create Crafts & Additions (by MRHminer)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/createaddition",
+    "slug": "createaddition"
+  },
+  {
+    "name": "FastBoot (by dnlayu)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fastboot",
+    "slug": "fastboot"
+  },
+  {
+    "name": "BCLib: New Dawn (by Raijin2312)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/bclib-neoforge",
+    "slug": "bclib-neoforge"
+  },
+  {
+    "name": "Ice and Fire X Epic Fight (by tmfritz_)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ice-and-fire-x-epic-fight",
+    "slug": "ice-and-fire-x-epic-fight"
+  },
+  {
+    "name": "Create: MineColonies Link (by PickleBurg)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-minecolonies",
+    "slug": "create-minecolonies"
+  },
+  {
+    "name": "KubeJS Iron's Spells (by sentwayfarer)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-irons-spells",
+    "slug": "kubejs-irons-spells"
+  },
+  {
+    "name": "KubeJS Curios (by zhaiji)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-curios",
+    "slug": "kubejs-curios"
+  },
+  {
+    "name": "FTB Ultimine (NeoForge) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge",
+    "slug": "ftb-ultimine-forge"
+  },
+  {
+    "name": "Particular ✨ Reforged (by Project8gbDeRam)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/particular-reforged",
+    "slug": "particular-reforged"
+  },
+  {
+    "name": "Structurize (by Raycoms)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/structurize",
+    "slug": "structurize"
+  },
+  {
+    "name": "Epic Fight x Iron's Spells: Enhanced Animations (by YukamiNeeSan)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/epic-fight-x-irons-spells-enhanced-animations",
+    "slug": "epic-fight-x-irons-spells-enhanced-animations"
+  },
+  {
+    "name": "End Remastered [NeoForge/Fabric] (by jack_bagel)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/endremastered",
+    "slug": "endremastered"
+  },
+  {
+    "name": "Neruina - Ticking Entity Fixer (by bawnorton)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/neruina",
+    "slug": "neruina"
+  },
+  {
+    "name": "Integrated API (by CraisinLord)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-api",
+    "slug": "integrated-api"
+  },
+  {
+    "name": "Apothic Spawners (by Shadows_of_Fire)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-spawners",
+    "slug": "apothic-spawners"
+  },
+  {
+    "name": "Resourceful Lib (by ThatGravyBoat)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/resourceful-lib",
+    "slug": "resourceful-lib"
+  },
+  {
+    "name": "Integrated Simply Swords (by CraisinLord)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-simply-swords",
+    "slug": "integrated-simply-swords"
+  },
+  {
+    "name": "BlockUI (by Raycoms)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/blockui",
+    "slug": "blockui"
+  },
+  {
+    "name": "Ponder for KubeJS (by Lytho)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ponder",
+    "slug": "ponder"
+  },
+  {
+    "name": "Domum Ornamentum (by OrionOnline)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/domum-ornamentum",
+    "slug": "domum-ornamentum"
+  },
+  {
+    "name": "FTB Teams (NeoForge) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge",
+    "slug": "ftb-teams-forge"
+  },
+  {
+    "name": "Kotlin for Forge (by thedarkcolour)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge",
+    "slug": "kotlin-for-forge"
+  },
+  {
+    "name": "Cosmetic Armor Reworked (by LainMI)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cosmetic-armor-reworked",
+    "slug": "cosmetic-armor-reworked"
+  },
+  {
+    "name": "TerraBlender (NeoForge) (by TheAdubbz)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/terrablender-neoforge",
+    "slug": "terrablender-neoforge"
+  },
+  {
+    "name": "Ancient Remnants: Monoliths (by Obscuria)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ancient-remnants",
+    "slug": "ancient-remnants"
+  },
+  {
+    "name": "Artifarts (by abensur)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/artifarts",
+    "slug": "artifarts"
+  },
+  {
+    "name": "Cupboard (by someaddon)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cupboard",
+    "slug": "cupboard"
+  },
+  {
+    "name": "Iron's Spells 'n Spellbooks (by Iron431)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks",
+    "slug": "irons-spells-n-spellbooks"
+  },
+  {
+    "name": "Passive Skill Tree NeoForge (by adesanya)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/passive-skill-tree-neoforge",
+    "slug": "passive-skill-tree-neoforge"
+  },
+  {
+    "name": "Alex's Caves: Spellbooks (by CyberRat2)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/alexs-caves-spellbooks",
+    "slug": "alexs-caves-spellbooks"
+  },
+  {
+    "name": "[Let's Do] BloomingNature (by satisfy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-bloomingnature",
+    "slug": "lets-do-bloomingnature"
+  },
+  {
+    "name": "Sophisticated Backpacks (by P3pp3rF1y)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks",
+    "slug": "sophisticated-backpacks"
+  },
+  {
+    "name": "Placebo (by Shadows_of_Fire)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/placebo",
+    "slug": "placebo"
+  },
+  {
+    "name": "Citadel (Unofficial Port) (by Raguto)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/citadel-1-21-1-port",
+    "slug": "citadel-1-21-1-port"
+  },
+  {
+    "name": "Atlas API (by Iron431)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/atlas-api",
+    "slug": "atlas-api"
+  },
+  {
+    "name": "Mouse Tweaks (by YaLTeR)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks",
+    "slug": "mouse-tweaks"
+  },
+  {
+    "name": "Just Enough Items (JEI) (by mezz)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jei",
+    "slug": "jei"
+  },
+  {
+    "name": "KubeJS Create (by Lat)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-create",
+    "slug": "kubejs-create"
+  },
+  {
+    "name": "Create (by simibubi)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create",
+    "slug": "create"
+  },
+  {
+    "name": "Create: Ars Nouveau Compat (by Blizzor)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-ars-nouveau-compat",
+    "slug": "create-ars-nouveau-compat"
+  },
+  {
+    "name": "Apothic Category Compat (by Nightwielder23)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-category-compat",
+    "slug": "apothic-category-compat"
+  },
+  {
+    "name": "FTB Ranks (NeoForge) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge",
+    "slug": "ftb-ranks-forge"
+  },
+  {
+    "name": "playerAnimator (by KosmX)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/playeranimator",
+    "slug": "playeranimator"
+  },
+  {
+    "name": "Create: Dragons Plus (by DragonsPlus)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-dragons-plus",
+    "slug": "create-dragons-plus"
+  },
+  {
+    "name": "Iron's Spells x Aeronautics Compat (by Luchho)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irons-spells-n-spellbooks-aeronautics",
+    "slug": "irons-spells-n-spellbooks-aeronautics"
+  },
+  {
+    "name": "Fzzy Config (by fzzyhmstrs)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fzzy-config",
+    "slug": "fzzy-config"
+  },
+  {
+    "name": "[Let's Do] Bakery - Farm&Charm Compat (by satisfy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-bakery-farm-charm-compat",
+    "slug": "lets-do-bakery-farm-charm-compat"
+  },
+  {
+    "name": "Integrated Cataclysm (by CraisinLord)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-cataclysm",
+    "slug": "integrated-cataclysm"
+  },
+  {
+    "name": "Apothic Compats (by ianm1647)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-compats",
+    "slug": "apothic-compats"
+  },
+  {
+    "name": "Recipe Linkage (by amicbeam)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/recipe-linkage",
+    "slug": "recipe-linkage"
+  },
+  {
+    "name": "Environmental (by TeamAbnormals)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/environmental",
+    "slug": "environmental"
+  },
+  {
+    "name": "KubeJS (by Lat)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs",
+    "slug": "kubejs"
+  },
+  {
+    "name": "AAA Particles (by chloe_koopa)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/aaa-particles",
+    "slug": "aaa-particles"
+  },
+  {
+    "name": "ProbeJS (by Amygdaloideae)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/probejs",
+    "slug": "probejs"
+  },
+  {
+    "name": "Bosses'Rise - Epic Souls like boss fights (by blockfactorystudio)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/bossesrise",
+    "slug": "bossesrise"
+  },
+  {
+    "name": "Create Aeronautics (by ryanhcode)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-aeronautics",
+    "slug": "create-aeronautics"
+  },
+  {
+    "name": "Epic Fight - Invincible Lib (by P1nero)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/epic-fight-invincible",
+    "slug": "epic-fight-invincible"
+  },
+  {
+    "name": "Iron's Lib (by Iron431)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irons-lib",
+    "slug": "irons-lib"
+  },
+  {
+    "name": "Searchables (by Jaredlll08)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/searchables",
+    "slug": "searchables"
+  },
+  {
+    "name": "Waystones (by BlayTheNinth)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/waystones",
+    "slug": "waystones"
+  },
+  {
+    "name": "spark (by Iucko)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/spark",
+    "slug": "spark"
+  },
+  {
+    "name": "FreeTerraForged (by psiber)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/freeterraforged",
+    "slug": "freeterraforged"
+  },
+  {
+    "name": "Better Advanced Tooltips (by Lat)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-advanced-tooltips",
+    "slug": "better-advanced-tooltips"
+  },
+  {
+    "name": "Quark (by Vazkii)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/quark",
+    "slug": "quark"
+  },
+  {
+    "name": "Create Heat JS (by XiaoHuNao)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-heat-js",
+    "slug": "create-heat-js"
+  },
+  {
+    "name": "[Let's Do] Brewery - Farm&Charm Compat (by satisfy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-brewery-farm-charm-compat",
+    "slug": "lets-do-brewery-farm-charm-compat"
+  },
+  {
+    "name": "Mekanism Tools (by bradyaidanc)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mekanism-tools",
+    "slug": "mekanism-tools"
+  },
+  {
+    "name": "Reese's Sodium Options (by FlashyReese)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/reeses-sodium-options",
+    "slug": "reeses-sodium-options"
+  },
+  {
+    "name": "ModernFix (by embeddedt)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/modernfix",
+    "slug": "modernfix"
+  },
+  {
+    "name": "Atmospheric (by TeamAbnormals)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/atmospheric",
+    "slug": "atmospheric"
+  },
+  {
+    "name": "[Let's Do] Farm & Charm (by satisfy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lets-do-farm-charm",
+    "slug": "lets-do-farm-charm"
+  },
+  {
+    "name": "FTB Chunks (NeoForge) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-chunks-forge",
+    "slug": "ftb-chunks-forge"
+  },
+  {
+    "name": "Simply Tooltips (by sweenuss)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/simply-tooltips",
+    "slug": "simply-tooltips"
+  },
+  {
+    "name": "Biolith (by Prospector)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/biolith",
+    "slug": "biolith"
+  },
+  {
+    "name": "Alex's Mobs (Unofficial Port) (by Raguto)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/alexs-mobs-1-21-1-port",
+    "slug": "alexs-mobs-1-21-1-port"
+  },
+  {
+    "name": "GeckoLib (by Gecko)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/geckolib",
+    "slug": "geckolib"
+  },
+  {
+    "name": "Controlling (by Jaredlll08)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/controlling",
+    "slug": "controlling"
+  },
+  {
+    "name": "GTBC's SpellLib/API (by GameTechBC)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/gtbcs-spelllib",
+    "slug": "gtbcs-spelllib"
+  },
+  {
+    "name": "Better Party (by MrStilu2k6)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/better-party",
+    "slug": "better-party"
+  },
+  {
+    "name": "Applied KubeJS (by rollylindenshnizzer)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-kubejs-kjs-ae2",
+    "slug": "applied-kubejs-kjs-ae2"
+  },
+  {
+    "name": "Farmer's Delight (by vectorwing)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/farmers-delight",
+    "slug": "farmers-delight"
+  },
+  {
+    "name": "[Official] Epic ParCool (by maninthe_home)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/official-epic-fight-x-parcool",
+    "slug": "official-epic-fight-x-parcool"
+  },
+  {
+    "name": "Integrated Stronghold (by CraisinLord)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-stronghold",
+    "slug": "integrated-stronghold"
+  },
+  {
+    "name": "Nullscape (by Starmute)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/nullscape",
+    "slug": "nullscape"
+  },
+  {
+    "name": "Ace's Spell Utils (by Ace_The_Eldritch_King)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/aces-spell-utils",
+    "slug": "aces-spell-utils"
+  },
+  {
+    "name": "IceAndFire Community Edition (by IAFEnvoy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/iceandfire-ce",
+    "slug": "iceandfire-ce"
+  },
+  {
+    "name": "Create: Compat Core (by Blizzor)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-compat-core",
+    "slug": "create-compat-core"
+  },
+  {
+    "name": "Artifacts (by ochotonida)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/artifacts",
+    "slug": "artifacts"
+  },
+  {
+    "name": "Iron's Gems 'n Jewelry (by Iron431)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irons-jewelry",
+    "slug": "irons-jewelry"
+  },
+  {
+    "name": "FTB Essentials (Forge & Fabric) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-essentials",
+    "slug": "ftb-essentials"
+  },
+  {
+    "name": "Sodium (by JellySquid)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sodium",
+    "slug": "sodium"
+  },
+  {
+    "name": "Multi-Piston (by Raycoms)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/multi-piston",
+    "slug": "multi-piston"
+  },
+  {
+    "name": "Zeta (by Vazkii)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/zeta",
+    "slug": "zeta"
+  },
+  {
+    "name": "Supplementaries (by MehVahdJukaar)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/supplementaries",
+    "slug": "supplementaries"
+  },
+  {
+    "name": "Teal Lib (by Ninnih)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/teallib",
+    "slug": "teallib"
+  },
+  {
+    "name": "Mekanism Generators (by bradyaidanc)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mekanism-generators",
+    "slug": "mekanism-generators"
+  },
+  {
+    "name": "Konkrete (by Keksuccino)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/konkrete",
+    "slug": "konkrete"
+  },
+  {
+    "name": "Jade 🔍 (by Snownee)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jade",
+    "slug": "jade"
+  },
+  {
+    "name": "Create: Hypertubes (by Rokzin)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/hypertubes",
+    "slug": "hypertubes"
+  },
+  {
+    "name": "MezzConfig (by mezz)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mezzconfig",
+    "slug": "mezzconfig"
+  },
+  {
+    "name": "Architectury API (by shedaniel)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/architectury-api",
+    "slug": "architectury-api"
+  },
+  {
+    "name": "Ars Sable (by baileyholl2)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ars-sable",
+    "slug": "ars-sable"
+  },
+  {
+    "name": "Cloth Config API (Fabric/Forge/NeoForge) (by shedaniel)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cloth-config",
+    "slug": "cloth-config"
+  },
+  {
+    "name": "Weapons of Miracles - epic fight (by reascer)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/weapons-of-miracles-epicfight",
+    "slug": "weapons-of-miracles-epicfight"
+  },
+  {
+    "name": "FTB XMod Compat (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat",
+    "slug": "ftb-xmod-compat"
+  },
+  {
+    "name": "Applied Energistics 2 (by thetechnici4n)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2",
+    "slug": "applied-energistics-2"
+  },
+  {
+    "name": "Just Zoom (by Keksuccino)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/just-zoom",
+    "slug": "just-zoom"
+  },
+  {
+    "name": "Jade Addons (Neo/Forge) (by Snownee)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jade-addons",
+    "slug": "jade-addons"
+  },
+  {
+    "name": "Create: Wizardry (by thetruezeraora)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-wizardry",
+    "slug": "create-wizardry"
+  },
+  {
+    "name": "MineColonies (by Raycoms)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/minecolonies",
+    "slug": "minecolonies"
+  },
+  {
+    "name": "BadOptimizations (by thosea)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/badoptimizations",
+    "slug": "badoptimizations"
+  },
+  {
+    "name": "Oh The Biomes We've Gone (by AOCAWOL)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/oh-the-biomes-weve-gone",
+    "slug": "oh-the-biomes-weve-gone"
+  },
+  {
+    "name": "Cataclysm: Spellbooks (by StarOcean)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/cataclysm-spellbooks",
+    "slug": "cataclysm-spellbooks"
+  },
+  {
+    "name": "Sophisticated Backpacks Create Integration (by P3pp3rF1y)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks-create-integration",
+    "slug": "sophisticated-backpacks-create-integration"
+  },
+  {
+    "name": "Lithium (Fabric/NeoForge) (by JellySquid)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lithium",
+    "slug": "lithium"
+  },
+  {
+    "name": "Modonomicon (by kli_kli)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/modonomicon",
+    "slug": "modonomicon"
+  },
+  {
+    "name": "Iron Spells  X Epic Fight (by tmfritz_)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irons-x-epic-comp",
+    "slug": "irons-x-epic-comp"
+  },
+  {
+    "name": "Jupiter (by IAFEnvoy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/jupiter",
+    "slug": "jupiter"
+  },
+  {
+    "name": "Uranus (by IAFEnvoy)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/uranus",
+    "slug": "uranus"
+  },
+  {
+    "name": "Moonlight Lib (by MehVahdJukaar)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/selene",
+    "slug": "selene"
+  },
+  {
+    "name": "BetterF3 (by cominixo)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/betterf3",
+    "slug": "betterf3"
+  },
+  {
+    "name": "Upgrade Aquatic (by TeamAbnormals)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/upgrade-aquatic",
+    "slug": "upgrade-aquatic"
+  },
+  {
+    "name": "Amplified Nether (by Starmute)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/amplified-nether",
+    "slug": "amplified-nether"
+  },
+  {
+    "name": "Mekanism (by bradyaidanc)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mekanism",
+    "slug": "mekanism"
+  },
+  {
+    "name": "Integrated  Seven Seas (by Aarods)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-seven-seas",
+    "slug": "integrated-seven-seas"
+  },
+  {
+    "name": "Lootr (Forge & NeoForge) (by Noobanidus)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lootr",
+    "slug": "lootr"
+  },
+  {
+    "name": "Chipped (by terrariumearth)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chipped",
+    "slug": "chipped"
+  },
+  {
+    "name": "CorgiLib (by Corgi_Taco)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/corgilib",
+    "slug": "corgilib"
+  },
+  {
+    "name": "Epic Fight: Curios Compat 2.0 (by Unitei)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/epicfightcurioscompat",
+    "slug": "epicfightcurioscompat"
+  },
+  {
+    "name": "L_Ender 's Cataclysm (by mcl_ender)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm",
+    "slug": "lendercataclysm"
+  },
+  {
+    "name": "Create Aeronautics: Mekanism Compatibility (by jugglebubbles)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-aeronautics-mekanism-compatibility",
+    "slug": "create-aeronautics-mekanism-compatibility"
+  },
+  {
+    "name": "Rhino (by Lat)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/rhino",
+    "slug": "rhino"
+  },
+  {
+    "name": "Health Bars Reforged  (by Rappenem)",
+    "url": "https://www.curseforge.com/minecraft/texture-packs/health-bars-reforged",
+    "slug": "health-bars-reforged"
+  },
+  {
+    "name": "Minecolonies: Epicfied (Epic Colonies) (by TheDevKenji)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/minecolonies-epicfied-epic-colonies",
+    "slug": "minecolonies-epicfied-epic-colonies"
+  },
+  {
+    "name": "Mowzie's Mobs (by bobmowzie)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs",
+    "slug": "mowzies-mobs"
+  },
+  {
+    "name": "AStages (by _Kessy_)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/astages",
+    "slug": "astages"
+  },
+  {
+    "name": "Create Aeronautics: FTB Chunks (by Project8gbDeRam)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-aeronautics-ftb-chunks",
+    "slug": "create-aeronautics-ftb-chunks"
+  },
+  {
+    "name": "Shulker Box Tooltip [Fabric/Forge/NeoForge] (by MisterPeModder)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/shulkerboxtooltip",
+    "slug": "shulkerboxtooltip"
+  },
+  {
+    "name": "GlitchCore (by TheAdubbz)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/glitchcore",
+    "slug": "glitchcore"
+  },
+  {
+    "name": "YUNG's Better Dungeons (NeoForge) [1.20.4 - 1.21.1 ONLY] (by YUNGNICKYOUNG)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/yungs-better-dungeons-neoforge",
+    "slug": "yungs-better-dungeons-neoforge"
+  },
+  {
+    "name": "MmmMmmMmmMmm (Target Dummy) (by MehVahdJukaar)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/mmmmmmmmmmmm",
+    "slug": "mmmmmmmmmmmm"
+  },
+  {
+    "name": "Iris Shaders (by coderbot)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/irisshaders",
+    "slug": "irisshaders"
+  },
+  {
+    "name": "Configurable (by bawnorton)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/configurable",
+    "slug": "configurable"
+  },
+  {
+    "name": "Drippy Loading Screen (by Keksuccino)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/drippy-loading-screen",
+    "slug": "drippy-loading-screen"
+  },
+  {
+    "name": "FastSuite (by Shadows_of_Fire)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fastsuite",
+    "slug": "fastsuite"
+  },
+  {
+    "name": "KubeJS Mekanism (by Lat)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/kubejs-mekanism",
+    "slug": "kubejs-mekanism"
+  },
+  {
+    "name": "Echoing Magic: Esoteric Spells of the Fallen (by HazentouvelPrime)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/echoing-magic-esoteric-spells-of-the-fallen",
+    "slug": "echoing-magic-esoteric-spells-of-the-fallen"
+  },
+  {
+    "name": "Melody (by Keksuccino)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/melody",
+    "slug": "melody"
+  },
+  {
+    "name": "Patchouli (by Vazkii)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/patchouli",
+    "slug": "patchouli"
+  },
+  {
+    "name": "Reliquified Twilight Forest (by SSKirillSS)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/reliquified-twilight-forest",
+    "slug": "reliquified-twilight-forest"
+  },
+  {
+    "name": "fix GPU memory leak (by someaddon)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/fix-gpu-memory-leak",
+    "slug": "fix-gpu-memory-leak"
+  },
+  {
+    "name": "The Twilight Forest (by Benimatic)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest",
+    "slug": "the-twilight-forest"
+  },
+  {
+    "name": "BetterEnd: New Dawn (by Raijin2312)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/betterend-neoforge",
+    "slug": "betterend-neoforge"
+  },
+  {
+    "name": "Waystones: Sable (Create Aeronautics Addon) (by SShakusora)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/waystones-sable",
+    "slug": "waystones-sable"
+  },
+  {
+    "name": "Lionfish API (by mcl_ender)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/lionfish-api",
+    "slug": "lionfish-api"
+  },
+  {
+    "name": "Applied Mekanistics (by ramidzkh)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/applied-mekanistics",
+    "slug": "applied-mekanistics"
+  },
+  {
+    "name": "AStages FTB Quests (by _Kessy_)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/astages-ftb-quests",
+    "slug": "astages-ftb-quests"
+  },
+  {
+    "name": "Ars 'n Spells (by Otectus)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ars-n-spells",
+    "slug": "ars-n-spells"
+  },
+  {
+    "name": "Entity Culling Fabric/Forge (by tr7zw)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/entityculling",
+    "slug": "entityculling"
+  },
+  {
+    "name": "Oh The Trees You'll Grow (by Corgi_Taco)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/oh-the-trees-youll-grow",
+    "slug": "oh-the-trees-youll-grow"
+  },
+  {
+    "name": "Spellbooks Of Twilight : Iron's Spells x The Twilight Forest Addon (by RedTablos)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/spellbooks-of-twilight-irons-spells-x-the-twilight",
+    "slug": "spellbooks-of-twilight-irons-spells-x-the-twilight"
+  },
+  {
+    "name": "Integrated Dungeons and Structures (by CraisinLord)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/idas",
+    "slug": "idas"
+  },
+  {
+    "name": "AzureLib (by AzureDoomC)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/azurelib",
+    "slug": "azurelib"
+  },
+  {
+    "name": "Integrated Dungeons Arise (by Aarods)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-dungeons-arise",
+    "slug": "integrated-dungeons-arise"
+  },
+  {
+    "name": "Archaion: Echoes of the Fallen (by RatRod)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/archaion",
+    "slug": "archaion"
+  },
+  {
+    "name": "Biomes O Plenty: Chipped (by MyNormalNameIsProfaneApparently)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty-chipped",
+    "slug": "biomes-o-plenty-chipped"
+  },
+  {
+    "name": "Integrated Patches (by Aarods)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-patches",
+    "slug": "integrated-patches"
+  },
+  {
+    "name": "Sophisticated Core (by P3pp3rF1y)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core",
+    "slug": "sophisticated-core"
+  },
+  {
+    "name": "Apothic Attributes (by Shadows_of_Fire)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/apothic-attributes",
+    "slug": "apothic-attributes"
+  },
+  {
+    "name": "Autumnity (by TeamAbnormals)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/autumnity",
+    "slug": "autumnity"
+  },
+  {
+    "name": "Curios API (by TheIllusiveC4)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/curios",
+    "slug": "curios"
+  },
+  {
+    "name": "Integrated Mowzie's Mobs (by Aarods)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-mowzies-mobs",
+    "slug": "integrated-mowzies-mobs"
+  },
+  {
+    "name": "FTB Library (NeoForge) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge",
+    "slug": "ftb-library-forge"
+  },
+  {
+    "name": "Create: Aquatic Ambitions (by DaviO)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/create-aquatic-ambitions",
+    "slug": "create-aquatic-ambitions"
+  },
+  {
+    "name": "Relics (by SSKirillSS)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/relics-mod",
+    "slug": "relics-mod"
+  },
+  {
+    "name": "Amendments (by plantspookable)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/amendments",
+    "slug": "amendments"
+  },
+  {
+    "name": "Integrated Villages (by CraisinLord)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/integrated-villages",
+    "slug": "integrated-villages"
+  },
+  {
+    "name": "FTB Quests (NeoForge) (by FTB)",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-quests-forge",
+    "slug": "ftb-quests-forge"
+  }
+]

@@ -1,6 +1,6 @@
 # T&K3 · CHAPTERS & PRODUCTION
 
-**10 CHAPTERS · 115 QUESTS · 1709 MANAGED RECIPES**
+**10 PROGRESSION CHAPTERS · 27 GUIDE PAGES · 353 QUESTS · 1709 MANAGED RECIPES**
 
 Build an andesite workshop, develop copper and brass production, then connect it to **AE2 and Mekanism in chapter 4**. **The Nether opens in chapter 3; the End opens in chapter 5.** Keep your early factories running as the later chapters add chemicals, magic, boss catalysts and quantum production.
 

@@ -1,0 +1,396 @@
+{
+  "id": "6B86EF86C1778977",
+  "group": "377CA5D05B315B14",
+  "icon": "kubejs:tk3_quest_bell",
+  "order_index": 45,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "14B0B5A57748F8AD",
+      "title": "&f&lChoose space for a real town&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fMineColonies has its own building, worker and research progression. Plan a location with room for buildings, roads and later expansion; inspect the native colony guide before placing the first layout.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPreview buildings and routes before filling the area with machines.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "30BDD600911C9102",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "397BBAD5E08FC694",
+      "title": "&f&lThe settlement supply plan&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPrepare the native starting supplies shown in JEI and the colony guide. Keep the first builder’s requested materials in a dedicated buffer so workshop crafting cannot take them unexpectedly.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fChoose a building style whose materials you can gather reliably.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "51320ED9CCD34A04",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "3B478246B4568A49",
+      "title": "&f&lThe Builder’s Hut&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fObtain a Builder’s Hut and plan its placement.",
+        "",
+        "&fA builder manages native construction work through its hut and request system. Read the current request and provide the needed materials rather than repeatedly placing new unfinished projects.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fComplete a small first build to learn the colony workflow.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "563DAF341C6FBBAF",
+          "type": "item",
+          "item": {
+            "id": "minecolonies:blockhutbuilder",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "minecolonies:blockhutbuilder",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "subtitle": "&7ITEM GOAL"
+    },
+    {
+      "id": "1EC561905B626291",
+      "title": "&f&lHomes, food and work&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fA settlement needs housing, food access and suitable jobs according to MineColonies’ native requirements. Grow one manageable neighborhood before creating demand across a huge unfinished town.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse the colony screens to check what the citizens actually need.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "480A7625833A8AC5",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "7CAD3F8890D0644A",
+      "title": "&f&lA readable warehouse&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPlan deliveries and central storage around the colony’s supported warehouse and worker systems. Label the workshop’s supply buffer and avoid sending every rare material to general settlement storage.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve factory catalysts and future-tier materials in a separate secure area.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "102879AF2DEC0F1E",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "1C2AB15EA4CDD5EB",
+      "title": "&f&lFollow the colony’s research&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fMineColonies research and building upgrades have their own native conditions. Read the requirement in the colony UI and pursue the next useful service rather than assuming a workshop milestone unlocks it automatically.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fChoose a research goal that solves a current shortage.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "4850E543AC7EB837",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "680A4D3F601E23D4",
+      "title": "&f&lConnect one Create supply&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fCreate: MineColonies Link supports the selected workshop integration. Follow the installed link’s guidance and test one colony material request from a dedicated Create supply.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRecord where the request enters and where delivery finishes before expanding.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD",
+        "60278B0905A64DC9"
+      ],
+      "tasks": [
+        {
+          "id": "759DB06CB422B52C",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 3+"
+    },
+    {
+      "id": "5CD3BA9A76800CD9",
+      "title": "&f&lMake the town feel inhabited&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fTownTalk and the selected colony integrations add character to settlement life. Explore the supported interactions and keep paths, service areas and citizen access clear.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fDesign plazas and practical service routes together rather than decorating over the traffic paths.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "72CDCA7940B6CB85",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "4C382D373F13242F",
+      "title": "&f&lA town ready for trouble&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFollow the native colony’s guard and defense requirements, secure supply access and leave clear routes through the settlement. Test your own combat away from fragile colony work areas.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a shared recovery kit and food reserve accessible.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "2B30EE49B21BF3A4",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "0D7964A4C4F74EE5",
+      "title": "&f&lA working kingdom district&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFinish a district with housing, a useful service, food access and a supplied construction or delivery route. Add signs so a new teammate can understand the town’s organization.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA smaller finished district is easier to maintain and expand.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "14B0B5A57748F8AD"
+      ],
+      "tasks": [
+        {
+          "id": "0391DFCB8C539D99",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_bell",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_colonies"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lBuild Your Colony&r",
+  "subtitle": [
+    "MineColonies, TownTalk and a factory that supplies the settlement"
+  ]
+}

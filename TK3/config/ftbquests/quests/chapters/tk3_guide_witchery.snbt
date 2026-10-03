@@ -1,0 +1,242 @@
+{
+  "id": "6CC43719B0315F94",
+  "group": "7F5849963E10B878",
+  "icon": "kubejs:tk3_quest_herb",
+  "order_index": 37,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "65535A425066AACD",
+      "title": "&f&lA different magical tradition&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fJust Another Witchery Remake is in the current alpha mod selection. Its magic is a separate branch from Ars Source and Iron’s spellbooks. Use the installed mod’s guide entries and JEI to discover the available systems.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a dedicated study journal for recipes and prerequisites you have actually found.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "0B7C5B188D07472E",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_herb",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_witchery"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "163048D43E40CDEB",
+      "title": "&f&lFind the first native guide&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fInspect the installed Witchery entries and locate the guide or starter information available in this release. Record one verified starting recipe and its ingredients.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fAddon versions can differ, so follow the guide in your instance.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "65535A425066AACD"
+      ],
+      "tasks": [
+        {
+          "id": "4C186A1073CCA69D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_herb",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_witchery"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "601899D9C14CC416",
+      "title": "&f&lThe hedge garden&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChoose a plant or reagent that the installed Witchery recipes use, identify its actual source and grow or gather a renewable supply where the native rules allow it.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fProtect a planting reserve before sending herbs into crafting.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "65535A425066AACD"
+      ],
+      "tasks": [
+        {
+          "id": "7F3308BE83883606",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_herb",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_witchery"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "790074E82FEA916D",
+      "title": "&f&lA separate ritual workspace&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fSet aside an accessible area for the native workstations or ritual setups you discover. Follow their actual placement and environment requirements rather than substituting a Create basin or Ars apparatus.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLeave space to expand without moving the whole workshop.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "65535A425066AACD"
+      ],
+      "tasks": [
+        {
+          "id": "33F2BDE29DA0E72C",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_herb",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_witchery"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "791777E26C131A0D",
+      "title": "&f&lDocument one working process&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fChoose a native Witchery process, complete its prerequisites and run it. Write down the input, required setup and result so another player can reproduce it.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fConfirm the result before reserving large quantities of a rare reagent.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "65535A425066AACD"
+      ],
+      "tasks": [
+        {
+          "id": "1743ED897A29D20C",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_herb",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_witchery"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "63AF6B3DE70AC1EB",
+      "title": "&f&lA hedge scholar’s contribution&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFind one native Witchery result that is useful to your own adventures or settlement. Prepare its materials, demonstrate the result and add it to the town library’s notes.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe activity check records the project; it does not add a custom transformation or ritual unlock.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "65535A425066AACD"
+      ],
+      "tasks": [
+        {
+          "id": "7B7AEAA546DC7A7D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_herb",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_witchery"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lWitchery · The Hedge Scholar&r",
+  "subtitle": [
+    "Just Another Witchery Remake · native discovery and a careful study journal"
+  ]
+}

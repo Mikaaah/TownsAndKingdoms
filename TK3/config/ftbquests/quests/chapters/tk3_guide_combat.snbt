@@ -1,0 +1,354 @@
+{
+  "id": "4E0679061753958F",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_questequipment",
+  "order_index": 31,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "1C337DAAB88F3340",
+      "title": "&f&lBuild a loadout you can use&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe selected pack combines Epic Fight, Weapons of Miracles, Simply Swords, Iron’s spells, movement tools and the personal skilltree. Read the controls and test one complete loadout before taking it into a boss arena.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fChange one equipment piece at a time when comparing builds.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "20C3D934E20FE40D",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2E8028D749E2E6C6",
+      "title": "&f&lUse the training yard&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse a safe target to compare attacks, recovery, mana cost and movement. A dummy can help with controlled comparisons, but a stationary target does not reproduce a boss’s movement or resistance.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRepeat the same short attack sequence with both loadouts.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "3F081CEA53817741",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "1CE405E9A5BA51B5",
+      "title": "&f&lLearn your weapon moves&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fEpic Fight and its weapon addons can give different weapons distinct attacks. Check battle-mode controls and the actual weapon’s supported moves rather than assuming every weapon handles alike.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve room around the target while learning an unfamiliar combo.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "73D1DC4E7A2D272F",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "5E9FA02AABB379C7",
+      "title": "&f&lPractice a clean escape&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fParCool adds movement options with their own controls and conditions. Practice on a safe course, check your available movement resources and learn a route back to solid ground.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest ladders, ledges and recovery in town before attempting the same movement over a dangerous drop.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "32E964C0F6741601",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "7D0264CAB9C5D11C",
+      "title": "&f&lArmor and tradeoffs&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fCompare armor, durability, affixes and effects with your class penalties. A damage-focused subclass may give up health or armor; a casting build may need mana or regeneration as much as raw attack damage.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fDo not discard a useful lower-rarity item merely because the replacement has a brighter name.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "479959851996790D",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "589A1BB4EA0D3A88",
+      "title": "&f&lCurios, Artifacts and Relics&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fArtifacts, Relics and their selected integrations add equipment with their own activation and upgrade rules. Read their tooltips and inspect Curios slots. Carry a few useful effects instead of assuming every found item works from the main inventory.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest the effect in a safe area and check any charge, cooldown or unlock condition.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "6966F7974CA62C25",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "675C3FE616093E19",
+      "title": "&f&lGrowing a relic&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fReliquified Artifacts, Ars Nouveau and Twilight Forest extend the corresponding equipment systems. Follow the actual relic’s progression screen and requirements; an item discovery and a fully developed relic are different goals.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild around a relic you can use regularly, and note which activities advance its own requirements.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "77ABAA845DDA3BEF",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "6EFB94431D3C9828",
+      "title": "&f&lAffixes, gems and enchanting&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fApotheosis and the selected Apothic systems add equipment and enchanting layers. Inspect affixes, sockets and the relevant workstation recipes in JEI before modifying a favorite item.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse spare equipment to learn a workstation’s behavior before committing your best gear.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "7E3144F242DDF584",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "5EDB4FE3B0656618",
+      "title": "&f&lPrepare a recovery kit&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fKeep spare food, tools, blocks and a return plan at home. Shared quest progress does not remove the need to recover from an expedition that goes wrong.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fMake the kit accessible to teammates who may help you return.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C337DAAB88F3340"
+      ],
+      "tasks": [
+        {
+          "id": "2FC3827D62009215",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_combat"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lCombat, Movement & Equipment&r",
+  "subtitle": [
+    "Practice first · Epic Fight, ParCool, weapons and accessories"
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "id": "788044373071E04C",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_job_fighter",
+  "order_index": 24,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "139B63A97ABA0168",
+      "title": "&f&lWarrior at a glance&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fDecide whether this combat foundation suits you.",
+        "",
+        "&fMelee pressure, health and a durable frontline. Read the three specializations below, then make your personal investment in the skilltree.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReading this page does not select the class. Compare the root’s bonuses and penalties on the actual skill node.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "7B25EC296E2C26F4",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "6D2F55F7B7F49C2B",
+      "title": "&f&lBuild your foundation&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fYour five inner branches are Weapon Training, Battle Rhythm, Endurance, Iron Guard and Pressure. Each branch contains four mandatory foundation nodes. Complete their requirements, class mastery and the specialization gate before entering a subclass.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTwenty inner foundation nodes are only part of the route; account for entry, root, mastery and gate nodes too.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "139B63A97ABA0168"
+      ],
+      "tasks": [
+        {
+          "id": "08DAD22A1EB5C446",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "025F56A4101E661C",
+      "title": "&f&lBerserker&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Berserker playstyle and its tradeoffs.",
+        "",
+        "&fHigher attack damage and stronger critical damage; lower maximum health and reduced healing received. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Fury · Brutality · Blood Price.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a reliable food and recovery supply. Trading defense for damage makes retreat timing more important.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6D2F55F7B7F49C2B"
+      ],
+      "tasks": [
+        {
+          "id": "35EB416DAD62CE9A",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "3D2CBF0CD9798FE9",
+      "title": "&f&lBerserker · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Berserker constellation contains three independent fourteen-node paths: Fury · Brutality · Blood Price. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "025F56A4101E661C"
+      ],
+      "tasks": [
+        {
+          "id": "358B1CEDF18B8782",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "393DE042D723ADAA",
+      "title": "&f&lWeapon Master&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Weapon Master playstyle and its tradeoffs.",
+        "",
+        "&fMore attack damage and attack speed; lower armor at the subclass root. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Technique · Tempo · Precision.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCompare a weapon’s speed and moves as well as its listed damage before settling on a favorite.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6D2F55F7B7F49C2B"
+      ],
+      "tasks": [
+        {
+          "id": "7214D8C4E49F910C",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "26293F404EBBAB81",
+      "title": "&f&lWeapon Master · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Weapon Master constellation contains three independent fourteen-node paths: Technique · Tempo · Precision. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "393DE042D723ADAA"
+      ],
+      "tasks": [
+        {
+          "id": "78B0EE1146A890EA",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7790CF87D244C33B",
+      "title": "&f&lJuggernaut&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Juggernaut playstyle and its tradeoffs.",
+        "",
+        "&fMore armor, health and healing received; lower movement speed and attack damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Fortress · Vitality · Recovery.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse your durability to control space, but keep an exit route when a boss forces movement.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6D2F55F7B7F49C2B"
+      ],
+      "tasks": [
+        {
+          "id": "05B6EB04290780CE",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "357862C4577A3008",
+      "title": "&f&lJuggernaut · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Juggernaut constellation contains three independent fourteen-node paths: Fortress · Vitality · Recovery. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "7790CF87D244C33B"
+      ],
+      "tasks": [
+        {
+          "id": "51DD4352D5096E5E",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "672462BF7B57D0DA",
+      "title": "&f&lTry the playstyle&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPractice spacing, attack timing and recovery with one weapon before swapping between several movesets.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fEquip suitable gear you already have.",
+        "&62. &fPractice in the town training yard.",
+        "&63. &fWrite down one strength and one weakness you noticed.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe activity check records your practice. It does not require you to spend points or commit to this class.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "139B63A97ABA0168"
+      ],
+      "tasks": [
+        {
+          "id": "0A4980288C152B79",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_warrior",
+        "tk3_class_warrior"
+      ],
+      "shape": "square",
+      "hide_dependency_lines": "true",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&c◆ &f&lPath of the Warrior&r",
+  "subtitle": [
+    "Class foundation · compare all three specializations"
+  ]
+}

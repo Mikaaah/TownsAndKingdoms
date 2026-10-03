@@ -1,0 +1,379 @@
+{
+  "id": "0E8EDBB9A16D9AB9",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_candle",
+  "order_index": 28,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "60F94CE4B92DDFE2",
+      "title": "&f&lCleric at a glance&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fDecide whether this combat foundation suits you.",
+        "",
+        "&fHoly-school support, recovery and a sturdy support foundation. Read the three specializations below, then make your personal investment in the skilltree.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReading this page does not select the class. Compare the root’s bonuses and penalties on the actual skill node.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "71EFB652E0351E61",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2345ABC9043CD3EE",
+      "title": "&f&lBuild your foundation&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fYour five inner branches are Faith, Prayer, Grace, Sacred Guard and Wisdom. Each branch contains four mandatory foundation nodes. Complete their requirements, class mastery and the specialization gate before entering a subclass.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTwenty inner foundation nodes are only part of the route; account for entry, root, mastery and gate nodes too.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "60F94CE4B92DDFE2"
+      ],
+      "tasks": [
+        {
+          "id": "657393BDCBAB07EC",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "200CE25DAA6F9837",
+      "title": "&f&lPriest&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Priest playstyle and its tradeoffs.",
+        "",
+        "&fMore Holy power and mana regeneration; lower Blood power and melee damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Divine Channel · Prayer · Grace.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSelect actual healing or support spells and read their targeting rules before helping a teammate.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2345ABC9043CD3EE"
+      ],
+      "tasks": [
+        {
+          "id": "0DF2368D16F67D60",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "037BAF7F232F58C1",
+      "title": "&f&lPriest · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Priest constellation contains three independent fourteen-node paths: Divine Channel · Prayer · Grace. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "200CE25DAA6F9837"
+      ],
+      "tasks": [
+        {
+          "id": "2DD2A1879C8E7C2F",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "629025B94CBCB242",
+      "title": "&f&lCrusader&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Crusader playstyle and its tradeoffs.",
+        "",
+        "&fMore Holy power and armor; lower mana capacity and regeneration. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Consecrated Armor · Holy Power · Zeal.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBalance weapon attacks with spell windows so your smaller mana reserve can recover.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2345ABC9043CD3EE"
+      ],
+      "tasks": [
+        {
+          "id": "4D40CAF86CA498D6",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "3135D522E48C2363",
+      "title": "&f&lCrusader · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Crusader constellation contains three independent fourteen-node paths: Consecrated Armor · Holy Power · Zeal. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "629025B94CBCB242"
+      ],
+      "tasks": [
+        {
+          "id": "21FDB873656E83F5",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1C7B30D552930751",
+      "title": "&f&lOracle&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Oracle playstyle and its tradeoffs.",
+        "",
+        "&fSupports free-enchant chance and mana capacity; lower spell power and melee damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Foresight · Deep Insight · Knowledge.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFree-enchant chance is a chance-based benefit, not an unlimited free crafting or enchanting recipe.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "2345ABC9043CD3EE"
+      ],
+      "tasks": [
+        {
+          "id": "34D5FB858E9C95AE",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "328336CAAE45B631",
+      "title": "&f&lOracle · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Oracle constellation contains three independent fourteen-node paths: Foresight · Deep Insight · Knowledge. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1C7B30D552930751"
+      ],
+      "tasks": [
+        {
+          "id": "7E87090DBAF06FC1",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "4B5291C4901442C8",
+      "title": "&f&lTry the playstyle&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPractice a support or recovery spell in a safe space and carry a weapon for times when mana is low.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fEquip suitable gear you already have.",
+        "&62. &fPractice in the town training yard.",
+        "&63. &fWrite down one strength and one weakness you noticed.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe activity check records your practice. It does not require you to spend points or commit to this class.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "60F94CE4B92DDFE2"
+      ],
+      "tasks": [
+        {
+          "id": "06E96817EF0D008E",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_candle",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_cleric",
+        "tk3_class_cleric"
+      ],
+      "shape": "square",
+      "hide_dependency_lines": "true",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&e◆ &f&lPath of the Cleric&r",
+  "subtitle": [
+    "Class foundation · compare all three specializations"
+  ]
+}

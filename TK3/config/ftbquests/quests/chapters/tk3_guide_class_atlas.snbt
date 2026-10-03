@@ -1,0 +1,317 @@
+{
+  "id": "25A542BBDC70174D",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_jobs",
+  "order_index": 23,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "0077581EFFB1C852",
+      "title": "&f&lChoose how you like to play&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fWarrior, Ranger, Rogue, Mage, Cleric and Occultist offer different combat foundations. Read all six class pages, then make your actual choice in the personal skilltree.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fYou can complete every reading guide here. The questbook does not lock your class choice.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fThese quests grant no class, attribute modifier, skill point or reset item.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "16CA42C3F2912D71",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "445FFC76F180A6BE",
+      "title": "&f&lOne class, one subclass&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe supplied tree restricts you to one class root and one subclass root. Each class has three subclass options with positive bonuses and meaningful tradeoffs. Compare those tradeoffs before investing.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fChoose the playstyle you enjoy during ordinary fights, not only a boss damage screenshot.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "2BF78D95C0E91CC3",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2464CB320F85B809",
+      "title": "&f&lBuild the class foundation&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fEach class has five mandatory inner branches with four nodes each: twenty foundation nodes. Follow the displayed prerequisite route through class mastery and the specialization gate to reach a subclass.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe twenty foundation nodes are not the entire cost of reaching a subclass; approach, root and gate nodes also matter.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "3D017E02DDAE9B30",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "66EF24AD8E2E7120",
+      "title": "&f&lEvery node is a decision&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fEvery native node in the supplied tree costs one point. Point availability follows the installed Passive Skill Tree settings. A quest guide does not generate extra points or create a separate profession leveling system.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRead the next node’s prerequisite and tradeoff before buying it.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fA recommended point budget in development notes is not a promise that your instance grants those points.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "2BEA6809C5065295",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "07FBD158781540A6",
+      "title": "&f&lThree paths inside a subclass&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fEach subclass has three independent fourteen-node paths. Follow each branch’s own learned-skill requirements. The optional synergy nodes are side destinations; they do not skip another path’s requirements.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFocus on a useful path first. The all-path apex rewards completing the foundation of all three paths.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "4539A745E5BFC7E8",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "0C425E948B9EEDF1",
+      "title": "&f&lRead your apex carefully&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe tree permits one subclass keystone. Advanced class branches and profession investments compete for the same points, so decide whether you want a broad character or deeper specialization.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSketch a point plan with your desired subclass path and professions before spending the last available points.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "1D3C02C882FD9426",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "49475F9ED0BF7F85",
+      "title": "&f&lProfessions alongside combat&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fSeven profession islands support Mining, Logging, Hunting, Exploration, Fishing, Farming and Crafting. The supplied tree permits up to three profession masteries and up to three focus nodes within each profession.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA class does not force a profession. A Mage can farm and a Warrior can craft.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "094347CEACE90B3C",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "022E0143EE58CD1A",
+      "title": "&f&lMatch equipment to your tree&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fA tree bonus only helps when its conditions and relevant attribute apply. Compare weapon type, school, casting cost, armor and movement rather than choosing equipment solely for its rarity.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse the item tooltip and the actual skill node as the final description of their effects.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0077581EFFB1C852"
+      ],
+      "tasks": [
+        {
+          "id": "42E03E6F40A1AEC6",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_atlas"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lThe Class Atlas&r",
+  "subtitle": [
+    "6 classes · 18 subclasses · personal choices in the skilltree"
+  ]
+}

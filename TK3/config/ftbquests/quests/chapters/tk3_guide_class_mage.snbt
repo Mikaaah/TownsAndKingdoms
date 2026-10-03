@@ -1,0 +1,379 @@
+{
+  "id": "6FE8DF2796020367",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_scroll",
+  "order_index": 27,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "4AAA70D4EFD79469",
+      "title": "&f&lMage at a glance&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fDecide whether this combat foundation suits you.",
+        "",
+        "&fMana and spell power with a lower melee-damage foundation. Read the three specializations below, then make your personal investment in the skilltree.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReading this page does not select the class. Compare the root’s bonuses and penalties on the actual skill node.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "7D64478599F63D27",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "075E2C74F927FA27",
+      "title": "&f&lBuild your foundation&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fYour five inner branches are Arcane Power, Mana Reserve, Mana Flow, Focused Casting and Arcane Ward. Each branch contains four mandatory foundation nodes. Complete their requirements, class mastery and the specialization gate before entering a subclass.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTwenty inner foundation nodes are only part of the route; account for entry, root, mastery and gate nodes too.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "4AAA70D4EFD79469"
+      ],
+      "tasks": [
+        {
+          "id": "6C3E5867178002EC",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7F66A28AD4148ECD",
+      "title": "&f&lElementalist&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Elementalist playstyle and its tradeoffs.",
+        "",
+        "&fSupports Fire, Ice and Lightning schools, with cooldown support where the attribute is available. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Fire Mastery · Ice Mastery · Lightning Mastery.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCompare the school on each spell; school bonuses do not automatically affect every addon spell.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "075E2C74F927FA27"
+      ],
+      "tasks": [
+        {
+          "id": "0250296B6D88D773",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "57457E604D3DEDC6",
+      "title": "&f&lElementalist · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Elementalist constellation contains three independent fourteen-node paths: Fire Mastery · Ice Mastery · Lightning Mastery. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "7F66A28AD4148ECD"
+      ],
+      "tasks": [
+        {
+          "id": "6EC5B70F6AA918DB",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1FDCA135A5D0AB0C",
+      "title": "&f&lArcanist&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Arcanist playstyle and its tradeoffs.",
+        "",
+        "&fMore mana and spell power; lower melee damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Deep Reserves · Arcane Force · Flow.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTest sustained casting over several fights, not only one fully charged opening.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "075E2C74F927FA27"
+      ],
+      "tasks": [
+        {
+          "id": "244C656A75B95099",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "04FACB34705048EC",
+      "title": "&f&lArcanist · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Arcanist constellation contains three independent fourteen-node paths: Deep Reserves · Arcane Force · Flow. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1FDCA135A5D0AB0C"
+      ],
+      "tasks": [
+        {
+          "id": "5041E885F4DF1661",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "66749D686EF14F6D",
+      "title": "&f&lBattlemage&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Battlemage playstyle and its tradeoffs.",
+        "",
+        "&fMore melee damage and spell power; reduced mana regeneration and cooldown-reduction value. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Spellsteel · Battle Casting · Arcane Guard.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe reduced cooldown-reduction value is a tradeoff. Plan longer gaps between casts, with a useful weapon in between.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "075E2C74F927FA27"
+      ],
+      "tasks": [
+        {
+          "id": "377B817432874100",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2056510646671DB8",
+      "title": "&f&lBattlemage · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Battlemage constellation contains three independent fourteen-node paths: Spellsteel · Battle Casting · Arcane Guard. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "66749D686EF14F6D"
+      ],
+      "tasks": [
+        {
+          "id": "28A74401BFD37C0B",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "0EDC21C0C47AC6FA",
+      "title": "&f&lTry the playstyle&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fTest one damage spell and one utility spell while watching cost, cooldown and regeneration.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fEquip suitable gear you already have.",
+        "&62. &fPractice in the town training yard.",
+        "&63. &fWrite down one strength and one weakness you noticed.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe activity check records your practice. It does not require you to spend points or commit to this class.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "4AAA70D4EFD79469"
+      ],
+      "tasks": [
+        {
+          "id": "20EEDD76CB0321C3",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_scroll",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_mage",
+        "tk3_class_mage"
+      ],
+      "shape": "square",
+      "hide_dependency_lines": "true",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b◆ &f&lPath of the Mage&r",
+  "subtitle": [
+    "Class foundation · compare all three specializations"
+  ]
+}

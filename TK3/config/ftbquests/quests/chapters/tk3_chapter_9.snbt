@@ -1,18 +1,21 @@
 {
   "id": "D27400183DD05044",
-  "filename": "tk3_chapter_9",
   "group": "7427C3F538DF9198",
-  "title": "Singularity · Quantum Industry",
-  "subtitle": "Singularity Frame and connected production",
   "icon": "kubejs:tk3_singularity_frame",
   "order_index": 9,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "B38C9EEBD3329786",
-      "title": "Workshop plan · Singularity Frame",
+      "title": "&f&lWorkshop plan · Singularity Frame&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment."
       ],
       "dependencies": [
         "91CC6BEFB3017B3F"
@@ -21,20 +24,33 @@
         {
           "id": "DF5D0FF3D3027816",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_singularity_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "C0DAFECBF3411114",
-      "title": "Build the SPS line",
+      "title": "&f&lBuild the SPS line&r",
       "description": [
-        "Native waste processing and SPS produce antimatter. The native pellet recipe still costs 1000 units; there is no crafting shortcut."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fNative waste processing and SPS produce antimatter. The native pellet recipe still costs 1000 units; there is no crafting shortcut.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment."
       ],
       "dependencies": [
         "B38C9EEBD3329786"
@@ -55,13 +71,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "mekanism:sps_casing",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "62515C77E5CF82DA",
-      "title": "Nucleosynthesize a Stargaze",
+      "title": "&f&lNucleosynthesize a Stargaze&r",
       "description": [
-        "One AE2 Singularity + 10 antimatter units → one Stargaze Singularity in the Antiprotonic Nucleosynthesizer. Deploy a retained Void Core onto it, then use the Void-attuned Singularity with polonium for the next mechanism."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fOne AE2 Singularity + 10 antimatter units → one Stargaze Singularity in the Antiprotonic Nucleosynthesizer. Deploy a retained Void Core onto it, then use the Void-attuned Singularity with polonium for the next mechanism.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment."
       ],
       "dependencies": [
         "C0DAFECBF3411114"
@@ -82,13 +109,33 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_stargaze_singularity",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "440135A1AF97963D",
-      "title": "Singularity Mechanism",
+      "title": "&f&lSingularity Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds ars_nouveau:enchanters_sword. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Singularity Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds ars_nouveau:enchanters_sword. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Containment Mechanism.",
+        "&62. &fDeploy Pellet Polonium.",
+        "&63. &fDeploy Void-attuned Singularity.",
+        "&64. &fFinish under a Deployer holding Enchanters Sword.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "62515C77E5CF82DA"
@@ -109,13 +156,29 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_singularity_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "C3CF0249BE5B955C",
-      "title": "Singularity Frame",
+      "title": "&f&lSingularity Frame&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Fluix Block on the belt or depot.",
+        "&62. &fDeploy Singularity Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "440135A1AF97963D"
@@ -136,13 +199,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "kubejs:tk3_singularity_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "4071EFEAA0B4826C",
-      "title": "Power quantum production",
+      "title": "&f&lPower quantum production&r",
       "description": [
-        "Fusion requires native deuterium/tritium and ignition. SPS and quantum networks consume real energy; size the power line for sustained production."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fFusion requires native deuterium/tritium and ignition. SPS and quantum networks consume real energy; size the power line for sustained production.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment."
       ],
       "dependencies": [
         "C3CF0249BE5B955C"
@@ -163,13 +237,24 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "mekanismgenerators:fusion_reactor_controller",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "441218FF23DE39C8",
-      "title": "Link distant factories",
+      "title": "&f&lLink distant factories&r",
       "description": [
-        "64k storage and quantum bridges support distant production while preserving AE2’s native channels and link rules."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&f64k storage and quantum bridges support distant production while preserving AE2’s native channels and link rules.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment."
       ],
       "dependencies": [
         "C3CF0249BE5B955C"
@@ -190,13 +275,24 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "ae2:quantum_ring",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1EAF5BC1918535CA",
-      "title": "Defeat Ender Guardian",
+      "title": "&f&lDefeat Ender Guardian&r",
       "description": [
-        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fA player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment."
       ],
       "dependencies": [
         "B38C9EEBD3329786"
@@ -213,13 +309,29 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_void_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "4AFA996B86872BD4",
-      "title": "Keep the Void Core",
+      "title": "&f&lKeep the Void Core&r",
       "description": [
-        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBoss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fDo not route boss catalysts into void upgrades, disposal or general ingredient consumption.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "1EAF5BC1918535CA"
@@ -240,13 +352,32 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "kubejs:tk3_void_core",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "212C96D0B82DD548",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "C3CF0249BE5B955C",
@@ -265,13 +396,24 @@
       "x": 12.0,
       "y": 4.0,
       "icon": "kubejs:tk3_singularity_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "DD2408B49260ECA5",
-      "title": "Complete chapter 9",
+      "title": "&6&l◆ COMPLETE CHAPTER 9&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "212C96D0B82DD548"
@@ -302,13 +444,29 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "7F334B7B47C8B52F",
-      "title": "Boss encounters",
+      "title": "&f&lBoss encounters&r",
       "description": [
-        "Cataclysm, Bosses’ Rise and Mowzie’s Mobs remain combat destinations. Only the explicitly listed core-bearing bosses are mandatory milestones."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fCataclysm, Bosses’ Rise and Mowzie’s Mobs remain combat destinations. Only the explicitly listed core-bearing bosses are mandatory milestones.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBootstrap SPS and nucleosynthesis with Containment Frames before planning Singularity equipment.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "B38C9EEBD3329786"
@@ -324,7 +482,19 @@
       "x": 3.0,
       "y": 8.0,
       "icon": "kubejs:tk3_singularity_frame",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_9"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b09 ◆ &f&lSingularity · Quantum Industry&r",
+  "subtitle": [
+    "Singularity Frame and connected production"
   ]
 }

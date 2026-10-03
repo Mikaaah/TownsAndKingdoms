@@ -1,0 +1,211 @@
+{
+  "id": "584E332E61AD4639",
+  "group": "6EEE595FC184DBEA",
+  "icon": "kubejs:tk3_quest_job_fisherman",
+  "order_index": 42,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "69FEFC3A409A70DA",
+      "title": "&f&lAn ocean worth exploring&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fUpgrade Aquatic supplies selected aquatic world content. Create: Aquatic Ambitions connects ocean materials to the workshop. Bring breathing and travel supplies appropriate to the actual destination.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fStart with a nearby coast and record useful ocean locations.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "50BB52E0D910F12E",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_job_fisherman",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_aquatic"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "459C5A2011841F14",
+      "title": "&f&lCalcium-Rich Powder&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fProduce Calcium-Rich Powder for the aquatic metallurgy line.",
+        "",
+        "&fThe managed mixing route uses bone meal, kelp and water. Keep these inputs available for Prismarine Alloy production and follow the Chapter II metallurgy chain.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fLimestone milling can support the bone-meal buffer.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "69FEFC3A409A70DA",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "7DF00954B9F8A3AE",
+          "type": "item",
+          "item": {
+            "id": "create_aquatic_ambitions:calcium_rich_powder",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "create_aquatic_ambitions:calcium_rich_powder",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_aquatic"
+      ],
+      "subtitle": "&7ITEM GOAL · TIER 2+"
+    },
+    {
+      "id": "0F153B888AB61037",
+      "title": "&f&lPrismarine Alloy&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fProduce the aquatic workshop alloy.",
+        "",
+        "&fCompact prismarine shard, copper sheet and calcium powder into the managed alloy. Continue through the listed rods and Conduit Cage components rather than assuming every aquatic block shares a vanilla recipe.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve ocean materials for the first cage before spending them on decorations.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "69FEFC3A409A70DA",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "40C1F1CCB647F47A",
+          "type": "item",
+          "item": {
+            "id": "create_aquatic_ambitions:prismarine_alloy",
+            "count": 1
+          },
+          "count": 1,
+          "consume_items": false
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "create_aquatic_ambitions:prismarine_alloy",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_aquatic"
+      ],
+      "subtitle": "&7ITEM GOAL · TIER 2+"
+    },
+    {
+      "id": "13E186D8C7E38FDF",
+      "title": "&f&lRead the real channeling process&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild the managed Conduit Cage and use Aquatic Ambitions’ actual channeling recipes. Its conduit ingredient comes from ocean exploration; the alloy route does not remove that exploration step.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse the recipe tab to check each channeling operation’s real requirements.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "69FEFC3A409A70DA",
+        "B0A94968CD02DE8A"
+      ],
+      "tasks": [
+        {
+          "id": "5D8055B0C7A9A26A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_fisherman",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_aquatic"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 2+"
+    },
+    {
+      "id": "61B552308D3CE027",
+      "title": "&f&lA coastal supply station&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBuild a safe coastal store with fishing supplies, spare food and space for kelp and ocean materials. Connect a useful resource to the town storehouse.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a few exploration supplies in the station for the next trip.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "69FEFC3A409A70DA"
+      ],
+      "tasks": [
+        {
+          "id": "5E7191BC87C2DFD4",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_fisherman",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_aquatic"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lOceans & Aquatic Workshops&r",
+  "subtitle": [
+    "Copper tier · Upgrade Aquatic and Create: Aquatic Ambitions"
+  ]
+}

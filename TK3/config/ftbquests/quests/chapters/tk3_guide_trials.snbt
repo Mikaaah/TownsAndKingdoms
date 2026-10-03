@@ -1,0 +1,318 @@
+{
+  "id": "6024F84E209C476E",
+  "group": "6EEE595FC184DBEA",
+  "icon": "kubejs:tk3_quest_questender",
+  "order_index": 39,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "266C9190A20C837E",
+      "title": "&f&lKnow which trial matters&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe campaign uses Dragon Core, Verdant Sigil, Storm Core, Ember Core and Void Core. Their actual detected kill goals and rewards live in the matching Mechanical chapter. Other bosses remain optional adventures.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fUse this ledger for preparation and the main chapter for the detected kill task.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "5AB9F0D75EEDB58C",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "38CE5C2434B26BA1",
+      "title": "&f&lChapter V · The Ender Dragon&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the trial and prepare for its main-chapter quest.",
+        "",
+        "&fOpen the End through its native twelve-different-eyes requirement. The detected Dragon trial in Chapter V awards the permanent Dragon Core as a team reward.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCollect Dragon’s Breath while the fight gives you the opportunity; it supports later processing.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "615C051F462EFF41",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 5+"
+    },
+    {
+      "id": "79655B61663C7001",
+      "title": "&f&lChapter VI · The Twilight Lich&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the trial and prepare for its main-chapter quest.",
+        "",
+        "&fFollow Twilight Forest’s native progression to the Lich. A player kill gives the reusable Verdant Sigil through the authored loot rule.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClear the native earlier progression and read the boss’s defenses before starting the fight.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E",
+        "4B5E0820B553B7C9"
+      ],
+      "tasks": [
+        {
+          "id": "4A2823AECCCBBB4A",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 6+"
+    },
+    {
+      "id": "6B460A8899F6095C",
+      "title": "&f&lChapter VII · The Harbinger&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the trial and prepare for its main-chapter quest.",
+        "",
+        "&fPrepare for Cataclysm’s Harbinger encounter. A player kill gives the reusable Storm Core. Use the chapter’s detected trial to follow campaign progress.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPrepare your arena approach, recovery supplies and a clear way to retreat before engaging.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E",
+        "DCEB2AF9B398CAEB"
+      ],
+      "tasks": [
+        {
+          "id": "0343F908568EC7DF",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 7+"
+    },
+    {
+      "id": "62C05A8FFD64B4FB",
+      "title": "&f&lChapter VIII · Ignis&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the trial and prepare for its main-chapter quest.",
+        "",
+        "&fPrepare for the native Ignis encounter. A player kill gives the reusable Ember Core; it remains a catalyst for the final imprinting sequence.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPractice your current weapon and spells before entering the arena with valuable equipment.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E",
+        "BCC05513E2AD3BA9"
+      ],
+      "tasks": [
+        {
+          "id": "4DF6787478E959DD",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 8+"
+    },
+    {
+      "id": "578325F73C5CB9C7",
+      "title": "&f&lChapter IX · The Ender Guardian&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the trial and prepare for its main-chapter quest.",
+        "",
+        "&fThe Ender Guardian’s player-kill drop gives the permanent Void Core. The trial is available before the boss-gated Singularity Frame and supports Void-attuned Singularity production.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fDo not plan the core’s first acquisition around equipment that already needs that core.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E",
+        "91CC6BEFB3017B3F"
+      ],
+      "tasks": [
+        {
+          "id": "12340C4FE5BBEA77",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 9+"
+    },
+    {
+      "id": "509FDED7F0D4E1F4",
+      "title": "&f&lKeep the cores, repeat the production&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fCore-bearing deployment steps retain their core. The final Sovereign Keystone imprints all five onto a Sovereign Core and finishes with the ordinary Enchanter’s Sword. Repeated boss kills can supply additional parallel catalyst stations.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fStore cores in a labelled secure inventory and keep them out of void or disposal upgrades.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E",
+        "DD2408B49260ECA5"
+      ],
+      "tasks": [
+        {
+          "id": "21B9BD2FAE735DDF",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 10+"
+    },
+    {
+      "id": "2494E0F86479D34D",
+      "title": "&f&lExtra bosses and discoveries&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBosses’ Rise, Mowzie’s Mobs, Ice & Fire, Cataclysm and selected structure addons offer more encounters than the five mandatory campaign catalysts. Choose one suitable encounter and document its native reward.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOptional encounters do not award invented campaign cores.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "266C9190A20C837E"
+      ],
+      "tasks": [
+        {
+          "id": "30735D900199791B",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_trials"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lThe Boss Trial Ledger&r",
+  "subtitle": [
+    "Five permanent campaign catalysts · extra encounters stay optional"
+  ]
+}

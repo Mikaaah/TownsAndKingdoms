@@ -46,7 +46,7 @@ const injected={id:'foreign:alloy_injection',output:'create:andesite_alloy',inpu
 e.findRecipeIds=f=>natives.filter(x=>!x.removed&&matches(x,f)).map(x=>x.id);e.remove=f=>natives.filter(x=>x.id===f.id).forEach(x=>x.removed=true);
 sandbox.Java={loadClass(n){if(n.endsWith('RecipeFilter'))return {wrap(f){return {test(ctx){return matches(ctx.recipe,f)}}}};if(n.endsWith('RecipeMatchContext$Impl'))return class{constructor(recipe){this.recipe=recipe}};throw Error(n)}};
 run('kubejs/server_scripts/recipes/tk3_whitelist.js');assert(natives[0].removed);assert(!natives[1].removed);assert(natives[2].removed);assert(injected.removed);for(const r of registered.filter(x=>ids.has(x.id)))assert(!r.removed,'Whitelist removed approved '+r.id);
-const qs=new Map(),all=[];for(let t=1;t<=10;t++){const c=JSON.parse(fs.readFileSync(path.join(root,`config/ftbquests/quests/chapters/tk3_chapter_${t}.snbt`)));all.push(c.id);for(const q of c.quests){qs.set(q.id,q);all.push(q.id,...q.tasks.map(t=>t.id),...q.rewards.map(r=>r.id));}}assert.equal(new Set(all).size,all.length);assert.equal(qs.size,m.quest_count);
+const qs=new Map(),all=[];for(const chapter of [...m.chapters,...(m.guide_chapters||[])]){const c=JSON.parse(fs.readFileSync(path.join(root,`config/ftbquests/quests/chapters/${chapter.filename}.snbt`)));all.push(c.id);for(const q of c.quests){qs.set(q.id,q);all.push(q.id,...q.tasks.map(t=>t.id),...q.rewards.map(r=>r.id));}}assert.equal(new Set(all).size,all.length);assert.equal(qs.size,m.quest_count);
 for(let t=1;t<=10;t++){
  const q=qs.get(m.milestones[t]);assert.equal(q.rewards.length,1);
  const reward=q.rewards[0];assert.equal(reward.type,'item');assert.equal(reward.team_reward,false);assert.equal(reward.count,1);

@@ -1,18 +1,21 @@
 {
   "id": "B071418F68BCBE32",
-  "filename": "tk3_chapter_3",
   "group": "7427C3F538DF9198",
-  "title": "Brass · Into the Nether",
-  "subtitle": "Precision Machine and connected production",
   "icon": "kubejs:tk3_precision_machine",
   "order_index": 3,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "A9B0346B79583A4F",
-      "title": "Workshop plan · Precision Machine",
+      "title": "&f&lWorkshop plan · Precision Machine&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSecure Blaze access and heated mixing first. Crushing Wheels now improve the geological processing routes."
       ],
       "dependencies": [
         "60278B0905A64DC9"
@@ -21,20 +24,33 @@
         {
           "id": "4B6469E524F0A035",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_precision_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "6BDB4A8936AC6972",
-      "title": "Enter the Nether",
+      "title": "&f&lEnter the Nether&r",
       "description": [
-        "Chapter 2 unlocks Nether entry. Capture a Blaze in a burner before heated brass mixing."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fChapter 2 unlocks Nether entry. Capture a Blaze in a burner before heated brass mixing.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPrepare food, blocks and a return route before collecting a Blaze for your burner."
       ],
       "dependencies": [
         "A9B0346B79583A4F"
@@ -50,13 +66,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "kubejs:tk3_precision_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "55578F0A4F2C5CD2",
-      "title": "Heat the brass",
+      "title": "&f&lHeat the brass&r",
       "description": [
-        "Heat copper and zinc in the basin. Press brass sheets and finish electron tubes for the precision sequence."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fHeat copper and zinc in the basin. Press brass sheets and finish electron tubes for the precision sequence.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSecure Blaze access and heated mixing first. Crushing Wheels now improve the geological processing routes."
       ],
       "dependencies": [
         "6BDB4A8936AC6972"
@@ -77,13 +104,24 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "create:brass_ingot",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "9792FC7099812BE8",
-      "title": "Build smart logistics",
+      "title": "&f&lBuild smart logistics&r",
       "description": [
-        "Precision frames supply brass sorting, mechanical crafting and automatic stocking."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fPrecision frames supply brass sorting, mechanical crafting and automatic stocking.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSecure Blaze access and heated mixing first. Crushing Wheels now improve the geological processing routes."
       ],
       "dependencies": [
         "55578F0A4F2C5CD2"
@@ -104,13 +142,24 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "create:mechanical_arm",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "0D555F5F939C50E5",
-      "title": "Link the workshop",
+      "title": "&f&lLink the workshop&r",
       "description": [
-        "Build the native tube sections; use precision frames for entrances and accelerators. Supply power and test a short route first."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBuild the native tube sections; use precision frames for entrances and accelerators. Supply power and test a short route first.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSecure Blaze access and heated mixing first. Crushing Wheels now improve the geological processing routes."
       ],
       "dependencies": [
         "9792FC7099812BE8"
@@ -131,13 +180,33 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "create_hypertube:hypertube",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "05F3CCAAC57C931D",
-      "title": "Precision Mechanism",
+      "title": "&f&lPrecision Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Precision Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Sealed Mechanism.",
+        "&62. &fDeploy Brass Sheet.",
+        "&63. &fDeploy Electron Tube.",
+        "&64. &fFinish under a Deployer holding Sand Paper.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "0D555F5F939C50E5"
@@ -158,13 +227,29 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "create:precision_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "144420A2AA7C538F",
-      "title": "Precision Machine",
+      "title": "&f&lPrecision Machine&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Brass Casing on the belt or depot.",
+        "&62. &fDeploy Precision Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "05F3CCAAC57C931D"
@@ -185,13 +270,31 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "kubejs:tk3_precision_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1B10FC02E8ACC41C",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSecure Blaze access and heated mixing first. Crushing Wheels now improve the geological processing routes.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "144420A2AA7C538F"
@@ -207,13 +310,24 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_precision_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "B81077B20C8371D3",
-      "title": "Complete chapter 3",
+      "title": "&6&l◆ COMPLETE CHAPTER 3&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "1B10FC02E8ACC41C"
@@ -244,7 +358,21 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_3",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b03 ◆ &f&lBrass · Into the Nether&r",
+  "subtitle": [
+    "Precision Machine and connected production"
   ]
 }

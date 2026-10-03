@@ -1,0 +1,379 @@
+{
+  "id": "3E335D9130FCD84E",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_poison",
+  "order_index": 29,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "3E5926AFA864CD88",
+      "title": "&f&lOccultist at a glance&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fDecide whether this combat foundation suits you.",
+        "",
+        "&fBlood, Ender and Eldritch themes with a less forgiving health foundation. Read the three specializations below, then make your personal investment in the skilltree.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReading this page does not select the class. Compare the root’s bonuses and penalties on the actual skill node.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "2B6D75EB63002A54",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "32DFD41DD8691358",
+      "title": "&f&lBuild your foundation&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fYour five inner branches are Forbidden Study, Dark Reserve, Blood Rite, Void Study and Eldritch Study. Each branch contains four mandatory foundation nodes. Complete their requirements, class mastery and the specialization gate before entering a subclass.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTwenty inner foundation nodes are only part of the route; account for entry, root, mastery and gate nodes too.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "3E5926AFA864CD88"
+      ],
+      "tasks": [
+        {
+          "id": "34B3C57E7438DACF",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7674EB10E76B8916",
+      "title": "&f&lBlood Mage&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Blood Mage playstyle and its tradeoffs.",
+        "",
+        "&fMore Blood-school power; lower Holy power, maximum health and melee damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Sanguine Power · Sacrifice · Crimson Mastery.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRead health-related costs before casting. A low-health character needs a reliable recovery plan.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "32DFD41DD8691358"
+      ],
+      "tasks": [
+        {
+          "id": "192567626BC41400",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "4A0AF6D3A7CC114B",
+      "title": "&f&lBlood Mage · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Blood Mage constellation contains three independent fourteen-node paths: Sanguine Power · Sacrifice · Crimson Mastery. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "7674EB10E76B8916"
+      ],
+      "tasks": [
+        {
+          "id": "7694B5900BD272FB",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "4EFBB39BF1D8AC05",
+      "title": "&f&lNecromancer&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Necromancer playstyle and its tradeoffs.",
+        "",
+        "&fSupports summon damage when that attribute exists, otherwise the script uses its spell-power fallback. More mana; lower Fire, Ice and Lightning power. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Summoning · Grave Reserve · Lord of the Dead.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe tree strengthens supported summons; obtain and test the actual summon spell separately.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "32DFD41DD8691358"
+      ],
+      "tasks": [
+        {
+          "id": "0EC55E06058A5E18",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7CB5F3813037396F",
+      "title": "&f&lNecromancer · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Necromancer constellation contains three independent fourteen-node paths: Summoning · Grave Reserve · Lord of the Dead. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "4EFBB39BF1D8AC05"
+      ],
+      "tasks": [
+        {
+          "id": "4D054BC8BF4167AB",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "12A56C2747B4EC9B",
+      "title": "&f&lVoidcaller&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Voidcaller playstyle and its tradeoffs.",
+        "",
+        "&fMore Eldritch power, Ender power and mana; lower armor, health and melee damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Eldritch Power · Void Power · Abyssal Reserve.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCarry a dependable escape tool and check which spells actually use your chosen school.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "32DFD41DD8691358"
+      ],
+      "tasks": [
+        {
+          "id": "75E1D329D0ED2561",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "10C22AE922026477",
+      "title": "&f&lVoidcaller · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Voidcaller constellation contains three independent fourteen-node paths: Eldritch Power · Void Power · Abyssal Reserve. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "12A56C2747B4EC9B"
+      ],
+      "tasks": [
+        {
+          "id": "42E4B2CC1D33BC6E",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "639049047227E96C",
+      "title": "&f&lTry the playstyle&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fTest your chosen spell school safely and compare recovery options before using health-trading nodes.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fEquip suitable gear you already have.",
+        "&62. &fPractice in the town training yard.",
+        "&63. &fWrite down one strength and one weakness you noticed.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe activity check records your practice. It does not require you to spend points or commit to this class.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "3E5926AFA864CD88"
+      ],
+      "tasks": [
+        {
+          "id": "276378EE64EBB500",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_poison",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_occultist",
+        "tk3_class_occultist"
+      ],
+      "shape": "square",
+      "hide_dependency_lines": "true",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&5◆ &f&lPath of the Occultist&r",
+  "subtitle": [
+    "Class foundation · compare all three specializations"
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "id": "60C8A83DFEFA493E",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_questequipment",
+  "order_index": 26,
+  "default_hide_dependency_lines": false,
+  "quests": [
+    {
+      "id": "5F9AAF90D47C3D5D",
+      "title": "&f&lRogue at a glance&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fDecide whether this combat foundation suits you.",
+        "",
+        "&fMovement, critical hits and evasive melee play. Read the three specializations below, then make your personal investment in the skilltree.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReading this page does not select the class. Compare the root’s bonuses and penalties on the actual skill node.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "2CE559A5E6CADBF8",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1CC612DA36FDE966",
+      "title": "&f&lBuild your foundation&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fYour five inner branches are Light Feet, Dirty Fighting, Precision, Evasion and Quick Hands. Each branch contains four mandatory foundation nodes. Complete their requirements, class mastery and the specialization gate before entering a subclass.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fTwenty inner foundation nodes are only part of the route; account for entry, root, mastery and gate nodes too.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "5F9AAF90D47C3D5D"
+      ],
+      "tasks": [
+        {
+          "id": "6D5C03B03BF53B65",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "41ADEA405950CD9F",
+      "title": "&f&lAssassin&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Assassin playstyle and its tradeoffs.",
+        "",
+        "&fMore movement and critical chance; lower maximum health. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Silent Step · Killer Instinct · Deathblow.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fAvoid committing to a long attack while your escape route is blocked.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1CC612DA36FDE966"
+      ],
+      "tasks": [
+        {
+          "id": "561B9E33622556A7",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "50BE2FC5D1CF019B",
+      "title": "&f&lAssassin · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Assassin constellation contains three independent fourteen-node paths: Silent Step · Killer Instinct · Deathblow. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "41ADEA405950CD9F"
+      ],
+      "tasks": [
+        {
+          "id": "5E6D4BD38520D693",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "37F2FFA6C49F5A43",
+      "title": "&f&lDuelist&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Duelist playstyle and its tradeoffs.",
+        "",
+        "&fMore critical damage and dodge chance; lower armor. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Finesse · Footwork · Riposte.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fDodge chance is a probability, so keep practicing movement and attack timing.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1CC612DA36FDE966"
+      ],
+      "tasks": [
+        {
+          "id": "2EE1386B4E14F768",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "50FD3F7DA938F013",
+      "title": "&f&lDuelist · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Duelist constellation contains three independent fourteen-node paths: Finesse · Footwork · Riposte. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "37F2FFA6C49F5A43"
+      ],
+      "tasks": [
+        {
+          "id": "49CB75FC13373C83",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "0E79BA0128146429",
+      "title": "&f&lShadowblade&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand the Shadowblade playstyle and its tradeoffs.",
+        "",
+        "&fMore critical chance and critical damage; lower armor and projectile damage. These are the subclass’s starting tradeoffs and direction, not your character’s final stat totals.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCompare the subclass root with your other two options.",
+        "&62. &fInspect its three paths: Veil · Shadow Crit · Void Edge.",
+        "&63. &fChoose and invest in the personal skilltree when you are ready.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe Void Edge path includes Ender-school support; check the actual ability and item school.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "1CC612DA36FDE966"
+      ],
+      "tasks": [
+        {
+          "id": "77FEB0740838ACB1",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "2B2B80848BF8E156",
+      "title": "&f&lShadowblade · three paths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe Shadowblade constellation contains three independent fourteen-node paths: Veil · Shadow Crit · Void Edge. Optional synergy notables support combinations; the all-path apex checks all three branches.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFinish each branch through its own prerequisites; a synergy node is not a shortcut to a different apex.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "0E79BA0128146429"
+      ],
+      "tasks": [
+        {
+          "id": "067325E3D1DA5D90",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1F77675392465B27",
+      "title": "&f&lTry the playstyle&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse the training yard to test short attack windows, disengagement and stamina or cooldown recovery.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fEquip suitable gear you already have.",
+        "&62. &fPractice in the town training yard.",
+        "&63. &fWrite down one strength and one weakness you noticed.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe activity check records your practice. It does not require you to spend points or commit to this class.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "5F9AAF90D47C3D5D"
+      ],
+      "tasks": [
+        {
+          "id": "71B4AD6BB7F1E84A",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_questequipment",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_class_rogue",
+        "tk3_class_rogue"
+      ],
+      "shape": "square",
+      "hide_dependency_lines": "true",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lPath of the Rogue&r",
+  "subtitle": [
+    "Class foundation · compare all three specializations"
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "id": "5F960AF93FE7220C",
+  "group": "56F01DA5C0AF1307",
+  "icon": "kubejs:tk3_quest_logo",
+  "order_index": 20,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "75358291ED74276A",
+      "title": "&f&lYour kingdom starts here&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fFind your main progression route and the supporting guides.",
+        "",
+        "&fEngineering, magic, exploration and settlement building share one adventure. Chapters I–X are the production spine. The other categories are guides and optional projects you can revisit at any time.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fRead this welcome page.",
+        "&62. &fFind the six category headings in the chapter sidebar.",
+        "&63. &fOpen Chapter I and locate its workshop plan.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOpen Mechanical Quests when you want the next machine; open Character Paths when choosing your build.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "72EAF2BF73D452EA",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "249C1CC92546E539",
+      "title": "&f&lReading the quest board&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fRound item nodes detect an item in your inventory. Guide checkmarks mean you have read the explanation; activity checkmarks mean you have completed the described setup. Large gold milestones unlock the next workshop tier.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReading guides is safe for the whole team. You can compare all classes without selecting them.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fA checkmark does not automatically test a farm, choose a class or award skill points.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "33A394DC59000798",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7C1873AD990A9E2E",
+      "title": "&f&lClaim your workshop rewards&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fItem goals do not consume your materials. Each chapter milestone awards its named unbreakable finishing tool once per player. Rewards use manual claiming, so revisit completed milestones and collect your own tool.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fOpen a completed milestone.",
+        "&62. &fClick its reward to claim it.",
+        "&63. &fStore your workshop tools separately from adventuring gear.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPut the reward tool into the finishing Deployer; stock replaceable tools while you are still building the chapter.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "247323417B206992",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "1E81CE264FFD66B0",
+      "title": "&f&lTeams and personal choices&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe campaign uses FTB team quest progress. Workshop stages synchronize with completed milestones when a teammate next logs in. Your skilltree class, subclass and profession investments remain personal.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fAgree on who handles crops, processing and exploration, then share the finished supplies.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fA teammate completing a class guide does not choose that class for you.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "601B128FBD469AA6",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "0DDD493E88BF81ED",
+      "title": "&f&lSet up your controls&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fSeveral mods add controls for quests, the map, parkour, combat and the skilltree. Open Minecraft Controls and search each mod name. Resolve conflicting keybinds before testing combat or a new movement ability.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCheck FTB Quests and map controls.",
+        "&62. &fCheck Epic Fight, ParCool and spell controls.",
+        "&63. &fCheck the skilltree shortcut.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fSearch Passive Skill Tree for the class tree. The supplied tree notes O as its intended shortcut, but your actual keybind may differ.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "70A7441671529B1D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "5040D9B1F28AC74F",
+      "title": "&f&lRead the actual recipe&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse JEI to look up an item’s recipe and uses, then check every process tab. This pack changes important machine and mechanism recipes. Item names alone do not tell you which frame or processing method is required.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fLook up Algal Blend.",
+        "&62. &fCompare its manual and mixing routes.",
+        "&63. &fLook up the uses of a Kinetic Machine.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fJEI bookmarks make a useful shopping list. Keep the casing, mechanism and finishing tool together in your plan.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "3AF5A55863CA195C",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "41296AB2FFE6CF47",
+      "title": "&f&lLearn a machine with Ponder&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fSupported Create items have in-game Ponder scenes for placement, rotation and interactions. Follow the tooltip’s Ponder shortcut. Use JEI for the pack’s exact ingredients and the recipe workshop on the official wiki for assembly order.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fInspect a Deployer tooltip.",
+        "&62. &fOpen its available Ponder scene.",
+        "&63. &fCompare the machine explanation with its T&K3 recipe.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fPonder explains the machine; the T&K3 recipe entry tells you what this pack requires.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "5CF3CC2B8C7210DA",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "41875AF043D7B2EA",
+      "title": "&f&lRead the block in front of you&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fJade supplies block and entity information when available. Tooltips, machine screens and recipe viewers together help identify a stalled process: wrong ingredient, missing power, wrong side or an unavailable tier.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCheck the destination inventory first when a belt stops moving.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "15D194747FF1073A",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "333C4033DAE40302",
+      "title": "&f&lMark home and protect it&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fUse the selected map and FTB Chunks tools to mark home, claim your workshop and review team permissions. Claims, loading limits and server permissions depend on the instance settings.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fCreate a home waypoint.",
+        "&62. &fReview your team’s claim permissions.",
+        "&63. &fKeep a clear route to the workshop.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fName waypoints for farms, portals and unfinished projects, not just your main house.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "1511C274AE3A94AF",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "03D6646CA4207630",
+      "title": "&f&lKnow the workshop gates&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fAndesite starts the factory; Copper adds fields and fluids; Brass opens the Nether. Chapter IV adds AE2 and Mekanism. Chapter V opens End progression. Chemistry, expeditions, containment, quantum industry and the Sovereign project follow.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA side guide may show a future project. Its TIER label and dependency indicate when you can complete it.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "550CC25C1DBFB242",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 9.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "5319A38A948520A6",
+      "title": "&f&lA board full of useful symbols&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe supplied quest and information artwork is used as navigation art throughout this book. Books introduce guides, maps mark expeditions, job icons mark professions and large milestone nodes mark chapter completion.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fQuest/info icons are reading aids. They are not ingredients or items you must craft for progression.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "75358291ED74276A"
+      ],
+      "tasks": [
+        {
+          "id": "09185BE6332D29E6",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 12.0,
+      "icon": "kubejs:tk3_quest_logo",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_tutorial"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lWelcome to Towns & Kingdoms&r",
+  "subtitle": [
+    "Start here · quest types, controls and your first workshop"
+  ]
+}

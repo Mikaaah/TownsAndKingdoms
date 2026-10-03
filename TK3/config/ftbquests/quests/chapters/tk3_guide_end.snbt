@@ -1,0 +1,246 @@
+{
+  "id": "79EFB045B403EA96",
+  "group": "6EEE595FC184DBEA",
+  "icon": "kubejs:tk3_quest_questender",
+  "order_index": 41,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "037C5A3B2C450C47",
+      "title": "&f&lPrepare before crossing&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fThe End opens after Chapter IV. End Remastered still requires twelve different valid eyes. Four eyes have authored Inductive Mechanism deployment routes; other unique eyes retain their native discovery sources.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a list of distinct eye types instead of collecting twelve copies of the same one.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "39EC1FD3956616FD",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_end"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "0CA94B7CF5EEA189",
+      "title": "&f&lTwelve different eyes&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fInspect the four managed eye deployments in Chapter V and gather the remaining valid types through exploration. Check the portal’s native acceptance rules before committing your collection.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fBuild several exploration goals around eye types you are still missing.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "037C5A3B2C450C47",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "7EE0A55CA99E981D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_end"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 5+"
+    },
+    {
+      "id": "7060026E8EA9C832",
+      "title": "&f&lThe first Dragon expedition&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fPrepare blocks, food, equipment, free bottle space and a return plan. Follow the detected Chapter V Dragon trial and manually claim its Dragon Core reward after the kill is recorded.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep the core for production; the first core comes from the quest reward rather than a guessed Dragon loot recipe.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "037C5A3B2C450C47",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "4471667E13E2CE97",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_end"
+      ],
+      "subtitle": "&7FIELD GUIDE · TIER 5+"
+    },
+    {
+      "id": "78DCE5B1B11AAE91",
+      "title": "&f&lBring back Dragon’s Breath&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fCollect Dragon’s Breath during the fight. Create: Dragons Plus uses its native breath filling, emptying and ending fan processes, with the managed fluid hatch supporting transport.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep empty bottles ready before the fight and sort the collected breath into its own supply.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "037C5A3B2C450C47",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "66DE2105C0A284E3",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 3.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_end"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 5+"
+    },
+    {
+      "id": "6F9E0541FC3D77AA",
+      "title": "&f&lGrow the End at home&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBring chorus supplies and End Stone home, then build a repeatable growing and harvest area. Chorus supports the Ender and chemical workshop layers.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fReserve planting stock before feeding chorus to industrial processing.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "037C5A3B2C450C47",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "68DFFDAF3025BCEB",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -3.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_end"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 5+"
+    },
+    {
+      "id": "5979654977110DDE",
+      "title": "&f&lExplore the End’s new palette&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fBetterEnd: New Dawn, Nullscape and the selected End changes provide destinations and materials beyond the first island. Plan travel, record routes and bring home a building or crafting discovery.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a dependable return option before extending a remote exploration route.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "037C5A3B2C450C47",
+        "1CD504854E287D44"
+      ],
+      "tasks": [
+        {
+          "id": "100AE796047B5CAA",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_questender",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_end"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY · TIER 5+"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lBeyond the End Portal&r",
+  "subtitle": [
+    "Chapter V · unique eyes, the Dragon and renewable End materials"
+  ]
+}

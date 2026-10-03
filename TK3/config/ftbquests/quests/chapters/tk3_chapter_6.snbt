@@ -1,18 +1,21 @@
 {
   "id": "167A43A421FCB160",
-  "filename": "tk3_chapter_6",
   "group": "7427C3F538DF9198",
-  "title": "Reinforced · Chemical Engineering",
-  "subtitle": "Chemical Machine and connected production",
   "icon": "kubejs:tk3_chemical_machine",
   "order_index": 6,
   "default_hide_dependency_lines": false,
   "quests": [
     {
       "id": "34A1D2007BD12EBC",
-      "title": "Workshop plan · Chemical Machine",
+      "title": "&f&lWorkshop plan · Chemical Machine&r",
       "description": [
-        "Follow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player."
+        "&d&l◆ GOAL&r",
+        "&fFollow the workshop plan and prepare this tier’s production line.",
+        "",
+        "&fFollow this chapter’s material and machine path. The previous milestone unlocks this tier. Optional quests introduce supporting systems; milestone rewards grant one unbreakable tool per player.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding."
       ],
       "dependencies": [
         "4B5E0820B553B7C9"
@@ -21,20 +24,33 @@
         {
           "id": "451A12F7D38063F2",
           "type": "checkmark",
-          "title": "Confirm the working setup"
+          "title": "Read this workshop plan"
         }
       ],
       "optional": false,
       "x": 0.0,
       "y": 0.0,
       "icon": "kubejs:tk3_chemical_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "6F63C8F917E28A7B",
-      "title": "Grow the chemical feedstock",
+      "title": "&f&lGrow the chemical feedstock&r",
       "description": [
-        "Farm crops → crusher Bio Fuel → PRC with water and hydrogen → substrate/ethylene. Separate water into hydrogen and oxygen; liquefy ethylene and run the second PRC recipe for HDPE. Three pellets enrich into one sheet."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fFarm crops → crusher Bio Fuel → PRC with water and hydrogen → substrate/ethylene. Separate water into hydrogen and oxygen; liquefy ethylene and run the second PRC recipe for HDPE. Three pellets enrich into one sheet.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding."
       ],
       "dependencies": [
         "34A1D2007BD12EBC"
@@ -55,13 +71,24 @@
       "x": 3.0,
       "y": 0.0,
       "icon": "mekanism:hdpe_sheet",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "91EF9AE09B0D192B",
-      "title": "Forge Shadow Steel",
+      "title": "&f&lForge Shadow Steel&r",
       "description": [
-        "Heat two steel, obsidian and chorus into two Shadow Steel. Press sheets; combine them with HDPE in the Reinforced Mechanism sequence."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fHeat two steel, obsidian and chorus into two Shadow Steel. Press sheets; combine them with HDPE in the Reinforced Mechanism sequence.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding."
       ],
       "dependencies": [
         "6F63C8F917E28A7B"
@@ -82,13 +109,33 @@
       "x": 6.0,
       "y": 0.0,
       "icon": "kubejs:tk3_shadow_sheet",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "C4AE0A7DB2DE5D00",
-      "title": "Reinforced Mechanism",
+      "title": "&f&lReinforced Mechanism&r",
       "description": [
-        "Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds mekanismtools:steel_paxel. Ordinary tools wear; the chapter reward version is unbreakable."
+        "&d&l◆ GOAL&r",
+        "&fComplete the Reinforced Mechanism assembly in the exact listed order.",
+        "",
+        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds mekanismtools:steel_paxel. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStart with Ender Mechanism.",
+        "&62. &fDeploy Shadow Steel Sheet.",
+        "&63. &fDeploy Hdpe Sheet.",
+        "&64. &fFinish under a Deployer holding Steel Paxel.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
       ],
       "dependencies": [
         "91EF9AE09B0D192B"
@@ -109,13 +156,29 @@
       "x": 9.0,
       "y": 0.0,
       "icon": "kubejs:tk3_reinforced_mechanism",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "1998D959F28147AB",
-      "title": "Chemical Machine",
+      "title": "&f&lChemical Machine&r",
       "description": [
-        "Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fDeploy this tier’s mechanism onto its matching casing. Follow the machine’s JEI recipe or the stonecutter output menu for the next equipment choice.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fPut Steel Casing on the belt or depot.",
+        "&62. &fDeploy Reinforced Mechanism onto it.",
+        "&63. &fStonecut the frame into the machine you need.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
       ],
       "dependencies": [
         "C4AE0A7DB2DE5D00"
@@ -136,13 +199,24 @@
       "x": 12.0,
       "y": 0.0,
       "icon": "kubejs:tk3_chemical_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "8BA3822AB975EA8B",
-      "title": "Control the gas network",
+      "title": "&f&lControl the gas network&r",
       "description": [
-        "Chemical Machines build advanced chemical equipment. Evaporation produces brine; separating brine gives chlorine. Infuse hydrogen + chlorine into hydrogen chloride."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fChemical Machines build advanced chemical equipment. Evaporation produces brine; separating brine gives chlorine. Infuse hydrogen + chlorine into hydrogen chloride.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding."
       ],
       "dependencies": [
         "1998D959F28147AB"
@@ -163,13 +237,24 @@
       "x": 0.0,
       "y": 4.0,
       "icon": "mekanism:chemical_infuser",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "23EDF4E48269DD0E",
-      "title": "Store chemicals in ME",
+      "title": "&f&lStore chemicals in ME&r",
       "description": [
-        "Craft the chemical housing with Chemical Machines. Combine with an AE2 component; native preserving cell upgrades keep their stored chemicals."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fCraft the chemical housing with Chemical Machines. Combine with an AE2 component; native preserving cell upgrades keep their stored chemicals.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding."
       ],
       "dependencies": [
         "1998D959F28147AB"
@@ -190,13 +275,24 @@
       "x": 3.0,
       "y": 4.0,
       "icon": "appmek:chemical_storage_cell_1k",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "D5FDACA2A14DE92D",
-      "title": "Defeat Lich",
+      "title": "&f&lDefeat Lich&r",
       "description": [
-        "A player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fA player kill awards the reusable core. Keep it for imprinting; repeated kills add parallel production capacity.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding."
       ],
       "dependencies": [
         "34A1D2007BD12EBC"
@@ -213,13 +309,29 @@
       "x": 6.0,
       "y": 4.0,
       "icon": "kubejs:tk3_verdant_sigil",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "B507100C88BFAFB1",
-      "title": "Keep the Verdant Sigil",
+      "title": "&f&lKeep the Verdant Sigil&r",
       "description": [
-        "Boss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer."
+        "&d&l◆ GOAL&r",
+        "&fComplete the detected item or boss goal below.",
+        "",
+        "&fBoss cores are permanent catalysts. Retained deployment recipes leave the core in the Deployer.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fDo not route boss catalysts into void upgrades, disposal or general ingredient consumption.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
       ],
       "dependencies": [
         "D5FDACA2A14DE92D"
@@ -240,13 +352,32 @@
       "x": 9.0,
       "y": 4.0,
       "icon": "kubejs:tk3_verdant_sigil",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "hide_dependency_lines": "true",
+      "subtitle": "&7SIDE PATH"
     },
     {
       "id": "548A5B1D466FBE57",
-      "title": "Run the workshop continuously",
+      "title": "&f&lRun the workshop continuously&r",
       "description": [
-        "Demonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion."
+        "&d&l◆ GOAL&r",
+        "&fBuild and test the setup described below.",
+        "",
+        "&fDemonstrate a complete material → mechanism → casing/frame → machine line. Set filters, buffers and output handling; confirm it runs without manual ingredient insertion.",
+        "",
+        "&6&l◇ HOW TO&r",
+        "&61. &fStock the raw-material buffers.",
+        "&62. &fRun material → mechanism → casing/frame → machine.",
+        "&63. &fTest repeated batches and output collection without hand-feeding.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fFirst PRCs, separators and chemical buffers use Ender Machines; finish the native HDPE chain before expanding.",
+        "",
+        "&7Activity check · Mark this after completing the described project."
       ],
       "dependencies": [
         "1998D959F28147AB",
@@ -265,13 +396,24 @@
       "x": 12.0,
       "y": 4.0,
       "icon": "kubejs:tk3_chemical_machine",
-      "rewards": []
+      "rewards": [],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6"
+      ],
+      "subtitle": "&7CAMPAIGN"
     },
     {
       "id": "DCEB2AF9B398CAEB",
-      "title": "Complete chapter 6",
+      "title": "&6&l◆ COMPLETE CHAPTER 6&r",
       "description": [
-        "Claim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join."
+        "&d&l◆ GOAL&r",
+        "&fComplete this chapter and claim your permanent workshop tool.",
+        "",
+        "&fClaim your unbreakable workshop tool. Completing this chapter unlocks the next tier for the team, including offline players when they next join.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fClaim your own reward manually. The tool is awarded once per player, even on a shared team."
       ],
       "dependencies": [
         "548A5B1D466FBE57"
@@ -302,7 +444,21 @@
           "count": 1,
           "team_reward": false
         }
-      ]
+      ],
+      "tags": [
+        "tk3_campaign",
+        "tk3_tier_6",
+        "tk3_milestone"
+      ],
+      "shape": "hexagon",
+      "size": 1.5,
+      "subtitle": "&7CAMPAIGN"
     }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&b06 ◆ &f&lReinforced · Chemical Engineering&r",
+  "subtitle": [
+    "Chemical Machine and connected production"
   ]
 }

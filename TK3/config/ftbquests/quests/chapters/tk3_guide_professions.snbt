@@ -1,0 +1,580 @@
+{
+  "id": "3F65F3CEC3E922EA",
+  "group": "575460F7017FAB16",
+  "icon": "kubejs:tk3_quest_jobs",
+  "order_index": 30,
+  "default_hide_dependency_lines": true,
+  "quests": [
+    {
+      "id": "259781C02408F89F",
+      "title": "&f&lChoose useful everyday strengths&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fMining, Logging, Hunting, Exploration, Fishing, Farming and Crafting are skilltree investments alongside your combat build. You may take up to three profession masteries and up to three of the six focus nodes in each profession.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fYou can still do every activity without specializing in its profession.",
+        "",
+        "&c&l! WATCH OUT&r",
+        "&fThese activities do not implement a separate profession XP counter or award automatic skill points.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [],
+      "tasks": [
+        {
+          "id": "276AAE8BA3FBAA90",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 0.0,
+      "icon": "kubejs:tk3_quest_jobs",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "hexagon",
+      "size": 1.4,
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "43B7C98685A78B21",
+      "title": "&f&lMining · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fExcavation and mining speed, ore-loot duplication chance and interaction reach. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCheck a loot-duplication node’s ore conditions. It is a chance, not a guaranteed double output.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "4A30C3DB5B6A57C5",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_miner",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "3062973BDD1D3DE6",
+      "title": "&f&lMining · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPrepare a marked mining route, sort its haul and reserve material for the next workshop.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCheck a loot-duplication node’s ore conditions. It is a chance, not a guaranteed double output.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "43B7C98685A78B21"
+      ],
+      "tasks": [
+        {
+          "id": "6E503A04518E7D00",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_miner",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "42AFF00188E3E569",
+      "title": "&f&lLogging · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fAxe-based chopping, movement and axe durability. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA Create saw’s output and a player’s axe-conditioned bonus are different systems.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "625144B310A0508D",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_lumberjack",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7E2111FE15A4D4D7",
+      "title": "&f&lLogging · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fHarvest a wood supply, save the saplings and establish a repeatable replanting area.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fA Create saw’s output and a player’s axe-conditioned bonus are different systems.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "42AFF00188E3E569"
+      ],
+      "tasks": [
+        {
+          "id": "62F492A005279E77",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_lumberjack",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "167870074F6EE1CA",
+      "title": "&f&lHunting · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fMovement, mob-loot duplication chance and mob experience. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a retreat route and reserve some inventory space for unexpected drops.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "3A71218B53A42B6A",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 3.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "7A716A04CE3C0155",
+      "title": "&f&lHunting · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fComplete a planned hunting trip and bring useful mob supplies back to the storehouse.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep a retreat route and reserve some inventory space for unexpected drops.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "167870074F6EE1CA"
+      ],
+      "tasks": [
+        {
+          "id": "692526220B274B50",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 6.0,
+      "icon": "kubejs:tk3_quest_job_fighter",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "236F7557FA1A69B7",
+      "title": "&f&lExploration · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fTravel speed, chest-loot duplication chance and luck. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep the discovery’s location even when you cannot clear the structure yet.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "4726163467415CF2",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 10.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "261EBD4AB1F33DDE",
+      "title": "&f&lExploration · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fFind a structure, record its location and return with a documented discovery.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fKeep the discovery’s location even when you cannot clear the structure yet.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "236F7557FA1A69B7"
+      ],
+      "tasks": [
+        {
+          "id": "0A4D4C395C7EC30D",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 13.0,
+      "icon": "kubejs:tk3_quest_job_explorer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "51E7F92BBED743D6",
+      "title": "&f&lFishing · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fFishing-loot duplication chance, luck and fishing-rod durability. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRead the node and rod conditions; a fishing bonus does not guarantee a particular rare catch.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "0A6B03C6A9E07711",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 10.0,
+      "icon": "kubejs:tk3_quest_job_fisherman",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "4AB66F82187FA199",
+      "title": "&f&lFishing · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fSet up a fishing spot and stock fish for meals or recipes your team uses.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fRead the node and rod conditions; a fishing bonus does not guarantee a particular rare catch.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "51E7F92BBED743D6"
+      ],
+      "tasks": [
+        {
+          "id": "71A0DC1AA7119837",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 0.0,
+      "y": 13.0,
+      "icon": "kubejs:tk3_quest_job_fisherman",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "69D0AC2B863C04A7",
+      "title": "&f&lFarming · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fInteraction reach, health support for farm work and hoe-conditioned breaking speed. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe current profession does not give an automatic crop-growth-rate bonus.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "15EA167B4A126654",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 10.0,
+      "icon": "kubejs:tk3_quest_job_farmer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "40F5F6E2BFEE5B81",
+      "title": "&f&lFarming · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fCreate crop and animal-feed reserves that remain stocked after the factory takes its share.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fThe current profession does not give an automatic crop-growth-rate bonus.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "69D0AC2B863C04A7"
+      ],
+      "tasks": [
+        {
+          "id": "50EC7154D3F55BF8",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": 4.0,
+      "y": 13.0,
+      "icon": "kubejs:tk3_quest_job_farmer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    },
+    {
+      "id": "6E889267FD6C3269",
+      "title": "&f&lCrafting · profession&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fUnderstand this part of your adventure.",
+        "",
+        "&fRepair efficiency, free-enchant chance and mining-equipment durability. Inspect the three branches and six focus options in your personal tree before committing points.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCrafting profession nodes do not remove recipe ingredients or provide free mechanisms.",
+        "",
+        "&7Reading check · Mark this when you understand the guide.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "259781C02408F89F"
+      ],
+      "tasks": [
+        {
+          "id": "3DF56275D3D3463E",
+          "type": "checkmark",
+          "title": "Read and understand this guide"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 17.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "subtitle": "&7FIELD GUIDE"
+    },
+    {
+      "id": "360F0A0299C21CFB",
+      "title": "&f&lCrafting · field assignment&r",
+      "description": [
+        "&d&l◆ GOAL&r",
+        "&fComplete the project described below.",
+        "",
+        "&fPrepare a repair and equipment station, then maintain tools used by the workshop and explorers.",
+        "",
+        "&a&l✦ TIP&r",
+        "&fCrafting profession nodes do not remove recipe ingredients or provide free mechanisms.",
+        "",
+        "&7Activity check · Mark this after completing the described project.",
+        "",
+        "&7Optional branch · Supports your journey alongside the main campaign."
+      ],
+      "dependencies": [
+        "6E889267FD6C3269"
+      ],
+      "tasks": [
+        {
+          "id": "3C75E2453412DC17",
+          "type": "checkmark",
+          "title": "Complete this activity"
+        }
+      ],
+      "optional": true,
+      "x": -4.0,
+      "y": 20.0,
+      "icon": "kubejs:tk3_quest_hammer",
+      "rewards": [],
+      "tags": [
+        "tk3_guide",
+        "tk3_professions"
+      ],
+      "shape": "square",
+      "subtitle": "&7ACTIVITY"
+    }
+  ],
+  "default_quest_shape": "circle",
+  "default_quest_size": 1.0,
+  "title": "&d◆ &f&lProfessions & Everyday Work&r",
+  "subtitle": [
+    "Seven profession islands · activities that support your kingdom"
+  ]
+}
