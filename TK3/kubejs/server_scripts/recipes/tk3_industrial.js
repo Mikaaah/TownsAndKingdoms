@@ -46,44 +46,136 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 5 / Generator devices [------------------------<-//
 
-    // Solar Generator / Shapeless
-    event.shapeless(
-        "mekanismgenerators:solar_generator",
-        [
-            "kubejs:tk3_ender_machine",
-            "mekanism:alloy_infused",
-            "minecraft:glass"
-        ])
+    // Solar Generator / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "#": {
+                    "item": "mekanismgenerators:solar_panel"
+                },
+                "A": {
+                    "tag": "mekanism:alloys/infused"
+                },
+                "E": {
+                    "item": "mekanism:energy_tablet"
+                },
+                "I": {
+                    "tag": "c:ingots/iron"
+                },
+                "O": {
+                    "tag": "c:ingots/osmium"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_ender_machine"
+                }
+            },
+            "pattern": [
+                "###",
+                "ZIA",
+                "OEO"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:solar_generator"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_solar_generator");
 
-    // Advanced Solar Generator / Shapeless
-    event.shapeless(
-        "mekanismgenerators:advanced_solar_generator",
-        [
-            "kubejs:tk3_ender_machine",
-            "mekanism:alloy_infused",
-            "minecraft:glass"
-        ])
+    // Advanced Solar Generator / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "A": {
+                    "tag": "mekanism:alloys/infused"
+                },
+                "I": {
+                    "tag": "c:ingots/iron"
+                },
+                "P": {
+                    "item": "mekanismgenerators:solar_generator"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_ender_machine"
+                }
+            },
+            "pattern": [
+                "PZP",
+                "PAP",
+                "III"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:advanced_solar_generator"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_advanced_solar_generator");
 
-    // Wind Generator / Shapeless
-    event.shapeless(
-        "mekanismgenerators:wind_generator",
-        [
-            "kubejs:tk3_ender_machine",
-            "mekanism:alloy_infused",
-            "minecraft:glass"
-        ])
+    // Wind Generator / Native
+    event.custom({
+            "type": "mekanism:mek_data",
+            "category": "misc",
+            "key": {
+                "C": {
+                    "tag": "c:circuits/basic"
+                },
+                "E": {
+                    "item": "mekanism:energy_tablet"
+                },
+                "O": {
+                    "tag": "c:ingots/osmium"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_ender_machine"
+                }
+            },
+            "pattern": [
+                " O ",
+                "OZO",
+                "ECE"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:wind_generator"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_wind_generator");
 
-    // Bio Generator / Shapeless
-    event.shapeless(
-        "mekanismgenerators:bio_generator",
-        [
-            "kubejs:tk3_ender_machine",
-            "mekanism:alloy_infused",
-            "minecraft:glass"
-        ])
+    // Bio Generator / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "A": {
+                    "tag": "mekanism:alloys/infused"
+                },
+                "B": {
+                    "tag": "c:fuels/bio"
+                },
+                "C": {
+                    "tag": "c:circuits/basic"
+                },
+                "I": {
+                    "tag": "c:ingots/iron"
+                },
+                "R": {
+                    "tag": "c:dusts/redstone"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_ender_machine"
+                }
+            },
+            "pattern": [
+                "RZR",
+                "BCB",
+                "IAI"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:bio_generator"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_bio_generator");
 
     //->------------------------]  Tier 5 / Mekanism / Machines & materials [------------------------<-//
@@ -1245,14 +1337,37 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 6 / Generator devices [------------------------<-//
 
-    // Gas Burning Generator / Shapeless
-    event.shapeless(
-        "mekanismgenerators:gas_burning_generator",
-        [
-            "kubejs:tk3_chemical_machine",
-            "mekanism:alloy_infused",
-            "minecraft:glass"
-        ])
+    // Gas Burning Generator / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "A": {
+                    "tag": "mekanism:alloys/infused"
+                },
+                "C": {
+                    "item": "mekanism:electrolytic_core"
+                },
+                "O": {
+                    "tag": "c:ingots/osmium"
+                },
+                "X": {
+                    "item": "mekanism:steel_casing"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_chemical_machine"
+                }
+            },
+            "pattern": [
+                "OZO",
+                "XCX",
+                "OAO"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:gas_burning_generator"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_gas_burning_generator");
 
     //->------------------------]  Tier 6 / Mekanism / Machines & materials [------------------------<-//
@@ -2719,134 +2834,390 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 8 / Generator devices [------------------------<-//
 
-    // Fission Reactor Port / Shapeless
-    event.shapeless(
-        "mekanismgenerators:fission_reactor_port",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Fission Reactor Port / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "C": {
+                    "tag": "c:circuits/elite"
+                },
+                "F": {
+                    "item": "mekanismgenerators:fission_reactor_casing"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " Z ",
+                "FCF",
+                " F "
+            ],
+            "result": {
+                "count": 2,
+                "id": "mekanismgenerators:fission_reactor_port"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fission_reactor_port");
 
-    // Fission Reactor Logic Adapter / Shapeless
-    event.shapeless(
-        "mekanismgenerators:fission_reactor_logic_adapter",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Fission Reactor Logic Adapter / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "R": {
+                    "tag": "c:dusts/redstone"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " R ",
+                "RZR",
+                " R "
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:fission_reactor_logic_adapter"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fission_reactor_logic_adapter");
 
-    // Fission Fuel Assembly / Shapeless
-    event.shapeless(
-        "mekanismgenerators:fission_fuel_assembly",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Fission Fuel Assembly / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "I": {
+                    "tag": "c:ingots/lead"
+                },
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "T": {
+                    "item": "mekanism:basic_chemical_tank"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "ZSI",
+                "ITI",
+                "ISI"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:fission_fuel_assembly"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fission_fuel_assembly");
 
-    // Control Rod Assembly / Shapeless
-    event.shapeless(
-        "mekanismgenerators:control_rod_assembly",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Control Rod Assembly / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "C": {
+                    "tag": "c:circuits/elite"
+                },
+                "I": {
+                    "tag": "c:ingots/lead"
+                },
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "ZCI",
+                "SIS",
+                "SIS"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:control_rod_assembly"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_control_rod_assembly");
 
-    // Turbine Valve / Shapeless
-    event.shapeless(
-        "mekanismgenerators:turbine_valve",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Turbine Valve / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "#": {
+                    "item": "mekanismgenerators:turbine_casing"
+                },
+                "C": {
+                    "tag": "c:circuits/advanced"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " Z ",
+                "#C#",
+                " # "
+            ],
+            "result": {
+                "count": 2,
+                "id": "mekanismgenerators:turbine_valve"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_turbine_valve");
 
-    // Turbine Vent / Shapeless
-    event.shapeless(
-        "mekanismgenerators:turbine_vent",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Turbine Vent / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "#": {
+                    "item": "mekanismgenerators:turbine_casing"
+                },
+                "B": {
+                    "item": "minecraft:iron_bars"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " Z ",
+                "#B#",
+                " # "
+            ],
+            "result": {
+                "count": 2,
+                "id": "mekanismgenerators:turbine_vent"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_turbine_vent");
 
-    // Turbine Rotor / Shapeless
-    event.shapeless(
-        "mekanismgenerators:turbine_rotor",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Turbine Rotor / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "A": {
+                    "tag": "mekanism:alloys/infused"
+                },
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "SZS",
+                "SAS",
+                "SAS"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:turbine_rotor"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_turbine_rotor");
 
-    // Turbine Blade / Shapeless
-    event.shapeless(
-        "mekanismgenerators:turbine_blade",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Turbine Blade / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " S ",
+                "SZS",
+                " S "
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:turbine_blade"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_turbine_blade");
 
-    // Electromagnetic Coil / Shapeless
-    event.shapeless(
-        "mekanismgenerators:electromagnetic_coil",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Electromagnetic Coil / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "E": {
+                    "item": "mekanism:energy_tablet"
+                },
+                "I": {
+                    "tag": "c:ingots/gold"
+                },
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "SZS",
+                "IEI",
+                "SIS"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:electromagnetic_coil"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_electromagnetic_coil");
 
-    // Rotational Complex / Shapeless
-    event.shapeless(
-        "mekanismgenerators:rotational_complex",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Rotational Complex / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "A": {
+                    "tag": "mekanism:alloys/infused"
+                },
+                "C": {
+                    "tag": "c:circuits/advanced"
+                },
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "SZS",
+                "CAC",
+                "SAS"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:rotational_complex"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_rotational_complex");
 
-    // Saturating Condenser / Shapeless
-    event.shapeless(
-        "mekanismgenerators:saturating_condenser",
-        [
-            "kubejs:tk3_containment_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Saturating Condenser / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "B": {
+                    "item": "minecraft:bucket"
+                },
+                "I": {
+                    "tag": "c:ingots/tin"
+                },
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "SZS",
+                "IBI",
+                "SIS"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:saturating_condenser"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_saturating_condenser");
 
     //->------------------------]  Tier 8 / Generator multiblock parts [------------------------<-//
 
-    // Fission Reactor Casing / Stonecutting
-    event.stonecutting(
-        "4x mekanismgenerators:fission_reactor_casing",
-        "kubejs:tk3_containment_frame")
+    // Fission Reactor Casing / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "I": {
+                    "tag": "c:ingots/lead"
+                },
+                "X": {
+                    "item": "mekanism:steel_casing"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " Z ",
+                "IXI",
+                " I "
+            ],
+            "result": {
+                "count": 4,
+                "id": "mekanismgenerators:fission_reactor_casing"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fission_reactor_casing");
 
-    // Turbine Casing / Stonecutting
-    event.stonecutting(
-        "4x mekanismgenerators:turbine_casing",
-        "kubejs:tk3_containment_frame")
+    // Turbine Casing / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "S": {
+                    "tag": "c:ingots/steel"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                " S ",
+                "SZS",
+                " S "
+            ],
+            "result": {
+                "count": 4,
+                "id": "mekanismgenerators:turbine_casing"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_turbine_casing");
 
-    // Reactor Glass / Stonecutting
-    event.stonecutting(
-        "4x mekanismgenerators:reactor_glass",
-        "kubejs:tk3_containment_frame")
+    // Reactor Glass / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "I": {
+                    "tag": "c:ingots/lead"
+                },
+                "S": {
+                    "item": "mekanism:enriched_iron"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_containment_frame"
+                }
+            },
+            "pattern": [
+                "SIS",
+                "IZI",
+                "SIS"
+            ],
+            "result": {
+                "count": 4,
+                "id": "mekanismgenerators:reactor_glass"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_reactor_glass");
 
     //->------------------------]  Tier 8 / Mekanism / Machines & materials [------------------------<-//
@@ -4588,52 +4959,141 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 9 / Generator devices [------------------------<-//
 
-    // Fusion Reactor Controller / Shapeless
-    event.shapeless(
-        "mekanismgenerators:fusion_reactor_controller",
-        [
-            "kubejs:tk3_singularity_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Fusion Reactor Controller / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "C": {
+                    "tag": "c:circuits/ultimate"
+                },
+                "F": {
+                    "item": "mekanismgenerators:fusion_reactor_frame"
+                },
+                "T": {
+                    "item": "mekanism:basic_chemical_tank"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_singularity_frame"
+                }
+            },
+            "pattern": [
+                "CZC",
+                "FTF",
+                "FFF"
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:fusion_reactor_controller"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_controller");
 
-    // Fusion Reactor Port / Shapeless
-    event.shapeless(
-        "mekanismgenerators:fusion_reactor_port",
-        [
-            "kubejs:tk3_singularity_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Fusion Reactor Port / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "C": {
+                    "tag": "c:circuits/ultimate"
+                },
+                "F": {
+                    "item": "mekanismgenerators:fusion_reactor_frame"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_singularity_frame"
+                }
+            },
+            "pattern": [
+                " Z ",
+                "FCF",
+                " F "
+            ],
+            "result": {
+                "count": 2,
+                "id": "mekanismgenerators:fusion_reactor_port"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_port");
 
-    // Fusion Reactor Logic Adapter / Shapeless
-    event.shapeless(
-        "mekanismgenerators:fusion_reactor_logic_adapter",
-        [
-            "kubejs:tk3_singularity_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Fusion Reactor Logic Adapter / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "R": {
+                    "tag": "c:dusts/redstone"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_singularity_frame"
+                }
+            },
+            "pattern": [
+                " R ",
+                "RZR",
+                " R "
+            ],
+            "result": {
+                "count": 1,
+                "id": "mekanismgenerators:fusion_reactor_logic_adapter"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_logic_adapter");
 
-    // Laser Focus Matrix / Shapeless
-    event.shapeless(
-        "mekanismgenerators:laser_focus_matrix",
-        [
-            "kubejs:tk3_singularity_frame",
-            "mekanism:alloy_atomic",
-            "minecraft:glass"
-        ])
+    // Laser Focus Matrix / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "G": {
+                    "item": "mekanismgenerators:reactor_glass"
+                },
+                "R": {
+                    "tag": "c:storage_blocks/redstone"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_singularity_frame"
+                }
+            },
+            "pattern": [
+                " Z ",
+                "GRG",
+                " G "
+            ],
+            "result": {
+                "count": 2,
+                "id": "mekanismgenerators:laser_focus_matrix"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_laser_focus_matrix");
 
     //->------------------------]  Tier 9 / Generator multiblock parts [------------------------<-//
 
-    // Fusion Reactor Frame / Stonecutting
-    event.stonecutting(
-        "4x mekanismgenerators:fusion_reactor_frame",
-        "kubejs:tk3_singularity_frame")
+    // Fusion Reactor Frame / Native
+    event.custom({
+            "type": "minecraft:crafting_shaped",
+            "category": "misc",
+            "key": {
+                "#": {
+                    "tag": "c:pellets/polonium"
+                },
+                "A": {
+                    "tag": "c:alloys/ultimate"
+                },
+                "Z": {
+                    "item": "kubejs:tk3_singularity_frame"
+                }
+            },
+            "pattern": [
+                "A#A",
+                "#Z#",
+                "A#A"
+            ],
+            "result": {
+                "count": 4,
+                "id": "mekanismgenerators:fusion_reactor_frame"
+            }
+        })
         .id("kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_frame");
 
     //->------------------------]  Tier 9 / Mekanism / Machines & materials [------------------------<-//

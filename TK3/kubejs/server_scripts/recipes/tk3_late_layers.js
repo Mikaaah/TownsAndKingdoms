@@ -6,24 +6,35 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 4 / Ae2 / Crafting [------------------------<-//
 
-    // Charger / Shapeless
-    event.shapeless(
+    // Charger / Shaped
+    event.shaped(
         "ae2:charger",
         [
-            "mekanism:steel_casing",
-            "ae2:certus_quartz_crystal",
-            "createaddition:capacitor"
-        ])
+            "ICI",
+            " S ",
+            "IPI"
+        ], {
+            "I": "mekanism:ingot_steel",
+            "C": "createaddition:capacitor",
+            "S": "mekanism:steel_casing",
+            "P": "create:precision_mechanism"
+        })
         .id("kubejs:tk3/late_layers/ae2_charger");
 
-    // Inscriber / Shapeless
-    event.shapeless(
+    // Inscriber / Shaped
+    event.shaped(
         "ae2:inscriber",
         [
-            "mekanism:steel_casing",
-            "createaddition:electric_motor",
-            "minecraft:gold_ingot"
-        ])
+            "IPI",
+            "MSM",
+            "IGI"
+        ], {
+            "I": "mekanism:ingot_steel",
+            "P": "minecraft:piston",
+            "M": "createaddition:electric_motor",
+            "S": "mekanism:steel_casing",
+            "G": "minecraft:gold_ingot"
+        })
         .id("kubejs:tk3/late_layers/ae2_inscriber");
 
     //->------------------------]  Tier 4 / Ae2 / Processing [------------------------<-//

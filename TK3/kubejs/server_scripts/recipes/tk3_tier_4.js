@@ -138,19 +138,6 @@ ServerEvents.recipes(event => {
         1000)
         .id("kubejs:tk3/tier_4/mycelial_sourcelink");
 
-    //->------------------------]  Tier 4 / Materials / Deploying [------------------------<-//
-
-    // Metallurgic Infuser / Deploying
-    event.recipes.create.deploying(
-        [
-            "mekanism:metallurgic_infuser"
-        ],
-        [
-            "mekanism:steel_casing",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/metallurgic_infuser");
-
     //->------------------------]  Tier 4 / Materials / Enriching [------------------------<-//
 
     // Dust Iron / Enriching
@@ -213,66 +200,6 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/tier_4/enchanting_apparatus");
 
-    // Enrichment Chamber / Shapeless
-    event.shapeless(
-        "mekanism:enrichment_chamber",
-        [
-            "mekanism:steel_casing",
-            "mekanism:alloy_infused",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/enrichment_chamber");
-
-    // Crusher / Shapeless
-    event.shapeless(
-        "mekanism:crusher",
-        [
-            "mekanism:steel_casing",
-            "minecraft:diamond",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/crusher");
-
-    // Energized Smelter / Shapeless
-    event.shapeless(
-        "mekanism:energized_smelter",
-        [
-            "mekanism:steel_casing",
-            "minecraft:furnace",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/energized_smelter");
-
-    // Heat Generator / Shapeless
-    event.shapeless(
-        "mekanismgenerators:heat_generator",
-        [
-            "mekanism:steel_casing",
-            "minecraft:furnace",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/heat_generator");
-
-    // Alternator / Shapeless
-    event.shapeless(
-        "createaddition:alternator",
-        [
-            "mekanism:steel_casing",
-            "createaddition:copper_spool",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/alternator");
-
-    // Electric Motor / Shapeless
-    event.shapeless(
-        "createaddition:electric_motor",
-        [
-            "mekanism:steel_casing",
-            "createaddition:capacitor",
-            "create:precision_mechanism"
-        ])
-        .id("kubejs:tk3/tier_5/electric_motor");
-
     // Basic Universal Cable / Shapeless
     event.shapeless(
         "4x mekanism:basic_universal_cable",
@@ -302,16 +229,6 @@ ServerEvents.recipes(event => {
             "minecraft:redstone"
         ])
         .id("kubejs:tk3/tier_5/basic_logistical_transporter");
-
-    // Basic Energy Cube / Shapeless
-    event.shapeless(
-        "mekanism:basic_energy_cube",
-        [
-            "mekanism:steel_casing",
-            "mekanism:alloy_infused",
-            "minecraft:redstone"
-        ])
-        .id("kubejs:tk3/tier_5/basic_energy_cube");
 
     //->------------------------]  Tier 4 / Tools & components [------------------------<-//
 
@@ -344,6 +261,135 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/tier_5/steel_casing");
 
+    // Metallurgic Infuser / Shaped
+    event.shaped(
+        "mekanism:metallurgic_infuser",
+        [
+            "ISI",
+            "RFR",
+            "IPI"
+        ], {
+            "I": "minecraft:iron_ingot",
+            "S": "mekanism:steel_casing",
+            "R": "minecraft:redstone",
+            "F": "minecraft:furnace",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/metallurgic_infuser");
+
+    // Enrichment Chamber / Shaped
+    event.shaped(
+        "mekanism:enrichment_chamber",
+        [
+            "ACA",
+            "ISI",
+            "IPI"
+        ], {
+            "A": "mekanism:alloy_infused",
+            "C": "mekanism:basic_control_circuit",
+            "I": "mekanism:ingot_steel",
+            "S": "mekanism:steel_casing",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/enrichment_chamber");
+
+    // Crusher / Shaped
+    event.shaped(
+        "mekanism:crusher",
+        [
+            "ACA",
+            "DSD",
+            "IPI"
+        ], {
+            "A": "mekanism:alloy_infused",
+            "C": "mekanism:basic_control_circuit",
+            "D": "minecraft:diamond",
+            "S": "mekanism:steel_casing",
+            "I": "mekanism:ingot_steel",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/crusher");
+
+    // Energized Smelter / Shaped
+    event.shaped(
+        "mekanism:energized_smelter",
+        [
+            "ACA",
+            "ISI",
+            "FPF"
+        ], {
+            "A": "mekanism:alloy_infused",
+            "C": "mekanism:basic_control_circuit",
+            "I": "mekanism:ingot_steel",
+            "S": "mekanism:steel_casing",
+            "F": "minecraft:furnace",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/energized_smelter");
+
+    // Heat Generator / Shaped
+    event.shaped(
+        "mekanismgenerators:heat_generator",
+        [
+            "ICI",
+            "FSF",
+            "IPI"
+        ], {
+            "I": "mekanism:ingot_steel",
+            "C": "minecraft:copper_ingot",
+            "F": "minecraft:furnace",
+            "S": "mekanism:steel_casing",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/heat_generator");
+
+    // Alternator / Shaped
+    event.shaped(
+        "createaddition:alternator",
+        [
+            "WCW",
+            "ISI",
+            "IPI"
+        ], {
+            "W": "createaddition:copper_spool",
+            "C": "createaddition:capacitor",
+            "I": "create:iron_sheet",
+            "S": "mekanism:steel_casing",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/alternator");
+
+    // Electric Motor / Shaped
+    event.shaped(
+        "createaddition:electric_motor",
+        [
+            "WCW",
+            "ISI",
+            "IPI"
+        ], {
+            "W": "createaddition:copper_spool",
+            "C": "createaddition:capacitor",
+            "I": "mekanism:ingot_steel",
+            "S": "mekanism:steel_casing",
+            "P": "create:precision_mechanism"
+        })
+        .id("kubejs:tk3/tier_5/electric_motor");
+
+    // Basic Energy Cube / Shaped
+    event.shaped(
+        "mekanism:basic_energy_cube",
+        [
+            "ATA",
+            "CSC",
+            "ATA"
+        ], {
+            "A": "mekanism:alloy_infused",
+            "T": "mekanism:energy_tablet",
+            "C": "mekanism:basic_control_circuit",
+            "S": "mekanism:steel_casing"
+        })
+        .id("kubejs:tk3/tier_5/basic_energy_cube");
+
     //->------------------------]  Tier 4 / Mechanisms / Sequenced assembly [------------------------<-//
 
     // Arcane Mechanism / Sequence
@@ -360,6 +406,22 @@ ServerEvents.recipes(event => {
                 [
                     "kubejs:tk3_incomplete_arcane_mechanism",
                     "ars_nouveau:source_gem"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_arcane_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_arcane_mechanism",
+                    "ars_nouveau:source_gem"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_arcane_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_arcane_mechanism",
+                    "irons_spellbooks:arcane_essence"
                 ]),
             event.recipes.create.deploying(
                 [

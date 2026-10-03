@@ -159,7 +159,7 @@
         "&d&l◆ GOAL&r",
         "&fComplete the detected item or boss goal below.",
         "",
-        "&fStonecut one frame into three wheels. Connect shafts and gears; supply water.",
+        "&fCraft a Water Wheel from one Kinetic Machine, two Andesite Alloy, planks and a Large Cogwheel. Connect shafts and gears; supply water.",
         "",
         "&a&l✦ TIP&r",
         "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
@@ -197,7 +197,7 @@
         "&d&l◆ GOAL&r",
         "&fComplete the detected item or boss goal below.",
         "",
-        "&fStonecut a manual frame into the Deployer. Add mixer, press and basin. Keep two deployers for alloys and a third holding the ordinary hammer.",
+        "&fUse a separate manual Kinetic Machine for each starter machine. Craft the Press first, then the Mixer, Basin and Deployer with their listed parts. Keep two Deployers for alloys and a third holding the ordinary hammer.",
         "",
         "&a&l✦ TIP&r",
         "&fKeep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms."
@@ -235,19 +235,19 @@
         "&d&l◆ GOAL&r",
         "&fComplete the Kinetic Mechanism assembly in the exact listed order.",
         "",
-        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "&fAssemble one Kinetic Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.",
         "",
         "&6&l◇ HOW TO&r",
-        "&61. &fStart with any matching wooden slabs.",
+        "&61. &fStart with Wooden Slabs.",
         "&62. &fDeploy Andesite Alloy.",
         "&63. &fDeploy Andesite Alloy.",
-        "&64. &fFinish under a Deployer holding Iron Hammer.",
+        "&64. &fFinish with Iron Hammer in the last Deployer.",
         "",
         "&a&l✦ TIP&r",
-        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "&fRepeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.",
         "",
         "&c&l! WATCH OUT&r",
-        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
+        "&fOrdinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop."
       ],
       "dependencies": [
         "2D4C276157B50541"
@@ -282,15 +282,15 @@
         "&d&l◆ GOAL&r",
         "&fComplete the detected item or boss goal below.",
         "",
-        "&fDeploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.",
+        "&fDeploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Functional machines also require their listed working parts. Stonecutting is reserved for the listed passive fittings.",
         "",
         "&6&l◇ HOW TO&r",
         "&61. &fPut Andesite Casing on the belt or depot.",
         "&62. &fDeploy Kinetic Mechanism onto it.",
-        "&63. &fStonecut the frame into the machine you need.",
+        "&63. &fFollow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.",
         "",
         "&a&l✦ TIP&r",
-        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
+        "&fEach machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop."
       ],
       "dependencies": [
         "5414921A0D3DEFE9"

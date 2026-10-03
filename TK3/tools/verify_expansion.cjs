@@ -36,7 +36,11 @@ for(const name of ['kinetic_automated','hydraulic_assembly','precision_assembly'
 assert.equal(registered.find(r=>r.id==='kubejs:tk3/frames/kinetic_manual').args[1].join('').split('A').length-1,7);
 for(const mech of mechanisms){assert(registered.filter(r=>r.id===mech.id).length===1);assert(m.output_whitelist[mech.output].every(id=>id===mech.id),'No alternate mechanism route');}
 assert(!registered.find(r=>r.id.endsWith('/metallurgic_infuser')).keep);
-assert.deepEqual(m.recipes.find(r=>r.output==='mekanism:metallurgic_infuser').inputs,['mekanism:steel_casing','create:precision_mechanism']);
+const infuser=m.recipes.find(r=>r.output==='mekanism:metallurgic_infuser');
+assert.equal(infuser.kind,'shaped');
+assert(Object.values(infuser.inputs).includes('mekanism:steel_casing'));
+assert(Object.values(infuser.inputs).includes('create:precision_mechanism'));
+assert(!Object.values(infuser.inputs).includes(m.frames['4']),'First Infuser must precede the Inductive Machine');
 const schema=m.recipes.filter(r=>r.kind==='wrapped');for(const r of schema){const built=registered.find(x=>x.id===r.id).args[0];assert(built.type.startsWith('sophisticated'));assert.equal(built.result.id,r.output);assert(!built.result.item);assert(built['neoforge:conditions'].length)}
 // Simulate separate native and added recipe collections and late bypass injection.
 const metadata=new Map(m.recipes.map(r=>[r.id,r]));

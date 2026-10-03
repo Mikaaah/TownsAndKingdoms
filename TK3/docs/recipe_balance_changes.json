@@ -1,0 +1,6657 @@
+{
+  "revision": "2026-10-03 / atlas repair and workshop construction rebalance",
+  "changed_recipes": 134,
+  "recipes": [
+    {
+      "id": "kubejs:tk3/tier_1/water_wheel",
+      "tier": 1,
+      "output": "create:water_wheel",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "3x create:water_wheel",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/water_wheel",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:water_wheel",
+        "inputs": {
+          "P": "#minecraft:planks",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:large_cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/water_wheel",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/large_water_wheel",
+      "tier": 1,
+      "output": "create:large_water_wheel",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:large_water_wheel",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/large_water_wheel",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:large_water_wheel",
+        "inputs": {
+          "P": "create:water_wheel",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "#minecraft:planks"
+        },
+        "id": "kubejs:tk3/tier_1/large_water_wheel",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_press",
+      "tier": 1,
+      "output": "create:mechanical_press",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_press",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_press",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_press",
+        "inputs": {
+          "P": "minecraft:iron_block",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_press",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_mixer",
+      "tier": 1,
+      "output": "create:mechanical_mixer",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_mixer",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_mixer",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_mixer",
+        "inputs": {
+          "P": "create:whisk",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_mixer",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/encased_fan",
+      "tier": 1,
+      "output": "create:encased_fan",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:encased_fan",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/encased_fan",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:encased_fan",
+        "inputs": {
+          "P": "create:propeller",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/encased_fan",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_saw",
+      "tier": 1,
+      "output": "create:mechanical_saw",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_saw",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_saw",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_saw",
+        "inputs": {
+          "P": "minecraft:iron_sword",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_saw",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_drill",
+      "tier": 1,
+      "output": "create:mechanical_drill",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_drill",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_drill",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_drill",
+        "inputs": {
+          "P": "minecraft:iron_pickaxe",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_drill",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_bearing",
+      "tier": 1,
+      "output": "create:mechanical_bearing",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_bearing",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_bearing",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_bearing",
+        "inputs": {
+          "P": "minecraft:stone",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_bearing",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_harvester",
+      "tier": 1,
+      "output": "create:mechanical_harvester",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_harvester",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_harvester",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_harvester",
+        "inputs": {
+          "P": "minecraft:iron_hoe",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_harvester",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/deployer",
+      "tier": 1,
+      "output": "create:deployer",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:deployer",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/deployer",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:deployer",
+        "inputs": {
+          "P": "minecraft:iron_ingot",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/deployer",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/basin",
+      "tier": 1,
+      "output": "create:basin",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "2x create:basin",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/basin",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:basin",
+        "inputs": {
+          "I": "minecraft:iron_ingot",
+          "F": "kubejs:tk3_kinetic_machine"
+        },
+        "id": "kubejs:tk3/tier_1/basin",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "I I",
+          "IFI",
+          " I "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/portable_storage_interface",
+      "tier": 1,
+      "output": "create:portable_storage_interface",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:portable_storage_interface",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/portable_storage_interface",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:portable_storage_interface",
+        "inputs": {
+          "P": "minecraft:hopper",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/portable_storage_interface",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/tk3_sealed_mechanism",
+      "tier": 2,
+      "output": "kubejs:tk3_sealed_mechanism",
+      "before": {
+        "tier": 2,
+        "kind": "sequence",
+        "output": "kubejs:tk3_sealed_mechanism",
+        "inputs": [
+          "kubejs:tk3_rotation_mechanism",
+          "create:copper_sheet",
+          "kubejs:tk3_rubber",
+          "farmersdelight:iron_knife"
+        ],
+        "id": "kubejs:tk3/tier_2/tk3_sealed_mechanism",
+        "system": "core",
+        "strict": true,
+        "transition": "kubejs:tk3_incomplete_sealed_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "farmersdelight:iron_knife"
+      },
+      "after": {
+        "tier": 2,
+        "kind": "sequence",
+        "output": "kubejs:tk3_sealed_mechanism",
+        "inputs": [
+          "kubejs:tk3_rotation_mechanism",
+          "create:copper_sheet",
+          "create:copper_sheet",
+          "kubejs:tk3_rubber",
+          "kubejs:tk3_rubber",
+          "create:iron_sheet",
+          "farmersdelight:iron_knife"
+        ],
+        "id": "kubejs:tk3/tier_2/tk3_sealed_mechanism",
+        "system": "core",
+        "strict": true,
+        "transition": "kubejs:tk3_incomplete_sealed_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "farmersdelight:iron_knife"
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/fluid_pipe",
+      "tier": 2,
+      "output": "8x create:fluid_pipe",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "16x create:fluid_pipe",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/fluid_pipe",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "8x create:fluid_pipe",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/fluid_pipe",
+        "system": "core",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/mechanical_pump",
+      "tier": 2,
+      "output": "create:mechanical_pump",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:mechanical_pump",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/mechanical_pump",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:mechanical_pump",
+        "inputs": {
+          "P": "create:fluid_pipe",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_2/mechanical_pump",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/fluid_tank",
+      "tier": 2,
+      "output": "create:fluid_tank",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "3x create:fluid_tank",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/fluid_tank",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:fluid_tank",
+        "inputs": {
+          "P": "minecraft:glass",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "minecraft:copper_block"
+        },
+        "id": "kubejs:tk3/tier_2/fluid_tank",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/spout",
+      "tier": 2,
+      "output": "create:spout",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:spout",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/spout",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:spout",
+        "inputs": {
+          "P": "minecraft:dried_kelp",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:fluid_pipe"
+        },
+        "id": "kubejs:tk3/tier_2/spout",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/item_drain",
+      "tier": 2,
+      "output": "create:item_drain",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:item_drain",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/item_drain",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:item_drain",
+        "inputs": {
+          "P": "minecraft:iron_bars",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:fluid_pipe"
+        },
+        "id": "kubejs:tk3/tier_2/item_drain",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/hose_pulley",
+      "tier": 2,
+      "output": "create:hose_pulley",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:hose_pulley",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/hose_pulley",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:hose_pulley",
+        "inputs": {
+          "P": "create:belt_connector",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:fluid_pipe"
+        },
+        "id": "kubejs:tk3/tier_2/hose_pulley",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/portable_fluid_interface",
+      "tier": 2,
+      "output": "create:portable_fluid_interface",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:portable_fluid_interface",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/portable_fluid_interface",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:portable_fluid_interface",
+        "inputs": {
+          "P": "create:fluid_tank",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:fluid_pipe"
+        },
+        "id": "kubejs:tk3/tier_2/portable_fluid_interface",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/steam_engine",
+      "tier": 2,
+      "output": "create:steam_engine",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:steam_engine",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/steam_engine",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:steam_engine",
+        "inputs": {
+          "P": "minecraft:gold_ingot",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "minecraft:copper_block"
+        },
+        "id": "kubejs:tk3/tier_2/steam_engine",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/rolling_mill",
+      "tier": 2,
+      "output": "createaddition:rolling_mill",
+      "before": {
+        "tier": 2,
+        "kind": "shapeless",
+        "output": "createaddition:rolling_mill",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine",
+          "create:mechanical_press",
+          "minecraft:copper_ingot"
+        ],
+        "id": "kubejs:tk3/tier_2/rolling_mill",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "createaddition:rolling_mill",
+        "inputs": {
+          "I": "create:iron_sheet",
+          "S": "create:shaft",
+          "P": "create:mechanical_press",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "C": "minecraft:copper_block"
+        },
+        "id": "kubejs:tk3/tier_2/rolling_mill",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ISI",
+          "PFP",
+          "ICI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/precision_mechanism",
+      "tier": 3,
+      "output": "create:precision_mechanism",
+      "before": {
+        "tier": 3,
+        "kind": "sequence",
+        "output": "create:precision_mechanism",
+        "inputs": [
+          "kubejs:tk3_sealed_mechanism",
+          "create:brass_sheet",
+          "create:electron_tube",
+          "create:sand_paper"
+        ],
+        "id": "kubejs:tk3/tier_3/precision_mechanism",
+        "system": "core",
+        "strict": true,
+        "transition": "create:incomplete_precision_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "create:sand_paper"
+      },
+      "after": {
+        "tier": 3,
+        "kind": "sequence",
+        "output": "create:precision_mechanism",
+        "inputs": [
+          "kubejs:tk3_sealed_mechanism",
+          "create:brass_sheet",
+          "create:brass_sheet",
+          "create:electron_tube",
+          "create:electron_tube",
+          "create:polished_rose_quartz",
+          "create:sand_paper"
+        ],
+        "id": "kubejs:tk3/tier_3/precision_mechanism",
+        "system": "core",
+        "strict": true,
+        "transition": "create:incomplete_precision_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "create:sand_paper"
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/brass_funnel",
+      "tier": 3,
+      "output": "2x create:brass_funnel",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "6x create:brass_funnel",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/brass_funnel",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:brass_funnel",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/brass_funnel",
+        "system": "core",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/brass_tunnel",
+      "tier": 3,
+      "output": "2x create:brass_tunnel",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "6x create:brass_tunnel",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/brass_tunnel",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:brass_tunnel",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/brass_tunnel",
+        "system": "core",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/mechanical_arm",
+      "tier": 3,
+      "output": "create:mechanical_arm",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:mechanical_arm",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/mechanical_arm",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:mechanical_arm",
+        "inputs": {
+          "P": "create:brass_hand",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_3/mechanical_arm",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/rotation_speed_controller",
+      "tier": 3,
+      "output": "create:rotation_speed_controller",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:rotation_speed_controller",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/rotation_speed_controller",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:rotation_speed_controller",
+        "inputs": {
+          "P": "create:precision_mechanism",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:large_cogwheel"
+        },
+        "id": "kubejs:tk3/tier_3/rotation_speed_controller",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/mechanical_crafter",
+      "tier": 3,
+      "output": "3x create:mechanical_crafter",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "3x create:mechanical_crafter",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/mechanical_crafter",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "3x create:mechanical_crafter",
+        "inputs": {
+          "P": "minecraft:crafting_table",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/mechanical_crafter",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/sequenced_gearshift",
+      "tier": 3,
+      "output": "create:sequenced_gearshift",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:sequenced_gearshift",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/sequenced_gearshift",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:sequenced_gearshift",
+        "inputs": {
+          "P": "create:gearshift",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/sequenced_gearshift",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/packager",
+      "tier": 3,
+      "output": "create:packager",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:packager",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/packager",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:packager",
+        "inputs": {
+          "P": "minecraft:chest",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:cardboard"
+        },
+        "id": "kubejs:tk3/tier_3/packager",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/stock_link",
+      "tier": 3,
+      "output": "create:stock_link",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:stock_link",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/stock_link",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:stock_link",
+        "inputs": {
+          "P": "create:redstone_link",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/stock_link",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/stock_ticker",
+      "tier": 3,
+      "output": "create:stock_ticker",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:stock_ticker",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/stock_ticker",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:stock_ticker",
+        "inputs": {
+          "P": "minecraft:book",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/stock_ticker",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/repackager",
+      "tier": 3,
+      "output": "create:repackager",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:repackager",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/repackager",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:repackager",
+        "inputs": {
+          "P": "create:packager",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:cardboard"
+        },
+        "id": "kubejs:tk3/tier_3/repackager",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/package_frogport",
+      "tier": 3,
+      "output": "create:package_frogport",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:package_frogport",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/package_frogport",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:package_frogport",
+        "inputs": {
+          "P": "minecraft:slime_ball",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:cardboard"
+        },
+        "id": "kubejs:tk3/tier_3/package_frogport",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_4/tk3_arcane_mechanism",
+      "tier": 4,
+      "output": "kubejs:tk3_arcane_mechanism",
+      "before": {
+        "tier": 4,
+        "kind": "sequence",
+        "output": "kubejs:tk3_arcane_mechanism",
+        "inputs": [
+          "create:precision_mechanism",
+          "ars_nouveau:source_gem",
+          "irons_spellbooks:arcane_essence",
+          "ars_nouveau:manipulation_essence",
+          "minecraft:gold_ingot",
+          "ars_nouveau:enchanters_sword"
+        ],
+        "id": "kubejs:tk3/tier_4/tk3_arcane_mechanism",
+        "system": "core",
+        "strict": true,
+        "transition": "kubejs:tk3_incomplete_arcane_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "ars_nouveau:enchanters_sword"
+      },
+      "after": {
+        "tier": 4,
+        "kind": "sequence",
+        "output": "kubejs:tk3_arcane_mechanism",
+        "inputs": [
+          "create:precision_mechanism",
+          "ars_nouveau:source_gem",
+          "ars_nouveau:source_gem",
+          "irons_spellbooks:arcane_essence",
+          "irons_spellbooks:arcane_essence",
+          "ars_nouveau:manipulation_essence",
+          "minecraft:gold_ingot",
+          "ars_nouveau:enchanters_sword"
+        ],
+        "id": "kubejs:tk3/tier_4/tk3_arcane_mechanism",
+        "system": "core",
+        "strict": true,
+        "transition": "kubejs:tk3_incomplete_arcane_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "ars_nouveau:enchanters_sword"
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/metallurgic_infuser",
+      "tier": 4,
+      "output": "mekanism:metallurgic_infuser",
+      "before": {
+        "tier": 4,
+        "kind": "deploying",
+        "output": "mekanism:metallurgic_infuser",
+        "inputs": [
+          "mekanism:steel_casing",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/metallurgic_infuser",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "mekanism:metallurgic_infuser",
+        "inputs": {
+          "I": "minecraft:iron_ingot",
+          "S": "mekanism:steel_casing",
+          "R": "minecraft:redstone",
+          "F": "minecraft:furnace",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/metallurgic_infuser",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ISI",
+          "RFR",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/enrichment_chamber",
+      "tier": 4,
+      "output": "mekanism:enrichment_chamber",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "mekanism:enrichment_chamber",
+        "inputs": [
+          "mekanism:steel_casing",
+          "mekanism:alloy_infused",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/enrichment_chamber",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "mekanism:enrichment_chamber",
+        "inputs": {
+          "A": "mekanism:alloy_infused",
+          "C": "mekanism:basic_control_circuit",
+          "I": "mekanism:ingot_steel",
+          "S": "mekanism:steel_casing",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/enrichment_chamber",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ACA",
+          "ISI",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/crusher",
+      "tier": 4,
+      "output": "mekanism:crusher",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "mekanism:crusher",
+        "inputs": [
+          "mekanism:steel_casing",
+          "minecraft:diamond",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/crusher",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "mekanism:crusher",
+        "inputs": {
+          "A": "mekanism:alloy_infused",
+          "C": "mekanism:basic_control_circuit",
+          "D": "minecraft:diamond",
+          "S": "mekanism:steel_casing",
+          "I": "mekanism:ingot_steel",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/crusher",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ACA",
+          "DSD",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/energized_smelter",
+      "tier": 4,
+      "output": "mekanism:energized_smelter",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "mekanism:energized_smelter",
+        "inputs": [
+          "mekanism:steel_casing",
+          "minecraft:furnace",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/energized_smelter",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "mekanism:energized_smelter",
+        "inputs": {
+          "A": "mekanism:alloy_infused",
+          "C": "mekanism:basic_control_circuit",
+          "I": "mekanism:ingot_steel",
+          "S": "mekanism:steel_casing",
+          "F": "minecraft:furnace",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/energized_smelter",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ACA",
+          "ISI",
+          "FPF"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/heat_generator",
+      "tier": 4,
+      "output": "mekanismgenerators:heat_generator",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:heat_generator",
+        "inputs": [
+          "mekanism:steel_casing",
+          "minecraft:furnace",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/heat_generator",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "mekanismgenerators:heat_generator",
+        "inputs": {
+          "I": "mekanism:ingot_steel",
+          "C": "minecraft:copper_ingot",
+          "F": "minecraft:furnace",
+          "S": "mekanism:steel_casing",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/heat_generator",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ICI",
+          "FSF",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/alternator",
+      "tier": 4,
+      "output": "createaddition:alternator",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "createaddition:alternator",
+        "inputs": [
+          "mekanism:steel_casing",
+          "createaddition:copper_spool",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/alternator",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "createaddition:alternator",
+        "inputs": {
+          "W": "createaddition:copper_spool",
+          "C": "createaddition:capacitor",
+          "I": "create:iron_sheet",
+          "S": "mekanism:steel_casing",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/alternator",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "WCW",
+          "ISI",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/electric_motor",
+      "tier": 4,
+      "output": "createaddition:electric_motor",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "createaddition:electric_motor",
+        "inputs": [
+          "mekanism:steel_casing",
+          "createaddition:capacitor",
+          "create:precision_mechanism"
+        ],
+        "id": "kubejs:tk3/tier_5/electric_motor",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "createaddition:electric_motor",
+        "inputs": {
+          "W": "createaddition:copper_spool",
+          "C": "createaddition:capacitor",
+          "I": "mekanism:ingot_steel",
+          "S": "mekanism:steel_casing",
+          "P": "create:precision_mechanism"
+        },
+        "id": "kubejs:tk3/tier_5/electric_motor",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "WCW",
+          "ISI",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/gearbox",
+      "tier": 1,
+      "output": "create:gearbox",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:gearbox",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/gearbox",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:gearbox",
+        "inputs": {
+          "P": "create:cogwheel",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:large_cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/gearbox",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/vertical_gearbox",
+      "tier": 1,
+      "output": "create:vertical_gearbox",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:vertical_gearbox",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/vertical_gearbox",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:vertical_gearbox",
+        "inputs": {
+          "P": "create:cogwheel",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:large_cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/vertical_gearbox",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/clutch",
+      "tier": 1,
+      "output": "create:clutch",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:clutch",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/clutch",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:clutch",
+        "inputs": {
+          "P": "minecraft:redstone",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/clutch",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/gearshift",
+      "tier": 1,
+      "output": "create:gearshift",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:gearshift",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/gearshift",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:gearshift",
+        "inputs": {
+          "P": "minecraft:redstone_torch",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/gearshift",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/adjustable_chain_gearshift",
+      "tier": 1,
+      "output": "create:adjustable_chain_gearshift",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:adjustable_chain_gearshift",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/adjustable_chain_gearshift",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:adjustable_chain_gearshift",
+        "inputs": {
+          "P": "create:encased_chain_drive",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "minecraft:redstone"
+        },
+        "id": "kubejs:tk3/tier_1/adjustable_chain_gearshift",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_plough",
+      "tier": 1,
+      "output": "create:mechanical_plough",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_plough",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_plough",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_plough",
+        "inputs": {
+          "P": "minecraft:iron_hoe",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_plough",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/rope_pulley",
+      "tier": 1,
+      "output": "create:rope_pulley",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:rope_pulley",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/rope_pulley",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:rope_pulley",
+        "inputs": {
+          "P": "#c:strings",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:belt_connector"
+        },
+        "id": "kubejs:tk3/tier_1/rope_pulley",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/mechanical_piston",
+      "tier": 1,
+      "output": "create:mechanical_piston",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:mechanical_piston",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/mechanical_piston",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:mechanical_piston",
+        "inputs": {
+          "P": "minecraft:piston",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:piston_extension_pole"
+        },
+        "id": "kubejs:tk3/tier_1/mechanical_piston",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/cart_assembler",
+      "tier": 1,
+      "output": "create:cart_assembler",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:cart_assembler",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/cart_assembler",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:cart_assembler",
+        "inputs": {
+          "P": "minecraft:minecart",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "minecraft:redstone"
+        },
+        "id": "kubejs:tk3/tier_1/cart_assembler",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/windmill_bearing",
+      "tier": 1,
+      "output": "create:windmill_bearing",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:windmill_bearing",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/windmill_bearing",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:windmill_bearing",
+        "inputs": {
+          "P": "create:white_sail",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/windmill_bearing",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/gantry_carriage",
+      "tier": 1,
+      "output": "create:gantry_carriage",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:gantry_carriage",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/gantry_carriage",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:gantry_carriage",
+        "inputs": {
+          "P": "create:cogwheel",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:shaft"
+        },
+        "id": "kubejs:tk3/tier_1/gantry_carriage",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/weighted_ejector",
+      "tier": 1,
+      "output": "create:weighted_ejector",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:weighted_ejector",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/weighted_ejector",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:weighted_ejector",
+        "inputs": {
+          "P": "minecraft:iron_block",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "minecraft:slime_ball"
+        },
+        "id": "kubejs:tk3/tier_1/weighted_ejector",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/speedometer",
+      "tier": 1,
+      "output": "create:speedometer",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:speedometer",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/speedometer",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:speedometer",
+        "inputs": {
+          "P": "minecraft:compass",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "create:cogwheel"
+        },
+        "id": "kubejs:tk3/tier_1/speedometer",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_1/analog_lever",
+      "tier": 1,
+      "output": "create:analog_lever",
+      "before": {
+        "tier": 1,
+        "kind": "stonecutting",
+        "output": "create:analog_lever",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "id": "kubejs:tk3/tier_1/analog_lever",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 1,
+        "kind": "shaped",
+        "output": "create:analog_lever",
+        "inputs": {
+          "P": "minecraft:lever",
+          "M": "create:andesite_alloy",
+          "F": "kubejs:tk3_kinetic_machine",
+          "S": "minecraft:redstone"
+        },
+        "id": "kubejs:tk3/tier_1/analog_lever",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/fluid_valve",
+      "tier": 2,
+      "output": "create:fluid_valve",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:fluid_valve",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/fluid_valve",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:fluid_valve",
+        "inputs": {
+          "P": "create:fluid_pipe",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:copper_valve_handle"
+        },
+        "id": "kubejs:tk3/tier_2/fluid_valve",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/copper_valve_handle",
+      "tier": 2,
+      "output": "2x create:copper_valve_handle",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "6x create:copper_valve_handle",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/copper_valve_handle",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "2x create:copper_valve_handle",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/copper_valve_handle",
+        "system": "core",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_2/steam_whistle",
+      "tier": 2,
+      "output": "create:steam_whistle",
+      "before": {
+        "tier": 2,
+        "kind": "stonecutting",
+        "output": "create:steam_whistle",
+        "inputs": [
+          "kubejs:tk3_hydraulic_machine"
+        ],
+        "id": "kubejs:tk3/tier_2/steam_whistle",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 2,
+        "kind": "shaped",
+        "output": "create:steam_whistle",
+        "inputs": {
+          "P": "minecraft:gold_ingot",
+          "M": "create:copper_sheet",
+          "F": "kubejs:tk3_hydraulic_machine",
+          "S": "create:fluid_pipe"
+        },
+        "id": "kubejs:tk3/tier_2/steam_whistle",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/content_observer",
+      "tier": 3,
+      "output": "create:content_observer",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:content_observer",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/content_observer",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:content_observer",
+        "inputs": {
+          "P": "minecraft:observer",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/content_observer",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/stockpile_switch",
+      "tier": 3,
+      "output": "create:stockpile_switch",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:stockpile_switch",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/stockpile_switch",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:stockpile_switch",
+        "inputs": {
+          "P": "minecraft:comparator",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/stockpile_switch",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/smart_chute",
+      "tier": 3,
+      "output": "create:smart_chute",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "3x create:smart_chute",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/smart_chute",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:smart_chute",
+        "inputs": {
+          "P": "create:chute",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/smart_chute",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/smart_fluid_pipe",
+      "tier": 3,
+      "output": "create:smart_fluid_pipe",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "3x create:smart_fluid_pipe",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/smart_fluid_pipe",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:smart_fluid_pipe",
+        "inputs": {
+          "P": "create:fluid_pipe",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/smart_fluid_pipe",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/display_link",
+      "tier": 3,
+      "output": "create:display_link",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:display_link",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/display_link",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:display_link",
+        "inputs": {
+          "P": "minecraft:redstone",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/display_link",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/display_board",
+      "tier": 3,
+      "output": "2x create:display_board",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "6x create:display_board",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/display_board",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "2x create:display_board",
+        "inputs": {
+          "P": "minecraft:glass",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/display_board",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/redstone_link",
+      "tier": 3,
+      "output": "2x create:redstone_link",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "4x create:redstone_link",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/redstone_link",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "2x create:redstone_link",
+        "inputs": {
+          "P": "minecraft:redstone",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "minecraft:ender_pearl"
+        },
+        "id": "kubejs:tk3/tier_3/redstone_link",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/elevator_pulley",
+      "tier": 3,
+      "output": "create:elevator_pulley",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:elevator_pulley",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/elevator_pulley",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:elevator_pulley",
+        "inputs": {
+          "P": "create:rope_pulley",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/elevator_pulley",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/contraption_controls",
+      "tier": 3,
+      "output": "create:contraption_controls",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:contraption_controls",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/contraption_controls",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:contraption_controls",
+        "inputs": {
+          "P": "minecraft:lever",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/contraption_controls",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/track_station",
+      "tier": 3,
+      "output": "create:track_station",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:track_station",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/track_station",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:track_station",
+        "inputs": {
+          "P": "minecraft:compass",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/track_station",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/track_signal",
+      "tier": 3,
+      "output": "2x create:track_signal",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:track_signal",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/track_signal",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "2x create:track_signal",
+        "inputs": {
+          "P": "minecraft:redstone_torch",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/track_signal",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/track_observer",
+      "tier": 3,
+      "output": "2x create:track_observer",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "2x create:track_observer",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/track_observer",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "2x create:track_observer",
+        "inputs": {
+          "P": "minecraft:observer",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/track_observer",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_3/controls",
+      "tier": 3,
+      "output": "create:controls",
+      "before": {
+        "tier": 3,
+        "kind": "stonecutting",
+        "output": "create:controls",
+        "inputs": [
+          "kubejs:tk3_precision_machine"
+        ],
+        "id": "kubejs:tk3/tier_3/controls",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 3,
+        "kind": "shaped",
+        "output": "create:controls",
+        "inputs": {
+          "P": "minecraft:lever",
+          "M": "create:brass_sheet",
+          "F": "kubejs:tk3_precision_machine",
+          "S": "create:electron_tube"
+        },
+        "id": "kubejs:tk3/tier_3/controls",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          " P ",
+          "MFM",
+          " S "
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/tier_5/basic_energy_cube",
+      "tier": 4,
+      "output": "mekanism:basic_energy_cube",
+      "before": {
+        "tier": 4,
+        "kind": "shapeless",
+        "output": "mekanism:basic_energy_cube",
+        "inputs": [
+          "mekanism:steel_casing",
+          "mekanism:alloy_infused",
+          "minecraft:redstone"
+        ],
+        "id": "kubejs:tk3/tier_5/basic_energy_cube",
+        "system": "core",
+        "strict": true
+      },
+      "after": {
+        "tier": 4,
+        "kind": "shaped",
+        "output": "mekanism:basic_energy_cube",
+        "inputs": {
+          "A": "mekanism:alloy_infused",
+          "T": "mekanism:energy_tablet",
+          "C": "mekanism:basic_control_circuit",
+          "S": "mekanism:steel_casing"
+        },
+        "id": "kubejs:tk3/tier_5/basic_energy_cube",
+        "system": "core",
+        "strict": true,
+        "pattern": [
+          "ATA",
+          "CSC",
+          "ATA"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/frames/create_millstone",
+      "tier": 1,
+      "output": "create:millstone",
+      "before": {
+        "tier": 1,
+        "system": "frames",
+        "kind": "stonecutting",
+        "output": "create:millstone",
+        "inputs": [
+          "kubejs:tk3_kinetic_machine"
+        ],
+        "strict": true,
+        "id": "kubejs:tk3/frames/create_millstone"
+      },
+      "after": {
+        "tier": 1,
+        "system": "frames",
+        "kind": "shaped",
+        "output": "create:millstone",
+        "inputs": {
+          "C": "minecraft:cobblestone",
+          "F": "kubejs:tk3_kinetic_machine"
+        },
+        "strict": true,
+        "id": "kubejs:tk3/frames/create_millstone",
+        "pattern": [
+          "CCC",
+          "CFC",
+          "CCC"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/late_layers/ae2_charger",
+      "tier": 4,
+      "output": "ae2:charger",
+      "before": {
+        "tier": 4,
+        "system": "late_layers",
+        "kind": "shapeless",
+        "output": "ae2:charger",
+        "inputs": [
+          "mekanism:steel_casing",
+          "ae2:certus_quartz_crystal",
+          "createaddition:capacitor"
+        ],
+        "strict": true,
+        "id": "kubejs:tk3/late_layers/ae2_charger"
+      },
+      "after": {
+        "tier": 4,
+        "system": "late_layers",
+        "kind": "shaped",
+        "output": "ae2:charger",
+        "inputs": {
+          "I": "mekanism:ingot_steel",
+          "C": "createaddition:capacitor",
+          "S": "mekanism:steel_casing",
+          "P": "create:precision_mechanism"
+        },
+        "strict": true,
+        "id": "kubejs:tk3/late_layers/ae2_charger",
+        "pattern": [
+          "ICI",
+          " S ",
+          "IPI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/late_layers/ae2_inscriber",
+      "tier": 4,
+      "output": "ae2:inscriber",
+      "before": {
+        "tier": 4,
+        "system": "late_layers",
+        "kind": "shapeless",
+        "output": "ae2:inscriber",
+        "inputs": [
+          "mekanism:steel_casing",
+          "createaddition:electric_motor",
+          "minecraft:gold_ingot"
+        ],
+        "strict": true,
+        "id": "kubejs:tk3/late_layers/ae2_inscriber"
+      },
+      "after": {
+        "tier": 4,
+        "system": "late_layers",
+        "kind": "shaped",
+        "output": "ae2:inscriber",
+        "inputs": {
+          "I": "mekanism:ingot_steel",
+          "P": "minecraft:piston",
+          "M": "createaddition:electric_motor",
+          "S": "mekanism:steel_casing",
+          "G": "minecraft:gold_ingot"
+        },
+        "strict": true,
+        "id": "kubejs:tk3/late_layers/ae2_inscriber",
+        "pattern": [
+          "IPI",
+          "MSM",
+          "IGI"
+        ]
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/network_mechanism",
+      "tier": 4,
+      "output": "kubejs:tk3_network_mechanism",
+      "before": {
+        "tier": 4,
+        "kind": "sequence",
+        "output": "kubejs:tk3_network_mechanism",
+        "inputs": [
+          "create:precision_mechanism",
+          "createaddition:capacitor",
+          "ae2:fluix_crystal",
+          "betterend:iron_hammer"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/network_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_network_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "betterend:iron_hammer"
+      },
+      "after": {
+        "tier": 4,
+        "kind": "sequence",
+        "output": "kubejs:tk3_network_mechanism",
+        "inputs": [
+          "create:precision_mechanism",
+          "createaddition:capacitor",
+          "createaddition:capacitor",
+          "ae2:fluix_crystal",
+          "ae2:fluix_crystal",
+          "mekanism:basic_control_circuit",
+          "mekanism:ingot_steel",
+          "betterend:iron_hammer"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/network_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_network_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "betterend:iron_hammer",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/expedition_mechanism",
+      "tier": 7,
+      "output": "kubejs:tk3_expedition_mechanism",
+      "before": {
+        "tier": 7,
+        "kind": "sequence",
+        "output": "kubejs:tk3_expedition_mechanism",
+        "inputs": [
+          "kubejs:tk3_reinforced_mechanism",
+          "ars_nouveau:manipulation_essence",
+          "kubejs:tk3_radiance_sheet",
+          "farmersdelight:diamond_knife"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/expedition_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_expedition_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "farmersdelight:diamond_knife"
+      },
+      "after": {
+        "tier": 7,
+        "kind": "sequence",
+        "output": "kubejs:tk3_expedition_mechanism",
+        "inputs": [
+          "kubejs:tk3_reinforced_mechanism",
+          "kubejs:tk3_radiance_sheet",
+          "kubejs:tk3_radiance_sheet",
+          "ars_nouveau:manipulation_essence",
+          "ae2:engineering_processor",
+          "mekanism:elite_control_circuit",
+          "farmersdelight:diamond_knife"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/expedition_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_expedition_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "farmersdelight:diamond_knife",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/containment_mechanism",
+      "tier": 8,
+      "output": "kubejs:tk3_containment_mechanism",
+      "before": {
+        "tier": 8,
+        "kind": "sequence",
+        "output": "kubejs:tk3_containment_mechanism",
+        "inputs": [
+          "kubejs:tk3_expedition_mechanism",
+          "mekanism:hdpe_sheet",
+          "kubejs:tk3_overcharge_sheet",
+          "create:sand_paper"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/containment_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_containment_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "create:sand_paper"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "sequence",
+        "output": "kubejs:tk3_containment_mechanism",
+        "inputs": [
+          "kubejs:tk3_expedition_mechanism",
+          "kubejs:tk3_overcharge_sheet",
+          "kubejs:tk3_overcharge_sheet",
+          "mekanism:hdpe_sheet",
+          "mekanism:hdpe_sheet",
+          "mekanism:ultimate_control_circuit",
+          "mekanism:ingot_lead",
+          "create:sand_paper"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/containment_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_containment_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "create:sand_paper",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/singularity_mechanism",
+      "tier": 9,
+      "output": "kubejs:tk3_singularity_mechanism",
+      "before": {
+        "tier": 9,
+        "kind": "sequence",
+        "output": "kubejs:tk3_singularity_mechanism",
+        "inputs": [
+          "kubejs:tk3_containment_mechanism",
+          "mekanism:pellet_polonium",
+          "kubejs:tk3_void_attuned_singularity",
+          "ars_nouveau:enchanters_sword"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/singularity_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_singularity_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "ars_nouveau:enchanters_sword"
+      },
+      "after": {
+        "tier": 9,
+        "kind": "sequence",
+        "output": "kubejs:tk3_singularity_mechanism",
+        "inputs": [
+          "kubejs:tk3_containment_mechanism",
+          "mekanism:pellet_polonium",
+          "mekanism:pellet_polonium",
+          "kubejs:tk3_void_attuned_singularity",
+          "mekanism:ultimate_control_circuit",
+          "mekanism:ultimate_control_circuit",
+          "ars_nouveau:enchanters_sword"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/singularity_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_singularity_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "ars_nouveau:enchanters_sword",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/sovereign_mechanism",
+      "tier": 10,
+      "output": "kubejs:tk3_sovereign_mechanism",
+      "before": {
+        "tier": 10,
+        "kind": "sequence",
+        "output": "kubejs:tk3_sovereign_mechanism",
+        "inputs": [
+          "kubejs:tk3_singularity_mechanism",
+          "mekanism:pellet_antimatter",
+          "minecraft:dragon_breath",
+          "betterend:diamond_hammer"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/sovereign_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_sovereign_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "betterend:diamond_hammer"
+      },
+      "after": {
+        "tier": 10,
+        "kind": "sequence",
+        "output": "kubejs:tk3_sovereign_mechanism",
+        "inputs": [
+          "kubejs:tk3_singularity_mechanism",
+          "mekanism:pellet_antimatter",
+          "mekanism:pellet_antimatter",
+          "minecraft:dragon_breath",
+          "minecraft:dragon_breath",
+          "minecraft:netherite_ingot",
+          "mekanism:ultimate_control_circuit",
+          "betterend:diamond_hammer"
+        ],
+        "system": "campaign",
+        "id": "kubejs:tk3/campaign/sovereign_mechanism",
+        "section": "Mechanisms / Sequenced assembly",
+        "transition": "kubejs:tk3_incomplete_sovereign_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "betterend:diamond_hammer",
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_misc_tiny_tnt",
+      "tier": 4,
+      "output": "ae2:tiny_tnt",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:tiny_tnt",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis",
+          "b": "minecraft:gunpowder"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_misc_tiny_tnt",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            },
+            "b": {
+              "item": "minecraft:gunpowder"
+            }
+          },
+          "pattern": [
+            "ab",
+            "ba"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:tiny_tnt"
+          }
+        },
+        "native_source": "data/ae2/recipe/misc/tiny_tnt.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab",
+          "ba"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:tiny_tnt",
+        "inputs": {
+          "a": "#ae2:all_quartz_dust",
+          "b": "minecraft:gunpowder"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_misc_tiny_tnt",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "tag": "ae2:all_quartz_dust"
+            },
+            "b": {
+              "item": "minecraft:gunpowder"
+            }
+          },
+          "pattern": [
+            "ab",
+            "ba"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:tiny_tnt"
+          }
+        },
+        "native_source": "data/ae2/recipe/misc/tiny_tnt.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab",
+          "ba"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_network_blocks_energy_dense_energy_cell",
+      "tier": 4,
+      "output": "ae2:dense_energy_cell",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:dense_energy_cell",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis",
+          "b": "ae2:calculation_processor"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_network_blocks_energy_dense_energy_cell",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            },
+            "b": {
+              "item": "ae2:calculation_processor"
+            }
+          },
+          "pattern": [
+            "aaa",
+            "aba",
+            "aaa"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:dense_energy_cell"
+          }
+        },
+        "native_source": "data/ae2/recipe/network/blocks/energy_dense_energy_cell.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "aaa",
+          "aba",
+          "aaa"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:dense_energy_cell",
+        "inputs": {
+          "a": "ae2:energy_cell",
+          "b": "ae2:calculation_processor"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_network_blocks_energy_dense_energy_cell",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "ae2:energy_cell"
+            },
+            "b": {
+              "item": "ae2:calculation_processor"
+            }
+          },
+          "pattern": [
+            "aaa",
+            "aba",
+            "aaa"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:dense_energy_cell"
+          }
+        },
+        "native_source": "data/ae2/recipe/network/blocks/energy_dense_energy_cell.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "aaa",
+          "aba",
+          "aaa"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_network_blocks_crank",
+      "tier": 4,
+      "output": "ae2:crank",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:crank",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis",
+          "b": "#c:ingots/copper"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_network_blocks_crank",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            },
+            "b": {
+              "tag": "c:ingots/copper"
+            }
+          },
+          "pattern": [
+            "aaa",
+            "  a",
+            "  b"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:crank"
+          }
+        },
+        "native_source": "data/ae2/recipe/network/blocks/crank.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "aaa",
+          "  a",
+          "  b"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:crank",
+        "inputs": {
+          "a": "#c:rods/wooden",
+          "b": "#c:ingots/copper"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_network_blocks_crank",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "tag": "c:rods/wooden"
+            },
+            "b": {
+              "tag": "c:ingots/copper"
+            }
+          },
+          "pattern": [
+            "aaa",
+            "  a",
+            "  b"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:crank"
+          }
+        },
+        "native_source": "data/ae2/recipe/network/blocks/crank.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "aaa",
+          "  a",
+          "  b"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture",
+      "tier": 4,
+      "output": "2x ae2:quartz_fixture",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "2x ae2:quartz_fixture",
+        "inputs": {
+          "a": "ae2:charged_certus_quartz_crystal",
+          "b": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "ae2:charged_certus_quartz_crystal"
+            },
+            "b": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "ab"
+          ],
+          "result": {
+            "count": 2,
+            "id": "ae2:quartz_fixture"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/quartz_fixture.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "2x ae2:quartz_fixture",
+        "inputs": {
+          "a": "ae2:charged_certus_quartz_crystal",
+          "b": "minecraft:iron_ingot"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "ae2:charged_certus_quartz_crystal"
+            },
+            "b": {
+              "item": "minecraft:iron_ingot"
+            }
+          },
+          "pattern": [
+            "ab"
+          ],
+          "result": {
+            "count": 2,
+            "id": "ae2:quartz_fixture"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/quartz_fixture.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_pillar",
+      "tier": 4,
+      "output": "2x ae2:quartz_pillar",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "2x ae2:quartz_pillar",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "a",
+            "a"
+          ],
+          "result": {
+            "count": 2,
+            "id": "ae2:quartz_pillar"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/certus_quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "a",
+          "a"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "2x ae2:quartz_pillar",
+        "inputs": {
+          "a": "ae2:cut_quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "ae2:cut_quartz_block"
+            }
+          },
+          "pattern": [
+            "a",
+            "a"
+          ],
+          "result": {
+            "count": 2,
+            "id": "ae2:quartz_pillar"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/certus_quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "a",
+          "a"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_bricks",
+      "tier": 4,
+      "output": "4x ae2:quartz_bricks",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_bricks",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "aa",
+            "aa"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_bricks"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/certus_quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "aa",
+          "aa"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_bricks",
+        "inputs": {
+          "a": "ae2:cut_quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_certus_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "ae2:cut_quartz_block"
+            }
+          },
+          "pattern": [
+            "aa",
+            "aa"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_bricks"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/certus_quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "aa",
+          "aa"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_decorative_light_detector",
+      "tier": 4,
+      "output": "ae2:light_detector",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:light_detector",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis",
+          "b": "ae2:cable_anchor"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_light_detector",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            },
+            "b": {
+              "item": "ae2:cable_anchor"
+            }
+          },
+          "pattern": [
+            "ab"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:light_detector"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/light_detector.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "ae2:light_detector",
+        "inputs": {
+          "a": "#ae2:all_nether_quartz",
+          "b": "ae2:cable_anchor"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_light_detector",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "tag": "ae2:all_nether_quartz"
+            },
+            "b": {
+              "item": "ae2:cable_anchor"
+            }
+          },
+          "pattern": [
+            "ab"
+          ],
+          "result": {
+            "count": 1,
+            "id": "ae2:light_detector"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/light_detector.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture_from_anchors",
+      "tier": 4,
+      "output": "2x ae2:quartz_fixture",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "2x ae2:quartz_fixture",
+        "inputs": {
+          "a": "kubejs:tk3_network_chassis",
+          "b": "ae2:cable_anchor"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture_from_anchors",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "kubejs:tk3_network_chassis"
+            },
+            "b": {
+              "item": "ae2:cable_anchor"
+            }
+          },
+          "pattern": [
+            "ab"
+          ],
+          "result": {
+            "count": 2,
+            "id": "ae2:quartz_fixture"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/quartz_fixture_from_anchors.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "2x ae2:quartz_fixture",
+        "inputs": {
+          "a": "ae2:charged_certus_quartz_crystal",
+          "b": "ae2:cable_anchor"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_decorative_quartz_fixture_from_anchors",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "a": {
+              "item": "ae2:charged_certus_quartz_crystal"
+            },
+            "b": {
+              "item": "ae2:cable_anchor"
+            }
+          },
+          "pattern": [
+            "ab"
+          ],
+          "result": {
+            "count": 2,
+            "id": "ae2:quartz_fixture"
+          }
+        },
+        "native_source": "data/ae2/recipe/decorative/quartz_fixture_from_anchors.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ab"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_not_so_mysterious_cube",
+      "tier": 4,
+      "output": "4x ae2:not_so_mysterious_cube",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:not_so_mysterious_cube",
+        "inputs": {
+          "C": "kubejs:tk3_network_chassis",
+          "S": "ae2:smooth_sky_stone_block",
+          "c": "ae2:calculation_processor_press",
+          "e": "ae2:engineering_processor_press",
+          "l": "ae2:logic_processor_press",
+          "s": "ae2:silicon_press"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_not_so_mysterious_cube",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "C": {
+              "item": "kubejs:tk3_network_chassis"
+            },
+            "S": {
+              "item": "ae2:smooth_sky_stone_block"
+            },
+            "c": {
+              "item": "ae2:calculation_processor_press"
+            },
+            "e": {
+              "item": "ae2:engineering_processor_press"
+            },
+            "l": {
+              "item": "ae2:logic_processor_press"
+            },
+            "s": {
+              "item": "ae2:silicon_press"
+            }
+          },
+          "pattern": [
+            "ScS",
+            "eCl",
+            "SsS"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:not_so_mysterious_cube"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/not_so_mysterious_cube.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ScS",
+          "eCl",
+          "SsS"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:not_so_mysterious_cube",
+        "inputs": {
+          "C": "ae2:controller",
+          "S": "ae2:smooth_sky_stone_block",
+          "c": "ae2:calculation_processor_press",
+          "e": "ae2:engineering_processor_press",
+          "l": "ae2:logic_processor_press",
+          "s": "ae2:silicon_press"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_not_so_mysterious_cube",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "C": {
+              "item": "ae2:controller"
+            },
+            "S": {
+              "item": "ae2:smooth_sky_stone_block"
+            },
+            "c": {
+              "item": "ae2:calculation_processor_press"
+            },
+            "e": {
+              "item": "ae2:engineering_processor_press"
+            },
+            "l": {
+              "item": "ae2:logic_processor_press"
+            },
+            "s": {
+              "item": "ae2:silicon_press"
+            }
+          },
+          "pattern": [
+            "ScS",
+            "eCl",
+            "SsS"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:not_so_mysterious_cube"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/not_so_mysterious_cube.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ScS",
+          "eCl",
+          "SsS"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_bricks",
+      "tier": 4,
+      "output": "6x ae2:quartz_brick_wall",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_brick_wall",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_brick_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_brick_wall",
+        "inputs": {
+          "#": "ae2:quartz_bricks"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_bricks"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_brick_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_block",
+      "tier": 4,
+      "output": "6x ae2:quartz_wall",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_wall",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_wall",
+        "inputs": {
+          "#": "ae2:quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_block"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_walls_chiseled_quartz_block",
+      "tier": 4,
+      "output": "6x ae2:chiseled_quartz_wall",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:chiseled_quartz_wall",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_chiseled_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:chiseled_quartz_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/chiseled_quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:chiseled_quartz_wall",
+        "inputs": {
+          "#": "ae2:chiseled_quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_chiseled_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:chiseled_quartz_block"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:chiseled_quartz_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/chiseled_quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_walls_fluix_block",
+      "tier": 4,
+      "output": "6x ae2:fluix_wall",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:fluix_wall",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_fluix_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:fluix_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/fluix_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:fluix_wall",
+        "inputs": {
+          "#": "ae2:fluix_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_fluix_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:fluix_block"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:fluix_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/fluix_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_pillar",
+      "tier": 4,
+      "output": "6x ae2:quartz_pillar_wall",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_pillar_wall",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_pillar_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_pillar_wall",
+        "inputs": {
+          "#": "ae2:quartz_pillar"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_walls_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_pillar"
+            }
+          },
+          "pattern": [
+            "###",
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_pillar_wall"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/walls/quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_bricks",
+      "tier": 4,
+      "output": "4x ae2:quartz_brick_stairs",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_brick_stairs",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_brick_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_brick_stairs",
+        "inputs": {
+          "#": "ae2:quartz_bricks"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_bricks"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_brick_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_block",
+      "tier": 4,
+      "output": "4x ae2:quartz_stairs",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_stairs",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_stairs",
+        "inputs": {
+          "#": "ae2:quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_block"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_chiseled_quartz_block",
+      "tier": 4,
+      "output": "4x ae2:chiseled_quartz_stairs",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:chiseled_quartz_stairs",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_chiseled_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:chiseled_quartz_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/chiseled_quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:chiseled_quartz_stairs",
+        "inputs": {
+          "#": "ae2:chiseled_quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_chiseled_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:chiseled_quartz_block"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:chiseled_quartz_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/chiseled_quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_fluix_block",
+      "tier": 4,
+      "output": "4x ae2:fluix_stairs",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:fluix_stairs",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_fluix_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:fluix_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/fluix_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:fluix_stairs",
+        "inputs": {
+          "#": "ae2:fluix_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_fluix_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:fluix_block"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:fluix_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/fluix_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_pillar",
+      "tier": 4,
+      "output": "4x ae2:quartz_pillar_stairs",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_pillar_stairs",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_pillar_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "4x ae2:quartz_pillar_stairs",
+        "inputs": {
+          "#": "ae2:quartz_pillar"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_stairs_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_pillar"
+            }
+          },
+          "pattern": [
+            "#  ",
+            "## ",
+            "###"
+          ],
+          "result": {
+            "count": 4,
+            "id": "ae2:quartz_pillar_stairs"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/stairs/quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "#  ",
+          "## ",
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_bricks",
+      "tier": 4,
+      "output": "6x ae2:quartz_brick_slab",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_brick_slab",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_brick_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_brick_slab",
+        "inputs": {
+          "#": "ae2:quartz_bricks"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_bricks",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_bricks"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_brick_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/quartz_bricks.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_block",
+      "tier": 4,
+      "output": "6x ae2:quartz_slab",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_slab",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_slab",
+        "inputs": {
+          "#": "ae2:quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_block"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_chiseled_quartz_block",
+      "tier": 4,
+      "output": "6x ae2:chiseled_quartz_slab",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:chiseled_quartz_slab",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_chiseled_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:chiseled_quartz_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/chiseled_quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:chiseled_quartz_slab",
+        "inputs": {
+          "#": "ae2:chiseled_quartz_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_chiseled_quartz_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:chiseled_quartz_block"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:chiseled_quartz_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/chiseled_quartz_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_fluix_block",
+      "tier": 4,
+      "output": "6x ae2:fluix_slab",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:fluix_slab",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_fluix_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:fluix_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/fluix_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:fluix_slab",
+        "inputs": {
+          "#": "ae2:fluix_block"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_fluix_block",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:fluix_block"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:fluix_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/fluix_block.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_pillar",
+      "tier": 4,
+      "output": "6x ae2:quartz_pillar_slab",
+      "before": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_pillar_slab",
+        "inputs": {
+          "#": "kubejs:tk3_network_chassis"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "kubejs:tk3_network_chassis"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_pillar_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      },
+      "after": {
+        "tier": 4,
+        "kind": "native",
+        "output": "6x ae2:quartz_pillar_slab",
+        "inputs": {
+          "#": "ae2:quartz_pillar"
+        },
+        "system": "ae_network",
+        "id": "kubejs:tk3/ae_network/ae2_shaped_slabs_quartz_pillar",
+        "section": "Network construction & storage",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "ae2:quartz_pillar"
+            }
+          },
+          "pattern": [
+            "###"
+          ],
+          "result": {
+            "count": 6,
+            "id": "ae2:quartz_pillar_slab"
+          }
+        },
+        "native_source": "data/ae2/recipe/shaped/slabs/quartz_pillar.json",
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###"
+        ],
+        "chemical_inputs": {}
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_solar_generator",
+      "tier": 5,
+      "output": "mekanismgenerators:solar_generator",
+      "before": {
+        "tier": 5,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:solar_generator",
+        "inputs": [
+          "kubejs:tk3_ender_machine",
+          "mekanism:alloy_infused",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_solar_generator",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 5,
+        "kind": "native",
+        "output": "mekanismgenerators:solar_generator",
+        "inputs": {
+          "#": "mekanismgenerators:solar_panel",
+          "A": "#mekanism:alloys/infused",
+          "E": "mekanism:energy_tablet",
+          "I": "#c:ingots/iron",
+          "O": "#c:ingots/osmium",
+          "Z": "kubejs:tk3_ender_machine"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_solar_generator",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "mekanismgenerators:solar_panel"
+            },
+            "A": {
+              "tag": "mekanism:alloys/infused"
+            },
+            "E": {
+              "item": "mekanism:energy_tablet"
+            },
+            "I": {
+              "tag": "c:ingots/iron"
+            },
+            "O": {
+              "tag": "c:ingots/osmium"
+            },
+            "Z": {
+              "item": "kubejs:tk3_ender_machine"
+            }
+          },
+          "pattern": [
+            "###",
+            "ZIA",
+            "OEO"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:solar_generator"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "ZIA",
+          "OEO"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/generator/solar.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_advanced_solar_generator",
+      "tier": 5,
+      "output": "mekanismgenerators:advanced_solar_generator",
+      "before": {
+        "tier": 5,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:advanced_solar_generator",
+        "inputs": [
+          "kubejs:tk3_ender_machine",
+          "mekanism:alloy_infused",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_advanced_solar_generator",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 5,
+        "kind": "native",
+        "output": "mekanismgenerators:advanced_solar_generator",
+        "inputs": {
+          "A": "#mekanism:alloys/infused",
+          "I": "#c:ingots/iron",
+          "P": "mekanismgenerators:solar_generator",
+          "Z": "kubejs:tk3_ender_machine"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_advanced_solar_generator",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "A": {
+              "tag": "mekanism:alloys/infused"
+            },
+            "I": {
+              "tag": "c:ingots/iron"
+            },
+            "P": {
+              "item": "mekanismgenerators:solar_generator"
+            },
+            "Z": {
+              "item": "kubejs:tk3_ender_machine"
+            }
+          },
+          "pattern": [
+            "PZP",
+            "PAP",
+            "III"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:advanced_solar_generator"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "PZP",
+          "PAP",
+          "III"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/generator/advanced_solar.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_wind_generator",
+      "tier": 5,
+      "output": "mekanismgenerators:wind_generator",
+      "before": {
+        "tier": 5,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:wind_generator",
+        "inputs": [
+          "kubejs:tk3_ender_machine",
+          "mekanism:alloy_infused",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_wind_generator",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 5,
+        "kind": "native",
+        "output": "mekanismgenerators:wind_generator",
+        "inputs": {
+          "C": "#c:circuits/basic",
+          "E": "mekanism:energy_tablet",
+          "O": "#c:ingots/osmium",
+          "Z": "kubejs:tk3_ender_machine"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_wind_generator",
+        "section": "Generator devices",
+        "json": {
+          "type": "mekanism:mek_data",
+          "category": "misc",
+          "key": {
+            "C": {
+              "tag": "c:circuits/basic"
+            },
+            "E": {
+              "item": "mekanism:energy_tablet"
+            },
+            "O": {
+              "tag": "c:ingots/osmium"
+            },
+            "Z": {
+              "item": "kubejs:tk3_ender_machine"
+            }
+          },
+          "pattern": [
+            " O ",
+            "OZO",
+            "ECE"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:wind_generator"
+          }
+        },
+        "serializer": "mekanism:mek_data",
+        "pattern": [
+          " O ",
+          "OZO",
+          "ECE"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/generator/wind.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_bio_generator",
+      "tier": 5,
+      "output": "mekanismgenerators:bio_generator",
+      "before": {
+        "tier": 5,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:bio_generator",
+        "inputs": [
+          "kubejs:tk3_ender_machine",
+          "mekanism:alloy_infused",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_bio_generator",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 5,
+        "kind": "native",
+        "output": "mekanismgenerators:bio_generator",
+        "inputs": {
+          "A": "#mekanism:alloys/infused",
+          "B": "#c:fuels/bio",
+          "C": "#c:circuits/basic",
+          "I": "#c:ingots/iron",
+          "R": "#c:dusts/redstone",
+          "Z": "kubejs:tk3_ender_machine"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_bio_generator",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "A": {
+              "tag": "mekanism:alloys/infused"
+            },
+            "B": {
+              "tag": "c:fuels/bio"
+            },
+            "C": {
+              "tag": "c:circuits/basic"
+            },
+            "I": {
+              "tag": "c:ingots/iron"
+            },
+            "R": {
+              "tag": "c:dusts/redstone"
+            },
+            "Z": {
+              "item": "kubejs:tk3_ender_machine"
+            }
+          },
+          "pattern": [
+            "RZR",
+            "BCB",
+            "IAI"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:bio_generator"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "RZR",
+          "BCB",
+          "IAI"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/generator/bio.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_gas_burning_generator",
+      "tier": 6,
+      "output": "mekanismgenerators:gas_burning_generator",
+      "before": {
+        "tier": 6,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:gas_burning_generator",
+        "inputs": [
+          "kubejs:tk3_chemical_machine",
+          "mekanism:alloy_infused",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_gas_burning_generator",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 6,
+        "kind": "native",
+        "output": "mekanismgenerators:gas_burning_generator",
+        "inputs": {
+          "A": "#mekanism:alloys/infused",
+          "C": "mekanism:electrolytic_core",
+          "O": "#c:ingots/osmium",
+          "X": "mekanism:steel_casing",
+          "Z": "kubejs:tk3_chemical_machine"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_gas_burning_generator",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "A": {
+              "tag": "mekanism:alloys/infused"
+            },
+            "C": {
+              "item": "mekanism:electrolytic_core"
+            },
+            "O": {
+              "tag": "c:ingots/osmium"
+            },
+            "X": {
+              "item": "mekanism:steel_casing"
+            },
+            "Z": {
+              "item": "kubejs:tk3_chemical_machine"
+            }
+          },
+          "pattern": [
+            "OZO",
+            "XCX",
+            "OAO"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:gas_burning_generator"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "OZO",
+          "XCX",
+          "OAO"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/generator/gas_burning.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_casing",
+      "tier": 8,
+      "output": "4x mekanismgenerators:fission_reactor_casing",
+      "before": {
+        "tier": 8,
+        "kind": "stonecutting",
+        "output": "4x mekanismgenerators:fission_reactor_casing",
+        "inputs": [
+          "kubejs:tk3_containment_frame"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_casing",
+        "section": "Generator multiblock parts"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "4x mekanismgenerators:fission_reactor_casing",
+        "inputs": {
+          "I": "#c:ingots/lead",
+          "X": "mekanism:steel_casing",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_casing",
+        "section": "Generator multiblock parts",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "I": {
+              "tag": "c:ingots/lead"
+            },
+            "X": {
+              "item": "mekanism:steel_casing"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " Z ",
+            "IXI",
+            " I "
+          ],
+          "result": {
+            "count": 4,
+            "id": "mekanismgenerators:fission_reactor_casing"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " Z ",
+          "IXI",
+          " I "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/fission_reactor/casing.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_port",
+      "tier": 8,
+      "output": "2x mekanismgenerators:fission_reactor_port",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:fission_reactor_port",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_port",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "2x mekanismgenerators:fission_reactor_port",
+        "inputs": {
+          "C": "#c:circuits/elite",
+          "F": "mekanismgenerators:fission_reactor_casing",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_port",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "C": {
+              "tag": "c:circuits/elite"
+            },
+            "F": {
+              "item": "mekanismgenerators:fission_reactor_casing"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " Z ",
+            "FCF",
+            " F "
+          ],
+          "result": {
+            "count": 2,
+            "id": "mekanismgenerators:fission_reactor_port"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " Z ",
+          "FCF",
+          " F "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/fission_reactor/port.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_logic_adapter",
+      "tier": 8,
+      "output": "mekanismgenerators:fission_reactor_logic_adapter",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:fission_reactor_logic_adapter",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_logic_adapter",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:fission_reactor_logic_adapter",
+        "inputs": {
+          "R": "#c:dusts/redstone",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_reactor_logic_adapter",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "R": {
+              "tag": "c:dusts/redstone"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " R ",
+            "RZR",
+            " R "
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:fission_reactor_logic_adapter"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " R ",
+          "RZR",
+          " R "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/fission_reactor/logic_adapter.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fission_fuel_assembly",
+      "tier": 8,
+      "output": "mekanismgenerators:fission_fuel_assembly",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:fission_fuel_assembly",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_fuel_assembly",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:fission_fuel_assembly",
+        "inputs": {
+          "I": "#c:ingots/lead",
+          "S": "#c:ingots/steel",
+          "T": "mekanism:basic_chemical_tank",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fission_fuel_assembly",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "I": {
+              "tag": "c:ingots/lead"
+            },
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "T": {
+              "item": "mekanism:basic_chemical_tank"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "ZSI",
+            "ITI",
+            "ISI"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:fission_fuel_assembly"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ZSI",
+          "ITI",
+          "ISI"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/fission_reactor/fuel_assembly.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_control_rod_assembly",
+      "tier": 8,
+      "output": "mekanismgenerators:control_rod_assembly",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:control_rod_assembly",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_control_rod_assembly",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:control_rod_assembly",
+        "inputs": {
+          "C": "#c:circuits/elite",
+          "I": "#c:ingots/lead",
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_control_rod_assembly",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "C": {
+              "tag": "c:circuits/elite"
+            },
+            "I": {
+              "tag": "c:ingots/lead"
+            },
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "ZCI",
+            "SIS",
+            "SIS"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:control_rod_assembly"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "ZCI",
+          "SIS",
+          "SIS"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/fission_reactor/control_rod_assembly.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_casing",
+      "tier": 8,
+      "output": "4x mekanismgenerators:turbine_casing",
+      "before": {
+        "tier": 8,
+        "kind": "stonecutting",
+        "output": "4x mekanismgenerators:turbine_casing",
+        "inputs": [
+          "kubejs:tk3_containment_frame"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_casing",
+        "section": "Generator multiblock parts"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "4x mekanismgenerators:turbine_casing",
+        "inputs": {
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_casing",
+        "section": "Generator multiblock parts",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " S ",
+            "SZS",
+            " S "
+          ],
+          "result": {
+            "count": 4,
+            "id": "mekanismgenerators:turbine_casing"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " S ",
+          "SZS",
+          " S "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/turbine/casing.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_valve",
+      "tier": 8,
+      "output": "2x mekanismgenerators:turbine_valve",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:turbine_valve",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_valve",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "2x mekanismgenerators:turbine_valve",
+        "inputs": {
+          "#": "mekanismgenerators:turbine_casing",
+          "C": "#c:circuits/advanced",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_valve",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "mekanismgenerators:turbine_casing"
+            },
+            "C": {
+              "tag": "c:circuits/advanced"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " Z ",
+            "#C#",
+            " # "
+          ],
+          "result": {
+            "count": 2,
+            "id": "mekanismgenerators:turbine_valve"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " Z ",
+          "#C#",
+          " # "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/turbine/valve.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_vent",
+      "tier": 8,
+      "output": "2x mekanismgenerators:turbine_vent",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:turbine_vent",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_vent",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "2x mekanismgenerators:turbine_vent",
+        "inputs": {
+          "#": "mekanismgenerators:turbine_casing",
+          "B": "minecraft:iron_bars",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_vent",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "item": "mekanismgenerators:turbine_casing"
+            },
+            "B": {
+              "item": "minecraft:iron_bars"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " Z ",
+            "#B#",
+            " # "
+          ],
+          "result": {
+            "count": 2,
+            "id": "mekanismgenerators:turbine_vent"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " Z ",
+          "#B#",
+          " # "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/turbine/vent.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_rotor",
+      "tier": 8,
+      "output": "mekanismgenerators:turbine_rotor",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:turbine_rotor",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_rotor",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:turbine_rotor",
+        "inputs": {
+          "A": "#mekanism:alloys/infused",
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_rotor",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "A": {
+              "tag": "mekanism:alloys/infused"
+            },
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "SZS",
+            "SAS",
+            "SAS"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:turbine_rotor"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "SZS",
+          "SAS",
+          "SAS"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/turbine/rotor.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_blade",
+      "tier": 8,
+      "output": "mekanismgenerators:turbine_blade",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:turbine_blade",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_blade",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:turbine_blade",
+        "inputs": {
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_turbine_blade",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            " S ",
+            "SZS",
+            " S "
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:turbine_blade"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " S ",
+          "SZS",
+          " S "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/turbine/blade.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_electromagnetic_coil",
+      "tier": 8,
+      "output": "mekanismgenerators:electromagnetic_coil",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:electromagnetic_coil",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_electromagnetic_coil",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:electromagnetic_coil",
+        "inputs": {
+          "E": "mekanism:energy_tablet",
+          "I": "#c:ingots/gold",
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_electromagnetic_coil",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "E": {
+              "item": "mekanism:energy_tablet"
+            },
+            "I": {
+              "tag": "c:ingots/gold"
+            },
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "SZS",
+            "IEI",
+            "SIS"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:electromagnetic_coil"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "SZS",
+          "IEI",
+          "SIS"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/electromagnetic_coil.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_rotational_complex",
+      "tier": 8,
+      "output": "mekanismgenerators:rotational_complex",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:rotational_complex",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_rotational_complex",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:rotational_complex",
+        "inputs": {
+          "A": "#mekanism:alloys/infused",
+          "C": "#c:circuits/advanced",
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_rotational_complex",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "A": {
+              "tag": "mekanism:alloys/infused"
+            },
+            "C": {
+              "tag": "c:circuits/advanced"
+            },
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "SZS",
+            "CAC",
+            "SAS"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:rotational_complex"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "SZS",
+          "CAC",
+          "SAS"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/rotational_complex.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_saturating_condenser",
+      "tier": 8,
+      "output": "mekanismgenerators:saturating_condenser",
+      "before": {
+        "tier": 8,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:saturating_condenser",
+        "inputs": [
+          "kubejs:tk3_containment_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_saturating_condenser",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "mekanismgenerators:saturating_condenser",
+        "inputs": {
+          "B": "minecraft:bucket",
+          "I": "#c:ingots/tin",
+          "S": "#c:ingots/steel",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_saturating_condenser",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "B": {
+              "item": "minecraft:bucket"
+            },
+            "I": {
+              "tag": "c:ingots/tin"
+            },
+            "S": {
+              "tag": "c:ingots/steel"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "SZS",
+            "IBI",
+            "SIS"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:saturating_condenser"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "SZS",
+          "IBI",
+          "SIS"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/saturating_condenser.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_reactor_glass",
+      "tier": 8,
+      "output": "4x mekanismgenerators:reactor_glass",
+      "before": {
+        "tier": 8,
+        "kind": "stonecutting",
+        "output": "4x mekanismgenerators:reactor_glass",
+        "inputs": [
+          "kubejs:tk3_containment_frame"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_reactor_glass",
+        "section": "Generator multiblock parts"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "native",
+        "output": "4x mekanismgenerators:reactor_glass",
+        "inputs": {
+          "I": "#c:ingots/lead",
+          "S": "mekanism:enriched_iron",
+          "Z": "kubejs:tk3_containment_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_reactor_glass",
+        "section": "Generator multiblock parts",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "I": {
+              "tag": "c:ingots/lead"
+            },
+            "S": {
+              "item": "mekanism:enriched_iron"
+            },
+            "Z": {
+              "item": "kubejs:tk3_containment_frame"
+            }
+          },
+          "pattern": [
+            "SIS",
+            "IZI",
+            "SIS"
+          ],
+          "result": {
+            "count": 4,
+            "id": "mekanismgenerators:reactor_glass"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "SIS",
+          "IZI",
+          "SIS"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/reactor/glass.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_controller",
+      "tier": 9,
+      "output": "mekanismgenerators:fusion_reactor_controller",
+      "before": {
+        "tier": 9,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:fusion_reactor_controller",
+        "inputs": [
+          "kubejs:tk3_singularity_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_controller",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 9,
+        "kind": "native",
+        "output": "mekanismgenerators:fusion_reactor_controller",
+        "inputs": {
+          "C": "#c:circuits/ultimate",
+          "F": "mekanismgenerators:fusion_reactor_frame",
+          "T": "mekanism:basic_chemical_tank",
+          "Z": "kubejs:tk3_singularity_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_controller",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "C": {
+              "tag": "c:circuits/ultimate"
+            },
+            "F": {
+              "item": "mekanismgenerators:fusion_reactor_frame"
+            },
+            "T": {
+              "item": "mekanism:basic_chemical_tank"
+            },
+            "Z": {
+              "item": "kubejs:tk3_singularity_frame"
+            }
+          },
+          "pattern": [
+            "CZC",
+            "FTF",
+            "FFF"
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:fusion_reactor_controller"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "CZC",
+          "FTF",
+          "FFF"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/reactor/controller.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_frame",
+      "tier": 9,
+      "output": "4x mekanismgenerators:fusion_reactor_frame",
+      "before": {
+        "tier": 9,
+        "kind": "stonecutting",
+        "output": "4x mekanismgenerators:fusion_reactor_frame",
+        "inputs": [
+          "kubejs:tk3_singularity_frame"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_frame",
+        "section": "Generator multiblock parts"
+      },
+      "after": {
+        "tier": 9,
+        "kind": "native",
+        "output": "4x mekanismgenerators:fusion_reactor_frame",
+        "inputs": {
+          "#": "#c:pellets/polonium",
+          "A": "#c:alloys/ultimate",
+          "Z": "kubejs:tk3_singularity_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_frame",
+        "section": "Generator multiblock parts",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "#": {
+              "tag": "c:pellets/polonium"
+            },
+            "A": {
+              "tag": "c:alloys/ultimate"
+            },
+            "Z": {
+              "item": "kubejs:tk3_singularity_frame"
+            }
+          },
+          "pattern": [
+            "A#A",
+            "#Z#",
+            "A#A"
+          ],
+          "result": {
+            "count": 4,
+            "id": "mekanismgenerators:fusion_reactor_frame"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          "A#A",
+          "#Z#",
+          "A#A"
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/reactor/frame.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_port",
+      "tier": 9,
+      "output": "2x mekanismgenerators:fusion_reactor_port",
+      "before": {
+        "tier": 9,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:fusion_reactor_port",
+        "inputs": [
+          "kubejs:tk3_singularity_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_port",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 9,
+        "kind": "native",
+        "output": "2x mekanismgenerators:fusion_reactor_port",
+        "inputs": {
+          "C": "#c:circuits/ultimate",
+          "F": "mekanismgenerators:fusion_reactor_frame",
+          "Z": "kubejs:tk3_singularity_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_port",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "C": {
+              "tag": "c:circuits/ultimate"
+            },
+            "F": {
+              "item": "mekanismgenerators:fusion_reactor_frame"
+            },
+            "Z": {
+              "item": "kubejs:tk3_singularity_frame"
+            }
+          },
+          "pattern": [
+            " Z ",
+            "FCF",
+            " F "
+          ],
+          "result": {
+            "count": 2,
+            "id": "mekanismgenerators:fusion_reactor_port"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " Z ",
+          "FCF",
+          " F "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/reactor/port.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_logic_adapter",
+      "tier": 9,
+      "output": "mekanismgenerators:fusion_reactor_logic_adapter",
+      "before": {
+        "tier": 9,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:fusion_reactor_logic_adapter",
+        "inputs": [
+          "kubejs:tk3_singularity_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_logic_adapter",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 9,
+        "kind": "native",
+        "output": "mekanismgenerators:fusion_reactor_logic_adapter",
+        "inputs": {
+          "R": "#c:dusts/redstone",
+          "Z": "kubejs:tk3_singularity_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_fusion_reactor_logic_adapter",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "R": {
+              "tag": "c:dusts/redstone"
+            },
+            "Z": {
+              "item": "kubejs:tk3_singularity_frame"
+            }
+          },
+          "pattern": [
+            " R ",
+            "RZR",
+            " R "
+          ],
+          "result": {
+            "count": 1,
+            "id": "mekanismgenerators:fusion_reactor_logic_adapter"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " R ",
+          "RZR",
+          " R "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/reactor/logic_adapter.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/industrial/mekanismgenerators_laser_focus_matrix",
+      "tier": 9,
+      "output": "2x mekanismgenerators:laser_focus_matrix",
+      "before": {
+        "tier": 9,
+        "kind": "shapeless",
+        "output": "mekanismgenerators:laser_focus_matrix",
+        "inputs": [
+          "kubejs:tk3_singularity_frame",
+          "mekanism:alloy_atomic",
+          "minecraft:glass"
+        ],
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_laser_focus_matrix",
+        "section": "Generator devices"
+      },
+      "after": {
+        "tier": 9,
+        "kind": "native",
+        "output": "2x mekanismgenerators:laser_focus_matrix",
+        "inputs": {
+          "G": "mekanismgenerators:reactor_glass",
+          "R": "#c:storage_blocks/redstone",
+          "Z": "kubejs:tk3_singularity_frame"
+        },
+        "system": "industrial",
+        "id": "kubejs:tk3/industrial/mekanismgenerators_laser_focus_matrix",
+        "section": "Generator devices",
+        "json": {
+          "type": "minecraft:crafting_shaped",
+          "category": "misc",
+          "key": {
+            "G": {
+              "item": "mekanismgenerators:reactor_glass"
+            },
+            "R": {
+              "tag": "c:storage_blocks/redstone"
+            },
+            "Z": {
+              "item": "kubejs:tk3_singularity_frame"
+            }
+          },
+          "pattern": [
+            " Z ",
+            "GRG",
+            " G "
+          ],
+          "result": {
+            "count": 2,
+            "id": "mekanismgenerators:laser_focus_matrix"
+          }
+        },
+        "serializer": "minecraft:crafting_shaped",
+        "pattern": [
+          " Z ",
+          "GRG",
+          " G "
+        ],
+        "strict": true,
+        "balance_source": "https://github.com/mekanism/Mekanism/blob/bcd7a8bf594cff9614eb12238fe3776f19da24d9/src/datagen/generated/mekanismgenerators/data/mekanismgenerators/recipe/laser_focus_matrix.json"
+      }
+    },
+    {
+      "id": "kubejs:tk3/addons/iceandfire_dragonforge_fire_brick",
+      "tier": 8,
+      "output": "4x iceandfire:dragonforge_fire_brick",
+      "before": {
+        "tier": 8,
+        "kind": "stonecutting",
+        "output": "4x iceandfire:dragonforge_fire_brick",
+        "inputs": [
+          "kubejs:tk3_containment_frame"
+        ],
+        "system": "addons",
+        "section": "Exploration workshops",
+        "id": "kubejs:tk3/addons/iceandfire_dragonforge_fire_brick"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "shaped",
+        "output": "4x iceandfire:dragonforge_fire_brick",
+        "inputs": {
+          "B": "iceandfire:dragonbone",
+          "D": "minecraft:obsidian",
+          "F": "kubejs:tk3_containment_frame"
+        },
+        "system": "addons",
+        "section": "Exploration workshops",
+        "id": "kubejs:tk3/addons/iceandfire_dragonforge_fire_brick",
+        "pattern": [
+          "BDB",
+          "DFD",
+          "BDB"
+        ],
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/addons/iceandfire_dragonforge_ice_brick",
+      "tier": 8,
+      "output": "4x iceandfire:dragonforge_ice_brick",
+      "before": {
+        "tier": 8,
+        "kind": "stonecutting",
+        "output": "4x iceandfire:dragonforge_ice_brick",
+        "inputs": [
+          "kubejs:tk3_containment_frame"
+        ],
+        "system": "addons",
+        "section": "Exploration workshops",
+        "id": "kubejs:tk3/addons/iceandfire_dragonforge_ice_brick"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "shaped",
+        "output": "4x iceandfire:dragonforge_ice_brick",
+        "inputs": {
+          "B": "iceandfire:dragonbone",
+          "D": "minecraft:obsidian",
+          "F": "kubejs:tk3_containment_frame"
+        },
+        "system": "addons",
+        "section": "Exploration workshops",
+        "id": "kubejs:tk3/addons/iceandfire_dragonforge_ice_brick",
+        "pattern": [
+          "BDB",
+          "DFD",
+          "BDB"
+        ],
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick",
+      "tier": 8,
+      "output": "4x iceandfire:dragonforge_lightning_brick",
+      "before": {
+        "tier": 8,
+        "kind": "stonecutting",
+        "output": "4x iceandfire:dragonforge_lightning_brick",
+        "inputs": [
+          "kubejs:tk3_containment_frame"
+        ],
+        "system": "addons",
+        "section": "Exploration workshops",
+        "id": "kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick"
+      },
+      "after": {
+        "tier": 8,
+        "kind": "shaped",
+        "output": "4x iceandfire:dragonforge_lightning_brick",
+        "inputs": {
+          "B": "iceandfire:dragonbone",
+          "D": "minecraft:obsidian",
+          "F": "kubejs:tk3_containment_frame"
+        },
+        "system": "addons",
+        "section": "Exploration workshops",
+        "id": "kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick",
+        "pattern": [
+          "BDB",
+          "DFD",
+          "BDB"
+        ],
+        "strict": true
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/kubejs_tk3_ender_mechanism",
+      "tier": 5,
+      "output": "kubejs:tk3_ender_mechanism",
+      "before": {
+        "tier": 5,
+        "kind": "sequence",
+        "output": "kubejs:tk3_ender_mechanism",
+        "inputs": [
+          "kubejs:tk3_network_mechanism",
+          "minecraft:chorus_fruit",
+          "mekanism:advanced_control_circuit",
+          "farmersdelight:diamond_knife"
+        ],
+        "system": "campaign",
+        "section": "Mechanisms / Sequenced assembly",
+        "strict": true,
+        "id": "kubejs:tk3/campaign/kubejs_tk3_ender_mechanism",
+        "transition": "kubejs:tk3_incomplete_ender_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "farmersdelight:diamond_knife"
+      },
+      "after": {
+        "tier": 5,
+        "kind": "sequence",
+        "output": "kubejs:tk3_ender_mechanism",
+        "inputs": [
+          "kubejs:tk3_network_mechanism",
+          "mekanism:advanced_control_circuit",
+          "mekanism:advanced_control_circuit",
+          "minecraft:chorus_fruit",
+          "minecraft:chorus_fruit",
+          "minecraft:end_stone",
+          "minecraft:obsidian",
+          "farmersdelight:diamond_knife"
+        ],
+        "system": "campaign",
+        "section": "Mechanisms / Sequenced assembly",
+        "strict": true,
+        "id": "kubejs:tk3/campaign/kubejs_tk3_ender_mechanism",
+        "transition": "kubejs:tk3_incomplete_ender_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "farmersdelight:diamond_knife"
+      }
+    },
+    {
+      "id": "kubejs:tk3/campaign/kubejs_tk3_reinforced_mechanism",
+      "tier": 6,
+      "output": "kubejs:tk3_reinforced_mechanism",
+      "before": {
+        "tier": 6,
+        "kind": "sequence",
+        "output": "kubejs:tk3_reinforced_mechanism",
+        "inputs": [
+          "kubejs:tk3_ender_mechanism",
+          "kubejs:tk3_shadow_sheet",
+          "mekanism:hdpe_sheet",
+          "mekanismtools:steel_paxel"
+        ],
+        "system": "campaign",
+        "section": "Mechanisms / Sequenced assembly",
+        "strict": true,
+        "id": "kubejs:tk3/campaign/kubejs_tk3_reinforced_mechanism",
+        "transition": "kubejs:tk3_incomplete_reinforced_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "mekanismtools:steel_paxel"
+      },
+      "after": {
+        "tier": 6,
+        "kind": "sequence",
+        "output": "kubejs:tk3_reinforced_mechanism",
+        "inputs": [
+          "kubejs:tk3_ender_mechanism",
+          "kubejs:tk3_shadow_sheet",
+          "kubejs:tk3_shadow_sheet",
+          "mekanism:hdpe_sheet",
+          "mekanism:hdpe_sheet",
+          "mekanism:elite_control_circuit",
+          "mekanism:ingot_steel",
+          "mekanismtools:steel_paxel"
+        ],
+        "system": "campaign",
+        "section": "Mechanisms / Sequenced assembly",
+        "strict": true,
+        "id": "kubejs:tk3/campaign/kubejs_tk3_reinforced_mechanism",
+        "transition": "kubejs:tk3_incomplete_reinforced_mechanism",
+        "steps": [
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "deploy",
+          "tool"
+        ],
+        "tool": "mekanismtools:steel_paxel"
+      }
+    }
+  ]
+}

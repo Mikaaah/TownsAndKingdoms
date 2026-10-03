@@ -31,12 +31,17 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/frames/kinetic_automated");
 
-    //->------------------------]  Tier 1 / Machine cutting [------------------------<-//
-
-    // Millstone / Stonecutting
-    event.stonecutting(
+    // Millstone / Shaped
+    event.shaped(
         "create:millstone",
-        "kubejs:tk3_kinetic_machine")
+        [
+            "CCC",
+            "CFC",
+            "CCC"
+        ], {
+            "C": "minecraft:cobblestone",
+            "F": "kubejs:tk3_kinetic_machine"
+        })
         .id("kubejs:tk3/frames/create_millstone");
 
     //->------------------------]  Tier 2 / Machine frames [------------------------<-//

@@ -1,1 +1,6 @@
-{"parent": "minecraft:item/generated", "textures": {"layer0": "create:item/andesite_alloy"}}
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kubejs:tk3_supplied/mechanism/rotation_mechanism"
+  }
+}

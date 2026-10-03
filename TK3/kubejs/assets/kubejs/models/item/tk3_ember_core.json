@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "kubejs:tk3_supplied/geology/ember_alloy"
+  }
+}

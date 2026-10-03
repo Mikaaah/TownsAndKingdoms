@@ -34,6 +34,9 @@ for tier in range(1,11):
  available=set(x for x in recipes if x not in owned)
  available.update(b['item']for b in m['campaign_extension']['bosses']if b['tier']<=tier)
  if tier>=5:available.update(['minecraft:dragon_breath','minecraft:end_stone'])
+ # AE2's four original presses are meteorite loot. Their managed Inscriber
+ # recipes duplicate existing presses; they are not the first source.
+ if tier>=4:available.update('ae2:'+name+'_press'for name in ('engineering_processor','logic_processor','calculation_processor','silicon'))
  # Native world materials and tag members are boundaries; the mapped controlled tags are not.
  def has(x):return x in available or x.startswith('#')or x not in owned
  for _ in range(len(recipes)+1):

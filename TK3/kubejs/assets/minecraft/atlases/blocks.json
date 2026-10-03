@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:directory",
+      "source": "tk3_supplied",
+      "prefix": "tk3_supplied/"
+    }
+  ]
+}

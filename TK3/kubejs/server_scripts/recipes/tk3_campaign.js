@@ -42,7 +42,39 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_network_mechanism",
+                    "createaddition:capacitor"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_network_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_network_mechanism",
                     "ae2:fluix_crystal"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_network_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_network_mechanism",
+                    "ae2:fluix_crystal"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_network_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_network_mechanism",
+                    "mekanism:basic_control_circuit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_network_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_network_mechanism",
+                    "mekanism:ingot_steel"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -85,7 +117,7 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_ender_mechanism",
-                    "minecraft:chorus_fruit"
+                    "mekanism:advanced_control_circuit"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -94,6 +126,38 @@ ServerEvents.recipes(event => {
                 [
                     "kubejs:tk3_incomplete_ender_mechanism",
                     "mekanism:advanced_control_circuit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism",
+                    "minecraft:chorus_fruit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism",
+                    "minecraft:chorus_fruit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism",
+                    "minecraft:end_stone"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_ender_mechanism",
+                    "minecraft:obsidian"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -190,7 +254,39 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_reinforced_mechanism",
+                    "kubejs:tk3_shadow_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism",
                     "mekanism:hdpe_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism",
+                    "mekanism:hdpe_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism",
+                    "mekanism:elite_control_circuit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_reinforced_mechanism",
+                    "mekanism:ingot_steel"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -261,7 +357,7 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_expedition_mechanism",
-                    "ars_nouveau:manipulation_essence"
+                    "kubejs:tk3_radiance_sheet"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -270,6 +366,30 @@ ServerEvents.recipes(event => {
                 [
                     "kubejs:tk3_incomplete_expedition_mechanism",
                     "kubejs:tk3_radiance_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_expedition_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_expedition_mechanism",
+                    "ars_nouveau:manipulation_essence"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_expedition_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_expedition_mechanism",
+                    "ae2:engineering_processor"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_expedition_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_expedition_mechanism",
+                    "mekanism:elite_control_circuit"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -359,7 +479,7 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_containment_mechanism",
-                    "mekanism:hdpe_sheet"
+                    "kubejs:tk3_overcharge_sheet"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -368,6 +488,38 @@ ServerEvents.recipes(event => {
                 [
                     "kubejs:tk3_incomplete_containment_mechanism",
                     "kubejs:tk3_overcharge_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism",
+                    "mekanism:hdpe_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism",
+                    "mekanism:hdpe_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism",
+                    "mekanism:ultimate_control_circuit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_containment_mechanism",
+                    "mekanism:ingot_lead"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -465,7 +617,31 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_singularity_mechanism",
+                    "mekanism:pellet_polonium"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_singularity_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_singularity_mechanism",
                     "kubejs:tk3_void_attuned_singularity"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_singularity_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_singularity_mechanism",
+                    "mekanism:ultimate_control_circuit"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_singularity_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_singularity_mechanism",
+                    "mekanism:ultimate_control_circuit"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -552,7 +728,39 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_sovereign_mechanism",
+                    "mekanism:pellet_antimatter"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism",
                     "minecraft:dragon_breath"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism",
+                    "minecraft:dragon_breath"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism",
+                    "minecraft:netherite_ingot"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sovereign_mechanism",
+                    "mekanism:ultimate_control_circuit"
                 ]),
             event.recipes.create.deploying(
                 [

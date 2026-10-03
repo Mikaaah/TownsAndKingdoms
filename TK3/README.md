@@ -4,6 +4,8 @@
 
 [Official wiki](https://mikaaah.github.io/TownsAndKingdoms/) · [Questbook guide](docs/QUESTBOOK_EN.md) · [Recipe paths](docs/PLAYER_PATHS_EN.md) · [Mod tier map](docs/MOD_TIER_MAP_EN.md)
 
+**October 3 update:** supplied artwork now registers in the block/item atlas; **134 recipes** have revised machine parts, mechanism sequences and energy/generator costs. [Read the changes](docs/BALANCE_UPDATE_EN.md) · [Install the fix](docs/INSTALL_FIXES_EN.md).
+
 Install `kubejs/` and `config/ftbquests/` together into the Minecraft 1.21.1 NeoForge instance, then fully restart the client and server. Nether entry starts at chapter 3, AE2 and Mekanism at 4, End entry at 5. Chapters and milestone IDs remain stable; internal quest goals are updated for the new campaign.
 
 The questbook uses six categories: **Town Square**, **Character Paths**, **Mechanical Quests**, **The Magical Quests**, **Adventure Quests** and **Kingdom Life**. Tutorials, all eighteen subclasses, seven professions and optional projects support the campaign. Class choices remain personal investments in the supplied skilltree.

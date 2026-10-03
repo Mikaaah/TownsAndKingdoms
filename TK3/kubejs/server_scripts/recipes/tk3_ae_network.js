@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "tag": "ae2:all_quartz_dust"
                 },
                 "b": {
                     "item": "minecraft:gunpowder"
@@ -3079,7 +3079,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:energy_cell"
                 },
                 "b": {
                     "item": "ae2:calculation_processor"
@@ -3375,7 +3375,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "tag": "c:rods/wooden"
                 },
                 "b": {
                     "tag": "c:ingots/copper"
@@ -3788,7 +3788,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:charged_certus_quartz_crystal"
                 },
                 "b": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "minecraft:iron_ingot"
                 }
             },
             "pattern": [
@@ -3820,7 +3820,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:cut_quartz_block"
                 }
             },
             "pattern": [
@@ -3840,7 +3840,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:cut_quartz_block"
                 }
             },
             "pattern": [
@@ -3860,7 +3860,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "tag": "ae2:all_nether_quartz"
                 },
                 "b": {
                     "item": "ae2:cable_anchor"
@@ -3882,7 +3882,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:charged_certus_quartz_crystal"
                 },
                 "b": {
                     "item": "ae2:cable_anchor"
@@ -3917,7 +3917,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:controller"
                 },
                 "S": {
                     "item": "ae2:smooth_sky_stone_block"
@@ -3953,7 +3953,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_bricks"
                 }
             },
             "pattern": [
@@ -3973,7 +3973,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_block"
                 }
             },
             "pattern": [
@@ -3993,7 +3993,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:chiseled_quartz_block"
                 }
             },
             "pattern": [
@@ -4013,7 +4013,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:fluix_block"
                 }
             },
             "pattern": [
@@ -4033,7 +4033,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_pillar"
                 }
             },
             "pattern": [
@@ -4053,7 +4053,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_bricks"
                 }
             },
             "pattern": [
@@ -4074,7 +4074,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_block"
                 }
             },
             "pattern": [
@@ -4095,7 +4095,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:chiseled_quartz_block"
                 }
             },
             "pattern": [
@@ -4116,7 +4116,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:fluix_block"
                 }
             },
             "pattern": [
@@ -4137,7 +4137,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_pillar"
                 }
             },
             "pattern": [
@@ -4158,7 +4158,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_bricks"
                 }
             },
             "pattern": [
@@ -4177,7 +4177,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_block"
                 }
             },
             "pattern": [
@@ -4196,7 +4196,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:chiseled_quartz_block"
                 }
             },
             "pattern": [
@@ -4215,7 +4215,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:fluix_block"
                 }
             },
             "pattern": [
@@ -4234,7 +4234,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "#": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "ae2:quartz_pillar"
                 }
             },
             "pattern": [

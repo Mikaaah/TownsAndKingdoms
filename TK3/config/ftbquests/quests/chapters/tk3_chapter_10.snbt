@@ -85,19 +85,23 @@
         "&d&l◆ GOAL&r",
         "&fComplete the Sovereign Mechanism assembly in the exact listed order.",
         "",
-        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:diamond_hammer. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "&fAssemble one Sovereign Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.",
         "",
         "&6&l◇ HOW TO&r",
         "&61. &fStart with Singularity Mechanism.",
         "&62. &fDeploy Pellet Antimatter.",
-        "&63. &fDeploy Dragon Breath.",
-        "&64. &fFinish under a Deployer holding Diamond Hammer.",
+        "&63. &fDeploy Pellet Antimatter.",
+        "&64. &fDeploy Dragon Breath.",
+        "&65. &fDeploy Dragon Breath.",
+        "&66. &fDeploy Netherite Ingot.",
+        "&67. &fDeploy Ultimate Control Circuit.",
+        "&68. &fFinish with Diamond Hammer in the last Deployer.",
         "",
         "&a&l✦ TIP&r",
-        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "&fRepeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.",
         "",
         "&c&l! WATCH OUT&r",
-        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
+        "&fOrdinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop."
       ],
       "dependencies": [
         "11202848E5630522"
@@ -137,10 +141,10 @@
         "&6&l◇ HOW TO&r",
         "&61. &fPut Sps Casing on the belt or depot.",
         "&62. &fDeploy Sovereign Mechanism onto it.",
-        "&63. &fStonecut the frame into the machine you need.",
+        "&63. &fFollow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.",
         "",
         "&a&l✦ TIP&r",
-        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
+        "&fEach machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop."
       ],
       "dependencies": [
         "A2F7B45A45898E5F"

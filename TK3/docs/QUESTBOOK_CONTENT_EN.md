@@ -217,9 +217,9 @@ Chapter I deliberately starts before automated mechanisms. Seven Andesite Alloy,
 
 1. Make Algal Blend and Andesite Alloy.
 2. Craft the manual Kinetic Machine.
-3. Stonecut the required starter equipment.
+3. Craft the required starter machines with their frames and matching parts.
 
-**✦ TIP:** Budget several starting frames: each stonecut machine choice consumes its own frame.
+**✦ TIP:** Budget several starting frames plus machine parts. The first Press uses an Iron Block; later plate recipes need that Press.
 
 **Task:** Read and understand this guide · self-reported
 
@@ -1436,7 +1436,7 @@ Craft 7 alloy + slab + Andesite Casing in AAA / ACA / ASA. Cut separate frames i
 
 **◆ GOAL:** Complete the detected item or boss goal below.
 
-Stonecut one frame into three wheels. Connect shafts and gears; supply water.
+Craft a Water Wheel from one Kinetic Machine, two Andesite Alloy, planks and a Large Cogwheel. Connect shafts and gears; supply water.
 
 **✦ TIP:** Keep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms.
 
@@ -1446,7 +1446,7 @@ Stonecut one frame into three wheels. Connect shafts and gears; supply water.
 
 **◆ GOAL:** Complete the detected item or boss goal below.
 
-Stonecut a manual frame into the Deployer. Add mixer, press and basin. Keep two deployers for alloys and a third holding the ordinary hammer.
+Use a separate manual Kinetic Machine for each starter machine. Craft the Press first, then the Mixer, Basin and Deployer with their listed parts. Keep two Deployers for alloys and a third holding the ordinary hammer.
 
 **✦ TIP:** Keep wheat, kelp and clay buffers near the first workshop. Build several manual frames before automating mechanisms.
 
@@ -1456,18 +1456,18 @@ Stonecut a manual frame into the Deployer. Add mixer, press and basin. Keep two 
 
 **◆ GOAL:** Complete the Kinetic Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Kinetic Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
-1. Start with any matching wooden slabs.
+1. Start with Wooden Slabs.
 2. Deploy Andesite Alloy.
 3. Deploy Andesite Alloy.
-4. Finish under a Deployer holding Iron Hammer.
+4. Finish with Iron Hammer in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_rotation_mechanism` (kept)
 
@@ -1475,15 +1475,15 @@ Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; th
 
 **◆ GOAL:** Complete the detected item or boss goal below.
 
-Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Stonecutting consumes a frame; each output is a separate choice.
+Deploy this tier’s mechanism onto its listed casing. Tier 1 also has the expensive manual startup route. Functional machines also require their listed working parts. Stonecutting is reserved for the listed passive fittings.
 
 **◇ HOW TO**
 
 1. Put Andesite Casing on the belt or depot.
 2. Deploy Kinetic Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_kinetic_machine` (kept)
 
@@ -1582,18 +1582,21 @@ Mix bone meal, kelp and water into calcium powder. Compact prismarine shard, cop
 
 **◆ GOAL:** Complete the Sealed Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:iron_knife. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Sealed Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Kinetic Mechanism.
 2. Deploy Copper Sheet.
-3. Deploy Cured Rubber.
-4. Finish under a Deployer holding Iron Knife.
+3. Deploy Copper Sheet.
+4. Deploy Cured Rubber.
+5. Deploy Cured Rubber.
+6. Deploy Iron Sheet.
+7. Finish with Iron Knife in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_sealed_mechanism` (kept)
 
@@ -1607,9 +1610,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Copper Casing on the belt or depot.
 2. Deploy Sealed Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_hydraulic_machine` (kept)
 
@@ -1738,18 +1741,21 @@ Build the native tube sections; use precision frames for entrances and accelerat
 
 **◆ GOAL:** Complete the Precision Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Precision Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Sealed Mechanism.
 2. Deploy Brass Sheet.
-3. Deploy Electron Tube.
-4. Finish under a Deployer holding Sand Paper.
+3. Deploy Brass Sheet.
+4. Deploy Electron Tube.
+5. Deploy Electron Tube.
+6. Deploy Polished Rose Quartz.
+7. Finish with Sand Paper in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `create:precision_mechanism` (kept)
 
@@ -1763,9 +1769,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Brass Casing on the belt or depot.
 2. Deploy Precision Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_precision_machine` (kept)
 
@@ -1864,18 +1870,22 @@ Precision Machine bootstraps the apparatus. Bootstrap the Agronomic Sourcelink f
 
 **◆ GOAL:** Complete the Inductive Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:iron_hammer. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Inductive Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Precision Mechanism.
 2. Deploy Capacitor.
-3. Deploy Fluix Crystal.
-4. Finish under a Deployer holding Iron Hammer.
+3. Deploy Capacitor.
+4. Deploy Fluix Crystal.
+5. Deploy Fluix Crystal.
+6. Deploy Basic Control Circuit.
+7. Deploy Ingot Steel.
+8. Finish with Iron Hammer in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_network_mechanism` (kept)
 
@@ -1889,9 +1899,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Steel Casing on the belt or depot.
 2. Deploy Inductive Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_network_chassis` (kept)
 
@@ -2030,18 +2040,22 @@ Collect bottles during the fight. Dragons Plus keeps its actual breath filling, 
 
 **◆ GOAL:** Complete the Ender Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Ender Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Inductive Mechanism.
-2. Deploy Chorus Fruit.
+2. Deploy Advanced Control Circuit.
 3. Deploy Advanced Control Circuit.
-4. Finish under a Deployer holding Diamond Knife.
+4. Deploy Chorus Fruit.
+5. Deploy Chorus Fruit.
+6. Deploy End Stone.
+7. Deploy Obsidian.
+8. Finish with Diamond Knife in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_ender_mechanism` (kept)
 
@@ -2055,9 +2069,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Steel Casing on the belt or depot.
 2. Deploy Ender Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_ender_machine` (kept)
 
@@ -2158,18 +2172,22 @@ Heat two steel, obsidian and chorus into two Shadow Steel. Press sheets; combine
 
 **◆ GOAL:** Complete the Reinforced Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds mekanismtools:steel_paxel. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Reinforced Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Ender Mechanism.
 2. Deploy Shadow Steel Sheet.
-3. Deploy Hdpe Sheet.
-4. Finish under a Deployer holding Steel Paxel.
+3. Deploy Shadow Steel Sheet.
+4. Deploy Hdpe Sheet.
+5. Deploy Hdpe Sheet.
+6. Deploy Elite Control Circuit.
+7. Deploy Ingot Steel.
+8. Finish with Steel Paxel in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_reinforced_mechanism` (kept)
 
@@ -2183,9 +2201,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Steel Casing on the belt or depot.
 2. Deploy Reinforced Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_chemical_machine` (kept)
 
@@ -2286,18 +2304,21 @@ Inject one Shadow Steel with 100 units hydrogen chloride per finished operation,
 
 **◆ GOAL:** Complete the Expedition Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Expedition Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Reinforced Mechanism.
-2. Deploy Manipulation Essence.
+2. Deploy Radiance Sheet.
 3. Deploy Radiance Sheet.
-4. Finish under a Deployer holding Diamond Knife.
+4. Deploy Manipulation Essence.
+5. Deploy Engineering Processor.
+6. Deploy Elite Control Circuit.
+7. Finish with Diamond Knife in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_expedition_mechanism` (kept)
 
@@ -2311,9 +2332,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Arcane Casing on the belt or depot.
 2. Deploy Expedition Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_expedition_frame` (kept)
 
@@ -2424,18 +2445,22 @@ Infuse Refined Radiance with 80 diamond infusion units per operation. Press shee
 
 **◆ GOAL:** Complete the Containment Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds create:sand_paper. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Containment Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Expedition Mechanism.
-2. Deploy Hdpe Sheet.
+2. Deploy Overcharge Sheet.
 3. Deploy Overcharge Sheet.
-4. Finish under a Deployer holding Sand Paper.
+4. Deploy Hdpe Sheet.
+5. Deploy Hdpe Sheet.
+6. Deploy Ultimate Control Circuit.
+7. Deploy Ingot Lead.
+8. Finish with Sand Paper in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_containment_mechanism` (kept)
 
@@ -2449,9 +2474,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Steel Casing on the belt or depot.
 2. Deploy Containment Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_containment_frame` (kept)
 
@@ -2582,18 +2607,21 @@ One AE2 Singularity + 10 antimatter units → one Stargaze Singularity in the An
 
 **◆ GOAL:** Complete the Singularity Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds ars_nouveau:enchanters_sword. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Singularity Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Containment Mechanism.
 2. Deploy Pellet Polonium.
-3. Deploy Void-attuned Singularity.
-4. Finish under a Deployer holding Enchanters Sword.
+3. Deploy Pellet Polonium.
+4. Deploy Void-attuned Singularity.
+5. Deploy Ultimate Control Circuit.
+6. Deploy Ultimate Control Circuit.
+7. Finish with Enchanters Sword in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_singularity_mechanism` (kept)
 
@@ -2607,9 +2635,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Fluix Block on the belt or depot.
 2. Deploy Singularity Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_singularity_frame` (kept)
 
@@ -2720,18 +2748,22 @@ Deploy Verdant Sigil, Storm Core, Ember Core, Void Core and Dragon Core onto a S
 
 **◆ GOAL:** Complete the Sovereign Mechanism assembly in the exact listed order.
 
-Use the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds betterend:diamond_hammer. Ordinary tools wear; the chapter reward version is unbreakable.
+Assemble one Sovereign Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.
 
 **◇ HOW TO**
 
 1. Start with Singularity Mechanism.
 2. Deploy Pellet Antimatter.
-3. Deploy Dragon Breath.
-4. Finish under a Deployer holding Diamond Hammer.
+3. Deploy Pellet Antimatter.
+4. Deploy Dragon Breath.
+5. Deploy Dragon Breath.
+6. Deploy Netherite Ingot.
+7. Deploy Ultimate Control Circuit.
+8. Finish with Diamond Hammer in the last Deployer.
 
-**✦ TIP:** One loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.
+**✦ TIP:** Repeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.
 
-**! WATCH OUT:** Supply each step separately and keep unfinished mechanisms on their ordered assembly route.
+**! WATCH OUT:** Ordinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop.
 
 **Task:** 1 × `kubejs:tk3_sovereign_mechanism` (kept)
 
@@ -2745,9 +2777,9 @@ Deploy this tier’s mechanism onto its matching casing. Follow the machine’s 
 
 1. Put Sps Casing on the belt or depot.
 2. Deploy Sovereign Mechanism onto it.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
-**✦ TIP:** Each stonecut output consumes its own frame. Stock several frames for a complete workshop.
+**✦ TIP:** Each machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop.
 
 **Task:** 1 × `kubejs:tk3_sovereign_core` (kept)
 
@@ -2862,13 +2894,13 @@ Ordinary finishing tools wear during assembly. Chapter rewards replace that main
 
 **◆ GOAL:** Complete the project described below.
 
-A machine frame is assembled by deploying its mechanism onto the matching casing. Stonecutting then turns a frame into a selected machine. It consumes that frame, so a list of stonecut outputs is a menu of separate choices.
+A machine frame is assembled by deploying its mechanism onto the matching casing. Functional machines combine a frame with matching mechanical parts. Stonecutting remains useful for the listed passive fittings; every choice consumes its frame.
 
 **◇ HOW TO**
 
 1. Produce the correct casing.
 2. Deploy its matching mechanism.
-3. Stonecut the frame into the machine you need.
+3. Follow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.
 
 **✦ TIP:** Only the first Kinetic Machine has the expensive raw-material startup shortcut.
 

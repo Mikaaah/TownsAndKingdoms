@@ -21,16 +21,6 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 2 / Materials / Shapeless [------------------------<-//
 
-    // Rolling Mill / Shapeless
-    event.shapeless(
-        "createaddition:rolling_mill",
-        [
-            "kubejs:tk3_hydraulic_machine",
-            "create:mechanical_press",
-            "minecraft:copper_ingot"
-        ])
-        .id("kubejs:tk3/tier_2/rolling_mill");
-
     // Copper Backtank / Shapeless
     event.shapeless(
         "create:copper_backtank",
@@ -40,6 +30,159 @@ ServerEvents.recipes(event => {
             "minecraft:copper_block"
         ])
         .id("kubejs:tk3/tier_2/copper_backtank");
+
+    //->------------------------]  Tier 2 / Tools & components [------------------------<-//
+
+    // Mechanical Pump / Shaped
+    event.shaped(
+        "create:mechanical_pump",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:fluid_pipe",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:cogwheel"
+        })
+        .id("kubejs:tk3/tier_2/mechanical_pump");
+
+    // Fluid Tank / Shaped
+    event.shaped(
+        "create:fluid_tank",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:glass",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "minecraft:copper_block"
+        })
+        .id("kubejs:tk3/tier_2/fluid_tank");
+
+    // Spout / Shaped
+    event.shaped(
+        "create:spout",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:dried_kelp",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:fluid_pipe"
+        })
+        .id("kubejs:tk3/tier_2/spout");
+
+    // Item Drain / Shaped
+    event.shaped(
+        "create:item_drain",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:iron_bars",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:fluid_pipe"
+        })
+        .id("kubejs:tk3/tier_2/item_drain");
+
+    // Hose Pulley / Shaped
+    event.shaped(
+        "create:hose_pulley",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:belt_connector",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:fluid_pipe"
+        })
+        .id("kubejs:tk3/tier_2/hose_pulley");
+
+    // Portable Fluid Interface / Shaped
+    event.shaped(
+        "create:portable_fluid_interface",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:fluid_tank",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:fluid_pipe"
+        })
+        .id("kubejs:tk3/tier_2/portable_fluid_interface");
+
+    // Steam Engine / Shaped
+    event.shaped(
+        "create:steam_engine",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:gold_ingot",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "minecraft:copper_block"
+        })
+        .id("kubejs:tk3/tier_2/steam_engine");
+
+    // Rolling Mill / Shaped
+    event.shaped(
+        "createaddition:rolling_mill",
+        [
+            "ISI",
+            "PFP",
+            "ICI"
+        ], {
+            "I": "create:iron_sheet",
+            "S": "create:shaft",
+            "P": "create:mechanical_press",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "C": "minecraft:copper_block"
+        })
+        .id("kubejs:tk3/tier_2/rolling_mill");
+
+    // Fluid Valve / Shaped
+    event.shaped(
+        "create:fluid_valve",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:fluid_pipe",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:copper_valve_handle"
+        })
+        .id("kubejs:tk3/tier_2/fluid_valve");
+
+    // Steam Whistle / Shaped
+    event.shaped(
+        "create:steam_whistle",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:gold_ingot",
+            "M": "create:copper_sheet",
+            "F": "kubejs:tk3_hydraulic_machine",
+            "S": "create:fluid_pipe"
+        })
+        .id("kubejs:tk3/tier_2/steam_whistle");
 
     //->------------------------]  Tier 2 / Mechanisms / Sequenced assembly [------------------------<-//
 
@@ -64,7 +207,31 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "kubejs:tk3_incomplete_sealed_mechanism",
+                    "create:copper_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sealed_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sealed_mechanism",
                     "kubejs:tk3_rubber"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sealed_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sealed_mechanism",
+                    "kubejs:tk3_rubber"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "kubejs:tk3_incomplete_sealed_mechanism"
+                ],
+                [
+                    "kubejs:tk3_incomplete_sealed_mechanism",
+                    "create:iron_sheet"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -83,68 +250,14 @@ ServerEvents.recipes(event => {
 
     // Fluid Pipe / Stonecutting
     event.stonecutting(
-        "16x create:fluid_pipe",
+        "8x create:fluid_pipe",
         "kubejs:tk3_hydraulic_machine")
         .id("kubejs:tk3/tier_2/fluid_pipe");
 
-    // Mechanical Pump / Stonecutting
-    event.stonecutting(
-        "create:mechanical_pump",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/mechanical_pump");
-
-    // Fluid Tank / Stonecutting
-    event.stonecutting(
-        "3x create:fluid_tank",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/fluid_tank");
-
-    // Spout / Stonecutting
-    event.stonecutting(
-        "create:spout",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/spout");
-
-    // Item Drain / Stonecutting
-    event.stonecutting(
-        "create:item_drain",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/item_drain");
-
-    // Hose Pulley / Stonecutting
-    event.stonecutting(
-        "create:hose_pulley",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/hose_pulley");
-
-    // Portable Fluid Interface / Stonecutting
-    event.stonecutting(
-        "create:portable_fluid_interface",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/portable_fluid_interface");
-
-    // Steam Engine / Stonecutting
-    event.stonecutting(
-        "create:steam_engine",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/steam_engine");
-
-    // Fluid Valve / Stonecutting
-    event.stonecutting(
-        "create:fluid_valve",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/fluid_valve");
-
     // Copper Valve Handle / Stonecutting
     event.stonecutting(
-        "6x create:copper_valve_handle",
+        "2x create:copper_valve_handle",
         "kubejs:tk3_hydraulic_machine")
         .id("kubejs:tk3/tier_2/copper_valve_handle");
-
-    // Steam Whistle / Stonecutting
-    event.stonecutting(
-        "create:steam_whistle",
-        "kubejs:tk3_hydraulic_machine")
-        .id("kubejs:tk3/tier_2/steam_whistle");
 
 });

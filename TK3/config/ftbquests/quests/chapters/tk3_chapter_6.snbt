@@ -123,19 +123,23 @@
         "&d&l◆ GOAL&r",
         "&fComplete the Reinforced Mechanism assembly in the exact listed order.",
         "",
-        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds mekanismtools:steel_paxel. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "&fAssemble one Reinforced Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.",
         "",
         "&6&l◇ HOW TO&r",
         "&61. &fStart with Ender Mechanism.",
         "&62. &fDeploy Shadow Steel Sheet.",
-        "&63. &fDeploy Hdpe Sheet.",
-        "&64. &fFinish under a Deployer holding Steel Paxel.",
+        "&63. &fDeploy Shadow Steel Sheet.",
+        "&64. &fDeploy Hdpe Sheet.",
+        "&65. &fDeploy Hdpe Sheet.",
+        "&66. &fDeploy Elite Control Circuit.",
+        "&67. &fDeploy Ingot Steel.",
+        "&68. &fFinish with Steel Paxel in the last Deployer.",
         "",
         "&a&l✦ TIP&r",
-        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "&fRepeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.",
         "",
         "&c&l! WATCH OUT&r",
-        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
+        "&fOrdinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop."
       ],
       "dependencies": [
         "91EF9AE09B0D192B"
@@ -175,10 +179,10 @@
         "&6&l◇ HOW TO&r",
         "&61. &fPut Steel Casing on the belt or depot.",
         "&62. &fDeploy Reinforced Mechanism onto it.",
-        "&63. &fStonecut the frame into the machine you need.",
+        "&63. &fFollow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.",
         "",
         "&a&l✦ TIP&r",
-        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
+        "&fEach machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop."
       ],
       "dependencies": [
         "C4AE0A7DB2DE5D00"

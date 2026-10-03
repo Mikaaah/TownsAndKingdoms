@@ -52,6 +52,141 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 3 / Tools & components [------------------------<-//
 
+    // Mechanical Arm / Shaped
+    event.shaped(
+        "create:mechanical_arm",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:brass_hand",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:cogwheel"
+        })
+        .id("kubejs:tk3/tier_3/mechanical_arm");
+
+    // Rotation Speed Controller / Shaped
+    event.shaped(
+        "create:rotation_speed_controller",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:precision_mechanism",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:large_cogwheel"
+        })
+        .id("kubejs:tk3/tier_3/rotation_speed_controller");
+
+    // Mechanical Crafter / Shaped
+    event.shaped(
+        "3x create:mechanical_crafter",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:crafting_table",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/mechanical_crafter");
+
+    // Sequenced Gearshift / Shaped
+    event.shaped(
+        "create:sequenced_gearshift",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:gearshift",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/sequenced_gearshift");
+
+    // Packager / Shaped
+    event.shaped(
+        "create:packager",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:chest",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:cardboard"
+        })
+        .id("kubejs:tk3/tier_3/packager");
+
+    // Stock Link / Shaped
+    event.shaped(
+        "create:stock_link",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:redstone_link",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/stock_link");
+
+    // Stock Ticker / Shaped
+    event.shaped(
+        "create:stock_ticker",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:book",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/stock_ticker");
+
+    // Repackager / Shaped
+    event.shaped(
+        "create:repackager",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:packager",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:cardboard"
+        })
+        .id("kubejs:tk3/tier_3/repackager");
+
+    // Package Frogport / Shaped
+    event.shaped(
+        "create:package_frogport",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:slime_ball",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:cardboard"
+        })
+        .id("kubejs:tk3/tier_3/package_frogport");
+
     // Capacitor / Shaped
     event.shaped(
         "createaddition:capacitor",
@@ -65,6 +200,201 @@ ServerEvents.recipes(event => {
             "I": "create:iron_sheet"
         })
         .id("kubejs:tk3/tier_2/capacitor");
+
+    // Content Observer / Shaped
+    event.shaped(
+        "create:content_observer",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:observer",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/content_observer");
+
+    // Stockpile Switch / Shaped
+    event.shaped(
+        "create:stockpile_switch",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:comparator",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/stockpile_switch");
+
+    // Smart Chute / Shaped
+    event.shaped(
+        "create:smart_chute",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:chute",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/smart_chute");
+
+    // Smart Fluid Pipe / Shaped
+    event.shaped(
+        "create:smart_fluid_pipe",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:fluid_pipe",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/smart_fluid_pipe");
+
+    // Display Link / Shaped
+    event.shaped(
+        "create:display_link",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:redstone",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/display_link");
+
+    // Display Board / Shaped
+    event.shaped(
+        "2x create:display_board",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:glass",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/display_board");
+
+    // Redstone Link / Shaped
+    event.shaped(
+        "2x create:redstone_link",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:redstone",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "minecraft:ender_pearl"
+        })
+        .id("kubejs:tk3/tier_3/redstone_link");
+
+    // Elevator Pulley / Shaped
+    event.shaped(
+        "create:elevator_pulley",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "create:rope_pulley",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/elevator_pulley");
+
+    // Contraption Controls / Shaped
+    event.shaped(
+        "create:contraption_controls",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:lever",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/contraption_controls");
+
+    // Track Station / Shaped
+    event.shaped(
+        "create:track_station",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:compass",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/track_station");
+
+    // Track Signal / Shaped
+    event.shaped(
+        "2x create:track_signal",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:redstone_torch",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/track_signal");
+
+    // Track Observer / Shaped
+    event.shaped(
+        "2x create:track_observer",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:observer",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/track_observer");
+
+    // Controls / Shaped
+    event.shaped(
+        "create:controls",
+        [
+            " P ",
+            "MFM",
+            " S "
+        ], {
+            "P": "minecraft:lever",
+            "M": "create:brass_sheet",
+            "F": "kubejs:tk3_precision_machine",
+            "S": "create:electron_tube"
+        })
+        .id("kubejs:tk3/tier_3/controls");
 
     //->------------------------]  Tier 3 / Mechanisms / Sequenced assembly [------------------------<-//
 
@@ -89,7 +419,31 @@ ServerEvents.recipes(event => {
                 ],
                 [
                     "create:incomplete_precision_mechanism",
+                    "create:brass_sheet"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "create:incomplete_precision_mechanism"
+                ],
+                [
+                    "create:incomplete_precision_mechanism",
                     "create:electron_tube"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "create:incomplete_precision_mechanism"
+                ],
+                [
+                    "create:incomplete_precision_mechanism",
+                    "create:electron_tube"
+                ]),
+            event.recipes.create.deploying(
+                [
+                    "create:incomplete_precision_mechanism"
+                ],
+                [
+                    "create:incomplete_precision_mechanism",
+                    "create:polished_rose_quartz"
                 ]),
             event.recipes.create.deploying(
                 [
@@ -108,146 +462,14 @@ ServerEvents.recipes(event => {
 
     // Brass Funnel / Stonecutting
     event.stonecutting(
-        "6x create:brass_funnel",
+        "2x create:brass_funnel",
         "kubejs:tk3_precision_machine")
         .id("kubejs:tk3/tier_3/brass_funnel");
 
     // Brass Tunnel / Stonecutting
     event.stonecutting(
-        "6x create:brass_tunnel",
+        "2x create:brass_tunnel",
         "kubejs:tk3_precision_machine")
         .id("kubejs:tk3/tier_3/brass_tunnel");
-
-    // Mechanical Arm / Stonecutting
-    event.stonecutting(
-        "create:mechanical_arm",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/mechanical_arm");
-
-    // Rotation Speed Controller / Stonecutting
-    event.stonecutting(
-        "create:rotation_speed_controller",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/rotation_speed_controller");
-
-    // Mechanical Crafter / Stonecutting
-    event.stonecutting(
-        "3x create:mechanical_crafter",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/mechanical_crafter");
-
-    // Sequenced Gearshift / Stonecutting
-    event.stonecutting(
-        "create:sequenced_gearshift",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/sequenced_gearshift");
-
-    // Packager / Stonecutting
-    event.stonecutting(
-        "create:packager",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/packager");
-
-    // Stock Link / Stonecutting
-    event.stonecutting(
-        "create:stock_link",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/stock_link");
-
-    // Stock Ticker / Stonecutting
-    event.stonecutting(
-        "create:stock_ticker",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/stock_ticker");
-
-    // Repackager / Stonecutting
-    event.stonecutting(
-        "create:repackager",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/repackager");
-
-    // Package Frogport / Stonecutting
-    event.stonecutting(
-        "create:package_frogport",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/package_frogport");
-
-    // Content Observer / Stonecutting
-    event.stonecutting(
-        "2x create:content_observer",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/content_observer");
-
-    // Stockpile Switch / Stonecutting
-    event.stonecutting(
-        "2x create:stockpile_switch",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/stockpile_switch");
-
-    // Smart Chute / Stonecutting
-    event.stonecutting(
-        "3x create:smart_chute",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/smart_chute");
-
-    // Smart Fluid Pipe / Stonecutting
-    event.stonecutting(
-        "3x create:smart_fluid_pipe",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/smart_fluid_pipe");
-
-    // Display Link / Stonecutting
-    event.stonecutting(
-        "2x create:display_link",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/display_link");
-
-    // Display Board / Stonecutting
-    event.stonecutting(
-        "6x create:display_board",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/display_board");
-
-    // Redstone Link / Stonecutting
-    event.stonecutting(
-        "4x create:redstone_link",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/redstone_link");
-
-    // Elevator Pulley / Stonecutting
-    event.stonecutting(
-        "create:elevator_pulley",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/elevator_pulley");
-
-    // Contraption Controls / Stonecutting
-    event.stonecutting(
-        "create:contraption_controls",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/contraption_controls");
-
-    // Track Station / Stonecutting
-    event.stonecutting(
-        "create:track_station",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/track_station");
-
-    // Track Signal / Stonecutting
-    event.stonecutting(
-        "2x create:track_signal",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/track_signal");
-
-    // Track Observer / Stonecutting
-    event.stonecutting(
-        "2x create:track_observer",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/track_observer");
-
-    // Controls / Stonecutting
-    event.stonecutting(
-        "create:controls",
-        "kubejs:tk3_precision_machine")
-        .id("kubejs:tk3/tier_3/controls");
 
 });

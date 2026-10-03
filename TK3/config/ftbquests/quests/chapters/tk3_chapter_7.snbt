@@ -85,19 +85,22 @@
         "&d&l◆ GOAL&r",
         "&fComplete the Expedition Mechanism assembly in the exact listed order.",
         "",
-        "&fUse the ordered sequenced assembly recipe. One loop guarantees one mechanism; the final Deployer holds farmersdelight:diamond_knife. Ordinary tools wear; the chapter reward version is unbreakable.",
+        "&fAssemble one Expedition Mechanism through its complete ordered sequence. Each material application consumes one item; the last Deployer holds the finishing tool. One full loop gives one guaranteed mechanism.",
         "",
         "&6&l◇ HOW TO&r",
         "&61. &fStart with Reinforced Mechanism.",
-        "&62. &fDeploy Manipulation Essence.",
+        "&62. &fDeploy Radiance Sheet.",
         "&63. &fDeploy Radiance Sheet.",
-        "&64. &fFinish under a Deployer holding Diamond Knife.",
+        "&64. &fDeploy Manipulation Essence.",
+        "&65. &fDeploy Engineering Processor.",
+        "&66. &fDeploy Elite Control Circuit.",
+        "&67. &fFinish with Diamond Knife in the last Deployer.",
         "",
         "&a&l✦ TIP&r",
-        "&fOne loop guarantees one mechanism. Ordinary finishing tools wear; the chapter reward tool is unbreakable.",
+        "&fRepeated ingredients are separate ordered applications. Feed them individually, then extract the finished mechanism into a buffer.",
         "",
         "&c&l! WATCH OUT&r",
-        "&fSupply each step separately and keep unfinished mechanisms on their ordered assembly route."
+        "&fOrdinary finishing tools lose durability. The chapter reward grants the unbreakable version after you complete the workshop."
       ],
       "dependencies": [
         "DC154F8C70241863"
@@ -137,10 +140,10 @@
         "&6&l◇ HOW TO&r",
         "&61. &fPut Arcane Casing on the belt or depot.",
         "&62. &fDeploy Expedition Mechanism onto it.",
-        "&63. &fStonecut the frame into the machine you need.",
+        "&63. &fFollow the machine’s exact recipe: frame plus working parts. Use stonecutting only for listed passive fittings.",
         "",
         "&a&l✦ TIP&r",
-        "&fEach stonecut output consumes its own frame. Stock several frames for a complete workshop."
+        "&fEach machine consumes its own frame and the listed parts. Stock Alloy, sheets, shafts and tools for the complete workshop."
       ],
       "dependencies": [
         "8BCF7F8F3766B09D"

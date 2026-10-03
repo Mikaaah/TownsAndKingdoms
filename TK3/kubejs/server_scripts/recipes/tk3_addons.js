@@ -7559,10 +7559,18 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_fire_input");
 
-    // Dragonforge Fire Brick / Stonecutting
-    event.stonecutting(
+    // Dragonforge Fire Brick / Shaped
+    event.shaped(
         "4x iceandfire:dragonforge_fire_brick",
-        "kubejs:tk3_containment_frame")
+        [
+            "BDB",
+            "DFD",
+            "BDB"
+        ], {
+            "B": "iceandfire:dragonbone",
+            "D": "minecraft:obsidian",
+            "F": "kubejs:tk3_containment_frame"
+        })
         .id("kubejs:tk3/addons/iceandfire_dragonforge_fire_brick");
 
     // Dragonforge Ice Core Disabled / Deploying
@@ -7587,10 +7595,18 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_ice_input");
 
-    // Dragonforge Ice Brick / Stonecutting
-    event.stonecutting(
+    // Dragonforge Ice Brick / Shaped
+    event.shaped(
         "4x iceandfire:dragonforge_ice_brick",
-        "kubejs:tk3_containment_frame")
+        [
+            "BDB",
+            "DFD",
+            "BDB"
+        ], {
+            "B": "iceandfire:dragonbone",
+            "D": "minecraft:obsidian",
+            "F": "kubejs:tk3_containment_frame"
+        })
         .id("kubejs:tk3/addons/iceandfire_dragonforge_ice_brick");
 
     // Dragonforge Lightning Core Disabled / Deploying
@@ -7615,10 +7631,18 @@ ServerEvents.recipes(event => {
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_lightning_input");
 
-    // Dragonforge Lightning Brick / Stonecutting
-    event.stonecutting(
+    // Dragonforge Lightning Brick / Shaped
+    event.shaped(
         "4x iceandfire:dragonforge_lightning_brick",
-        "kubejs:tk3_containment_frame")
+        [
+            "BDB",
+            "DFD",
+            "BDB"
+        ], {
+            "B": "iceandfire:dragonbone",
+            "D": "minecraft:obsidian",
+            "F": "kubejs:tk3_containment_frame"
+        })
         .id("kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick");
 
     // Nuclear Furnace Component / Deploying
