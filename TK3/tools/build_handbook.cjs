@@ -116,7 +116,7 @@ const section=id=>{const match=guide.match(new RegExp('<section id="'+id+'">[\\s
 const progression=['overview','frames','paths','geology','wood'].map(section).join('')+'<div class="notice"><span id="recipes"></span><span id="chapters"></span>The catalogue and quest list have their own pages: <a href="../recipes/">Recipe catalogue</a> · <a href="../chapters/">Chapters & quests</a>.</div>';
 save('progression/','Progression',progression);
 write(path.join(out,'assets/quest-guide.js'),read(path.join(root,'quest-guide.js')));
-save('chapters/','Chapters & quests',campaign.chapters,'3.0',`<script src="../assets/quest-guide.js?v=${styleVersion}" defer></script>`);
+save('chapters/','Chapters & quests',campaign.chapters,'3.0',`<script src="../assets/quest-guide.js?v=${crypto.createHash('sha256').update(read(path.join(root,'quest-guide.js'))).digest('hex').slice(0,10)}" defer></script>`);
 write(path.join(out,'assets/catalogue.js'),read(path.join(root,'catalogue.js')));
 save('recipes/','Recipe catalogue',campaign.catalogue,'3.0',`<script src="../assets/catalogue.js?v=${styleVersion}" defer></script>`);
 // Optional Markdown pages automatically receive navigation, shared layout and search.

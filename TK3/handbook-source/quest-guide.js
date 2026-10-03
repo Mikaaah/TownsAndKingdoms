@@ -9,5 +9,8 @@
     target.scrollIntoView({block: 'start'});
   };
   window.addEventListener('hashchange', reveal);
+  document.querySelector('.global-search-results')?.addEventListener('click', event => {
+    if (event.target.closest('a')) document.querySelector('.search-dialog')?.close();
+  });
   reveal();
 })();
