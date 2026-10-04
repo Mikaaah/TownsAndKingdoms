@@ -42,7 +42,7 @@ jobs:
                   if attempt==5:
                       raise
                   time.sleep(5)
-          with open('TK3/docs/progression_manifest.json') as f:
+          with open('TK3/docs/wiki_production_manifest.json') as f:
               recipes=json.load(f)['recipes']
           authored_count=len(recipes)
           assert live['authored_recipe_count']==authored_count and len(live['pages'])==11

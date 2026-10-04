@@ -50,6 +50,7 @@ jobs:
           python3 TK3/tools/verify_balance.py
           python3 TK3/tools/verify_bootstraps.py
           npm run --prefix TK3/handbook-source test:models
+          npm run --prefix TK3/handbook-source test:workshop
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:

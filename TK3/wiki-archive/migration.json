@@ -31,6 +31,10 @@
     {
       "Home.md": "811a2bd18f0661be1f110b27518dc708ecd315dcf5bd1b8c3cc1d08869a41dcd",
       "_Sidebar.md": "1e7625750f58ff6276bb4def4d3ae7a01f1dae78ca4b73cf3abf96234951f166"
+    },
+    {
+      "Home.md": "174ae388d7f00245650b62031edd249dfd3b30b14068989e94b1834649b30def",
+      "_Sidebar.md": "1e7625750f58ff6276bb4def4d3ae7a01f1dae78ca4b73cf3abf96234951f166"
     }
   ],
   "wiki_head": "3048823394bb466f20215a8ee9766ac0687cf558",
@@ -92,7 +96,7 @@
       "sha256": "d8f9ecc2c2a713b7d86f96e1b4d5b61829d77cbf66a37a0853df37662497761c"
     }
   ],
-  "authored_recipe_count": 1709,
-  "workshop_recipe_count": 1710,
+  "authored_recipe_count": 1766,
+  "workshop_recipe_count": 1767,
   "quest_count": 353
 }

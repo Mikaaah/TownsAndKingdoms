@@ -1,63 +1,1456 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171322"><meta name="description" content="The current six-class design, eighteen subclasses and Mining, Logging, Farming and Fishing branches."><title>Classes &amp; professions · Towns & Kingdoms</title><link rel="icon" href="../../assets/brand/favicon.png"><link rel="canonical" href="https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/"><link rel="stylesheet" href="../../assets/site.css?v=2f5a3f6ac5d7"><script src="../../assets/item-art.js?v=6fbedaa3b6ac" defer></script><script src="../../assets/item-art-ui.js?v=6fbedaa3b6ac" defer></script></head><body data-category="adventure" data-version="3.0" data-site-root="../../"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="site-brand" href="../../" aria-label="Towns & Kingdoms home"><img src="../../assets/brand/favicon.png" width="48" height="48" alt=""><span>Towns & Kingdoms<small>Official wiki</small></span></a><nav class="top-nav" aria-label="Main navigation"><a href="../../">Home</a><a href="../../3.0/" class="nav-section-active">T&amp;K3</a><a href="../../guides/">Guides</a><a href="../../recipes/">Recipes</a><a href="../../2.0/">T&amp;K2 archive</a></nav><a class="search-trigger" href="../../guides/#find-guide" aria-label="Search the wiki"><span aria-hidden="true">⌕</span><span>Search</span><kbd>/</kbd></a><button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button></div></header><div class="version-bar"><div><span class="version-tag">T&K3</span><span class="status-dot" aria-hidden="true"></span><strong>In development</strong><span class="version-platform">Minecraft 1.21.1 · NeoForge</span><a href="../../2.0/">T&K2 archive <span aria-hidden="true">→</span></a></div></div><div class="site-layout"><aside class="site-sidebar" id="site-navigation" aria-label="Guide navigation"><div class="sidebar-top"><span class="eyebrow">T&K3 field guide</span><button class="menu-close icon-button" type="button" aria-label="Close navigation">×</button></div><details class="nav-group" open><summary>Start here</summary><nav aria-label="Start here"><a href="../../3.0/">Towns &amp; Kingdoms 3</a><a href="../../3.0/features/">Features &amp; systems</a><a href="../../progression/">Progression &amp; machine frames</a><a href="../../chapters/">Chapters &amp; quests</a><a href="../../guides/">Find a guide</a></nav></details><details class="nav-group"><summary>Build &amp; automate</summary><nav aria-label="Build &amp; automate"><a href="../../recipes/">Recipe catalogue</a><a href="../../workshop/">Visual recipe workshop</a><a href="../../3.0/create/">Create parts &amp; machines</a><a href="../../automation/">Automation field guide</a><a href="../../3.0/engineering/">Engineering &amp; storage</a></nav></details><details class="nav-group" open><summary>Explore &amp; grow</summary><nav aria-label="Explore &amp; grow"><a href="../../3.0/magic/">Magic &amp; spells</a><a href="../../3.0/exploration/">Exploration &amp; combat</a><a href="../../3.0/kingdoms/">Towns &amp; multiplayer</a><a href="../../3.0/skill-tree/" aria-current="page">Classes &amp; professions</a></nav></details><details class="nav-group"><summary>Project reference</summary><nav aria-label="Project reference"><a href="../../3.0/modlist/">Mod list</a><a href="../../3.0/tier-map/">Mods, addons &amp; tiers</a><a href="../../3.0/changelog/">Changelog</a><a href="../../3.0/comparison/">T&amp;K2 → T&amp;K3 comparison</a><a href="../../3.0/selection-notes/">Selection &amp; development notes</a><a href="../../3.0/credits/">Artwork &amp; credits</a></nav></details><a class="sidebar-version" href="../../2.0/"><span>Looking for the previous pack?</span>Open the T&K2 archive <span aria-hidden="true">→</span></a><a class="sidebar-feedback" href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback & suggestions <span aria-hidden="true">↗</span></a></aside><button class="nav-scrim" type="button" aria-label="Close navigation" hidden></button><div class="site-content"><main class="page" id="main" tabindex="-1"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../3.0/">T&K3</a><span aria-hidden="true">/</span><span aria-current="page">Classes &amp; professions</span></nav><header class="page-header"><p class="eyebrow">Explore &amp; grow</p><h1>Classes &amp; professions</h1><p class="lead">The current six-class design, eighteen subclasses and Mining, Logging, Farming and Fishing branches.</p></header><div class="reading-layout"><div class="reading-content"><article class="article-body">
-<p>One giant skill tree connects your class, subclass, general abilities and profession branches. The current design offers six classes and eighteen subclasses. Choose one main class and one subclass to define your character.</p>
-<h2 id="class-identities">Class identities</h2>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171322"><meta name="description" content="Six classes, eighteen subclasses, seven professions, all paths and exact scripted bonuses."><title>Classes &amp; professions · Towns & Kingdoms</title><link rel="icon" href="../../assets/brand/favicon.png"><link rel="canonical" href="https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/"><link rel="stylesheet" href="../../assets/site.css?v=74a9dab9db63"><script src="../../assets/item-art.js?v=e3daad4196a0" defer></script><script src="../../assets/item-art-ui.js?v=e3daad4196a0" defer></script></head><body data-category="adventure" data-version="3.0" data-site-root="../../" data-search-version="54bb502acee9"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="site-brand" href="../../" aria-label="Towns & Kingdoms home"><img src="../../assets/brand/favicon.png" width="48" height="48" alt=""><span>Towns & Kingdoms<small>Official wiki</small></span></a><nav class="top-nav" aria-label="Main navigation"><a href="../../">Home</a><a href="../../3.0/" class="nav-section-active">T&amp;K3</a><a href="../../guides/">Guides</a><a href="../../recipes/">Recipes</a><a href="../../2.0/">T&amp;K2 archive</a></nav><a class="search-trigger" href="../../guides/#find-guide" aria-label="Search the wiki"><span aria-hidden="true">⌕</span><span>Search</span><kbd>/</kbd></a><button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button></div></header><div class="version-bar"><div><span class="version-tag">T&K3</span><span class="status-dot" aria-hidden="true"></span><strong>Alpha 1.0</strong><span class="version-platform">Minecraft 1.21.1 · NeoForge</span><a href="../../2.0/">T&K2 archive <span aria-hidden="true">→</span></a></div></div><div class="site-layout"><aside class="site-sidebar" id="site-navigation" aria-label="Guide navigation"><div class="sidebar-top"><span class="eyebrow">T&K3 field guide</span><button class="menu-close icon-button" type="button" aria-label="Close navigation">×</button></div><details class="nav-group" open><summary>Start here</summary><nav aria-label="Start here"><a href="../../3.0/">Towns &amp; Kingdoms 3</a><a href="../../3.0/features/">Features &amp; systems</a><a href="../../progression/">Progression &amp; machine frames</a><a href="../../chapters/">Chapters &amp; quests</a><a href="../../guides/">Find a guide</a></nav></details><details class="nav-group"><summary>Build &amp; automate</summary><nav aria-label="Build &amp; automate"><a href="../../recipes/">Recipe catalogue</a><a href="../../workshop/">Visual recipe workshop</a><a href="../../3.0/create/">Create parts &amp; machines</a><a href="../../automation/">Automation field guide</a><a href="../../3.0/engineering/">Engineering &amp; storage</a></nav></details><details class="nav-group" open><summary>Explore &amp; grow</summary><nav aria-label="Explore &amp; grow"><a href="../../3.0/exploration/">Exploration &amp; combat</a><a href="../../3.0/kingdoms/">Towns &amp; multiplayer</a><a href="../../3.0/skill-tree/" aria-current="page">Classes &amp; professions</a></nav></details><details class="nav-group"><summary>Project reference</summary><nav aria-label="Project reference"><a href="../../renewability/">Production &amp; renewability review</a><a href="../../3.0/modlist/">Mod list</a><a href="../../3.0/tier-map/">Mods, addons &amp; tiers</a><a href="../../3.0/changelog/">Changelog</a><a href="../../3.0/comparison/">T&amp;K2 → T&amp;K3 comparison</a><a href="../../3.0/selection-notes/">Selection &amp; development notes</a><a href="../../3.0/credits/">Artwork &amp; credits</a></nav></details><details class="nav-group"><summary>Combat &amp; magic</summary><nav aria-label="Combat &amp; magic"><a href="../../3.0/magic/">Magic &amp; spells</a><a href="../../3.0/epic-fight/">Epic Fight combat</a><a href="../../3.0/irons-spells/">Iron’s Spells &amp; addons</a><a href="../../3.0/ars-nouveau/">Ars Nouveau spellcraft</a><a href="../../3.0/witchery/">Witchery</a><a href="../../3.0/artifacts-relics/">Artifacts &amp; Relics</a></nav></details><details class="nav-group"><summary>Search catalogues</summary><nav aria-label="Search catalogues"><a href="../../3.0/skill-nodes/">Skill node catalogue</a><a href="../../3.0/spell-catalogue/">Spell catalogue</a><a href="../../3.0/glyph-catalogue/">Ars glyph catalogue</a><a href="../../3.0/accessory-catalogue/">Accessory catalogue</a><a href="../../3.0/witchery-topics/">Witchery topic index</a></nav></details><a class="sidebar-version" href="../../2.0/"><span>Looking for the previous pack?</span>Open the T&K2 archive <span aria-hidden="true">→</span></a><a class="sidebar-feedback" href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback & suggestions <span aria-hidden="true">↗</span></a></aside><button class="nav-scrim" type="button" aria-label="Close navigation" hidden></button><div class="site-content"><main class="page" id="main" tabindex="-1"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span aria-hidden="true">/</span><a href="../../3.0/">T&K3</a><span aria-hidden="true">/</span><span aria-current="page">Classes &amp; professions</span></nav><header class="page-header"><p class="eyebrow">Explore &amp; grow</p><h1>Classes &amp; professions</h1><p class="lead">Six classes, eighteen subclasses, seven professions, all paths and exact scripted bonuses.</p></header><div class="reading-layout"><div class="reading-content"><article class="article-body">
+<p><strong>6 CLASSES · 18 SUBCLASSES · 7 PROFESSIONS · 1387 NODES</strong></p>
+<p>Shape your character through shared constellations, a class foundation and three subclass paths. This guide is generated from the supplied <strong>v3.2.3 SIX PATHS</strong> script. <a href="../skill-nodes/">Browse every node</a> or jump to a class below.</p>
+<h2 id="how-to-choose-your-path">How to choose your path</h2>
+<p>Start at Adventurer’s Origin, travel through the shared tree and unlock a class root. Finish the class foundation to reach the mastery hub and Specialisation Gate. Choose your subclass, then invest along its three independent paths. Advanced class lobes are optional.</p>
+<p>Every node costs <strong>one point from the same point pool</strong>. You may choose one class and one subclass. Profession masteries are limited to three; each profession allows three of its six focus nodes. Taking profession nodes is separate from choosing a class.</p>
+<p>The script recommends an initial maximum of 260 points and describes an intended endgame spend of 150–220. These are design recommendations, not a verified server point cap.</p>
+<h2 id="class-overview">Class overview</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Class</th>
-<th>Subclass 1</th>
-<th>Subclass 2</th>
-<th>Subclass 3</th>
-<th>Class color</th>
+<th>Focus</th>
+<th>Subclasses</th>
+<th>Root bonus</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Warrior</td>
-<td>Berserker</td>
-<td>Weapon Master</td>
-<td>Juggernaut</td>
-<td><code>#E05A47</code></td>
+<td><a href="#warrior">Warrior</a></td>
+<td>Melee damage, attack rhythm and durability.</td>
+<td>Berserker, Weapon Master, Juggernaut</td>
+<td>+3.5% Attack Damage<br>+2.5% Max Health</td>
 </tr>
 <tr>
-<td>Ranger</td>
-<td>Marksman</td>
-<td>Hunter</td>
-<td>Beastmaster</td>
-<td><code>#5DAE68</code></td>
+<td><a href="#ranger">Ranger</a></td>
+<td>Ranged damage, precision and hunting.</td>
+<td>Marksman, Hunter, Beastmaster</td>
+<td>+2.5% Projectile Damage<br>+2% Movement Speed<br>+5% Arrow Retrieval Chance</td>
 </tr>
 <tr>
-<td>Rogue</td>
-<td>Assassin</td>
-<td>Duelist</td>
-<td>Shadowblade</td>
-<td><code>#9A6BC5</code></td>
+<td><a href="#rogue">Rogue</a></td>
+<td>Critical hits, speed and evasive offence.</td>
+<td>Assassin, Duelist, Shadowblade</td>
+<td>+3% Movement Speed<br>+2% Crit Chance<br>+3% Crit Damage</td>
 </tr>
 <tr>
-<td>Mage</td>
-<td>Elementalist</td>
-<td>Arcanist</td>
-<td>Battlemage</td>
-<td><code>#55CFEA</code></td>
+<td><a href="#mage">Mage</a></td>
+<td>Mana and spell power, with elemental or hybrid specialisation.</td>
+<td>Elementalist, Arcanist, Battlemage</td>
+<td>+6% Max Mana<br>+3.5% Spell Power<br>-3% Attack Damage</td>
 </tr>
 <tr>
-<td>Cleric</td>
-<td>Priest</td>
-<td>Crusader</td>
-<td>Oracle</td>
-<td><code>#F1D776</code></td>
+<td><a href="#cleric">Cleric</a></td>
+<td>Holy magic, healing and resilient support.</td>
+<td>Priest, Crusader, Oracle</td>
+<td>+4% Holy Spell Power<br>+3% Mana Regeneration<br>+3% Healing Received</td>
 </tr>
 <tr>
-<td>Occultist</td>
-<td>Blood Mage</td>
-<td>Necromancer</td>
-<td>Voidcaller</td>
-<td><code>#9B4B70</code></td>
+<td><a href="#occultist">Occultist</a></td>
+<td>Blood, summons and eldritch power with explicit trade-offs.</td>
+<td>Blood Mage, Necromancer, Voidcaller</td>
+<td>+4% Max Mana<br>+3% Eldritch Spell Power<br>+2% Ender / Void Spell Power<br>-2% Max Health</td>
 </tr>
 </tbody></table></div>
-<h2 id="professions">Professions</h2>
-<p>Mining, Logging, Farming and Fishing have their own branches and mastery paths. Each profession has six focus nodes; choose at most three. Profession branches remain separate from class branches.</p>
-<h2 id="character-growth">Character growth</h2>
-<p>Paths combine general improvements with class-specific choices. Percentage effects and flat statistics are presented consistently so you can compare nodes clearly.</p>
-<h2 id="current-status">Current status</h2>
-<p>This describes the v3.2.2 design. The character tree is still being developed separately from the chapter 1–10 recipe package.</p>
-</article></div><aside class="page-toc" aria-label="On this page"><details open><summary>On this page</summary><nav><a href="#class-identities">Class identities</a><a href="#professions">Professions</a><a href="#character-growth">Character growth</a><a href="#current-status">Current status</a></nav></details></aside></div></main><footer class="site-footer"><div><strong>Towns & Kingdoms</strong><p>Build your workshop. Explore the world. Grow your kingdom.</p></div><nav aria-label="Footer navigation"><a href="../../guides/">All guides</a><a href="../../3.0/credits/">Credits</a><a href="https://github.com/Mikaaah/TownsAndKingdoms">GitHub <span aria-hidden="true">↗</span></a><a href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback <span aria-hidden="true">↗</span></a></nav><p class="footer-version">T&K3 is in development. Selected systems and authored recipes may change.</p></footer></div></div><dialog class="search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-head"><h2 id="search-dialog-title">Search the wiki</h2><button class="search-close icon-button" type="button" aria-label="Close search">×</button></div><form class="search-form" role="search"><label for="global-search">Guide, system, mod or item</label><input id="global-search" type="search" placeholder="Try AE2, spell, chapter or casing…" autocomplete="off"><label for="search-version">Documentation version</label><select id="search-version"><option value="3.0">T&K3 · in development</option><option value="2.0">T&K2 · legacy</option><option value="">All versions</option></select></form><p class="search-status" role="status">Type at least two characters to search.</p><div class="global-search-results"></div><p class="search-help">Press Escape to close. <a href="../../guides/">Browse all guides</a></p></dialog><script src="../../assets/site.js?v=2f5a3f6ac5d7" defer></script></body></html>
+<h2 id="reading-stats-and-prerequisites">Reading stats and prerequisites</h2>
+<p>Bonuses below reproduce the script’s display text, including penalties. Percentage attributes, percentage-point chances and flat armour/reach values are different operations; do not add them all as flat percentages. Display values are rounded by the script. A node called Fury or Guard grants its listed statistics; its name alone does not add an Epic Fight move or an Ars spell.</p>
+<p>The documentation extractor assumes the Minecraft, Iron’s Spellbooks and Apothic attributes exist. The script has fallbacks when optional attributes are missing. In-game tooltips and server configuration determine the actual loaded result.</p>
+<h2 id="warrior">Warrior</h2>
+<p>Melee damage, attack rhythm and durability. <strong>Class root:</strong> +3.5% Attack Damage<br>+2.5% Max Health.</p>
+<h3 id="warrior-foundation">Warrior foundation</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lobe</th>
+<th>Each inner rank</th>
+<th>Each advanced rank</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Weapon Training</td>
+<td>+0.45% Attack Damage</td>
+<td>+0.35% Attack Damage</td>
+</tr>
+<tr>
+<td>Battle Rhythm</td>
+<td>+0.54% Attack Speed</td>
+<td>+0.42% Attack Speed</td>
+</tr>
+<tr>
+<td>Endurance</td>
+<td>+0.45% Max Health</td>
+<td>+0.35% Max Health</td>
+</tr>
+<tr>
+<td>Iron Guard</td>
+<td>+0.14 Armor</td>
+<td>+0.11 Armor</td>
+</tr>
+<tr>
+<td>Pressure</td>
+<td>+0.18% Armor Shred</td>
+<td>+0.14% Armor Shred</td>
+</tr>
+</tbody></table></div>
+<p>The generated foundation has <strong>20 inner nodes</strong>; the optional advanced lobes add <strong>25 nodes</strong>. <strong>Mastery:</strong> +0.32% Attack Damage. <strong>Gate:</strong> +2% Attack Damage.</p>
+<h3 id="berserker">Berserker</h3>
+<p><strong>Entry bonuses and penalties:</strong> +8% Attack Damage<br>-6% Max Health<br>-8% Healing Received.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fury</td>
+<td>+0.38% Attack Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Brutality</td>
+<td>+0.6% Crit Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Blood Price</td>
+<td>-0.19% Healing Received<br>+0.22% Attack Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Berserker Synergy I</td>
+<td>Fury VII + Brutality VII</td>
+<td>+0.5% Attack Damage<br>+0.8% Crit Damage</td>
+</tr>
+<tr>
+<td>Berserker Synergy II</td>
+<td>Brutality VII + Blood Price VII</td>
+<td>+0.8% Crit Damage<br>-0.25% Healing Received<br>+0.3% Attack Damage</td>
+</tr>
+<tr>
+<td>Berserker Ascendancy</td>
+<td>Fury 14 + Brutality 14 + Blood Price 14 + Berserker</td>
+<td>+2.24% Attack Damage<br>-1.68% Max Health<br>-2.24% Healing Received<br>+1% Attack Damage<br>+1.6% Crit Damage<br>-0.5% Healing Received<br>+0.6% Attack Damage</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="weapon-master">Weapon Master</h3>
+<p><strong>Entry bonuses and penalties:</strong> +5% Attack Damage<br>+6% Attack Speed<br>-2 Armor.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Technique</td>
+<td>+0.22% Attack Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Tempo</td>
+<td>+0.3% Attack Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>+0.15% Crit Chance<br>+0.3% Crit Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Weapon Master Synergy I</td>
+<td>Technique VII + Tempo VII</td>
+<td>+0.3% Attack Damage<br>+0.4% Attack Speed</td>
+</tr>
+<tr>
+<td>Weapon Master Synergy II</td>
+<td>Tempo VII + Precision VII</td>
+<td>+0.4% Attack Speed<br>+0.2% Crit Chance<br>+0.4% Crit Damage</td>
+</tr>
+<tr>
+<td>Weapon Master Ascendancy</td>
+<td>Technique 14 + Tempo 14 + Precision 14 + Weapon Master</td>
+<td>+1.4% Attack Damage<br>+1.68% Attack Speed<br>-0.56 Armor<br>+0.6% Attack Damage<br>+0.8% Attack Speed<br>+0.4% Crit Chance<br>+0.8% Crit Damage</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="juggernaut">Juggernaut</h3>
+<p><strong>Entry bonuses and penalties:</strong> +2 Armor<br>+8% Max Health<br>+8% Healing Received<br>-5% Movement Speed<br>-5% Attack Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fortress</td>
+<td>+0.08 Armor</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Vitality</td>
+<td>+0.3% Max Health</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Recovery</td>
+<td>+0.38% Healing Received</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Juggernaut Synergy I</td>
+<td>Fortress VII + Vitality VII</td>
+<td>+0.1 Armor<br>+0.4% Max Health</td>
+</tr>
+<tr>
+<td>Juggernaut Synergy II</td>
+<td>Vitality VII + Recovery VII</td>
+<td>+0.4% Max Health<br>+0.5% Healing Received</td>
+</tr>
+<tr>
+<td>Juggernaut Ascendancy</td>
+<td>Fortress 14 + Vitality 14 + Recovery 14 + Juggernaut</td>
+<td>+0.56 Armor<br>+2.24% Max Health<br>+2.24% Healing Received<br>-1.4% Movement Speed<br>-1.4% Attack Damage<br>+0.2 Armor<br>+0.8% Max Health<br>+1% Healing Received</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h2 id="ranger">Ranger</h2>
+<p>Ranged damage, precision and hunting. <strong>Class root:</strong> +2.5% Projectile Damage<br>+2% Movement Speed<br>+5% Arrow Retrieval Chance.</p>
+<h3 id="ranger-foundation">Ranger foundation</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lobe</th>
+<th>Each inner rank</th>
+<th>Each advanced rank</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Archery</td>
+<td>+0.45% Projectile Damage</td>
+<td>+0.35% Projectile Damage</td>
+</tr>
+<tr>
+<td>Quick Draw</td>
+<td>+0.45% Draw Speed</td>
+<td>+0.35% Draw Speed</td>
+</tr>
+<tr>
+<td>Trailcraft</td>
+<td>+0.36% Movement Speed</td>
+<td>+0.28% Movement Speed</td>
+</tr>
+<tr>
+<td>Steady Aim</td>
+<td>+0.22% Crit Chance</td>
+<td>+0.18% Crit Chance</td>
+</tr>
+<tr>
+<td>Fieldcraft</td>
+<td>+0.22% Experience from Mobs</td>
+<td>+0.18% Experience from Mobs</td>
+</tr>
+</tbody></table></div>
+<p>The generated foundation has <strong>20 inner nodes</strong>; the optional advanced lobes add <strong>25 nodes</strong>. <strong>Mastery:</strong> +0.32% Projectile Damage. <strong>Gate:</strong> +2% Projectile Damage.</p>
+<h3 id="marksman">Marksman</h3>
+<p><strong>Entry bonuses and penalties:</strong> +10% Projectile Damage<br>+10% Draw Speed<br>-4% Movement Speed.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Long Shot</td>
+<td>+0.38% Projectile Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Quick Draw</td>
+<td>+0.38% Draw Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Deadeye</td>
+<td>+0.15% Crit Chance<br>+0.38% Projectile Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Marksman Synergy I</td>
+<td>Long Shot VII + Quick Draw VII</td>
+<td>+0.5% Projectile Damage<br>+0.5% Draw Speed</td>
+</tr>
+<tr>
+<td>Marksman Synergy II</td>
+<td>Quick Draw VII + Deadeye VII</td>
+<td>+0.5% Draw Speed<br>+0.2% Crit Chance<br>+0.5% Projectile Speed</td>
+</tr>
+<tr>
+<td>Marksman Ascendancy</td>
+<td>Long Shot 14 + Quick Draw 14 + Deadeye 14 + Marksman</td>
+<td>+2.8% Projectile Damage<br>+2.8% Draw Speed<br>-1.12% Movement Speed<br>+1% Projectile Damage<br>+1% Draw Speed<br>+0.4% Crit Chance<br>+1% Projectile Speed</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="hunter">Hunter</h3>
+<p><strong>Entry bonuses and penalties:</strong> +6% Movement Speed<br>+2% Mobs Loot Duplication<br>-6% Draw Speed<br>+2.5% Crit Chance.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pursuit</td>
+<td>+0.22% Movement Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Trophies</td>
+<td>+0.09% Mobs Loot Duplication</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Killer Instinct</td>
+<td>+0.15% Crit Chance</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hunter Synergy I</td>
+<td>Pursuit VII + Trophies VII</td>
+<td>+0.3% Movement Speed<br>+0.13% Mobs Loot Duplication</td>
+</tr>
+<tr>
+<td>Hunter Synergy II</td>
+<td>Trophies VII + Killer Instinct VII</td>
+<td>+0.13% Mobs Loot Duplication<br>+0.2% Crit Chance</td>
+</tr>
+<tr>
+<td>Hunter Ascendancy</td>
+<td>Pursuit 14 + Trophies 14 + Killer Instinct 14 + Hunter</td>
+<td>+1.68% Movement Speed<br>+0.56% Mobs Loot Duplication<br>-1.68% Draw Speed<br>+0.7% Crit Chance<br>+0.6% Movement Speed<br>+0.25% Mobs Loot Duplication<br>+0.4% Crit Chance</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="beastmaster">Beastmaster</h3>
+<p><strong>Entry bonuses and penalties:</strong> +7% Max Health<br>+4% Movement Speed<br>-8% Projectile Damage<br>+8% Experience from Mobs.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pack Endurance</td>
+<td>+0.26% Max Health</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Wild Pace</td>
+<td>+0.19% Movement Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Beast Lore</td>
+<td>+0.3% Experience from Mobs</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Beastmaster Synergy I</td>
+<td>Pack Endurance VII + Wild Pace VII</td>
+<td>+0.35% Max Health<br>+0.25% Movement Speed</td>
+</tr>
+<tr>
+<td>Beastmaster Synergy II</td>
+<td>Wild Pace VII + Beast Lore VII</td>
+<td>+0.25% Movement Speed<br>+0.4% Experience from Mobs</td>
+</tr>
+<tr>
+<td>Beastmaster Ascendancy</td>
+<td>Pack Endurance 14 + Wild Pace 14 + Beast Lore 14 + Beastmaster</td>
+<td>+1.96% Max Health<br>+1.12% Movement Speed<br>-2.24% Projectile Damage<br>+2.24% Experience from Mobs<br>+0.7% Max Health<br>+0.5% Movement Speed<br>+0.8% Experience from Mobs</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h2 id="rogue">Rogue</h2>
+<p>Critical hits, speed and evasive offence. <strong>Class root:</strong> +3% Movement Speed<br>+2% Crit Chance<br>+3% Crit Damage.</p>
+<h3 id="rogue-foundation">Rogue foundation</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lobe</th>
+<th>Each inner rank</th>
+<th>Each advanced rank</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Light Feet</td>
+<td>+0.36% Movement Speed</td>
+<td>+0.28% Movement Speed</td>
+</tr>
+<tr>
+<td>Dirty Fighting</td>
+<td>+0.63% Crit Damage</td>
+<td>+0.49% Crit Damage</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>+0.22% Crit Chance</td>
+<td>+0.18% Crit Chance</td>
+</tr>
+<tr>
+<td>Evasion</td>
+<td>+0.11% Dodge Chance</td>
+<td>+0.08% Dodge Chance</td>
+</tr>
+<tr>
+<td>Quick Hands</td>
+<td>+0.45% Attack Speed</td>
+<td>+0.35% Attack Speed</td>
+</tr>
+</tbody></table></div>
+<p>The generated foundation has <strong>20 inner nodes</strong>; the optional advanced lobes add <strong>25 nodes</strong>. <strong>Mastery:</strong> +0.24% Crit Chance. <strong>Gate:</strong> +1.5% Crit Chance.</p>
+<h3 id="assassin">Assassin</h3>
+<p><strong>Entry bonuses and penalties:</strong> +7% Movement Speed<br>-6% Max Health<br>+5% Crit Chance.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Silent Step</td>
+<td>+0.22% Movement Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Killer Instinct</td>
+<td>+0.19% Crit Chance</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Deathblow</td>
+<td>+0.45% Crit Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Assassin Synergy I</td>
+<td>Silent Step VII + Killer Instinct VII</td>
+<td>+0.3% Movement Speed<br>+0.25% Crit Chance</td>
+</tr>
+<tr>
+<td>Assassin Synergy II</td>
+<td>Killer Instinct VII + Deathblow VII</td>
+<td>+0.25% Crit Chance<br>+0.6% Crit Damage</td>
+</tr>
+<tr>
+<td>Assassin Ascendancy</td>
+<td>Silent Step 14 + Killer Instinct 14 + Deathblow 14 + Assassin</td>
+<td>+1.96% Movement Speed<br>-1.68% Max Health<br>+1.4% Crit Chance<br>+0.6% Movement Speed<br>+0.5% Crit Chance<br>+1.2% Crit Damage</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="duelist">Duelist</h3>
+<p><strong>Entry bonuses and penalties:</strong> +10% Crit Damage<br>+2.5% Dodge Chance<br>-2 Armor.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Finesse</td>
+<td>+0.38% Crit Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Footwork</td>
+<td>+0.09% Dodge Chance</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Riposte</td>
+<td>+0.19% Attack Speed</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Duelist Synergy I</td>
+<td>Finesse VII + Footwork VII</td>
+<td>+0.5% Crit Damage<br>+0.13% Dodge Chance</td>
+</tr>
+<tr>
+<td>Duelist Synergy II</td>
+<td>Footwork VII + Riposte VII</td>
+<td>+0.13% Dodge Chance<br>+0.25% Attack Speed</td>
+</tr>
+<tr>
+<td>Duelist Ascendancy</td>
+<td>Finesse 14 + Footwork 14 + Riposte 14 + Duelist</td>
+<td>+2.8% Crit Damage<br>+0.7% Dodge Chance<br>-0.56 Armor<br>+1% Crit Damage<br>+0.25% Dodge Chance<br>+0.5% Attack Speed</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="shadowblade">Shadowblade</h3>
+<p><strong>Entry bonuses and penalties:</strong> -2 Armor<br>-10% Projectile Damage<br>+4.5% Crit Chance<br>+9% Crit Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Veil</td>
+<td>+0.38% Stealth</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Shadow Crit</td>
+<td>+0.19% Crit Chance</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Void Edge</td>
+<td>+0.38% Crit Damage<br>+0.19% Ender / Void Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Shadowblade Synergy I</td>
+<td>Veil VII + Shadow Crit VII</td>
+<td>+0.5% Stealth<br>+0.25% Crit Chance</td>
+</tr>
+<tr>
+<td>Shadowblade Synergy II</td>
+<td>Shadow Crit VII + Void Edge VII</td>
+<td>+0.25% Crit Chance<br>+0.5% Crit Damage<br>+0.25% Ender / Void Spell Power</td>
+</tr>
+<tr>
+<td>Shadowblade Ascendancy</td>
+<td>Veil 14 + Shadow Crit 14 + Void Edge 14 + Shadowblade</td>
+<td>-0.56 Armor<br>-2.8% Projectile Damage<br>+1.26% Crit Chance<br>+2.52% Crit Damage<br>+1% Stealth<br>+0.5% Crit Chance<br>+1% Crit Damage<br>+0.5% Ender / Void Spell Power</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h2 id="mage">Mage</h2>
+<p>Mana and spell power, with elemental or hybrid specialisation. <strong>Class root:</strong> +6% Max Mana<br>+3.5% Spell Power<br>-3% Attack Damage.</p>
+<h3 id="mage-foundation">Mage foundation</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lobe</th>
+<th>Each inner rank</th>
+<th>Each advanced rank</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Arcane Power</td>
+<td>+0.45% Spell Power</td>
+<td>+0.35% Spell Power</td>
+</tr>
+<tr>
+<td>Mana Reserve</td>
+<td>+0.72% Max Mana</td>
+<td>+0.56% Max Mana</td>
+</tr>
+<tr>
+<td>Mana Flow</td>
+<td>+0.63% Mana Regeneration</td>
+<td>+0.49% Mana Regeneration</td>
+</tr>
+<tr>
+<td>Focused Casting</td>
+<td>+0.36% Cast Time Reduction</td>
+<td>+0.28% Cast Time Reduction</td>
+</tr>
+<tr>
+<td>Arcane Ward</td>
+<td>+0.18% Max Health</td>
+<td>+0.14% Max Health</td>
+</tr>
+</tbody></table></div>
+<p>The generated foundation has <strong>20 inner nodes</strong>; the optional advanced lobes add <strong>25 nodes</strong>. <strong>Mastery:</strong> +0.32% Spell Power. <strong>Gate:</strong> +2% Spell Power.</p>
+<h3 id="elementalist">Elementalist</h3>
+<p><strong>Entry bonuses and penalties:</strong> +7% Cooldown Reduction<br>+7% Ice Spell Power<br>+7% Fire Spell Power<br>+7% Lightning Spell Power.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fire Mastery</td>
+<td>+0.34% Fire Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Ice Mastery</td>
+<td>+0.34% Ice Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Lightning Mastery</td>
+<td>+0.34% Lightning Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Elementalist Synergy I</td>
+<td>Fire Mastery VII + Ice Mastery VII</td>
+<td>+0.45% Fire Spell Power<br>+0.45% Ice Spell Power</td>
+</tr>
+<tr>
+<td>Elementalist Synergy II</td>
+<td>Ice Mastery VII + Lightning Mastery VII</td>
+<td>+0.45% Ice Spell Power<br>+0.45% Lightning Spell Power</td>
+</tr>
+<tr>
+<td>Elementalist Ascendancy</td>
+<td>Fire Mastery 14 + Ice Mastery 14 + Lightning Mastery 14 + Elementalist</td>
+<td>+1.96% Cooldown Reduction<br>+1.96% Ice Spell Power<br>+1.96% Fire Spell Power<br>+1.96% Lightning Spell Power<br>+0.9% Fire Spell Power<br>+0.9% Ice Spell Power<br>+0.9% Lightning Spell Power</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="arcanist">Arcanist</h3>
+<p><strong>Entry bonuses and penalties:</strong> -7% Attack Damage<br>+12% Max Mana<br>+8% Spell Power.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Deep Reserves</td>
+<td>+0.45% Max Mana</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Arcane Force</td>
+<td>+0.38% Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Flow</td>
+<td>+0.3% Mana Regeneration</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Arcanist Synergy I</td>
+<td>Deep Reserves VII + Arcane Force VII</td>
+<td>+0.6% Max Mana<br>+0.5% Spell Power</td>
+</tr>
+<tr>
+<td>Arcanist Synergy II</td>
+<td>Arcane Force VII + Flow VII</td>
+<td>+0.5% Spell Power<br>+0.4% Mana Regeneration</td>
+</tr>
+<tr>
+<td>Arcanist Ascendancy</td>
+<td>Deep Reserves 14 + Arcane Force 14 + Flow 14 + Arcanist</td>
+<td>-1.96% Attack Damage<br>+3.36% Max Mana<br>+2.24% Spell Power<br>+1.2% Max Mana<br>+1% Spell Power<br>+0.8% Mana Regeneration</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="battlemage">Battlemage</h3>
+<p><strong>Entry bonuses and penalties:</strong> -5% Cooldown Reduction<br>+6% Spell Power<br>-6% Mana Regeneration<br>+7% Attack Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spellsteel</td>
+<td>+0.3% Attack Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Battle Casting</td>
+<td>+0.3% Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Arcane Guard</td>
+<td>+0.05 Armor</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Battlemage Synergy I</td>
+<td>Spellsteel VII + Battle Casting VII</td>
+<td>+0.4% Attack Damage<br>+0.4% Spell Power</td>
+</tr>
+<tr>
+<td>Battlemage Synergy II</td>
+<td>Battle Casting VII + Arcane Guard VII</td>
+<td>+0.4% Spell Power<br>+0.06 Armor</td>
+</tr>
+<tr>
+<td>Battlemage Ascendancy</td>
+<td>Spellsteel 14 + Battle Casting 14 + Arcane Guard 14 + Battlemage</td>
+<td>-1.4% Cooldown Reduction<br>+1.68% Spell Power<br>-1.68% Mana Regeneration<br>+1.96% Attack Damage<br>+0.8% Attack Damage<br>+0.8% Spell Power<br>+0.12 Armor</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h2 id="cleric">Cleric</h2>
+<p>Holy magic, healing and resilient support. <strong>Class root:</strong> +4% Holy Spell Power<br>+3% Mana Regeneration<br>+3% Healing Received.</p>
+<h3 id="cleric-foundation">Cleric foundation</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lobe</th>
+<th>Each inner rank</th>
+<th>Each advanced rank</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Faith</td>
+<td>+0.45% Holy Spell Power</td>
+<td>+0.35% Holy Spell Power</td>
+</tr>
+<tr>
+<td>Prayer</td>
+<td>+0.45% Mana Regeneration</td>
+<td>+0.35% Mana Regeneration</td>
+</tr>
+<tr>
+<td>Grace</td>
+<td>+0.45% Healing Received</td>
+<td>+0.35% Healing Received</td>
+</tr>
+<tr>
+<td>Sacred Guard</td>
+<td>+0.09 Armor</td>
+<td>+0.07 Armor</td>
+</tr>
+<tr>
+<td>Wisdom</td>
+<td>+0.09% Free Enchant Chance</td>
+<td>+0.07% Free Enchant Chance</td>
+</tr>
+</tbody></table></div>
+<p>The generated foundation has <strong>20 inner nodes</strong>; the optional advanced lobes add <strong>25 nodes</strong>. <strong>Mastery:</strong> +0.32% Holy Spell Power. <strong>Gate:</strong> +2% Holy Spell Power.</p>
+<h3 id="priest">Priest</h3>
+<p><strong>Entry bonuses and penalties:</strong> +9% Holy Spell Power<br>-8% Blood Spell Power<br>+9% Mana Regeneration<br>-7% Attack Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Divine Channel</td>
+<td>+0.38% Holy Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Prayer</td>
+<td>+0.38% Mana Regeneration</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Grace</td>
+<td>+0.3% Healing Received</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Priest Synergy I</td>
+<td>Divine Channel VII + Prayer VII</td>
+<td>+0.5% Holy Spell Power<br>+0.5% Mana Regeneration</td>
+</tr>
+<tr>
+<td>Priest Synergy II</td>
+<td>Prayer VII + Grace VII</td>
+<td>+0.5% Mana Regeneration<br>+0.4% Healing Received</td>
+</tr>
+<tr>
+<td>Priest Ascendancy</td>
+<td>Divine Channel 14 + Prayer 14 + Grace 14 + Priest</td>
+<td>+2.52% Holy Spell Power<br>-2.24% Blood Spell Power<br>+2.52% Mana Regeneration<br>-1.96% Attack Damage<br>+1% Holy Spell Power<br>+1% Mana Regeneration<br>+0.8% Healing Received</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="crusader">Crusader</h3>
+<p><strong>Entry bonuses and penalties:</strong> +6% Holy Spell Power<br>+2 Armor<br>-8% Max Mana<br>-8% Mana Regeneration.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Consecrated Armor</td>
+<td>+0.08 Armor</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Holy Power</td>
+<td>+0.3% Holy Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Zeal</td>
+<td>+0.19% Attack Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Crusader Synergy I</td>
+<td>Consecrated Armor VII + Holy Power VII</td>
+<td>+0.1 Armor<br>+0.4% Holy Spell Power</td>
+</tr>
+<tr>
+<td>Crusader Synergy II</td>
+<td>Holy Power VII + Zeal VII</td>
+<td>+0.4% Holy Spell Power<br>+0.25% Attack Damage</td>
+</tr>
+<tr>
+<td>Crusader Ascendancy</td>
+<td>Consecrated Armor 14 + Holy Power 14 + Zeal 14 + Crusader</td>
+<td>+1.68% Holy Spell Power<br>+0.56 Armor<br>-2.24% Max Mana<br>-2.24% Mana Regeneration<br>+0.2 Armor<br>+0.8% Holy Spell Power<br>+0.5% Attack Damage</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="oracle">Oracle</h3>
+<p><strong>Entry bonuses and penalties:</strong> +8% Free Enchant Chance<br>+10% Max Mana<br>-6% Spell Power<br>-7% Attack Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Foresight</td>
+<td>+0.26% Free Enchant Chance</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Deep Insight</td>
+<td>+0.38% Max Mana</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td>+0.22% Experience Gained</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Oracle Synergy I</td>
+<td>Foresight VII + Deep Insight VII</td>
+<td>+0.35% Free Enchant Chance<br>+0.5% Max Mana</td>
+</tr>
+<tr>
+<td>Oracle Synergy II</td>
+<td>Deep Insight VII + Knowledge VII</td>
+<td>+0.5% Max Mana<br>+0.3% Experience Gained</td>
+</tr>
+<tr>
+<td>Oracle Ascendancy</td>
+<td>Foresight 14 + Deep Insight 14 + Knowledge 14 + Oracle</td>
+<td>+2.24% Free Enchant Chance<br>+2.8% Max Mana<br>-1.68% Spell Power<br>-1.96% Attack Damage<br>+0.7% Free Enchant Chance<br>+1% Max Mana<br>+0.6% Experience Gained</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h2 id="occultist">Occultist</h2>
+<p>Blood, summons and eldritch power with explicit trade-offs. <strong>Class root:</strong> +4% Max Mana<br>+3% Eldritch Spell Power<br>+2% Ender / Void Spell Power<br>-2% Max Health.</p>
+<h3 id="occultist-foundation">Occultist foundation</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Lobe</th>
+<th>Each inner rank</th>
+<th>Each advanced rank</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Forbidden Study</td>
+<td>+0.45% Spell Power</td>
+<td>+0.35% Spell Power</td>
+</tr>
+<tr>
+<td>Dark Reserve</td>
+<td>+0.63% Max Mana</td>
+<td>+0.49% Max Mana</td>
+</tr>
+<tr>
+<td>Blood Rite</td>
+<td>+0.45% Blood Spell Power</td>
+<td>+0.35% Blood Spell Power</td>
+</tr>
+<tr>
+<td>Void Study</td>
+<td>+0.45% Ender / Void Spell Power</td>
+<td>+0.35% Ender / Void Spell Power</td>
+</tr>
+<tr>
+<td>Eldritch Study</td>
+<td>+0.45% Eldritch Spell Power</td>
+<td>+0.35% Eldritch Spell Power</td>
+</tr>
+</tbody></table></div>
+<p>The generated foundation has <strong>20 inner nodes</strong>; the optional advanced lobes add <strong>25 nodes</strong>. <strong>Mastery:</strong> +0.32% Spell Power. <strong>Gate:</strong> +2% Spell Power.</p>
+<h3 id="blood-mage">Blood Mage</h3>
+<p><strong>Entry bonuses and penalties:</strong> +10% Blood Spell Power<br>-8% Holy Spell Power<br>-8% Max Health<br>-6% Attack Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sanguine Power</td>
+<td>+0.38% Blood Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Sacrifice</td>
+<td>-0.15% Max Health<br>+0.26% Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Crimson Mastery</td>
+<td>+0.38% Blood Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Blood Mage Synergy I</td>
+<td>Sanguine Power VII + Sacrifice VII</td>
+<td>+0.5% Blood Spell Power<br>-0.2% Max Health<br>+0.35% Spell Power</td>
+</tr>
+<tr>
+<td>Blood Mage Synergy II</td>
+<td>Sacrifice VII + Crimson Mastery VII</td>
+<td>-0.2% Max Health<br>+0.35% Spell Power<br>+0.5% Blood Spell Power</td>
+</tr>
+<tr>
+<td>Blood Mage Ascendancy</td>
+<td>Sanguine Power 14 + Sacrifice 14 + Crimson Mastery 14 + Blood Mage</td>
+<td>+2.8% Blood Spell Power<br>-2.24% Holy Spell Power<br>-2.24% Max Health<br>-1.68% Attack Damage<br>+1% Blood Spell Power<br>-0.4% Max Health<br>+0.7% Spell Power<br>+1% Blood Spell Power</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="necromancer">Necromancer</h3>
+<p><strong>Entry bonuses and penalties:</strong> +12% Summon Damage<br>+8% Max Mana<br>-5% Ice Spell Power<br>-5% Fire Spell Power<br>-5% Lightning Spell Power.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Summoning</td>
+<td>+0.45% Summon Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Grave Reserve</td>
+<td>+0.3% Max Mana</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Lord of the Dead</td>
+<td>+0.53% Summon Damage</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Necromancer Synergy I</td>
+<td>Summoning VII + Grave Reserve VII</td>
+<td>+0.6% Summon Damage<br>+0.4% Max Mana</td>
+</tr>
+<tr>
+<td>Necromancer Synergy II</td>
+<td>Grave Reserve VII + Lord of the Dead VII</td>
+<td>+0.4% Max Mana<br>+0.7% Summon Damage</td>
+</tr>
+<tr>
+<td>Necromancer Ascendancy</td>
+<td>Summoning 14 + Grave Reserve 14 + Lord of the Dead 14 + Necromancer</td>
+<td>+3.36% Summon Damage<br>+2.24% Max Mana<br>-1.4% Ice Spell Power<br>-1.4% Fire Spell Power<br>-1.4% Lightning Spell Power<br>+1.2% Summon Damage<br>+0.8% Max Mana<br>+1.4% Summon Damage</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h3 id="voidcaller">Voidcaller</h3>
+<p><strong>Entry bonuses and penalties:</strong> +9% Eldritch Spell Power<br>+8% Ender / Void Spell Power<br>+8% Max Mana<br>-2 Armor<br>-6% Max Health<br>-7% Attack Damage.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Independent path</th>
+<th>Bonus per rank</th>
+<th>Length</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Eldritch Power</td>
+<td>+0.38% Eldritch Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Void Power</td>
+<td>+0.38% Ender / Void Spell Power</td>
+<td>14 sequential nodes</td>
+</tr>
+<tr>
+<td>Abyssal Reserve</td>
+<td>+0.3% Max Mana</td>
+<td>14 sequential nodes</td>
+</tr>
+</tbody></table></div>
+<p>Ranks 4 and 8 are notable nodes; rank 14 is the path apex. Their visual status does not multiply the listed rank bonus. Each path begins at the subclass root and requires its preceding rank; there are no cross-path shortcuts.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Optional / final node</th>
+<th>Requires</th>
+<th>Bonus</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Voidcaller Synergy I</td>
+<td>Eldritch Power VII + Void Power VII</td>
+<td>+0.5% Eldritch Spell Power<br>+0.5% Ender / Void Spell Power</td>
+</tr>
+<tr>
+<td>Voidcaller Synergy II</td>
+<td>Void Power VII + Abyssal Reserve VII</td>
+<td>+0.5% Ender / Void Spell Power<br>+0.4% Max Mana</td>
+</tr>
+<tr>
+<td>Voidcaller Ascendancy</td>
+<td>Eldritch Power 14 + Void Power 14 + Abyssal Reserve 14 + Voidcaller</td>
+<td>+2.52% Eldritch Spell Power<br>+2.24% Ender / Void Spell Power<br>+2.24% Max Mana<br>-0.56 Armor<br>-1.68% Max Health<br>-1.96% Attack Damage<br>+1% Eldritch Spell Power<br>+1% Ender / Void Spell Power<br>+0.8% Max Mana</td>
+</tr>
+</tbody></table></div>
+<p>Synergies are optional dead ends. Ascendancy requires all three rank-14 apexes and the subclass root. Its listed penalties also apply.</p>
+<h2 id="shared-constellations">Shared constellations</h2>
+<p>These eight clusters support every class. They offer two main arms, mastery and additional general paths. Compare the individual bonuses in the node catalogue.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Constellation</th>
+<th>Root</th>
+<th>Mastery</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Power</td>
+<td>+1.25% Attack Damage</td>
+<td>+2% Attack Damage</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>+0.5% Crit Chance</td>
+<td>+1% Crit Chance<br>+3% Crit Damage</td>
+</tr>
+<tr>
+<td>Mobility</td>
+<td>+1% Movement Speed</td>
+<td>+1.5% Movement Speed<br>+1% Dodge Chance</td>
+</tr>
+<tr>
+<td>Fortune</td>
+<td>+0.1 Luck</td>
+<td>+0.15 Luck<br>+2% Experience Gained</td>
+</tr>
+<tr>
+<td>Vitality</td>
+<td>+1.25% Max Health</td>
+<td>+2% Max Health<br>+2% Healing Received</td>
+</tr>
+<tr>
+<td>Defense</td>
+<td>+0.35 Armor</td>
+<td>+0.6 Armor</td>
+</tr>
+<tr>
+<td>Sustain</td>
+<td>+1.5% Healing Received</td>
+<td>+2.5% Healing Received<br>+0.5% Life Steal</td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td>+1.5% Experience Gained</td>
+<td>+2% Experience Gained<br>+1% Free Enchant Chance</td>
+</tr>
+</tbody></table></div>
+<h2 id="professions-amp-focus-choices">Professions &amp; focus choices</h2>
+<p>Seven profession islands have three branches each. Focus A and B are separate nodes with matching bonuses, and each requires rank 5 of its own branch. Choose at most three focuses per profession and three profession masteries across the whole tree.</p>
+<h3 id="mining">Mining</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Excavation</td>
+<td>+1.4% Block Break Speed<br>+0.5% Block Break Speed</td>
+<td>Excavation V</td>
+</tr>
+<tr>
+<td>Prospecting</td>
+<td>+0.32% Ore Loot Duplication</td>
+<td>Prospecting V</td>
+</tr>
+<tr>
+<td>Deep Delver</td>
+<td>+0.05 Block Reach</td>
+<td>Deep Delver V</td>
+</tr>
+</tbody></table></div>
+<h3 id="logging">Logging</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chopping</td>
+<td>+1.4% Block Break Speed</td>
+<td>Chopping V</td>
+</tr>
+<tr>
+<td>Forestry</td>
+<td>+0.24% Movement Speed</td>
+<td>Forestry V</td>
+</tr>
+<tr>
+<td>Tool Care</td>
+<td>+0.8% Durability Preservation</td>
+<td>Tool Care V</td>
+</tr>
+</tbody></table></div>
+<h3 id="hunting">Hunting</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Tracking</td>
+<td>+0.24% Movement Speed</td>
+<td>Tracking V</td>
+</tr>
+<tr>
+<td>Trophies</td>
+<td>+0.24% Mobs Loot Duplication</td>
+<td>Trophies V</td>
+</tr>
+<tr>
+<td>Monster Lore</td>
+<td>+0.6% Experience from Mobs</td>
+<td>Monster Lore V</td>
+</tr>
+</tbody></table></div>
+<h3 id="exploration">Exploration</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pathfinding</td>
+<td>+0.3% Movement Speed</td>
+<td>Pathfinding V</td>
+</tr>
+<tr>
+<td>Scavenging</td>
+<td>+0.24% Chests Loot Duplication</td>
+<td>Scavenging V</td>
+</tr>
+<tr>
+<td>Discovery</td>
+<td>+0.03 Luck</td>
+<td>Discovery V</td>
+</tr>
+</tbody></table></div>
+<h3 id="fishing">Fishing</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Angling</td>
+<td>+0.24% Fishing Loot Duplication</td>
+<td>Angling V</td>
+</tr>
+<tr>
+<td>Treasure Waters</td>
+<td>+0.03 Luck</td>
+<td>Treasure Waters V</td>
+</tr>
+<tr>
+<td>Rod Care</td>
+<td>+0.8% Durability Preservation</td>
+<td>Rod Care V</td>
+</tr>
+</tbody></table></div>
+<h3 id="farming">Farming</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harvest</td>
+<td>+0.03 Block Reach</td>
+<td>Harvest V</td>
+</tr>
+<tr>
+<td>Animal Care</td>
+<td>+0.24% Max Health</td>
+<td>Animal Care V</td>
+</tr>
+<tr>
+<td>Field Work</td>
+<td>+1% Block Break Speed</td>
+<td>Field Work V</td>
+</tr>
+</tbody></table></div>
+<h3 id="crafting">Crafting</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Branch</th>
+<th>Focus A / B bonus</th>
+<th>Focus prerequisite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Repair</td>
+<td>+1% Repair Efficiency</td>
+<td>Repair V</td>
+</tr>
+<tr>
+<td>Enchanting</td>
+<td>+0.32% Free Enchant Chance</td>
+<td>Enchanting V</td>
+</tr>
+<tr>
+<td>Workshop</td>
+<td>+0.6% Durability Preservation</td>
+<td>Workshop V</td>
+</tr>
+</tbody></table></div>
+<h2 id="build-planning">Build planning</h2>
+<p>Choose your intended role first, then compare the subclass entry penalties. Invest enough in the class foundation to unlock specialisation before spreading into optional lobes. A single subclass path is cheaper than the three-path Ascendancy route; plan your profession focuses around activities you actually use.</p>
+<p>For a front-line build, compare Warrior’s Juggernaut with Cleric’s Crusader. For spellcasting, compare Mage’s mana and school paths with Cleric and Occultist. Battlemage is a Mage subclass; Juggernaut belongs to Warrior. These are planning suggestions, not a damage ranking.</p>
+<p><a href="../epic-fight/">Combat guide</a> · <a href="../irons-spells/">Iron’s magic</a> · <a href="../ars-nouveau/">Ars spellcraft</a></p>
+<h2 id="source-amp-maintenance">Source &amp; maintenance</h2>
+<p>Authoritative source: TK3_SkillTree.js · Towns &amp; Kingdoms 3 - Passive Skill Tree v3.2.3 SIX PATHS - FINAL CLASS ART. The old 3.2.2 and V1.0 design documents are not used for this guide. Extracted source SHA-256: <code>26f8abeacdcb11d9784654c06fcff0eace84cf110cfd81d3c3ddbd9993b52e9c</code>. <a href="../../assets/wiki/skilltree.json">Download the documented node data</a>.</p>
+</article></div><aside class="page-toc" aria-label="On this page"><details open><summary>On this page</summary><nav><a href="#how-to-choose-your-path">How to choose your path</a><a href="#class-overview">Class overview</a><a href="#reading-stats-and-prerequisites">Reading stats and prerequisites</a><a href="#warrior">Warrior</a><a href="#ranger">Ranger</a><a href="#rogue">Rogue</a><a href="#mage">Mage</a><a href="#cleric">Cleric</a><a href="#occultist">Occultist</a><a href="#shared-constellations">Shared constellations</a><a href="#professions-amp-focus-choices">Professions &amp; focus choices</a><a href="#build-planning">Build planning</a><a href="#source-amp-maintenance">Source &amp; maintenance</a></nav></details></aside></div></main><footer class="site-footer"><div><strong>Towns & Kingdoms</strong><p>Build your workshop. Explore the world. Grow your kingdom.</p></div><nav aria-label="Footer navigation"><a href="../../guides/">All guides</a><a href="../../3.0/credits/">Credits</a><a href="https://github.com/Mikaaah/TownsAndKingdoms">GitHub <span aria-hidden="true">↗</span></a><a href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback <span aria-hidden="true">↗</span></a></nav><p class="footer-version">T&K3 Alpha 1.0. Reference mod behaviour may differ by installed version and configuration.</p></footer></div></div><dialog class="search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-head"><h2 id="search-dialog-title">Search the wiki</h2><button class="search-close icon-button" type="button" aria-label="Close search">×</button></div><form class="search-form" role="search"><label for="global-search">Guide, system, mod or item</label><input id="global-search" type="search" placeholder="Try AE2, spell, chapter or casing…" autocomplete="off"><label for="search-version">Documentation version</label><select id="search-version"><option value="3.0">T&K3 · Alpha 1.0</option><option value="2.0">T&K2 · legacy</option><option value="">All versions</option></select></form><p class="search-status" role="status">Type at least two characters to search.</p><div class="global-search-results"></div><p class="search-help">Press Escape to close. <a href="../../guides/">Browse all guides</a></p></dialog><script src="../../assets/site.js?v=74a9dab9db63" defer></script></body></html>

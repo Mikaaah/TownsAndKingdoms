@@ -1,8 +1,8 @@
 # T&K3 · MODS & THEIR TIERS
 
-**10 PROGRESSION CHAPTERS · 27 GUIDE PAGES · 353 QUESTS · 1709 RECIPES**
+**10 PRODUCTION TIERS · 1,766 INTENDED RECIPES · SEPARATE 353-QUEST SNAPSHOT**
 
-The current progression selection is grouped by its actual workshop role. Native world, combat and building systems remain available alongside the chapter spine. Integration libraries do not need artificial crafting items to earn a place in the pack.
+The October 4 production reference follows Rotation, Sealed, Precision, Calculation, Inductive, Arcane, Chemical, Containment, Singularity and Sovereign manufacturing. Native world, combat and building systems remain available alongside that spine. The [production review](../../renewability/) records construction cycles, conflicting custom IDs and legacy migration issues. The original quest snapshot still uses its own chapter names.
 
 ## Create & integrations
 
@@ -14,21 +14,21 @@ The current progression selection is grouped by its actual workshop role. Native
 | **Crafts & Additions** | 2–4 | Rolling, capacitors and the rotational-power/FE bridge |
 | **MineColonies Link** | 3–7 | Colony supply requests connected to Create logistics |
 | **Sophisticated Storage Create Integration** | 1–10 | Supported storage upgrades on Create contraptions; integration has no new recipe-bearing items |
-| **Create: Ars Nouveau Compat** | 4–7 | Source processing and actual Source-powered machine upgrades |
+| **Create: Ars Nouveau Compat** | 6–10 production | Source processing and Source-powered machine upgrades; native character magic remains a parallel system |
 | **Dragons Plus** | 2–5 | Fluid hatch, native freezing/ending processing and Dragon’s Breath |
 | **Aeronautics** | 3 / 7 | Early stationary propellers; chapter 7 flight controls and expedition vessels |
 | **Compat Core** | 1–10 | Shared addon support; no invented progression items |
 | **Hypertubes** | 3 | Brass transport, frame-based entrances and accelerators |
-| **Wizardry** | 4–7 | Arcane casing, Mana, runes, sheets and Iron’s processing |
+| **Wizardry** | 6–10 production | Arcane sheets, Mana and Iron’s processing; legacy tier labels require migration review |
 | **Aquatic Ambitions** | 2 | Calcium feed, prismarine alloy, conduit cage and native channeling |
 
 ## Technology
 
 | Mod / integration | Chapter | Role |
 |---|---|---|
-| **Mekanism** | 4–10 | First infusing and refining at 4, advanced factories at 5, gases/HDPE at 6, fission at 8 and SPS/fusion at 9 |
-| **Mekanism Generators** | 4–9 | First Heat Generator, later renewables, gas power, turbine, fission and fusion |
-| **Mekanism Tools** | 4–6 | Native tools and preserving paxels; Steel Paxel finishes the Chemical workshop sequence |
+| **Mekanism** | 5–10 | Stage access and explicit starter circuits at 5; chemistry, HDPE, fission and antimatter later. Migrated chemistry constructors have unresolved tier-9 dependencies |
+| **Mekanism Generators** | 5–9 | First Heat Generator, later renewables, gas power, turbine, fission and fusion |
+| **Mekanism Tools** | 5–10 | Native tools and preserving paxels; current Chemical assembly finishes with a retained Nether Star Focus |
 | **Aeronautics Mekanism Compat** | 7–10 | Mekanism systems on the moving expedition vessel |
 | **Applied Energistics 2** | 4–10 | 1k cells and network at 4; 4k at 6, 16k at 7, spatial at 8, 64k/quantum at 9, 256k at 10 |
 | **Applied Mekanistics** | 6–10 | Chemical cells, portable chemical cells and native preserving upgrades |
@@ -37,9 +37,9 @@ The current progression selection is grouped by its actual workshop role. Native
 
 | Mod / integration | Chapter | Role |
 |---|---|---|
-| **Ars Nouveau** | 1 / 4–10 | Native early Source and character tools; parallel Arcane workshop from 4 |
-| **Ars Creo** | 4–7 | Ars contraptions and Starbuncle Wheel |
-| **Iron’s Spells ’n Spellbooks** | 1 / 4–10 | Native combat spells; factory cauldron, ink and arcane processing from 4 |
+| **Ars Nouveau** | 1 / 6–10 production | Native early Source and character tools; Arcane mechanism production at 6 |
+| **Ars Creo** | 6–10 production | Ars contraptions and Starbuncle Wheel; older tier-4 recipe groups now reference the tier-6 mechanism |
+| **Iron’s Spells ’n Spellbooks** | 1 / 6–10 production | Native combat spells; factory ink and Arcane Essence production alongside the Arcane tier |
 | **Iron’s Gems ’n Jewelry** | 2–10 | Copper workshop Jewelcrafting Station; native jewels, scrolls and jewelry data |
 
 ## World, building & equipment
@@ -80,10 +80,11 @@ The current progression selection is grouped by its actual workshop role. Native
 | **Create Heat JS** | 1–10 | Heat scripting support; current alloy bootstraps use reachable Blaze heat |
 | **KubeJS Create** | 1–10 | Sequenced assembly, deployment, stone and wood processing |
 
-## First machines before new materials
+## Construction checks still open
 
-- **Chapter 4:** heated steel → Steel Casing → Precision Mechanism deployment → Infuser. Charger and Inscriber precede the Inductive Machine.
-- **Chapter 6:** Ender Machines build the first separator, rotary machine and PRC; these produce HDPE before the Chemical Machine.
-- **Chapter 9:** Containment Frames build the first SPS and Nucleosynthesizer; these produce antimatter and Stargaze before the Singularity Frame.
+- **Tier 2:** the Empty Tube recipe needs a tier-3 Mechanical Crafter, and Sealed assembly needs a Spout constructed from its own finished mechanism.
+- **Tier 5:** the starter Basic Control Circuit uses Osmium, Redstone and an Electron Tube through Create; it does not require the first Infuser.
+- **Legacy chemistry migration:** replacing Ender Machines with Singularity Mechanisms would put the first PRC and Separator after the materials needed to make Singularity. The source model also shows that `replaceInput` does not migrate added custom recipes automatically.
+- **Tier 9:** SPS Casing uses the earlier Containment mechanism, Polonium and HDPE. Its HDPE dependency needs a reachable PRC before the first Singularity mechanism.
 
 **[TEN CHAPTER PATHS →](https://mikaaah.github.io/TownsAndKingdoms/progression/#paths)** · [All quests](https://mikaaah.github.io/TownsAndKingdoms/chapters/)

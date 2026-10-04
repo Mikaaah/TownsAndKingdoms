@@ -76,6 +76,12 @@ Het palet staat in de `:root`-variabelen bovenaan `site.css`. Bijvoorbeeld:
 
 `--building`, `--adventure`, `--reference` en `--legacy` geven categorieën een herkenbaar accent. Controleer na kleurwijzigingen het tekstcontrast. `workshop.css` bevat alleen de specifieke indeling van de 3D-receptweergave; gedeelde kleuren komen uit dezelfde variabelen.
 
+## Productiecontrole van 4 oktober
+
+De huidige wiki-recepten komen uit `TK3/docs/wiki_production_manifest.json`. Dit is de **bedoelde** productie uit de gecontroleerde ZIP; bekende blokkades staan op `/renewability/`. De gepubliceerde game- en questbestanden gebruiken nog `TK3/docs/progression_manifest.json` en zijn bij deze wiki-update niet gewijzigd.
+
+De bronmomentopname staat in `TK3/docs/production-review/source/`; `authoring-metadata.json` bevat de oorspronkelijke labels. `node TK3/tools/review_production.cjs` reconstrueert het webmanifest en `review.json`, inclusief dubbele declaraties en een recursieve grondstoffen-/machine-inventaris voor alle tien mechanisms. De inventaris vermeldt externe/native grenzen expliciet en certificeert deze niet automatisch. Bouw de website daarna opnieuw. Werk `renewability.md` bij wanneer een probleem daadwerkelijk opgelost en getest is.
+
 ## Projectgegevens wijzigen
 
 De receptcatalogus, questlijst, workshop en aantallen komen uit hetzelfde progression-manifest. Werk bij gameplay-wijzigingen ook de bijbehorende runtime-scripts en questbestanden bij volgens de projectprocedure. Een websitewijziging verandert de gamebestanden niet. Bewaar exacte item-ID’s, aantallen en receptvoorwaarden.

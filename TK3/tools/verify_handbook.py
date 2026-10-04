@@ -50,7 +50,8 @@ def verify():
             if target.fragment and resolved in pages and unquote(target.fragment) not in pages[resolved].ids:
                 errors.append(f'{rel}: missing anchor {raw}')
     manifest=json.loads((PACK/'docs/progression_manifest.json').read_text())
-    ids=[recipe['id'] for recipe in manifest['recipes']]
+    production=json.loads((PACK/'docs/wiki_production_manifest.json').read_text())
+    ids=[recipe['id'] for recipe in production['recipes']]
     if set(pages[OUT/'recipes/index.html'].recipes)!=set(ids): errors.append('Catalogue does not match canonical recipes')
     quests={f'quest-{quest["id"]}' for chapter in manifest['chapters']+manifest.get('guide_chapters',[]) for quest in chapter['quests']}
     if not quests.issubset(pages[OUT/'chapters/index.html'].ids): errors.append('Missing campaign quests')

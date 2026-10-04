@@ -1,25 +1,33 @@
 # ENGINEERING & STORAGE
 
-**ANDESITE → COPPER → BRASS → FE & ME → ENDER → CHEMICAL → SOVEREIGN.**
+**ROTATION → SEALED → PRECISION → CALCULATION → INDUCTIVE → ARCANE → CHEMICAL → CONTAINMENT → SINGULARITY → SOVEREIGN.**
+
+The October 4 production ZIP is the current authoring reference. Read the [production review](../../renewability/) before following its starter builds: the intended Sealed path contains two construction cycles, custom recipe overlaps need resolution, and the proposed legacy chemistry migration moves starter machines to tier 9.
 
 ## Create · build the backbone
 
-Start with a **manual Kinetic Machine**, then sequence mechanisms and deploy them onto casings. Earlier factories keep supplying the later layers. **Slice & Dice** connects Farmer’s Delight cutting and irrigation; **Aquatic Ambitions** connects copper fluid handling with ocean minerals and conduit processing. **Hypertubes** joins the brass logistics workshop.
+Farm Kelp and trees, generate Cobblestone, and process Gravel, Sand and Clay. Use the first Iron and Andesite to craft Makeshift Rotation Mechanisms, then the first Rotation Machine. Build power, a Press, Mixer and Deployer using their complete recipes. Earlier factories keep supplying later materials.
 
-## Chapter 4 · first FE and ME
+Sealed production introduces Copper Sheets, Empty Tubes, Rubber and water filling. Precision keeps Brass, Electron Tubes and Gold, with Saw and Press operations between applications. The [visual workshop](../../workshop/) shows each operation and every repeated pass.
 
-Bootstrap steel with heated mixing. Steel Casing and a Precision Mechanism make the first Metallurgic Infuser. Build a Heat Generator, cables, Charger and Inscriber before making the **Inductive Mechanism**. **Crafts & Additions** bridges rotational power and FE. AE2 starts with **1k storage, terminals, buses and processors**; the larger cells arrive later.
+## Tier 4 · Calculation and AE2
 
-## Chapters 5–7 · factories and chemistry
+Grow Certus through its water-spout loop. Make Silicon through Rough Sand and Siliceous Compound; print circuits with retained AE2 presses, then assemble processors with a retained Boot Medium. Calculation production uses all three processors and Liquid XP. AE2 starts at tier 4; the intended renewable Diamond recipe uses superheated Create compacting.
 
-**Chapter 5** opens the End and advanced factories. **Chapter 6** introduces HDPE, hydrogen, chlorine, hydrogen chloride and **Applied Mekanistics chemical cells**. The first gas machines use an Ender Machine, so HDPE is reachable before the Chemical Machine. **Chapter 7** treats Shadow Steel into Radiance and adds expedition airships, wireless access and 16k storage.
+## Tiers 5–7 · Inductive, Arcane and chemistry
 
-## Chapters 8–10 · containment and quantum production
+Tier 5 adds Chromatic production and starter Mekanism. Its basic-circuit bootstrap applies Redstone and an Electron Tube to Osmium before an Infuser is needed. A Steel Casing enables renewable Osmium, Tin, Lead, Uranium and Fluorite generator modes after bootstrap materials and stage access.
 
-Containment enables fission, turbines and waste handling. Build the first SPS from Containment Frames in chapter 9, then use native antimatter processing to make Stargaze Singularities. Fusion, quantum links and 64k storage support the line. Chapter 10 finishes with 256k storage, powered equipment and the Sovereign Keystone.
+Tier 6 combines Create tube/plate/XP operations with Ars apparatus finishing. Ars Imbuement gives a repeatable Arcane Essence conversion. Tier 7 adds chemical refinement and a retained Nether Star Focus. Source, native chemicals and real FE power remain working inputs.
+
+## Tiers 8–10 · containment and quantum production
+
+Renewable Suspicious Rock feeds aquatic shell processing, while a retained Dragon Head enables the authored Bulk Ending routes. The intended SPS/Antimatter chain needs HDPE before the first Singularity mechanism; the proposed PRC constructor instead consumes Singularity, creating a construction cycle. Resolve that starter route before building the Echo/Timeless, Blue Tube and Stargaze lines.
+
+Tier 10 joins the upstream network into Refined Quartz, Tech Tubes, Radiant Obsidian, Circuit Scrap and Matter Plastic. The Sovereign sequence uses three passes and retains its focus. This is the intended design; full automation approval is pending the [listed blockers](../../renewability/#confirmed-issues).
 
 ## Storage that stays useful
 
-**Sophisticated Storage & Backpacks** provide early collection, filtering, processing and upgrades. Their native preserving recipes keep contents and components. The **Create integration** lets supported storage upgrades work on contraptions. ME chemical cell upgrades also preserve their stored chemicals.
+Sophisticated Storage and Backpacks support collection, filtering and upgrades. Preserve stored components using the actual preserving recipe. Larger AE2 cells and Applied Mekanistics chemical storage belong to the later network; use the exact recipe and stage in the instance.
 
-**[TEN CHAPTER PATHS →](../../progression/#paths)** · [Exact recipes](../../recipes/) · [Automation guide](../../automation/) · [Mods & tiers](../tier-map/)
+[Ten tier walkthroughs](../../progression/#paths) · [Exact recipes](../../recipes/) · [Automation guide](../../automation/) · [Production review](../../renewability/)

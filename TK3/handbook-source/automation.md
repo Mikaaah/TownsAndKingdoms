@@ -1,27 +1,27 @@
 # ⚙ AUTOMATION GUIDE
 
-Build a small, reliable workshop first. Add collection, buffers and a clear output before increasing speed. The recipes linked here follow the current T&K3 chapters; the videos show general Create layouts and may use older Minecraft versions.
+Build a small, reliable workshop first. Add collection, buffers and a clear output before increasing speed. The October 4 production routes are under review; [check the starter blockers](../renewability/) before extending the factory. The recipes linked here follow the intended T&K3 tiers; the videos show general Create layouts and may use older Minecraft versions.
 
 ## A practical build order
 
 | When | Build next | Why it helps |
 |---|---|---|
 | Before a workshop | Vanilla hopper, chest, small kelp and wheat plots | Gather and store the first ingredients |
-| Tier 1 | Manual Kinetic Machine → water wheels, press, basin, mixer and deployer | Start rotation and unlock efficient material production |
+| Tier 1 | Manual Rotation Machine → water wheels, press, basin, mixer and deployer | Start rotation and unlock efficient material production |
 | Tier 1, after assembly | Mechanical Harvester, Saw, Bearing and a pair of Portable Storage Interfaces | Produce crops and wood without rebuilding the farm later |
 | Tier 2 | Hydraulic machines, slime mixer and Pickup Upgrade | Connect water and collect drops at a container |
 | Tier 3 | Brass filters, Precision machines and Magnet Upgrade | Sort outputs and prevent unattended farms from clogging |
-| Tier 4 | First Source, apparatus and arcane production | Connect farming and magic to the workshop |
+| Tier 4 | Certus growth, printed circuits, processors and Calculation production | Establish AE2 and retain press/Boot Medium tooling |
 | Tier 5 | Steel, first generator, Infuser and ore refining | Add FE processing alongside Create |
 
-The **machine frame** is a recipe ingredient. Stonecutting it gives the working Create machine you choose. A Kinetic Machine sitting in the world does not generate rotation or harvest crops.
+The **machine frame** is a construction ingredient. Use the working machine constructor in the catalogue; the first Press, Mixer and other machines have their own parts and recipes. A Rotation Machine sitting in the world does not generate rotation or harvest crops.
 
 ## Collection: choose the right upgrade
 
 | Collector | Earliest point in this pack | What it actually does | Useful placement |
 |---|---|---|---|
 | Vanilla Hopper | Before Create | Collects loose items over its opening and transfers inventory contents | Under a drop point or furnace |
-| Sophisticated Hopper Upgrade | Tier 1, after your first Kinetic Mechanism | Pulls from the container above and pushes into the one below | A vertical input → upgraded storage → output stack |
+| Sophisticated Hopper Upgrade | Tier 1, after your first Rotation Mechanism | Pulls from the container above and pushes into the one below | A vertical input → upgraded storage → output stack |
 | Sophisticated Pickup Upgrade | Tier 2 | Collects filtered item entities that touch the storage block | At the end of a drop chute |
 | Sophisticated Magnet Upgrade | Tier 3 | Collects filtered nearby item entities | Beside a bounded collection area |
 | Advanced Hopper / Pickup / Magnet | Tier 3 | Adds the corresponding advanced controls; Hopper can select sides | Sorting and controlled transfers |
@@ -31,7 +31,7 @@ The **machine frame** is a recipe ingredient. Stonecutting it gives the working 
 ### ◆ A SIMPLE TIER 1 TRANSFER STACK
 
 1. Craft a Sophisticated chest or barrel with a free upgrade slot. A vanilla chest cannot accept its upgrades.
-2. Make the T&K3 **Upgrade Base**: two Iron Sheets, two planks and one Kinetic Mechanism, in the listed shaped pattern.
+2. Make the T&K3 **Upgrade Base**: two Iron Sheets, two planks and one Rotation Mechanism, in the listed shaped pattern.
 3. Make the native **Hopper Upgrade**: one hopper, two iron ingots, the Upgrade Base and three redstone dust. Redstone can be mined before renewable Scoria production.
 4. Put an input inventory above the upgraded storage and an output inventory below it. Basic Hopper transfer is top → bottom.
 5. Add a vanilla hopper at the loose-item drop point if needed. Feed one item through before leaving the build running.
@@ -152,7 +152,7 @@ T&K3 changes lava/water stone generation using a foundation. The vertical order 
 | **ONE BLOCK BELOW** | Selector lens | Chooses the resource route |
 | **TWO BLOCKS BELOW** | Required machine frame | Enables that foundation tier |
 
-<div class="equipment-strip" data-items="create:mechanical_drill,kubejs:tk3_kinetic_machine,kubejs:tk3_hydraulic_machine,kubejs:tk3_precision_machine,minecraft:hopper"></div>
+<div class="equipment-strip" data-items="create:mechanical_drill,kubejs:tk3_rotation_machine,kubejs:tk3_hydraulic_machine,kubejs:tk3_precision_machine,minecraft:hopper"></div>
 
 **Keep the drill aligned with the generation cell.** The lens and frame are permanent foundation blocks, outside the breaking path.
 
@@ -167,30 +167,28 @@ The table's generation tier is the **foundation** requirement. Crushing Wheels t
 Put an Encased Fan behind the relevant processing medium and send its airflow across the items. Depots are a convenient first test; belts can carry a continuous line once the process works. Keep the washing and haunting lanes separate.
 
 - **Washing:** fan → water → items. The pack includes sand → clay and washing for crushed geological metals.
-- **Haunting:** fan → soul fire → items. At tier 4, Source Gem becomes Arcane Essence in this pack's recipe.
+- **Haunting:** fan → soul fire → items. The current material route turns Chromatic Compound into Shadow Steel. Iron's Arcane Essence also has an Ars Imbuement route at tier 6.
 - **Smoking / blasting:** native Create fan processes use their respective heat medium. Look up the actual input before choosing the process, especially for food.
 
 Increasing fan RPM extends airflow reach; it does **not** directly reduce the processing time. If items pass too quickly, slow the belt, hold them on a depot, or extend their time in the airflow. Filter extraction so unprocessed inputs do not leave too early.
 
-Do not build an online iron or alloy farm merely because its layout looks familiar. T&K3 changes the material recipes. Follow the Crimsite route and the catalogue rather than assuming gravel-washing yields or the original Andesite Alloy recipe.
+Start renewable Iron with gravel washing, then expand into the Crimsite selector once Hydraulic infrastructure is working. Andesite Alloy uses Algal Blend in this pack; follow the catalogue for its exact recipe.
 
-## Mechanism lines: one input, ordered hands
+## Mechanism lines: supply each ordered station
 
-All four mechanisms require **sequenced assembly**. Every sequence has one loop and one guaranteed output. The recipe viewer shows the actual order; the final tool belongs **in the Deployer's hand**, not on the belt.
+The current sequences include **Deployers, Presses, Saws and Spouts**, with one, two or three passes depending on the recipe. Ingredient quantities in the visual workshop include every consumed pass. Keep reusable Wrench, Boot Medium and focus items in their station.
 
-### Your first Kinetic line
+### Your first Rotation line
 
-Use a wooden slab as the belt input. Deploy one Andesite Alloy, deploy a second Andesite Alloy, then finish with a Deployer holding the BetterEnd Iron Hammer. The two alloys are separate operations.
+Feed one wooden slab. Apply an Andesite Alloy Sheet, apply a Cogwheel, press the unfinished mechanism, then apply a retained Create Wrench. **Repeat that pass twice.** One completed Rotation Mechanism therefore consumes two sheets and two Cogwheels; the Wrench stays.
 
-A reusable depot and one Deployer can demonstrate the steps by changing the held item. For continuous production, use an ordered line with separate supply points. Keep unfinished mechanisms travelling through every station; extract the finished mechanism at the end.
+Craft the first Press and Deployer from manually made Rotation Machines before this sequence. Build separate casing and assembly lines, and supply their outputs to the full machine constructor shown in the catalogue.
 
-### Permanent workshop tools
+[Play the Rotation walkthrough](../workshop/?recipe=kubejs%3Atk3%2Fmechanisms%2Frotation)
 
-Chapters I–X award unbreakable finishing tools once per player. Make ordinary tools first so the reward never blocks the chapter's own production. Normal tools lose one durability per finish. The reward fits the same recipe and removes tool replacement from that station. Chapter V gives a second permanent Iron Hammer for a parallel Kinetic line.
+### Sealed starter construction
 
-Automated frames then use **casing → deploy one mechanism**. Stonecut the resulting frame into the working machine. Keep casing production and mechanism assembly as separate supply lines; combine them at the frame station.
-
-[Play the Kinetic walkthrough](../workshop/?recipe=kubejs%3Atk3%2Ftier_1%2Frotation_mechanism_automated)
+Sealed assembly needs Empty Tubes and Spout filling. The supplied intended recipe path currently requires a later Mechanical Crafter for its first tubes and a finished Sealed Mechanism to build its first Spout. Both cycles are listed in the [production review](../renewability/#confirmed-issues); extra mined material alone cannot solve them.
 
 ## Slime and fluids: no pump needed for the first batch
 
@@ -206,27 +204,25 @@ A wheat mill produces flour, which is a different item and does not satisfy this
 
 **Tier 3:** copper ingot + zinc ingot → **heated Mixer** → two brass ingots. Capture a blaze in a native Blaze Burner and supply fuel for the required heat. Mine the first zinc instead of waiting for an advanced renewable line.
 
-The Precision sequence uses a Sealed Mechanism, Brass Sheet and Electron Tube, then Create Sand Paper as the finishing tool. Precision frames open the smart logistics equipment. Add filters where outputs split, and reserve planting stock and reusable tools before exporting everything into general storage.
+Precision starts with a Sealed Mechanism. Each pass applies Brass Sheet, Electron Tube and Golden Sheet, then cuts and presses the unfinished mechanism. **Two passes** finish one result. Precision Machines supply later crafters and smart logistics.
 
 For repeatable cutting, set the Saw's output filter. For multiple branches, plan a destination for every possible item and leave a visible buffer where problems can be spotted.
 
 ## Source and arcane automation
 
-**Tier 4** adds magical processing to the mechanical workshop. Begin with the native Imbuement Chamber, Source Jars and available first-Source generators. Craft the bootstrap Agronomic Sourcelink from a Precision Machine, wheat, Source Gems and a Source Jar. Grow nearby crops to generate Source before the Arcane Machine.
+Early Ars Source infrastructure can support the Calculation era. Grow crops near an Agronomic Sourcelink and buffer Source in Jars. Build the actual apparatus recipe, then distinguish the central reagent from pedestal materials and the Source cost.
 
-Make the Enchanting Apparatus from a Precision Machine, diamond and Source Gem. The visual recipe steps distinguish the **central reagent** from the **pedestal ingredients** and show the Source cost. Do not put all ingredients in the central block.
+The **Arcane Mechanism is tier 6**. Its two-pass mechanical intermediate uses Amethyst Tube, Arcane Sheet, XP, cutting and pressing; an Ars apparatus operation finishes it with Source Gem, Manipulation Essence, Iron's Arcane Essence and another Arcane Sheet. The new Imbuement recipe turns one Amethyst Shard into two Iron's Arcane Essence for 2,500 Source, with a retained Source Gem pedestal.
 
-Arcane Casing uses Brass Casing as reagent, Source Gem + Arcane Essence + gold on the pedestals, and **500 Source**. Deploy an Arcane Mechanism onto that casing to make the Arcane Machine. Later apparatus recipes connect it to automation charms, source devices and Wizardry machinery.
-
-Store Source and ingredients before starting repeated recipes. An empty jar is not a full Source supply. Follow the pack's apparatus recipes for charms; native online recipes may differ.
+Store Source and inputs before repeated operation. Use the reviewed recipes for Ars/Wizardry materials; a generic Arcane Machine is an old registered frame and does not establish the new route.
 
 ## FE: extend the workshop, keep the early lines
 
-**Tier 4** starts with two iron ingots + coal in a heated Mixer → two steel ingots. Build the Steel Casing using that steel, mined osmium and one Precision Machine. The first Heat Generator can be built before you already have FE.
+**Tier 5** unlocks Mekanism. Build its first materials from the Precision infrastructure, with the initial Osmium batch as a seed. The basic circuit has an explicit mechanical bootstrap: Osmium receives Redstone and an Electron Tube. This avoids needing an already powered Metallurgic Infuser for the first circuit.
 
-The Metallurgic Infuser is **Steel Casing → deploy a Precision Mechanism**. The mechanism is consumed; no boss catalyst or FE is required to build the first Infuser. Give the finished Infuser FE and the relevant native infusion material before processing.
+The current Infuser constructor uses an **Inductive Mechanism** together with Steel Casing, Iron, Redstone and Osmium. Supply FE and the required infusion material when processing. A Steel Casing beneath the relevant lens enables the five renewable Mekanism ore selectors. Their source blocks are not consumed by normal generation. The proposed legacy migration would move the first PRC and Separator to tier 9, creating a chemistry bootstrap cycle; see the [production review](../renewability/).
 
-Enrichment turns the listed raw metals into two dust; native smelting makes two ingots. Keep steel, power and ore-refining branches buffered. AE2 starts in the same chapter with a Charger and Inscriber, followed by the Inductive Machine and small ME network. Chemistry and HDPE arrive in chapter 6. Basic chemical tanks, tubes, separator, PRC and rotary machine use Ender Machines so the HDPE line can run before the Chemical Machine.
+AE2 belongs to **Calculation at tier 4**. Its processors are mechanically printed/assembled using retained presses and Boot Medium. Chemistry and retained focus production belong to tier 7, containment to 8 and SPS/Antimatter to 9. Check the [complete current paths](../progression/#paths) and [review](../renewability/) before treating a late factory as reachable.
 
 ## A reliable factory checklist
 

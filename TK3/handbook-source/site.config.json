@@ -119,6 +119,13 @@
       "category": "building"
     },
     {
+      "route": "renewability/",
+      "title": "Production & renewability review",
+      "summary": "Current tier 1–10 recipes, raw resource paths, retained catalysts and the remaining construction blockers.",
+      "category": "reference",
+      "source": "renewability.md"
+    },
+    {
       "route": "workshop/",
       "title": "Visual recipe workshop",
       "summary": "Walk through a recipe one operation at a time: exact inputs, held tools, fluids and the finished output.",

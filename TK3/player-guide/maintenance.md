@@ -76,6 +76,12 @@ Het palet staat in de `:root`-variabelen bovenaan `site.css`. Bijvoorbeeld:
 
 `--building`, `--adventure`, `--reference` en `--legacy` geven categorieën een herkenbaar accent. Controleer na kleurwijzigingen het tekstcontrast. `workshop.css` bevat alleen de specifieke indeling van de 3D-receptweergave; gedeelde kleuren komen uit dezelfde variabelen.
 
+## Productiecontrole van 4 oktober
+
+De huidige wiki-recepten komen uit `TK3/docs/wiki_production_manifest.json`. Dit is de **bedoelde** productie uit de gecontroleerde ZIP; bekende blokkades staan op `/renewability/`. De gepubliceerde game- en questbestanden gebruiken nog `TK3/docs/progression_manifest.json` en zijn bij deze wiki-update niet gewijzigd.
+
+De bronmomentopname staat in `TK3/docs/production-review/source/`; `authoring-metadata.json` bevat de oorspronkelijke labels. `node TK3/tools/review_production.cjs` reconstrueert het webmanifest en `review.json`, inclusief dubbele declaraties en een recursieve grondstoffen-/machine-inventaris voor alle tien mechanisms. De inventaris vermeldt externe/native grenzen expliciet en certificeert deze niet automatisch. Bouw de website daarna opnieuw. Werk `renewability.md` bij wanneer een probleem daadwerkelijk opgelost en getest is.
+
 ## Projectgegevens wijzigen
 
 De receptcatalogus, questlijst, workshop en aantallen komen uit hetzelfde progression-manifest. Werk bij gameplay-wijzigingen ook de bijbehorende runtime-scripts en questbestanden bij volgens de projectprocedure. Een websitewijziging verandert de gamebestanden niet. Bewaar exacte item-ID’s, aantallen en receptvoorwaarden.
@@ -102,3 +108,13 @@ De controle telt alle pagina’s, controleert lokale bestanden en sectielinks, d
 Sla wijzigingen op in `main`. De bestaande workflow **Publish T&K3 player guide** installeert de build-afhankelijkheden, bouwt alle pagina’s, voert de controle uit en publiceert naar GitHub Pages. Bekijk de status onder Actions. Er is geen nieuw hostingplatform of database nodig.
 
 Voor de 3D-viewer hoef je niets opnieuw te bundelen bij tekst- of stijlwijzigingen. De bestaande gebundelde viewer en bronvermeldingen blijven behouden. Verander alleen de viewerbronnen als je ook de modeltests en asset-buildprocedure uitvoert.
+
+
+## Alpha-wiki en brongegevens
+
+- `data/alpha-mods.json` bevat alleen de projecten uit de aangeleverde `modlist.html`, inclusief de bronhash. Werk deze lijst bij bij een nieuwe alpha-export; jarversies en instellingen staan niet in dit bestand.
+- `guides/*.md` bevat de nieuwe spelersgidsen. De navigatie en `source` staan centraal in `site.config.json`. De catalogi worden door `wiki-guides.cjs` uit `data/*.json` opgebouwd.
+- Voor een gewijzigde skilltree: `node TK3/tools/extract_skilltree_guide.cjs /pad/naar/TK3_SkillTree.js`. Dit vernieuwt `data/skilltree.json`; bouw daarna de wiki. De extractor schrijft geen Minecraft-runtimebestanden.
+- Spell-, glyph-, item- en boekreferenties bevatten de gebruikte bronversie of commit. Vervang ze alleen na controle van de makerbron. Geef een reference release nooit automatisch het label geïnstalleerde packversie.
+- Controleer na een wijziging de nieuwe inhoud met `node TK3/tools/verify_wiki_guides.cjs`, bouw met `node TK3/tools/build_handbook.cjs` en draai de bestaande websitecontrole.
+- Zoekvelden combineren alle ingevoerde woorden; dropdowns filteren op exacte kolomwaarden. Tabellen blijven zonder JavaScript zichtbaar en kunnen met toetsenbord worden gescrold.
