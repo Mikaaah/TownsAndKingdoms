@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
@@ -193,7 +193,7 @@ ServerEvents.recipes(event => {
             "endrem:magical_eye"
         ],
         [
-            "kubejs:tk3_network_mechanism",
+            "kubejs:tk3_calculation_mechanism",
             "ars_nouveau:source_gem"
         ])
         .id("kubejs:tk3/campaign/magical_eye");
@@ -204,7 +204,7 @@ ServerEvents.recipes(event => {
             "endrem:cryptic_eye"
         ],
         [
-            "kubejs:tk3_network_mechanism",
+            "kubejs:tk3_calculation_mechanism",
             "minecraft:ender_pearl"
         ])
         .id("kubejs:tk3/campaign/cryptic_eye");
@@ -215,7 +215,7 @@ ServerEvents.recipes(event => {
             "endrem:nether_eye"
         ],
         [
-            "kubejs:tk3_network_mechanism",
+            "kubejs:tk3_calculation_mechanism",
             "minecraft:blaze_rod"
         ])
         .id("kubejs:tk3/campaign/nether_eye");
@@ -226,7 +226,7 @@ ServerEvents.recipes(event => {
             "endrem:corrupted_eye"
         ],
         [
-            "kubejs:tk3_network_mechanism",
+            "kubejs:tk3_calculation_mechanism",
             "minecraft:crying_obsidian"
         ])
         .id("kubejs:tk3/campaign/corrupted_eye");
@@ -699,7 +699,7 @@ ServerEvents.recipes(event => {
             "kubejs:tk3_void_attuned_singularity"
         ],
         [
-            "kubejs:tk3_stargaze_singularity",
+            "kubejs:tk3_stargaze_plate",
             "kubejs:tk3_void_core"
         ])
         .keepHeldItem()

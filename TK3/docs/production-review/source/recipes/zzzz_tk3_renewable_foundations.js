@@ -4,6 +4,17 @@
 // One-time boss/exploration items are only allowed when they become retained/reusable catalysts.
 
 ServerEvents.recipes(event => {
+    // KubeJS remove() only sees original recipes; mark earlier script additions too.
+    const RecipeFilter = Java.loadClass('dev.latvian.mods.kubejs.recipe.filter.RecipeFilter');
+    const MatchContext = Java.loadClass('dev.latvian.mods.kubejs.recipe.filter.RecipeMatchContext$Impl');
+    const removeRecipe = filter => {
+        event.remove(filter);
+        const compiled = RecipeFilter.wrap(filter);
+        event.addedRecipes.forEach(recipe => {
+            if (!recipe.removed && compiled.test(new MatchContext(recipe))) recipe.remove();
+        });
+    };
+
     //->------------------------] Tier 1 — world -> Create bootstrap [------------------------<-//
 
     // Cobblestone is the root generator (vanilla water/lava). Existing pack recipes continue:

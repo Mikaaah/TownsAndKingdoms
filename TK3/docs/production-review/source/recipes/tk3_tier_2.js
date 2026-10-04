@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
         ], {
             "P": "create:fluid_pipe",
             "M": "create:copper_sheet",
-            "F": "kubejs:tk3_hydraulic_machine",
+            "F": "kubejs:tk3_rotation_machine",
             "S": "create:cogwheel"
         })
         .id("kubejs:tk3/tier_2/mechanical_pump");
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => {
         ], {
             "P": "minecraft:dried_kelp",
             "M": "create:copper_sheet",
-            "F": "kubejs:tk3_hydraulic_machine",
+            "F": "kubejs:tk3_rotation_machine",
             "S": "create:fluid_pipe"
         })
         .id("kubejs:tk3/tier_2/spout");

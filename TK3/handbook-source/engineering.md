@@ -2,7 +2,7 @@
 
 **ROTATION → SEALED → PRECISION → CALCULATION → INDUCTIVE → ARCANE → CHEMICAL → CONTAINMENT → SINGULARITY → SOVEREIGN.**
 
-The October 4 production ZIP is the current authoring reference. Read the [production review](../../renewability/) before following its starter builds: the intended Sealed path contains two construction cycles, custom recipe overlaps need resolution, and the proposed legacy chemistry migration moves starter machines to tier 9.
+The repaired October 4 production ZIP is the current reference. Early pipes, Spout and Empty Tubes precede Sealed; custom IDs are unique; and starter chemistry uses earlier mechanisms. All ten main routes pass the static dependency model. Read the [production review](../../renewability/) for the remaining Minecraft and sustained-factory tests.
 
 ## Create · build the backbone
 
@@ -22,12 +22,13 @@ Tier 6 combines Create tube/plate/XP operations with Ars apparatus finishing. Ar
 
 ## Tiers 8–10 · containment and quantum production
 
-Renewable Suspicious Rock feeds aquatic shell processing, while a retained Dragon Head enables the authored Bulk Ending routes. The intended SPS/Antimatter chain needs HDPE before the first Singularity mechanism; the proposed PRC constructor instead consumes Singularity, creating a construction cycle. Resolve that starter route before building the Echo/Timeless, Blue Tube and Stargaze lines.
+Renewable Suspicious Rock feeds aquatic shell processing, while a retained Dragon Head enables the authored Bulk Ending routes. The SPS/Antimatter chain needs HDPE before the first Singularity mechanism. The repaired PRC, Separator and Rotary constructors use Inductive; Chemical Infuser and Osmium Compressor use Arcane. These earlier stations supply the Echo/Timeless, Blue Tube and Stargaze lines.
 
-Tier 10 joins the upstream network into Refined Quartz, Tech Tubes, Radiant Obsidian, Circuit Scrap and Matter Plastic. The Sovereign sequence uses three passes and retains its focus. This is the intended design; full automation approval is pending the [listed blockers](../../renewability/#confirmed-issues).
+Tier 10 joins the upstream network into Refined Quartz, Tech Tubes, Radiant Obsidian, Circuit Scrap and Matter Plastic. The Sovereign sequence uses three passes and retains its focus. The static mechanism route passes; full automation still requires the [remaining runtime and factory tests](../../renewability/#remaining-implementation-limits).
 
 ## Storage that stays useful
 
 Sophisticated Storage and Backpacks support collection, filtering and upgrades. Preserve stored components using the actual preserving recipe. Larger AE2 cells and Applied Mekanistics chemical storage belong to the later network; use the exact recipe and stage in the instance.
 
 [Ten tier walkthroughs](../../progression/#paths) · [Exact recipes](../../recipes/) · [Automation guide](../../automation/) · [Production review](../../renewability/)
+

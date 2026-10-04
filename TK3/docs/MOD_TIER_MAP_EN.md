@@ -2,7 +2,7 @@
 
 **10 PRODUCTION TIERS · 1,766 INTENDED RECIPES · SEPARATE 353-QUEST SNAPSHOT**
 
-The October 4 production reference follows Rotation, Sealed, Precision, Calculation, Inductive, Arcane, Chemical, Containment, Singularity and Sovereign manufacturing. Native world, combat and building systems remain available alongside that spine. The [production review](../../renewability/) records construction cycles, conflicting custom IDs and legacy migration issues. The original quest snapshot still uses its own chapter names.
+The October 4 production reference follows Rotation, Sealed, Precision, Calculation, Inductive, Arcane, Chemical, Containment, Singularity and Sovereign manufacturing. Native world, combat and building systems remain available alongside that spine. The [production review](../../renewability/) records the repaired construction routes, unique custom IDs and remaining Minecraft tests. The original quest snapshot still uses its own chapter names.
 
 ## Create & integrations
 
@@ -19,7 +19,7 @@ The October 4 production reference follows Rotation, Sealed, Precision, Calculat
 | **Aeronautics** | 3 / 7 | Early stationary propellers; chapter 7 flight controls and expedition vessels |
 | **Compat Core** | 1–10 | Shared addon support; no invented progression items |
 | **Hypertubes** | 3 | Brass transport, frame-based entrances and accelerators |
-| **Wizardry** | 6–10 production | Arcane sheets, Mana and Iron’s processing; legacy tier labels require migration review |
+| **Wizardry** | 6–10 production | Arcane sheets, Mana and Iron’s processing; native Mana collection remains a runtime test |
 | **Aquatic Ambitions** | 2 | Calcium feed, prismarine alloy, conduit cage and native channeling |
 
 ## Technology
@@ -84,7 +84,7 @@ The October 4 production reference follows Rotation, Sealed, Precision, Calculat
 
 - **Tier 2:** the Empty Tube recipe needs a tier-3 Mechanical Crafter, and Sealed assembly needs a Spout constructed from its own finished mechanism.
 - **Tier 5:** the starter Basic Control Circuit uses Osmium, Redstone and an Electron Tube through Create; it does not require the first Infuser.
-- **Legacy chemistry migration:** replacing Ender Machines with Singularity Mechanisms would put the first PRC and Separator after the materials needed to make Singularity. The source model also shows that `replaceInput` does not migrate added custom recipes automatically.
+- **Repaired chemistry construction:** PRC, Separator and Rotary use Inductive; Chemical Infuser and Osmium Compressor use Arcane. Source inputs are corrected directly, and the late overrides explicitly remove earlier custom additions.
 - **Tier 9:** SPS Casing uses the earlier Containment mechanism, Polonium and HDPE. Its HDPE dependency needs a reachable PRC before the first Singularity mechanism.
 
 **[TEN CHAPTER PATHS →](https://mikaaah.github.io/TownsAndKingdoms/progression/#paths)** · [All quests](https://mikaaah.github.io/TownsAndKingdoms/chapters/)

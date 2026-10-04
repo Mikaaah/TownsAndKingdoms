@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
@@ -1825,7 +1825,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:experience_bottle"
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_xp_pump_upgrade");
@@ -1839,7 +1839,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:brewing_stand"
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_alchemy_upgrade");
@@ -1853,7 +1853,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:furnace"
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_smelting_upgrade");
@@ -1867,7 +1867,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:smoker"
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_smoking_upgrade");
@@ -1881,7 +1881,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedbackpacks:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:blast_furnace"
         })
         .id("kubejs:tk3/storage/sophisticatedbackpacks_blasting_upgrade");
@@ -1900,7 +1900,7 @@ ServerEvents.recipes(event => {
                     "item": "sophisticatedbackpacks:alchemy_upgrade"
                 },
                 "F": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "R": {
                     "item": "minecraft:redstone"
@@ -1931,7 +1931,7 @@ ServerEvents.recipes(event => {
                     "item": "sophisticatedbackpacks:pump_upgrade"
                 },
                 "F": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "R": {
                     "item": "minecraft:redstone"
@@ -2021,7 +2021,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:experience_bottle"
         })
         .id("kubejs:tk3/storage/sophisticatedstorage_xp_pump_upgrade");
@@ -2035,7 +2035,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:brewing_stand"
         })
         .id("kubejs:tk3/storage/sophisticatedstorage_alchemy_upgrade");
@@ -2049,7 +2049,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:furnace"
         })
         .id("kubejs:tk3/storage/sophisticatedstorage_smelting_upgrade");
@@ -2063,7 +2063,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:smoker"
         })
         .id("kubejs:tk3/storage/sophisticatedstorage_smoking_upgrade");
@@ -2077,7 +2077,7 @@ ServerEvents.recipes(event => {
             " F "
         ], {
             "B": "sophisticatedstorage:upgrade_base",
-            "F": "kubejs:tk3_arcane_machine",
+            "F": "kubejs:tk3_calculation_mechanism",
             "E": "minecraft:blast_furnace"
         })
         .id("kubejs:tk3/storage/sophisticatedstorage_blasting_upgrade");
@@ -2096,7 +2096,7 @@ ServerEvents.recipes(event => {
                     "item": "sophisticatedstorage:alchemy_upgrade"
                 },
                 "F": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "R": {
                     "item": "minecraft:redstone"
@@ -2127,7 +2127,7 @@ ServerEvents.recipes(event => {
                     "item": "sophisticatedstorage:pump_upgrade"
                 },
                 "F": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "R": {
                     "item": "minecraft:redstone"

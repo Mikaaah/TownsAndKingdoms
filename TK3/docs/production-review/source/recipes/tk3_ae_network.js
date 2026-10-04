@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
@@ -3117,7 +3117,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "tag": "c:dusts/fluix"
@@ -3153,7 +3153,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:fluix_glass_cable"
                 },
                 "d": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "e": {
                     "item": "ae2:logic_processor"
@@ -3177,7 +3177,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "tag": "c:glass_blocks/cheap"
@@ -3216,7 +3216,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:fluix_glass_cable"
                 },
                 "d": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "e": {
                     "tag": "c:ingots/copper"
@@ -3240,7 +3240,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "ae2:quartz_glass"
@@ -3267,7 +3267,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "ae2:fluix_glass_cable"
@@ -3298,7 +3298,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "minecraft:crafting_table"
@@ -3328,7 +3328,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "minecraft:furnace"
@@ -3399,7 +3399,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "ae2:engineering_processor"
@@ -3426,7 +3426,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "ae2:fluix_crystal"
@@ -3459,7 +3459,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:calculation_processor"
                 },
                 "c": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "d": {
                     "tag": "c:chests/wooden"
@@ -3531,7 +3531,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:fluix_block"
                 },
                 "i": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "q": {
                     "item": "ae2:charged_certus_quartz_crystal"
@@ -3555,7 +3555,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "ae2:calculation_processor"
@@ -3666,7 +3666,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "b": {
                     "item": "ae2:quartz_glass"
@@ -5263,7 +5263,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "b": {
                     "item": "ae2:calculation_processor"
@@ -5513,7 +5513,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_containment_frame"
+                    "item": "kubejs:tk3_containment_mechanism"
                 },
                 "b": {
                     "tag": "c:glass_blocks/cheap"
@@ -5549,7 +5549,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:spatial_cell_component_128"
                 },
                 "d": {
-                    "item": "kubejs:tk3_containment_frame"
+                    "item": "kubejs:tk3_containment_mechanism"
                 },
                 "e": {
                     "item": "ae2:engineering_processor"
@@ -5573,7 +5573,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_containment_frame"
+                    "item": "kubejs:tk3_containment_mechanism"
                 },
                 "b": {
                     "item": "ae2:fluix_glass_cable"
@@ -5612,7 +5612,7 @@ ServerEvents.recipes(event => {
                     "item": "ae2:io_port"
                 },
                 "d": {
-                    "item": "kubejs:tk3_containment_frame"
+                    "item": "kubejs:tk3_containment_mechanism"
                 },
                 "e": {
                     "item": "ae2:engineering_processor"
@@ -5804,7 +5804,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_singularity_frame"
+                    "item": "kubejs:tk3_singularity_mechanism"
                 },
                 "b": {
                     "item": "ae2:logic_processor"
@@ -5837,7 +5837,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_singularity_frame"
+                    "item": "kubejs:tk3_singularity_mechanism"
                 },
                 "b": {
                     "item": "ae2:fluix_pearl"

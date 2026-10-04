@@ -1,6 +1,6 @@
 # ⚙ AUTOMATION GUIDE
 
-Build a small, reliable workshop first. Add collection, buffers and a clear output before increasing speed. The October 4 production routes are under review; [check the starter blockers](../renewability/) before extending the factory. The recipes linked here follow the intended T&K3 tiers; the videos show general Create layouts and may use older Minecraft versions.
+Build a small, reliable workshop first. Add collection, buffers and a clear output before increasing speed. The repaired October 4 production routes pass the main static dependency check; [read the results and remaining tests](../renewability/) before extending the factory. The recipes linked here follow the repaired T&K3 tiers; the videos show general Create layouts and may use older Minecraft versions.
 
 ## A practical build order
 
@@ -188,7 +188,7 @@ Craft the first Press and Deployer from manually made Rotation Machines before t
 
 ### Sealed starter construction
 
-Sealed assembly needs Empty Tubes and Spout filling. The supplied intended recipe path currently requires a later Mechanical Crafter for its first tubes and a finished Sealed Mechanism to build its first Spout. Both cycles are listed in the [production review](../renewability/#confirmed-issues); extra mined material alone cannot solve them.
+Sealed assembly needs Empty Tubes and Spout filling. Compact six Glass Panes plus two Iron Sheets into four tubes using the early Press/Basin. The Spout and Pump use a Rotation Machine, with early pipes compacted from two Copper Sheets and one Copper Ingot. These routes remove the earlier construction cycles; see the [repair results](../renewability/#resolved-construction-and-recipe-issues).
 
 ## Slime and fluids: no pump needed for the first batch
 
@@ -220,7 +220,7 @@ Store Source and inputs before repeated operation. Use the reviewed recipes for 
 
 **Tier 5** unlocks Mekanism. Build its first materials from the Precision infrastructure, with the initial Osmium batch as a seed. The basic circuit has an explicit mechanical bootstrap: Osmium receives Redstone and an Electron Tube. This avoids needing an already powered Metallurgic Infuser for the first circuit.
 
-The current Infuser constructor uses an **Inductive Mechanism** together with Steel Casing, Iron, Redstone and Osmium. Supply FE and the required infusion material when processing. A Steel Casing beneath the relevant lens enables the five renewable Mekanism ore selectors. Their source blocks are not consumed by normal generation. The proposed legacy migration would move the first PRC and Separator to tier 9, creating a chemistry bootstrap cycle; see the [production review](../renewability/).
+The current Infuser constructor uses an **Inductive Mechanism** together with Steel Casing, Iron, Redstone and Osmium. Supply FE and the required infusion material when processing. A Steel Casing beneath the relevant lens enables the five renewable Mekanism ore selectors. Their source blocks are not consumed by normal generation. The repaired PRC, Separator and Rotary constructors use Inductive; Chemical Infuser and Osmium Compressor use Arcane. Starter chemistry therefore precedes the Singularity mechanism. See the [production review](../renewability/).
 
 AE2 belongs to **Calculation at tier 4**. Its processors are mechanically printed/assembled using retained presses and Boot Medium. Chemistry and retained focus production belong to tier 7, containment to 8 and SPS/Antimatter to 9. Check the [complete current paths](../progression/#paths) and [review](../renewability/) before treating a late factory as reachable.
 
@@ -271,3 +271,4 @@ Pack costs and chapter availability come from the current T&K3 recipe and quest 
 Use the height tables, component lists and first-test steps above to check your build. The recipe workshop shows the pack’s ingredients and operation order; hold **W** over supported Create items for the in-game placement demonstrations. The storage photo is an example from P3pp3rF1y's official gallery.
 
 <figure class="reference-photo"><img src="https://media.forgecdn.net/attachments/1039/948/trials-copper-combinations.png" loading="lazy" alt="Sophisticated Storage containers in the mod author's copper-themed gallery example"><figcaption>Storage example · P3pp3rF1y / Sophisticated Storage. <a href="https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage">Original gallery and mod description</a>.</figcaption></figure>
+

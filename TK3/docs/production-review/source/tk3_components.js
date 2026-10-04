@@ -21,19 +21,19 @@ StartupEvents.registry("item", event => {
         .displayName("Hydraulic Engine")
         .texture("kubejs:tk3_supplied/mechanism/hydraulic_engine");
     event.create("tk3_incomplete_arcane_mechanism")
-        .displayName("Incomplete Abstruse Mechanism")
+        .displayName("Incomplete Arcane Mechanism")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_abstruse_mechanism");
     event.create("tk3_incomplete_calculation_mechanism")
         .displayName("Incomplete Calculation Mechanism")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_calculation_mechanism");
     event.create("tk3_incomplete_singularity_mechanism")
-        .displayName("Incomplete Ender Mechanism")
+        .displayName("Incomplete Singularity Mechanism")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_ender_mechanism");
     event.create("tk3_incomplete_heat_engine")
         .displayName("Incomplete Heat Engine")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_heat_engine");
     event.create("tk3_incomplete_containment_mechanism")
-        .displayName("Incomplete High Power Mechanism")
+        .displayName("Incomplete Containment Mechanism")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_high_power_mechanism");
     event.create("tk3_incomplete_hydraulic_engine")
         .displayName("Incomplete Hydraulic Engine")
@@ -51,7 +51,7 @@ StartupEvents.registry("item", event => {
         .displayName("Incomplete Rotation Mechanism")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_kinetic_mechanism");
     event.create("tk3_incomplete_chemical_mechanism")
-        .displayName("Incomplete Locomotive Mechanism")
+        .displayName("Incomplete Chemical Mechanism")
         .texture("kubejs:tk3_supplied/mechanism/incomplete_locomotive_mechanism");
     event.create("tk3_incomplete_reinforced_mechanism")
         .displayName("Incomplete Reinforced Mechanism")

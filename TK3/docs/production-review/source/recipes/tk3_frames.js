@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//

@@ -2,14 +2,23 @@
 module.exports = function campaignPages(manifest, artwork) {
   const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
   const name=value=> {const raw=String(value), id=raw.replace(/^\d+x /,'').replace(/^#/,''); return (raw.match(/^(\d+)x /)?.[1] ? raw.match(/^(\d+)x /)[1]+' × ' : '')+(raw.startsWith('#')?'Any matching ':'')+(artwork.names[id] || id.split(':').at(-1).replace(/^tk3_/,'').replaceAll('_',' ').replace(/\b\w/g,letter=>letter.toUpperCase()));};
-  const ingredient=value=>typeof value==='string'?`<span class="item-name">${esc(name(value))}</span><code class="technical">${esc(value)}</code>`:value.fluid?`${esc(value.amount)} mB ${esc(name(value.fluid))}<code class="technical">${esc(value.fluid)}</code>`:`<code>${esc(JSON.stringify(value))}</code>`;
+  const ingredient=value=>{
+    if(typeof value==='string')return `<span class="item-name">${esc(name(value))}</span><code class="technical">${esc(value)}</code>`;
+    if(value.fluid)return `${esc(value.amount)} mB ${esc(name(value.fluid))}<code class="technical">${esc(value.fluid)}</code>`;
+    if(value.chemical)return `${esc(value.amount)} units ${ingredient(value.chemical)}`;
+    if(value.type==='neoforge:compound')return 'Any of: '+value.ingredients.map(ingredient).join(' / ');
+    if(value.type==='neoforge:difference')return ingredient(value.base)+' except '+ingredient(value.subtracted);
+    if(value.type==='neoforge:tag'&&value.amount)return `${esc(value.amount)} mB ${ingredient('#'+value.tag)}`;
+    if(value.item||value.id||value.tag)return ingredient((value.count>1?value.count+'x ':'')+(value.tag?'#'+value.tag:value.item||value.id));
+    return `<code>${esc(JSON.stringify(value))}</code>`;
+  };
   const methods={shaped:'Shaped crafting',shapeless:'Shapeless crafting',sequence:'Sequenced assembly',deploying:'Deploying',mixing:'Mixing',pressing:'Pressing',compacting:'Compacting',cutting:'Saw cutting',milling:'Milling',crushing:'Crushing',splashing:'Fan washing',haunting:'Haunting',smelting:'Furnace smelting',blasting:'Blast furnace',sandpaper_polishing:'Sandpaper polishing',apparatus:'Enchanting Apparatus',stonecutting:'Stonecutting',mechanical_crafting:'Mechanical crafting',enriching:'Enrichment',mek_enriching:'Mekanism enrichment',mek_smelting:'Mekanism smelting',ae_charger:'AE2 Charger',ae_print:'AE2 printing',ae_processor:'AE2 processor assembly',cauldron_brew:'Cauldron brewing',cauldron_empty:'Cauldron bottling',wrapped:'Preserving upgrade',native:'Native recipe / processing',filling:'Spout filling',imbuement:'Ars Imbuement'};
   const recipeRow = recipe => {
     const keyed=recipe.inputs&&!Array.isArray(recipe.inputs);
     const ingredients=keyed?Object.entries(recipe.inputs).map(([key,value])=>`<div class="key"><b>${esc(key)}</b><div>${ingredient(value)}</div></div>`).join(''):recipe.inputs.map(ingredient).join('<span class="plus">+</span>');
     const conditions=[];
     if(recipe.pattern) conditions.push(`<pre class="pattern">${esc(recipe.pattern.join('\n')).replaceAll(' ','&#32;')}</pre>`);
-    if(recipe.required_mechanism_tier) conditions.push(`Inherited tier ${recipe.tier}; inputs require a tier-${recipe.required_mechanism_tier} mechanism. Migration dependency unresolved; see the production review.`);
+    if(recipe.required_mechanism_tier) conditions.push(`Inherited tier ${recipe.tier}; inputs require a tier-${recipe.required_mechanism_tier} mechanism. Requires the later mechanism listed here; review its unlock separately.`);
     if(recipe.operations) conditions.push(`Ordered operations per pass: ${recipe.operations.map(s=>esc(methods[s.kind]||s.kind)+(s.input?' '+ingredient(s.input):'')+(s.retained?' (retained)':'')).join(' → ')}. ${recipe.loops||1} loop(s).`);
     else if(recipe.steps) conditions.push(`Ordered operations: ${recipe.steps.map(esc).join(' → ')}. ${recipe.loops||1} loop(s).`);
     if(recipe.results) conditions.push('All results / chances: '+esc(JSON.stringify(recipe.results)));

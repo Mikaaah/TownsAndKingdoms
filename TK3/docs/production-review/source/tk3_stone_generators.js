@@ -63,6 +63,14 @@
         "lens": "minecraft:calcite",
         "frame": "mekanism:steel_casing",
         "stone": "mekanism:fluorite_ore"
+    }, {
+        "lens": "minecraft:nether_bricks",
+        "frame": "kubejs:tk3_precision_machine",
+        "stone": "minecraft:netherrack"
+    }, {
+        "lens": "minecraft:polished_blackstone",
+        "frame": "kubejs:tk3_precision_machine",
+        "stone": "minecraft:blackstone"
     }];
 
     function id(state) {

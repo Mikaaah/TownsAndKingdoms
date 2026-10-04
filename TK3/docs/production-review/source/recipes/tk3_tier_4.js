@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
             "minecraft:redstone",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:relay",
         1000)
         .id("kubejs:tk3/tier_4/relay");
@@ -23,7 +23,7 @@ ServerEvents.recipes(event => {
             "minecraft:gold_ingot",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:starbuncle_charm",
         1000)
         .id("kubejs:tk3/tier_4/starbuncle_charm");
@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
             "minecraft:oak_sapling",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:whirlisprig_charm",
         1000)
         .id("kubejs:tk3/tier_4/whirlisprig_charm");
@@ -45,7 +45,7 @@ ServerEvents.recipes(event => {
             "minecraft:cauldron",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:wixie_charm",
         1000)
         .id("kubejs:tk3/tier_4/wixie_charm");
@@ -56,7 +56,7 @@ ServerEvents.recipes(event => {
             "minecraft:cauldron",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "irons_spellbooks:alchemist_cauldron",
         1000)
         .id("kubejs:tk3/tier_4/alchemist_cauldron");
@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
             "minecraft:anvil",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "irons_spellbooks:arcane_anvil",
         1000)
         .id("kubejs:tk3/tier_4/arcane_anvil");
@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
             "minecraft:enchanting_table",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "create_enchantment_industry:blaze_enchanter",
         1000)
         .id("kubejs:tk3/tier_4/blaze_enchanter");
@@ -89,7 +89,7 @@ ServerEvents.recipes(event => {
             "ars_nouveau:relay",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:relay_splitter",
         1000)
         .id("kubejs:tk3/tier_4/relay_splitter");
@@ -100,7 +100,7 @@ ServerEvents.recipes(event => {
             "minecraft:chest",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:relay_deposit",
         1000)
         .id("kubejs:tk3/tier_4/relay_deposit");
@@ -111,7 +111,7 @@ ServerEvents.recipes(event => {
             "minecraft:hopper",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:relay_collector",
         1000)
         .id("kubejs:tk3/tier_4/relay_collector");
@@ -122,7 +122,7 @@ ServerEvents.recipes(event => {
             "minecraft:brewing_stand",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:alchemical_sourcelink",
         1000)
         .id("kubejs:tk3/tier_4/alchemical_sourcelink");
@@ -133,7 +133,7 @@ ServerEvents.recipes(event => {
             "minecraft:brown_mushroom",
             "ars_nouveau:source_gem"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_nouveau:mycelial_sourcelink",
         1000)
         .id("kubejs:tk3/tier_4/mycelial_sourcelink");

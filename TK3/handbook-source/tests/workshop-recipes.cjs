@@ -41,5 +41,12 @@ const essence=recipes.find(x=>x.kind==='imbuement'&&x.output==='2x irons_spellbo
 assert.match(element('recipe-conditions').textContent,/2500 Source/);
 assert.match(element('recipe-conditions').textContent,/Retained pedestal items: Source Gem/);
 select('kubejs:tk3/industrial/mekanism_pressurized_reaction_chamber');
-assert.match(element('recipe-conditions').textContent,/tier-9 mechanism/);
-console.log('PASS: all '+recipes.length+' recipe descriptions, initial rendering, per-pass fluid/material totals, retained wrench, Press model, superheat, Source pedestals and forward-tier warnings.');
+assert.match(element('recipe-ingredients').textContent,/2 × Inductive Mechanism/);
+assert.doesNotMatch(element('recipe-conditions').textContent,/migration dependency is unresolved|tier-9 mechanism/);
+select('kubejs:tk3/components/empty_tube_compacting');
+assert.match(element('recipe-ingredients').textContent,/6 × Glass Pane/);
+assert.match(element('recipe-ingredients').textContent,/2 × Iron Sheet/);
+select('kubejs:tk3/tier_2/spout');
+assert.match(element('recipe-ingredients').textContent,/Rotation Machine/);
+assert.doesNotMatch(element('recipe-ingredients').textContent,/Hydraulic Machine/);
+console.log('PASS: all '+recipes.length+' recipe descriptions, initial rendering, per-pass fluid/material totals, retained wrench, Press model, superheat, Source pedestals and repaired starter/chemistry inputs.');

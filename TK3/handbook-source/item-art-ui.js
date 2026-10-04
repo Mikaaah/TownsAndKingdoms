@@ -21,3 +21,4 @@ for(const code of document.querySelectorAll('.recipe-table code.technical')){
  if((data.items[id]||data.direct_items?.[id])&&name?.classList.contains('item-name'))name.prepend(create(id,28));
 }
 })();
+

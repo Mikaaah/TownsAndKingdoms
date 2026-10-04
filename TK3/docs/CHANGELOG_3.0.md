@@ -1,5 +1,17 @@
 # Towns & Kingdoms 3.0 — Modlist & Development Changelog
 
+## 4 October 2026 · Production repair
+
+- Added hand planks and early copper, Fluid Pipe, Spout, Pump and Empty Tube construction.
+- Removed overlapping custom declarations and moved the final whitelist after all recipe overrides.
+- Corrected early Ars/XP and Mekanism constructor inputs so chemical processing precedes antimatter.
+- Added separate Netherrack and Blackstone generator selectors.
+- Updated the wiki to the repaired ZIP: 1,972 unique custom recipe IDs and all ten main mechanisms reachable in the static dependency model.
+- Preserved the separate questbook and stage integration. Minecraft loading and sustained factory tests remain open.
+
+[Repair results and remaining tests](../../renewability/)
+
+
 > Living comparison log for Towns & Kingdoms 3.
 >
 > Target: **Minecraft 1.21.1 / NeoForge**
@@ -288,3 +300,4 @@ Whenever the definitive mod selection changes:
 2. Update the relevant row/section in this changelog.
 3. Update the public-facing 3.0 wiki-source pages in `TK3/wiki/`.
 4. For a removed or replaced mod, record the reason if it affects progression, worlds, servers or player expectations.
+

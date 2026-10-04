@@ -4,7 +4,18 @@
 // remove conflicting acquisition routes and register the approved T&K3 paths.
 
 ServerEvents.recipes(event => {
-    const removeOutput = id => event.remove({ output: id });
+    // KubeJS remove() only sees original recipes; mark earlier script additions too.
+    const RecipeFilter = Java.loadClass('dev.latvian.mods.kubejs.recipe.filter.RecipeFilter');
+    const MatchContext = Java.loadClass('dev.latvian.mods.kubejs.recipe.filter.RecipeMatchContext$Impl');
+    const removeRecipe = filter => {
+        event.remove(filter);
+        const compiled = RecipeFilter.wrap(filter);
+        event.addedRecipes.forEach(recipe => {
+            if (!recipe.removed && compiled.test(new MatchContext(recipe))) recipe.remove();
+        });
+    };
+
+    const removeOutput = id => removeRecipe({ output: id });
 
     //->------------------------]  Progression conflicts / legacy outputs [------------------------<-//
 
@@ -68,7 +79,7 @@ ServerEvents.recipes(event => {
 
     // Raw bootstrap component: no Andesite Alloy or powered Create machine is required.
     // 7x Andesite + 1x wooden slab + 1x iron ingot -> 1x Makeshift Rotation Mechanism.
-    event.remove({ output: "kubejs:tk3_makeshift_rotation_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_makeshift_rotation_mechanism" });
     event.shaped(
         "kubejs:tk3_makeshift_rotation_mechanism",
         [
@@ -84,7 +95,7 @@ ServerEvents.recipes(event => {
 
     // Expensive manual frame bootstrap. The normal automated path remains
     // Andesite Casing + Rotation Mechanism -> Rotation Machine.
-    event.remove({ id: "kubejs:tk3/frames/rotation_manual" });
+    removeRecipe({ id: "kubejs:tk3/frames/rotation_manual" });
     event.shapeless(
         "kubejs:tk3_rotation_machine",
         [
@@ -96,7 +107,7 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 1 / Rotation Mechanism [------------------------<-//
 
-    event.remove({ output: "kubejs:tk3_rotation_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_rotation_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_rotation_mechanism"],
         "#minecraft:wooden_slabs",
@@ -118,7 +129,7 @@ ServerEvents.recipes(event => {
 
     //->------------------------]  Tier 2 / Sealed Mechanism [------------------------<-//
 
-    event.remove({ output: "kubejs:tk3_sealed_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_sealed_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_sealed_mechanism"],
         "kubejs:tk3_rotation_mechanism",
@@ -143,7 +154,7 @@ ServerEvents.recipes(event => {
     //->------------------------]  Tier 3 / Precision Mechanism [------------------------<-//
 
     // Native Create item, T&K2 production identity: Sealed -> brass/electron/gold sequence.
-    event.remove({ output: "create:precision_mechanism" });
+    removeRecipe({ output: "create:precision_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["create:precision_mechanism"],
         "kubejs:tk3_sealed_mechanism",
@@ -407,7 +418,7 @@ ServerEvents.recipes(event => {
         "kubejs:tk3_incomplete_engineering_processor",
         "engineering");
 
-    event.remove({ output: "kubejs:tk3_calculation_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_calculation_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_calculation_mechanism"],
         "create:precision_mechanism",
@@ -435,7 +446,7 @@ ServerEvents.recipes(event => {
 
     // The Inscriber remains available for native utility/name-press functions, but all
     // processor outputs are removed above and rebuilt through Deployers + assembly.
-    event.remove({ output: "ae2:charger" });
+    removeRecipe({ output: "ae2:charger" });
     event.shaped(
         "ae2:charger",
         ["ICI", " Q ", "IMI"], {
@@ -446,7 +457,7 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae2/charger");
 
-    event.remove({ output: "ae2:inscriber" });
+    removeRecipe({ output: "ae2:inscriber" });
     event.shaped(
         "ae2:inscriber",
         ["IPI", "CMC", "IPI"], {
@@ -457,7 +468,7 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae2/inscriber_utility_only");
 
-    event.remove({ output: "ae2:charged_certus_quartz_crystal" });
+    removeRecipe({ output: "ae2:charged_certus_quartz_crystal" });
     AE2Recipes.charger(
         event,
         "ae2:certus_quartz_crystal",
@@ -465,7 +476,7 @@ ServerEvents.recipes(event => {
         "kubejs:tk3/ae2/charged_certus_quartz_crystal");
 
     // No generic Tier-4 chassis: Calculation mechanisms go directly into AE2 infrastructure.
-    event.remove({ output: "ae2:controller" });
+    removeRecipe({ output: "ae2:controller" });
     event.shaped(
         "ae2:controller",
         ["FCF", "CMC", "FCF"], {
@@ -475,7 +486,7 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/ae2/controller");
 
-    event.remove({ output: "ae2:interface" });
+    removeRecipe({ output: "ae2:interface" });
     event.shaped(
         "ae2:interface",
         ["GAG", "CMC", "GAG"], {
@@ -541,7 +552,7 @@ ServerEvents.recipes(event => {
         .loops(1)
         .id("kubejs:tk3/mekanism/bootstrap_basic_control_circuit");
 
-    event.remove({ output: "kubejs:tk3_inductive_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_inductive_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_inductive_mechanism"],
         "kubejs:tk3_calculation_mechanism",
@@ -710,7 +721,7 @@ ServerEvents.recipes(event => {
         .loops(1)
         .id("kubejs:tk3/arcane/incomplete_arcane_mechanism");
 
-    event.remove({ output: "kubejs:tk3_arcane_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_arcane_mechanism" });
     event.recipes.ars_nouveau.enchanting_apparatus(
         [
             "ars_nouveau:source_gem",
@@ -772,7 +783,7 @@ ServerEvents.recipes(event => {
         per_tick_usage: false
     }).id("kubejs:tk3/chemical/shadow_steel_injecting");
 
-    event.remove({ output: "kubejs:tk3_chemical_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_chemical_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_chemical_mechanism"],
         "kubejs:tk3_arcane_mechanism",
@@ -816,7 +827,7 @@ ServerEvents.recipes(event => {
         7000)
         .id("kubejs:tk3/containment/ignis_focus");
 
-    event.remove({ output: "kubejs:tk3_containment_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_containment_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_containment_mechanism"],
         "kubejs:tk3_chemical_mechanism",
@@ -940,7 +951,7 @@ ServerEvents.recipes(event => {
         9000)
         .id("kubejs:tk3/singularity/void_focus");
 
-    event.remove({ output: "kubejs:tk3_singularity_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_singularity_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_singularity_mechanism"],
         "kubejs:tk3_containment_mechanism",
@@ -1024,7 +1035,7 @@ ServerEvents.recipes(event => {
         })
         .id("kubejs:tk3/sovereign/unstable_core");
 
-    event.remove({ output: "kubejs:tk3_sovereign_mechanism" });
+    removeRecipe({ output: "kubejs:tk3_sovereign_mechanism" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_sovereign_mechanism"],
         "kubejs:tk3_singularity_mechanism",
@@ -1055,7 +1066,7 @@ ServerEvents.recipes(event => {
 
     // T&K3 equivalent of T&K2's Creative Core: several independent production systems
     // meet here, but the difficulty is routing them together rather than multiplying counts.
-    event.remove({ output: "kubejs:tk3_sovereign_core" });
+    removeRecipe({ output: "kubejs:tk3_sovereign_core" });
     event.recipes.create.sequenced_assembly(
         ["kubejs:tk3_sovereign_core"],
         "kubejs:tk3_unstable_creative_core",

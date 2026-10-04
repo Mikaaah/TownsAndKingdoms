@@ -1,221 +1,223 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171322"><meta name="description" content="Current tier 1–10 recipes, raw resource paths, retained catalysts and the remaining construction blockers."><title>Production &amp; renewability review · Towns & Kingdoms</title><link rel="icon" href="../assets/brand/favicon.png"><link rel="canonical" href="https://mikaaah.github.io/TownsAndKingdoms/renewability/"><link rel="stylesheet" href="../assets/site.css?v=74a9dab9db63"><script src="../assets/item-art.js?v=e3daad4196a0" defer></script><script src="../assets/item-art-ui.js?v=e3daad4196a0" defer></script></head><body data-category="reference" data-version="3.0" data-site-root="../" data-search-version="54bb502acee9"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="site-brand" href="../" aria-label="Towns & Kingdoms home"><img src="../assets/brand/favicon.png" width="48" height="48" alt=""><span>Towns & Kingdoms<small>Official wiki</small></span></a><nav class="top-nav" aria-label="Main navigation"><a href="../">Home</a><a href="../3.0/">T&amp;K3</a><a href="../guides/">Guides</a><a href="../recipes/">Recipes</a><a href="../2.0/">T&amp;K2 archive</a></nav><a class="search-trigger" href="../guides/#find-guide" aria-label="Search the wiki"><span aria-hidden="true">⌕</span><span>Search</span><kbd>/</kbd></a><button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button></div></header><div class="version-bar"><div><span class="version-tag">T&K3</span><span class="status-dot" aria-hidden="true"></span><strong>Alpha 1.0</strong><span class="version-platform">Minecraft 1.21.1 · NeoForge</span><a href="../2.0/">T&K2 archive <span aria-hidden="true">→</span></a></div></div><div class="site-layout"><aside class="site-sidebar" id="site-navigation" aria-label="Guide navigation"><div class="sidebar-top"><span class="eyebrow">T&K3 field guide</span><button class="menu-close icon-button" type="button" aria-label="Close navigation">×</button></div><details class="nav-group" open><summary>Start here</summary><nav aria-label="Start here"><a href="../3.0/">Towns &amp; Kingdoms 3</a><a href="../3.0/features/">Features &amp; systems</a><a href="../progression/">Progression &amp; machine frames</a><a href="../chapters/">Chapters &amp; quests</a><a href="../guides/">Find a guide</a></nav></details><details class="nav-group"><summary>Build &amp; automate</summary><nav aria-label="Build &amp; automate"><a href="../recipes/">Recipe catalogue</a><a href="../workshop/">Visual recipe workshop</a><a href="../3.0/create/">Create parts &amp; machines</a><a href="../automation/">Automation field guide</a><a href="../3.0/engineering/">Engineering &amp; storage</a></nav></details><details class="nav-group"><summary>Explore &amp; grow</summary><nav aria-label="Explore &amp; grow"><a href="../3.0/exploration/">Exploration &amp; combat</a><a href="../3.0/kingdoms/">Towns &amp; multiplayer</a><a href="../3.0/skill-tree/">Classes &amp; professions</a></nav></details><details class="nav-group" open><summary>Project reference</summary><nav aria-label="Project reference"><a href="../renewability/" aria-current="page">Production &amp; renewability review</a><a href="../3.0/modlist/">Mod list</a><a href="../3.0/tier-map/">Mods, addons &amp; tiers</a><a href="../3.0/changelog/">Changelog</a><a href="../3.0/comparison/">T&amp;K2 → T&amp;K3 comparison</a><a href="../3.0/selection-notes/">Selection &amp; development notes</a><a href="../3.0/credits/">Artwork &amp; credits</a></nav></details><details class="nav-group"><summary>Combat &amp; magic</summary><nav aria-label="Combat &amp; magic"><a href="../3.0/magic/">Magic &amp; spells</a><a href="../3.0/epic-fight/">Epic Fight combat</a><a href="../3.0/irons-spells/">Iron’s Spells &amp; addons</a><a href="../3.0/ars-nouveau/">Ars Nouveau spellcraft</a><a href="../3.0/witchery/">Witchery</a><a href="../3.0/artifacts-relics/">Artifacts &amp; Relics</a></nav></details><details class="nav-group"><summary>Search catalogues</summary><nav aria-label="Search catalogues"><a href="../3.0/skill-nodes/">Skill node catalogue</a><a href="../3.0/spell-catalogue/">Spell catalogue</a><a href="../3.0/glyph-catalogue/">Ars glyph catalogue</a><a href="../3.0/accessory-catalogue/">Accessory catalogue</a><a href="../3.0/witchery-topics/">Witchery topic index</a></nav></details><a class="sidebar-version" href="../2.0/"><span>Looking for the previous pack?</span>Open the T&K2 archive <span aria-hidden="true">→</span></a><a class="sidebar-feedback" href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback & suggestions <span aria-hidden="true">↗</span></a></aside><button class="nav-scrim" type="button" aria-label="Close navigation" hidden></button><div class="site-content"><main class="page" id="main" tabindex="-1"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><a href="../3.0/">T&K3</a><span aria-hidden="true">/</span><span aria-current="page">Production &amp; renewability review</span></nav><header class="page-header"><p class="eyebrow">Project reference</p><h1>Production &amp; renewability review</h1><p class="lead">Current tier 1–10 recipes, raw resource paths, retained catalysts and the remaining construction blockers.</p></header><div class="reading-layout"><div class="reading-content"><article class="article-body">
-<p><strong>Reviewed 4 October 2026 · Minecraft 1.21.1 / NeoForge · Tiers 1–10</strong></p>
-<p>The latest production ZIP adds useful repeatable routes for Diamonds, Dragon&#39;s Breath, Arcane Essence, aquatic materials and late Mekanism resources. <strong>The full automation claim does not pass this review yet.</strong> The intended Tier 2 path has two construction cycles, and overlapping custom recipes make the selected production route uncertain.</p>
-<p>The <a href="../recipes/">recipe catalogue</a> and <a href="../workshop/">visual workshop</a> now describe the intended recipes in this ZIP. They are an authoring reference while the issues below are resolved. The quest catalogue retains its separately published snapshot.</p>
-<h2 id="what-was-checked">What was checked</h2>
-<p>The review inspected all 28 JavaScript files, all recipe declarations, registered item references, the native generator handler, stage restrictions and the ordered mechanism operations. It also compared relevant behaviour with the primary KubeJS, Create, Dragons Plus and Aquatic Ambitions sources.</p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#171322"><meta name="description" content="Current tier 1–10 recipes, raw resource paths, retained catalysts and the remaining construction blockers."><title>Production &amp; renewability review · Towns & Kingdoms</title><link rel="icon" href="../assets/brand/favicon.png"><link rel="canonical" href="https://mikaaah.github.io/TownsAndKingdoms/renewability/"><link rel="stylesheet" href="../assets/site.css?v=0d30f1f5991b"><script src="../assets/item-art.js?v=4d63e4a79db7" defer></script><script src="../assets/item-art-ui.js?v=4d63e4a79db7" defer></script></head><body data-category="reference" data-version="3.0" data-site-root="../" data-search-version="4c0f2811ad23"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="site-brand" href="../" aria-label="Towns & Kingdoms home"><img src="../assets/brand/favicon.png" width="48" height="48" alt=""><span>Towns & Kingdoms<small>Official wiki</small></span></a><nav class="top-nav" aria-label="Main navigation"><a href="../">Home</a><a href="../3.0/">T&amp;K3</a><a href="../guides/">Guides</a><a href="../recipes/">Recipes</a><a href="../2.0/">T&amp;K2 archive</a></nav><a class="search-trigger" href="../guides/#find-guide" aria-label="Search the wiki"><span aria-hidden="true">⌕</span><span>Search</span><kbd>/</kbd></a><button class="menu-toggle icon-button" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">☰</button></div></header><div class="version-bar"><div><span class="version-tag">T&K3</span><span class="status-dot" aria-hidden="true"></span><strong>Alpha 1.0</strong><span class="version-platform">Minecraft 1.21.1 · NeoForge</span><a href="../2.0/">T&K2 archive <span aria-hidden="true">→</span></a></div></div><div class="site-layout"><aside class="site-sidebar" id="site-navigation" aria-label="Guide navigation"><div class="sidebar-top"><span class="eyebrow">T&K3 field guide</span><button class="menu-close icon-button" type="button" aria-label="Close navigation">×</button></div><details class="nav-group" open><summary>Start here</summary><nav aria-label="Start here"><a href="../3.0/">Towns &amp; Kingdoms 3</a><a href="../3.0/features/">Features &amp; systems</a><a href="../progression/">Progression &amp; machine frames</a><a href="../chapters/">Chapters &amp; quests</a><a href="../guides/">Find a guide</a></nav></details><details class="nav-group"><summary>Build &amp; automate</summary><nav aria-label="Build &amp; automate"><a href="../recipes/">Recipe catalogue</a><a href="../workshop/">Visual recipe workshop</a><a href="../3.0/create/">Create parts &amp; machines</a><a href="../automation/">Automation field guide</a><a href="../3.0/engineering/">Engineering &amp; storage</a></nav></details><details class="nav-group"><summary>Explore &amp; grow</summary><nav aria-label="Explore &amp; grow"><a href="../3.0/exploration/">Exploration &amp; combat</a><a href="../3.0/kingdoms/">Towns &amp; multiplayer</a><a href="../3.0/skill-tree/">Classes &amp; professions</a></nav></details><details class="nav-group" open><summary>Project reference</summary><nav aria-label="Project reference"><a href="../renewability/" aria-current="page">Production &amp; renewability review</a><a href="../3.0/modlist/">Mod list</a><a href="../3.0/tier-map/">Mods, addons &amp; tiers</a><a href="../3.0/changelog/">Changelog</a><a href="../3.0/comparison/">T&amp;K2 → T&amp;K3 comparison</a><a href="../3.0/selection-notes/">Selection &amp; development notes</a><a href="../3.0/credits/">Artwork &amp; credits</a></nav></details><details class="nav-group"><summary>Combat &amp; magic</summary><nav aria-label="Combat &amp; magic"><a href="../3.0/magic/">Magic &amp; spells</a><a href="../3.0/epic-fight/">Epic Fight combat</a><a href="../3.0/irons-spells/">Iron’s Spells &amp; addons</a><a href="../3.0/ars-nouveau/">Ars Nouveau spellcraft</a><a href="../3.0/witchery/">Witchery</a><a href="../3.0/artifacts-relics/">Artifacts &amp; Relics</a></nav></details><details class="nav-group"><summary>Search catalogues</summary><nav aria-label="Search catalogues"><a href="../3.0/skill-nodes/">Skill node catalogue</a><a href="../3.0/spell-catalogue/">Spell catalogue</a><a href="../3.0/glyph-catalogue/">Ars glyph catalogue</a><a href="../3.0/accessory-catalogue/">Accessory catalogue</a><a href="../3.0/witchery-topics/">Witchery topic index</a></nav></details><a class="sidebar-version" href="../2.0/"><span>Looking for the previous pack?</span>Open the T&K2 archive <span aria-hidden="true">→</span></a><a class="sidebar-feedback" href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback & suggestions <span aria-hidden="true">↗</span></a></aside><button class="nav-scrim" type="button" aria-label="Close navigation" hidden></button><div class="site-content"><main class="page" id="main" tabindex="-1"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a><span aria-hidden="true">/</span><a href="../3.0/">T&K3</a><span aria-hidden="true">/</span><span aria-current="page">Production &amp; renewability review</span></nav><header class="page-header"><p class="eyebrow">Project reference</p><h1>Production &amp; renewability review</h1><p class="lead">Current tier 1–10 recipes, raw resource paths, retained catalysts and the remaining construction blockers.</p></header><div class="reading-layout"><div class="reading-content"><article class="article-body">
+<p><strong>Repaired package · 4 October 2026 · Minecraft 1.21.1 / NeoForge</strong></p>
+<p>The wiki now follows <strong>TK3_Production_Progression_FIXED_NO_QUESTS_2026-10-04.zip</strong>. The starter construction cycles, duplicate custom recipe IDs and chemistry migration cycle identified in the earlier review have been repaired. The static dependency model reaches <strong>all ten main mechanisms</strong>, including their ingredients and processing stations.</p>
+<p><strong>A Minecraft test is still pending.</strong> Reachability from explicit world resources and native machine rules does not prove that a complete factory is self-sustaining or that every recipe is accepted by the installed mods. The separately maintained questbook and stage integration are outside this package.</p>
+<p><a href="../progression/">Current progression</a> · <a href="../recipes/">Recipe catalogue</a> · <a href="../workshop/">Visual workshop</a> · <a href="../automation/">Automation guide</a></p>
+<h2 id="current-check-results">Current check results</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Check</th>
-<th>Result</th>
+<th>Repaired result</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>JavaScript syntax</td>
-<td>All 28 scripts pass</td>
+<td>All 26 supplied scripts parse</td>
 </tr>
 <tr>
-<td>Supplied texture mappings</td>
-<td>Existing mapping check passes; 115 gameplay PNGs and 99 quest/info PNGs inventoried</td>
+<td>Effective custom declarations</td>
+<td>1,972 remaining declarations and 1,972 unique recipe IDs</td>
 </tr>
 <tr>
-<td>Intended recipe catalogue</td>
-<td>1,766 unique documentation entries, reconstructed from scripts rather than the stale 1,709-entry manifest</td>
+<td>Duplicate custom recipe IDs</td>
+<td>0</td>
 </tr>
 <tr>
-<td>Surviving custom declarations in the source model</td>
-<td>1,831 declarations / 1,815 distinct IDs</td>
+<td>Unknown direct item references</td>
+<td>0 in the inspected catalogue</td>
 </tr>
 <tr>
-<td>Conflicting custom IDs</td>
-<td><strong>16 IDs have multiple surviving declarations</strong></td>
+<td>Main mechanism routes</td>
+<td>All 10 reachable in the ingredient-and-station model</td>
 </tr>
 <tr>
-<td>Legacy recipe groups with later mechanism inputs</td>
-<td><strong>120 intended entries require a mechanism beyond their inherited tier label</strong></td>
+<td>Item assets</td>
+<td>132 registered item-texture bindings and 11 custom frame models checked</td>
 </tr>
 <tr>
-<td>Top-level item references</td>
-<td>No unresolved item candidates after separating tags and fluids</td>
+<td>Source PNGs</td>
+<td>All 177 retained PNG files unchanged</td>
 </tr>
 <tr>
-<td>Bootstrap, asset and balance checks supplied in the ZIP</td>
-<td><strong>All three fail</strong> against its changed manifest</td>
+<td>Tier tags</td>
+<td>Ten mechanisms in their correct tiers; 228 known registered item IDs</td>
 </tr>
 <tr>
-<td>Original renewability check</td>
-<td>Passes 14 string-presence checks; does not prove dependency closure</td>
+<td>Generator selectors</td>
+<td>17 distinct lens/frame combinations</td>
 </tr>
 <tr>
-<td>Minecraft load, codecs and actual factory operation</td>
-<td>Pending; Minecraft was not launched</td>
+<td>Package integrity</td>
+<td>ZIP CRC and SHA-256 file manifest passed</td>
+</tr>
+<tr>
+<td>Minecraft, factories and external stages</td>
+<td>Still require an in-game test</td>
 </tr>
 </tbody></table></div>
-<p>The counts above are source-review counts. They are not a measurement of the final recipe manager in a running instance. Conditional recipes, native recipes, installed versions and failed codecs can change that result.</p>
-<h2 id="confirmed-issues">Confirmed issues</h2>
-<h3 id="tier-2-empty-tube-needs-a-later-machine">Tier 2: Empty Tube needs a later machine</h3>
-<p>The Sealed Mechanism consumes Empty Tubes. Its replacement tube recipe produces <strong>4 tubes from 6 Glass Panes + 2 Iron Sheets</strong>, using Mechanical Crafting. The only authored Mechanical Crafter constructor needs a <strong>Precision Machine</strong>, which is made with a tier 3 Precision Mechanism. Precision itself starts with the tier 2 Sealed Mechanism.</p>
-<p><strong>Dependency cycle:</strong> Sealed Mechanism → Empty Tube → Mechanical Crafter → Precision Machine → Precision Mechanism → Sealed Mechanism.</p>
-<p>A first-tube recipe or an independently buildable early crafter is needed before this route can bootstrap. The native Mechanical Crafter output is controlled by the pack; mining extra ingredients does not solve the construction cycle.</p>
-<h3 id="tier-2-water-filling-needs-its-own-finished-mechanism">Tier 2: Water filling needs its own finished mechanism</h3>
-<p>The revised Sealed sequence also includes a Spout operation: <strong>100 mB Water per loop</strong>, with two loops. The authored Spout recipe consumes a <strong>Hydraulic Machine</strong>. A Hydraulic Machine is made by deploying a <strong>Sealed Mechanism</strong> onto a Copper Casing.</p>
-<p><strong>Dependency cycle:</strong> Sealed Mechanism → Spout → Hydraulic Machine → Sealed Mechanism.</p>
-<p>This needs an early Spout or a separate first Hydraulic Machine route. Fixing Empty Tubes alone leaves this second cycle intact.</p>
-<h3 id="late-overrides-leave-competing-custom-recipes">Late overrides leave competing custom recipes</h3>
-<p>In the reviewed KubeJS 2101 source, <code>event.remove(...)</code> and <code>event.replaceInput(...)</code> iterate <strong>original recipes</strong>. Previously added custom recipes live in a separate collection. The late scripts call these methods as though they also remove or migrate earlier custom declarations.</p>
-<p>As a result, <strong>16 custom IDs are declared more than once</strong>, including ten mechanism/intermediate sequences, Matter Plastic, Singularity Gem, the manual Rotation Machine and three addon constructions. Their competing definitions can differ in operations and loops. KubeJS merges duplicate IDs from a parallel collection and warns about them; script order alone does not establish a reliable winner.</p>
-<p>Older custom recipes with different IDs can also remain as alternate outputs. The final whitelist has priority <strong>−10000</strong>, while the gap-closure and renewable scripts run at <strong>−20000</strong> and <strong>−30000</strong>. It cannot enforce the new routes after those additions. The legacy frame migrations similarly require explicit handling of added recipes.</p>
-<p>The catalogue selects the declared <em>intended</em> override for documentation. Resolving custom additions explicitly is required before that selection can be treated as the runtime result.</p>
-<h3 id="the-intended-frame-migration-also-moves-starter-chemistry-too-late">The intended frame migration also moves starter chemistry too late</h3>
-<p>The gap-closure script maps the old <strong>Ender Machine</strong> to a <strong>tier-9 Singularity Mechanism</strong>. Applying that mapping to the earlier constructors makes the first <strong>Electrolytic Separator, Pressurized Reaction Chamber and Rotary Condensentrator</strong> consume Singularity. These machines supply the gas/HDPE chain needed before Singularity: SPS Casing consumes HDPE Sheets, the SPS provides Antimatter, and Antimatter makes its Stargaze Plate.</p>
-<p><strong>Intended migration cycle:</strong> Singularity Mechanism → Stargaze Plate → Antimatter → SPS → HDPE → PRC → Singularity Mechanism.</p>
-<p>This is a problem in the proposed migration even after custom recipe replacement is implemented correctly. An earlier chemistry constructor is needed. The current scripts also leave the original added constructors unmigrated, so the actual recipe manager requires separate inspection.</p>
-<p>Across the catalogue, <strong>120 entries</strong> have direct mechanism inputs above their inherited authoring tier. This is a metadata/dependency conflict count, not 120 independently proven broken recipes. Old tier-4 Ars constructors now reference tier-6 Arcane, for example. The workshop displays the later required mechanism tier where this conflict occurs.</p>
-<h3 id="netherrack-and-superheat-are-not-a-closed-source-yet">Netherrack and superheat are not a closed source yet</h3>
-<p>The new lava recipe consumes <strong>4 Netherrack + 1 Blaze Powder → 250 mB Lava</strong>, with superheat. The ZIP says Netherrack is generator-backed, but the handler contains no Netherrack output. Its Netherrack selector makes <strong>Scoria</strong>; its Blackstone selector makes <strong>Scorchia</strong>.</p>
-<p>Superheat also needs a repeatable fuel supply. Native Blaze Cake production uses Cinder Flour made from Netherrack, as well as renewable Sugar, Eggs and Lava. A renewable consumed Netherrack route is therefore still an open dependency in the supplied evidence. A full installed recipe export could establish an addon route; until then, neither this factory-lava route nor the Diamond route should be marked fully closed. Dripstone remains a repeatable lava source independently of this claim.</p>
-<h3 id="paintballs-use-milling-and-independent-chance-rolls">Paintballs use Milling and independent chance rolls</h3>
-<p>The requested Item Drain design is still represented by <strong>Milling</strong>, producing pigment and the next paintball, with no fluid output. The five states are <strong>Red → Yellow → Green → Blue → Purple → spent grey</strong>. This is the implementation present in the ZIP; an actual zero-fluid Item Drain implementation remains open.</p>
-<p>The crushing results use five separate chance rolls: <strong>8.8%, 11%, 14.7%, 22% and 43.5%</strong>. These are not an exclusive weighted selection. A batch can yield none, one or several colours. Repeated input remains productive on average, but the wiki must not promise exactly one colour per singularity.</p>
-<h3 id="the-supplied-manifest-and-checks-lag-behind-the-scripts">The supplied manifest and checks lag behind the scripts</h3>
-<p>The ZIP&#39;s manifest omits the late mechanism recipe IDs and the new renewable recipes, although the corresponding scripts ship in the same ZIP. Its bootstrap verifier stops at Calculation Mechanism; its asset verifier treats native infrastructure such as AE2 Controller as a custom frame; its balance verifier still expects the old manual Kinetic constructor and one-loop tool sequences.</p>
-<p>Those failures are a mix of stale validation assumptions and incomplete manifest data. They do not independently prove that every affected recipe is broken. The wiki uses a separate reviewed production snapshot so it can show the new design without changing the published game or quest files.</p>
-<h2 id="tier-by-tier-resource-paths">Tier-by-tier resource paths</h2>
-<p>Each status considers the consumed inputs, the processing station and earlier dependencies. <strong>Blocked upstream</strong> means a later local recipe can be renewable while the complete campaign still cannot reach it through the intended route.</p>
+<p>These are static source checks, not counts from a running Minecraft recipe manager. Conditions, mod versions and recipe codecs can affect runtime loading.</p>
+<h2 id="resolved-construction-and-recipe-issues">Resolved construction and recipe issues</h2>
+<h3 id="first-wood-and-copper">First wood and copper</h3>
+<p>Each supported log or wood block has an explicit hand recipe yielding <strong>2 planks</strong>. The powered Saw keeps its better yield. This makes the first workshop buildable before a powered Saw exists. Raw Copper can also be smelted or blasted before the first copper-processing machines.</p>
+<h3 id="pipes-spout-and-empty-tubes">Pipes, Spout and Empty Tubes</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Early construction route</th>
+<th>Why it works before Sealed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fluid Pipe</td>
+<td>Compact 2 Copper Sheets + 1 Copper Ingot into 4 pipes</td>
+<td>Uses the early Press/Basin route</td>
+</tr>
+<tr>
+<td>Spout</td>
+<td>Dried Kelp + 2 Copper Sheets + Rotation Machine + Fluid Pipe</td>
+<td>Does not require a Hydraulic Machine</td>
+</tr>
+<tr>
+<td>Mechanical Pump</td>
+<td>Fluid Pipe + 2 Copper Sheets + Rotation Machine + Cogwheel</td>
+<td>Uses the same earlier machine tier</td>
+</tr>
+<tr>
+<td>Empty Tube</td>
+<td>Compact 6 Glass Panes + 2 Iron Sheets into 4 tubes</td>
+<td>Does not require the tier-3 Mechanical Crafter</td>
+</tr>
+</tbody></table></div>
+<p>The Mechanical Crafting tube recipe remains an additional production route. The Sealed assembly uses two passes, each consuming a Copper Sheet, Empty Tube, Rubber and <strong>100 mB Water</strong>, followed by Pressing. Its full cycle therefore uses <strong>200 mB Water</strong>.</p>
+<h3 id="duplicate-ids-and-the-final-whitelist">Duplicate IDs and the final whitelist</h3>
+<p>The late override scripts now explicitly remove matching earlier additions as well as original recipes. The final whitelist runs after the overrides, at priority <strong>−40000</strong>, and uses the surviving recipe IDs. The static execution model finds no duplicate custom IDs. Source inputs are corrected directly instead of relying on a late migration to alter already-added recipes.</p>
+<h3 id="chemistry-before-antimatter">Chemistry before antimatter</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Constructor group</th>
+<th>Repaired mechanism input</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Early Ars and XP infrastructure</td>
+<td>Calculation</td>
+</tr>
+<tr>
+<td>Pressurized Reaction Chamber, Electrolytic Separator and Rotary Condensentrator</td>
+<td>Inductive</td>
+</tr>
+<tr>
+<td>Chemical Infuser and Osmium Compressor</td>
+<td>Arcane</td>
+</tr>
+</tbody></table></div>
+<p>The first chemical-processing equipment can now precede the Singularity mechanism that needs its products. The earlier recipe path no longer requires a tier-9 mechanism to start that same chemical chain.</p>
+<h3 id="netherrack-and-blackstone">Netherrack and Blackstone</h3>
+<p>Both now have distinct generator selectors, separate from the existing Scoria and Scorchia modes. Place the lens directly below the generated block and the frame two blocks below it. The selector blocks remain in place.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Generated block</th>
+<th>Retained lens</th>
+<th>Retained frame</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Netherrack</td>
+<td>Nether Bricks</td>
+<td>Precision Machine</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Blackstone</td>
+<td>Polished Blackstone</td>
+<td>Precision Machine</td>
+<td>3</td>
+</tr>
+</tbody></table></div>
+<p>Netherrack can supply Cinder Flour and the native Blaze Cake chain; Blackstone can supply the late Ancient Debris conversion. Initial selector materials still require their stated world acquisition.</p>
+<h2 id="tier-110-route-status">Tier 1–10 route status</h2>
+<p>All ten entries below pass the main ingredient-and-station reachability check. The examples describe recurring material routes; seed resources, exploration, boss access and native machine rules remain explicit boundaries.</p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
 <th>Tier</th>
-<th>Intended route from raw acquisition</th>
-<th>Review status</th>
+<th>Main production route</th>
+<th>Important boundary or test</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>1 · Rotation</td>
-<td>Water + retained Lava source → Cobblestone → Gravel/Sand/Clay; Kelp and tree farms; gravel washing for Iron; initial Andesite → Rotation generator. Handcraft Makeshift parts and the first Rotation Machine, then use Press and Deployer production.</td>
-<td>Raw acquisition and manual frame route are explicit. Actual automation needs the in-game power and generator check.</td>
+<td>Hand planks, Kelp + Clay → Algal Blend; Andesite Alloy → manual Rotation Machine → Press/Deployer → Rotation Mechanism</td>
+<td>Initial trees, crops and minerals; rotation and generator behaviour</td>
 </tr>
 <tr>
 <td>2 · Sealed</td>
-<td>Seed Copper → Hydraulic Veridium generation; Sand → Glass → Panes; Iron → Sheets; Slime + Dried Kelp + Water → Rubber; Rotation → Sealed assembly. Bone Meal/Kelp feed Calcium Powder, with renewable Prismarine.</td>
-<td><strong>Blocked by Empty Tube and Spout construction cycles.</strong> Copper seed mining is a bootstrap, not the sustained source.</td>
+<td>Raw Copper → Sheets → Pipes; early Spout/Pump; Glass Panes + Iron Sheets → Empty Tubes; Rubber → Sealed assembly</td>
+<td>Fluid transport, two assembly passes and first mineral selectors</td>
 </tr>
 <tr>
 <td>3 · Precision</td>
-<td>Diorite → Quartz; Granite → Lapis; Scoria → Redstone; Scorchia → Coal; Asurine → Zinc; Ochrum → Gold. Copper + Zinc → Brass, then Electron Tubes and Precision machining.</td>
-<td>Blocked upstream by tier 2. Netherrack is a retained Scoria lens, not a Netherrack generator output. The new lava route still consumes it.</td>
+<td>Brass and Nether materials → Precision; geological selectors supply processed resources, Netherrack and Blackstone</td>
+<td>First Nether materials, heat and repeatable Blaze Cake feed</td>
 </tr>
 <tr>
 <td>4 · Calculation</td>
-<td>One Certus crystal → water-grown Small/Medium/Large Bud → Cluster → 4 crystals. Sand → Rough Sand; Certus Dust → Siliceous Compound → Silicon. Gold/Certus/Diamond → printed circuits → processors; retain native presses and Boot Medium.</td>
-<td>Blocked upstream. Diamond pressure synthesis also needs closed superheat and Lava supplies. The Calculation sequence uses <strong>100 mB XP</strong>; validate an available collection route before building it.</td>
+<td>Charged Certus, printed circuits and retained AE2 presses → Calculation</td>
+<td>Meteorite presses, first FE, Source and XP collection</td>
 </tr>
 <tr>
 <td>5 · Inductive</td>
-<td>One Amethyst seed → growth loop; Quartz + Redstone → Rose Quartz; Spectral Ruby → Singularity; Ender Pearl → Dust; Sand/Gunpowder → TNT; entanglement → dye singularity → five paintball states → pigment → Chromatic Compound.</td>
-<td>Blocked upstream. Osmium/Redstone/Electron Tube basic-circuit bootstrap is explicitly authored. Steel Casing geological modes provide five repeatable ores after initial materials and stage access.</td>
+<td>Amethyst growth, paintballs/pigment and Chromatic materials → Inductive → starter Mekanism</td>
+<td>End/Dragon access, Dragon Head and first mineral seeds</td>
 </tr>
 <tr>
 <td>6 · Arcane</td>
-<td>Farm Source; renew Source Gems and Ars essences. Amethyst + retained Source Gem pedestal → <strong>2 Iron&#39;s Arcane Essence, 2,500 Source</strong>. Empty Tube → Amethyst Tube; assemble unfinished Arcane parts, then finish in the Apparatus.</td>
-<td>Local essence route is explicit. Full chain still depends on earlier tubing, XP and the Wizardry Arcane Sheet route.</td>
+<td>Farmed Source, repeatable Source Gems/essences and tubing → Apparatus → Arcane</td>
+<td>Native Source collection and liquid-lightning bootstrap</td>
 </tr>
 <tr>
 <td>7 · Chemical Engineering</td>
-<td>Renewable Chromatic/Haunting chain → Shadow Steel; Water electrolysis → Hydrogen/Oxygen; Brine → Chlorine → Hydrogen Chloride; repeated alloys/circuits from ore generation. A Nether Star upgrades a retained focus.</td>
-<td>Retained focus is authored. The proposed Ender-frame migration makes the first chemistry machines require Singularity, so their starter construction is also unresolved.</td>
+<td>Chromatic/Haunting → Shadow Steel; earlier chemical equipment → chemical materials and retained focus</td>
+<td>Power, chemical quantities and the first Nether Star</td>
 </tr>
 <tr>
 <td>8 · Containment</td>
-<td>Gravel + Prismarine + Calcium Powder + Water → <strong>2 Suspicious Rock</strong>; Channeling → probabilistic Nautilus/Spiky Shells. Bone Blocks → <strong>2 Dragonbone</strong> through Bulk Ending. Uranium/Fluorite geological modes feed reactor processing.</td>
-<td>Local renewal additions are explicit. Guardian/Channeling and Dragon Head systems need working collection; Ignis upgrades a retained focus. Blocked upstream.</td>
+<td>Repeatable ores and aquatic materials → fission/control materials → Containment</td>
+<td>Ignis focus, radiation handling and actual reactor operation</td>
 </tr>
 <tr>
 <td>9 · Singularity</td>
-<td>Renewable fission feed → waste/SPS → Antimatter; Amethyst → Echo Shard → Timeless Slurry; Empty/Blue Tubes, Stargaze and Radiant parts. Blackstone + <strong>5 Antimatter → Ancient Debris</strong>; Obsidian + <strong>250 mB XP → Crying Obsidian</strong>.</td>
-<td>Local conversions are present, but the intended migration creates an HDPE/PRC/Singularity construction cycle. Also validate Blackstone, radioactive processing, power and native codecs. Void focus is retained.</td>
+<td>Fission waste/SPS → Antimatter; HDPE, Stargaze and tubes → Singularity</td>
+<td>Native SPS rules, first Void imprint and sufficient energy</td>
 </tr>
 <tr>
 <td>10 · Sovereign</td>
-<td>Shadow Steel + Charged Certus + XP + retained Haunted Bell → Refined Quartz; renewable metals/XP → Tech Tube; Radiant Obsidian + Atomic Alloy + AE2 Matter → Circuit Scrap; HDPE network → Matter Plastic; three-loop Sovereign assembly.</td>
-<td>End-to-end automation is <strong>not certified</strong>. Cursium/Legendary Ink are first-focus upgrade ingredients; the final focus is retained. All recurring material routes inherit earlier blockers.</td>
+<td>Refined Quartz, Tech Tube, Matter Plastic, Antimatter and retained Sovereign Focus → three-pass assembly</td>
+<td>Mana Siphon/caster source, Cursium/Legendary Ink focus seed and final integration</td>
 </tr>
 </tbody></table></div>
-<p>The one-time inputs are seeds and reusable infrastructure: initial Andesite, Certus, Amethyst, geological selector blocks, starter Mekanism ores, Dragon Head and the boss-focus upgrades. Losing a catalyst requires replacing it. That is different from consuming a fresh boss drop for each mechanism.</p>
-<h2 id="added-repeatable-recipes">Added repeatable recipes</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Tier</th>
-<th>Exact authored input</th>
-<th>Output</th>
-<th>Process</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>3</td>
-<td>4 Netherrack + Blaze Powder</td>
-<td>250 mB Lava</td>
-<td>Superheated Mixing</td>
-</tr>
-<tr>
-<td>4</td>
-<td>16 Coal + 2 Sturdy Sheets + 500 mB Lava</td>
-<td>1 Diamond</td>
-<td>Superheated Compacting</td>
-</tr>
-<tr>
-<td>5</td>
-<td>Glass Bottle</td>
-<td>Dragon&#39;s Breath</td>
-<td>Bulk Ending; Dragon Head fan source retained</td>
-</tr>
-<tr>
-<td>6</td>
-<td>Amethyst Shard; Source Gem pedestal; 2,500 Source</td>
-<td>2 Arcane Essence</td>
-<td>Ars Imbuement</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Bone Block</td>
-<td>2 Dragonbone</td>
-<td>Bulk Ending; Dragon Head fan source retained</td>
-</tr>
-<tr>
-<td>8</td>
-<td>2 Gravel + Prismarine Shard + Calcium Powder + 250 mB Water</td>
-<td>2 Suspicious Rock</td>
-<td>Compacting</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Blackstone + 5 Antimatter</td>
-<td>Ancient Debris</td>
-<td>Nucleosynthesizing, 300 ticks, per-operation chemical use</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Obsidian + 250 mB Liquid XP</td>
-<td>Crying Obsidian</td>
-<td>Filling</td>
-</tr>
-</tbody></table></div>
-<p>Dragon kills add a recoverable Dragon Head <strong>when killed by a player</strong>. This is catalyst recovery after a fight, not an automated Dragon kill farm. Bulk Ending support exists upstream; the custom conversions still need to load in the exact installed build.</p>
-<h2 id="geological-layout">Geological layout</h2>
-<p>Place the <strong>lens directly beneath the generated block</strong>, with the <strong>frame beneath the lens</strong>. Use a normal flowing Lava/Water generator at the top. The handler replaces newly generated Cobblestone or Stone; it leaves Obsidian unchanged. Drill and collect the output without breaking the two selector blocks.</p>
-<p>The source defines <strong>15 selectors</strong>: ten Create-era stone outputs and five Mekanism ore outputs. Steel Casing modes produce <strong>Osmium Ore, Tin Ore, Lead Ore, Uranium Ore and Fluorite Ore</strong> using Quartz Block, Copper Block, Iron Block, Glowstone and Calcite respectively. Steel Casing is gated with Mekanism at tier 5. The modes do not generate those selector materials or Netherrack.</p>
-<h2 id="before-full-approval">Before full approval</h2>
-<p>Resolve both tier 2 station cycles and the proposed chemistry migration cycle; remove duplicate custom declarations and surviving legacy alternatives explicitly; bring the authoritative manifest and checks into agreement; verify the consumed Netherrack/superheat source; and test the required raw-input factories in the actual instance. Record successful recipe loading, correct yields, retained catalysts, stage access and at least one full mechanism cycle for every tier.</p>
-<h2 id="evidence-and-primary-sources">Evidence and primary sources</h2>
+<p>The dependency proof is published with its explicit ingredient and machine boundaries. No external quest or stage unlock has been simulated.</p>
+<h2 id="remaining-implementation-limits">Remaining implementation limits</h2>
 <ul>
-<li><a href="https://github.com/Mikaaah/TownsAndKingdoms/blob/main/TK3/docs/production-review/review.json">Machine-readable source review</a></li>
-<li><a href="https://github.com/Mikaaah/TownsAndKingdoms/tree/main/TK3/docs/production-review/source">Reviewed source snapshot</a></li>
-<li><a href="https://github.com/KubeJS-Mods/KubeJS/blob/1b4e9b819e4b372d92529f43542e1992c45701a2/src/main/java/dev/latvian/mods/kubejs/recipe/RecipesKubeEvent.java">KubeJS RecipesKubeEvent</a>: original/addition separation, removal/replacement and duplicate-ID merge.</li>
-<li><a href="https://github.com/Creators-of-Create/Create/blob/a927008632b5eb9abc841d4c9c830995dc461038/src/main/java/com/simibubi/create/content/processing/recipe/ProcessingRecipe.java">Create ProcessingRecipe</a>: each probabilistic result receives its own output roll.</li>
-<li><a href="https://github.com/DragonsPlusMinecraft/CreateDragonsPlus/blob/1.21.1/6.0.0-dev/MODPACK_README.md">Create: Dragons Plus modpack reference</a> and <a href="https://github.com/DragonsPlusMinecraft/CreateDragonsPlus/blob/1.21.1/6.0.0-dev/src/main/java/plus/dragons/createdragonsplus/common/kinetics/fan/ending/EndingRecipe.java">EndingRecipe</a>.</li>
-<li><a href="https://github.com/davioliva16/create-aquatic-ambitions">Aquatic Ambitions source</a>: Channeling Suspicious Rock has separate 10% Spiky Shell and 50% Nautilus Shell result chances.</li>
+<li><strong>Paintball processing:</strong> Milling currently produces pigment plus the next paintball without a liquid output. The requested Item Drain variant with two item results and no liquid still needs an additional implementation. Crushing uses separate chance rolls; it does not guarantee exactly one randomly selected colour.</li>
+<li><strong>Mana Siphon:</strong> the model assumes the native player/caster mana source. Its collection rate and fully automated operation have not been simulated.</li>
+<li><strong>Optional recipes:</strong> 91 optional script recipes use serializers outside the dependency model. They remain in the catalogue, but their production and runtime behaviour are not certified by the main-mechanism check.</li>
+<li><strong>Factories:</strong> energy rates, fluid throughput, radiation, collection systems, multiplayer and sustained production still need in-game validation.</li>
 </ul>
-<p>The attached <code>quests.zip</code> and <code>kubejs.zip</code> are T&amp;K2 comparison references. Their Thermal, Botania and old datapack recipes are not evidence that those routes exist in this T&amp;K3 instance.</p>
-</article></div><aside class="page-toc" aria-label="On this page"><details open><summary>On this page</summary><nav><a href="#what-was-checked">What was checked</a><a href="#confirmed-issues">Confirmed issues</a><a href="#tier-by-tier-resource-paths">Tier-by-tier resource paths</a><a href="#added-repeatable-recipes">Added repeatable recipes</a><a href="#geological-layout">Geological layout</a><a href="#before-full-approval">Before full approval</a><a href="#evidence-and-primary-sources">Evidence and primary sources</a></nav></details></aside></div></main><footer class="site-footer"><div><strong>Towns & Kingdoms</strong><p>Build your workshop. Explore the world. Grow your kingdom.</p></div><nav aria-label="Footer navigation"><a href="../guides/">All guides</a><a href="../3.0/credits/">Credits</a><a href="https://github.com/Mikaaah/TownsAndKingdoms">GitHub <span aria-hidden="true">↗</span></a><a href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback <span aria-hidden="true">↗</span></a></nav><p class="footer-version">T&K3 Alpha 1.0. Reference mod behaviour may differ by installed version and configuration.</p></footer></div></div><dialog class="search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-head"><h2 id="search-dialog-title">Search the wiki</h2><button class="search-close icon-button" type="button" aria-label="Close search">×</button></div><form class="search-form" role="search"><label for="global-search">Guide, system, mod or item</label><input id="global-search" type="search" placeholder="Try AE2, spell, chapter or casing…" autocomplete="off"><label for="search-version">Documentation version</label><select id="search-version"><option value="3.0">T&K3 · Alpha 1.0</option><option value="2.0">T&K2 · legacy</option><option value="">All versions</option></select></form><p class="search-status" role="status">Type at least two characters to search.</p><div class="global-search-results"></div><p class="search-help">Press Escape to close. <a href="../guides/">Browse all guides</a></p></dialog><script src="../assets/site.js?v=74a9dab9db63" defer></script></body></html>
+<h2 id="install-and-test">Install and test</h2>
+<p>Close the game and server, back up the current world and KubeJS files, then copy the included files to their matching paths. Keep the separate FTB Quests, SkillTree and stage files. Do not leave duplicate <code>.js</code> copies inside active script folders. Fully restart the client and server; a reload is insufficient for startup registrations and models.</p>
+<p>In a test world, check the KubeJS logs and JEI, then complete one full main-mechanism cycle for every tier. Confirm yields, retained tools, fluid amounts, generator selection and external stage access. Test a continuous factory before marking the entire chain fully automated.</p>
+<h2 id="evidence">Evidence</h2>
+<ul>
+<li><a href="https://github.com/Mikaaah/TownsAndKingdoms/blob/main/TK3/docs/production-review/review.json">Recipe declaration report</a></li>
+<li><a href="https://github.com/Mikaaah/TownsAndKingdoms/blob/main/TK3/docs/production-review/dependency_validation.json">Ingredient and processing-station proof</a></li>
+<li><a href="https://github.com/Mikaaah/TownsAndKingdoms/tree/main/TK3/docs/production-review/source">Repaired production source snapshot</a></li>
+<li><a href="https://github.com/Mikaaah/TownsAndKingdoms/blob/main/TK3/docs/production-review/VALIDATION_NL.md">Validation scope</a></li>
+</ul>
+<p>The recipe catalogue and visual workshop use this repaired source snapshot. The quest catalogue keeps its separately published data.</p>
+</article></div><aside class="page-toc" aria-label="On this page"><details open><summary>On this page</summary><nav><a href="#current-check-results">Current check results</a><a href="#resolved-construction-and-recipe-issues">Resolved construction and recipe issues</a><a href="#tier-110-route-status">Tier 1–10 route status</a><a href="#remaining-implementation-limits">Remaining implementation limits</a><a href="#install-and-test">Install and test</a><a href="#evidence">Evidence</a></nav></details></aside></div></main><footer class="site-footer"><div><strong>Towns & Kingdoms</strong><p>Build your workshop. Explore the world. Grow your kingdom.</p></div><nav aria-label="Footer navigation"><a href="../guides/">All guides</a><a href="../3.0/credits/">Credits</a><a href="https://github.com/Mikaaah/TownsAndKingdoms">GitHub <span aria-hidden="true">↗</span></a><a href="https://github.com/Mikaaah/TownsAndKingdoms/issues">Feedback <span aria-hidden="true">↗</span></a></nav><p class="footer-version">T&K3 Alpha 1.0. Reference mod behaviour may differ by installed version and configuration.</p></footer></div></div><dialog class="search-dialog" aria-labelledby="search-dialog-title"><div class="search-dialog-head"><h2 id="search-dialog-title">Search the wiki</h2><button class="search-close icon-button" type="button" aria-label="Close search">×</button></div><form class="search-form" role="search"><label for="global-search">Guide, system, mod or item</label><input id="global-search" type="search" placeholder="Try AE2, spell, chapter or casing…" autocomplete="off"><label for="search-version">Documentation version</label><select id="search-version"><option value="3.0">T&K3 · Alpha 1.0</option><option value="2.0">T&K2 · legacy</option><option value="">All versions</option></select></form><p class="search-status" role="status">Type at least two characters to search.</p><div class="global-search-results"></div><p class="search-help">Press Escape to close. <a href="../guides/">Browse all guides</a></p></dialog><script src="../assets/site.js?v=0d30f1f5991b" defer></script></body></html>

@@ -1,5 +1,5 @@
 // priority: 0
-// Generated from docs/progression_manifest.json. See tools/rebuild_recipes.py.
+// Maintained recipe source; docs/progression_manifest.json is a generated inspection catalogue.
 ServerEvents.recipes(event => {
 
     //->------------------------]  Required Items [------------------------<-//
@@ -2062,7 +2062,7 @@ ServerEvents.recipes(event => {
             "ars_nouveau:starbuncle_charm",
             "create:water_wheel"
         ],
-        "kubejs:tk3_arcane_machine",
+        "kubejs:tk3_calculation_mechanism",
         "ars_creo:starbuncle_wheel",
         1000)
         .id("kubejs:tk3/addons/ars_creo_starbuncle_wheel");
@@ -2356,7 +2356,7 @@ ServerEvents.recipes(event => {
             "create_enchantment_industry:experience_hatch"
         ],
         [
-            "kubejs:tk3_arcane_machine",
+            "kubejs:tk3_calculation_mechanism",
             "create:experience_block"
         ])
         .id("kubejs:tk3/addons/create_enchantment_industry_experience_hatch");
@@ -2367,7 +2367,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "a": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "c": {
                     "item": "create:copper_casing"
@@ -2396,7 +2396,7 @@ ServerEvents.recipes(event => {
                 }],
             "type": "create:sequenced_assembly",
             "ingredient": {
-                "item": "kubejs:tk3_arcane_machine"
+                "item": "kubejs:tk3_calculation_mechanism"
             },
             "loops": 1,
             "results": [{
@@ -2477,7 +2477,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create:fluid_pipe"
                 }],
@@ -2494,7 +2494,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "I": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "S": {
                     "item": "create_wizardry:arcane_sheet"
@@ -2518,7 +2518,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "S": {
                     "item": "create_wizardry:arcane_sheet"
@@ -2538,7 +2538,7 @@ ServerEvents.recipes(event => {
     event.custom({
             "type": "create:item_application",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create_wizardry:arcane_sheet"
                 }],
@@ -2552,7 +2552,7 @@ ServerEvents.recipes(event => {
     event.custom({
             "type": "create:deploying",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create_wizardry:arcane_sheet"
                 }],
@@ -2567,7 +2567,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create:mechanical_pump"
                 }],
@@ -2583,7 +2583,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create:cogwheel"
                 }],
@@ -2598,7 +2598,7 @@ ServerEvents.recipes(event => {
     event.custom({
             "type": "create:item_application",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create_wizardry:arcane_sheet"
                 }],
@@ -2612,7 +2612,7 @@ ServerEvents.recipes(event => {
     event.custom({
             "type": "create:deploying",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create_wizardry:arcane_sheet"
                 }],
@@ -2629,7 +2629,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",
             "ingredients": [{
-                    "item": "kubejs:tk3_arcane_machine"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create:andesite_alloy"
                 }, {
@@ -4168,7 +4168,7 @@ ServerEvents.recipes(event => {
             "minecraft:anvil",
             "ars_nouveau:manipulation_essence"
         ],
-        "kubejs:tk3_network_chassis",
+        "kubejs:tk3_calculation_mechanism",
         "apotheosis:salvaging_table",
         2000)
         .id("kubejs:tk3/addons/apotheosis_salvaging_table");
@@ -4179,7 +4179,7 @@ ServerEvents.recipes(event => {
             "minecraft:anvil",
             "apotheosis:gem_dust"
         ],
-        "kubejs:tk3_network_chassis",
+        "kubejs:tk3_calculation_mechanism",
         "apotheosis:reforging_table",
         2000)
         .id("kubejs:tk3/addons/apotheosis_reforging_table");
@@ -4190,7 +4190,7 @@ ServerEvents.recipes(event => {
             "minecraft:diamond",
             "apotheosis:gem_dust"
         ],
-        "kubejs:tk3_network_chassis",
+        "kubejs:tk3_calculation_mechanism",
         "apotheosis:gem_cutting_table",
         2000)
         .id("kubejs:tk3/addons/apotheosis_gem_cutting_table");
@@ -4296,7 +4296,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "O": {
-                    "item": "kubejs:tk3_chemical_machine"
+                    "item": "kubejs:tk3_arcane_mechanism"
                 },
                 "Q": {
                     "item": "ae2:quartz_glass"
@@ -4385,7 +4385,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "-": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "=": {
                     "item": "create:nixie_tube"
@@ -4414,7 +4414,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "E": {
                     "item": "create:electron_tube"
@@ -4439,7 +4439,7 @@ ServerEvents.recipes(event => {
     event.custom({
             "type": "create:item_application",
             "ingredients": [{
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create_wizardry:arcane_sheet"
                 }],
@@ -4453,7 +4453,7 @@ ServerEvents.recipes(event => {
     event.custom({
             "type": "create:deploying",
             "ingredients": [{
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create_wizardry:arcane_sheet"
                 }],
@@ -4470,7 +4470,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "C": {
                     "item": "create:copper_sheet"
@@ -4504,7 +4504,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "C": {
                     "item": "create_wizardry:arcane_casing"
@@ -4536,7 +4536,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",
             "ingredients": [{
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "item": "create:andesite_alloy"
                 }, {
@@ -4557,7 +4557,7 @@ ServerEvents.recipes(event => {
             "category": "redstone",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "E": {
                     "item": "create:electron_tube"
@@ -4590,7 +4590,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "misc",
             "ingredients": [{
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 }, {
                     "tag": "c:plates/brass"
                 }, {
@@ -4609,7 +4609,7 @@ ServerEvents.recipes(event => {
             "category": "redstone",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_network_chassis"
+                    "item": "kubejs:tk3_calculation_mechanism"
                 },
                 "C": {
                     "item": "createaddition:capacitor"
@@ -5224,7 +5224,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "C": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "K": {
                     "item": "minecraft:dried_kelp_block"
@@ -5259,7 +5259,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "P": {
                     "item": "minecraft:paper"
@@ -5460,7 +5460,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "tag": "c:plates/iron"
@@ -5487,7 +5487,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "C": {
                     "item": "minecraft:compass"
@@ -5563,7 +5563,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "C": {
                     "item": "create:andesite_casing"
@@ -5590,7 +5590,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "C": {
                     "item": "create:andesite_casing"
@@ -5685,7 +5685,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "tag": "c:plates/gold"
@@ -5712,7 +5712,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "P": {
                     "item": "create:precision_mechanism"
@@ -5739,7 +5739,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "item": "create:brass_casing"
@@ -5783,7 +5783,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "N": {
                     "item": "minecraft:lever"
@@ -5861,7 +5861,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "E": {
                     "item": "simulated:engine_assembly"
@@ -5888,7 +5888,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "Q": {
                     "item": "create:polished_rose_quartz"
@@ -5921,7 +5921,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "C": {
                     "tag": "c:plates/copper"
@@ -5972,7 +5972,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "I": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "S": {
                     "item": "create:industrial_iron_block"
@@ -6019,7 +6019,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "H": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "I": {
                     "tag": "c:plates/iron"
@@ -6046,7 +6046,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "N": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "S": {
                     "tag": "c:plates/iron"
@@ -6070,7 +6070,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "C": {
                     "item": "create:large_cogwheel"
@@ -6097,7 +6097,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "item": "create:industrial_iron_block"
@@ -6124,7 +6124,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "S": {
                     "item": "minecraft:stick"
@@ -6147,7 +6147,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "C": {
                     "item": "create:andesite_casing"
@@ -6174,7 +6174,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "item": "minecraft:barrel"
@@ -6543,7 +6543,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "tag": "c:plates/brass"
@@ -6581,7 +6581,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "B": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "G": {
                     "tag": "c:plates/gold"
@@ -6652,7 +6652,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:white_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_white_envelope");
 
@@ -6673,7 +6673,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:orange_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_orange_envelope");
 
@@ -6694,7 +6694,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:magenta_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_magenta_envelope");
 
@@ -6715,7 +6715,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:light_blue_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_light_blue_envelope");
 
@@ -6736,7 +6736,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:yellow_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_yellow_envelope");
 
@@ -6757,7 +6757,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:lime_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_lime_envelope");
 
@@ -6778,7 +6778,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:pink_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_pink_envelope");
 
@@ -6799,7 +6799,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:gray_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_gray_envelope");
 
@@ -6820,7 +6820,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:light_gray_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_light_gray_envelope");
 
@@ -6841,7 +6841,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:cyan_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_cyan_envelope");
 
@@ -6862,7 +6862,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:purple_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_purple_envelope");
 
@@ -6883,7 +6883,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:blue_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_blue_envelope");
 
@@ -6904,7 +6904,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:brown_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_brown_envelope");
 
@@ -6925,7 +6925,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:green_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_green_envelope");
 
@@ -6946,7 +6946,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:red_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_red_envelope");
 
@@ -6967,7 +6967,7 @@ ServerEvents.recipes(event => {
         [
             "minecraft:black_wool",
             "minecraft:string",
-            "kubejs:tk3_expedition_mechanism"
+            "kubejs:tk3_chemical_mechanism"
         ])
         .id("kubejs:tk3/addons/aeronautics_black_envelope");
 
@@ -6986,7 +6986,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "aeronautics:gyroscopic_propeller_bearing",
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "aeronautics:propeller_bearing",
             "create:rotation_speed_controller"
         ])
@@ -6996,7 +6996,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "aeronautics:smart_propeller",
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "aeronautics:andesite_propeller",
             "create:electron_tube"
         ])
@@ -7006,7 +7006,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "aeronautics:adjustable_burner",
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "create:blaze_burner",
             "create:fluid_valve"
         ])
@@ -7016,7 +7016,7 @@ ServerEvents.recipes(event => {
     event.shapeless(
         "aeronautics:steam_vent",
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "create:steam_engine",
             "create:fluid_pipe"
         ])
@@ -7030,7 +7030,7 @@ ServerEvents.recipes(event => {
             "alexscaves:quarry"
         ],
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "minecraft:iron_block"
         ])
         .id("kubejs:tk3/addons/alexscaves_quarry");
@@ -7041,7 +7041,7 @@ ServerEvents.recipes(event => {
             "alexscaves:drain"
         ],
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "minecraft:bucket"
         ])
         .id("kubejs:tk3/addons/alexscaves_drain");
@@ -7052,7 +7052,7 @@ ServerEvents.recipes(event => {
             "irons_spellbooks:arcane_essence",
             "minecraft:amethyst_shard"
         ],
-        "kubejs:tk3_expedition_frame",
+        "kubejs:tk3_chemical_mechanism",
         "alexscaves:conversion_crucible",
         2000)
         .id("kubejs:tk3/addons/alexscaves_conversion_crucible");
@@ -7065,7 +7065,7 @@ ServerEvents.recipes(event => {
             "apotheosis:reforging_table",
             "apotheosis:arcane_sands"
         ],
-        "kubejs:tk3_expedition_frame",
+        "kubejs:tk3_chemical_mechanism",
         "apotheosis:augmenting_table",
         2000)
         .id("kubejs:tk3/addons/apotheosis_augmenting_table");
@@ -7185,7 +7185,7 @@ ServerEvents.recipes(event => {
                     "item": "sophisticatedstorage:netherite_chest"
                 },
                 "S": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 }
             },
             "pattern": [
@@ -7428,7 +7428,7 @@ ServerEvents.recipes(event => {
             "create_enchantment_industry:blaze_forger"
         ],
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "create:blaze_burner"
         ])
         .id("kubejs:tk3/addons/create_enchantment_industry_blaze_forger");
@@ -7443,7 +7443,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "S": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "o": {
                     "item": "create:brass_ingot"
@@ -7472,7 +7472,7 @@ ServerEvents.recipes(event => {
             "create_wizardry:blaze_caster"
         ],
         [
-            "kubejs:tk3_expedition_frame",
+            "kubejs:tk3_chemical_mechanism",
             "create:blaze_burner"
         ])
         .id("kubejs:tk3/addons/create_wizardry_blaze_caster");
@@ -7484,7 +7484,7 @@ ServerEvents.recipes(event => {
             "type": "minecraft:crafting_shapeless",
             "category": "redstone",
             "ingredients": [{
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 }, {
                     "item": "create:chute"
                 }, {
@@ -7504,7 +7504,7 @@ ServerEvents.recipes(event => {
             "category": "misc",
             "key": {
                 "A": {
-                    "item": "kubejs:tk3_expedition_frame"
+                    "item": "kubejs:tk3_chemical_mechanism"
                 },
                 "B": {
                     "item": "create:brass_casing"
@@ -7543,7 +7543,7 @@ ServerEvents.recipes(event => {
             "iceandfire:dragonforge_fire_core_disabled"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "iceandfire:dragonbone"
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_fire_core_disabled");
@@ -7554,7 +7554,7 @@ ServerEvents.recipes(event => {
             "iceandfire:dragonforge_fire_input"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "minecraft:blaze_powder"
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_fire_input");
@@ -7569,7 +7569,7 @@ ServerEvents.recipes(event => {
         ], {
             "B": "iceandfire:dragonbone",
             "D": "minecraft:obsidian",
-            "F": "kubejs:tk3_containment_frame"
+            "F": "kubejs:tk3_containment_mechanism"
         })
         .id("kubejs:tk3/addons/iceandfire_dragonforge_fire_brick");
 
@@ -7579,7 +7579,7 @@ ServerEvents.recipes(event => {
             "iceandfire:dragonforge_ice_core_disabled"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "iceandfire:dragonbone"
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_ice_core_disabled");
@@ -7590,7 +7590,7 @@ ServerEvents.recipes(event => {
             "iceandfire:dragonforge_ice_input"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "minecraft:packed_ice"
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_ice_input");
@@ -7605,7 +7605,7 @@ ServerEvents.recipes(event => {
         ], {
             "B": "iceandfire:dragonbone",
             "D": "minecraft:obsidian",
-            "F": "kubejs:tk3_containment_frame"
+            "F": "kubejs:tk3_containment_mechanism"
         })
         .id("kubejs:tk3/addons/iceandfire_dragonforge_ice_brick");
 
@@ -7615,7 +7615,7 @@ ServerEvents.recipes(event => {
             "iceandfire:dragonforge_lightning_core_disabled"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "iceandfire:dragonbone"
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_lightning_core_disabled");
@@ -7626,7 +7626,7 @@ ServerEvents.recipes(event => {
             "iceandfire:dragonforge_lightning_input"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "minecraft:amethyst_shard"
         ])
         .id("kubejs:tk3/addons/iceandfire_dragonforge_lightning_input");
@@ -7641,7 +7641,7 @@ ServerEvents.recipes(event => {
         ], {
             "B": "iceandfire:dragonbone",
             "D": "minecraft:obsidian",
-            "F": "kubejs:tk3_containment_frame"
+            "F": "kubejs:tk3_containment_mechanism"
         })
         .id("kubejs:tk3/addons/iceandfire_dragonforge_lightning_brick");
 
@@ -7651,7 +7651,7 @@ ServerEvents.recipes(event => {
             "alexscaves:nuclear_furnace_component"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "mekanism:alloy_atomic"
         ])
         .id("kubejs:tk3/addons/alexscaves_nuclear_furnace_component");
@@ -7662,7 +7662,7 @@ ServerEvents.recipes(event => {
             "alexscaves:nuclear_siren"
         ],
         [
-            "kubejs:tk3_containment_frame",
+            "kubejs:tk3_containment_mechanism",
             "minecraft:redstone"
         ])
         .id("kubejs:tk3/addons/alexscaves_nuclear_siren");

@@ -118,3 +118,4 @@ Voor de 3D-viewer hoef je niets opnieuw te bundelen bij tekst- of stijlwijziging
 - Spell-, glyph-, item- en boekreferenties bevatten de gebruikte bronversie of commit. Vervang ze alleen na controle van de makerbron. Geef een reference release nooit automatisch het label geïnstalleerde packversie.
 - Controleer na een wijziging de nieuwe inhoud met `node TK3/tools/verify_wiki_guides.cjs`, bouw met `node TK3/tools/build_handbook.cjs` en draai de bestaande websitecontrole.
 - Zoekvelden combineren alle ingevoerde woorden; dropdowns filteren op exacte kolomwaarden. Tabellen blijven zonder JavaScript zichtbaar en kunnen met toetsenbord worden gescrold.
+

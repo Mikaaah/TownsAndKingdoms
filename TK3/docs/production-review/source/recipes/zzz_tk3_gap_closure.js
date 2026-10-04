@@ -1,23 +1,27 @@
 // priority: -20000
 // Towns & Kingdoms 3 — gap-closing / production-depth pass.
-// Runs after the authoritative progression rework and whitelist cleanup.
+// Runs after the progression rework; final whitelist runs at priority -40000.
 // Goals: close hard acquisition gaps, replace dead generic-frame inputs,
 // and give each late tier more distinct Create / Mekanism / magic processing.
 
 ServerEvents.recipes(event => {
-    const removeOutput = id => event.remove({ output: id });
+    // KubeJS remove() only sees original recipes; mark earlier script additions too.
+    const RecipeFilter = Java.loadClass('dev.latvian.mods.kubejs.recipe.filter.RecipeFilter');
+    const MatchContext = Java.loadClass('dev.latvian.mods.kubejs.recipe.filter.RecipeMatchContext$Impl');
+    const removeRecipe = filter => {
+        event.remove(filter);
+        const compiled = RecipeFilter.wrap(filter);
+        event.addedRecipes.forEach(recipe => {
+            if (!recipe.removed && compiled.test(new MatchContext(recipe))) recipe.remove();
+        });
+    };
+
+    const removeOutput = id => removeRecipe({ output: id });
 
     //->------------------------]  Legacy-frame migration [------------------------<-//
 
-    // These blocks remain registry-only for save compatibility. Any surviving generated
-    // recipe that still asks for one is migrated to the real mechanism for that tier.
-    event.replaceInput({}, "kubejs:tk3_network_chassis", "kubejs:tk3_calculation_mechanism");
-    event.replaceInput({}, "kubejs:tk3_arcane_machine", "kubejs:tk3_arcane_mechanism");
-    event.replaceInput({}, "kubejs:tk3_chemical_machine", "kubejs:tk3_chemical_mechanism");
-    event.replaceInput({}, "kubejs:tk3_expedition_frame", "kubejs:tk3_chemical_mechanism");
-    event.replaceInput({}, "kubejs:tk3_containment_frame", "kubejs:tk3_containment_mechanism");
-    event.replaceInput({}, "kubejs:tk3_ender_machine", "kubejs:tk3_singularity_mechanism");
-    event.replaceInput({}, "kubejs:tk3_singularity_frame", "kubejs:tk3_singularity_mechanism");
+    // These blocks remain registry-only for save compatibility. Active recipe inputs are migrated directly in their source files.
+    // replaceInput does not modify recipes added by another script in this event.
 
     //->------------------------]  Foundational component gaps [------------------------<-//
 
@@ -36,6 +40,12 @@ ServerEvents.recipes(event => {
             I: "create:iron_sheet"
         })
         .id("kubejs:tk3/components/empty_tube_mechanical_crafting");
+
+    // Press + Basin bootstrap before the Sealed Mechanism.
+    event.recipes.create.compacting(
+        ['4x kubejs:tk3_empty_tube'],
+        ['6x minecraft:glass_pane', '2x create:iron_sheet'])
+        .id('kubejs:tk3/components/empty_tube_compacting');
 
     // Give the supplied Andesite Alloy Sheet artwork a real job.
     removeOutput("kubejs:tk3_andesite_alloy_sheet");
