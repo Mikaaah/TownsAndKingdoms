@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#251226">
   <meta name="description" content="Plan a T&K3 character skill build, follow every prerequisite, and keep your point budget in view before you spend.">
   <title>Skilltree Planner · Towns & Kingdoms 3</title>
-  <link rel="stylesheet" href="app.css?v=4.6.3">
+  <link rel="stylesheet" href="app.css?v=4.6.4">
 </head>
 <body>
   <header class="topbar">
@@ -46,7 +46,7 @@
         <div class="map-toolbar"><label for="groupFilter">Highlight branch</label><select id="groupFilter"><option value="">All branches</option><option value="shared">Shared skills</option><option value="class">Class skills</option><option value="subclass">Subclass skills</option><option value="profession">Professions</option><option value="wildcard">Wildcards</option></select><span class="map-hint">Click a node to add or remove it. Its prerequisite path is planned automatically.</span></div>
         <div class="map-wrap"><svg id="tree" viewBox="0 0 120 120" role="img" aria-label="Interactive map of the current skilltree."><defs><pattern id="gridDots" width="1" height="1" patternUnits="userSpaceOnUse"><circle cx=".5" cy=".5" r=".035" fill="#d7b9bf" opacity=".2"/></pattern></defs><rect x="0" y="0" width="120" height="120" fill="url(#gridDots)"/><g id="edges" aria-hidden="true"></g><g id="nodes"></g></svg><div id="loading" class="canvas-message">Loading the published skilltree data…</div></div>
         <div class="map-legend"><span><i class="legend-dot start"></i>Start</span><span><i class="legend-dot selected-goal"></i>Planned by you</span><span><i class="legend-dot required"></i>Required path</span><span><i class="legend-dot locked"></i>Choose class/subclass to use</span></div>
-        <p class="map-footer">Scroll to zoom · drag empty space to pan · gold rings mark goals · bright nodes are included in your plan</p>
+        <p class="map-footer">Scroll to zoom · drag to pan · lines show skill connections · gold lines mark your planned route</p>
       </section>
       <aside class="side-panel">
         <section class="panel search-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">Find your skills</p><h2>Search the tree</h2></div></div><label class="search-box" for="search"><span class="visually-hidden">Search skill name, bonus, or node ID</span><input id="search" type="search" placeholder="Try “Fire Spell Power” or “Alchemy”" autocomplete="off"></label><p class="search-help">Search skill names, bonuses, professions, or node IDs.</p><div id="searchResults" class="search-results" aria-live="polite"><p class="empty-copy">Search skill names or bonuses, then add that skill to your plan.</p></div></section>
@@ -57,6 +57,6 @@
     <p class="footnote">This is a planning aid for the currently published tree data. It does not award points, change your in-game skills, or enforce an in-game level cap.</p>
   </main>
   <script src="planner-core.js" defer></script>
-  <script src="app.js?v=4.6.3" defer></script>
+  <script src="app.js?v=4.6.4" defer></script>
 </body>
 </html>
