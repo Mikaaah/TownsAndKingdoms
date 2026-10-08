@@ -21,12 +21,11 @@
 .edge.active{stroke:#f5cf75;stroke-width:1.7;opacity:1;filter:drop-shadow(0 0 2px #d89e48)}
 .node{cursor:pointer;transition:opacity .14s,filter .14s}
 .node-frame{opacity:.9;pointer-events:none}
-.node-ring{fill:#17111a;fill-opacity:.76;stroke-width:.08;vector-effect:non-scaling-stroke;pointer-events:all}
-.node-icon{pointer-events:none;image-rendering:pixelated}
-.node:hover,.node.selected{filter:drop-shadow(0 0 2px #fff0ba);opacity:1!important}
-.node:hover .node-ring,.node.selected .node-ring{stroke:#fff6d9;stroke-width:.14}
-.node.goal .node-ring{stroke:#ffcc5d;stroke-width:.18;filter:drop-shadow(0 0 3px #f2bb4b)}
-.node.required .node-ring{stroke:#9de0c0;stroke-width:.15;filter:drop-shadow(0 0 2px #62bd91)}
+.node-icon{pointer-events:all;image-rendering:pixelated}
+.node:hover,.node.selected{opacity:1!important}
+.node:hover .node-icon,.node.selected .node-icon{filter:drop-shadow(0 0 2px #fff6d9)}
+.node.goal .node-icon{filter:drop-shadow(0 0 2px #ffcc5d) drop-shadow(0 0 4px #ffcc5d88)}
+.node.required .node-icon{filter:drop-shadow(0 0 2px #9de0c0) drop-shadow(0 0 3px #62bd9188)}
 .node.dim{opacity:.1}
 .node.locked{opacity:.24}
 .side-panel{position:relative;gap:9px}
