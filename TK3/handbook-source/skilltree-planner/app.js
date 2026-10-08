@@ -292,6 +292,35 @@
     });
     if(matches.length>shown.length) results.appendChild(create("p","empty-copy","Showing "+shown.length+" of "+matches.length+" results. Refine your search."));
   }
+  function positionNodeTooltip(event) {
+    const tooltip=$("nodeTooltip"),wrap=$("tree").parentElement,rect=wrap.getBoundingClientRect();
+    let left=event.clientX-rect.left+16,top=event.clientY-rect.top+16;
+    const width=tooltip.offsetWidth,height=tooltip.offsetHeight;
+    if(left+width>rect.width-8) left=event.clientX-rect.left-width-16;
+    if(top+height>rect.height-8) top=event.clientY-rect.top-height-16;
+    tooltip.style.left=Math.max(8,Math.min(left,rect.width-width-8))+"px";
+    tooltip.style.top=Math.max(8,Math.min(top,rect.height-height-8))+"px";
+  }
+  function showNodeTooltip(node,event) {
+    const tooltip=$("nodeTooltip");
+    const branch=node.group==="class"?human(node.branchClass):node.group==="subclass"?human(node.branchSubclass):groupNames[node.group]||node.group;
+    const description=(node.description||[]).map(function(part){return part.text||"";}).join(" ").trim();
+    const prereqs=requirementIds(node).map(function(id){const required=state.byId.get(id);return required?required.title:id;});
+    tooltip.replaceChildren();
+    tooltip.appendChild(create("strong","tooltip-title",node.title));
+    tooltip.appendChild(create("span","tooltip-group",(groupNames[node.group]||"Skill")+" · "+branch));
+    tooltip.appendChild(create("p","tooltip-description",description||"No bonus details are listed for this node."));
+    const meta=create("span","tooltip-meta",[
+      node.isStartingPoint?"Starting point · 0 points":"1 point",
+      prereqs.length?"Requires: "+prereqs.join(", "):"No prerequisites"
+    ].join(" · "));
+    tooltip.appendChild(meta);
+    tooltip.hidden=false;
+    positionNodeTooltip(event);
+  }
+  function hideNodeTooltip() {
+    $("nodeTooltip").hidden=true;
+  }
   function renderMap() {
     const edgeLayer=$("edges"),nodeLayer=$("nodes"),lineFrag=document.createDocumentFragment();
     state.svgEdges=[];
@@ -307,14 +336,16 @@
       const g=document.createElementNS("http://www.w3.org/2000/svg","g");
       g.setAttribute("class","node "+node.group);g.dataset.id=node.id;
       g.setAttribute("transform","translate("+(node.col+.5)+" "+(node.row+.5)+")");
-      g.setAttribute("role","button");g.setAttribute("tabindex","-1");g.setAttribute("aria-label",node.title+", click to add or remove from plan");
+      g.setAttribute("role","button");g.setAttribute("tabindex","-1");g.setAttribute("aria-label",node.title+", click to add or remove from plan");g.setAttribute("aria-describedby","nodeTooltip");
       const radius=Math.max(.38,Math.min(.7,Number(node.size||18)/42));
       const icon=document.createElementNS("http://www.w3.org/2000/svg","image");
       icon.setAttribute("class","node-icon");icon.setAttribute("href",textureUrl(node.iconTexture));
       icon.setAttribute("x",-radius*.88);icon.setAttribute("y",-radius*.88);
       icon.setAttribute("width",radius*1.76);icon.setAttribute("height",radius*1.76);
       icon.setAttribute("preserveAspectRatio","xMidYMid meet");icon.setAttribute("pointer-events","all");g.appendChild(icon);
-      const title=document.createElementNS("http://www.w3.org/2000/svg","title");title.textContent=node.title+" · click to add/remove from your plan";g.appendChild(title);
+      g.addEventListener("pointerenter",function(event){showNodeTooltip(node,event);});
+      g.addEventListener("pointermove",positionNodeTooltip);
+      g.addEventListener("pointerleave",hideNodeTooltip);
       g.addEventListener("click",function(){toggleMapNode(node.id);});
       g.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();toggleMapNode(node.id);}});
       nodeFrag.appendChild(g);state.svgNodes.set(node.id,g);
