@@ -309,15 +309,11 @@
       g.setAttribute("transform","translate("+(node.col+.5)+" "+(node.row+.5)+")");
       g.setAttribute("role","button");g.setAttribute("tabindex","-1");g.setAttribute("aria-label",node.title+", click to add or remove from plan");
       const radius=Math.max(.38,Math.min(.7,Number(node.size||18)/42));
-      const circle=document.createElementNS("http://www.w3.org/2000/svg","circle");
-      circle.setAttribute("r",radius);circle.setAttribute("class","node-ring");
-      const color=/^#[0-9A-Fa-f]{6}$/.test(node.titleColor||"")?node.titleColor:"#d9c078";
-      circle.setAttribute("stroke",color);g.appendChild(circle);
       const icon=document.createElementNS("http://www.w3.org/2000/svg","image");
       icon.setAttribute("class","node-icon");icon.setAttribute("href",textureUrl(node.iconTexture));
-      icon.setAttribute("x",-radius*.58);icon.setAttribute("y",-radius*.58);
-      icon.setAttribute("width",radius*1.16);icon.setAttribute("height",radius*1.16);
-      icon.setAttribute("preserveAspectRatio","xMidYMid meet");g.appendChild(icon);
+      icon.setAttribute("x",-radius*.88);icon.setAttribute("y",-radius*.88);
+      icon.setAttribute("width",radius*1.76);icon.setAttribute("height",radius*1.76);
+      icon.setAttribute("preserveAspectRatio","xMidYMid meet");icon.setAttribute("pointer-events","all");g.appendChild(icon);
       const title=document.createElementNS("http://www.w3.org/2000/svg","title");title.textContent=node.title+" · click to add/remove from your plan";g.appendChild(title);
       g.addEventListener("click",function(){toggleMapNode(node.id);});
       g.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();toggleMapNode(node.id);}});
