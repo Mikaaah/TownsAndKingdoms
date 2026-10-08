@@ -1,6 +1,6 @@
 # Skill node catalogue · v4.6.0
 
-All 1,801 nodes extracted from the current KubeJS skilltree source. Coordinates and the full bonus/requirement data are in [`skilltree-v4.6.json`](../../data/skilltree-v4.6.json). [Open the layout builder](../../skilltree-builder/).
+All 1,801 nodes extracted from the current KubeJS skilltree source. Coordinates and the full bonus/requirement data are in [`skilltree-v4.6.json`](../../assets/wiki/skilltree-v4.6.json). [Open the layout builder](../../skilltree-builder/).
 
 | Node | ID | Displayed bonuses | Tags |
 |---|---|---|---|

@@ -111,6 +111,7 @@ article('3.0/skill-tree/','Classes & professions',wikiGuides.skill);
 article('3.0/runtime-v2/','KubeJS runtime v2',read(path.join(root,'runtime-v4.6/runtime-v2.md')));
 for(const [route,title,key] of [['skill-nodes','Skill node catalogue','nodeGuide'],['spell-catalogue','Spell catalogue','spellGuide'],['glyph-catalogue','Ars glyph catalogue','glyphGuide'],['accessory-catalogue','Accessory catalogue','accessoryGuide'],['witchery-topics','Witchery topic index','witcheryGuide']]) article('3.0/'+route+'/',title,wikiGuides[key]);
 for(const [name,value] of Object.entries(wikiData)) write(path.join(out,'assets/wiki',name+'.json'),JSON.stringify(value));
+write(path.join(out,'assets/wiki/skilltree-v4.6.json'),read(path.join(root,'data/skilltree-v4.6.json')));
 let automation=read(path.join(root,'automation.md')).replace('tier_2%2Frenewable_slime','tier_2%2Frenewable_sealant');
 const pretty=id=>({'kubejs:tk3_rotation_machine':'Rotation Machine','kubejs:tk3_hydraulic_machine':'Hydraulic Machine','kubejs:tk3_precision_machine':'Precision Machine'}[id]||id.replace(/^\d+x /,'').split(':').at(-1).split('_').map(x=>x[0].toUpperCase()+x.slice(1)).join(' '));
 const yieldName=s=>{if(s==='—'||s.startsWith('Check native'))return s;const q=s.match(/^(\d+)x /);return(q?q[1]+' × ':'1 × ')+pretty(s)};
