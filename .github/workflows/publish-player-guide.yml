@@ -9,6 +9,7 @@ on:
       - 'TK3/docs/**'
       - 'TK3/tools/build_handbook.cjs'
       - 'TK3/tools/verify_handbook.py'
+      - 'TK3/tools/verify_*.py'
       - 'TK3/wiki-archive/**'
       - 'TK3/kubejs/assets/**'
       - '.github/workflows/publish-player-guide.yml'
