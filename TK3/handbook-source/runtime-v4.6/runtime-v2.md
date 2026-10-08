@@ -24,7 +24,7 @@ The current package separates integrations into 40 mod-specific modules, includi
 
 Skill tree v4.6.0 contains **1,801 nodes and 1,800 graph edges** on a unique 120 × 120 grid. It has six classes, eighteen subclasses, eight professions, six wildcard constellations, and eight shared constellations. Every node costs one point; the script recommends a 150-point cap. Current layout fingerprint: `4f6e469f`.
 
-[Read the full skill tree guide](../skill-tree/) · [Open the Skilltree Builder](../../skilltree-builder/) · [Browse the node catalogue](../skill-nodes/)
+[Read the full skill tree guide](../skill-tree/) · [Open the Skilltree Planner](../../skilltree-planner/) · [Browse the node catalogue](../skill-nodes/)
 
 ## Validation status
 

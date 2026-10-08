@@ -8,7 +8,7 @@
 
 **[SKILLTREE GUIDE](https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/)**
 
-**[SKILLTREE BUILDER](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/)**
+**[SKILLTREE PLANNER](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/)**
 
 **[FEATURES & MODS](https://mikaaah.github.io/TownsAndKingdoms/3.0/features/)**
 

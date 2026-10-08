@@ -18,14 +18,14 @@ The 1,972-entry production review catalogue is retained as a separate reviewed r
 - Registered 214 custom items and three machine-frame blocks.
 - Added the reusable Catalyst Lens item and Netherstar, Everburning, Voidguard, and Accursed charged variants.
 - Updated skill tree source to v4.6.0: 1,801 nodes, 1,800 graph edges, one connected 120 × 120 layout.
-- Added the browser Skilltree Builder with search/filtering, drag-and-snap layout editing, validation, and KubeJS/layout exports.
+- Added the browser Skilltree Planner for players: class/subclass choices, prerequisite-aware skill goals, point budget, saved/shareable build plans, and purchase order.
 - Added runtime inventory, stage, lens, compatibility, custom-item, and skilltree documentation.
 
 ## Skill tree v4.6.0
 
 Six classes: Warrior, Ranger, Rogue, Mage, Cleric, and Occultist. Eighteen subclasses, eight professions (Mining, Logging, Hunting, Exploration, Fishing, Farming, Crafting, Alchemy), six wildcard constellations, and eight shared constellations use one global point pool. Each node costs one point; 150 points is the recommended build cap. Class limit is one, subclass limit is one, and professions/foci are unrestricted. Advanced class Rank IV unlocks subclass choice; profession mastery begins at branch Rank IV; Ascendancy uses Rank VIII commitments, with Ranks IX–XVI optional.
 
-The current source of truth is kubejs/server_scripts/TK3_SkillTree.js. Read [SKILLTREE_V4.6.0.md](SKILLTREE_V4.6.0.md). SKILLTREE_V3.2.2.md is historical. The [Skilltree Builder](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/) exports a changed coordinate map and matching approved fingerprint while preserving node definitions and gameplay rules.
+The current source of truth is kubejs/server_scripts/TK3_SkillTree.js. Read [SKILLTREE_V4.6.0.md](SKILLTREE_V4.6.0.md). SKILLTREE_V3.2.2.md is historical. The [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/) helps players plan class, subclass, profession, and focus choices against the actual prerequisite graph before spending points.
 
 ## Validation and open work
 

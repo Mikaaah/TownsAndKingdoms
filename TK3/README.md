@@ -2,7 +2,7 @@
 
 **1,788 unique KubeJS recipe IDs · 353 quests · 10 progression tiers · skill tree v4.6.0**
 
-[Official wiki](https://mikaaah.github.io/TownsAndKingdoms/) · [Runtime v2 notes](docs/KUBEJS_RUNTIME_V2.md) · [Questbook guide](docs/QUESTBOOK_EN.md) · [Recipe paths](docs/PLAYER_PATHS_EN.md) · [Mod tier map](docs/MOD_TIER_MAP_EN.md)
+[Official wiki](https://mikaaah.github.io/TownsAndKingdoms/) · [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/) · [Runtime v2 notes](docs/KUBEJS_RUNTIME_V2.md) · [Questbook guide](docs/QUESTBOOK_EN.md) · [Recipe paths](docs/PLAYER_PATHS_EN.md) · [Mod tier map](docs/MOD_TIER_MAP_EN.md)
 
 **October 6 runtime refresh:** the supplied fixed KubeJS package updates ten recipe tiers, 40 compatibility modules, 214 custom item registrations, three frame blocks, progression stages, reusable catalyst lenses, and the 1,801-node skill tree. See the [runtime manifest](docs/RUNTIME_V2_MANIFEST.json) and [runtime update notes](docs/KUBEJS_RUNTIME_V2.md).
 

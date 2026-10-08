@@ -20,6 +20,7 @@ Follow the ten-tier production reference and explore the full 2.0 and 3.0 docume
 | [Production review](https://mikaaah.github.io/TownsAndKingdoms/renewability/) | Verified source findings, bootstrap blockers and open runtime checks |
 | [Automation field guide](https://mikaaah.github.io/TownsAndKingdoms/automation/) | Collection, crop and wood farms, processing and troubleshooting |
 | [Visual recipe workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) | Interactive steps for all authored recipes |
+| [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/) | Plan class, subclass, prerequisite paths, and point spending before respec |
 | [T&K2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | The complete original wiki |
 | [Find a recipe](https://mikaaah.github.io/TownsAndKingdoms/progression/#recipes) | Search by item, ingredient, mod, tier or process |
 

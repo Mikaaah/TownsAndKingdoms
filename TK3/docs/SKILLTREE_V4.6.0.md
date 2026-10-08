@@ -18,11 +18,13 @@ One class is selected. A subclass opens after Advanced class Rank IV. Profession
 
 A signature class-and-subclass route with shared entry costs about **89 points**. Full progression through the chosen class and subclass is about **133 points**. Three profession masteries add **45 points**, so that full combat path plus three professions is about **178 points**, beyond the recommended cap. These are source-script planning estimates.
 
-## Build and validate layout
+## Plan before you spend
 
-Open the [Skilltree Builder](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/). It loads the generated node graph and current KubeJS template, lets you search and filter, drag nodes to unused grid cells, and exports both a layout JSON and a runtime script with an updated layout fingerprint. Keep node IDs and graph rules intact; changing a layout only changes coordinates.
+Open the [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/). Choose one class and at most one matching subclass, then add the skills you want as goals. The planner follows every learned-skill prerequisite, counts shared prerequisites once, treats the starting point as free, and shows a prerequisite-first purchase order.
 
-The included `handbook-source/data/skilltree-v4.6.json` is extracted node data. Run the tree source after editing and validate in the game before shipping.
+Profession and focus picks have no separate limit; they draw from the same point pool. Plans autosave in your browser. Download or load a JSON plan, copy a share link, or print your purchase order. The 150-point target is recommended and editable; the game script does not enforce it.
+
+The planner reads the published node and bonus data. It does not change the tree layout or KubeJS definitions.
 
 ## Current data
 

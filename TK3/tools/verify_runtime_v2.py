@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 KUBE = ROOT / 'kubejs'
 MANIFEST = json.loads((ROOT / 'docs/RUNTIME_V2_MANIFEST.json').read_text())
 TREE = json.loads((ROOT / 'handbook-source/data/skilltree-v4.6.json').read_text())
-LAYOUT = json.loads((ROOT / 'handbook-source/skilltree-builder/data/layout.json').read_text())
+LAYOUT = json.loads((ROOT / 'handbook-source/skilltree-planner/data/layout.json').read_text())
 
 recipe_ids=[]
 for file in (KUBE / 'server_scripts/recipes').rglob('*.js'):

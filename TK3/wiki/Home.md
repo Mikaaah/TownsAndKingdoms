@@ -10,7 +10,7 @@ The official T&K3 guides now describe the fixed October 2026 runtime refresh whi
 
 | T&K3 · CURRENT DATA | PLAYER TOOLS |
 |---|---|
-| [Chapters & reviewed recipes](https://mikaaah.github.io/TownsAndKingdoms/progression/) | [Skilltree Builder](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/) |
+| [Chapters & reviewed recipes](https://mikaaah.github.io/TownsAndKingdoms/progression/) | [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/) |
 | [Current runtime v2 notes](https://mikaaah.github.io/TownsAndKingdoms/3.0/runtime-v2/) | [All player guides](https://mikaaah.github.io/TownsAndKingdoms/guides/) |
 | [Skill tree guide](https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/) | [Recipe workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) |
 | [T&K2 wiki archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | [Automation guide](https://mikaaah.github.io/TownsAndKingdoms/automation/) |

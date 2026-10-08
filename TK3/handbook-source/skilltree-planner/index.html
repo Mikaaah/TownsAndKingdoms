@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#251226">
+  <meta name="description" content="Plan a T&K3 character skill build, follow every prerequisite, and keep your point budget in view before you spend.">
+  <title>Skilltree Planner · Towns & Kingdoms 3</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../">
+      <img src="../assets/brand/tklogo.png" alt="" width="48" height="48">
+      <span><strong>Towns & Kingdoms 3</strong><small>Skilltree Planner</small></span>
+    </a>
+    <nav class="top-actions" aria-label="Main links">
+      <span id="treeVersion" class="version">Loading current tree…</span>
+      <a href="../3.0/skill-tree/">Skill tree guide ↗</a>
+      <a href="../" class="home-link">Wiki home</a>
+    </nav>
+  </header>
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">Plan first · Spend once</p>
+      <h1>Plan your character before you spend points.</h1>
+      <p class="lead">Choose one class and one subclass, then add the skills you want to reach. The planner follows every learned-skill prerequisite, shows the full purchase order, and keeps your point budget visible.</p>
+      <div class="rule-note"><span class="rule-mark">◆</span><p><strong>One class. One subclass. One shared pool.</strong> Professions and focus branches have no separate limit. Each non-starting skill costs one point. The 150-point budget is recommended for planning; the game script does not hard-enforce that cap.</p></div>
+    </section>
+    <section class="setup panel" aria-label="Build settings">
+      <label class="field"><span>Class</span><select id="classChoice"><option value="">Choose later</option></select><small>Choose at most one class.</small></label>
+      <label class="field"><span>Subclass</span><select id="subclassChoice" disabled><option value="">Choose a class first</option></select><small>Only subclasses for your class are available.</small></label>
+      <label class="field budget-field"><span>Planning budget</span><div class="input-suffix"><input id="budgetChoice" type="number" min="1" max="1000" step="1" value="150"><span>points</span></div><small>Change this to match your current or expected points.</small></label>
+      <label class="field build-name"><span>Build name</span><input id="buildName" type="text" maxlength="48" value="My T&amp;K3 build" autocomplete="off"><small id="saveState" aria-live="polite">Saved in this browser</small></label>
+    </section>
+    <section class="summary" aria-label="Point summary" aria-live="polite">
+      <article class="metric"><span>Points planned</span><strong><span id="spent">0</span><i> / </i><span id="budgetTotal">150</span></strong></article>
+      <article class="metric"><span>Points remaining</span><strong id="remaining">150</strong></article>
+      <article class="metric"><span>Skill goals</span><strong id="goalCount">0</strong></article>
+      <article class="metric"><span>Auto-added prerequisites</span><strong id="requiredCount">0</strong></article>
+    </section>
+    <div id="planNotice" class="plan-notice" role="status" hidden></div>
+    <div class="main-grid">
+      <section class="map-panel panel" aria-label="Skilltree map">
+        <div class="panel-heading"><div><p class="eyebrow">Your skilltree</p><h2>Explore the tree</h2></div><div class="map-controls" aria-label="Map controls"><button id="zoomOut" type="button" aria-label="Zoom out">−</button><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="fitTree" type="button">Fit tree</button></div></div>
+        <div class="map-toolbar"><label for="groupFilter">Highlight branch</label><select id="groupFilter"><option value="">All branches</option><option value="shared">Shared skills</option><option value="class">Class skills</option><option value="subclass">Subclass skills</option><option value="profession">Professions</option><option value="wildcard">Wildcards</option></select><span class="map-hint">Click a node to inspect it. Add goals from search or the skill details.</span></div>
+        <div class="map-wrap"><svg id="tree" viewBox="0 0 120 120" role="img" aria-label="Interactive map of the current skilltree."><defs><pattern id="gridDots" width="1" height="1" patternUnits="userSpaceOnUse"><circle cx=".5" cy=".5" r=".035" fill="#d7b9bf" opacity=".2"/></pattern></defs><rect x="0" y="0" width="120" height="120" fill="url(#gridDots)"/><g id="edges" aria-hidden="true"></g><g id="nodes"></g></svg><div id="loading" class="canvas-message">Loading the published skilltree data…</div></div>
+        <div class="map-legend"><span><i class="legend-dot start"></i>Start</span><span><i class="legend-dot selected-goal"></i>Your goal</span><span><i class="legend-dot required"></i>Required path</span><span><i class="legend-dot locked"></i>Choose class/subclass to use</span></div>
+        <p class="map-footer">Scroll to zoom · drag empty space to pan · gold rings mark goals · bright nodes are included in your plan</p>
+      </section>
+      <aside class="side-panel">
+        <section class="panel search-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">Find your skills</p><h2>Search the tree</h2></div></div><label class="search-box" for="search"><span class="visually-hidden">Search skill name, bonus, or node ID</span><input id="search" type="search" placeholder="Try “Fire Spell Power” or “Alchemy”" autocomplete="off"></label><p class="search-help">Search skill names, bonuses, professions, or node IDs.</p><div id="searchResults" class="search-results" aria-live="polite"><p class="empty-copy">Search for a skill or bonus to add a goal to your plan.</p></div></section>
+        <section class="panel details-panel" aria-live="polite"><p class="eyebrow">Skill details</p><h2 id="nodeTitle">Choose a node</h2><p id="nodeMeta" class="node-meta">Click a node on the map or in search results.</p><div id="nodeDescription" class="node-description">Its bonuses and requirements will appear here.</div><div class="detail-facts"><span>Direct prerequisites</span><strong id="nodePrereqCount">—</strong><span>Point cost</span><strong id="nodeCost">—</strong></div><button id="toggleGoal" class="primary-button" type="button" disabled>Choose a skill first</button><button id="showOnMap" class="quiet-button" type="button" disabled>Show on map</button></section>
+        <section class="panel plan-panel"><div class="panel-heading compact-heading"><div><p class="eyebrow">Before you spend</p><h2>Your plan</h2></div><span id="plannedBadge" class="count-badge">0</span></div><div id="goalList" class="goal-list"><p class="empty-copy">Add a skill goal. Its full prerequisite path will be included automatically.</p></div><details class="purchase-details"><summary>Show point-by-point purchase order <span id="purchaseCount">0</span></summary><ol id="purchaseOrder" class="purchase-order"></ol></details><div class="plan-actions"><button id="downloadPlan" class="secondary-button" type="button">Download plan</button><button id="importPlanButton" class="secondary-button" type="button">Load plan</button><input id="importPlanFile" type="file" accept="application/json,.json" hidden><button id="copyLink" class="quiet-button" type="button">Copy share link</button><button id="printPlan" class="quiet-button" type="button">Print plan</button><button id="clearGoals" class="text-button" type="button">Clear planned skills</button><button id="resetBuild" class="text-button" type="button">Reset all settings</button></div></section>
+      </aside>
+    </div>
+    <p class="footnote">This is a planning aid for the currently published tree data. It does not award points, change your in-game skills, or enforce an in-game level cap.</p>
+  </main>
+  <script src="planner-core.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
