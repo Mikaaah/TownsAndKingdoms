@@ -170,8 +170,14 @@
     {
       "route": "3.0/skill-tree/",
       "title": "Classes & professions",
-      "summary": "Six classes, eighteen subclasses, seven professions, all paths and exact scripted bonuses.",
+      "summary": "Six classes, eighteen subclasses, eight professions, wildcards, tree rules and exact scripted bonuses.",
       "category": "adventure"
+    },
+    {
+      "route": "3.0/runtime-v2/",
+      "title": "KubeJS runtime v2",
+      "summary": "Current runtime recipe IDs, stages, custom items, catalyst lenses, compatibility and skill tree.",
+      "category": "reference"
     },
     {
       "route": "3.0/modlist/",
