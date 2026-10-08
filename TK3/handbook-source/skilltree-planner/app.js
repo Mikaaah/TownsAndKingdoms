@@ -2,6 +2,7 @@
   "use strict";
   const $ = function(id) { return document.getElementById(id); };
   const STORAGE_KEY = "tk3-skilltree-build-plan-v1";
+  const ICON_ROOT = "https://raw.githubusercontent.com/Mikaaah/TownsAndKingdoms/b51943794270fd755142f21768251fccc3236f11/TK3/kubejs/assets/";
   const state = {
     tree:null, nodes:[], byId:new Map(), layout:null, classId:"", subclassId:"",
     budget:150, name:"My T&K3 build", targets:new Set(), selected:null, plan:null,
@@ -22,6 +23,16 @@
     if(text!==undefined) el.textContent=text;
     return el;
   };
+  function textureUrl(texture) {
+    const match=String(texture||"").match(/^([a-z0-9_]+):(.+)$/i);
+    return match?ICON_ROOT+match[1]+"/"+match[2]:"";
+  }
+  function skillIcon(node,className) {
+    const img=create("img","skill-icon "+(className||""));
+    img.src=textureUrl(node&&node.iconTexture);img.alt=node?node.title:"";
+    img.loading="lazy";img.decoding="async";
+    img.addEventListener("error",function(){img.hidden=true;});return img;
+  }
   function status(message) {
     $("saveState").textContent=message;
   }
@@ -174,13 +185,13 @@
   }
   function renderGoalList() {
     const list=$("goalList");list.replaceChildren();
-    if(state.targets.size===0) {list.appendChild(create("p","empty-copy","Add a skill goal. Its full prerequisite path will be included automatically."));return;}
+    if(state.targets.size===0) {list.appendChild(create("p","empty-copy","Click any skill on the tree. Required skills will be included automatically."));return;}
     for(const id of state.targets) {
-      const node=state.byId.get(id);
-      const row=create("div","goal-item");
-      const main=create("div");
+      const node=state.byId.get(id),row=create("div","goal-item");
+      if(node) row.appendChild(skillIcon(node,"list-icon"));
+      const main=create("div","goal-copy");
       main.appendChild(create("strong","",node?node.title:id));
-      main.appendChild(create("small","",node?groupNames[node.group]+" · "+human(node.branchClass||node.branchSubclass||""):"Missing node"));
+      main.appendChild(create("small","",node?groupNames[node.group]+" · "+human(node.branchClass||node.branchSubclass||""):"Missing skill"));
       const remove=create("button","remove-goal","Remove");remove.type="button";remove.setAttribute("aria-label","Remove "+(node?node.title:id));
       remove.addEventListener("click",function(){state.targets.delete(id);renderAll();persist();});
       row.append(main,remove);list.appendChild(row);
@@ -192,6 +203,7 @@
     state.plan.order.forEach(function(id) {
       const node=state.byId.get(id);
       const li=create("li");
+      if(node) li.appendChild(skillIcon(node,"order-icon"));
       li.appendChild(document.createTextNode(node?node.title:id));
       const note=node&&node.isStartingPoint?" · starting point, 0 points":" · 1 point";
       li.appendChild(create("small","",note));
@@ -206,12 +218,14 @@
     const toggle=$("toggleGoal"),show=$("showOnMap");
     if(!node) {
       $("nodeTitle").textContent="Choose a node";
+      $("nodeIcon").hidden=true;
       $("nodeMeta").textContent="Click a node on the map or in search results.";
       $("nodeDescription").textContent="Its bonuses and requirements will appear here.";
       $("nodePrereqCount").textContent="—";$("nodeCost").textContent="—";
       toggle.disabled=true;toggle.textContent="Choose a skill first";show.disabled=true;return;
     }
     $("nodeTitle").textContent=node.title;
+    const detailIcon=$("nodeIcon");detailIcon.src=textureUrl(node.iconTexture);detailIcon.alt=node.title;detailIcon.hidden=!node.iconTexture;
     const branch=node.group==="class"?human(node.branchClass):node.group==="subclass"?human(node.branchSubclass):groupNames[node.group]||node.group;
     $("nodeMeta").textContent=(groupNames[node.group]||"Skill")+" · "+branch+" · "+node.id;
     const box=$("nodeDescription");box.replaceChildren();
@@ -235,11 +249,11 @@
     const isTarget=selectedGoal(node);
     const preview=candidatePreview(node);
     const access=window.TK3PlannerCore.eligibilityMessage(node,settings());
-    if(isTarget) {toggle.disabled=false;toggle.textContent="Remove goal from plan";}
+    if(isTarget) {toggle.disabled=false;toggle.textContent="Remove from plan";}
     else if(node.isStartingPoint) {toggle.disabled=true;toggle.textContent="Starting point is included";}
     else if(!preview.allowed) {toggle.disabled=true;toggle.textContent="Unavailable for this class/subclass";}
-    else {toggle.disabled=false;toggle.textContent="Add goal · +"+Math.max(0,preview.delta)+" points";}
-    toggle.title=isTarget?"Remove this goal":(access||preview.message||"Add this skill as a goal.");
+    else {toggle.disabled=false;toggle.textContent="Add to plan · +"+Math.max(0,preview.delta)+" points";}
+    toggle.title=isTarget?"Remove this skill from your plan":(access||preview.message||"Plan this skill and its prerequisites.");
     show.disabled=false;
   }
   function renderSearchResults() {
@@ -264,23 +278,22 @@
       const branch=node.group==="class"?human(node.branchClass):node.group==="subclass"?human(node.branchSubclass):groupNames[node.group]||node.group;
       main.appendChild(create("small","",(groupNames[node.group]||node.group)+" · "+branch));
       const required=state.plan.planned.has(node.id)&&!state.targets.has(node.id);
-      main.appendChild(create("span","result-state",selectedGoal(node)?"Your goal":required?"Already on your required path":""));
+      main.appendChild(create("span","result-state",selectedGoal(node)?"Planned by you":required?"Already on your required path":""));
       main.addEventListener("click",function(){selectNode(node.id);focusMap(node);});
-      const add=create("button","result-add",selectedGoal(node)?"Remove":required?"Add as goal":"Add goal");
+      const add=create("button","result-add",selectedGoal(node)?"Remove":required?"Plan skill":"Plan skill");
       add.type="button";
       const preview=candidatePreview(node);
       const locked=!preview.allowed&&!selectedGoal(node);
       if(locked) add.disabled=true;
-      if(!selectedGoal(node)&&!locked) add.textContent="Add · +"+Math.max(0,preview.delta);
+      if(!selectedGoal(node)&&!locked) add.textContent="Plan · +"+Math.max(0,preview.delta);
       add.title=locked?(preview.message||"Choose the matching class and subclass first."):"Plan this skill goal";
       add.addEventListener("click",function(){if(selectedGoal(node))removeGoal(node.id);else addGoal(node.id);});
-      row.append(main,add);results.appendChild(row);
+      row.append(skillIcon(node,"result-icon"),main,add);results.appendChild(row);
     });
     if(matches.length>shown.length) results.appendChild(create("p","empty-copy","Showing "+shown.length+" of "+matches.length+" results. Refine your search."));
   }
   function renderMap() {
-    const edgeLayer=$("edges"),nodeLayer=$("nodes");
-    const lineFrag=document.createDocumentFragment();
+    const edgeLayer=$("edges"),nodeLayer=$("nodes"),lineFrag=document.createDocumentFragment();
     state.svgEdges=[];
     for(const pair of state.layout.edges) {
       const a=state.byId.get(pair[0]),b=state.byId.get(pair[1]);if(!a||!b)continue;
@@ -294,13 +307,20 @@
       const g=document.createElementNS("http://www.w3.org/2000/svg","g");
       g.setAttribute("class","node "+node.group);g.dataset.id=node.id;
       g.setAttribute("transform","translate("+(node.col+.5)+" "+(node.row+.5)+")");
-      g.setAttribute("role","button");g.setAttribute("tabindex","-1");g.setAttribute("aria-label",node.title+", "+(groupNames[node.group]||node.group));
+      g.setAttribute("role","button");g.setAttribute("tabindex","-1");g.setAttribute("aria-label",node.title+", click to add or remove from plan");
+      const radius=Math.max(.38,Math.min(.7,Number(node.size||18)/42));
       const circle=document.createElementNS("http://www.w3.org/2000/svg","circle");
-      circle.setAttribute("r",Math.max(.11,Math.min(.44,Number(node.size||18)/160)));
+      circle.setAttribute("r",radius);circle.setAttribute("class","node-ring");
       const color=/^#[0-9A-Fa-f]{6}$/.test(node.titleColor||"")?node.titleColor:"#d9c078";
-      circle.setAttribute("fill",color);g.appendChild(circle);
-      const title=document.createElementNS("http://www.w3.org/2000/svg","title");title.textContent=node.title+" · click to inspect";g.appendChild(title);
-      g.addEventListener("click",function(){selectNode(node.id);});
+      circle.setAttribute("stroke",color);g.appendChild(circle);
+      const icon=document.createElementNS("http://www.w3.org/2000/svg","image");
+      icon.setAttribute("class","node-icon");icon.setAttribute("href",textureUrl(node.iconTexture));
+      icon.setAttribute("x",-radius*.58);icon.setAttribute("y",-radius*.58);
+      icon.setAttribute("width",radius*1.16);icon.setAttribute("height",radius*1.16);
+      icon.setAttribute("preserveAspectRatio","xMidYMid meet");g.appendChild(icon);
+      const title=document.createElementNS("http://www.w3.org/2000/svg","title");title.textContent=node.title+" · click to add/remove from your plan";g.appendChild(title);
+      g.addEventListener("click",function(){toggleMapNode(node.id);});
+      g.addEventListener("keydown",function(event){if(event.key==="Enter"||event.key===" "){event.preventDefault();toggleMapNode(node.id);}});
       nodeFrag.appendChild(g);state.svgNodes.set(node.id,g);
     }
     nodeLayer.replaceChildren(nodeFrag);
@@ -327,6 +347,13 @@
   function selectNode(id) {
     if(!state.byId.has(id))return;
     state.selected=id;renderDetails();updateMapState();
+  }
+  function toggleMapNode(id) {
+    const node=state.byId.get(id);if(!node)return;
+    selectNode(id);
+    if(state.targets.has(id)) removeGoal(id);
+    else if(node.isStartingPoint) status("Your starting skill is included automatically.");
+    else addGoal(id);
   }
   function focusMap(node) {
     const w=34,h=34;
