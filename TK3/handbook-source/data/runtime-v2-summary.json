@@ -1,0 +1,25 @@
+{
+  "package": "KubeJS Version2_FIXED.zip",
+  "updated": "2026-10-06",
+  "minecraft": "1.21.1",
+  "files": 684,
+  "explicitRecipeIds": 1788,
+  "customItems": 214,
+  "machineFrameBlocks": 3,
+  "questMilestones": 14,
+  "tierGates": 9,
+  "compatModules": 40,
+  "skilltree": {
+    "version": "4.6.0",
+    "nodes": 1801,
+    "edges": 1800,
+    "grid": "120x120",
+    "classes": 6,
+    "subclasses": 18,
+    "professions": 8,
+    "wildcards": 6,
+    "sharedConstellations": 8,
+    "recommendedPointCap": 150,
+    "fingerprint": "4f6e469f"
+  }
+}

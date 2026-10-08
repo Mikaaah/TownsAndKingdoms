@@ -1,0 +1,11 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    { "item": "ars_nouveau:wilden_wing" },
+    { "type": "neoforge:single", "amount": 100, "fluid": "minecraft:water" }
+  ],
+  "results": [
+    { "count": 2, "id": "minecraft:leather" }
+  ]
+}

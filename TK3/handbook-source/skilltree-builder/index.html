@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#351321">
+  <title>T&K3 Skilltree Builder</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../"><span class="brand-mark">T&K</span><span><strong>Towns & Kingdoms</strong><small>Skilltree Builder · v4.6.0</small></span></a>
+    <div class="top-actions"><span id="saveState" class="state">Loading tree…</span><a class="text-link" href="../3.0/skill-tree/">Tree guide ↗</a></div>
+  </header>
+  <main class="layout">
+    <section class="workspace" aria-label="Skill tree layout canvas">
+      <div class="toolbar">
+        <div class="toolbar-group">
+          <label class="search">Find a node<input id="search" type="search" placeholder="Name or node ID" autocomplete="off"></label>
+          <label class="filter">Group<select id="groupFilter"><option value="">All groups</option><option value="shared">Shared</option><option value="class">Class</option><option value="subclass">Subclass</option><option value="profession">Profession</option><option value="wildcard">Wildcard</option></select></label>
+        </div>
+        <div class="toolbar-group view-controls" aria-label="Canvas controls">
+          <button id="zoomOut" type="button" title="Zoom out">−</button><button id="zoomIn" type="button" title="Zoom in">+</button><button id="fit" type="button">Fit tree</button>
+        </div>
+      </div>
+      <div class="canvas-wrap">
+        <svg id="tree" viewBox="0 0 120 120" role="img" aria-label="Interactive 120 by 120 skill tree grid">
+          <defs><pattern id="gridDots" width="1" height="1" patternUnits="userSpaceOnUse"><circle cx=".5" cy=".5" r=".035" fill="#d7b9bf" opacity=".25"/></pattern></defs>
+          <rect id="canvasBg" x="0" y="0" width="120" height="120" fill="url(#gridDots)"/>
+          <g id="edges" aria-hidden="true"></g><g id="nodes"></g>
+        </svg>
+        <div id="emptySearch" class="canvas-hint" hidden>No nodes match this search.</div>
+        <div class="canvas-legend"><span><i class="dot shared"></i>Shared</span><span><i class="dot class"></i>Class</span><span><i class="dot profession"></i>Profession</span><span><i class="dot wildcard"></i>Wildcard</span><span>Drag a node to an open grid cell</span></div>
+      </div>
+      <div class="canvas-footer"><span id="treeStats">Loading graph…</span><span>Wheel to zoom · drag empty space to pan · drag a node to move</span></div>
+    </section>
+    <aside class="sidepanel">
+      <section class="panel node-panel">
+        <p class="eyebrow">Selected node</p>
+        <h1 id="nodeTitle">Choose a node</h1>
+        <code id="nodeId">Click a node to inspect it</code>
+        <dl id="nodeFacts" class="facts"><dt>Area</dt><dd>—</dd><dt>Grid cell</dt><dd>—</dd><dt>Connections</dt><dd>—</dd></dl>
+        <p id="nodeTags" class="tag-list">Select any circle on the canvas.</p>
+      </section>
+      <section class="panel validation-panel">
+        <p class="eyebrow">Layout check</p>
+        <div id="validation" class="validation">Loading node data…</div>
+        <p class="muted">This builder changes node coordinates only. It preserves IDs, requirements, bonuses, costs, and selection limits in the supplied KubeJS template.</p>
+      </section>
+      <section class="panel export-panel">
+        <p class="eyebrow">Export</p>
+        <button id="exportLayout" class="primary" type="button">Download layout JSON</button>
+        <button id="exportScript" class="secondary" type="button">Download updated KubeJS script</button>
+        <button id="resetLayout" class="quiet" type="button">Reset to supplied v4.6 layout</button>
+        <p id="exportMessage" class="muted" aria-live="polite">Export validates all nodes, grid cells, and connections before download.</p>
+      </section>
+    </aside>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -4,20 +4,43 @@
         'net.neoforged.neoforge.event.level.BlockEvent$FluidPlaceBlockEvent');
     const Registries = Java.loadClass('net.minecraft.core.registries.BuiltInRegistries');
     const selectors = [{
+        // General geology: useful factory/building blocks without touching special loot.
+        // Each setup still needs a progression frame plus one reusable selector block.
+        "lens": "minecraft:coal_block",
+        "frame": "kubejs:tk3_rotation_machine",
+        "stone": "minecraft:deepslate"
+    }, {
+        "lens": "minecraft:bone_block",
+        "frame": "kubejs:tk3_hydraulic_machine",
+        "stone": "minecraft:calcite"
+    }, {
+        "lens": "minecraft:dripstone_block",
+        "frame": "kubejs:tk3_hydraulic_machine",
+        "stone": "minecraft:tuff"
+    }, {
+        // Precision-era Nether geology closes the Scoria/Scorchia and lava networks.
+        "lens": "minecraft:magma_block",
+        "frame": "kubejs:tk3_precision_machine",
+        "stone": "minecraft:netherrack"
+    }, {
+        "lens": "minecraft:obsidian",
+        "frame": "kubejs:tk3_precision_machine",
+        "stone": "minecraft:blackstone"
+    }, {
         "lens": "minecraft:polished_andesite",
-        "frame": "kubejs:tk3_kinetic_machine",
+        "frame": "kubejs:tk3_rotation_machine",
         "stone": "minecraft:andesite"
     }, {
         "lens": "minecraft:quartz_block",
-        "frame": "kubejs:tk3_kinetic_machine",
+        "frame": "kubejs:tk3_rotation_machine",
         "stone": "minecraft:diorite"
     }, {
         "lens": "minecraft:bricks",
-        "frame": "kubejs:tk3_kinetic_machine",
+        "frame": "kubejs:tk3_rotation_machine",
         "stone": "minecraft:granite"
     }, {
         "lens": "minecraft:calcite",
-        "frame": "kubejs:tk3_kinetic_machine",
+        "frame": "kubejs:tk3_rotation_machine",
         "stone": "create:limestone"
     }, {
         "lens": "minecraft:netherrack",
@@ -43,6 +66,26 @@
         "lens": "minecraft:gold_block",
         "frame": "kubejs:tk3_precision_machine",
         "stone": "create:ochrum"
+    }, {
+        "lens": "minecraft:quartz_block",
+        "frame": "mekanism:steel_casing",
+        "stone": "mekanism:osmium_ore"
+    }, {
+        "lens": "minecraft:copper_block",
+        "frame": "mekanism:steel_casing",
+        "stone": "mekanism:tin_ore"
+    }, {
+        "lens": "minecraft:iron_block",
+        "frame": "mekanism:steel_casing",
+        "stone": "mekanism:lead_ore"
+    }, {
+        "lens": "minecraft:glowstone",
+        "frame": "mekanism:steel_casing",
+        "stone": "mekanism:uranium_ore"
+    }, {
+        "lens": "minecraft:calcite",
+        "frame": "mekanism:steel_casing",
+        "stone": "mekanism:fluorite_ore"
     }];
 
     function id(state) {

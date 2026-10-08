@@ -4,6 +4,12 @@
 
 **[III · T&K3](https://mikaaah.github.io/TownsAndKingdoms/3.0/)**
 
+**[CURRENT RUNTIME V2](https://mikaaah.github.io/TownsAndKingdoms/3.0/runtime-v2/)**
+
+**[SKILLTREE GUIDE](https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/)**
+
+**[SKILLTREE BUILDER](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/)**
+
 **[FEATURES & MODS](https://mikaaah.github.io/TownsAndKingdoms/3.0/features/)**
 
 **[CREATE PARTS & MACHINES](https://mikaaah.github.io/TownsAndKingdoms/3.0/create/)**

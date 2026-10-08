@@ -1,113 +1,48 @@
 # T&K3 Project Status
 
-Last consolidated: **2026-10-01**
+Last consolidated: **2026-10-08** · runtime package updated **2026-10-06**
+
+## Current baseline
+
+Towns & Kingdoms 3 targets Minecraft 1.21.1 / NeoForge. The current canonical campaign has **353 quests** across ten progression chapters. The supplied quest ZIP is an earlier snapshot and does not replace the repository campaign.
+
+The fixed KubeJS runtime package is now represented in TK3/kubejs/. It contains 684 files, including 1,788 unique explicit recipe IDs, 40 mod compatibility modules, 214 custom item registrations, three machine-frame blocks, stage enforcement, reusable boss catalyst lenses, and the v4.6.0 skill tree.
+
+The 1,972-entry production review catalogue is retained as a separate reviewed recipe dataset. It is not a count of explicit recipe IDs in the refreshed KubeJS runtime.
+
+## Completed in this refresh
+
+- Synced the supplied fixed KubeJS package and related models, blockstates, textures, and data.
+- Reorganized recipe scripts into ten progression tiers, core recipes, 40 compatibility modules, and recipe cleanup/whitelist/final-sanity layers.
+- Updated AStages tier and boss-focus gates with 14 quest milestones. All milestone IDs match quests in the current canonical chapter files.
+- Registered 214 custom items and three machine-frame blocks.
+- Added the reusable Catalyst Lens item and Netherstar, Everburning, Voidguard, and Accursed charged variants.
+- Updated skill tree source to v4.6.0: 1,801 nodes, 1,800 graph edges, one connected 120 × 120 layout.
+- Added the browser Skilltree Builder with search/filtering, drag-and-snap layout editing, validation, and KubeJS/layout exports.
+- Added runtime inventory, stage, lens, compatibility, custom-item, and skilltree documentation.
+
+## Skill tree v4.6.0
+
+Six classes: Warrior, Ranger, Rogue, Mage, Cleric, and Occultist. Eighteen subclasses, eight professions (Mining, Logging, Hunting, Exploration, Fishing, Farming, Crafting, Alchemy), six wildcard constellations, and eight shared constellations use one global point pool. Each node costs one point; 150 points is the recommended build cap. Class limit is one, subclass limit is one, and professions/foci are unrestricted. Advanced class Rank IV unlocks subclass choice; profession mastery begins at branch Rank IV; Ascendancy uses Rank VIII commitments, with Ranks IX–XVI optional.
+
+The current source of truth is kubejs/server_scripts/TK3_SkillTree.js. Read [SKILLTREE_V4.6.0.md](SKILLTREE_V4.6.0.md). SKILLTREE_V3.2.2.md is historical. The [Skilltree Builder](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/) exports a changed coordinate map and matching approved fingerprint while preserving node definitions and gameplay rules.
+
+## Validation and open work
+
+Static validation passes: all 72 JavaScript files pass node --check; all 135 JSON files parse; recipe IDs are unique; all 14 stage milestone IDs exist in the current campaign; skilltree cells are unique and its 1,800-edge graph reaches all 1,801 nodes. Run python3 TK3/tools/verify_runtime_v2.py for the package checks.
+
+A Minecraft client/server boot has not been run for this refresh. Remaining work is in-game validation of item registration, recipe loading, stage restrictions, lens catalysts, compatibility presence checks, skilltree generation, and balance. World-generation stability remains a separate open testing item.
 
 ## Project direction
 
-Towns & Kingdoms 3 is being rebuilt for Minecraft 1.21.1 / NeoForge around a deliberately connected progression loop rather than a collection of independent content mods.
+- Create provides the early and middle mechanical backbone; Mekanism is a later technology layer.
+- AE2 provides late-game logistics and autocrafting rather than a processing bypass.
+- Iron's Spells focuses on combat magic; Ars Nouveau focuses on arcane crafting, processing, and automation.
+- FTB Quests explains progression; AStages enforces machine-access milestones.
+- Boss rewards unlock permanent progression permissions and reusable catalysts.
+- Class and subclass choices define combat identity, while professions support activities within a shared budget.
+- Compatibility remains modular and presence-guarded where needed.
 
-Core principles:
+## Historical reference
 
-- progression systems must interact instead of existing as separate islands
-- automation should be useful without becoming an oversized processing chain
-- Create is the early/mid mechanical backbone
-- Mekanism is a later technology layer
-- AE2 is late-game logistics/autocrafting, not a processing bypass
-- Iron's Spells focuses on combat magic
-- Ars Nouveau focuses on arcane crafting, processing and automation
-- bosses and milestones unlock permanent progression permissions/catalysts
-- FTB Quests explains progression; AStages enforces it
-- character identity comes from the class/subclass skill tree plus optional professions
-
-## Completed / locked
-
-### Structure and direction
-- overall T&K3 direction and goals
-- main progression philosophy
-- compact automation philosophy
-- boss-gated reusable catalyst concept
-- custom compatibility-first approach for Epic Fight / Weapons of Miracles
-
-### Core mod-stack baseline
-The selected stack is documented in `MODLIST.md`.
-
-Major locked pillars include:
-- FTB Quests / AStages
-- Passive Skill Tree
-- Epic Fight / Weapons of Miracles
-- Apotheosis / Apothic systems
-- Ars Nouveau
-- Iron's Spells 'n Spellbooks
-- Create
-- Create Aeronautics
-- Mekanism + Mekanism Generators
-- Applied Energistics 2
-- major boss/content integrations listed in the mod list
-
-### Skill tree
-The skill-tree system and artwork are considered finished at design level.
-
-Current definitive class roster:
-- Warrior — Berserker, Weapon Master, Juggernaut
-- Ranger — Marksman, Hunter, Beastmaster
-- Rogue — Assassin, Duelist, Shadowblade
-- Mage — Elementalist, Arcanist, Battlemage
-- Cleric — Priest, Crusader, Oracle
-- Occultist — Blood Mage, Necromancer, Voidcaller
-
-Professions:
-- Mining
-- Logging
-- Farming
-- Fishing
-
-The tree is one large open layout. There is no separate intro/class-selection screen. Class and subclass nodes are physically integrated into the same tree and locked through requirements.
-
-The later layout work preserves the approved class/subclass positions while filling basic paths and profession areas so the complete tree reads more like a full circular RPG tree instead of isolated spokes.
-
-## Skill-tree v3.2.2 changes
-
-- class/profession separation retained
-- six local focus nodes added around each profession
-- maximum three profession focus choices per profession
-- no profession-to-profession cross-links
-- approved class/subclass positions retained
-- profession roots, portals, branches and mastery structure retained
-- percentage-stat formatting audited and corrected
-- nonexistent `apothic_attributes:mining_speed` integration removed
-- precision, mobility and sustain values retuned
-- custom background standardized at:
-  `kubejs/assets/skilltree/textures/screen/skill_tree_background.png`
-- background size: 2048×2048
-
-See `SKILLTREE_V3.2.2.md` and `SKILLTREE_ICONS.md`.
-
-## Current implementation gap
-
-The repository's current `TK3_SkillTree.js` is still the older v1.0 generator. The v3.2.x working ZIPs were generated during development but the exact final runtime ZIP/script is not currently available in this repository workspace.
-
-Until that runtime file is restored/re-exported:
-- use v3.2.2 docs as the design source of truth
-- do not extend the old 10-class generator as though it were current
-- do not overwrite final art/layout decisions with v1.0 mappings
-
-## Worldgen/testing
-
-World generation is the next major technical lock.
-
-A current 1.21.1 NeoForge test instance has included ReTerraForged during testing. A world-generation crash was observed in the latest test cycle; the root cause has not yet been confirmed, so ReTerraForged/worldgen remains a test item rather than a locked baseline decision.
-
-## Next development phase
-
-1. finalize definitive mods and remove redundant candidates
-2. choose and stabilize world generation
-3. expand custom compatibility features
-4. wire class/subclass tags into combat mechanics where needed
-5. implement progression gates across quests, recipes, dimensions and equipment
-6. build compact cross-mod processing chains
-7. validate multiplayer behavior for claims, Aeronautics/Sable, magic and automation
-8. playtest overall balance before inflating enemy stats
-
-## Legacy reference material
-
-The historical T&K2 KubeJS/quest material is useful for ideas, IDs, recipes, icon references and migration targets, but it must remain reference-only. It should not be copied wholesale into the 1.21.1 runtime.
+SKILLTREE_V3.2.2.md and earlier compatibility reviews remain useful as history, but they are superseded where they disagree with the fixed runtime package. Historical T&K2 KubeJS and quest materials are reference-only and should not be copied wholesale into this 1.21.1 runtime.

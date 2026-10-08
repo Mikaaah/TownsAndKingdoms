@@ -1,5 +1,55 @@
 # Compatibility & geology
 
+## Current KubeJS runtime v2 · 6 October 2026
+
+The current fixed package uses **40 mod-specific compatibility recipe modules** under kubejs/server_scripts/recipes/compat/. These are the live script inventory for the current runtime; the decision tables below preserve the earlier broad mod/geology review.
+
+| Module |
+|---|
+| ae2 |
+| aeronautics |
+| alexscaves |
+| apotheosis |
+| appmek |
+| ars_nouveau |
+| atmospheric |
+| autumnity |
+| betterend |
+| betternether |
+| biomesoplenty |
+| biomeswevegone |
+| bloomingnature |
+| cataclysm |
+| chipped |
+| create |
+| create_aquatic_ambitions |
+| create_ars_nouveau |
+| create_dragons_plus |
+| create_enchantment_industry |
+| create_hypertube |
+| create_wizardry |
+| createaddition |
+| createminecolonies |
+| environmental |
+| farmersdelight |
+| iceandfire |
+| irons_jewelry |
+| irons_spellbooks |
+| mekanism |
+| mekanismgenerators |
+| mekanismtools |
+| minecraft |
+| quark |
+| simulated |
+| sliceanddice |
+| sophisticatedbackpacks |
+| sophisticatedstorage |
+| twilightforest |
+| upgrade_aquatic |
+
+See [COMPAT_RUNTIME_V2.md](COMPAT_RUNTIME_V2.md) for package notes and the static validation boundary. The compatibility module inventory is not a runtime boot test.
+
+
 Every entry in the 175-mod export has a documented decision. Registry IDs were checked. This review separates changed industry, native support and later-tier work; it does not claim that every native mod recipe was executed in Minecraft.
 
 ## Building a stone generator

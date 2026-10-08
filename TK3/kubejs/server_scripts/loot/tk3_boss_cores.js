@@ -1,15 +1,8 @@
-// Player kills award permanent catalysts.
+// T&K3 boss/catalyst loot support.
+// Production mechanisms use reusable tinted lens catalysts created from real boss drops; the old
+// verdant/storm/ember/void/dragon core pseudo-items are no longer registered.
 LootJS.modifiers(event => {
-    event.addEntityModifier("twilightforest:lich")
+    event.addEntityModifier("minecraft:ender_dragon")
         .killedByPlayer()
-        .addLoot(LootEntry.of("kubejs:tk3_verdant_sigil"));
-    event.addEntityModifier("cataclysm:the_harbinger")
-        .killedByPlayer()
-        .addLoot(LootEntry.of("kubejs:tk3_storm_core"));
-    event.addEntityModifier("cataclysm:ignis")
-        .killedByPlayer()
-        .addLoot(LootEntry.of("kubejs:tk3_ember_core"));
-    event.addEntityModifier("cataclysm:ender_guardian")
-        .killedByPlayer()
-        .addLoot(LootEntry.of("kubejs:tk3_void_core"));
+        .addLoot(LootEntry.of("minecraft:dragon_head"));
 });

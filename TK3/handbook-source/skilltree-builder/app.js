@@ -1,0 +1,61 @@
+(() => {
+  const $ = id => document.getElementById(id);
+  const svg = $('tree'), edgeLayer = $('edges'), nodeLayer = $('nodes');
+  const state = { data:null, byId:new Map(), original:null, selected:null, dirty:false, box:{x:0,y:0,w:120,h:120}, drag:null, pan:null };
+  const clean = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const quoteSvg = s => clean(s);
+  const areaName = id => ({shared:'Shared tree',class:'Class',subclass:'Subclass',profession:'Profession',wildcard:'Wildcard'})[id] || id;
+  const nodeRadius = n => Math.max(.11, Math.min(.46, Number(n.size || 20) / 160));
+  const deepCopy = x => JSON.parse(JSON.stringify(x));
+
+  async function init(){
+    const [layout, template] = await Promise.all([
+      fetch('data/layout.json').then(r => {if(!r.ok) throw new Error('Could not load layout data'); return r.json()}),
+      fetch('template/TK3_SkillTree.js').then(r => {if(!r.ok) throw new Error('Could not load KubeJS template'); return r.text()})
+    ]);
+    state.data = layout; state.template = template; state.original = deepCopy(layout);
+    state.byId = new Map(layout.nodes.map(n => [n.id,n]));
+    state.originalSpots = new Map(layout.nodes.map(n => [n.id,[n.col,n.row]]));
+    state.adjacency = new Map(layout.nodes.map(n => [n.id,[]]));
+    for (const [a,b] of layout.edges){ if(state.adjacency.has(a)&&state.adjacency.has(b)){state.adjacency.get(a).push(b);state.adjacency.get(b).push(a)} }
+    render(); validate(); setDirty(false);
+    $('treeStats').textContent = `${layout.nodes.length.toLocaleString()} nodes · ${layout.edges.length.toLocaleString()} connections · ${layout.grid.columns} × ${layout.grid.rows} grid`;
+    $('groupFilter').addEventListener('change',applyFilter);
+    $('search').addEventListener('input',applyFilter);
+    $('zoomIn').addEventListener('click',()=>zoomAt(.8)); $('zoomOut').addEventListener('click',()=>zoomAt(1.25)); $('fit').addEventListener('click',fit);
+    $('exportLayout').addEventListener('click',()=>downloadLayout()); $('exportScript').addEventListener('click',()=>downloadScript());
+    $('resetLayout').addEventListener('click',resetLayout);
+    svg.addEventListener('wheel',onWheel,{passive:false});
+    svg.addEventListener('pointerdown',onPointerDown); svg.addEventListener('pointermove',onPointerMove); svg.addEventListener('pointerup',onPointerUp); svg.addEventListener('pointercancel',onPointerUp);
+    window.addEventListener('keydown', e => {if(e.key==='Escape'){state.drag=null;state.pan=null} if(e.key==='+'||e.key==='=')zoomAt(.8); if(e.key==='-')zoomAt(1.25)});
+  }
+  function render(){
+    const frag=document.createDocumentFragment();
+    for(const [a,b] of state.data.edges){const na=state.byId.get(a),nb=state.byId.get(b);if(!na||!nb)continue;const line=document.createElementNS('http://www.w3.org/2000/svg','line');line.setAttribute('class','edge');line.dataset.a=a;line.dataset.b=b;line.setAttribute('x1',na.col+.5);line.setAttribute('y1',na.row+.5);line.setAttribute('x2',nb.col+.5);line.setAttribute('y2',nb.row+.5);frag.appendChild(line)}
+    edgeLayer.replaceChildren(frag);
+    const nodesFrag=document.createDocumentFragment();
+    for(const n of state.data.nodes){const g=document.createElementNS('http://www.w3.org/2000/svg','g');g.setAttribute('class',`node ${n.group}`);g.dataset.id=n.id;g.setAttribute('transform',`translate(${n.col+.5} ${n.row+.5})`);g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',`${n.title}, ${areaName(n.group)}`);g.setAttribute('data-title',n.title.toLowerCase());g.setAttribute('data-group',n.group);const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');circle.setAttribute('r',nodeRadius(n));g.appendChild(circle);g.appendChild(document.createElementNS('http://www.w3.org/2000/svg','title')).textContent=`${n.title} · ${n.id}`;g.addEventListener('click',()=>select(n.id));g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(n.id)}});nodesFrag.appendChild(g)}
+    nodeLayer.replaceChildren(nodesFrag);
+    if(state.selected)select(state.selected);applyFilter();
+  }
+  function select(id){const n=state.byId.get(id);if(!n)return;state.selected=id;document.querySelectorAll('.node.selected').forEach(x=>x.classList.remove('selected'));const el=nodeLayer.querySelector(`[data-id="${CSS.escape(id)}"]`);if(el)el.classList.add('selected');$('nodeTitle').textContent=n.title;$('nodeId').textContent=n.id;$('nodeFacts').innerHTML=`<dt>Area</dt><dd>${clean(areaName(n.group))}</dd><dt>Grid cell</dt><dd>${n.col}, ${n.row}</dd><dt>Connections</dt><dd>${(state.adjacency.get(id)||[]).length}</dd>`;const tags=n.tags||[];$('nodeTags').innerHTML=tags.length?tags.map(t=>`<span class="tag">${clean(t)}</span>`).join(''):'No node tags.';}
+  function applyFilter(){if(!state.data)return;const q=$('search').value.trim().toLowerCase(),g=$('groupFilter').value;let count=0;for(const el of nodeLayer.children){const n=state.byId.get(el.dataset.id);const okGroup=!g||n.group===g;const okText=!q||n.title.toLowerCase().includes(q)||n.id.toLowerCase().includes(q);el.classList.toggle('dim',!(okGroup&&okText));el.classList.toggle('search-hit',!!q&&okGroup&&okText);if(okGroup&&okText)count++}$('emptySearch').hidden=count>0;}
+  function toPoint(e){const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;const c=p.matrixTransform(svg.getScreenCTM().inverse());return{x:c.x,y:c.y}}
+  function onPointerDown(e){const node=e.target.closest?.('.node');if(node){e.preventDefault();const n=state.byId.get(node.dataset.id);state.drag={id:n.id};svg.setPointerCapture(e.pointerId);select(n.id);return}if(e.target.closest?.('button'))return;state.pan={x:e.clientX,y:e.clientY,box:{...state.box}};svg.classList.add('panning');svg.setPointerCapture(e.pointerId)}
+  function onPointerMove(e){if(state.drag){const p=toPoint(e);const col=Math.max(0,Math.min(119,Math.floor(p.x))),row=Math.max(0,Math.min(119,Math.floor(p.y)));moveNode(state.drag.id,col,row);return}if(state.pan){const rect=svg.getBoundingClientRect(),dx=(e.clientX-state.pan.x)*state.box.w/rect.width,dy=(e.clientY-state.pan.y)*state.box.h/rect.height;setViewBox(state.pan.box.x-dx,state.pan.box.y-dy,state.box.w,state.box.h)}}
+  function onPointerUp(e){if(state.drag){state.drag=null;validate();if(state.selected)select(state.selected)}state.pan=null;svg.classList.remove('panning');if(svg.hasPointerCapture?.(e.pointerId))svg.releasePointerCapture(e.pointerId)}
+  function moveNode(id,col,row){const n=state.byId.get(id);if(!n||id==='tk3_origin')return;const occupied=state.data.nodes.find(x=>x.id!==id&&x.col===col&&x.row===row);if(occupied)return;n.col=col;n.row=row;const el=nodeLayer.querySelector(`[data-id="${CSS.escape(id)}"]`);if(el)el.setAttribute('transform',`translate(${col+.5} ${row+.5})`);for(const edge of edgeLayer.querySelectorAll('[data-a="'+CSS.escape(id)+'"],[data-b="'+CSS.escape(id)+'"]')){const a=state.byId.get(edge.dataset.a),b=state.byId.get(edge.dataset.b);edge.setAttribute('x1',a.col+.5);edge.setAttribute('y1',a.row+.5);edge.setAttribute('x2',b.col+.5);edge.setAttribute('y2',b.row+.5)}setDirty(true);if(state.selected===id)select(id)}
+  function setViewBox(x,y,w,h){state.box={x,y,w,h};svg.setAttribute('viewBox',`${x} ${y} ${w} ${h}`)}
+  function zoomAt(mult,clientX,clientY){let x=state.box.x,y=state.box.y,w=state.box.w,h=state.box.h;let px=.5,py=.5;if(clientX!==undefined){const r=svg.getBoundingClientRect();px=(clientX-r.left)/r.width;py=(clientY-r.top)/r.height}const nw=Math.max(12,Math.min(120,w*mult)),nh=Math.max(12,Math.min(120,h*mult));x+=(w-nw)*px;y+=(h-nh)*py;setViewBox(x,y,nw,nh)}
+  function onWheel(e){e.preventDefault();zoomAt(e.deltaY<0?.86:1.16,e.clientX,e.clientY)}
+  function fit(){setViewBox(0,0,120,120)}
+  function validate(){const ids=new Set(),cells=new Map(),errors=[];for(const n of state.data.nodes){if(ids.has(n.id))errors.push(`Duplicate ID: ${n.id}`);ids.add(n.id);if(!Number.isInteger(n.col)||!Number.isInteger(n.row)||n.col<0||n.col>=120||n.row<0||n.row>=120)errors.push(`Invalid cell: ${n.id}`);const k=`${n.col},${n.row}`;if(cells.has(k))errors.push(`Cell ${k} is used by ${cells.get(k)} and ${n.id}`);cells.set(k,n.id)}if(state.data.nodes.length!==state.original.nodes.length)errors.push('Node count changed');if(!ids.has('tk3_origin'))errors.push('Origin node is missing');else{const origin=state.byId.get('tk3_origin');if(origin.col!==60||origin.row!==60)errors.push('Origin must stay at the center cell (60, 60)')}if(state.data.edges.length!==state.original.edges.length)errors.push('Connection count changed');if(!errors.length){const seen=new Set(['tk3_origin']),queue=['tk3_origin'];while(queue.length){for(const id of state.adjacency.get(queue.shift())||[])if(!seen.has(id)){seen.add(id);queue.push(id)}}if(seen.size!==state.data.nodes.length)errors.push(`Graph is disconnected: ${seen.size} of ${state.data.nodes.length} nodes reachable`)}const out=$('validation');if(errors.length){out.textContent='Fix these issues before export:\n• '+errors.slice(0,5).join('\n• ');out.classList.add('error')}else{out.textContent=`Valid · ${ids.size.toLocaleString()} unique nodes · ${state.data.edges.length.toLocaleString()} connections · all nodes connected · fingerprint ${fingerprint()}`;out.classList.remove('error')}return errors.length===0}
+  function fingerprint(){const rows=[...state.data.nodes].sort((a,b)=>a.id < b.id ? -1 : a.id > b.id ? 1 : 0).map(n=>`skilltree:${n.id}|${(n.col-60)*80}|${(n.row-60)*80}`).join('\n');let hash=0x811c9dc5;for(let i=0;i<rows.length;i++){hash^=rows.charCodeAt(i);hash=(hash+(hash<<1)+(hash<<4)+(hash<<7)+(hash<<8)+(hash<<24))|0}return('00000000'+(hash>>>0).toString(16)).slice(-8)}
+  function setDirty(v){state.dirty=v;$('saveState').textContent=v?'Unsaved layout changes':'v4.6.0 layout loaded';$('saveState').classList.toggle('dirty',v)}
+  function download(name,text,type){const a=document.createElement('a'),url=URL.createObjectURL(new Blob([text],{type}));a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+  function layoutExport(){const nodeSpots={};for(const n of [...state.data.nodes].sort((a,b)=>a.id < b.id ? -1 : a.id > b.id ? 1 : 0))nodeSpots[n.id]=[n.col,n.row];return{format:'tk3-skilltree-layout/v1',version:state.data.version,fingerprint:fingerprint(),grid:state.data.grid,nodeSpots}}
+  function downloadLayout(){if(!validate())return;download('TK3_SkillTree_v4.6_layout.json',JSON.stringify(layoutExport(),null,2)+'\n','application/json');$('exportMessage').textContent='Layout JSON downloaded.'}
+  function downloadScript(){if(!validate())return;const spotMap=layoutExport().nodeSpots;const start=state.template.indexOf('const TK3_GRID_SPOTS = {');const marker='\n    }\n\n    function applyTk3GridLayout';const end=state.template.indexOf(marker,start);if(start<0||end<0){$('exportMessage').textContent='Could not locate the grid map in the KubeJS template.';return}const entries=Object.entries(spotMap).map(([id,p])=>`        '${id}': [${p[0]},${p[1]}]`).join(',\n');const newMap=`const TK3_GRID_SPOTS = {\n${entries}\n    }`;let output=state.template.slice(0,start)+newMap+state.template.slice(end+6);output=output.replace(/const APPROVED_LAYOUT_FINGERPRINT = '[^']*'/,`const APPROVED_LAYOUT_FINGERPRINT = '${fingerprint()}'`);if(!output.includes(`const APPROVED_LAYOUT_FINGERPRINT = '${fingerprint()}'`)){$('exportMessage').textContent='Could not update the approved fingerprint.';return}download('TK3_SkillTree.js',output,'text/javascript');$('exportMessage').textContent=`KubeJS script downloaded with fingerprint ${fingerprint()}.`}
+  function resetLayout(){state.data=deepCopy(state.original);state.byId=new Map(state.data.nodes.map(n=>[n.id,n]));state.adjacency=new Map(state.data.nodes.map(n=>[n.id,[]]));for(const[a,b]of state.data.edges){state.adjacency.get(a)?.push(b);state.adjacency.get(b)?.push(a)}state.selected=null;render();validate();setDirty(false);$('exportMessage').textContent='Restored the supplied v4.6.0 layout.'}
+  init().catch(err=>{$('saveState').textContent='Could not load builder';$('validation').textContent=err.message;$('validation').classList.add('error');console.error(err)});
+})();

@@ -1,6 +1,8 @@
-# T&K3 Passive Skill Tree — v3.2.2
+# Historical T&K3 Passive Skill Tree — v3.2.2
 
-Current design source of truth for the Towns & Kingdoms 3 character skill tree.
+> **Current baseline (2026-10-08):** This page describes the historical v3.2.2 design and is superseded by [Skill Tree v4.6.0](SKILLTREE_V4.6.0.md). The live runtime source is `kubejs/server_scripts/TK3_SkillTree.js`; current package data and layout builder are linked from the v4.6.0 guide.
+
+Archived v3.2.2 design reference. It is superseded by the fixed runtime source and [SKILLTREE_V4.6.0.md](SKILLTREE_V4.6.0.md).
 
 Target: Minecraft 1.21.1 / NeoForge / Passive Skill Tree / KubeJS.
 

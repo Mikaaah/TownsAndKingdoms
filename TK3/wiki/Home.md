@@ -4,19 +4,19 @@
 
 **[◆ OPEN THE OFFICIAL WIKI →](https://mikaaah.github.io/TownsAndKingdoms/)**
 
-The **official Towns & Kingdoms wiki** is hosted on **GitHub Pages**. Explore the current **T&K3** guides or revisit the complete **T&K2** archive.
+The official T&K3 guides now describe the fixed October 2026 runtime refresh while preserving the current 353-quest campaign and the historical T&K2 archive.
 
-**10 PROGRESSION CHAPTERS** · **27 GUIDE PAGES** · **353 QUESTS** · **1972 RECIPES**
+**10 PROGRESSION TIERS** · **353 QUESTS** · **1,788 KUBEJS RECIPE IDS** · **1,972 REVIEWED CATALOGUE ENTRIES** · **SKILL TREE V4.6.0**
 
-| ◆ T&K3 — CURRENT | II · T&K2 — ARCHIVE |
+| T&K3 · CURRENT DATA | PLAYER TOOLS |
 |---|---|
-| **[ALL PLAYER GUIDES](https://mikaaah.github.io/TownsAndKingdoms/guides/)** | **[2.0 WIKI ARCHIVE](https://mikaaah.github.io/TownsAndKingdoms/2.0/)** |
-| **[CHAPTERS & RECIPES](https://mikaaah.github.io/TownsAndKingdoms/progression/)** | [Features](https://mikaaah.github.io/TownsAndKingdoms/2.0/features/) |
-| **[AUTOMATION GUIDE](https://mikaaah.github.io/TownsAndKingdoms/automation/)** | [Changelog](https://mikaaah.github.io/TownsAndKingdoms/2.0/changelog/) |
-| **[RECIPE WORKSHOP](https://mikaaah.github.io/TownsAndKingdoms/workshop/)** | [Mod list](https://mikaaah.github.io/TownsAndKingdoms/2.0/modlist/) |
+| [Chapters & reviewed recipes](https://mikaaah.github.io/TownsAndKingdoms/progression/) | [Skilltree Builder](https://mikaaah.github.io/TownsAndKingdoms/skilltree-builder/) |
+| [Current runtime v2 notes](https://mikaaah.github.io/TownsAndKingdoms/3.0/runtime-v2/) | [All player guides](https://mikaaah.github.io/TownsAndKingdoms/guides/) |
+| [Skill tree guide](https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/) | [Recipe workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) |
+| [T&K2 wiki archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | [Automation guide](https://mikaaah.github.io/TownsAndKingdoms/automation/) |
+
+The 1,788 figure is the static count of unique explicit recipe IDs in the refreshed KubeJS runtime. The 1,972 figure belongs to the separate reviewed recipe catalogue. The uploaded quest ZIP was an earlier snapshot, so the canonical expanded campaign remains intact.
 
 ### ⚙ BUILD YOUR WORKSHOP. GROW YOUR KINGDOM.
 
-[MODS & THEIR TIERS](https://mikaaah.github.io/TownsAndKingdoms/3.0/tier-map/)
-
-Follow the chapters, inspect recipes with **real item art and Create models**, and build reliable automation.
+Follow all ten chapters, inspect reviewed recipes, build reliable automation, and explore the current class, subclass, and profession tree.

@@ -1,0 +1,1 @@
+This package uses a normal Minecraft item model JSON and a minimal startup item registration.

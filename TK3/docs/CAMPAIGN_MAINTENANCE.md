@@ -1,3 +1,20 @@
+# Campaign and runtime maintenance
+
+## Current runtime package · 6 October 2026
+
+The fixed runtime package is under kubejs/. It has 1,788 unique explicit recipe IDs, ten tier scripts, 40 compatibility modules, 214 custom item registrations, three machine-frame blocks, 14 stage milestone links, nine tier gates, five catalyst lens variants, and skill tree v4.6.0.
+
+Run python3 tools/verify_runtime_v2.py to check script syntax, JSON, recipe ID uniqueness, stage links against the canonical questbook, compatibility count, item registration totals, and skilltree layout data. The source check does not replace a Minecraft client/server boot or in-game progression test.
+
+- [Runtime overview](KUBEJS_RUNTIME_V2.md)
+- [Recipes, progression, and stages](PROGRESSION_RUNTIME_V2.md)
+- [Custom items](CUSTOM_ITEMS_RUNTIME_V2.md)
+- [Catalyst lenses](CATALYST_LENSES_RUNTIME_V2.md)
+- [Compatibility](COMPAT_RUNTIME_V2.md)
+- [Skill tree v4.6.0](SKILLTREE_V4.6.0.md)
+
+---
+
 # Chapters 1–10 maintenance
 
 Install the full `kubejs/` and `config/ftbquests/` trees together and restart Minecraft and the server. Startup scripts register 135 components/icons and eleven frame blocks. Chapter and milestone IDs remain stable; internal quest goals have been rewritten. Tool rewards are per-player; chapter unlocks and the first Dragon Core reward are team-based.
