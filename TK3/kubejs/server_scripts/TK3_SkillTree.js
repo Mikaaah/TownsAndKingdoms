@@ -230,6 +230,8 @@
     function tk3SkillIcon(group, id) { return 'kubejs:textures/tk3/skilltree/skills/' + group + '/' + id + '.png' }
 
     function resolveTk3SkillIcon(id, title, requestedIcon) {
+        // Keep each explicitly selected skill-tree icon; title-based fallbacks overwrite valid icons.
+        if (requestedIcon && requestedIcon.indexOf('kubejs:textures/tk3/skilltree/') === 0) return requestedIcon
         const lowerId = String(id || '').toLowerCase()
         const text = (String(id || '') + ' ' + String(title || '')).toLowerCase()
 
