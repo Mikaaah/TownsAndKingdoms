@@ -1,4 +1,4 @@
-name: Publish handbook wiki redirect
+name: Sync handbook wiki pages
 
 on:
   workflow_run:
@@ -59,13 +59,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki
 
-      - name: Verify every original page is archived
-        run: python3 TK3/tools/verify_wiki_archive.py wiki
-
-      - name: Replace wiki contents with the handbook portal
+      - name: Sync curated pages and preserve the rest of the wiki
         run: |
-          find wiki -maxdepth 1 -type f -name '*.md' -delete
-          cp TK3/wiki/*.md wiki/
+          cp TK3/wiki/Home.md TK3/wiki/_Sidebar.md TK3/wiki/Skilltree-v4.6.md wiki/
 
       - name: Publish the redirect
         working-directory: wiki
@@ -77,5 +73,5 @@ jobs:
             echo "Wiki redirect is already current."
             exit 0
           fi
-          git commit -m "docs: move the full wiki to Pages and publish the handbook portal"
+          git commit -m "docs: sync curated handbook pages to the wiki"
           git push origin HEAD

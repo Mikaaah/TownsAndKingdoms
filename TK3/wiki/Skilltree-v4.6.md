@@ -16,7 +16,7 @@ Every skill costs one point. The design recommends a **150-point cap**, so playe
 
 One class is selected. A subclass opens after Advanced class Rank IV. Profession mastery unlocks at branch Rank IV. Subclass Ascendancy follows Rank VIII commitments; Ranks IX–XVI stay available as optional deep specialization.
 
-A signature class-and-subclass route with shared entry costs about **89 points**. Full progression through the chosen class and subclass is about **133 points**. Three profession masteries add **45 points**, so that full combat path plus three professions is about **178 points**, beyond the recommended cap. These are source-script planning estimates.
+The current prerequisite-cost verifier counts **61 points** to each class gate and **89 points** to each subclass Ascendancy goal. These totals include required nodes, count shared prerequisites once, and treat the starting origin as free. They are useful route-planning totals; the recommended **150-point** budget is not enforced by the game.
 
 ## Plan before you spend
 
