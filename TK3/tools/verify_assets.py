@@ -1,16 +1,12 @@
 #!/usr/bin/env python3
-"""Check custom item models, frame inheritance and atlas registration.
-
-Unlike an existence-only check, a valid texture must also be stitched into
-the block/item atlas. No Minecraft renderer is executed by this check.
-"""
+"""Validate custom item textures and frame models against runtime v2 registrations."""
 import json
 import re
 from pathlib import Path
 
 PACK = Path(__file__).resolve().parents[1]
 ASSETS = PACK / 'kubejs/assets'
-M = json.loads((PACK / 'docs/progression_manifest.json').read_text())
+RUNTIME = json.loads((PACK / 'docs/RUNTIME_V2_MANIFEST.json').read_text())
 ATLAS = json.loads((ASSETS / 'minecraft/atlases/blocks.json').read_text())
 assert not ATLAS.get('replace'), 'The pack must extend the native block atlas'
 directories = {'block': 'block/', 'item': 'item/'}
@@ -46,23 +42,45 @@ def model(ref, stack=()):
         if not value.startswith('#'):
             texture(value)
 
-for item, asset in M['asset_catalog'].items():
-    texture(asset['texture'])
-    ref = 'kubejs:item/' + item.split(':')[1]
-    model(ref)
-    data = json.loads((ASSETS / 'kubejs/models/item' / (item.split(':')[1] + '.json')).read_text())
-    assert data['textures']['layer0'] == asset['texture'], item
+def registration_body(source, name):
+    text = source.read_text()
+    pattern = re.compile(r'event\.create\(\s*[\'\"]' + re.escape(name) +
+                         r'[\'\"]\s*\)([\s\S]*?)(?=\s*event\.create\(|\}\s*\)\s*;|$)')
+    match = pattern.search(text)
+    assert match, f'Missing item registration: {name} in {source.name}'
+    return match.group(1)
 
-frames = list(M['frames'].values()) + list(M['auxiliary_frames'])
-startup = (PACK / 'kubejs/startup_scripts/tk3_machine_frames.js').read_text()
-for frame in frames:
-    name = frame.split(':')[1]
+items = RUNTIME['customRegistrations']['items']
+assert len(items) == RUNTIME['customRegistrations']['itemCount']
+for entry in items:
+    item_id = entry['id']
+    name = item_id.split(':', 1)[1]
+    source = PACK / 'kubejs/startup_scripts' / entry['source']
+    body = registration_body(source, name)
+    texture_match = re.search(r'\.texture\(\s*[\'\"]([^\'\"]+)', body)
+    item_model = 'kubejs:item/' + name
+    model_file = ASSETS / 'kubejs/models/item' / (name + '.json')
+    if texture_match:
+        texture(texture_match.group(1))
+    if model_file.is_file():
+        model(item_model)
+    else:
+        # KubeJS generates a basic item model from .texture() when the package
+        # does not ship a hand-authored model override.
+        assert texture_match, f'Item has neither a shipped model nor a KubeJS texture registration: {item_id}'
+
+frames = RUNTIME['customRegistrations']['machineFrameBlocks']
+assert len(frames) == RUNTIME['customRegistrations']['blockCount']
+startup = PACK / 'kubejs/startup_scripts/tk3_machine_frames.js'
+startup_text = startup.read_text()
+for entry in frames:
+    name = entry['id'].split(':', 1)[1]
     parent = 'kubejs:block/tk3_frames/' + name
-    assert f'.parentModel("{parent}")' in startup, frame
-    assert f'.parentModel("kubejs:block/{name}")' not in startup, 'Generated-model self-reference'
+    assert f'.parentModel("{parent}")' in startup_text, entry['id']
+    assert f'.parentModel("kubejs:block/{name}")' not in startup_text, 'Generated-model self-reference'
     model(parent)
     model('kubejs:item/' + name)
     state = json.loads((ASSETS / 'kubejs/blockstates' / (name + '.json')).read_text())
     assert state['variants']['']['model'] == 'kubejs:block/' + name
 
-print(f'PASS: {len(M["asset_catalog"])} supplied item/quest textures; {len(frames)} frame models; atlas stitching and model-cycle guards.')
+print(f'PASS: {len(items)} runtime item registrations; supplied texture atlas paths; {len(frames)} frame block models; model-cycle guards.')
