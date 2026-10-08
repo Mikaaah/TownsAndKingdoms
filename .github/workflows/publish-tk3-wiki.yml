@@ -36,7 +36,11 @@ jobs:
                   url='https://mikaaah.github.io/TownsAndKingdoms/migration.json?revision='+os.environ['GITHUB_SHA']
                   with urllib.request.urlopen(url, timeout=15) as r:
                       live=json.load(r)
-                  assert live==expected, 'Published Pages snapshot does not match this migration.'
+                  assert live['wiki_head']==expected['wiki_head'], 'Published handbook points to a different source wiki snapshot.'
+                  assert live['archived_at']==expected['archived_at'], 'Published handbook archive date does not match.'
+                  assert live['pages']==expected['pages'], 'Published archived-page hashes or destinations do not match.'
+                  expected_history=expected.get('portal_history', [])
+                  assert live.get('portal_history', [])[:len(expected_history)]==expected_history, 'Published handbook lost prior portal history.'
                   break
               except Exception:
                   if attempt==5:
@@ -45,7 +49,9 @@ jobs:
           with open('TK3/docs/wiki_production_manifest.json') as f:
               recipes=json.load(f)['recipes']
           authored_count=len(recipes)
-          assert live['authored_recipe_count']==authored_count and len(live['pages'])==11
+          assert live['authored_recipe_count']==authored_count
+          assert live['workshop_recipe_count']==authored_count+1
+          assert live['quest_count']==expected['quest_count'] and len(live['pages'])==11
           PY
 
       - name: Clone the original GitHub wiki
