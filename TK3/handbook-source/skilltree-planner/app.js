@@ -471,7 +471,7 @@
       const layout=await responses[0].json(),tree=await responses[1].json();
       state.layout=layout;state.tree=tree;state.nodes=makeNodeData(tree,layout);
       state.byId=new Map(state.nodes.map(function(node){return [node.id,node];}));
-      fillClassChoices();loadSavedPlan();bindControls();renderMap();setupMapControls();renderAll();
+      fillClassChoices();loadSavedPlan();bindControls();renderMap();setupMapControls();setViewBox(33,33,54,54);renderAll();
       $("classChoice").value=state.classId;renderSubclassChoices();$("loading").hidden=true;
       $("treeVersion").textContent="v"+tree.meta.version+" · "+tree.meta.generatedNodes.toLocaleString()+" skills";
       persist();
