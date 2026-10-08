@@ -75,6 +75,7 @@ output = ROOT / "player-guide"
 html = (output / "skilltree-planner/index.html").read_text()
 assert "Plan your character before you spend points" in html
 assert "planner-core.js" in html and "app.js" in html
+assert "app.css?v=" in html and "planner-core.js?v=" in html and "app.js?v=" in html
 assert (output / "skilltree-planner/data/layout.json").exists()
 css = (output / "skilltree-planner/app.css").read_text()
 assert ".canvas-message[hidden]{display:none}" in css
