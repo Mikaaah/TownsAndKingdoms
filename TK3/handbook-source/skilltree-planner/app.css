@@ -55,3 +55,11 @@
 /* Prevent the browser's native SVG focus ring from drawing an oversized white node circle after a pointer click. */
 #nodes .node:focus,
 #nodes .node:focus-visible{outline:none!important}
+
+.node-tooltip{position:absolute;z-index:5;width:min(300px,calc(100% - 24px));max-height:220px;overflow:hidden;padding:10px 12px;border:1px solid #b58a4e;border-radius:10px;background:#18121ff2;color:#fff7f2;box-shadow:0 12px 32px #08050bcc;pointer-events:none}
+.node-tooltip[hidden]{display:none}
+.tooltip-title,.tooltip-group,.tooltip-description,.tooltip-meta{display:block}
+.tooltip-title{color:#ffe09a;font-size:13px;font-weight:850;line-height:1.25}
+.tooltip-group{margin-top:3px;color:#d5b9cb;font-size:10px;font-weight:750}
+.tooltip-description{margin:7px 0;color:#fff1e8;font-size:11px;line-height:1.4;white-space:pre-line}
+.tooltip-meta{padding-top:6px;border-top:1px solid #604a5e;color:#d3bdcb;font-size:9px;line-height:1.4}
