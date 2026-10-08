@@ -76,6 +76,8 @@ html = (output / "skilltree-planner/index.html").read_text()
 assert "Plan your character before you spend points" in html
 assert "planner-core.js" in html and "app.js" in html
 assert (output / "skilltree-planner/data/layout.json").exists()
+css = (output / "skilltree-planner/app.css").read_text()
+assert ".canvas-message[hidden]{display:none}" in css
 assert (output / "assets/wiki/skilltree-v4.6.json").exists()
 compat = (output / "skilltree-builder/index.html").read_text()
 assert "skilltree-planner/" in compat
