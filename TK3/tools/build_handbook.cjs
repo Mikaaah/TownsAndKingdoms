@@ -172,6 +172,8 @@ write(path.join(repo,'TK3/docs/PAGES_MIGRATION.md'),`# Pages wiki\n\nThe full or
 fs.mkdirSync(path.join(repo,'TK3/player-guide'),{recursive:true});// Output is already TK3/player-guide.
 fs.cpSync(path.join(root,'skilltree-planner'),path.join(out,'skilltree-planner'),{recursive:true});
 save('skilltree-builder/','Skilltree Planner','<h1 class="page-title">The player planner has moved.</h1><p class="lead">Plan skill choices and required points before spending them.</p><p><a href="../skilltree-planner/">Open the Skilltree Planner →</a></p>');
+const legacyPlannerPath=path.join(out,'skilltree-builder/index.html');
+write(legacyPlannerPath,read(legacyPlannerPath).replace('<nav class="top-nav" aria-label="Main navigation">','<nav class="top-nav" aria-label="Main navigation"><a href="./" aria-current="page">Skilltree Planner</a>'));
 console.log(JSON.stringify({wikiPages:pages.length,htmlPages:fs.readdirSync(out,{recursive:true}).filter(file=>file.endsWith('.html')).length,authoredRecipes:recipes.length-1,walkthroughs:recipes.length,inlineVisualLinks:n,wikiHead}));
 })();
 
