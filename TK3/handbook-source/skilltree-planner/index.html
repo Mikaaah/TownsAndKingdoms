@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#251226">
   <meta name="description" content="Plan a T&K3 character skill build, follow every prerequisite, and keep your point budget in view before you spend.">
   <title>Skilltree Planner · Towns & Kingdoms 3</title>
-  <link rel="stylesheet" href="app.css?v=4.6.6">
+  <link rel="stylesheet" href="app.css?v=4.6.7">
 </head>
 <body>
   <header class="topbar">
@@ -44,7 +44,7 @@
       <section class="map-panel panel" aria-label="Skilltree map">
         <div class="panel-heading"><div><p class="eyebrow">Your skilltree</p><h2>Explore the tree</h2></div><div class="map-controls" aria-label="Map controls"><button id="zoomOut" type="button" aria-label="Zoom out">−</button><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="fitTree" type="button">Fit tree</button></div></div>
         <div class="map-toolbar"><label for="groupFilter">Highlight branch</label><select id="groupFilter"><option value="">All branches</option><option value="shared">Shared skills</option><option value="class">Class skills</option><option value="subclass">Subclass skills</option><option value="profession">Professions</option><option value="wildcard">Wildcards</option></select><span class="map-hint">Click a node to add or remove it. Its prerequisite path is planned automatically.</span></div>
-        <div class="map-wrap"><svg id="tree" viewBox="0 0 120 120" role="img" aria-label="Interactive map of the current skilltree."><defs><pattern id="gridDots" width="1" height="1" patternUnits="userSpaceOnUse"><circle cx=".5" cy=".5" r=".035" fill="#d7b9bf" opacity=".2"/></pattern></defs><rect x="0" y="0" width="120" height="120" fill="url(#gridDots)"/><g id="edges" aria-hidden="true"></g><g id="nodes"></g></svg><div id="loading" class="canvas-message">Loading the published skilltree data…</div></div>
+        <div class="map-wrap"><svg id="tree" viewBox="0 0 120 120" role="img" aria-label="Interactive map of the current skilltree."><defs><pattern id="gridDots" width="1" height="1" patternUnits="userSpaceOnUse"><circle cx=".5" cy=".5" r=".035" fill="#d7b9bf" opacity=".2"/></pattern></defs><rect x="0" y="0" width="120" height="120" fill="url(#gridDots)"/><g id="edges" aria-hidden="true"></g><g id="nodes"></g></svg><div id="nodeTooltip" class="node-tooltip" role="tooltip" hidden></div><div id="loading" class="canvas-message">Loading the published skilltree data…</div></div>
         <div class="map-legend"><span><i class="legend-dot start"></i>Start</span><span><i class="legend-dot selected-goal"></i>Planned by you</span><span><i class="legend-dot required"></i>Required path</span><span><i class="legend-dot locked"></i>Choose class/subclass to use</span></div>
         <p class="map-footer">Scroll to zoom · drag to pan · lines show skill connections · gold lines mark your planned route</p>
       </section>
@@ -57,6 +57,6 @@
     <p class="footnote">This is a planning aid for the currently published tree data. It does not award points, change your in-game skills, or enforce an in-game level cap.</p>
   </main>
   <script src="planner-core.js" defer></script>
-  <script src="app.js?v=4.6.5" defer></script>
+  <script src="app.js?v=4.6.7" defer></script>
 </body>
 </html>
