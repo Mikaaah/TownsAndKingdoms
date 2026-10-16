@@ -2,6 +2,8 @@
 
 # Towns & Kingdoms 3
 
+[Project status](https://github.com/Mikaaah/Mikaaah/blob/master/STATUS.md) · [Report a bug](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=bug_report.yml) · [Suggest a feature](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=feature_request.yml) · [Questions](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=question.yml) · [CurseForge project](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms-3)
+
 [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-5B8731?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
 [![NeoForge](https://img.shields.io/badge/Loader-NeoForge-D97724?style=flat-square)](https://neoforged.net/)
 [![Development](https://img.shields.io/badge/Status-In%20development-3F78A8?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)

@@ -1,0 +1,79 @@
+name: "Feature request"
+description: "Suggest a focused improvement or new feature."
+title: "[Feature]: "
+labels:
+  - "Type: Feature Request"
+  - "needs-triage"
+body:
+  -
+    type: "dropdown"
+    id: "suggestion_type"
+    attributes:
+      label: "Suggestion type"
+      options:
+        - "Mod / integration"
+        - "Quest / storyline"
+        - "Progression"
+        - "Balance / recipes / loot"
+        - "Gameplay"
+        - "World generation / exploration"
+        - "Other"
+    validations:
+      required: true
+  -
+    type: "checkboxes"
+    id: "checks"
+    attributes:
+      label: "Before submitting"
+      options:
+        -
+          label: "I searched existing issues and checked the project README."
+          required: true
+        -
+          label: "I removed tokens, passwords, personal data and private server details from my report and attachments."
+          required: true
+  -
+    type: "dropdown"
+    id: "area"
+    attributes:
+      label: "Affected area"
+      options:
+        - "Startup / crash"
+        - "Performance"
+        - "Recipes / automation"
+        - "Quests / progression"
+        - "Combat / magic"
+        - "World generation"
+        - "Multiplayer"
+        - "Wiki / documentation"
+        - "Other"
+    validations:
+      required: true
+  -
+    type: "textarea"
+    id: "problem"
+    attributes:
+      label: "Problem or player need"
+      description: "What is missing or difficult today?"
+    validations:
+      required: true
+  -
+    type: "textarea"
+    id: "proposal"
+    attributes:
+      label: "Proposed improvement"
+      description: "Explain the behavior you want and how it fits this project."
+    validations:
+      required: true
+  -
+    type: "textarea"
+    id: "alternatives"
+    attributes:
+      label: "Alternatives and trade-offs"
+      description: "Mention alternatives, compatibility, balance or performance costs."
+  -
+    type: "textarea"
+    id: "references"
+    attributes:
+      label: "Examples and references"
+      description: "Link relevant projects or examples. A request is not a release promise."

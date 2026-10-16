@@ -1,0 +1,41 @@
+name: "Documentation issue"
+description: "Report missing information, outdated instructions or a broken link."
+title: "[Docs]: "
+labels:
+  - "Type: Documentation"
+  - "needs-triage"
+body:
+  -
+    type: "checkboxes"
+    id: "checks"
+    attributes:
+      label: "Before submitting"
+      options:
+        -
+          label: "I searched existing issues and checked the project README."
+          required: true
+        -
+          label: "I removed tokens, passwords, personal data and private server details from my report and attachments."
+          required: true
+  -
+    type: "input"
+    id: "page"
+    attributes:
+      label: "Page or file"
+      description: "Paste the documentation URL or repository file path."
+    validations:
+      required: true
+  -
+    type: "textarea"
+    id: "problem"
+    attributes:
+      label: "What needs correcting?"
+      description: "Quote the relevant section and explain what is missing, incorrect or broken."
+    validations:
+      required: true
+  -
+    type: "textarea"
+    id: "correction"
+    attributes:
+      label: "Suggested correction"
+      description: "Add a proposed fix or supporting reference if available."
