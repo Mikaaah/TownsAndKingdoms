@@ -44,6 +44,12 @@ Follow the ten-tier production reference and explore the full 2.0 and 3.0 docume
 | IX · Singularity | Antimatter, Stargaze and quantum industry |
 | X · Sovereign | Advanced recurring materials and three-pass final assembly |
 
+
+## 🤝 Contributing
+
+Bug reports, ideas and focused pull requests are welcome. Please read the [contribution guide](CONTRIBUTING.md) and use the issue templates when reporting problems.
+
+
 **[Read the progression overview](https://mikaaah.github.io/TownsAndKingdoms/3.0/progression/)** · **[T&K3 project files](TK3/)**
 
 The older T&K2 archive is preserved as historical reference.
