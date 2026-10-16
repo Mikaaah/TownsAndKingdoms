@@ -13,7 +13,7 @@ Create-powered workshops, living magic and industrial progression for **Minecraf
 
 **[Open the official wiki](https://mikaaah.github.io/TownsAndKingdoms/)**
 
-Follow the ten-tier production reference and explore the full 2.0 and 3.0 documentation. The October 4 review records remaining construction cycles and conflicting recipes. The GitHub Wiki points to this wiki.
+Follow the ten-tier production reference and explore the full 2.0 and 3.0 documentation. The October 4 production reference records repaired construction cycles and recipe conflicts; in-game factory validation remains open. The GitHub Wiki points to this wiki.
 
 | Guide | What you will find |
 |---|---|
@@ -34,7 +34,7 @@ Follow the ten-tier production reference and explore the full 2.0 and 3.0 docume
 | Chapter | Focus |
 |---|---|
 | I · Rotation | Raw materials, Makeshift parts and your first Create workshop |
-| II · Sealed | Tubing, rubber and water-tested assembly; two starter cycles remain |
+| II · Sealed | Tubing, rubber and water-tested assembly |
 | III · Precision | Brass, Electron Tubes, machining and logistics |
 | IV · Calculation | AE2 processors, grown Certus and liquid XP |
 | V · Inductive | Chromatic materials and starter Mekanism |
