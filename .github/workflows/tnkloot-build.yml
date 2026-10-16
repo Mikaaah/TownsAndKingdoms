@@ -3,6 +3,11 @@ on:
   push:
     branches:
       - build/tnkloot-0.1.0-alpha
+    paths:
+      - tnk-build-only.tar.xz
+      - .github/workflows/tnkloot-build.yml
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,9 +25,33 @@ jobs:
       - name: Extract alpha sources
         run: tar -xJf tnk-build-only.tar.xz
       - name: Compile NeoForge mod
-        run: gradle build --stacktrace --no-daemon
-      - name: Upload JAR
-        if: success()
+        id: compile
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          gradle build --stacktrace --no-daemon 2>&1 | tee build.log
+      - name: Record build outcome
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p ci-results
+          if [ "${{ steps.compile.outcome }}" = "success" ]; then
+            echo success > ci-results/status.txt
+            cp build/libs/tnkloot*.jar ci-results/
+          else
+            echo failed > ci-results/status.txt
+          fi
+          if [ -f build.log ]; then
+            tail -n 180 build.log > ci-results/build-log-tail.txt
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ci-results
+          git commit -m "ci: record T&K Loot alpha result [skip ci]" || true
+          git push origin HEAD:build/tnkloot-0.1.0-alpha
+      - name: Upload compiled JAR
+        if: steps.compile.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: tnkloot-0.1.0-alpha-jar
