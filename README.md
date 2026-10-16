@@ -2,6 +2,11 @@
 
 # Towns & Kingdoms 3
 
+[![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-5B8731?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
+[![NeoForge](https://img.shields.io/badge/Loader-NeoForge-D97724?style=flat-square)](https://neoforged.net/)
+[![Development](https://img.shields.io/badge/Status-In%20development-3F78A8?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
+[![Player Wiki](https://img.shields.io/badge/Player_Wiki-Open-6B5CA5?style=flat-square)](https://mikaaah.github.io/TownsAndKingdoms/)
+
 Create-powered workshops, living magic and industrial progression for **Minecraft 1.21.1 · NeoForge**.
 
 ## ◆ OFFICIAL WIKI
