@@ -1,13 +1,15 @@
 <p align="center"><img src="TK3/player-guide/assets/brand/tklogo.png" alt="Towns & Kingdoms 3 — Player Guide" width="100%"></p>
 
-# Towns & Kingdoms 3
+# Towns & Kingdoms — Beyond the Forge
 
-[Project status](https://github.com/Mikaaah/Mikaaah/blob/master/STATUS.md) · [Report a bug](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=bug_report.yml) · [Suggest a feature](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=feature_request.yml) · [Questions](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=question.yml) · [CurseForge project](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms-3)
+[Project status](https://github.com/Mikaaah/Mikaaah/blob/master/STATUS.md) · [Report a bug](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=bug_report.yml) · [Suggest a feature](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=feature_request.yml) · [Questions](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=question.yml) · [CurseForge project](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms)
 
 [![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-5B8731?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
 [![NeoForge](https://img.shields.io/badge/Loader-NeoForge-D97724?style=flat-square)](https://neoforged.net/)
 [![Development](https://img.shields.io/badge/Status-In%20development-3F78A8?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
 [![Player Wiki](https://img.shields.io/badge/Player_Wiki-Open-6B5CA5?style=flat-square)](https://mikaaah.github.io/TownsAndKingdoms/)
+
+This repository covers multiple Towns & Kingdoms generations. **TNK3 is the current development branch of the modpack**; TNK2 remains available as historical documentation and releases through the shared CurseForge listing.
 
 Create-powered workshops, living magic and industrial progression for **Minecraft 1.21.1 · NeoForge**.
 
