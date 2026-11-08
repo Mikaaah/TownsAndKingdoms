@@ -9,6 +9,7 @@ const read=p=>fs.readFileSync(p,'utf8');
 const data=n=>JSON.parse(read(path.join(root,'data',n+'.json')));
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sha=s=>crypto.createHash('sha256').update(s).digest('hex');
+const plain=s=>s.replace(/<[^>]*>/g,'').replace(/&(?:amp|lt|gt|quot|apos|#39);/g,c=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'",'&#39;':"'"}[c]));
 const slug=s=>String(s).replace(/<[^>]*>/g,'').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^\p{L}\p{N}\s_-]/gu,'').trim().replace(/\s+/g,'-');
 const human=s=>String(s).replace(/^#/,'').split(':').at(-1).replace(/^tk3_/,'').replaceAll('_',' ').replace(/\b\w/g,c=>c.toUpperCase());
 const write=(p,s)=>{fs.mkdirSync(path.dirname(p),{recursive:true});fs.writeFileSync(p,s);};
@@ -65,7 +66,7 @@ function fattrs(text,group){return ' data-filter-entry data-search="'+esc(text.t
  const {marked}=await import(require.resolve('marked',{paths:[path.resolve(root,'..')]}));
  function markdown(source){
   const toc=[],used={};let html=marked.parse(source);
-  html=html.replace(/<h([1-6])>([\s\S]*?)<\/h\1>/g,(_,n,b)=>{const raw=slug(b),c=used[raw]||0;used[raw]=c+1;const id=raw+(c?'-'+c:'');if(+n===2)toc.push({id,title:b.replace(/<[^>]*>/g,'')});return '<h'+n+' id="'+esc(id)+'">'+b+'</h'+n+'>';});
+  html=html.replace(/<h([1-6])>([\s\S]*?)<\/h\1>/g,(_,n,b)=>{const raw=slug(b),c=used[raw]||0;used[raw]=c+1;const id=raw+(c?'-'+c:'');if(+n===2)toc.push({id,title:plain(b)});return '<h'+n+' id="'+esc(id)+'">'+b+'</h'+n+'>';});
   html=html.replace(/<table>/g,'<div class="table-scroll"><table>').replace(/<\/table>/g,'</table></div>');
   return {html,toc};
  }
