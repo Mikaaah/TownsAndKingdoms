@@ -1,0 +1,240 @@
+[
+  {
+    "route": "start/",
+    "title": "Your first workshop",
+    "group": "Start here",
+    "summary": "From clay and andesite to the first working Deployer.",
+    "file": "start.md"
+  },
+  {
+    "route": "progression/",
+    "title": "The ten chapters",
+    "group": "Build & automate",
+    "summary": "The current route from Manual production to the Creation Core.",
+    "file": "progression.md"
+  },
+  {
+    "route": "progression/chapter-01/",
+    "title": "01 \u00b7 Manual",
+    "group": "Chapters",
+    "summary": "Clay, Andesite Alloy and the first manually crafted machine body.",
+    "file": "progression--chapter-01.md"
+  },
+  {
+    "route": "progression/chapter-02/",
+    "title": "02 \u00b7 Andesite",
+    "group": "Chapters",
+    "summary": "Affordable repeated machinery and the first automated material loop.",
+    "file": "progression--chapter-02.md"
+  },
+  {
+    "route": "progression/chapter-03/",
+    "title": "03 \u00b7 Copper",
+    "group": "Chapters",
+    "summary": "Tree sap, rubber, fluids and improved logistics.",
+    "file": "progression--chapter-03.md"
+  },
+  {
+    "route": "progression/chapter-04/",
+    "title": "04 \u00b7 Brass",
+    "group": "Chapters",
+    "summary": "Heated alloys, precise assembly, controls and Crushing Wheels.",
+    "file": "progression--chapter-04.md"
+  },
+  {
+    "route": "progression/chapter-05/",
+    "title": "05 \u00b7 Calculation",
+    "group": "Chapters",
+    "summary": "Create-built processors and practical ME logistics.",
+    "file": "progression--chapter-05.md"
+  },
+  {
+    "route": "progression/chapter-06/",
+    "title": "06 \u00b7 Reinforced",
+    "group": "Chapters",
+    "summary": "Steel, electrum, wires and the first electrical engineering projects.",
+    "file": "progression--chapter-06.md"
+  },
+  {
+    "route": "progression/chapter-07/",
+    "title": "07 \u00b7 Industrial",
+    "group": "Chapters",
+    "summary": "IE heavy processing and the 4\u00d7 ore chain.",
+    "file": "progression--chapter-07.md"
+  },
+  {
+    "route": "progression/chapter-08/",
+    "title": "08 \u00b7 Arcane",
+    "group": "Chapters",
+    "summary": "Source, Mana and magical materials join the production line.",
+    "file": "progression--chapter-08.md"
+  },
+  {
+    "route": "progression/chapter-09/",
+    "title": "09 \u00b7 Eclipse",
+    "group": "Chapters",
+    "summary": "Chromatic materials, ink recovery and the 5\u00d7 ore finish.",
+    "file": "progression--chapter-09.md"
+  },
+  {
+    "route": "progression/chapter-10/",
+    "title": "10 \u00b7 Creation",
+    "group": "Chapters",
+    "summary": "The final shared project for your entire factory.",
+    "file": "progression--chapter-10.md"
+  },
+  {
+    "route": "automation/",
+    "title": "A factory that keeps working",
+    "group": "Build & automate",
+    "summary": "Stone generators, buffers, ore yields and durable assembly tools.",
+    "file": "automation.md"
+  },
+  {
+    "route": "storage/",
+    "title": "AE2 & storage",
+    "group": "Build & automate",
+    "summary": "Processor lines, Calculation construction and tiered Infinity Cells.",
+    "file": "storage.md"
+  },
+  {
+    "route": "engineering/",
+    "title": "Immersive engineering",
+    "group": "Build & automate",
+    "summary": "Create handles routine manufacturing; IE keeps its distinctive heavy industry.",
+    "file": "engineering.md"
+  },
+  {
+    "route": "character/",
+    "title": "Your character",
+    "group": "Character & adventure",
+    "summary": "Activity progress, the skill budget, titles and mob levels.",
+    "file": "character.md"
+  },
+  {
+    "route": "skills/",
+    "title": "The current skill tree",
+    "group": "Character & adventure",
+    "summary": "588 connected choices with exact, searchable node effects.",
+    "file": "skills.md"
+  },
+  {
+    "route": "origins/",
+    "title": "Choose your origin",
+    "group": "Character & adventure",
+    "summary": "Twenty backgrounds, two perks each, and the rules that matter.",
+    "file": "origins.md"
+  },
+  {
+    "route": "quests/",
+    "title": "The questbook",
+    "group": "Start here",
+    "summary": "The current chapter structure, side paths, rewards and rebuild status.",
+    "file": "quests.md"
+  },
+  {
+    "route": "loot/",
+    "title": "Unidentified Loot",
+    "group": "Character & adventure",
+    "summary": "Identify equipment, compare rarity, discover pools and salvage unwanted finds.",
+    "file": "loot.md"
+  },
+  {
+    "route": "magic/",
+    "title": "Magic that meets the workshop",
+    "group": "Build & automate",
+    "summary": "Ars, Iron\u2019s Spells, unified mana and automated scroll production.",
+    "file": "magic.md"
+  },
+  {
+    "route": "exploration/",
+    "title": "Explore, fight, return",
+    "group": "Character & adventure",
+    "summary": "Dimensions, dungeons, combat and the discoveries your workshop can use.",
+    "file": "exploration.md"
+  },
+  {
+    "route": "workshop/",
+    "title": "Towns & Kingdoms Workshop",
+    "group": "Build & automate",
+    "summary": "Projectors, construction tools, cages, mirrors and the Trading Hub.",
+    "file": "workshop.md"
+  },
+  {
+    "route": "trading-hub/",
+    "title": "Trading Hub",
+    "group": "Build & automate",
+    "summary": "A directory for player shops and useful destinations.",
+    "file": "trading-hub.md"
+  },
+  {
+    "route": "farming/",
+    "title": "A home worth returning to",
+    "group": "Build & automate",
+    "summary": "Food variety, decorative materials and practical farming integrations.",
+    "file": "farming.md"
+  },
+  {
+    "route": "titles/",
+    "title": "Titles & rewards",
+    "group": "Character & adventure",
+    "summary": "Separate your visible badge from the passive benefit you equip.",
+    "file": "titles.md"
+  },
+  {
+    "route": "jei/",
+    "title": "Find recipes faster",
+    "group": "Start here",
+    "summary": "The exact nineteen tag searches, information pages and Ponder controls.",
+    "file": "jei.md"
+  },
+  {
+    "route": "balance/",
+    "title": "Balance & removed shortcuts",
+    "group": "Project reference",
+    "summary": "What is deliberately restricted, and which native systems remain.",
+    "file": "balance.md"
+  },
+  {
+    "route": "servers/",
+    "title": "Play together",
+    "group": "Start here",
+    "summary": "Official regions, shared worlds and keeping client/server files matched.",
+    "file": "servers.md"
+  },
+  {
+    "route": "status/",
+    "title": "Snapshot & sources",
+    "group": "Project reference",
+    "summary": "Exactly what this wiki documents, with hashes and explicit release limits.",
+    "file": "status.md"
+  },
+  {
+    "route": "credits/",
+    "title": "Credits & community",
+    "group": "Project reference",
+    "summary": "The people and projects behind the pack.",
+    "file": "credits.md"
+  },
+  {
+    "route": "changelog/",
+    "title": "First development changelog",
+    "group": "Project reference",
+    "summary": "An in-depth comparison with the actual TK2 3.05 release, plus the complete project appendix.",
+    "file": "changelog.md"
+  },
+  {
+    "route": "transport/",
+    "title": "Transport & Aeronautics",
+    "summary": "Move yourself, supplies and ambitious builds around the world.",
+    "group": "Build & automate",
+    "file": "transport.md"
+  },
+  {
+    "route": "nuclear/",
+    "title": "Nuclear engineering",
+    "summary": "Create Nuclear, Alex\u2019s Caves and their distinct processing roles.",
+    "group": "Build & automate",
+    "file": "nuclear.md"
+  }
+]

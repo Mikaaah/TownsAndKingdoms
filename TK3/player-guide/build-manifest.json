@@ -1,0 +1,318 @@
+{
+  "snapshot": "tnk3-development-2026-11-08",
+  "build_fingerprint": "34eeaa7bf9fbc4c6c097",
+  "pages": [
+    {
+      "route": "",
+      "title": "Beyond the Forge",
+      "legacy": false
+    },
+    {
+      "route": "start/",
+      "title": "Your first workshop",
+      "legacy": false
+    },
+    {
+      "route": "progression/",
+      "title": "The ten chapters",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-01/",
+      "title": "01 · Manual",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-02/",
+      "title": "02 · Andesite",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-03/",
+      "title": "03 · Copper",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-04/",
+      "title": "04 · Brass",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-05/",
+      "title": "05 · Calculation",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-06/",
+      "title": "06 · Reinforced",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-07/",
+      "title": "07 · Industrial",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-08/",
+      "title": "08 · Arcane",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-09/",
+      "title": "09 · Eclipse",
+      "legacy": false
+    },
+    {
+      "route": "progression/chapter-10/",
+      "title": "10 · Creation",
+      "legacy": false
+    },
+    {
+      "route": "automation/",
+      "title": "A factory that keeps working",
+      "legacy": false
+    },
+    {
+      "route": "storage/",
+      "title": "AE2 & storage",
+      "legacy": false
+    },
+    {
+      "route": "engineering/",
+      "title": "Immersive engineering",
+      "legacy": false
+    },
+    {
+      "route": "character/",
+      "title": "Your character",
+      "legacy": false
+    },
+    {
+      "route": "skills/",
+      "title": "The current skill tree",
+      "legacy": false
+    },
+    {
+      "route": "origins/",
+      "title": "Choose your origin",
+      "legacy": false
+    },
+    {
+      "route": "quests/",
+      "title": "The questbook",
+      "legacy": false
+    },
+    {
+      "route": "loot/",
+      "title": "Unidentified Loot",
+      "legacy": false
+    },
+    {
+      "route": "magic/",
+      "title": "Magic that meets the workshop",
+      "legacy": false
+    },
+    {
+      "route": "exploration/",
+      "title": "Explore, fight, return",
+      "legacy": false
+    },
+    {
+      "route": "workshop/",
+      "title": "Towns & Kingdoms Workshop",
+      "legacy": false
+    },
+    {
+      "route": "trading-hub/",
+      "title": "Trading Hub",
+      "legacy": false
+    },
+    {
+      "route": "farming/",
+      "title": "A home worth returning to",
+      "legacy": false
+    },
+    {
+      "route": "titles/",
+      "title": "Titles & rewards",
+      "legacy": false
+    },
+    {
+      "route": "jei/",
+      "title": "Find recipes faster",
+      "legacy": false
+    },
+    {
+      "route": "balance/",
+      "title": "Balance & removed shortcuts",
+      "legacy": false
+    },
+    {
+      "route": "servers/",
+      "title": "Play together",
+      "legacy": false
+    },
+    {
+      "route": "status/",
+      "title": "Snapshot & sources",
+      "legacy": false
+    },
+    {
+      "route": "credits/",
+      "title": "Credits & community",
+      "legacy": false
+    },
+    {
+      "route": "changelog/",
+      "title": "First development changelog",
+      "legacy": false
+    },
+    {
+      "route": "transport/",
+      "title": "Transport & Aeronautics",
+      "legacy": false
+    },
+    {
+      "route": "nuclear/",
+      "title": "Nuclear engineering",
+      "legacy": false
+    },
+    {
+      "route": "guides/",
+      "title": "All guides",
+      "legacy": false
+    },
+    {
+      "route": "skills/nodes/",
+      "title": "Skill node reference",
+      "legacy": false
+    },
+    {
+      "route": "mods/",
+      "title": "Mod inventory",
+      "legacy": false
+    },
+    {
+      "route": "mods/comparison/",
+      "title": "Complete project comparison",
+      "legacy": false
+    },
+    {
+      "route": "recipes/",
+      "title": "Construction recipe reference",
+      "legacy": false
+    },
+    {
+      "route": "ponder/",
+      "title": "Ponder lesson reference",
+      "legacy": false
+    },
+    {
+      "route": "titles/reference/",
+      "title": "Title reference",
+      "legacy": false
+    },
+    {
+      "route": "2.0/original-home/",
+      "title": "Original wiki cover",
+      "legacy": true
+    },
+    {
+      "route": "2.0/features/",
+      "title": "Features",
+      "legacy": true
+    },
+    {
+      "route": "2.0/modlist/",
+      "title": "Modslist",
+      "legacy": true
+    },
+    {
+      "route": "2.0/changelog/",
+      "title": "Changelogs",
+      "legacy": true
+    },
+    {
+      "route": "2.0/a-new-world/",
+      "title": "A New World | The 1.20.1 Update",
+      "legacy": true
+    },
+    {
+      "route": "2.0/server-installation/",
+      "title": "Server Installation",
+      "legacy": true
+    },
+    {
+      "route": "2.0/progression/",
+      "title": "Progression",
+      "legacy": true
+    },
+    {
+      "route": "2.0/screenshots/",
+      "title": "Screenshots",
+      "legacy": true
+    },
+    {
+      "route": "archive/prior-development/modlist/",
+      "title": "3.0 Modlist",
+      "legacy": true
+    },
+    {
+      "route": "archive/prior-development/changelog/",
+      "title": "3.0 Changelog",
+      "legacy": true
+    },
+    {
+      "route": "archive/prior-development/progression/",
+      "title": "3.0 Progression",
+      "legacy": true
+    },
+    {
+      "route": "2.0/",
+      "title": "TK2 archive",
+      "legacy": true
+    }
+  ],
+  "redirects": {
+    "3.0/": "",
+    "3.0/features/": "guides/",
+    "3.0/modlist/": "mods/",
+    "3.0/changelog/": "changelog/",
+    "3.0/progression/": "progression/",
+    "3.0/comparison/": "changelog/",
+    "3.0/selection-notes/": "status/",
+    "3.0/engineering/": "engineering/",
+    "3.0/tier-map/": "progression/",
+    "3.0/create/": "automation/",
+    "3.0/magic/": "magic/",
+    "3.0/exploration/": "exploration/",
+    "3.0/kingdoms/": "farming/",
+    "3.0/credits/": "credits/",
+    "chapters/": "quests/",
+    "renewability/": "automation/",
+    "skilltree/": "skills/",
+    "skilltree-builder/": "skills/nodes/",
+    "skilltree-planner/": "skills/nodes/",
+    "skill-nodes/": "skills/nodes/",
+    "skill-tree/": "skills/",
+    "classes/": "skills/",
+    "professions/": "character/",
+    "spells/": "magic/",
+    "glyphs/": "magic/",
+    "accessories/": "loot/",
+    "witchery/": "magic/",
+    "3.0/accessory-catalogue/": "guides/",
+    "3.0/ars-nouveau/": "guides/",
+    "3.0/artifacts-relics/": "guides/",
+    "3.0/epic-fight/": "guides/",
+    "3.0/glyph-catalogue/": "magic/",
+    "3.0/irons-spells/": "magic/",
+    "3.0/skill-nodes/": "skills/",
+    "3.0/skill-tree/": "skills/",
+    "3.0/spell-catalogue/": "magic/",
+    "3.0/witchery-topics/": "magic/",
+    "3.0/witchery/": "magic/",
+    "maintenance/preview/": "guides/"
+  },
+  "search_entries": 1353
+}

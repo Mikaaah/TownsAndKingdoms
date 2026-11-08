@@ -1,27 +1,23 @@
-## ◆ OFFICIAL WIKI
+## Towns & Kingdoms
 
-**[OPEN THE WIKI →](https://mikaaah.github.io/TownsAndKingdoms/)**
-
-**[III · T&K3](https://mikaaah.github.io/TownsAndKingdoms/3.0/)**
-
-**[CURRENT RUNTIME V2](https://mikaaah.github.io/TownsAndKingdoms/3.0/runtime-v2/)**
-
-**[SKILLTREE GUIDE](https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/)**
-
-**[SKILLTREE PLANNER](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/)**
-
-**[FEATURES & MODS](https://mikaaah.github.io/TownsAndKingdoms/3.0/features/)**
-
-**[CREATE PARTS & MACHINES](https://mikaaah.github.io/TownsAndKingdoms/3.0/create/)**
-
-**[ALL GUIDES](https://mikaaah.github.io/TownsAndKingdoms/guides/)**
-
-**[CHAPTERS & RECIPES](https://mikaaah.github.io/TownsAndKingdoms/progression/)**
-
-**[AUTOMATION](https://mikaaah.github.io/TownsAndKingdoms/automation/)**
-
-**[RECIPE WORKSHOP](https://mikaaah.github.io/TownsAndKingdoms/workshop/)**
-
----
-
-**[II · T&K2 ARCHIVE](https://mikaaah.github.io/TownsAndKingdoms/2.0/)**
+- [The field guide](https://mikaaah.github.io/TownsAndKingdoms/)
+- [Your first workshop](https://mikaaah.github.io/TownsAndKingdoms/start/)
+- [Ten production chapters](https://mikaaah.github.io/TownsAndKingdoms/progression/)
+- [Questbook](https://mikaaah.github.io/TownsAndKingdoms/quests/)
+- [Construction recipes](https://mikaaah.github.io/TownsAndKingdoms/recipes/)
+- [Automation](https://mikaaah.github.io/TownsAndKingdoms/automation/)
+- [AE2 & storage](https://mikaaah.github.io/TownsAndKingdoms/storage/)
+- [IE & heavy engineering](https://mikaaah.github.io/TownsAndKingdoms/engineering/)
+- [Magic & lasers](https://mikaaah.github.io/TownsAndKingdoms/magic/)
+- [Transport & Aeronautics](https://mikaaah.github.io/TownsAndKingdoms/transport/)
+- [Nuclear engineering](https://mikaaah.github.io/TownsAndKingdoms/nuclear/)
+- [Character](https://mikaaah.github.io/TownsAndKingdoms/character/)
+- [Skill reference](https://mikaaah.github.io/TownsAndKingdoms/skills/)
+- [Twenty origins](https://mikaaah.github.io/TownsAndKingdoms/origins/)
+- [Unidentified Loot](https://mikaaah.github.io/TownsAndKingdoms/loot/)
+- [Workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/)
+- [Trading Hub](https://mikaaah.github.io/TownsAndKingdoms/trading-hub/)
+- [Mod inventory](https://mikaaah.github.io/TownsAndKingdoms/mods/)
+- [First development changelog](https://mikaaah.github.io/TownsAndKingdoms/changelog/)
+- [Snapshot & sources](https://mikaaah.github.io/TownsAndKingdoms/status/)
+- [TK2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/)

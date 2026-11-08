@@ -1,59 +1,36 @@
-<p align="center"><img src="TK3/player-guide/assets/brand/tklogo.png" alt="Towns & Kingdoms 3 — Player Guide" width="100%"></p>
+<p align="center"><img src="TK3/player-guide/assets/brand/tklogo.png" alt="Towns & Kingdoms 3" width="100%"></p>
 
 # Towns & Kingdoms — Beyond the Forge
 
-[Project status](https://github.com/Mikaaah/Mikaaah/blob/master/STATUS.md) · [Report a bug](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=bug_report.yml) · [Suggest a feature](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=feature_request.yml) · [Questions](https://github.com/Mikaaah/TownsAndKingdoms/issues/new?template=question.yml) · [CurseForge project](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms)
+Create-led automation, RPG combat, magic, exploration and a home worth building for **Minecraft 1.21.1 · NeoForge · Java 21**.
 
-[![Minecraft 1.21.1](https://img.shields.io/badge/Minecraft-1.21.1-5B8731?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
-[![NeoForge](https://img.shields.io/badge/Loader-NeoForge-D97724?style=flat-square)](https://neoforged.net/)
-[![Development](https://img.shields.io/badge/Status-In%20development-3F78A8?style=flat-square)](https://github.com/Mikaaah/TownsAndKingdoms)
-[![Player Wiki](https://img.shields.io/badge/Player_Wiki-Open-6B5CA5?style=flat-square)](https://mikaaah.github.io/TownsAndKingdoms/)
+**[Open the official field guide](https://mikaaah.github.io/TownsAndKingdoms/)** · **[First development changelog](https://mikaaah.github.io/TownsAndKingdoms/changelog/)** · **[Community](https://discord.gg/CRYk3uDPVt)**
 
-This repository covers multiple Towns & Kingdoms generations. **TNK3 is the current development branch of the modpack**; TNK2 remains available as historical documentation and releases through the shared CurseForge listing.
+## Current documentation
 
-Create-powered workshops, living magic and industrial progression for **Minecraft 1.21.1 · NeoForge**.
-
-## ◆ OFFICIAL WIKI
-
-**[Open the official wiki](https://mikaaah.github.io/TownsAndKingdoms/)**
-
-Follow the ten-tier production reference and explore the full 2.0 and 3.0 documentation. The October 4 production reference records repaired construction cycles and recipe conflicts; in-game factory validation remains open. The GitHub Wiki points to this wiki.
+The **8 November 2026 reference** is based on the supplied current KubeJS package, mod/config exports, skill tree and newer custom builds. The documentation clearly separates active production recipes from the questbook rebuild and other unfinished release packaging.
 
 | Guide | What you will find |
 |---|---|
-| [Getting started](https://mikaaah.github.io/TownsAndKingdoms/progression/#overview) | Your first manual workshop and the path to automation |
-| [Machine frames](https://mikaaah.github.io/TownsAndKingdoms/progression/#frames) | Rotation, Hydraulic and Precision machines, then native infrastructure |
-| [Tier walkthroughs](https://mikaaah.github.io/TownsAndKingdoms/progression/#paths) | Ingredients, processing steps and bootstrap routes |
-| [Chapters & quests](https://mikaaah.github.io/TownsAndKingdoms/progression/#chapters) | Main goals, prerequisites and optional branches |
-| [Resource generators](https://mikaaah.github.io/TownsAndKingdoms/progression/#compat) | Fifteen stone and ore selectors with their actual outputs |
-| [Production review](https://mikaaah.github.io/TownsAndKingdoms/renewability/) | Verified source findings, bootstrap blockers and open runtime checks |
-| [Automation field guide](https://mikaaah.github.io/TownsAndKingdoms/automation/) | Collection, crop and wood farms, processing and troubleshooting |
-| [Visual recipe workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) | Interactive steps for all authored recipes |
-| [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/) | Plan class, subclass, prerequisite paths, and point spending before respec |
-| [T&K2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | The complete original wiki |
-| [Find a recipe](https://mikaaah.github.io/TownsAndKingdoms/progression/#recipes) | Search by item, ingredient, mod, tier or process |
+| [Your first workshop](https://mikaaah.github.io/TownsAndKingdoms/start/) | Clay and andesite to the first Deployer |
+| [The ten chapters](https://mikaaah.github.io/TownsAndKingdoms/progression/) | Manual, Andesite, Copper, Brass, Calculation, Reinforced, Industrial, Arcane, Eclipse and Creation |
+| [AE2 and engineering](https://mikaaah.github.io/TownsAndKingdoms/storage/) | Create-built processors, Infinity Cells and the connected workshop |
+| [Character development](https://mikaaah.github.io/TownsAndKingdoms/character/) | Activities, 588 configured skill nodes, 20 origins and titles |
+| [Workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) | Projectors, construction tools, cages and Trading Hub |
+| [Ponder index](https://mikaaah.github.io/TownsAndKingdoms/ponder/) | 97 authored lessons and supported item anchors |
+| [Mod inventory](https://mikaaah.github.io/TownsAndKingdoms/mods/) | Exact export projects and separately supplied JAR references |
+| [TK2 → TNK3 comparison](https://mikaaah.github.io/TownsAndKingdoms/changelog/) | The first in-depth changelog against the actual TK2 3.05 client archive |
+| [Snapshot and sources](https://mikaaah.github.io/TownsAndKingdoms/status/) | Source identities, hashes, count definitions and remaining beta checks |
+| [TK2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | Preserved original documentation and release history |
 
-## The ten production tiers
+## Version clarity
 
-| Chapter | Focus |
-|---|---|
-| I · Rotation | Raw materials, Makeshift parts and your first Create workshop |
-| II · Sealed | Tubing, rubber and water-tested assembly |
-| III · Precision | Brass, Electron Tubes, machining and logistics |
-| IV · Calculation | AE2 processors, grown Certus and liquid XP |
-| V · Inductive | Chromatic materials and starter Mekanism |
-| VI · Arcane | Ars Source, Imbuement and apparatus finishing |
-| VII · Chemical Engineering | Shadow Steel, chemistry and retained focus tooling |
-| VIII · Containment | Aquatic materials, fission and polonium |
-| IX · Singularity | Antimatter, Stargaze and quantum industry |
-| X · Sovereign | Advanced recurring materials and three-pass final assembly |
+The shared [CurseForge project](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms) covers multiple pack generations. Its latest public client remains **TK2 3.05 for Forge 1.20.1**. TNK3 is in development.
 
+The newer uploaded packages used for the documentation can be ahead of the historical runtime files in this repository. Read the [dated source reference](TK3/handbook-source/current/README.md); do not combine old runtime snapshots with the newer guide as if they were one tested release.
 
-## 🤝 Contributing
+## Contributing
 
-Bug reports, ideas and focused pull requests are welcome. Please read the [contribution guide](CONTRIBUTING.md) and use the issue templates when reporting problems.
+[Report a problem](https://github.com/Mikaaah/TownsAndKingdoms/issues) or read the [contribution guide](CONTRIBUTING.md).
 
-
-**[Read the progression overview](https://mikaaah.github.io/TownsAndKingdoms/3.0/progression/)** · **[T&K3 project files](TK3/)**
-
-The older T&K2 archive is preserved as historical reference.
+To build the current wiki, run the commands in [its source guide](TK3/handbook-source/current/README.md). The previous campaign/planner is no longer the publishing source. Original wiki Markdown remains archived unchanged.

@@ -1,22 +1,18 @@
-[![Towns & Kingdoms — Official Wiki](https://mikaaah.github.io/TownsAndKingdoms/assets/brand/tklogo.png)](https://mikaaah.github.io/TownsAndKingdoms/)
+# Towns & Kingdoms 3 | Beyond the Forge
 
-# TOWNS & KINGDOMS — OFFICIAL WIKI
+**Minecraft 1.21.1 · NeoForge · Java 21**
 
-**[◆ OPEN THE OFFICIAL WIKI →](https://mikaaah.github.io/TownsAndKingdoms/)**
+The current field guide follows the newer KubeJS production route, character systems, custom features and mod references.
 
-The official T&K3 guides now describe the fixed October 2026 runtime refresh while preserving the current 353-quest campaign and the historical T&K2 archive.
+## Open the current wiki
 
-**10 PROGRESSION TIERS** · **353 QUESTS** · **1,788 KUBEJS RECIPE IDS** · **1,972 REVIEWED CATALOGUE ENTRIES** · **SKILL TREE V4.6.0**
+- [Begin your workshop](https://mikaaah.github.io/TownsAndKingdoms/start/)
+- [The ten chapters](https://mikaaah.github.io/TownsAndKingdoms/progression/)
+- [Character, skills and origins](https://mikaaah.github.io/TownsAndKingdoms/character/)
+- [Workshop and Trading Hub](https://mikaaah.github.io/TownsAndKingdoms/workshop/)
+- [Full mod inventory](https://mikaaah.github.io/TownsAndKingdoms/mods/)
+- [First in-depth development changelog: TK2 3.05 → TNK3](https://mikaaah.github.io/TownsAndKingdoms/changelog/)
 
-| T&K3 · CURRENT DATA | PLAYER TOOLS |
-|---|---|
-| [Chapters & reviewed recipes](https://mikaaah.github.io/TownsAndKingdoms/progression/) | [Skilltree Planner](https://mikaaah.github.io/TownsAndKingdoms/skilltree-planner/) |
-| [Current runtime v2 notes](https://mikaaah.github.io/TownsAndKingdoms/3.0/runtime-v2/) | [All player guides](https://mikaaah.github.io/TownsAndKingdoms/guides/) |
-| [Skill tree guide](https://mikaaah.github.io/TownsAndKingdoms/3.0/skill-tree/) | [Recipe workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/) |
-| [T&K2 wiki archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/) | [Automation guide](https://mikaaah.github.io/TownsAndKingdoms/automation/) |
+This is the **8 November 2026 development reference**. The questbook is being rebuilt; current recipe guides do not imply that the inherited quest export is finished.
 
-The 1,788 figure is the static count of unique explicit recipe IDs in the refreshed KubeJS runtime. The 1,972 figure belongs to the separate reviewed recipe catalogue. The uploaded quest ZIP was an earlier snapshot, so the canonical expanded campaign remains intact.
-
-### ⚙ BUILD YOUR WORKSHOP. GROW YOUR KINGDOM.
-
-Follow all ten chapters, inspect reviewed recipes, build reliable automation, and explore the current class, subclass, and profession tree.
+[Open the full field guide](https://mikaaah.github.io/TownsAndKingdoms/) · [Snapshot and source hashes](https://mikaaah.github.io/TownsAndKingdoms/status/) · [Preserved TK2 wiki](https://mikaaah.github.io/TownsAndKingdoms/2.0/)
