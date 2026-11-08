@@ -15,70 +15,70 @@
   },
   {
     "route": "progression/chapter-01/",
-    "title": "01 \u00b7 Manual",
+    "title": "01 · Manual",
     "group": "Chapters",
     "summary": "Clay, Andesite Alloy and the first manually crafted machine body.",
     "file": "progression--chapter-01.md"
   },
   {
     "route": "progression/chapter-02/",
-    "title": "02 \u00b7 Andesite",
+    "title": "02 · Andesite",
     "group": "Chapters",
     "summary": "Affordable repeated machinery and the first automated material loop.",
     "file": "progression--chapter-02.md"
   },
   {
     "route": "progression/chapter-03/",
-    "title": "03 \u00b7 Copper",
+    "title": "03 · Copper",
     "group": "Chapters",
     "summary": "Tree sap, rubber, fluids and improved logistics.",
     "file": "progression--chapter-03.md"
   },
   {
     "route": "progression/chapter-04/",
-    "title": "04 \u00b7 Brass",
+    "title": "04 · Brass",
     "group": "Chapters",
     "summary": "Heated alloys, precise assembly, controls and Crushing Wheels.",
     "file": "progression--chapter-04.md"
   },
   {
     "route": "progression/chapter-05/",
-    "title": "05 \u00b7 Calculation",
+    "title": "05 · Calculation",
     "group": "Chapters",
     "summary": "Create-built processors and practical ME logistics.",
     "file": "progression--chapter-05.md"
   },
   {
     "route": "progression/chapter-06/",
-    "title": "06 \u00b7 Reinforced",
+    "title": "06 · Reinforced",
     "group": "Chapters",
     "summary": "Steel, electrum, wires and the first electrical engineering projects.",
     "file": "progression--chapter-06.md"
   },
   {
     "route": "progression/chapter-07/",
-    "title": "07 \u00b7 Industrial",
+    "title": "07 · Industrial",
     "group": "Chapters",
-    "summary": "IE heavy processing and the 4\u00d7 ore chain.",
+    "summary": "IE heavy processing and the 4× ore chain.",
     "file": "progression--chapter-07.md"
   },
   {
     "route": "progression/chapter-08/",
-    "title": "08 \u00b7 Arcane",
+    "title": "08 · Arcane",
     "group": "Chapters",
     "summary": "Source, Mana and magical materials join the production line.",
     "file": "progression--chapter-08.md"
   },
   {
     "route": "progression/chapter-09/",
-    "title": "09 \u00b7 Eclipse",
+    "title": "09 · Eclipse",
     "group": "Chapters",
-    "summary": "Chromatic materials, ink recovery and the 5\u00d7 ore finish.",
+    "summary": "Chromatic materials, ink recovery and the 5× ore finish.",
     "file": "progression--chapter-09.md"
   },
   {
     "route": "progression/chapter-10/",
-    "title": "10 \u00b7 Creation",
+    "title": "10 · Creation",
     "group": "Chapters",
     "summary": "The final shared project for your entire factory.",
     "file": "progression--chapter-10.md"
@@ -143,7 +143,7 @@
     "route": "magic/",
     "title": "Magic that meets the workshop",
     "group": "Build & automate",
-    "summary": "Ars, Iron\u2019s Spells, unified mana and automated scroll production.",
+    "summary": "Ars, Iron’s Spells, unified mana and automated scroll production.",
     "file": "magic.md"
   },
   {
@@ -233,8 +233,15 @@
   {
     "route": "nuclear/",
     "title": "Nuclear engineering",
-    "summary": "Create Nuclear, Alex\u2019s Caves and their distinct processing roles.",
+    "summary": "Create Nuclear, Alex’s Caves and their distinct processing roles.",
     "group": "Build & automate",
     "file": "nuclear.md"
+  },
+  {
+    "route": "projects/",
+    "title": "Modding Hub",
+    "group": "Project reference",
+    "summary": "Find every Minecraft project, player guide, download and issue tracker.",
+    "file": "projects.md"
   }
 ]

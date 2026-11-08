@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/TownsAndKingdoms/wiki) · [Project](https://github.com/Mikaaah/TownsAndKingdoms) · [Get help](https://github.com/Mikaaah/TownsAndKingdoms/issues)
+
 # Progression, stages, and runtime data · v2
 
 **Source baseline:** fixed KubeJS package supplied October 2026; Minecraft 1.21.1. The package uses ten named recipe tiers. Recipes establish progression cost through mechanisms, frame parts, and processing chains. AStages restrictions stop loot, trading, alternate recipes, or other bypasses of the tier-defining machines. Ordinary resources, cables, components, tools, storage parts, and mod materials remain ungated.
@@ -56,6 +58,6 @@ The player may pick up future-tier items, store them in inventories or container
 
 ## Runtime counts
 
-The package contains **1,788 unique explicit KubeJS recipe IDs** across the tier, core, compatibility, and recipe-system scripts. Counts are an ID scan of source scripts, not a live registry dump. See [`RUNTIME_V2_MANIFEST.json`](RUNTIME_V2_MANIFEST.json) for per-file counts, IDs, all stage gates and item registrations. The older production review count of 1,972 belongs to a separate reviewed recipe catalogue; it is not the explicit-ID count in this refreshed runtime package.
+The package contains **1,788 unique explicit KubeJS recipe IDs** across the tier, core, compatibility, and recipe-system scripts. Counts are an ID scan of source scripts, not a live registry dump. See [`RUNTIME_V2_MANIFEST.json`](https://github.com/Mikaaah/TownsAndKingdoms/blob/main/TK3/docs/RUNTIME_V2_MANIFEST.json) for per-file counts, IDs, all stage gates and item registrations. The older production review count of 1,972 belongs to a separate reviewed recipe catalogue; it is not the explicit-ID count in this refreshed runtime package.
 
-[Recipes](Recipes-v2.md) · [Current skill tree](Skilltree-v4.6.md)
+[Recipes](https://github.com/Mikaaah/TownsAndKingdoms/wiki/Recipes-v2) · [Current skill tree](https://github.com/Mikaaah/TownsAndKingdoms/wiki/Skilltree-v4.6)

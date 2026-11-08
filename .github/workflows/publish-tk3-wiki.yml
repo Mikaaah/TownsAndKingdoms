@@ -46,7 +46,7 @@ jobs:
         run: git clone "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.wiki.git" wiki
       - name: Sync current guide entry points
         run: |
-          cp TK3/wiki/Home.md TK3/wiki/_Sidebar.md TK3/wiki/Skilltree-v4.6.md TK3/wiki/3.0-Changelog.md TK3/wiki/3.0-Modlist.md TK3/wiki/3.0-Progression.md wiki/
+          cp TK3/wiki/*.md wiki/
       - name: Publish wiki pages
         working-directory: wiki
         run: |

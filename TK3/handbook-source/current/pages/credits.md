@@ -11,3 +11,7 @@ Branding and supplied pixel artwork retain their creators' rights. In-game featu
 The original TK2 wiki is preserved in the [archive](../2.0/), including historical version numbers and unfinished pages. Its content describes the older pack.
 
 [Discord](https://discord.gg/CRYk3uDPVt) · [GitHub](https://github.com/Mikaaah/TownsAndKingdoms) · [CurseForge](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms)
+
+## Explore the Modding Hub
+
+[Find every project, guide and issue tracker](../projects/). Share builds, questions and suggestions in the [Discord community](https://discord.gg/CRYk3uDPVt).

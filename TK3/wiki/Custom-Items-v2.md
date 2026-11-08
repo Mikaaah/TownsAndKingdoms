@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/TownsAndKingdoms/wiki) · [Project](https://github.com/Mikaaah/TownsAndKingdoms) · [Get help](https://github.com/Mikaaah/TownsAndKingdoms/issues)
+
 # Custom items and machine frames · runtime v2
 
 The current package registers **214 custom items** plus **3 machine-frame blocks**. Startup registrations live in `TK3/kubejs/startup_scripts/`; use a full game restart after changing these registrations or their assets. Recipe and stage scripts can be reloaded without replacing the item registry.
@@ -54,6 +56,6 @@ The supplied package also adds the complete model, blockstate, and texture set f
 | `kubejs:tk3_capacitor_electrolytic_dirt` | `tk3_components.js` |
 | `kubejs:tk3_capacitor_electrolytic_incomplete` | `tk3_components.js` |
 
-See [`RUNTIME_V2_MANIFEST.json`](RUNTIME_V2_MANIFEST.json) for the complete item IDs and the machine-frame block inventory.
+See [`RUNTIME_V2_MANIFEST.json`](https://github.com/Mikaaah/TownsAndKingdoms/blob/main/TK3/docs/RUNTIME_V2_MANIFEST.json) for the complete item IDs and the machine-frame block inventory.
 
-[Reusable catalyst lenses](Catalyst-Lenses.md)
+[Reusable catalyst lenses](https://github.com/Mikaaah/TownsAndKingdoms/wiki/Catalyst-Lenses)

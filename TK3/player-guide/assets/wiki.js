@@ -1,6 +1,41 @@
 'use strict';
 (() => {
  const base=document.body.dataset.base;
+
+ const themeButton=document.querySelector('#theme-toggle');
+ function setTheme(theme){
+  document.documentElement.dataset.theme=theme;
+  const dark=theme==='dark';
+  themeButton?.setAttribute('aria-pressed',String(dark));
+  themeButton?.setAttribute('aria-label',dark?'Switch to day mode':'Switch to night mode');
+  if(themeButton)themeButton.textContent=dark?'Day':'Night';
+ }
+ setTheme(document.documentElement.dataset.theme||'light');
+ themeButton?.addEventListener('click',()=>{
+  const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';
+  setTheme(theme);try{localStorage.setItem('tnk-theme',theme);}catch{}
+ });
+
+ const progress=document.querySelector('#reading-progress');
+ let scheduled=false;
+ function updateProgress(){
+  const distance=document.documentElement.scrollHeight-innerHeight;
+  if(progress)progress.style.transform='scaleX('+(distance>0?Math.min(1,scrollY/distance):0)+')';
+  scheduled=false;
+ }
+ window.addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateProgress);}},{passive:true});
+ window.addEventListener('resize',updateProgress);updateProgress();
+
+ document.querySelectorAll('.article pre').forEach(block=>{
+  const code=block.querySelector('code');if(!code)return;
+  const button=document.createElement('button');button.className='code-copy';
+  button.type='button';button.textContent='Copy';button.setAttribute('aria-label','Copy code');
+  button.addEventListener('click',async()=>{
+   try{await navigator.clipboard.writeText(code.textContent);button.textContent='Copied!';setTimeout(()=>button.textContent='Copy',1600);}
+   catch{button.textContent='Select to copy';const range=document.createRange();range.selectNodeContents(code);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);}
+  });block.append(button);
+ });
+
  const menu=document.querySelector('#menu-toggle'),sidebar=document.querySelector('#sidebar');
  function setMenu(open){document.body.classList.toggle('menu-open',open);menu?.setAttribute('aria-expanded',String(open));}
  menu?.addEventListener('click',()=>setMenu(!document.body.classList.contains('menu-open')));
@@ -51,7 +86,7 @@
  document.querySelector('#close-search')?.addEventListener('click',()=>dialog.close());
  dialog?.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
  document.addEventListener('keydown',event=>{
-  if(event.key==='/'&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){event.preventDefault();openSearch();}
+  if((event.key==='/'||((event.ctrlKey||event.metaKey)&&event.key.toLowerCase()==='k'))&&!event.altKey&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){event.preventDefault();openSearch();}
  });
  function normalize(text){return String(text).toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'');}
  async function search(){

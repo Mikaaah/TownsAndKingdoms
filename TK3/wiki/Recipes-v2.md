@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/TownsAndKingdoms/wiki) · [Project](https://github.com/Mikaaah/TownsAndKingdoms) · [Get help](https://github.com/Mikaaah/TownsAndKingdoms/issues)
+
 # Recipes · current runtime v2
 
 The current fixed KubeJS package contains **1,788 unique explicit recipe IDs** across ten progression tiers, core scripts, 40 compatibility modules, and recipe-system cleanup/whitelist/final-sanity scripts.
@@ -17,4 +19,4 @@ The current fixed KubeJS package contains **1,788 unique explicit recipe IDs** a
 
 The 1,972 count shown in the earlier production review is a separate authored recipe catalogue. It should not be read as the number of explicit IDs in this KubeJS runtime refresh. The full ID list and counts per file are in [`RUNTIME_V2_MANIFEST.json`](../docs/RUNTIME_V2_MANIFEST.json).
 
-[Progression and stage gates](Progression-v2.md) · [Compatibility modules](Compatibility-v2.md)
+[Progression and stage gates](https://github.com/Mikaaah/TownsAndKingdoms/wiki/Progression-v2) · [Compatibility modules](https://github.com/Mikaaah/TownsAndKingdoms/wiki/Compatibility-v2)

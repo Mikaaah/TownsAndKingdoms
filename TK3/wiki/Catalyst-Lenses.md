@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/TownsAndKingdoms/wiki) · [Project](https://github.com/Mikaaah/TownsAndKingdoms) · [Get help](https://github.com/Mikaaah/TownsAndKingdoms/issues)
+
 # Reusable catalyst lenses · runtime v2
 
 One item, `kubejs:tk3_catalyst_lens`, carries its variant using `minecraft:dyed_color`; charged lenses also carry a custom name. A lens is reusable when used as the catalyst in later mechanism assembly recipes. Blank lenses are assembled with brass sheets and AE2 quartz glass, then charged in the Ars Nouveau Enchanting Apparatus.

@@ -1,6 +1,6 @@
 {
   "snapshot": "tnk3-beta-1.0",
-  "build_fingerprint": "3563179086e9a03133e0",
+  "build_fingerprint": "cc020e4df2b60cb6195c",
   "pages": [
     {
       "route": "",
@@ -178,6 +178,11 @@
       "legacy": false
     },
     {
+      "route": "projects/",
+      "title": "Modding Hub",
+      "legacy": false
+    },
+    {
       "route": "guides/",
       "title": "All guides",
       "legacy": false
@@ -314,5 +319,5 @@
     "3.0/witchery/": "magic/",
     "maintenance/preview/": "guides/"
   },
-  "search_entries": 1389
+  "search_entries": 1390
 }

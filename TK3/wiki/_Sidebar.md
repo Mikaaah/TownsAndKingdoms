@@ -21,3 +21,9 @@
 - [Beta 1.0 changelog](https://mikaaah.github.io/TownsAndKingdoms/changelog/)
 - [Snapshot & sources](https://mikaaah.github.io/TownsAndKingdoms/status/)
 - [TK2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/)
+
+### Community
+
+- [All mod projects](https://mikaaah.github.io/TownsAndKingdoms/projects/)
+- [Join Discord](https://discord.gg/CRYk3uDPVt)
+- [Report an issue](https://github.com/Mikaaah/TownsAndKingdoms/issues)

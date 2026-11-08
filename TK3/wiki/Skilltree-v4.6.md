@@ -1,3 +1,5 @@
+[← Guide home](https://github.com/Mikaaah/TownsAndKingdoms/wiki) · [Project](https://github.com/Mikaaah/TownsAndKingdoms) · [Get help](https://github.com/Mikaaah/TownsAndKingdoms/issues)
+
 # Current character skills
 
 The older class planner is retired. **Beta 1.0** includes 588 one-point skill nodes and a 175-point spending limit.
