@@ -218,9 +218,9 @@
   },
   {
     "route": "changelog/",
-    "title": "First development changelog",
+    "title": "TK2 → TK3 changelog",
     "group": "Project reference",
-    "summary": "An in-depth comparison with the actual TK2 3.05 release, plus the complete project appendix.",
+    "summary": "Mods added, removed and replaced since TK2, grouped by RPG, world, dimensions, magic, industry and more.",
     "file": "changelog.md"
   },
   {

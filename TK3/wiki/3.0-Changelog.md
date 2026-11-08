@@ -1,294 +1,290 @@
-# Development changelog 01
+# TK2 → TK3: what changed?
 
-## From TK2 3.05 to Towns & Kingdoms 3
+**Changelog 01 · Beyond the Forge · 8 November 2026**
 
-**8 November 2026 · First in-depth development comparison**
+Towns & Kingdoms 3 moves from Minecraft 1.20.1 / Forge to **Minecraft 1.21.1 / NeoForge**, with Java 21. Create remains at the heart of the pack, alongside a new industrial route, character progression, more integrated adventures and a broader selection of farming and building mods.
 
-Beyond the Forge rebuilds the factory-to-adventure loop for Minecraft 1.21.1. Create remains the centre, with a new ten-chapter production route, connected IE/AE2 manufacturing, a custom character system, identification-based equipment rewards and practical tools for a shared settlement.
+This compares **TK2 3.05** with the current **TK3 development version**. Each category separates additions, removals and replacements. Mods listed as **continuing** were already part of TK2.
 
-This compares the actual **TK2 3.05 client archive** with the supplied TNK3 export and its newer KubeJS/custom-mod updates. It records current development, rather than announcing a finished public release. The pack's shared CurseForge page still lists TK2 downloads.
+[Download this changelog](https://mikaaah.github.io/TownsAndKingdoms/downloads/TNK3-Development-Changelog-01.md) · [Browse the complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/)
 
-[Download this changelog as Markdown](https://mikaaah.github.io/TownsAndKingdoms/downloads/TNK3-Development-Changelog-01.md) · [Complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/) · [Snapshot and hashes](https://mikaaah.github.io/TownsAndKingdoms/status/)
+## RPG, character progression and loot
 
-## 1. Platform and pack identity
+**Added**
 
-| Area | TK2 3.05 | Current TNK3 reference |
-|---|---|---|
-| Minecraft | 1.20.1 | 1.21.1 |
-| Loader in the supplied manifest | Forge 47.3.7 | NeoForge 21.1.262 |
-| Current Java target | Earlier pack platform | Java 21 |
-| Pack direction | A New World | Beyond the Forge |
-| Manufacturing campaign | Eleven chapter-era recipe files | Ten chapters, internal tiers 0–9 |
-| Character development | Passive Skill Tree family | Pufferfish configuration + TNK Progression |
-| Quest source | Published TK2 book | TNK3 rebuild with inherited migration material |
-| Wiki | Historical TK2 and outdated generated TNK3 systems | Current audited guides, searchable references and preserved TK2 archive |
+- **TnK Progression** — character levels, activity progression, twenty origins with two perks each, titles and mob scaling.
+- **Pufferfish's Skills** and **Pufferfish's Attributes** — the framework behind the rebuilt skill tree and its bonuses. The current tree has **588 nodes**, with a **175-point budget** for choosing a build.
+- **Unidentified Loot** — equipment identification, rarity, discoveries and salvaging, including a Create-powered Mechanical Identifier.
+- **Iron's Gems 'n Jewelry**, **Reliquified Artifacts** and **Realm RPG: Treasure Balloons** — more equipment, accessory interactions and discoveries.
 
-Existing TK2 worlds are not presented as directly upgradeable TNK3 saves. The loader, registries, recipes, terrain stack and custom systems have changed. Keep the generations as separate installations and retain backups.
+**Replaced**
 
-## 2. A new production backbone
+| TK2 | TK3 |
+|---|---|
+| Passive Skill Tree + Passive Skill Tree Additions | TnK Progression + Pufferfish's Skills |
 
-The old TK2 scripts ran from early Andesite/Copper into Precision, Infernal, Calculation, Steel/TFMG, Inductive/Thermal, Enderium and Ad Astra space manufacturing before the final chapter.
+**Removed:** Loot Journal and Apothic Curios.
 
-The current route is:
+**Continuing:** Apotheosis, Artifacts and Relics. The RPG overhaul builds on these existing equipment systems.
 
-| Chapter | Component / focus | Main difference |
-|---|---|---|
-| I · Manual | Makeshift Mechanism | Clay/Andesite bootstrap into the existing Andesite Machine |
-| II · Andesite | Rotation Mechanism | Cheaper automated construction replaces the expensive manual mechanism |
-| III · Copper | Sealed Mechanism | Rubberworks sap and fluids connect to reliable Copper production |
-| IV · Brass | Precision Mechanism | Guaranteed one-pass assembly and practical Brass control |
-| V · Calculation | Calculation Mechanism | Create processors, crystal production and ME logistics |
-| VI · Reinforced | Reinforced Mechanism | Electrum, steel, electronics and Light Engineering |
-| VII · Industrial | Industrial Mechanism | Heavy Engineering, IE Crusher and 4× ore processing |
-| VIII · Arcane | Arcane Mechanism | Source Gems, Dragon's Breath, Mana and magical manufacturing |
-| IX · Eclipse | Eclipse Mechanism | Radiant/Shadow materials, ink and 5× ore finishing |
-| X · Creation | Creation Core | A final two-pass assembly that consumes the whole mechanism chain |
+## Combat and equipment
 
-The old Infernal/TFMG/Thermal/space steps are no longer this pack's main-tier definition. Mekanism is not introduced as a replacement core tier. Older wiki claims about Containment, SPS, antimatter or a Sovereign Keystone are retired.
+**Added**
 
-## 3. The first workshop is clearer
+- **Celestisynth** — another weapon family for the equipment selection.
+- **Epic Fight Compat Suite**, **Epic Fight Curios Compat** and **Epic Fight X Relics + Artifacts + Curios**.
+- **Iron's Spells X Epic Fight** and **Epic Fight x Iron's Spells Enhanced Animations** — expand the connection between spellcasting and action combat.
 
-Manual Alloy now uses **two Andesite and two Clay Balls for one Alloy**. Automated mixing improves that to **one of each for one Alloy**.
+**Removed:** Samurai Dynasty, Immersive Armors, ParCool and its Epic Fight compatibility addons.
 
-A Makeshift Mechanism uses four Alloy, four wooden slabs and one Iron Ingot. Eight Makeshift Mechanisms surround an Andesite Casing for the first Andesite Machine. Makeshift crafting is restricted to player crafting menus, keeping it a manual bootstrap.
+**Continuing:** Epic Fight, Weapons of Miracles, Simply Swords, Knight Quest and Knaves' Needs. Simply Swords Reforged is an added **resource pack** for the existing mod.
 
-The first Deployer uses that machine and the Gold Hand craft. It then produces Rotation Mechanisms from a slab, two Alloy deployments and an Iron Hammer. Eight Rotation Mechanisms around a casing make the same machine more efficiently.
+## World generation, biomes and wildlife
 
-There is no second Kinetic Machine to collect. Native wood crafting, Create saw processing and stripped-log casing application remain useful.
+**Added**
 
-## 4. Rubber and logistics have practical choices
+- **Wildshape** — the new terrain direction for TK3.
+- **Streams Reflowing** and **Flow Control** — flowing rivers and tools for working with them.
+- **Nature's Spirit** and **Autumnity** — additional environments, trees and building materials.
+- **Let's Do WilderNature**, **Hybrid Aquatic**, **ShineaL's Prehistoric Expansion** and **Modern Apple Cows** — expand the wildlife selection.
 
-TK2's Copper-era script used Thermal sap/resin/latex into Dreams & Desires Raw Rubber. TNK3 uses the selected **Rubberworks Sapper and Resin** route.
+**Replaced**
 
-Compress **500 mB Resin** over a passive heater such as a lit Campfire, then smoke Raw Rubber into the pack's Rubber. Duplicate Rubberworks rubber/sheet/block outputs are disabled in favour of the chosen material.
+| TK2 | TK3 |
+|---|---|
+| Tectonic terrain setup | Wildshape terrain setup |
+| Alex's Mobs | Alex's Mobs NeoForge port |
+| Alex's Caves | Alex's Caves NeoForge port |
 
-Three Rubber make **three Belts**. Three Dried Kelp still make **one Belt**, preserving the early route. Funnels, Tunnels and the basic Pump do not demand unavailable Rubber to bootstrap Rubber production.
+**Removed:** Oh The Biomes We've Gone, Oh The Trees You'll Grow, Project Vibrant Journeys, Ecospherical Expansion, Dense Ores Abundant, Enhanced Celestials and Nyf's Spiders.
 
-Sealed Mechanisms now apply Copper Sheet, Rubber and Glass to a Rotation Mechanism, then finish with a Press.
+**Continuing:** Biomes O' Plenty, Regions Unexplored and Upgrade Aquatic. Alex's Mobs and Alex's Caves also continue through their replacement ports.
 
-## 5. AE2 manufacturing belongs in the Create factory
+## Dimensions
 
-The Inscriber and Extended Inscriber are disabled. Printed circuits and Printed Silicon use **Deployer + reusable die + Press**, with one-loop, guaranteed outputs.
+**Added:** **Deep Aether**, **Aether Villages** and **Amplified Nether**.
 
-Finished Logic, Calculation, Engineering and Concurrent Processors consume a printed circuit, **one Redstone and one Printed Silicon**, then a Press. This keeps the native material bill while changing the manufacturing method.
+**Replaced**
 
-AE2 press copying retains the original die and consumes an Iron Block. Initial presses retain their existing meteorite source; the pack does not give away initial tooling.
+| TK2 | TK3 |
+|---|---|
+| BetterEnd | BetterEnd: New Dawn |
+| BetterNether | BetterNether: New Dawn |
 
-The Crystal Assembler remains for its other work and has Mechanical Crafter construction. Circuit Cutter processor shortcuts are removed. Molecular Assemblers, Assembler Matrix and ME network equipment remain.
+**Removed:** **Ad Astra** and its space progression, **Aether Redux**, **Aether Lost Content** and **Twilight Tweaks**.
 
-The Calculation Machine is crafted **before** the ME Controller: four Quartz Glass corners, four Calculation Mechanisms on the sides, Certus Dust in the centre. A Stonecutter converts one Machine into one Controller. The former circular construction is gone.
+**Continuing:** The Aether, Twilight Forest and Deeper and Darker, alongside the expanded Nether and End. Deep Aether expands an existing destination; the Aether itself is carried over from TK2.
 
-Natural crystal budding remains enabled. Growth Accelerators and Crystal Fixer machines are disabled, without globally cancelling budding ticks.
+**Access changed:** Dimension Access Manager and TK2's blanket factory-stage dimension locks are removed. Exploration dimensions and the Wither remain outside mandatory factory progression. End Remastered and Twilight Forest retain their own access and progression rules.
 
-## 6. Renewable crystals and stone scale with the base
+## Bosses, dungeons and structures
 
-A Growth Lens converts Certus Dust into a Small Quartz Bud. Each native stage requires three explicit 100 mB Water fills: **nine Spout operations and 900 mB total** to reach a Cluster. Crushing returns 2–4 crystals, with an average of three.
+**Added**
 
-The eight custom chute generators supply **Andesite, Veridium, Ochrum, Asurine, Scoria, Diorite, Crimsite and Limestone**. Each uses a catalyst below the adjacent Lava source and a normal Chute below the output. It preserves Create's optimization and direct insertion behavior.
+- **Archaion: Echoes of the Fallen** — the Ancient Keep, its trials and the Last of Deepslate boss.
+- **Legendary Monsters** and **Bosses'Rise** — additional encounters.
+- **Ancient Remnants: Monoliths** — discoverable monuments and ancient powers.
+- **Integrated Cataclysm**, **Integrated Mowzie's Mobs** and **Integrated Seven Seas** — more integrated encounter and structure content.
+- **YUNG's Better Mineshafts** — a new addition to the structure selection.
 
-Seventeen real **ExtendedAE Infinity Stone Cells** take over repeated stone supply inside ME storage:
+**Replaced**
 
-- Calculation/1k: Cobblestone, Andesite, Diorite and Granite.
-- Reinforced/4k: Veridium, Ochrum, Asurine, Crimsite, Scoria, Scorchia and Limestone.
-- Industrial/16k: Stone, Deepslate, Tuff, Calcite, Basalt and Blackstone.
+| TK2 | TK3 |
+|---|---|
+| When Dungeons Arise | Integrated Dungeons Arise, with reworked structures and mod integration |
+| Original YUNG's structure projects | Their NeoForge counterparts |
 
-These are resource-specific cells with native ME behavior. They do not add infinite arbitrary items, free creative power or a general duplication mechanic.
+**Removed:** **Ice and Fire**, **Dragonseeker**, **The Graveyard**, **Structory**, **Medieval Buildings**, **Sky Villages**, **Explorations**, **YUNG's Bridges** and **Alex's Caves: Stuff & Torpedoes**.
 
-## 7. IE keeps the heavy work
+**Continuing:** Cataclysm, Mowzie's Mobs, Integrated Dungeons and Structures, Integrated Stronghold and Integrated Villages. YUNG's Dungeons, Desert Temples, Jungle Temples, Nether Fortresses, Ocean Monuments, Witch Huts and End Island continue through their ports.
 
-Immersive Engineering is added to the selected production stack, with routine manufacturing transferred to Create where supported.
+Cataclysm and Mowzie's Mobs were already in TK2; their **Integrated** addons are the additions here.
 
-Metal Press, Sawmill, Bottling Machine, Assembler, Automated Workbench, Mixer, Alloy Kiln, Fermenter, Squeezer and Refinery functions are disabled or converted. Create handles their supported recipes through its own processing families. Conveyor-based routine logistics move to Create.
+## Magic and spellcasting
 
-IE's **Coke Oven, Blast Furnace, Crusher, Arc Furnace, Excavator/Bucket Wheel, electrical wiring and distinctive power machinery** retain purpose.
+**Added**
 
-Reinforced Mechanisms use Electrum Wire, Electronic Component, Steel Plate and a Press. Industrial adds the advanced electronics, Steel Mechanical Component and screwdriver tooling needed for Heavy Engineering.
+- **Just Another Witchery Remake** — a separate witchcraft path.
+- **Ars Elemental**, **Ars Creo** and **Create: Wizardry** — expand Ars Nouveau and its connections with machinery.
+- **Resonant Arcana**, **Cataclysm: Spellbooks** and **Legendary Spellbooks** — expand the spell selection.
+- **Reliquified Iron's Spells** and **Apotheosis x Iron's Spellbooks Compat** — connect spellcasting to accessories and equipment.
 
-Create Diesel Generators was already present in TK2. It is retained and takes the selected fuel-production role in TNK3; it is not falsely listed as a brand-new mod. Immersive Petroleum's removal belongs to earlier TNK3 selection decisions, not a demonstrated removal from the TK2 3.05 manifest.
+**Replaced**
 
-## 8. Ore processing progresses from 1× to 5×
+| TK2 | TK3 |
+|---|---|
+| Mana Unification | Ars 'n Spells for the Ars Nouveau / Iron's Spells connection |
 
-| Capability | Process | Yield |
-|---|---|---:|
-| Basic | Raw smelting / Millstone route | 1× |
-| Brass | 1 Raw → 2 Crushed | 2× |
-| Industrial | Each Crushed → 2 Dust | 4× |
-| Eclipse | 4 Dust → 5 Ingots | 5× |
+**Removed:** Botania, MythicBotany, Malum, Reliquary Reincarnations and T.O Tweaks.
 
-Iron, Copper, Gold, Zinc, Aluminium, Nickel, Lead, Silver and Uranium share the supported chain. Zinc has a real tagged dust; packed Raw blocks give 18 Crushed.
+**Continuing:** Ars Nouveau and Iron's Spells 'n Spellbooks. Both already existed in TK2 and receive a larger integration role in TK3.
 
-Finished metal cannot feed back into a multiplying intermediate. Raw doubling no longer adds the separate three-nugget bonus. Renewable ore-stone bonuses remain where intended.
+## Enchanting and equipment upgrades
 
-Crushing Wheels retain their supported recipe byproducts and one 10% Experience Nugget roll. The exactly-one-paintball operation is excluded. Millstone policy keeps primary output rolls while removing unrelated byproducts from safely decoded recipes.
+**Added:** **Tons Of Enchants**, **Apothic Enchanting**, **Apothic Spawners** and **Apothic Compats**.
 
-Netherite is not given a new Scrap multiplier.
+Apothic Enchanting and Apothic Spawners are part of Apotheosis's newer modular setup. Their appearance as separate mods does not mean enchanting and spawner upgrades are entirely new to the pack.
 
-## 9. Excavation has more discoveries
+**Removed:** Ensorcellation and Neko's Enchanted Books.
 
-The Excavator integration adds ten resource deposit definitions and ten rare discovery definitions when optional materials are registered. Existing IE pools gain compatible additions and less ordinary recipe failure/filler.
+**Continuing:** Apotheosis, Apothic Attributes and Create: Enchantment Industry. Apotheosis station recipes now fit into the pack's manufacturing tiers.
 
-New metal-bearing stone mixes use 60% matching Create stone and 40% ore. The Certus pocket contains **60% Certus, 20% Sky Stone, 18% Quartz and 2% Fluix**.
+## Create, industry and power
 
-Magnetic and Primordial cave deposits connect to Alex's Caves. Ambrosial and Living Root deposits give the Aether and Twilight their own survey opportunities.
+**Added**
 
-These are biome-restricted virtual mineral resources. They do not place ordinary ore blocks, add duplicate vein features or rewrite old generated deposit data. Spawn weights remain relative, rather than percentages per chunk.
+- **Immersive Engineering** — heavy industry, electrical wiring, the Crusher, Arc Furnace and Excavator.
+- **Create Nuclear** — nuclear engineering within the Create selection.
+- **Create: Applied Kinetics** — more connections between Create and AE2.
+- **Create: Rubberworks** — the sap and rubber route used by early manufacturing.
+- **Create: Aquatic Ambitions**, **Create: Dragons Plus** and **Create Slice & Dice**.
+- **Alchemical Lasers** — lens-based processing used throughout the new production route.
 
-## 10. Magic joins the production chain
+**Replaced**
 
-Ars Nouveau and Iron's Spells remain important continuities from TK2. Ars Elemental, Ars Creo, Create Wizardry, Ars 'n Spells and selected spell integrations develop their connections in TNK3. Just Another Witchery Remake is a selected separate magic path.
+| TK2 | TK3 |
+|---|---|
+| Thermal / The Factory Must Grow industrial tiers | Immersive Engineering integrated with Create |
+| Dreams & Desires rubber route | Create: Rubberworks |
+| CobbleGenRandomizer | The pack's Create-based stone generators |
 
-The Arcane Mechanism starts from Industrial, fills **400 mB Dragon's Breath**, then receives a Source Gem, Sturdy Sheet and Mana Tube. It has no extra Tuning Fork or finishing Press.
+**Removed**
 
-Mana Tubes use **300 mB Mana**. Arcane Essence uses Lapis, Amethyst and an Experience Nugget in a superheated Mixer; one Essence plus 250 mB Water makes 250 mB Mana.
+- **Thermal Foundation**, **Thermal Expansion**, **Thermal Dynamics**, **Thermal Innovation** and **Thermal Cultivation**.
+- **Create: The Factory Must Grow**, **Create: Dreams & Desires** and **Create: Stuff & Additions**.
+- **Create: Oppenheimered**, **Create: Confectionery**, **Create: Bitterballen** and **Petrol's Parts**.
 
-Automatic scroll recipes discover valid enabled/craftable native spells, ink outcomes and supported addon spells. Two Deployers use data-aware allow-list filters to select the school and one exact spell/level. Focus and Ink remain consumed; research-only spells retain their native path.
+**Continuing:** Create, Create: Crafts & Additions, Create Diesel Generators, Create: Enchantment Industry, Create: Central Kitchen and Create Deco. Diesel Generators was already present in TK2 and remains the selected fuel-production mod.
 
-The latest correction avoids the failing reverse rarity lookup and removes the former forced full-pack startup reload. A powered full-pack scroll line remains a beta validation item.
+## Storage, transport and travel
 
-**Resonant Arcana** continues as the custom spell addon. A changing test-build spell roster is not treated as a fixed public release feature count.
+**Added**
 
-## 11. Eclipse and Creation have a concrete finale
+- **ExtendedAE** — expands the existing AE2 network and storage options.
+- **Create Aeronautics** and **Create: Hypertubes** — new transport projects.
+- **Create Aeronautics: FTB Chunks** — claim integration for Aeronautics.
+- **Angel Ring** — a crafted flight option later in progression.
+- **Sophisticated Backpacks Create Integration**, **Sophisticated Storage Create Integration** and **Yukami's Sophisticated Backpack Tab**.
+- **Waystones / FTB Chunks Compatibility** and **Waystones: Sable** — support the current travel and moving-build setup.
 
-AE2 Singularities and dye processing connect to the Chromatic line. A Dye Entangled Singularity produces exactly one of five possible paintball colours; draining advances colour and recovers Ink. Stop at Purple for Chromatic Compound.
+**Replaced**
 
-Native Create **Chromatic Compound, Refined Radiance and Shadow Steel** are canonical. Refined Shadow Alloy, Radiant Coils and Spectral Ruby Tubes feed the Eclipse Mechanism. It correctly starts from **Arcane** and consumes 200 mB Uncommon Ink before its Press.
+| TK2 | TK3 |
+|---|---|
+| Ender Storage | Linked Chests, including linked chests and pouches |
 
-Creation adds graphite/electrode processing, Arc Furnace Lapis Alloy, charging, advanced sheets, an Amethyst Circuit Gate and Matter Constructs.
+**Removed:** Create: Steam 'n' Rails, JourneyMap, JourneyMap Integration, Paragliders, Elytra Slot, Beyond Mines: Falling, Carry On, Corpse, Trash Cans and Inventory Sorter.
 
-The Boot Drive is made from a full 16k Item Cell, Radiant Coil and Lapis Block. It is retained **without durability loss in the Unstable Core assembly**; its registered durability is not a consumption instruction.
+**Continuing:** Applied Energistics 2, Sophisticated Storage, Sophisticated Backpacks, Waystones and FTB Chunks. Create trains remain part of Create; the Steam 'n' Rails addon is the removal.
 
-An Eclipse Lens makes an Unstable Creation Gem in **1,000 ticks at a minimum 32 RPM**. The final Creation Core passes through nine deployments twice, consuming two each of the eight prior mechanisms and two Matter Constructs. At least three Unstable Creation Gems are needed per Core before other upstream costs.
+## Questing, trading and multiplayer
 
-Eight Creation Cores around a Netherite Block craft the Creation Machine endpoint. Functional uses remain unassigned; the wiki does not invent creative-energy or infinite-resource behavior for it.
+**Added**
 
-## 12. Characters have their own development
+- **TnK Workshop** — the Quest Projector, construction tools, cages, mirrors and Trading Hub.
+- **Create: Trading Floor** and **wd's Selling Bin** — new trading and selling options.
+- **Certain Questing Additions**, **FTB Quests Entity Visualization** and **Quests Kill Task Tweaks** — support the rebuilt questbook.
 
-TK2 used Passive Skill Tree and its addon. TNK3's supplied configuration uses **Pufferfish Skills and TNK Progression**.
+**Removed:** Create: Numismatics, Create: Missions, QuestsAdditions, Starter Kit, Simple Voice Chat and PVPFlagging.
 
-The current tree contains **588 one-point nodes**, six configured path families and a **175-point spending limit**. The category does not set an exclusive root and keeps skills after death. The old web planner's class/subclass restrictions are not carried into this guide.
+**Continuing:** FTB Quests, FTB Teams, FTB Ranks, FTB Essentials, FTB Chunks and Lootr.
 
-Seven activity tracks cover exploration, crafting, fishing, farming, combat, engineering and mining. Requirements and rewards grow; qualifying actions, natural-resource tracking and cooldowns reduce repetitive farming.
+**Also replaced:** Simple Discord RPC's presence role moves into TnK Workshop.
 
-Character XP is distinct from vanilla XP points. Configured growth ceilings and team unlock sharing exist, but a final reward-to-chapter map needs the matching quest export. Mob scaling uses the supplied ±4 variance and configured health/damage factors.
+The questbook is being rebuilt around ten production chapters, with Tutorial, Progression, Market, Useful Items, Bulletin Board, Exploration, Bosses, The Eyes and mod-specific branches. The target is at least **1,500 useful quests**.
 
-The wiki now includes a searchable **read-only node reference**, rather than an outdated authoring planner.
+The **Trading Hub** is a directory for player shops and other destinations, with search, icons and Waystones travel. Players conduct trades at the destinations they visit.
 
-## 13. Twenty backgrounds and independent titles
+## Building, decoration and settlements
 
-TNK Progression 1.2.0-private.1 implements **twenty origins with two perks each**. The first Character visit opens a three-page chooser. Players can preview a background before confirming.
+**Added**
 
-Choices cover mining, woodcutting, farming, mounts, fishing, hunting, repairs, building, engineering, enchanting, potions, gathering, trading, travel, swimming, defence, stealth, undead encounters, resilience and mana.
+- **Arts & Crafts**, **Block Pack**, **Biomes O' Plenty: Chipped** and **Rechiseled: Chipped**.
+- **Let's Do Furniture**, **Let's Do Lili's Pottery**, **Let's Do Hearth & Timber**, **Let's Do Camping** and **Let's Do Alpine Whispers**.
+- **TnK Workshop's** Measuring Pencil, Builder's Satchel, Builder's Brush and Quest Projector add practical tools for player-built towns.
 
-Bonuses have concrete limits: natural ore/log receipts, actual repairs, potion drinking, controlled living mounts, separate block reach and vanilla XP. Hedge Mage requires Iron's mana attributes.
+**Removed**
 
-Existing confirmed origins retain their saved perk revision. Cosmetic titles, passive title selection, origins and tree points remain separate systems.
+- **MineColonies**, **TownTalk**, **StyleColonies**, the **Byzantine style pack**, **Domum Ornamentum**, **Structurize** and **Multi-Piston** — the previous colony-management selection.
+- **Another Furniture**, **Beautify**, **Dawn of Time**, **Handcrafted** and **Refurbished Furniture**.
+- **Create: Copycats+**, **Create: Bells & Whistles** and **Create: Interiors**.
+- **Construction Wand**, **Diagonal Fences**, **Visual Workbench**, **Torchmaster**, **Etched** and **Immersive Melodies**.
 
-Founder uses the stable beta-tester title ID and is cosmetic. The pack can grant configured titles to account UUIDs at login; the shipped roster is empty. Titles have supported commands, while final quest reward assignments remain part of the book rebuild.
+**Continuing:** Chipped, Rechiseled, Architect's Palette, Supplementaries, Amendments, Quark and Create Deco. Town building now centres on player-built settlements, shared infrastructure and shops.
 
-## 14. Equipment gets discovery and salvage
+## Farming, food and fishing
 
-The custom **Unidentified Loot** system connects modded equipment pools to identification, rarity, Apotheosis affixes, collection and salvaging. The Mechanical Identifier brings that loop into Create.
+**Added**
 
-Six qualities are Common/white, Uncommon/green, Rare/pink, Epic/purple, Legendary/light blue and Mythic/orange. Tier and rarity remain separate.
+- **Croptopia** and **Farmer's Delight Croptopia**.
+- **Corn Delight**, **Veggies Delight**, **Fruits Delight**, **Nature's Delight** and **Hybrid Delights**.
+- **Let's Do Farm & Charm** and **Let's Do Smoker**.
+- **Starcatcher**, **Hybrid Aquatic** and their compatibility addon — the new fishing and aquatic selection.
+- **Spice of Life: Carrot Edition** — food-variety progression.
 
-The supplied config includes **48 boss pool definitions** and dimension routing for Aether, Twilight, Nether and End families. Identification and salvage use configured vanilla XP-point costs; signature effects and refund caps limit reward loops.
+**Replaced**
 
-The base export's older embedded JAR and later config revisions need alignment in the final release. The wiki documents the system without claiming a fresh complete-pack loot test.
+| TK2 | TK3 |
+|---|---|
+| Legacy Let's Do Bakery | Let's Do Bakery's Farm & Charm version |
+| Aquaculture 2 fishing selection | Starcatcher + Hybrid Aquatic |
 
-## 15. Workshop adds settlement tools
+**Removed:** Ender Crop, Harvest With Ease, Fast Leaf Decay, Let's Do Meadow, Let's Do Candlelight, Let's Do NetherVinery and Let's Do Brewery.
 
-Towns & Kingdoms Workshop provides the Quest Projector, Measuring Pencil, Builder's Satchel, Builder's Brush, mirrors, Mob Cage and the single-use Spawner Cage.
+**Continuing:** Farmer's Delight, Create: Central Kitchen, Let's Do Vinery, Let's Do HerbalBrews, Let's Do BloomingNature and Let's Do Beachparty.
 
-The Projector supports quests/tasks, images and formatted text. Spawner tooltips expose operational settings; a captured Spawner Cage is consumed after placement.
+## Interface, visuals and recipe discovery
 
-The **Trading Hub** adds owner-editable destination listings, search, sorting, pages, icons and Waystones-backed teleportation. It is a shop directory and travel feature; actual item trading belongs to the shop built at the destination.
+**Added:** **BetterF3**, **Fancy Tab Sections**, **Obscure Tooltips**, **Simply Tooltips**, **Particular Reforged**, **Subtle Effects**, **Swivel**, **Vanilla Backport**, **Polytone** and **GuideME**.
 
-Workshop 0.11.10 preserves the Trading Hub's purple GUI, corrected vanilla-scale layout, original back arrow and Teleport control. **No Hub is automatically granted on login.** The intended starter route is an FTB Quests reward using the stable Sharestone item ID.
+**Removed:** Better Advancements, Blur, Client Tweaks, Colorful Hearts, Overloaded Armor Bar, Durability Tooltip, Legendary Tooltips, More Overlays Updated, Raw's Visual Keybinder, Traveler's Titles, Medieval Music, Falling Leaves, Visuality Reforged, Enhanced Block Entities, Continuity, Forge CIT, Entity Model Features, Entity Texture Features, Immersive UI, Catalogue, Server Tab Info and Remove Chat Bracket.
 
-The globe is a block renderer rather than a ticking statue entity. Full claims, multiplayer transactions and live cross-dimension integration still need the final combined-pack test.
+**Recipe browsing changes:** JEI stays, with named search groups, clearer item information and **97 custom Ponder lessons**. Just Enough Resources, Nature's Compass, Polymorph and Polymorphic Energistics are removed.
 
-## 16. Teaching and recipe discovery are rebuilt
+**Resource packs added:** Create Style Sophisticated Backpacks, Create Style Sophisticated Storages, Journalistic FTB Quests, Simply Swords Reforged, Immersive Engineering: Reimmersed and Updated Engineering.
 
-**Ponder Collection 1.3 contains 97 authored scenes.** The lessons cover production, processors, magical materials, industrial multiblocks, generators, Conduit Cage and Workshop features.
+**Shader options added:** Legendary Atmosphere, Miniature Shader, Noble Shaders and Sildur's Vibrant Shaders.
 
-Recent refinements use actual Belt items, adjacent assembly stations, aligned fan/Depot heights, compact platforms and purposeful multiblock camera rotation/zoom. The Trading Hub shows both halves. Workshop includes the optional IE rendering and Enchantment Industry/Apotheosis salvage fixes.
+## Performance and compatibility
 
-Players can hover supported items directly in quest tasks and hold W. Native mod lessons remain alongside the custom collection.
+**Replaced**
 
-JEI gains **nineteen named tag searches**, centralized information pages and short tooltips for important conditions. Visible custom names no longer receive a redundant TNK prefix. Cinder recipes use native **Create Cinder Flour**; the obsolete custom dust has a migration conversion.
+| TK2 | TK3 |
+|---|---|
+| Embeddium | Sodium |
+| Oculus | Iris |
+| Noisium | Noisiumed |
 
-The current runtime has **92 JavaScript files: 11 startup, 76 server and 5 client**. Shared catalogues, recipe-plan validation, safer optional-mod handling, removal batching and recipe timings replace repeated scattered logic. This count describes source files, not a claim of faster measured full-pack startup.
+**Added:** AllTheLeaks, Concurrent Chunk Management Engine, Create: Catalyst, Entity Culling, Lithium, MoreCulling, ScalableLux, GPUBooster Reforged, Ixeris, YAMO and No Structure Overlap.
 
-## 17. Exploration becomes more flexible
+**Removed:** Adaptive Performance Tweaks, AI Improvements, Achievements Optimizer, Embeddium++, CullLessLeaves Reforged, Farsight, FastWorkbench, Get It Together Drops, Let Me Despawn, Mobtimizations, No See No Tick, Saturn, Smooth Chunk Save, Structure Essentials, FTB Quests Optimizer, Connectivity, Does It Tick, Observable, DEUF, Detected setBlock Be Gone and SerializationIsBad.
 
-TK2 3.05's LockDimensions script explicitly locked the End, Aether, Nether and Twilight Forest on server load through Dimension Access Manager.
+**Continuing:** ModernFix, FerriteCore, Dynamic FPS and spark.
 
-The current custom route does not reproduce those blanket locks. The Wither and exploration dimensions remain outside a mandatory global factory stage. Native End Remastered and Twilight requirements remain.
+The change to NeoForge also replaces several supporting libraries and removes the old Sinytra Connector / Forgified Fabric API setup. [The complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/) includes the dependency and support-tool changes.
 
-Alex's Caves, Alex's Mobs, BetterEnd, BetterNether, YUNG's structures and other families continue through newer ports/projects. Integrated structures and selected boss mods expand the encounter stack.
+## The main gameplay reworks
 
-The terrain direction is **Wildshape**, with Streams Reflowing and Flow Control. The uploaded base still uses UltraTerraForged-era files; final curated biome/preset decisions need the matching release package.
+The mod changes support a new factory-to-adventure loop:
 
-The new custom End Remastered boss/chest mapping file is currently empty. Native eye sources remain. Proposed boss bounties, rematch tokens and timers are not represented as fully configured features yet.
+| Area | What changes in TK3 |
+|---|---|
+| Main progression | Ten chapters: Manual → Andesite → Copper → Brass → Calculation → Reinforced → Industrial → Arcane → Eclipse → Creation |
+| Early factory | Manual mechanisms lead into cheaper Deployer production; Rubberworks supplies sap and rubber, including the more efficient Belt recipe |
+| AE2 | Processors move from Inscribers to Create assembly, with reusable tooling; Calculation machinery leads into the ME Controller |
+| Heavy industry | Create handles routine manufacturing while IE supplies heavy processing, electrical infrastructure and excavation |
+| Ore processing | Supported ores progress through 1×, 2×, 4× and 5× processing |
+| Renewable materials | Create stone generators, laser-grown Certus and tiered ExtendedAE Infinity Stone Cells support larger factories |
+| Magic production | Ars materials, Mana, Dragon's Breath, spell-scroll production and Alchemical Lasers connect magic to manufacturing |
+| Character builds | Twenty origins, activity progression, titles and a skill tree with a limited spending budget |
+| Equipment rewards | Identify, compare and salvage equipment through Unidentified Loot; automate identification with Create |
+| Exploration | Dimension access is independent of global factory stages, while discoveries feed useful materials back into the workshop |
+| Settlements | Player-built towns, practical construction tools, quest displays and a Trading Hub connect community projects |
 
-## 18. A comfortable base still matters
+Detailed recipes and controls belong in the [progression guide](https://mikaaah.github.io/TownsAndKingdoms/progression/), [character guide](https://mikaaah.github.io/TownsAndKingdoms/character/) and [Workshop guide](https://mikaaah.github.io/TownsAndKingdoms/workshop/).
 
-Farmer's Delight, building blocks and established storage families remain part of the pack. Croptopia, vegetable/corn/fruit integrations, Nature's Spirit and the updated Let's Do family broaden farming and building choices.
+## Complete mod comparison
 
-Practical fiber, string, paper and building-material alternatives connect biomes to everyday use without adding a mechanism tax to every household item.
+[Browse every added, retained and absent project](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/), including libraries, resource packs and shaders. [Snapshot sources](https://mikaaah.github.io/TownsAndKingdoms/status/) record the exact pack references behind this comparison.
 
-The selected infinite-food restrictions remove Everlasting Beef, Eternal Steak and conditional Infinity Ham. Normal meals remain useful. Spice of Life: Carrot Edition is selected; its final milestones are not copied from an older TK2 assumption.
-
-MineColonies is absent from the supplied TNK3 manifest. Older candidate pages and inherited quest entries do not establish that it is installed. The current settlement guide focuses on player-built towns, shared infrastructure and trading.
-
-## 19. Targeted restrictions replace accidental shortcuts
-
-Selected Ender Leads, mob-capture upgrades, Spatial Anchor, IE Chunk Loader, duplicate Rubberworks materials and the Alex's Caves Nuclear Bomb are disabled. The custom hook also blocks primed nuclear bomb entities.
-
-Capturing enchantment acquisition and the selected spawner runes that ignore conditions, ignore players or remove AI are restricted. Boss jar capture remains protected.
-
-The Apotheosis flying-potion route is disabled. The **Angel Ring** has the specified 11 × 7 wing-shaped Mechanical Crafter recipe, with forty ingredients at the Arcane tier. Its own flight behavior stays native.
-
-Linked Chest and Pouch construction now require Light Engineering. Apotheosis station construction progresses through Copper, Brass, Calculation, Light Engineering and Arcane ingredients, retaining native station operations.
-
-Hidden legacy/developer items are distinguished from disabled gameplay items. Existing stacks are not described as automatically erased.
-
-## 20. The manifest comparison
-
-The TK2 export contains **323 CurseForge project entries**. The TNK3 base export contains **283**. By exact project slug, **106 are retained, 177 are newly present and 217 are absent**.
-
-These entries include mods, libraries, shaders and resource packs. Local custom JARs and the later LinkedChests reference sit outside that manifest-only comparison. A port migration can put the old project in the absent list and its replacement in the added list.
-
-| Family | TK2 project / role | TNK3 project / role |
-|---|---|---|
-| Alex's Caves and Mobs | Original Forge projects | Selected NeoForge ports |
-| BetterEnd / BetterNether / BCLib | Original projects | New Dawn projects |
-| YUNG's structures | Forge projects | NeoForge projects |
-| Rendering/shaders | Embeddium / Oculus | Sodium / Iris |
-| Skill system | Passive Skill Tree family | Pufferfish + TNK Progression |
-| Heavy progression | TFMG / Thermal / Ad Astra era | IE + Create-integrated ten-chapter route |
-| Player-linked storage | Ender Storage | Later supplied LinkedChests integration |
-| Colony management | MineColonies family | Not in the supplied current manifest |
-| Magic candidates | Botania / Malum in TK2 | Not restored from inherited quest labels |
-
-[Browse every added, retained and absent project](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/). The reference retains exact project URLs and authors so replacement families can be inspected.
-
-## 21. Questing and release status
-
-The selected quest structure includes Tutorial, Progression, Market, Useful Items, Bulletin Board, ten production chapters, mod-specific branches, Exploration, Bosses and The Eyes.
-
-The target is **at least 1,500 useful quests**. The supplied current base export has 1,240 records across 24 chapter files, compared with TK2's 1,241 across 24. Their inherited text and old items mean that number is not a finished TNK3 quest count.
-
-Final completion/title rewards, boss-to-eye assignments, server-board jobs and rematch costs need a complete current export. Existing confirmed design choices are retained as direction, without labelling unfinished wiring as implemented.
-
-Official EU/US communities and events remain the multiplayer direction. Live addresses, availability and beta windows should come from the current pack/Discord, not guessed wiki entries.
-
-## 22. What was checked for this wiki revision
-
-The rewrite inspects actual archive manifests, current JavaScript, skill definitions, configs, custom JAR resources and supplied feature source. It preserves TK2 documentation separately and records source hashes.
-
-The published documentation removes the outdated planner, fake current recipe totals and obsolete campaign names. Current guides, node/title/Ponder references, project comparison, redirects, search, internal links and responsive presentation are checked as documentation.
-
-This work does **not** claim a new Minecraft launch, a complete multiplayer playthrough or universal compatibility. Historical tests shipped with packages retain their original scope. The next combined beta still needs current quest files, final terrain settings and one matched manifest/JAR/config set.
-
-Primary release baseline: [TK2 3.05 on CurseForge](https://www.curseforge.com/minecraft/modpacks/towns-kingdoms/files/5735918). See [snapshot sources](https://mikaaah.github.io/TownsAndKingdoms/status/) for archive identities and hashes.
+Replacement ports keep their gameplay families in the pack: Alex's Caves, Alex's Mobs, BetterEnd, BetterNether and the continuing YUNG's structures are not counted here as wholly removed content.

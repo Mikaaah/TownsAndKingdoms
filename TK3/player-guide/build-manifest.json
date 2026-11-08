@@ -1,6 +1,6 @@
 {
   "snapshot": "tnk3-development-2026-11-08",
-  "build_fingerprint": "d5c05cd1e14220f50f39",
+  "build_fingerprint": "b4003ff6c576217c2f46",
   "pages": [
     {
       "route": "",
@@ -164,7 +164,7 @@
     },
     {
       "route": "changelog/",
-      "title": "First development changelog",
+      "title": "TK2 → TK3 changelog",
       "legacy": false
     },
     {
