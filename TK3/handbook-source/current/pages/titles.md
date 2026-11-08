@@ -10,14 +10,14 @@ The supplied perk config uses a **30-second swap cooldown**. Its definitions inc
 
 ## Founder
 
-The title ID <code>tnk:beta_tester</code> displays **Founder** with the supplied amethyst artwork. It is cosmetic: no XP, skill points, attribute bonus or progression bypass.
+The title ID <code>tnk:beta_tester</code> displays **Founder** with amethyst artwork. It can be selected as a cosmetic title independently of the equipped passive.
 
-Pack defaults can grant titles to listed account UUIDs at login. The shipped default roster is empty. A server-only roster update does not update a separate singleplayer installation.
+**Beta 1.0 includes Founder passive bonuses:** First Footsteps adds **3% base movement speed** and Founding Hands adds **5% base block-breaking speed**. These belong to the selected passive; owning the title alone does not stack its bonuses with every other title.
 
 ## Reward integration
 
 FTB Quests can call the supported title commands from configured rewards. The correct ID must already exist in the installed title catalogue. The wiki does not assign guessed completion triggers to current chapters.
 
-Ordinary grants are stored in the relevant world. Removing someone from an automatic roster stops future default grants; it does not automatically erase an already saved achievement.
+Beta 1.0 includes **58 configured titles**. Unlock requirements and quest rewards should use the catalogue shipped with this pack.
 
 [Browse the configured title reference](reference/) for IDs and passive descriptions. Origin selection and skill-tree spending are independent systems.

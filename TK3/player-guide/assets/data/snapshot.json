@@ -1,70 +1,43 @@
 {
   "date": "2026-11-08",
-  "snapshot": "tnk3-development-2026-11-08",
+  "snapshot": "tnk3-beta-1.0",
+  "version": "Beta 1.0",
+  "authority": "The uploaded Beta 1.0 archive is the complete current mod and file baseline.",
   "minecraft": "1.21.1",
-  "loader": "NeoForge 21.1.262 (export baseline)",
+  "loader": "neoforge-21.1.262",
   "java": 21,
   "chapters": 10,
   "skills": 588,
   "origins": 20,
   "ponders": 97,
-  "manifest_projects": 283,
+  "manifest_projects": 315,
+  "bundled_mods": 3,
   "previous_manifest_projects": 323,
-  "retained": 106,
-  "added": 177,
-  "absent": 217,
+  "retained": 122,
+  "added": 193,
+  "absent": 201,
   "scripts": {
-    "startup_scripts": 11,
+    "startup_scripts": 12,
     "server_scripts": 76,
     "client_scripts": 5
   },
-  "quest_export_chapters": 24,
-  "quest_export_records": 1240,
+  "construction_plans": 344,
+  "quest_export_chapters": 42,
+  "quest_export_records": 1036,
   "tk2_quest_chapters": 24,
   "tk2_quests": 1241,
   "sources": [
     {
-      "name": "03-Towns-Kingdoms-3-Beyond-the-Forge.zip",
-      "label": "TNK3 export",
-      "sha256": "82b025aea59d81716e30fb619e93067d4b5ec475f765c954cd630628375d64bf",
-      "bytes": 66898410
-    },
-    {
-      "name": "04-Modsjars-1-.zip",
-      "label": "Supplied mod JAR references",
-      "sha256": "a2bcb0b3462205004f7ffe25114c55fdec08c08e47ab648227844127e93e57ef",
-      "bytes": 229585136
-    },
-    {
-      "name": "TNK3_Full_KubeJS.zip",
-      "label": "KubeJS revision 61 / Ponder 1.3",
-      "sha256": "bc2bd0e6bc4ea6e905635cf53b0f5142fe30e864321b8dcdfe0ff692746e4499",
-      "bytes": 20233400
+      "name": "Towns & Kingdoms 3 - Beyond the Forge-Beta 1.0.zip",
+      "label": "Authoritative TNK3 Beta 1.0 export",
+      "sha256": "bee54bfb83d877982538e81b769a17bf8a6f4bccecfb9ea5a554b910c0a50bb7",
+      "bytes": 20685175
     },
     {
       "name": "Towns  Kingdoms 2  A New World-3.05.zip",
       "label": "TK2 3.05 release",
       "sha256": "27e214ef445d8cd98400ec2e35300e980b9c9732e3fbd76c1695462b609cc82b",
       "bytes": 242712204
-    },
-    {
-      "name": "tnkprogression-1.2.0-private.1.jar",
-      "label": "TNK Progression 1.2.0-private.1",
-      "sha256": "739fed011982d9f9f236ab37531f9c23fdb63f1173e2f1537f9ebd5fdfc8d6a0",
-      "bytes": 2256635
-    },
-    {
-      "name": "towns-and-kingdoms-workshop-0.11.10-neoforge-1.21.1.jar",
-      "label": "Workshop 0.11.10",
-      "sha256": "5eb10292d38905f8f6cc2bb866eea43dc4502eef4f22144d23bd41a1c1386f59",
-      "bytes": 947251
-    },
-    {
-      "name": "TNK_Origins_1.2_Notes_and_Previews.zip",
-      "label": "Origin behavior and verification notes",
-      "sha256": "29bf5184141d1cb05ae4a8549eeb5611e0c68ba09896cebaa1ac7e936b1672e7",
-      "bytes": 807347
     }
-  ],
-  "construction_plans": 344
+  ]
 }

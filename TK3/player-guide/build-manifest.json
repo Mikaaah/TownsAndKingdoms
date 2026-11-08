@@ -1,6 +1,6 @@
 {
-  "snapshot": "tnk3-development-2026-11-08",
-  "build_fingerprint": "b4003ff6c576217c2f46",
+  "snapshot": "tnk3-beta-1.0",
+  "build_fingerprint": "3563179086e9a03133e0",
   "pages": [
     {
       "route": "",
@@ -99,7 +99,7 @@
     },
     {
       "route": "quests/",
-      "title": "The questbook",
+      "title": "The Beta 1.0 questbook",
       "legacy": false
     },
     {
@@ -154,7 +154,7 @@
     },
     {
       "route": "status/",
-      "title": "Snapshot & sources",
+      "title": "Beta 1.0 files & sources",
       "legacy": false
     },
     {
@@ -164,7 +164,7 @@
     },
     {
       "route": "changelog/",
-      "title": "TK2 → TK3 changelog",
+      "title": "Beta 1.0 changelog",
       "legacy": false
     },
     {
@@ -189,7 +189,7 @@
     },
     {
       "route": "mods/",
-      "title": "Mod inventory",
+      "title": "Beta 1.0 mod inventory",
       "legacy": false
     },
     {
@@ -314,5 +314,5 @@
     "3.0/witchery/": "magic/",
     "maintenance/preview/": "guides/"
   },
-  "search_entries": 1354
+  "search_entries": 1389
 }

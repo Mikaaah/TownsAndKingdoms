@@ -1,49 +1,57 @@
-# Snapshot & sources
+# Beta 1.0: files and sources
 
-This is the **8 November 2026 development reference**, not a newly announced public TNK3 release. The supplied TNK3 manifest has an empty pack-version field; the wiki does not invent a release number.
+**Towns & Kingdoms 3 — Beyond the Forge · Beta 1.0 · 8 November 2026**
 
-## Evidence used
+The uploaded **Beta 1.0 ZIP is the authoritative baseline** for the current mod selection, configs, KubeJS, quests and pack resources. The wiki follows this archive. Earlier exports, separate test installations and proposed additions do not extend its modlist.
 
-| Source | What it establishes |
+## Pack version
+
+| Setting | Beta 1.0 |
 |---|---|
-| Uploaded TNK3 export | Base manifest, configs, skill data and inherited quest export |
-| Full KubeJS package, revision 61 | Current production recipes, assets, JEI cleanup and Ponder Collection 1.3 |
-| Supplied twenty mod JARs | Reference versions for the installed integration families |
-| TNK Progression 1.2.0-private.1 and its notes | Twenty implemented origins, current UI and compatibility rules |
-| Workshop 0.11.10 and integration source | Trading Hub behavior and merged Ponder compatibility |
-| TK2 3.05 client archive | Actual previous manifest, scripts and quest records |
-| Current project decisions | Quest grouping, optional exploration and removal of the old planner |
+| Minecraft | 1.21.1 |
+| Loader | NeoForge 21.1.262 |
+| Java | 21 |
+| CurseForge manifest projects | 315 |
+| Directly bundled custom mods | 3 |
+| Bundled mods | TnK Workshop, Unidentified Loot and Wildshape |
 
-The sources are cumulative. The older export's bundled custom JARs and recipes are not silently treated as newer than the separate updates.
+TnK Progression, Resonant Arcana, Alchemical Lasers, Flow Control and Combat Punchy are included through the manifest. The three bundled mods are additional entries; they are not missing dependencies to fetch from an older export. Libraries are included in the project count, which is different from a runtime count of loaded mod IDs.
 
-## Count things consistently
+## Included systems
 
 | Reference | Count |
 |---|---:|
-| Current production chapters | 10 |
+| Production chapters | 10 |
 | Configured skill nodes | 588 |
-| New-character origins | 20 |
-| Authored Ponder lessons | 97 |
-| Base TNK3 manifest projects | 283 |
-| TK2 3.05 manifest projects | 323 |
-| Current KubeJS runtime files | 92 |
+| Character origins | 20 |
+| Custom Ponder lessons | 97 |
+| Authored construction definitions | 344 |
+| Startup scripts | 12 |
+| Server scripts | 76 |
+| Client scripts | 5 |
 
-Manifest entries include libraries, shaders and resource packs. They are not a count of gameplay mods or loaded mod IDs.
+The production definitions, skill tree and custom Ponder collection match the previously documented route. The beta also includes the quest-icon registration script and its artwork.
 
-The inherited TNK3 export has **1240 records in 24 chapter files**, versus **1241 in 24** for TK2. These similar counts reflect migration material, not completion of the new questbook. The old website's 353-quest generated campaign is also superseded.
+## Questbook progress
 
-## What still needs a combined beta build
+The archive contains **42 chapter files and 1,036 quest records**. This includes the new layout, unfinished pages and inherited legacy chapters. It is not a count of finished quests for the rebuilt campaign.
 
-- A complete quest export with current task text, rewards and title/progression triggers.
-- A single release manifest pairing newer custom mods, configs and the current scripts.
-- Confirmation of the final terrain presets and curated biome exclusions.
-- Full client/server launch and gameplay checks across the selected combination.
-- Live multiplayer validation of Trading Hub claims, travel and shop interactions.
+The new production chapters I–VII contain **143 records**. Chapters VIII–X have their pages in place but no quest records yet. The ten-chapter recipe progression exists independently of those unfinished quest pages.
 
-The old Alchemical Lasers 0.1.0 in the base export does not have the Growth Lens required by current recipes. Old loot JAR/config revisions also require alignment. These are packaging checks, not problems solved by changing wiki text.
+Town Square, Forging Ahead, Crafts & Curiosities, Realms & Relics and Seasonal Tales are the new group layout. The export also retains older groups and chapters, including references to removed mods. Those labels do not add mods to the Beta 1.0 inventory.
 
-## Reproducible reference
+## Comparing with TK2
 
-[Download snapshot metadata](../assets/data/snapshot.json) · [Current manifest](../assets/data/tnk3-manifest.json) · [TK2 manifest](../assets/data/tk2-manifest.json) · [Full inventory comparison](../assets/data/inventory.json)
+The baseline remains the actual **TK2 3.05 client archive**. Its manifest has 323 projects. Matching **CurseForge project IDs** gives **122 retained, 193 newly present and 201 absent projects** in Beta 1.0. Renamed projects such as Ponder for KubeJS keep their identity; replacement ports with different project IDs remain separate entries.
 
-Every primary archive/JAR has a SHA-256 in the snapshot metadata. The wiki build validates its local links, source counts, current chapter route and archived-page preservation. Those are documentation checks; they do not launch Minecraft.
+[Read the category changelog](../changelog/) · [Browse the full comparison](../mods/comparison/)
+
+## Exact source reference
+
+[Snapshot and archive hashes](../assets/data/snapshot.json) · [Beta 1.0 manifest](../assets/data/tnk3-manifest.json) · [Bundled builds](../assets/data/jar-references.json) · [Verified manifest-pinned custom builds](../assets/data/pinned-custom-builds.json) · [Quest export summary](../assets/data/quest-export.json)
+
+The Beta 1.0 archive's SHA-256 is:
+
+<code>bee54bfb83d877982538e81b769a17bf8a6f4bccecfb9ea5a554b910c0a50bb7</code>
+
+The source refresh checks archive contents, manifest identities, config data, recipe definitions and pinned custom artifacts. The website checks validate its build, navigation, search and preserved archives. They do not represent a new Minecraft launch or multiplayer playthrough.

@@ -1,12 +1,12 @@
 # TK2 → TK3: what changed?
 
-**Changelog 01 · Beyond the Forge · 8 November 2026**
+**Beta 1.0 · Beyond the Forge · 8 November 2026**
 
 Towns & Kingdoms 3 moves from Minecraft 1.20.1 / Forge to **Minecraft 1.21.1 / NeoForge**, with Java 21. Create remains at the heart of the pack, alongside a new industrial route, character progression, more integrated adventures and a broader selection of farming and building mods.
 
-This compares **TK2 3.05** with the current **TK3 development version**. Each category separates additions, removals and replacements. Mods listed as **continuing** were already part of TK2.
+This compares **TK2 3.05** with **TK3 Beta 1.0**. The Beta 1.0 pack files define the complete current mod selection. Each category separates additions, removals and replacements. Mods listed as **continuing** were already part of TK2.
 
-[Download this changelog](https://mikaaah.github.io/TownsAndKingdoms/downloads/TNK3-Development-Changelog-01.md) · [Browse the complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/)
+[Download this changelog](https://mikaaah.github.io/TownsAndKingdoms/downloads/TNK3-Beta-1.0-Changelog.md) · [Browse the complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/)
 
 ## RPG, character progression and loot
 
@@ -15,15 +15,16 @@ This compares **TK2 3.05** with the current **TK3 development version**. Each ca
 - **TnK Progression** — character levels, activity progression, twenty origins with two perks each, titles and mob scaling.
 - **Pufferfish's Skills** and **Pufferfish's Attributes** — the framework behind the rebuilt skill tree and its bonuses. The current tree has **588 nodes**, with a **175-point budget** for choosing a build.
 - **Unidentified Loot** — equipment identification, rarity, discoveries and salvaging, including a Create-powered Mechanical Identifier.
-- **Iron's Gems 'n Jewelry**, **Reliquified Artifacts** and **Realm RPG: Treasure Balloons** — more equipment, accessory interactions and discoveries.
+- **Iron's Gems 'n Jewelry** and **Reliquified Artifacts** — more equipment and accessory interactions.
 
 **Replaced**
 
 | TK2 | TK3 |
 |---|---|
 | Passive Skill Tree + Passive Skill Tree Additions | TnK Progression + Pufferfish's Skills |
+| Loot Journal | Loot Journal's NeoForge port |
 
-**Removed:** Loot Journal and Apothic Curios.
+**Removed:** Apothic Curios.
 
 **Continuing:** Apotheosis, Artifacts and Relics. The RPG overhaul builds on these existing equipment systems.
 
@@ -33,11 +34,13 @@ This compares **TK2 3.05** with the current **TK3 development version**. Each ca
 
 - **Celestisynth** — another weapon family for the equipment selection.
 - **Epic Fight Compat Suite**, **Epic Fight Curios Compat** and **Epic Fight X Relics + Artifacts + Curios**.
-- **Iron's Spells X Epic Fight** and **Epic Fight x Iron's Spells Enhanced Animations** — expand the connection between spellcasting and action combat.
+- **Iron's Spells X Epic Fight** — connects spellcasting and action combat.
+- **Punchy!**, **Punchy! Moves** and **Combat Punchy** — first-person and movement animations with automatic Epic Fight handoffs.
+- **Punchy! x Iron's Spells First-Person Animation Fix** — a dedicated compatibility addon.
 
 **Removed:** Samurai Dynasty, Immersive Armors, ParCool and its Epic Fight compatibility addons.
 
-**Continuing:** Epic Fight, Weapons of Miracles, Simply Swords, Knight Quest and Knaves' Needs. Simply Swords Reforged is an added **resource pack** for the existing mod.
+**Continuing:** Epic Fight, Weapons of Miracles, Simply Swords, Knight Quest and Knaves' Needs. The beta supplies additional item artwork through its pack resources.
 
 ## World generation, biomes and wildlife
 
@@ -46,7 +49,8 @@ This compares **TK2 3.05** with the current **TK3 development version**. Each ca
 - **Wildshape** — the new terrain direction for TK3.
 - **Streams Reflowing** and **Flow Control** — flowing rivers and tools for working with them.
 - **Nature's Spirit** and **Autumnity** — additional environments, trees and building materials.
-- **Let's Do WilderNature**, **Hybrid Aquatic**, **ShineaL's Prehistoric Expansion** and **Modern Apple Cows** — expand the wildlife selection.
+- **Let's Do WilderNature**, **Hybrid Aquatic** and **Modern Apple Cows** — expand the wildlife selection.
+- **Leaves Be Gone** — faster cleanup of unsupported leaves after tree harvesting.
 
 **Replaced**
 
@@ -55,6 +59,7 @@ This compares **TK2 3.05** with the current **TK3 development version**. Each ca
 | Tectonic terrain setup | Wildshape terrain setup |
 | Alex's Mobs | Alex's Mobs NeoForge port |
 | Alex's Caves | Alex's Caves NeoForge port |
+| Fast Leaf Decay | Leaves Be Gone |
 
 **Removed:** Oh The Biomes We've Gone, Oh The Trees You'll Grow, Project Vibrant Journeys, Ecospherical Expansion, Dense Ores Abundant, Enhanced Celestials and Nyf's Spiders.
 
@@ -62,7 +67,7 @@ This compares **TK2 3.05** with the current **TK3 development version**. Each ca
 
 ## Dimensions
 
-**Added:** **Deep Aether**, **Aether Villages** and **Amplified Nether**.
+**Added:** **Deep Aether**, **Aether Villages**, **Amplified Nether** and **Jaden's Nether Expansion**.
 
 **Replaced**
 
@@ -86,17 +91,22 @@ This compares **TK2 3.05** with the current **TK3 development version**. Each ca
 - **Ancient Remnants: Monoliths** — discoverable monuments and ancient powers.
 - **Integrated Cataclysm**, **Integrated Mowzie's Mobs** and **Integrated Seven Seas** — more integrated encounter and structure content.
 - **YUNG's Better Mineshafts** — a new addition to the structure selection.
+- **Epic Structures: Dungeons**, **Epic Structures: Jungle Temples** and **Epic Structures: Witch Huts** — reworked landmarks and dungeon exploration.
+- **Universal Boss Respawner** — rematch cages for supported bosses.
 
 **Replaced**
 
 | TK2 | TK3 |
 |---|---|
 | When Dungeons Arise | Integrated Dungeons Arise, with reworked structures and mod integration |
-| Original YUNG's structure projects | Their NeoForge counterparts |
+| YUNG's Better Dungeons | Epic Structures: Dungeons |
+| YUNG's Better Jungle Temples | Epic Structures: Jungle Temples |
+| YUNG's Better Witch Huts | Epic Structures: Witch Huts |
+| Remaining selected YUNG's structures | Their NeoForge counterparts |
 
 **Removed:** **Ice and Fire**, **Dragonseeker**, **The Graveyard**, **Structory**, **Medieval Buildings**, **Sky Villages**, **Explorations**, **YUNG's Bridges** and **Alex's Caves: Stuff & Torpedoes**.
 
-**Continuing:** Cataclysm, Mowzie's Mobs, Integrated Dungeons and Structures, Integrated Stronghold and Integrated Villages. YUNG's Dungeons, Desert Temples, Jungle Temples, Nether Fortresses, Ocean Monuments, Witch Huts and End Island continue through their ports.
+**Continuing:** Cataclysm, Mowzie's Mobs, Integrated Dungeons and Structures, Integrated Stronghold and Integrated Villages. YUNG's Desert Temples, Nether Fortresses, Ocean Monuments and End Island continue through their ports.
 
 Cataclysm and Mowzie's Mobs were already in TK2; their **Integrated** addons are the additions here.
 
@@ -161,6 +171,7 @@ Apothic Enchanting and Apothic Spawners are part of Apotheosis's newer modular s
 **Added**
 
 - **ExtendedAE** — expands the existing AE2 network and storage options.
+- **Pretty Pipes** — pipe-based item routing alongside the Create and AE2 logistics options.
 - **Create Aeronautics** and **Create: Hypertubes** — new transport projects.
 - **Create Aeronautics: FTB Chunks** — claim integration for Aeronautics.
 - **Angel Ring** — a crafted flight option later in progression.
@@ -172,6 +183,7 @@ Apothic Enchanting and Apothic Spawners are part of Apotheosis's newer modular s
 | TK2 | TK3 |
 |---|---|
 | Ender Storage | Linked Chests, including linked chests and pouches |
+| Corpse | Death Keeper's gravestones |
 
 **Removed:** Create: Steam 'n' Rails, JourneyMap, JourneyMap Integration, Paragliders, Elytra Slot, Beyond Mines: Falling, Carry On, Corpse, Trash Cans and Inventory Sorter.
 
@@ -183,15 +195,15 @@ Apothic Enchanting and Apothic Spawners are part of Apotheosis's newer modular s
 
 - **TnK Workshop** — the Quest Projector, construction tools, cages, mirrors and Trading Hub.
 - **Create: Trading Floor** and **wd's Selling Bin** — new trading and selling options.
-- **Certain Questing Additions**, **FTB Quests Entity Visualization** and **Quests Kill Task Tweaks** — support the rebuilt questbook.
+- **Certain Questing Additions**, **ExtraQuests** and **Quests Kill Task Tweaks** — support the rebuilt questbook.
 
-**Removed:** Create: Numismatics, Create: Missions, QuestsAdditions, Starter Kit, Simple Voice Chat and PVPFlagging.
+**Removed:** Create: Numismatics, Create: Missions, QuestsAdditions, Starter Kit and Simple Voice Chat.
 
-**Continuing:** FTB Quests, FTB Teams, FTB Ranks, FTB Essentials, FTB Chunks and Lootr.
+**Continuing:** FTB Quests, FTB Teams, FTB Ranks, FTB Essentials, FTB Chunks, Lootr and PVP Flagging.
 
 **Also replaced:** Simple Discord RPC's presence role moves into TnK Workshop.
 
-The questbook is being rebuilt around ten production chapters, with Tutorial, Progression, Market, Useful Items, Bulletin Board, Exploration, Bosses, The Eyes and mod-specific branches. The target is at least **1,500 useful quests**.
+The questbook is being rebuilt around **Town Square**, **Forging Ahead**, **Crafts & Curiosities**, **Realms & Relics** and **Seasonal Tales**. Ten production chapters sit alongside Tutorial, Progression, Market, Useful Items, Bulletin Board, Exploration, Bosses, The Eyes and mod-specific branches. The target is at least **1,500 useful quests**; the beta's book remains in progress.
 
 The **Trading Hub** is a directory for player shops and other destinations, with search, icons and Waystones travel. Players conduct trades at the destinations they visit.
 
@@ -201,16 +213,17 @@ The **Trading Hub** is a directory for player shops and other destinations, with
 
 - **Arts & Crafts**, **Block Pack**, **Biomes O' Plenty: Chipped** and **Rechiseled: Chipped**.
 - **Let's Do Furniture**, **Let's Do Lili's Pottery**, **Let's Do Hearth & Timber**, **Let's Do Camping** and **Let's Do Alpine Whispers**.
+- **Construction Sticks** — construction tools taking over the previous Construction Wand role.
 - **TnK Workshop's** Measuring Pencil, Builder's Satchel, Builder's Brush and Quest Projector add practical tools for player-built towns.
 
 **Removed**
 
 - **MineColonies**, **TownTalk**, **StyleColonies**, the **Byzantine style pack**, **Domum Ornamentum**, **Structurize** and **Multi-Piston** — the previous colony-management selection.
 - **Another Furniture**, **Beautify**, **Dawn of Time**, **Handcrafted** and **Refurbished Furniture**.
-- **Create: Copycats+**, **Create: Bells & Whistles** and **Create: Interiors**.
-- **Construction Wand**, **Diagonal Fences**, **Visual Workbench**, **Torchmaster**, **Etched** and **Immersive Melodies**.
+- **Create: Bells & Whistles** and **Create: Interiors**.
+- **Construction Wand**, **Visual Workbench** and **Immersive Melodies**.
 
-**Continuing:** Chipped, Rechiseled, Architect's Palette, Supplementaries, Amendments, Quark and Create Deco. Town building now centres on player-built settlements, shared infrastructure and shops.
+**Continuing:** Chipped, Rechiseled, Architect's Palette, Supplementaries, Amendments, Quark, Create Deco, Create: Copycats+, Diagonal Fences, Torchmaster and Etched. Town building now centres on player-built settlements, shared infrastructure and shops.
 
 ## Farming, food and fishing
 
@@ -227,23 +240,28 @@ The **Trading Hub** is a directory for player shops and other destinations, with
 | TK2 | TK3 |
 |---|---|
 | Legacy Let's Do Bakery | Let's Do Bakery's Farm & Charm version |
+| Legacy Let's Do Brewery | Let's Do Brewery's Farm & Charm version |
 | Aquaculture 2 fishing selection | Starcatcher + Hybrid Aquatic |
 
-**Removed:** Ender Crop, Harvest With Ease, Fast Leaf Decay, Let's Do Meadow, Let's Do Candlelight, Let's Do NetherVinery and Let's Do Brewery.
+**Removed:** Ender Crop, Harvest With Ease, Let's Do Meadow, Let's Do Candlelight and Let's Do NetherVinery.
 
 **Continuing:** Farmer's Delight, Create: Central Kitchen, Let's Do Vinery, Let's Do HerbalBrews, Let's Do BloomingNature and Let's Do Beachparty.
 
 ## Interface, visuals and recipe discovery
 
-**Added:** **BetterF3**, **Fancy Tab Sections**, **Obscure Tooltips**, **Simply Tooltips**, **Particular Reforged**, **Subtle Effects**, **Swivel**, **Vanilla Backport**, **Polytone** and **GuideME**.
+**Added:** **BetterF3**, **Better Advanced Tooltips**, **Fancy Tab Sections**, **Obscure Tooltips**, **Simply Tooltips**, **Particular Reforged**, **Subtle Effects**, **Vanilla Backport**, **Polytone** and **GuideME**.
 
-**Removed:** Better Advancements, Blur, Client Tweaks, Colorful Hearts, Overloaded Armor Bar, Durability Tooltip, Legendary Tooltips, More Overlays Updated, Raw's Visual Keybinder, Traveler's Titles, Medieval Music, Falling Leaves, Visuality Reforged, Enhanced Block Entities, Continuity, Forge CIT, Entity Model Features, Entity Texture Features, Immersive UI, Catalogue, Server Tab Info and Remove Chat Bracket.
+**Camera and atmosphere additions:** Shoulder Surfing Reloaded, Do a Barrel Roll, Reach Behind, Biome Music and Windy: Configurable.
+
+**Jade integrations added:** Jade / Farmer's Delight Compatibility, Jade Sable Compat and Sophisticated Backpacks / Jade Compatibility.
+
+**Replaced:** Blur → Blur+; Traveler's Titles → its NeoForge port.
+
+**Removed:** Better Advancements, Client Tweaks, Durability Tooltip, Legendary Tooltips, More Overlays Updated, Falling Leaves, Visuality Reforged, Enhanced Block Entities, Continuity, Forge CIT, Entity Model Features, Entity Texture Features, Immersive UI, Catalogue, Server Tab Info and Remove Chat Bracket.
 
 **Recipe browsing changes:** JEI stays, with named search groups, clearer item information and **97 custom Ponder lessons**. Just Enough Resources, Nature's Compass, Polymorph and Polymorphic Energistics are removed.
 
-**Resource packs added:** Create Style Sophisticated Backpacks, Create Style Sophisticated Storages, Journalistic FTB Quests, Simply Swords Reforged, Immersive Engineering: Reimmersed and Updated Engineering.
-
-**Shader options added:** Legendary Atmosphere, Miniature Shader, Noble Shaders and Sildur's Vibrant Shaders.
+**Continuing:** Jade, Jade Addons, Colorful Hearts, Overloaded Armor Bar, Raw's Visual Keybinder, Medieval Music and Ponder for KubeJS. The beta also bundles its own interface, item and quest artwork through the pack resources.
 
 ## Performance and compatibility
 
@@ -255,13 +273,13 @@ The **Trading Hub** is a directory for player shops and other destinations, with
 | Oculus | Iris |
 | Noisium | Noisiumed |
 
-**Added:** AllTheLeaks, Concurrent Chunk Management Engine, Create: Catalyst, Entity Culling, Lithium, MoreCulling, ScalableLux, GPUBooster Reforged, Ixeris, YAMO and No Structure Overlap.
+**Added:** AllTheLeaks, Concurrent Chunk Management Engine, Create: Catalyst, Entity Culling, ImmediatelyFast, Lithium, MoreCulling, ScalableLux, GPUBooster Reforged, Ixeris, YAMO and No Structure Overlap.
 
-**Removed:** Adaptive Performance Tweaks, AI Improvements, Achievements Optimizer, Embeddium++, CullLessLeaves Reforged, Farsight, FastWorkbench, Get It Together Drops, Let Me Despawn, Mobtimizations, No See No Tick, Saturn, Smooth Chunk Save, Structure Essentials, FTB Quests Optimizer, Connectivity, Does It Tick, Observable, DEUF, Detected setBlock Be Gone and SerializationIsBad.
+**Removed:** Adaptive Performance Tweaks, AI Improvements, Achievements Optimizer, Embeddium++, CullLessLeaves Reforged, Farsight, FastWorkbench, Get It Together Drops, Let Me Despawn, Mobtimizations, No See No Tick, Saturn, Smooth Chunk Save, Structure Essentials, FTB Quests Optimizer, Does It Tick, DEUF, Detected setBlock Be Gone and SerializationIsBad.
 
-**Continuing:** ModernFix, FerriteCore, Dynamic FPS and spark.
+**Continuing:** ModernFix, FerriteCore, Dynamic FPS, Connectivity, Observable and spark.
 
-The change to NeoForge also replaces several supporting libraries and removes the old Sinytra Connector / Forgified Fabric API setup. [The complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/) includes the dependency and support-tool changes.
+The change to NeoForge also replaces several supporting libraries. Forgified Fabric API remains in Beta 1.0; Sinytra Connector is removed. [The complete project comparison](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/) includes the dependency and support-tool changes.
 
 ## The main gameplay reworks
 
@@ -285,6 +303,6 @@ Detailed recipes and controls belong in the [progression guide](https://mikaaah.
 
 ## Complete mod comparison
 
-[Browse every added, retained and absent project](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/), including libraries, resource packs and shaders. [Snapshot sources](https://mikaaah.github.io/TownsAndKingdoms/status/) record the exact pack references behind this comparison.
+[Browse every added, retained and absent project](https://mikaaah.github.io/TownsAndKingdoms/mods/comparison/), including supporting libraries. [Snapshot sources](https://mikaaah.github.io/TownsAndKingdoms/status/) record the exact pack references behind this comparison.
 
-Replacement ports keep their gameplay families in the pack: Alex's Caves, Alex's Mobs, BetterEnd, BetterNether and the continuing YUNG's structures are not counted here as wholly removed content.
+Replacement ports keep their gameplay families in the pack: Alex's Caves, Alex's Mobs, BetterEnd, BetterNether, Loot Journal, Traveler's Titles and the continuing YUNG's structures remain through their newer projects.

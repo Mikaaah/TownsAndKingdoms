@@ -1,7 +1,9 @@
 {
-  "snapshot": "tnk3-development-2026-11-08",
+  "snapshot": "tnk3-beta-1.0",
+  "version": "Beta 1.0",
   "date": "2026-11-08",
-  "build_fingerprint": "b4003ff6c576217c2f46",
+  "source_archive_sha256": "bee54bfb83d877982538e81b769a17bf8a6f4bccecfb9ea5a554b910c0a50bb7",
+  "build_fingerprint": "3563179086e9a03133e0",
   "counts": {
     "skills": 588,
     "origins": 20,

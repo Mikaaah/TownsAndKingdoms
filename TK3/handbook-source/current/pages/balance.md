@@ -20,7 +20,7 @@ Capturing enchantment is removed from the configured acquisition tags and denied
 
 The spawner runes that ignore conditions, ignore players or remove AI are blocked by the cleanup rules. The ordinary spawner system and single-use Workshop Spawner Cage are separate features.
 
-The selected Apotheosis flying potion route/effect is disabled. The **Angel Ring** is the planned late-game flight item, with an **11 × 7 Mechanical Crafter** wing recipe at the Arcane tier.
+The selected Apotheosis flying potion route/effect is disabled. The **Angel Ring** is the beta's crafted flight item, with an **11 × 7 Mechanical Crafter** wing recipe at the Arcane tier.
 
 Its forty consumed ingredients include feathers, Gold Blocks, Legendary Ink, Arcane materials, Ignitium, Air Essence, Nether Stars, Wind Charges, a Diamond Ring, Cloud in a Bottle and Golden Amber. Native Ring flight behavior is not rewritten by the recipe.
 

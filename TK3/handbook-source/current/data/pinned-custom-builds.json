@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Towns & Kingdoms Progression",
+    "mod_id": "tnkprogression",
+    "version": "1.2.0-private.1",
+    "project_id": 1789363,
+    "file_id": 9497972,
+    "sha256": "739fed011982d9f9f236ab37531f9c23fdb63f1173e2f1537f9ebd5fdfc8d6a0",
+    "source_url": "https://www.curseforge.com/minecraft/mc-mods/towns-kingdoms-progression/files/9497972"
+  },
+  {
+    "name": "Create: Alchemical Lasers",
+    "mod_id": "alchemicallaser",
+    "version": "1.0.0-rc.1",
+    "project_id": 1787221,
+    "file_id": 9474768,
+    "sha256": "ecd0421d79c498d525de61c809effdba7f65969a2bc12659c2eb9dda8a7dbb57",
+    "source_url": "https://www.curseforge.com/minecraft/mc-mods/create-alchemical-lasers/files/9474768"
+  }
+]

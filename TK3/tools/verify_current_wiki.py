@@ -28,13 +28,28 @@ manifest=json.loads((OUT/'build-manifest.json').read_text())
 reference=json.loads((OUT/'reference.json').read_text())
 snapshot=json.loads((SOURCE/'data/snapshot.json').read_text())
 assert reference['snapshot']==snapshot['snapshot']
+assert reference['version']==snapshot['version']=='Beta 1.0'
+assert reference['source_archive_sha256']==snapshot['sources'][0]['sha256']=='bee54bfb83d877982538e81b769a17bf8a6f4bccecfb9ea5a554b910c0a50bb7'
 assert reference['counts']==dict(skills=588,origins=20,ponders=97,construction_plans=344)
 assert len(json.loads((SOURCE/'data/skills.json').read_text())['nodes'])==588
 assert len(json.loads((SOURCE/'data/origins.json').read_text()))==20
 assert len(json.loads((SOURCE/'data/ponders.json').read_text()))==97
 assert len(json.loads((SOURCE/'data/construction-recipes.json').read_text())['recipes'])==344
 inventory=json.loads((SOURCE/'data/inventory.json').read_text())
-assert [len(inventory[k]) for k in ['current','previous','added_projects','retained_projects','absent_projects']]==[283,323,177,106,217]
+assert [len(inventory[k]) for k in ['current','previous','added_projects','retained_projects','absent_projects']]==[315,323,193,122,201]
+pack_manifest=json.loads((SOURCE/'data/tnk3-manifest.json').read_text())
+assert pack_manifest['version']=='Beta 1.0'
+assert [p['project_id'] for p in inventory['current']]==[f['projectID'] for f in pack_manifest['files']]
+current_ids={p['project_id'] for p in inventory['current']}
+previous_ids={p['project_id'] for p in inventory['previous']}
+assert {p['project_id'] for p in inventory['retained_projects']}==current_ids&previous_ids
+assert {p['project_id'] for p in inventory['added_projects']}==current_ids-previous_ids
+assert {p['project_id'] for p in inventory['absent_projects']}==previous_ids-current_ids
+assert {p['name'] for p in inventory['bundled_mods']}=={'TnK Workshop','Unidentified Loot','Wildshape'}
+quests=json.loads((SOURCE/'data/quest-export.json').read_text())
+assert len(quests['chapters'])==snapshot['quest_export_chapters']==42
+assert sum(c['quest_count'] for c in quests['chapters'])==snapshot['quest_export_records']==1036
+assert sum(c['quest_count'] for c in quests['chapters'] if c['group']=='7791095332373AD2')==143
 
 pages={}
 for file in OUT.rglob('*.html'):

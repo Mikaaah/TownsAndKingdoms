@@ -10,7 +10,7 @@ FTB Teams and Chunks support group organization and land claims. Progression's t
 
 ## Match the installation
 
-The inspected TNK3 platform is **Minecraft 1.21.1, NeoForge and Java 21**. The base export pins **NeoForge 21.1.262**. Later custom builds must be distributed with their matching dependencies.
+Beta 1.0 uses **Minecraft 1.21.1, NeoForge 21.1.262 and Java 21**. Use the complete Beta 1.0 files for both the client and the relevant server-side installation.
 
 Keep the same approved custom-mod JARs, KubeJS startup/server/client scripts, required root JSON files, quest files and resources on the relevant sides. A full restart is needed after item registration, protocol or startup changes. Recipe-only edits can be reloaded once the matching installation is in place.
 

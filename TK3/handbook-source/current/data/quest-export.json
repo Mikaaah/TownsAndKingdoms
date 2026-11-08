@@ -1,0 +1,379 @@
+{
+  "groups": [
+    {
+      "id": "5A14763ACF3898A0",
+      "title": "◆ Town Square"
+    },
+    {
+      "id": "7791095332373AD2",
+      "title": "◆ Forging Ahead"
+    },
+    {
+      "id": "41B9B48FFA9AE166",
+      "title": "◆ Realms & Relics"
+    },
+    {
+      "id": "09BAB0CFB2ACC4AC",
+      "title": "◆ Crafts & Curiosities"
+    },
+    {
+      "id": "4A4C4BCFCD946012",
+      "title": "◆ Seasonal Tales"
+    },
+    {
+      "id": "3D2BA62EC2B50EDE",
+      "title": "◆ Town Square"
+    },
+    {
+      "id": "615C123804B97629",
+      "title": "◆ The Magical Quests"
+    },
+    {
+      "id": "31D51EB01759D8C2",
+      "title": "◆ Adventure Quests"
+    },
+    {
+      "id": "3D858FE7F4B19D02",
+      "title": "◆ Mechanical Quests"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "6AEDA2F9BEB57759",
+      "file": "ars_nouveau.snbt",
+      "group": "615C123804B97629",
+      "title": "► Ars Nouveau | Spell Crafting",
+      "order": 0,
+      "quest_count": 206
+    },
+    {
+      "id": "48902EBD639095F0",
+      "file": "bosses.snbt",
+      "group": "31D51EB01759D8C2",
+      "title": "► Bosses | A True Challenge",
+      "order": 2,
+      "quest_count": 50
+    },
+    {
+      "id": "34DFA7B74877FED8",
+      "file": "bulletin_board.snbt",
+      "group": "3D2BA62EC2B50EDE",
+      "title": "► Bulletin Board | Tasks and Quests",
+      "order": 3,
+      "quest_count": 81
+    },
+    {
+      "id": "4C81CD57655AA248",
+      "file": "exploration.snbt",
+      "group": "31D51EB01759D8C2",
+      "title": "► Exploration | Adventure Time",
+      "order": 0,
+      "quest_count": 242
+    },
+    {
+      "id": "0898223DAF42E09A",
+      "file": "f__malum__spell_crafting.snbt",
+      "group": "615C123804B97629",
+      "title": "► Malum | Soul Magic",
+      "order": 2,
+      "quest_count": 38
+    },
+    {
+      "id": "19BE083ACF488E0F",
+      "file": "irons_spells_n_spellbooks.snbt",
+      "group": "615C123804B97629",
+      "title": "► Spells 'n Spellbooks | Books of Magic",
+      "order": 1,
+      "quest_count": 68
+    },
+    {
+      "id": "517D03B2C49735FE",
+      "file": "item_expertise.snbt",
+      "group": "31D51EB01759D8C2",
+      "title": "► Items | Usefull Items!",
+      "order": 3,
+      "quest_count": 21
+    },
+    {
+      "id": "24EF5F43D9A3E9C2",
+      "file": "l6tutorial.snbt",
+      "group": "3D2BA62EC2B50EDE",
+      "title": "► Tutorial | All the Information",
+      "order": 0,
+      "quest_count": 17
+    },
+    {
+      "id": "2B8D7E2FA43094B6",
+      "file": "market.snbt",
+      "group": "3D2BA62EC2B50EDE",
+      "title": "► Market | Shopping Time!",
+      "order": 2,
+      "quest_count": 2
+    },
+    {
+      "id": "3F613B79A8DD7965",
+      "file": "story.snbt",
+      "group": "3D2BA62EC2B50EDE",
+      "title": "► The Story | Progression",
+      "order": 1,
+      "quest_count": 0
+    },
+    {
+      "id": "39D1478FD97986A2",
+      "file": "text_aeronautics__taking_the_coloreeeeeeextratextskycolora2c4e0.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Aeronautics | Taking the Sky",
+      "order": 7,
+      "quest_count": 0
+    },
+    {
+      "id": "1126C1619D2FAA60",
+      "file": "text_ars_nouveau__coloreeeeeeextratextspellcolorb19fe2text_craftingcoloreeeeee.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Ars Nouveau | Spell Crafting",
+      "order": 0,
+      "quest_count": 0
+    },
+    {
+      "id": "40DED7E03E09E922",
+      "file": "text_bosses__coloreeeeeeextratextchallengecolorf27f68text_them_allcoloreeeeee.snbt",
+      "group": "41B9B48FFA9AE166",
+      "title": "► Bosses | Challenge Them All",
+      "order": 2,
+      "quest_count": 0
+    },
+    {
+      "id": "0D384C4759B27A0D",
+      "file": "text_bulletin_board__coloreeeeeeextratexttaskscolore5daabtext__questscoloreeeeee.snbt",
+      "group": "5A14763ACF3898A0",
+      "title": "► Bulletin Board | Tasks & Quests",
+      "order": 3,
+      "quest_count": 0
+    },
+    {
+      "id": "7EB12A6CADB18566",
+      "file": "text_chapter_coloreeeeeeextratexticolorc99a6btext__getting_startedcoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter I | Getting Started",
+      "order": 0,
+      "quest_count": 10
+    },
+    {
+      "id": "4EC04F16F01EF9B1",
+      "file": "text_chapter_coloreeeeeeextratextiicolor9da49ftext__rotations__andesitecoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter II | Rotations & Andesite",
+      "order": 1,
+      "quest_count": 17
+    },
+    {
+      "id": "16BAA55B59D2DBB4",
+      "file": "text_chapter_coloreeeeeeextratextiiicolord39062text__valves__fluidscoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter III | Valves & Fluids",
+      "order": 2,
+      "quest_count": 15
+    },
+    {
+      "id": "34D1149C8D2CAD6B",
+      "file": "text_chapter_coloreeeeeeextratextivcolord4b161text__precision_machinerycoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter IV | Precision Machinery",
+      "order": 3,
+      "quest_count": 26
+    },
+    {
+      "id": "13D0760E3D10B139",
+      "file": "text_chapter_coloreeeeeeextratextixcolorb18fb8text__radiant__shadowcoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter IX | Radiant & Shadow",
+      "order": 8,
+      "quest_count": 0
+    },
+    {
+      "id": "26C32D5845F49673",
+      "file": "text_chapter_coloreeeeeeextratextvcolorb8a7e0text__logic__energisticscoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter V | Logic & Energistics",
+      "order": 4,
+      "quest_count": 23
+    },
+    {
+      "id": "160A64BADF77FEE2",
+      "file": "text_chapter_coloreeeeeeextratextvicolorb2c0c6text__light_engineeringcoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter VI | Light Engineering",
+      "order": 5,
+      "quest_count": 26
+    },
+    {
+      "id": "45EB776695A1E7AD",
+      "file": "text_chapter_coloreeeeeeextratextviicolora7b5bdtext__heavy_machinescoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter VII | Heavy Machines",
+      "order": 6,
+      "quest_count": 26
+    },
+    {
+      "id": "220D512D971B00D8",
+      "file": "text_chapter_coloreeeeeeextratextviiicolorb785d5text__magic__manacoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter VIII | Magic & Mana",
+      "order": 7,
+      "quest_count": 0
+    },
+    {
+      "id": "62C83CF80D982D7A",
+      "file": "text_chapter_coloreeeeeeextratextxcoloraaa0d9text__the_final_chaptercoloreeeeee.snbt",
+      "group": "7791095332373AD2",
+      "title": "► Chapter X | The Final Chapter",
+      "order": 9,
+      "quest_count": 0
+    },
+    {
+      "id": "54E74BE6A41E02D6",
+      "file": "text_create_nuclear__going_coloreeeeeeextratextradioactivecolorbbd06f.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Create Nuclear | Going Radioactive",
+      "order": 6,
+      "quest_count": 0
+    },
+    {
+      "id": "174A1835D0688BDD",
+      "file": "text_enchantment_industry__automating_coloreeeeeeextratextenchantmentscolorbb9ad6.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Enchantment Industry | Automating Enchantments",
+      "order": 5,
+      "quest_count": 0
+    },
+    {
+      "id": "30128F7F6D5332E3",
+      "file": "text_exploration__time_for_coloreeeeeeextratextadventurescolor9acd8d.snbt",
+      "group": "41B9B48FFA9AE166",
+      "title": "► Exploration | Time for Adventures",
+      "order": 0,
+      "quest_count": 0
+    },
+    {
+      "id": "64C6102FFB7AB484",
+      "file": "text_items__useful__coloreeeeeeextratextuniquecolordab15ctext_itemscoloreeeeee.snbt",
+      "group": "41B9B48FFA9AE166",
+      "title": "► Items | Useful & Unique Items",
+      "order": 3,
+      "quest_count": 0
+    },
+    {
+      "id": "21157D367AF64137",
+      "file": "text_lets_do__coloreeeeeeextratextlotscolore0a166text_to_docoloreeeeee.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Let’s Do | Lots to Do",
+      "order": 4,
+      "quest_count": 0
+    },
+    {
+      "id": "54E2DE668ED9CA45",
+      "file": "text_market__coloreeeeeeextratextshoppingcolord5a250text_timecoloreeeeee.snbt",
+      "group": "5A14763ACF3898A0",
+      "title": "► Market | Shopping Time",
+      "order": 2,
+      "quest_count": 0
+    },
+    {
+      "id": "111FABFF65799ED7",
+      "file": "text_spells_n_spellbooks__books_of_coloreeeeeeextratextmagiccolore8756d.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Spells N Spellbooks | Books of Magic",
+      "order": 1,
+      "quest_count": 0
+    },
+    {
+      "id": "07BC03EB0AAD1364",
+      "file": "text_starcatcher__coloreeeeeeextratextfishingcolor89c7dctext_timecoloreeeeee.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Starcatcher | Fishing Time",
+      "order": 2,
+      "quest_count": 0
+    },
+    {
+      "id": "4871FFAF51687241",
+      "file": "text_the_eyes__unlocking_the_coloreeeeeeextratextendcolor69b5b3.snbt",
+      "group": "41B9B48FFA9AE166",
+      "title": "► The Eyes | Unlocking the End",
+      "order": 1,
+      "quest_count": 0
+    },
+    {
+      "id": "2E4A0BE172C080BB",
+      "file": "text_the_first_winter__the_coloreeeeeeextratextwinterboundcolore88c91text_expeditioncoloreeeeee.snbt",
+      "group": "4A4C4BCFCD946012",
+      "title": "► The First Winter | The Winterbound Expedition",
+      "order": 0,
+      "quest_count": 0
+    },
+    {
+      "id": "20B8915D8EEAE641",
+      "file": "text_the_story__your_coloreeeeeeextratextprogressioncolore4684e.snbt",
+      "group": "5A14763ACF3898A0",
+      "title": "► The Story | Your Progression",
+      "order": 1,
+      "quest_count": 12
+    },
+    {
+      "id": "0B4B36F8E64A47B7",
+      "file": "text_tutorial__all_the_coloreeeeeeextra.snbt",
+      "group": "5A14763ACF3898A0",
+      "title": "► Tutorial | All the Information",
+      "order": 0,
+      "quest_count": 0
+    },
+    {
+      "id": "0B7E27BFB6BC1B9F",
+      "file": "text_witchery__rituals__coloreeeeeeextratextvoodoocolorada3b8.snbt",
+      "group": "09BAB0CFB2ACC4AC",
+      "title": "► Witchery | Rituals & Voodoo",
+      "order": 3,
+      "quest_count": 0
+    },
+    {
+      "id": "4FFF3872787D0AD4",
+      "file": "the_end.snbt",
+      "group": "31D51EB01759D8C2",
+      "title": "► The Eyes | The End Dimension",
+      "order": 1,
+      "quest_count": 32
+    },
+    {
+      "id": "0A49E3A84A0F4FE1",
+      "file": "tier_4.snbt",
+      "group": "3D858FE7F4B19D02",
+      "title": "► Chapter VIII | Advanced Machinery",
+      "order": 0,
+      "quest_count": 48
+    },
+    {
+      "id": "07353288E20FF39C",
+      "file": "tier_6.snbt",
+      "group": "3D858FE7F4B19D02",
+      "title": "► Chapter IX | Abstruse Connections",
+      "order": 1,
+      "quest_count": 25
+    },
+    {
+      "id": "45313A9ECE3DC17D",
+      "file": "tier_7.snbt",
+      "group": "3D858FE7F4B19D02",
+      "title": "► Chapter X | Rocket Engineer",
+      "order": 2,
+      "quest_count": 30
+    },
+    {
+      "id": "1381A05D1E4FB0C2",
+      "file": "tier_8.snbt",
+      "group": "3D858FE7F4B19D02",
+      "title": "► Chapter XI | The Final Chapter",
+      "order": 3,
+      "quest_count": 21
+    }
+  ],
+  "note": "Exported records include the rebuilt layout, unfinished pages and inherited legacy chapters. Counts do not measure completed TNK3 quests."
+}

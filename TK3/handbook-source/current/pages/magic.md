@@ -31,14 +31,14 @@ No filter, the wrong school/ink, missing component data or multiple selectable o
 
 Research-required and noncraftable spells retain their native acquisition. Ink cannot be filtered into a stronger outcome than its native rarity permits.
 
-The current startup/rarity correction removes the former automatic whole-pack reload. Powered full-pack operation remains a beta test item.
+Use the exact spell and level shown in the installed JEI recipe when setting each filter.
 
 ## Witchery and other magical paths
 
-Just Another Witchery Remake supplies its own ritual/discovery path. It is a selected separate quest direction. This wiki does not restore old Malum or Botania recipes merely because inherited quest text mentions them.
+Just Another Witchery Remake is included in Beta 1.0 with its own ritual and discovery path, alongside the Ars and Iron's Spells integrations.
 
 ## Alchemical Lasers
 
 The five lenses are **Growth, Convergence, Splitting, Power and Eclipse**. Their roles include crystal growth, material conversion and late ore processing. Follow the lens and minimum speed in each recipe.
 
-The current Calculation chapter requires a **Growth Lens**; the old 0.1.0 JAR embedded in the base export is insufficient. Use the matching newer pack build. Lenses are tooling, while recipe input counts still apply.
+Beta 1.0 includes Alchemical Lasers with all five lenses. The **Growth Lens** is used for the Calculation chapter's Certus route. Lenses are reusable tooling; recipe input counts still apply.

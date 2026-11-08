@@ -39,4 +39,4 @@ The configured rarity credits are **1, 2, 4, 7, 12, 20**, with the refund fracti
 
 Dimension routing covers Aether, Twilight, Nether and End equipment families. Global equipment can coexist with local pools. The selected ports and addons decide which exact pieces are registered.
 
-The export's embedded loot JAR and later config revisions are not a single validated release pair. Final beta testing still needs to verify the complete installed combination; see [snapshot status](../status/).
+These rules describe the loot mod and configuration shipped together in Beta 1.0. Use the [current pack reference](../status/) when checking an installation.

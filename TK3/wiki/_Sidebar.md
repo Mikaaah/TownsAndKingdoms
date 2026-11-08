@@ -18,6 +18,6 @@
 - [Workshop](https://mikaaah.github.io/TownsAndKingdoms/workshop/)
 - [Trading Hub](https://mikaaah.github.io/TownsAndKingdoms/trading-hub/)
 - [Mod inventory](https://mikaaah.github.io/TownsAndKingdoms/mods/)
-- [First development changelog](https://mikaaah.github.io/TownsAndKingdoms/changelog/)
+- [Beta 1.0 changelog](https://mikaaah.github.io/TownsAndKingdoms/changelog/)
 - [Snapshot & sources](https://mikaaah.github.io/TownsAndKingdoms/status/)
 - [TK2 archive](https://mikaaah.github.io/TownsAndKingdoms/2.0/)

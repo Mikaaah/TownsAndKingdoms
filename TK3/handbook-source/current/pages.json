@@ -127,9 +127,9 @@
   },
   {
     "route": "quests/",
-    "title": "The questbook",
+    "title": "The Beta 1.0 questbook",
     "group": "Start here",
-    "summary": "The current chapter structure, side paths, rewards and rebuild status.",
+    "summary": "The new groups, populated production chapters and remaining questbook work.",
     "file": "quests.md"
   },
   {
@@ -204,9 +204,9 @@
   },
   {
     "route": "status/",
-    "title": "Snapshot & sources",
+    "title": "Beta 1.0 files & sources",
     "group": "Project reference",
-    "summary": "Exactly what this wiki documents, with hashes and explicit release limits.",
+    "summary": "The authoritative Beta 1.0 archive, complete inventory, source hashes and questbook progress.",
     "file": "status.md"
   },
   {
@@ -218,9 +218,9 @@
   },
   {
     "route": "changelog/",
-    "title": "TK2 → TK3 changelog",
+    "title": "Beta 1.0 changelog",
     "group": "Project reference",
-    "summary": "Mods added, removed and replaced since TK2, grouped by RPG, world, dimensions, magic, industry and more.",
+    "summary": "Mods added, removed and replaced from TK2 to Beta 1.0, grouped by gameplay category.",
     "file": "changelog.md"
   },
   {

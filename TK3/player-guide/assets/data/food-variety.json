@@ -1,0 +1,22 @@
+{
+  "milestones": {
+    "baseHearts": 10,
+    "heartsPerMilestone": 2,
+    "milestones": [
+      5,
+      10,
+      15,
+      20,
+      25
+    ]
+  },
+  "filtering": {
+    "blacklist": [],
+    "whitelist": [],
+    "minimumFoodValue": 1
+  },
+  "miscellaneous": {
+    "resetOnDeath": false,
+    "limitProgressionToSurvival": false
+  }
+}
