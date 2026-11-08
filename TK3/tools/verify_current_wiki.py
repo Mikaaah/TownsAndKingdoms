@@ -28,11 +28,11 @@ manifest=json.loads((OUT/'build-manifest.json').read_text())
 reference=json.loads((OUT/'reference.json').read_text())
 snapshot=json.loads((SOURCE/'data/snapshot.json').read_text())
 assert reference['snapshot']==snapshot['snapshot']
-assert reference['counts']==dict(skills=588,origins=20,ponders=97,construction_plans=343)
+assert reference['counts']==dict(skills=588,origins=20,ponders=97,construction_plans=344)
 assert len(json.loads((SOURCE/'data/skills.json').read_text())['nodes'])==588
 assert len(json.loads((SOURCE/'data/origins.json').read_text()))==20
 assert len(json.loads((SOURCE/'data/ponders.json').read_text()))==97
-assert len(json.loads((SOURCE/'data/construction-recipes.json').read_text())['recipes'])==343
+assert len(json.loads((SOURCE/'data/construction-recipes.json').read_text())['recipes'])==344
 inventory=json.loads((SOURCE/'data/inventory.json').read_text())
 assert [len(inventory[k]) for k in ['current','previous','added_projects','retained_projects','absent_projects']]==[283,323,177,106,217]
 

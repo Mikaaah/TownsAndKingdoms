@@ -1,12 +1,12 @@
 {
   "snapshot": "tnk3-development-2026-11-08",
   "date": "2026-11-08",
-  "build_fingerprint": "34eeaa7bf9fbc4c6c097",
+  "build_fingerprint": "d5c05cd1e14220f50f39",
   "counts": {
     "skills": 588,
     "origins": 20,
     "ponders": 97,
-    "construction_plans": 343
+    "construction_plans": 344
   },
   "archive_hashes": {
     "Home.md": "c0ba266dde2c0a408c38aabbafa65ae3dd49f5b23fb1b533f27f3faa4c9ea757",

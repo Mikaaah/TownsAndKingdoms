@@ -33,3 +33,5 @@ kbd{font:11px ui-monospace,SFMono-Regular,Consolas,monospace;background:#eadee0;
 @media(max-width:390px){.topbar{padding-inline:12px;gap:10px}.brand img{display:none}.hero h1{font-size:45px}main,.home-main{padding-inline:18px}.card-grid{grid-template-columns:1fr}.guide-card{padding:22px}.guide-card h3{font-size:26px}.guide-card p{font-size:12px}.guide-card>.pixel{right:24px;top:42px;width:28px;height:28px}.stats span{font-size:6px}.stats strong{font-size:25px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 @media print{.topbar,.sidebar,.edition,.toc,.breadcrumbs,footer,.filter-bar,dialog,.hero-art,.copy-button{display:none!important}.page{margin:0}body{background:#fff;color:#000}main{padding:0;max-width:none}.reading-layout{display:block}.article{max-width:none}.article h1{font-size:30px}.article h2{font-size:22px;break-after:avoid}.reference-entry{break-inside:avoid}.table-scroll{overflow:visible}a{color:inherit}.callout{background:#fff}}
+
+.origin-name{display:flex;align-items:center;gap:10px;min-width:145px}.origin-name .pixel{width:24px;height:24px}
