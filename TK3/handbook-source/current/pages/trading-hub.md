@@ -4,7 +4,7 @@ Give players a place to list a shop, browse the directory and travel to another 
 
 ## Obtain and place
 
-The current Workshop build **does not give a Hub automatically on login** and removes the old free claim commands. The intended distribution is a configured quest item reward.
+Follow the questbook's acquisition route for the Trading Hub.
 
 The stable reward item is <code>tnkcore:trade_sharestone</code>, visibly named **Trading Hub**. The final starter/repeat-purchase reward assignment belongs to the questbook configuration.
 
