@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:remove_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "entity_types": [
+    "wom:evil_skeleton",
+    "wom:hollow",
+    "wom:lupus_rex",
+    "wom:lycanth",
+    "wom:saulomonk"
+  ]
+}

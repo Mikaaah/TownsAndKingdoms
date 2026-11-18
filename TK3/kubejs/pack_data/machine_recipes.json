@@ -1,0 +1,4459 @@
+{
+  "format": 1,
+  "source": "Remaining tier construction rules. Named-mod compatibility is edited in server_scripts/compat/<mod>.js.",
+  "recipes": [
+    {
+      "tier": 1,
+      "output": "create:brass_hand",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/brass_hand",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " A ",
+          "GGG",
+          " G "
+        ],
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "G": {
+            "item": "minecraft:gold_ingot"
+          }
+        },
+        "result": {
+          "id": "create:brass_hand",
+          "count": 1
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:brass_hand",
+        "minecraft:gold_ingot"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/brass_hand"
+      ],
+      "remove_output": true,
+      "reason": "Gold Hand retains the Create registry ID. Ingots allow the first hand before a Press, Mixer or Deployer."
+    },
+    {
+      "tier": 1,
+      "output": "create:deployer",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/deployer",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "H",
+          "B"
+        ],
+        "key": {
+          "H": {
+            "item": "create:brass_hand"
+          },
+          "B": {
+            "item": "kubejs:tk3_rotation_machine"
+          }
+        },
+        "result": {
+          "id": "create:deployer"
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:brass_hand",
+        "create:deployer",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/deployer"
+      ],
+      "remove_output": true,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_press",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/mechanical_press",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "I",
+          "F"
+        ],
+        "key": {
+          "I": {
+            "item": "minecraft:iron_block"
+          },
+          "F": {
+            "item": "kubejs:tk3_rotation_machine"
+          }
+        },
+        "result": {
+          "id": "create:mechanical_press",
+          "count": 1
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:mechanical_press",
+        "kubejs:tk3_rotation_machine",
+        "minecraft:iron_block"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_press"
+      ],
+      "remove_output": true,
+      "reason": "One tk3_rotation_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_mixer",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/mechanical_mixer",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "G ",
+          "F ",
+          " W"
+        ],
+        "key": {
+          "G": {
+            "item": "create:cogwheel"
+          },
+          "W": {
+            "item": "create:whisk"
+          },
+          "F": {
+            "item": "kubejs:tk3_rotation_machine"
+          }
+        },
+        "result": {
+          "id": "create:mechanical_mixer",
+          "count": 1
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:cogwheel",
+        "create:mechanical_mixer",
+        "create:whisk",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_mixer"
+      ],
+      "remove_output": true,
+      "reason": "One tk3_rotation_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 1,
+      "output": "create:windmill_bearing",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/windmill_bearing",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "H",
+          "B"
+        ],
+        "key": {
+          "H": {
+            "item": "kubejs:rotation_mechanism"
+          },
+          "B": {
+            "item": "create:mechanical_bearing"
+          }
+        },
+        "result": {
+          "id": "create:windmill_bearing"
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:mechanical_bearing",
+        "create:windmill_bearing",
+        "kubejs:rotation_mechanism"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/windmill_bearing"
+      ],
+      "remove_output": true,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 1,
+      "output": "create:sticky_mechanical_piston",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/sticky_mechanical_piston",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "H",
+          "B"
+        ],
+        "key": {
+          "H": {
+            "item": "minecraft:slime_ball"
+          },
+          "B": {
+            "item": "create:mechanical_piston"
+          }
+        },
+        "result": {
+          "id": "create:sticky_mechanical_piston"
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:mechanical_piston",
+        "create:sticky_mechanical_piston",
+        "minecraft:slime_ball"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/sticky_mechanical_piston"
+      ],
+      "remove_output": true,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 2,
+      "output": "create:fluid_tank",
+      "recipe_id": "tnk:machines/tier_02/crafting/create/fluid_tank",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "CGC",
+          "GSG",
+          "CGC"
+        ],
+        "key": {
+          "C": {
+            "item": "create:copper_sheet"
+          },
+          "G": {
+            "item": "minecraft:glass"
+          },
+          "S": {
+            "item": "kubejs:sealed_mechanism"
+          }
+        },
+        "result": {
+          "id": "create:fluid_tank",
+          "count": 4
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:copper_sheet",
+        "create:fluid_tank",
+        "kubejs:sealed_mechanism",
+        "minecraft:glass"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/fluid_tank"
+      ],
+      "remove_output": true,
+      "reason": "Four tank segments share one Sealed Mechanism, preserving scalable tank construction."
+    },
+    {
+      "tier": 3,
+      "output": "create:mechanical_crafter",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/mechanical_crafter",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " T ",
+          "EFE"
+        ],
+        "key": {
+          "T": {
+            "item": "minecraft:crafting_table"
+          },
+          "E": {
+            "item": "create:electron_tube"
+          },
+          "F": {
+            "item": "kubejs:tk3_precision_machine"
+          }
+        },
+        "result": {
+          "id": "create:mechanical_crafter",
+          "count": 3
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:electron_tube",
+        "create:mechanical_crafter",
+        "kubejs:tk3_precision_machine",
+        "minecraft:crafting_table"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_crafter"
+      ],
+      "remove_output": true,
+      "reason": "One tk3_precision_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 3,
+      "output": "create:brass_funnel",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/brass_funnel",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " B ",
+          "FPF"
+        ],
+        "key": {
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "F": {
+            "item": "create:andesite_funnel"
+          },
+          "P": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "result": {
+          "id": "create:brass_funnel",
+          "count": 2
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:andesite_funnel",
+        "create:brass_funnel",
+        "create:brass_sheet",
+        "create:precision_mechanism"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/brass_funnel"
+      ],
+      "remove_output": true,
+      "reason": "Two precision-routing upgrades share a mechanism and reuse their Andesite counterparts."
+    },
+    {
+      "tier": 3,
+      "output": "create:brass_tunnel",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/brass_tunnel",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " B ",
+          "FPF"
+        ],
+        "key": {
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "F": {
+            "item": "create:andesite_tunnel"
+          },
+          "P": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "result": {
+          "id": "create:brass_tunnel",
+          "count": 2
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:andesite_tunnel",
+        "create:brass_sheet",
+        "create:brass_tunnel",
+        "create:precision_mechanism"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/brass_tunnel"
+      ],
+      "remove_output": true,
+      "reason": "Two precision-routing upgrades share a mechanism and reuse their Andesite counterparts."
+    },
+    {
+      "tier": 3,
+      "output": "create:smart_chute",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/smart_chute",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " B ",
+          "CPC"
+        ],
+        "key": {
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "C": {
+            "item": "create:chute"
+          },
+          "P": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "result": {
+          "id": "create:smart_chute",
+          "count": 2
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:brass_sheet",
+        "create:chute",
+        "create:precision_mechanism",
+        "create:smart_chute"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/smart_chute"
+      ],
+      "remove_output": true,
+      "reason": "Two filtered chutes share a precision mechanism."
+    },
+    {
+      "tier": 3,
+      "output": "create:smart_fluid_pipe",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/smart_fluid_pipe",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " B ",
+          "PSP",
+          " E "
+        ],
+        "key": {
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "P": {
+            "item": "create:fluid_pipe"
+          },
+          "S": {
+            "item": "kubejs:sealed_mechanism"
+          },
+          "E": {
+            "item": "create:electron_tube"
+          }
+        },
+        "result": {
+          "id": "create:smart_fluid_pipe",
+          "count": 2
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create:fluid_pipe",
+        "create:smart_fluid_pipe",
+        "kubejs:sealed_mechanism"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/smart_fluid_pipe"
+      ],
+      "remove_output": true,
+      "reason": "Filtered fluid control retains seals, pipes and an Electron Tube."
+    },
+    {
+      "tier": 3,
+      "output": "create:mechanical_roller",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/mechanical_roller/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:electron_tube"
+          },
+          "I": {
+            "item": "create:crushing_wheel"
+          },
+          "F": {
+            "item": "kubejs:tk3_precision_machine"
+          }
+        },
+        "pattern": [
+          "A ",
+          " F",
+          "I "
+        ],
+        "result": {
+          "id": "create:mechanical_roller",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:crushing_wheel",
+        "create:electron_tube",
+        "create:mechanical_roller",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_roller"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_precision_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 3,
+      "output": "create:packager",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/packager",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "H",
+          "B"
+        ],
+        "key": {
+          "H": {
+            "item": "create:chute"
+          },
+          "B": {
+            "item": "kubejs:tk3_precision_machine"
+          }
+        },
+        "result": {
+          "id": "create:packager"
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:chute",
+        "create:packager",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/packager_from_conversion",
+        "create:crafting/logistics/packager"
+      ],
+      "remove_output": true,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 3,
+      "output": "create:repackager",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/repackager",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "H",
+          "B"
+        ],
+        "key": {
+          "H": {
+            "item": "create:precision_mechanism"
+          },
+          "B": {
+            "item": "create:packager"
+          }
+        },
+        "result": {
+          "id": "create:repackager"
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:packager",
+        "create:precision_mechanism",
+        "create:repackager"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/repackager_from_conversion"
+      ],
+      "remove_output": true,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 3,
+      "output": "create:stock_link",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/stock_link/0",
+      "recipe": {
+        "key": {
+          "B": {
+            "item": "create:item_vault"
+          },
+          "C": {
+            "item": "create:transmitter"
+          },
+          "X": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "pattern": [
+          "C ",
+          "BX"
+        ],
+        "result": {
+          "id": "create:stock_link",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:item_vault",
+        "create:precision_mechanism",
+        "create:stock_link",
+        "create:transmitter"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/stock_link"
+      ],
+      "remove_output": false,
+      "reason": "Advanced factory routing and measurement use one precision control, retaining native materials. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 3,
+      "output": "create:stock_ticker",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/stock_ticker/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:stock_link"
+          },
+          "B": {
+            "tag": "c:ingots/gold"
+          },
+          "C": {
+            "tag": "c:glass_blocks"
+          },
+          "X": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "pattern": [
+          "C ",
+          "AX",
+          "B "
+        ],
+        "result": {
+          "id": "create:stock_ticker",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:precision_mechanism",
+        "create:stock_link",
+        "create:stock_ticker"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/stock_ticker"
+      ],
+      "remove_output": false,
+      "reason": "Advanced factory routing and measurement use one precision control, retaining native materials. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 3,
+      "output": "create:redstone_requester",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/redstone_requester/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:stock_link"
+          },
+          "B": {
+            "tag": "c:ingots/iron"
+          },
+          "C": {
+            "tag": "c:dusts/redstone"
+          },
+          "X": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "pattern": [
+          "C ",
+          "AX",
+          "B "
+        ],
+        "result": {
+          "id": "create:redstone_requester",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:precision_mechanism",
+        "create:redstone_requester",
+        "create:stock_link"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/redstone_requester"
+      ],
+      "remove_output": false,
+      "reason": "Advanced factory routing and measurement use one precision control, retaining native materials. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 3,
+      "output": "create:factory_gauge",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/factory_gauge/0",
+      "recipe": {
+        "category": "misc",
+        "result": {
+          "id": "create:factory_gauge",
+          "count": 2
+        },
+        "ingredients": [
+          {
+            "item": "create:stock_link"
+          },
+          {
+            "item": "create:precision_mechanism"
+          },
+          {
+            "item": "create:precision_mechanism"
+          }
+        ],
+        "type": "minecraft:crafting_shapeless"
+      },
+      "requires": [
+        "create:factory_gauge",
+        "create:precision_mechanism",
+        "create:stock_link"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/factory_gauge"
+      ],
+      "remove_output": false,
+      "reason": "Advanced factory routing and measurement use one precision control, retaining native materials. This adds one control while preserving every native shapeless input."
+    },
+    {
+      "tier": 3,
+      "output": "create:display_link",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/display_link/0",
+      "recipe": {
+        "key": {
+          "C": {
+            "item": "create:transmitter"
+          },
+          "S": {
+            "item": "create:brass_casing"
+          },
+          "X": {
+            "item": "create:precision_mechanism"
+          }
+        },
+        "pattern": [
+          "C ",
+          "SX"
+        ],
+        "result": {
+          "id": "create:display_link",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:brass_casing",
+        "create:display_link",
+        "create:precision_mechanism",
+        "create:transmitter"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/display_link"
+      ],
+      "remove_output": false,
+      "reason": "Advanced factory routing and measurement use one precision control, retaining native materials. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 4,
+      "output": "createappliedkinetics:energy_provider",
+      "recipe_id": "tnk:machines/tier_04/native_upgrade/createappliedkinetics/energy_provider/0",
+      "recipe": {
+        "key": {
+          "S": {
+            "item": "create:brass_block"
+          },
+          "B": {
+            "item": "create:brass_casing"
+          },
+          "A": {
+            "item": "create:precision_mechanism"
+          },
+          "C": {
+            "item": "create:copper_sheet"
+          },
+          "L": {
+            "item": "create:brass_sheet"
+          },
+          "X": {
+            "item": "kubejs:calculation_mechanism"
+          }
+        },
+        "pattern": [
+          "XL ",
+          "CBC",
+          "SAS"
+        ],
+        "result": {
+          "id": "createappliedkinetics:energy_provider",
+          "count": 1
+        },
+        "show_notification": false,
+        "category": "misc",
+        "accept_mirrored": false,
+        "type": "create:mechanical_crafting"
+      },
+      "requires": [
+        "create:brass_block",
+        "create:brass_casing",
+        "create:brass_sheet",
+        "create:copper_sheet",
+        "create:precision_mechanism",
+        "createappliedkinetics:energy_provider",
+        "kubejs:calculation_mechanism"
+      ],
+      "remove_ids": [
+        "createappliedkinetics:energy_provider"
+      ],
+      "remove_output": false,
+      "reason": "Create/AE2 bridge uses Calculation controls without Industrial bootstrapping. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 4,
+      "output": "createappliedkinetics:me_proxy",
+      "recipe_id": "tnk:machines/tier_04/native_upgrade/createappliedkinetics/me_proxy/0",
+      "recipe": {
+        "key": {
+          "a": {
+            "tag": "c:ingots/iron"
+          },
+          "b": {
+            "tag": "c:glass_blocks"
+          },
+          "c": {
+            "item": "ae2:annihilation_core"
+          },
+          "d": {
+            "item": "ae2:formation_core"
+          },
+          "e": {
+            "item": "ae2:logic_processor"
+          },
+          "X": {
+            "item": "kubejs:calculation_mechanism"
+          }
+        },
+        "pattern": [
+          "aXa",
+          "ced",
+          "aba"
+        ],
+        "result": {
+          "id": "createappliedkinetics:me_proxy",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "ae2:annihilation_core",
+        "ae2:formation_core",
+        "ae2:logic_processor",
+        "createappliedkinetics:me_proxy",
+        "kubejs:calculation_mechanism"
+      ],
+      "remove_ids": [
+        "createappliedkinetics:me_proxy"
+      ],
+      "remove_output": false,
+      "reason": "Create/AE2 bridge uses Calculation controls without Industrial bootstrapping. This replaces exactly one common structural material with a control, retaining native functional and rare ingredients."
+    },
+    {
+      "tier": 5,
+      "output": "kubejs:tk3_engineering_machine",
+      "recipe_id": "tnk:machines/tier_05/crafting/kubejs/tk3_engineering_machine",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "WL",
+          "EW"
+        ],
+        "key": {
+          "W": {
+            "item": "createaddition:electrum_wire"
+          },
+          "L": {
+            "item": "kubejs:reinforced_mechanism"
+          },
+          "E": {
+            "item": "immersiveengineering:light_engineering"
+          }
+        },
+        "result": {
+          "id": "kubejs:tk3_engineering_machine",
+          "count": 1
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "createaddition:electrum_wire",
+        "immersiveengineering:light_engineering",
+        "kubejs:reinforced_mechanism",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Light Engineering Machine is an electromechanical upgrade of the retained native IE Light Engineering Block."
+    },
+    {
+      "tier": 6,
+      "output": "kubejs:tk3_heavy_engineering_machine",
+      "recipe_id": "tnk:machines/tier_06/mechanical_crafting/kubejs/tk3_heavy_engineering_machine",
+      "recipe": {
+        "type": "create:mechanical_crafting",
+        "pattern": [
+          "PSP",
+          "IHI",
+          "PCP"
+        ],
+        "key": {
+          "P": {
+            "item": "immersiveengineering:plate_steel"
+          },
+          "S": {
+            "item": "immersiveengineering:component_steel"
+          },
+          "I": {
+            "item": "kubejs:industrial_mechanism"
+          },
+          "H": {
+            "item": "immersiveengineering:heavy_engineering"
+          },
+          "C": {
+            "item": "immersiveengineering:component_electronic_adv"
+          }
+        },
+        "result": {
+          "id": "kubejs:tk3_heavy_engineering_machine",
+          "count": 1
+        },
+        "accept_mirrored": false
+      },
+      "requires": [
+        "immersiveengineering:component_electronic_adv",
+        "immersiveengineering:component_steel",
+        "immersiveengineering:heavy_engineering",
+        "immersiveengineering:plate_steel",
+        "kubejs:industrial_mechanism",
+        "kubejs:tk3_heavy_engineering_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Heavy Engineering Machine is a structural industrial control core, distinct from IE Heavy Engineering Blocks."
+    },
+    {
+      "tier": 5,
+      "output": "createaddition:tesla_coil",
+      "recipe_id": "tnk:machines/tier_05/crafting/createaddition/tesla_coil",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " W ",
+          "WCW",
+          " L "
+        ],
+        "key": {
+          "W": {
+            "item": "createaddition:electrum_wire"
+          },
+          "C": {
+            "item": "minecraft:copper_block"
+          },
+          "L": {
+            "item": "kubejs:tk3_engineering_machine"
+          }
+        },
+        "result": {
+          "id": "createaddition:tesla_coil",
+          "count": 1
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "createaddition:electrum_wire",
+        "createaddition:tesla_coil",
+        "kubejs:tk3_engineering_machine",
+        "minecraft:copper_block"
+      ],
+      "remove_ids": [
+        "createaddition:mechanical_crafting/tesla_coil"
+      ],
+      "remove_output": true,
+      "reason": "Native charging machine is a wound Light Engineering device, available well before Creation alloys."
+    },
+    {
+      "tier": 5,
+      "output": "createaddition:modular_accumulator",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/createaddition/modular_accumulator/0",
+      "recipe": {
+        "key": {
+          "B": {
+            "item": "create:brass_casing"
+          },
+          "C": {
+            "item": "createaddition:capacitor"
+          },
+          "R": {
+            "tag": "c:rods/copper"
+          },
+          "W": {
+            "tag": "c:wires/electrum"
+          },
+          "X": {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        },
+        "pattern": [
+          "XR ",
+          "CBC",
+          " W "
+        ],
+        "result": {
+          "id": "createaddition:modular_accumulator",
+          "count": 1
+        },
+        "category": "redstone",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:brass_casing",
+        "createaddition:capacitor",
+        "createaddition:modular_accumulator",
+        "kubejs:reinforced_mechanism"
+      ],
+      "remove_ids": [
+        "createaddition:crafting/modular_accumulator"
+      ],
+      "remove_output": false,
+      "reason": "Electrical storage, docking and control reuse native windings/materials plus a Reinforced control. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 5,
+      "output": "createaddition:portable_energy_interface",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/createaddition/portable_energy_interface/0",
+      "recipe": {
+        "category": "redstone",
+        "result": {
+          "id": "createaddition:portable_energy_interface",
+          "count": 1
+        },
+        "ingredients": [
+          {
+            "item": "create:brass_casing"
+          },
+          {
+            "item": "create:chute"
+          },
+          {
+            "item": "createaddition:copper_spool"
+          },
+          {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        ],
+        "type": "minecraft:crafting_shapeless"
+      },
+      "requires": [
+        "create:brass_casing",
+        "create:chute",
+        "createaddition:copper_spool",
+        "createaddition:portable_energy_interface",
+        "kubejs:reinforced_mechanism"
+      ],
+      "remove_ids": [
+        "createaddition:crafting/portable_energy_interface"
+      ],
+      "remove_output": false,
+      "reason": "Electrical storage, docking and control reuse native windings/materials plus a Reinforced control. This adds one control while preserving every native shapeless input."
+    },
+    {
+      "tier": 5,
+      "output": "immersiveengineering:capacitor_lv",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/immersiveengineering/capacitor_lv/0",
+      "recipe": {
+        "key": {
+          "a": {
+            "tag": "c:plates/lead"
+          },
+          "e": {
+            "tag": "c:ingots/copper"
+          },
+          "r": {
+            "tag": "c:redstone_acid",
+            "amount": 1000,
+            "type": "immersiveengineering:fluid_stack"
+          },
+          "w": {
+            "item": "immersiveengineering:basic_engineering"
+          },
+          "X": {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        },
+        "pattern": [
+          "ere",
+          "awa",
+          " X "
+        ],
+        "result": {
+          "id": "immersiveengineering:capacitor_lv",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:basic_engineering",
+        "immersiveengineering:capacitor_lv",
+        "kubejs:reinforced_mechanism"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/capacitor_lv"
+      ],
+      "remove_output": false,
+      "reason": "Retained IE electrical infrastructure uses an appropriate control component; native wiring, coils and metals remain. This adds one control beneath the native assembly."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:capacitor_mv",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/capacitor_mv/0",
+      "recipe": {
+        "key": {
+          "a": {
+            "tag": "c:plates/nickel"
+          },
+          "c": {
+            "tag": "c:plates/iron"
+          },
+          "e": {
+            "tag": "c:ingots/electrum"
+          },
+          "r": {
+            "tag": "c:redstone_acid",
+            "amount": 1000,
+            "type": "immersiveengineering:fluid_stack"
+          },
+          "w": {
+            "item": "immersiveengineering:basic_engineering"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "ere",
+          "awc",
+          " X "
+        ],
+        "result": {
+          "id": "immersiveengineering:capacitor_mv",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:basic_engineering",
+        "immersiveengineering:capacitor_mv",
+        "kubejs:industrial_mechanism"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/capacitor_mv"
+      ],
+      "remove_output": false,
+      "reason": "Retained IE electrical infrastructure uses an appropriate control component; native wiring, coils and metals remain. This adds one control beneath the native assembly."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:capacitor_hv",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/capacitor_hv/0",
+      "recipe": {
+        "key": {
+          "a": {
+            "tag": "c:plates/aluminum"
+          },
+          "c": {
+            "tag": "c:plates/hop_graphite"
+          },
+          "e": {
+            "tag": "c:ingots/aluminum"
+          },
+          "r": {
+            "tag": "c:redstone_acid",
+            "amount": 1000,
+            "type": "immersiveengineering:fluid_stack"
+          },
+          "w": {
+            "item": "immersiveengineering:basic_engineering"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "ere",
+          "awc",
+          " X "
+        ],
+        "result": {
+          "id": "immersiveengineering:capacitor_hv",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:basic_engineering",
+        "immersiveengineering:capacitor_hv",
+        "kubejs:industrial_mechanism"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/capacitor_hv"
+      ],
+      "remove_output": false,
+      "reason": "Retained IE electrical infrastructure uses an appropriate control component; native wiring, coils and metals remain. This adds one control beneath the native assembly."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:charging_station",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/charging_station/0",
+      "recipe": {
+        "key": {
+          "g": {
+            "tag": "c:glass_blocks"
+          },
+          "l": {
+            "item": "immersiveengineering:coil_lv"
+          },
+          "t": {
+            "item": "immersiveengineering:electron_tube"
+          },
+          "w": {
+            "tag": "immersiveengineering:treated_wood"
+          },
+          "X": {
+            "item": "createaddition:tesla_coil"
+          }
+        },
+        "pattern": [
+          "gXg",
+          "ttt",
+          "wlw"
+        ],
+        "result": {
+          "id": "immersiveengineering:charging_station",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "createaddition:tesla_coil",
+        "immersiveengineering:charging_station",
+        "immersiveengineering:coil_lv",
+        "immersiveengineering:electron_tube"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/charging_station"
+      ],
+      "remove_output": false,
+      "reason": "Crafts & Additions Tesla Coil supplies contactless charging; native IE coil and display tubes remain."
+    },
+    {
+      "tier": 5,
+      "output": "immersiveengineering:dynamo",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/immersiveengineering/dynamo/0",
+      "recipe": {
+        "key": {
+          "c": {
+            "item": "immersiveengineering:component_iron"
+          },
+          "i": {
+            "tag": "c:ingots/iron"
+          },
+          "l": {
+            "item": "immersiveengineering:coil_lv"
+          },
+          "r": {
+            "tag": "c:dusts/redstone"
+          },
+          "F": {
+            "item": "kubejs:tk3_engineering_machine"
+          }
+        },
+        "pattern": [
+          "rcr",
+          "ili",
+          " F "
+        ],
+        "result": {
+          "id": "immersiveengineering:dynamo",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:coil_lv",
+        "immersiveengineering:component_iron",
+        "immersiveengineering:dynamo",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/dynamo"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 5,
+      "output": "immersiveengineering:thermoelectric_generator",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/immersiveengineering/thermoelectric_generator/0",
+      "recipe": {
+        "key": {
+          "e": {
+            "tag": "c:plates/constantan"
+          },
+          "i": {
+            "tag": "c:ingots/steel"
+          },
+          "l": {
+            "item": "immersiveengineering:coil_lv"
+          },
+          "F": {
+            "item": "kubejs:tk3_engineering_machine"
+          }
+        },
+        "pattern": [
+          "iFi",
+          "ele",
+          "eee"
+        ],
+        "result": {
+          "id": "immersiveengineering:thermoelectric_generator",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:coil_lv",
+        "immersiveengineering:thermoelectric_generator",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/thermoelectric_generator"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 5,
+      "output": "immersiveengineering:transformer",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/immersiveengineering/transformer/0",
+      "recipe": {
+        "key": {
+          "b": {
+            "item": "immersiveengineering:coil_mv"
+          },
+          "e": {
+            "item": "immersiveengineering:component_electronic"
+          },
+          "i": {
+            "tag": "c:ingots/iron"
+          },
+          "l": {
+            "item": "immersiveengineering:connector_lv"
+          },
+          "m": {
+            "item": "immersiveengineering:connector_mv"
+          },
+          "X": {
+            "item": "createaddition:capacitor"
+          }
+        },
+        "pattern": [
+          "lm ",
+          "ebX",
+          "ii "
+        ],
+        "result": {
+          "id": "immersiveengineering:transformer",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "createaddition:capacitor",
+        "immersiveengineering:coil_mv",
+        "immersiveengineering:component_electronic",
+        "immersiveengineering:connector_lv",
+        "immersiveengineering:connector_mv",
+        "immersiveengineering:transformer"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/transformer"
+      ],
+      "remove_output": false,
+      "reason": "Crafts & Additions Capacitor conditions power alongside the retained IE coil, connectors and electronic component."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:transformer_hv",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/transformer_hv/0",
+      "recipe": {
+        "key": {
+          "b": {
+            "item": "immersiveengineering:coil_hv"
+          },
+          "e": {
+            "item": "immersiveengineering:component_electronic"
+          },
+          "h": {
+            "item": "immersiveengineering:connector_hv"
+          },
+          "i": {
+            "tag": "c:ingots/iron"
+          },
+          "m": {
+            "item": "immersiveengineering:connector_mv"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "mh ",
+          "ebX",
+          "ii "
+        ],
+        "result": {
+          "id": "immersiveengineering:transformer_hv",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:coil_hv",
+        "immersiveengineering:component_electronic",
+        "immersiveengineering:connector_hv",
+        "immersiveengineering:connector_mv",
+        "immersiveengineering:transformer_hv",
+        "kubejs:industrial_mechanism"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/transformer_hv"
+      ],
+      "remove_output": false,
+      "reason": "Retained IE electrical infrastructure uses an appropriate control component; native wiring, coils and metals remain. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:redstone_breaker",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/redstone_breaker/0",
+      "recipe": {
+        "key": {
+          "c": {
+            "item": "immersiveengineering:component_electronic"
+          },
+          "h": {
+            "item": "immersiveengineering:connector_hv"
+          },
+          "i": {
+            "tag": "c:plates/iron"
+          },
+          "r": {
+            "item": "minecraft:repeater"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "hrh",
+          "ici",
+          " X "
+        ],
+        "result": {
+          "id": "immersiveengineering:redstone_breaker",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:component_electronic",
+        "immersiveengineering:connector_hv",
+        "immersiveengineering:redstone_breaker",
+        "kubejs:industrial_mechanism",
+        "minecraft:repeater"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/redstone_breaker"
+      ],
+      "remove_output": false,
+      "reason": "Retained IE electrical infrastructure uses an appropriate control component; native wiring, coils and metals remain. This adds one control beneath the native assembly."
+    },
+    {
+      "tier": 5,
+      "output": "immersiveengineering:breaker_switch",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/immersiveengineering/breaker_switch/0",
+      "recipe": {
+        "key": {
+          "c": {
+            "tag": "immersiveengineering:connector_insulator"
+          },
+          "i": {
+            "tag": "c:ingots/copper"
+          },
+          "l": {
+            "item": "minecraft:lever"
+          },
+          "X": {
+            "item": "create:electron_tube"
+          }
+        },
+        "pattern": [
+          "Xl ",
+          "cic"
+        ],
+        "result": {
+          "id": "immersiveengineering:breaker_switch",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:electron_tube",
+        "immersiveengineering:breaker_switch",
+        "minecraft:lever"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/breaker_switch"
+      ],
+      "remove_output": false,
+      "reason": "Create Electron Tube handles switching indication; native lever, insulators and copper remain."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:blastfurnace_preheater",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/blastfurnace_preheater/0",
+      "recipe": {
+        "key": {
+          "h": {
+            "item": "immersiveengineering:furnace_heater"
+          },
+          "p": {
+            "item": "create:fluid_pipe"
+          },
+          "s": {
+            "tag": "c:sheetmetals/iron"
+          },
+          "F": {
+            "item": "kubejs:tk3_heavy_engineering_machine"
+          }
+        },
+        "pattern": [
+          "ss ",
+          "ssF",
+          "ph "
+        ],
+        "result": {
+          "id": "immersiveengineering:blastfurnace_preheater",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:fluid_pipe",
+        "immersiveengineering:blastfurnace_preheater",
+        "immersiveengineering:furnace_heater",
+        "kubejs:tk3_heavy_engineering_machine"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/blastfurnace_preheater"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_heavy_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:coil_hv",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/coil_hv/0",
+      "recipe": {
+        "key": {
+          "w": {
+            "item": "immersiveengineering:wirecoil_steel"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "www",
+          "wXw",
+          "www"
+        ],
+        "result": {
+          "id": "immersiveengineering:coil_hv",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:coil_hv",
+        "immersiveengineering:wirecoil_steel",
+        "kubejs:industrial_mechanism"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/coil_hv"
+      ],
+      "remove_output": false,
+      "reason": "Heavy electrical or high-output farming machinery uses an Industrial control. This replaces exactly one common structural material with a control, retaining native functional and rare ingredients."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:tesla_coil",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/tesla_coil/0",
+      "recipe": {
+        "key": {
+          "c": {
+            "item": "immersiveengineering:component_iron"
+          },
+          "e": {
+            "item": "immersiveengineering:component_electronic_adv"
+          },
+          "h": {
+            "item": "immersiveengineering:capacitor_hv"
+          },
+          "i": {
+            "tag": "c:plates/aluminum"
+          },
+          "l": {
+            "item": "immersiveengineering:coil_mv"
+          },
+          "F": {
+            "item": "kubejs:tk3_heavy_engineering_machine"
+          }
+        },
+        "pattern": [
+          "iii",
+          "Fl ",
+          "ehc"
+        ],
+        "result": {
+          "id": "immersiveengineering:tesla_coil",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "immersiveengineering:capacitor_hv",
+        "immersiveengineering:coil_mv",
+        "immersiveengineering:component_electronic_adv",
+        "immersiveengineering:component_iron",
+        "immersiveengineering:tesla_coil",
+        "kubejs:tk3_heavy_engineering_machine"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/tesla_coil"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_heavy_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 6,
+      "output": "immersiveengineering:cloche",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/immersiveengineering/cloche/0",
+      "recipe": {
+        "key": {
+          "c": {
+            "item": "farmersdelight:rich_soil"
+          },
+          "e": {
+            "item": "immersiveengineering:light_bulb"
+          },
+          "g": {
+            "tag": "c:glass_blocks"
+          },
+          "w": {
+            "item": "immersiveengineering:basic_engineering"
+          },
+          "X": {
+            "item": "immersiveengineering:component_electronic_adv"
+          }
+        },
+        "pattern": [
+          "geg",
+          "gcg",
+          "Xw "
+        ],
+        "result": {
+          "id": "immersiveengineering:cloche",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "farmersdelight:rich_soil",
+        "immersiveengineering:basic_engineering",
+        "immersiveengineering:cloche",
+        "immersiveengineering:component_electronic_adv",
+        "immersiveengineering:light_bulb"
+      ],
+      "remove_ids": [
+        "immersiveengineering:crafting/cloche"
+      ],
+      "remove_output": false,
+      "reason": "Advanced IE electronics control the cloche instead of another complete Industrial Mechanism. Farmer's Delight Rich Soil supplies the cultivation bed, replacing the Iron Mechanical Component."
+    },
+    {
+      "tier": 5,
+      "output": "create:track_station",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/track_station/0",
+      "recipe": {
+        "category": "misc",
+        "result": {
+          "id": "create:track_station",
+          "count": 2
+        },
+        "ingredients": [
+          {
+            "item": "create:railway_casing"
+          },
+          {
+            "item": "minecraft:compass"
+          },
+          {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        ],
+        "type": "minecraft:crafting_shapeless"
+      },
+      "requires": [
+        "create:railway_casing",
+        "create:track_station",
+        "kubejs:reinforced_mechanism",
+        "minecraft:compass"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/track_station"
+      ],
+      "remove_output": false,
+      "reason": "Transport/steam engineering uses Reinforced control, preserving native casings and track materials. This adds one control while preserving every native shapeless input."
+    },
+    {
+      "tier": 5,
+      "output": "create:track_signal",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/track_signal/0",
+      "recipe": {
+        "category": "misc",
+        "result": {
+          "id": "create:track_signal",
+          "count": 4
+        },
+        "ingredients": [
+          {
+            "item": "create:railway_casing"
+          },
+          {
+            "item": "create:electron_tube"
+          },
+          {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        ],
+        "type": "minecraft:crafting_shapeless"
+      },
+      "requires": [
+        "create:electron_tube",
+        "create:railway_casing",
+        "create:track_signal",
+        "kubejs:reinforced_mechanism"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/track_signal"
+      ],
+      "remove_output": false,
+      "reason": "Transport/steam engineering uses Reinforced control, preserving native casings and track materials. This adds one control while preserving every native shapeless input."
+    },
+    {
+      "tier": 5,
+      "output": "create:track_observer",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/track_observer/0",
+      "recipe": {
+        "category": "misc",
+        "result": {
+          "id": "create:track_observer",
+          "count": 2
+        },
+        "ingredients": [
+          {
+            "item": "create:railway_casing"
+          },
+          [
+            {
+              "item": "minecraft:stone_pressure_plate"
+            },
+            {
+              "item": "minecraft:polished_blackstone_pressure_plate"
+            },
+            {
+              "item": "minecraft:heavy_weighted_pressure_plate"
+            },
+            {
+              "item": "minecraft:light_weighted_pressure_plate"
+            }
+          ],
+          {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        ],
+        "type": "minecraft:crafting_shapeless"
+      },
+      "requires": [
+        "create:railway_casing",
+        "create:track_observer",
+        "kubejs:reinforced_mechanism",
+        "minecraft:heavy_weighted_pressure_plate",
+        "minecraft:light_weighted_pressure_plate",
+        "minecraft:polished_blackstone_pressure_plate",
+        "minecraft:stone_pressure_plate"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/track_observer",
+        "create:crafting/kinetics/track_observer_from_other_plates"
+      ],
+      "remove_output": false,
+      "reason": "Transport/steam engineering uses Reinforced control, preserving native casings and track materials. This adds one control while preserving every native shapeless input."
+    },
+    {
+      "tier": 5,
+      "output": "create:track_observer",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/track_observer/1",
+      "recipe": {
+        "category": "misc",
+        "result": {
+          "id": "create:track_observer",
+          "count": 2
+        },
+        "ingredients": [
+          {
+            "item": "create:railway_casing"
+          },
+          {
+            "tag": "minecraft:wooden_pressure_plates"
+          },
+          {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        ],
+        "type": "minecraft:crafting_shapeless"
+      },
+      "requires": [
+        "create:railway_casing",
+        "create:track_observer",
+        "kubejs:reinforced_mechanism"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/track_observer",
+        "create:crafting/kinetics/track_observer_from_other_plates"
+      ],
+      "remove_output": false,
+      "reason": "Transport/steam engineering uses Reinforced control, preserving native casings and track materials. This adds one control while preserving every native shapeless input."
+    },
+    {
+      "tier": 5,
+      "output": "create:controls",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/controls/0",
+      "recipe": {
+        "key": {
+          "B": {
+            "item": "minecraft:lever"
+          },
+          "C": {
+            "item": "create:railway_casing"
+          },
+          "I": {
+            "item": "create:precision_mechanism"
+          },
+          "X": {
+            "item": "kubejs:reinforced_mechanism"
+          }
+        },
+        "pattern": [
+          "B ",
+          "CX",
+          "I "
+        ],
+        "result": {
+          "id": "create:controls",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:controls",
+        "create:precision_mechanism",
+        "create:railway_casing",
+        "kubejs:reinforced_mechanism",
+        "minecraft:lever"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/controls"
+      ],
+      "remove_output": false,
+      "reason": "Transport/steam engineering uses Reinforced control, preserving native casings and track materials. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 5,
+      "output": "create:cart_assembler",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/cart_assembler/0",
+      "recipe": {
+        "key": {
+          "C": {
+            "item": "create:andesite_alloy"
+          },
+          "L": {
+            "tag": "minecraft:logs"
+          },
+          "R": {
+            "tag": "c:dusts/redstone"
+          },
+          "F": {
+            "item": "kubejs:tk3_engineering_machine"
+          }
+        },
+        "pattern": [
+          "CRC",
+          "LFL"
+        ],
+        "result": {
+          "id": "create:cart_assembler",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:cart_assembler",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/cart_assembler"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 5,
+      "output": "create:steam_engine",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create/steam_engine/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "C": {
+            "tag": "c:storage_blocks/copper"
+          },
+          "P": {
+            "tag": "c:plates/gold"
+          },
+          "F": {
+            "item": "kubejs:tk3_engineering_machine"
+          }
+        },
+        "pattern": [
+          "P ",
+          "AF",
+          "C "
+        ],
+        "result": {
+          "id": "create:steam_engine",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:steam_engine",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/steam_engine"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 5,
+      "output": "create_hypertube:hypertube_entrance",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create_hypertube/hypertube_entrance/0",
+      "recipe": {
+        "key": {
+          "C": {
+            "item": "create:smart_chute"
+          },
+          "F": {
+            "item": "create_hypertube:hypertube_funnel"
+          },
+          "G": {
+            "item": "create:cogwheel"
+          },
+          "X": {
+            "item": "create:encased_fan"
+          }
+        },
+        "pattern": [
+          " F ",
+          "XG ",
+          " C "
+        ],
+        "result": {
+          "id": "create_hypertube:hypertube_entrance",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:cogwheel",
+        "create:encased_fan",
+        "create:smart_chute",
+        "create_hypertube:hypertube_entrance",
+        "create_hypertube:hypertube_funnel"
+      ],
+      "remove_ids": [
+        "create_hypertube:hypertube_entrance"
+      ],
+      "remove_output": false,
+      "reason": "Encased Fan supplies airflow to the retained smart intake and Hypertube Funnel."
+    },
+    {
+      "tier": 5,
+      "output": "create_hypertube:hypertube_accelerator",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create_hypertube/hypertube_accelerator/0",
+      "recipe": {
+        "key": {
+          "C": {
+            "item": "create:cogwheel"
+          },
+          "F": {
+            "item": "create_hypertube:hypertube_funnel"
+          },
+          "P": {
+            "item": "create:precision_mechanism"
+          },
+          "X": {
+            "item": "createaddition:electric_motor"
+          }
+        },
+        "pattern": [
+          "XF ",
+          "CPC",
+          " F "
+        ],
+        "result": {
+          "id": "create_hypertube:hypertube_accelerator",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:cogwheel",
+        "create:precision_mechanism",
+        "create_hypertube:hypertube_accelerator",
+        "create_hypertube:hypertube_funnel",
+        "createaddition:electric_motor"
+      ],
+      "remove_ids": [
+        "create_hypertube:hyper_accelerator_small_cogwheel"
+      ],
+      "remove_output": false,
+      "reason": "Crafts & Additions Electric Motor drives the accelerator; it retains Light Engineering progression through its Alternator."
+    },
+    {
+      "tier": 5,
+      "output": "create_hypertube:hypertube_junction",
+      "recipe_id": "tnk:machines/tier_05/native_upgrade/create_hypertube/hypertube_junction/0",
+      "recipe": {
+        "key": {
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "F": {
+            "item": "create_hypertube:hypertube_funnel"
+          },
+          "H": {
+            "item": "create_hypertube:hypertube"
+          },
+          "T": {
+            "item": "create:transmitter"
+          },
+          "X": {
+            "item": "ae2:logic_processor"
+          }
+        },
+        "pattern": [
+          "BTB",
+          "FHF",
+          "XF "
+        ],
+        "result": {
+          "id": "create_hypertube:hypertube_junction",
+          "count": 1
+        },
+        "category": "misc",
+        "accept_mirrored": true,
+        "type": "create:mechanical_crafting"
+      },
+      "requires": [
+        "ae2:logic_processor",
+        "create:brass_sheet",
+        "create:transmitter",
+        "create_hypertube:hypertube",
+        "create_hypertube:hypertube_funnel",
+        "create_hypertube:hypertube_junction"
+      ],
+      "remove_ids": [
+        "create_hypertube:hypertube_junction"
+      ],
+      "remove_output": false,
+      "reason": "AE2 Logic Processor controls the junction; native Hypertubes and Create transmitter remain."
+    },
+    {
+      "tier": 2,
+      "output": "createdieselgenerators:basin_lid",
+      "recipe_id": "tnk:machines/tier_02/native_upgrade/createdieselgenerators/basin_lid/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "C": {
+            "item": "minecraft:clock"
+          },
+          "X": {
+            "item": "kubejs:sealed_mechanism"
+          }
+        },
+        "pattern": [
+          "XC ",
+          "AAA"
+        ],
+        "result": {
+          "id": "createdieselgenerators:basin_lid",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "createdieselgenerators:basin_lid",
+        "kubejs:sealed_mechanism",
+        "minecraft:clock"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/basin_lid"
+      ],
+      "remove_output": false,
+      "reason": "Fluid-processing equipment uses one seal and retains native processing materials. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 2,
+      "output": "createdieselgenerators:bulk_fermenter",
+      "recipe_id": "tnk:machines/tier_02/native_upgrade/createdieselgenerators/bulk_fermenter/0",
+      "recipe": {
+        "key": {
+          "B": {
+            "tag": "c:barrels/wooden"
+          },
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "X": {
+            "item": "create:mechanical_pump"
+          }
+        },
+        "pattern": [
+          "ABA",
+          " X "
+        ],
+        "result": {
+          "id": "createdieselgenerators:bulk_fermenter",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:mechanical_pump",
+        "createdieselgenerators:bulk_fermenter"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/bulk_fermenter"
+      ],
+      "remove_output": false,
+      "reason": "Create Mechanical Pump supplies sealed liquid handling around the retained native barrel; its Sealed Mechanism is paid upstream."
+    },
+    {
+      "tier": 6,
+      "output": "createdieselgenerators:large_diesel_engine",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/large_diesel_engine/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "D": {
+            "item": "createdieselgenerators:diesel_engine"
+          },
+          "B": {
+            "item": "minecraft:polished_blackstone_slab"
+          },
+          "S": {
+            "tag": "c:plates/brass"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "XA ",
+          "SDS",
+          " B "
+        ],
+        "result": {
+          "id": "createdieselgenerators:large_diesel_engine",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "createdieselgenerators:diesel_engine",
+        "createdieselgenerators:large_diesel_engine",
+        "kubejs:industrial_mechanism",
+        "minecraft:polished_blackstone_slab"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/large_diesel_engine"
+      ],
+      "remove_output": false,
+      "reason": "Fuel-driven industrial engines and oil extraction use Industrial controls. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 6,
+      "output": "createdieselgenerators:huge_diesel_engine",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/huge_diesel_engine/0",
+      "recipe": {
+        "key": {
+          "E": {
+            "item": "createdieselgenerators:large_diesel_engine"
+          },
+          "B": {
+            "tag": "c:storage_blocks/brass"
+          },
+          "S": {
+            "tag": "c:plates/brass"
+          },
+          "F": {
+            "item": "minecraft:flint_and_steel"
+          },
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "P": {
+            "item": "create:fluid_pipe"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "AFA",
+          "XES",
+          "PBP"
+        ],
+        "result": {
+          "id": "createdieselgenerators:huge_diesel_engine",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:fluid_pipe",
+        "createdieselgenerators:huge_diesel_engine",
+        "createdieselgenerators:large_diesel_engine",
+        "kubejs:industrial_mechanism",
+        "minecraft:flint_and_steel"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/huge_diesel_engine"
+      ],
+      "remove_output": false,
+      "reason": "Upgrade the framed Large Diesel Engine; no Steam Engine shortcut into heavy diesel."
+    },
+    {
+      "tier": 6,
+      "output": "createdieselgenerators:pumpjack_bearing",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/pumpjack_bearing/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "Z": {
+            "tag": "c:ingots/zinc"
+          },
+          "B": {
+            "item": "create:mechanical_bearing"
+          },
+          "F": {
+            "item": "kubejs:tk3_heavy_engineering_machine"
+          }
+        },
+        "pattern": [
+          "AFA",
+          "ZBZ",
+          "AZA"
+        ],
+        "result": {
+          "id": "createdieselgenerators:pumpjack_bearing",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:mechanical_bearing",
+        "createdieselgenerators:pumpjack_bearing",
+        "kubejs:tk3_heavy_engineering_machine"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/pumpjack_bearing"
+      ],
+      "remove_output": false,
+      "reason": "One tk3_heavy_engineering_machine is the main machine body; fit the retained work parts. No separate casing or loose mechanism replaces the body."
+    },
+    {
+      "tier": 6,
+      "output": "createdieselgenerators:pumpjack_crank",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/pumpjack_crank/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "Z": {
+            "tag": "c:ingots/zinc"
+          },
+          "I": {
+            "tag": "c:plates/iron"
+          },
+          "S": {
+            "item": "create:shaft"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "AIA",
+          "XS ",
+          "AIA",
+          "ZSZ",
+          "AZA"
+        ],
+        "result": {
+          "id": "createdieselgenerators:pumpjack_crank",
+          "count": 1
+        },
+        "category": "misc",
+        "accept_mirrored": true,
+        "type": "create:mechanical_crafting"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "create:shaft",
+        "createdieselgenerators:pumpjack_crank",
+        "kubejs:industrial_mechanism"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:mechanical_crafting/pumpjack_crank"
+      ],
+      "remove_output": false,
+      "reason": "Fuel-driven industrial engines and oil extraction use Industrial controls. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 6,
+      "output": "createdieselgenerators:pumpjack_head",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/pumpjack_head/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create:andesite_alloy"
+          },
+          "Z": {
+            "tag": "c:ingots/zinc"
+          },
+          "K": {
+            "item": "minecraft:dried_kelp"
+          },
+          "X": {
+            "item": "kubejs:industrial_mechanism"
+          }
+        },
+        "pattern": [
+          "AXA",
+          "ZKZ",
+          "A A"
+        ],
+        "result": {
+          "id": "createdieselgenerators:pumpjack_head",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:andesite_alloy",
+        "createdieselgenerators:pumpjack_head",
+        "kubejs:industrial_mechanism",
+        "minecraft:dried_kelp"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/pumpjack_head"
+      ],
+      "remove_output": false,
+      "reason": "Fuel-driven industrial engines and oil extraction use Industrial controls. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 4,
+      "output": "alchemicallaser:laser_emitter",
+      "recipe_id": "tnk:machines/tier_04/crafting/alchemicallaser/laser_emitter",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "GEG",
+          "PBP",
+          " S "
+        ],
+        "key": {
+          "G": {
+            "item": "ae2:quartz_glass"
+          },
+          "E": {
+            "item": "create:electron_tube"
+          },
+          "P": {
+            "item": "create:brass_sheet"
+          },
+          "B": {
+            "item": "kubejs:tk3_precision_machine"
+          },
+          "S": {
+            "item": "create:shaft"
+          }
+        },
+        "result": {
+          "id": "alchemicallaser:laser_emitter",
+          "count": 1
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "ae2:quartz_glass",
+        "alchemicallaser:laser_emitter",
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create:shaft",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "alchemicallaser:laser_emitter"
+      ],
+      "remove_output": true,
+      "reason": "Laser emitter is a precision optical machine available before Arcane/Creation, avoiding lens and crystal bootstrapping cycles."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:mana_siphon",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/create_wizardry/mana_siphon/0",
+      "recipe": {
+        "key": {
+          "A": {
+            "item": "create_wizardry:arcane_sheet"
+          },
+          "C": {
+            "item": "create_wizardry:arcane_casing"
+          },
+          "D": {
+            "item": "create:item_drain"
+          },
+          "P": {
+            "item": "create_wizardry:arcane_pump"
+          },
+          "X": {
+            "item": "kubejs:arcane_mechanism"
+          }
+        },
+        "pattern": [
+          "AXA",
+          "APA",
+          " C ",
+          "ADA"
+        ],
+        "result": {
+          "id": "create_wizardry:mana_siphon",
+          "count": 1
+        },
+        "category": "misc",
+        "accept_mirrored": true,
+        "type": "create:mechanical_crafting"
+      },
+      "requires": [
+        "create:item_drain",
+        "create_wizardry:arcane_casing",
+        "create_wizardry:arcane_pump",
+        "create_wizardry:arcane_sheet",
+        "create_wizardry:mana_siphon",
+        "kubejs:arcane_mechanism"
+      ],
+      "remove_ids": [
+        "create_wizardry:mana_siphon"
+      ],
+      "remove_output": false,
+      "reason": "Automated mana/source/spell production receives one Arcane control; native magic ingredients are preserved. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:channeler",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/create_wizardry/channeler/0",
+      "recipe": {
+        "key": {
+          "B": {
+            "item": "irons_spellbooks:lightning_bottle"
+          },
+          "C": {
+            "item": "create:copper_sheet"
+          },
+          "E": {
+            "item": "irons_spellbooks:energized_core"
+          },
+          "H": {
+            "item": "minecraft:hopper"
+          },
+          "I": {
+            "item": "create:iron_sheet"
+          },
+          "X": {
+            "item": "kubejs:arcane_mechanism"
+          }
+        },
+        "pattern": [
+          "XE ",
+          "IHI",
+          "CBC"
+        ],
+        "result": {
+          "id": "create_wizardry:channeler",
+          "count": 1
+        },
+        "category": "misc",
+        "accept_mirrored": true,
+        "type": "create:mechanical_crafting"
+      },
+      "requires": [
+        "create:copper_sheet",
+        "create:iron_sheet",
+        "create_wizardry:channeler",
+        "irons_spellbooks:energized_core",
+        "irons_spellbooks:lightning_bottle",
+        "kubejs:arcane_mechanism",
+        "minecraft:hopper"
+      ],
+      "remove_ids": [
+        "create_wizardry:channeler"
+      ],
+      "remove_output": false,
+      "reason": "Automated mana/source/spell production receives one Arcane control; native magic ingredients are preserved. This adds one control in an unused native assembly slot."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:blaze_caster",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/create_wizardry/blaze_caster/0",
+      "recipe": {
+        "sequence": [
+          {
+            "ingredients": [
+              [
+                {
+                  "item": "create_wizardry:incomplete_blaze_caster"
+                },
+                {
+                  "item": "create:blaze_burner"
+                }
+              ],
+              {
+                "item": "irons_spellbooks:shriving_stone"
+              }
+            ],
+            "results": [
+              {
+                "id": "create_wizardry:incomplete_blaze_caster"
+              }
+            ],
+            "type": "create:deploying"
+          },
+          {
+            "ingredients": [
+              {
+                "item": "create_wizardry:incomplete_blaze_caster"
+              },
+              {
+                "item": "irons_spellbooks:arcane_ingot"
+              }
+            ],
+            "results": [
+              {
+                "id": "create_wizardry:incomplete_blaze_caster"
+              }
+            ],
+            "type": "create:deploying"
+          },
+          {
+            "ingredients": [
+              {
+                "item": "create_wizardry:incomplete_blaze_caster"
+              },
+              {
+                "item": "irons_spellbooks:arcane_rune"
+              }
+            ],
+            "results": [
+              {
+                "id": "create_wizardry:incomplete_blaze_caster"
+              }
+            ],
+            "type": "create:deploying"
+          },
+          {
+            "ingredients": [
+              {
+                "item": "create_wizardry:incomplete_blaze_caster"
+              },
+              {
+                "type": "neoforge:single",
+                "fluid": "create_wizardry:mana",
+                "amount": 1000
+              }
+            ],
+            "results": [
+              {
+                "id": "create_wizardry:incomplete_blaze_caster"
+              }
+            ],
+            "type": "create:filling"
+          },
+          {
+            "ingredients": [
+              {
+                "item": "create_wizardry:incomplete_blaze_caster"
+              }
+            ],
+            "results": [
+              {
+                "id": "create_wizardry:incomplete_blaze_caster"
+              }
+            ],
+            "type": "create:pressing"
+          },
+          {
+            "type": "create:deploying",
+            "ingredients": [
+              {
+                "item": "create_wizardry:incomplete_blaze_caster"
+              },
+              {
+                "item": "kubejs:arcane_mechanism"
+              }
+            ],
+            "results": [
+              {
+                "id": "create_wizardry:incomplete_blaze_caster"
+              }
+            ]
+          }
+        ],
+        "results": [
+          {
+            "id": "create_wizardry:blaze_caster"
+          }
+        ],
+        "ingredient": {
+          "item": "create:blaze_burner"
+        },
+        "transitional_item": {
+          "id": "create_wizardry:incomplete_blaze_caster"
+        },
+        "type": "create:sequenced_assembly"
+      },
+      "requires": [
+        "create:blaze_burner",
+        "create_wizardry:blaze_caster",
+        "create_wizardry:incomplete_blaze_caster",
+        "irons_spellbooks:arcane_ingot",
+        "irons_spellbooks:arcane_rune",
+        "irons_spellbooks:shriving_stone",
+        "kubejs:arcane_mechanism"
+      ],
+      "remove_ids": [
+        "create_wizardry:sequenced_assembly/blaze_caster"
+      ],
+      "remove_output": false,
+      "reason": "Automated mana/source/spell production receives one Arcane control; native magic ingredients are preserved. This retains native machine assembly stages and adds its tier control."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:arcane_pump",
+      "recipe_id": "tnk:machines/tier_07/crafting/create_wizardry/arcane_pump",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "H",
+          "B"
+        ],
+        "key": {
+          "H": {
+            "item": "kubejs:arcane_mechanism"
+          },
+          "B": {
+            "item": "create:mechanical_pump"
+          }
+        },
+        "result": {
+          "id": "create_wizardry:arcane_pump"
+        },
+        "category": "misc"
+      },
+      "requires": [
+        "create:mechanical_pump",
+        "create_wizardry:arcane_pump",
+        "kubejs:arcane_mechanism"
+      ],
+      "remove_ids": [
+        "create_wizardry:item_application/arcane_pump",
+        "create_wizardry:deploying/arcane_pump",
+        "create_wizardry:arcane_pump",
+        "create_wizardry:arcane_pump_from_pump"
+      ],
+      "remove_output": true,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:smart_arcane_pipe",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/create_wizardry/smart_arcane_pipe/0",
+      "recipe": {
+        "type": "create:mechanical_crafting",
+        "pattern": [
+          "BHC"
+        ],
+        "key": {
+          "B": {
+            "item": "create:smart_fluid_pipe"
+          },
+          "H": {
+            "item": "create_wizardry:arcane_sheet"
+          },
+          "C": {
+            "item": "kubejs:arcane_mechanism"
+          }
+        },
+        "result": {
+          "id": "create_wizardry:smart_arcane_pipe"
+        },
+        "accept_mirrored": false
+      },
+      "requires": [
+        "create:smart_fluid_pipe",
+        "create_wizardry:arcane_sheet",
+        "create_wizardry:smart_arcane_pipe",
+        "kubejs:arcane_mechanism"
+      ],
+      "remove_ids": [
+        "create_wizardry:deploying/smart_arcane_pipe",
+        "create_wizardry:item_application/smart_arcane_pipe",
+        "create_wizardry:smart_arcane_pipe"
+      ],
+      "remove_output": false,
+      "reason": "Smart magical fluid routing uses Arcane automation; ordinary magical pipes remain native. This assembles the native base and held component with an added control."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:smart_arcane_pipe",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/create_wizardry/smart_arcane_pipe/2",
+      "recipe": {
+        "key": {
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "E": {
+            "item": "create:electron_tube"
+          },
+          "P": {
+            "item": "create_wizardry:arcane_pipe"
+          },
+          "X": {
+            "item": "kubejs:arcane_mechanism"
+          }
+        },
+        "pattern": [
+          "B ",
+          "PX",
+          "E "
+        ],
+        "result": {
+          "id": "create_wizardry:smart_arcane_pipe",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create_wizardry:arcane_pipe",
+        "create_wizardry:smart_arcane_pipe",
+        "kubejs:arcane_mechanism"
+      ],
+      "remove_ids": [
+        "create_wizardry:deploying/smart_arcane_pipe",
+        "create_wizardry:item_application/smart_arcane_pipe",
+        "create_wizardry:smart_arcane_pipe"
+      ],
+      "remove_output": false,
+      "reason": "Smart magical fluid routing uses Arcane automation; ordinary magical pipes remain native. This adds one control beside the native assembly."
+    },
+    {
+      "tier": 7,
+      "output": "ars_n_spells:glyph_press",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/ars_n_spells/glyph_press/0",
+      "recipe": {
+        "key": {
+          "G": {
+            "item": "minecraft:gold_ingot"
+          },
+          "S": {
+            "tag": "c:gems/source"
+          },
+          "P": {
+            "tag": "c:planks/archwood"
+          },
+          "L": {
+            "item": "minecraft:lectern"
+          },
+          "O": {
+            "item": "minecraft:obsidian"
+          },
+          "X": {
+            "item": "create:mechanical_press"
+          }
+        },
+        "pattern": [
+          "XSG",
+          "PLP",
+          "OOO"
+        ],
+        "result": {
+          "id": "ars_n_spells:glyph_press",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "ars_n_spells:glyph_press",
+        "create:mechanical_press",
+        "minecraft:gold_ingot",
+        "minecraft:lectern",
+        "minecraft:obsidian"
+      ],
+      "remove_ids": [
+        "ars_n_spells:glyph_press"
+      ],
+      "remove_output": false,
+      "reason": "Create Mechanical Press supplies physical pressing; native Source Gems, archwood, lectern and obsidian remain."
+    },
+    {
+      "tier": 7,
+      "output": "ars_n_spells:spell_loom",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/ars_n_spells/spell_loom/0",
+      "recipe": {
+        "key": {
+          "G": {
+            "item": "minecraft:gold_ingot"
+          },
+          "L": {
+            "item": "minecraft:lapis_lazuli"
+          },
+          "B": {
+            "item": "minecraft:book"
+          },
+          "O": {
+            "item": "minecraft:obsidian"
+          },
+          "X": {
+            "item": "irons_spellbooks:arcane_ingot"
+          }
+        },
+        "pattern": [
+          "XG ",
+          "LBL",
+          "OOO"
+        ],
+        "result": {
+          "id": "ars_n_spells:spell_loom",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "ars_n_spells:spell_loom",
+        "irons_spellbooks:arcane_ingot",
+        "minecraft:book",
+        "minecraft:gold_ingot",
+        "minecraft:lapis_lazuli",
+        "minecraft:obsidian"
+      ],
+      "remove_ids": [
+        "ars_n_spells:spell_loom"
+      ],
+      "remove_output": false,
+      "reason": "Iron's Spells Arcane Ingot bridges spell engraving and weaving; native lapis, book and obsidian remain."
+    },
+    {
+      "tier": 8,
+      "output": "create_enchantment_industry:affix_augmentor",
+      "recipe_id": "tnk:machines/tier_08/native_upgrade/create_enchantment_industry/affix_augmentor/0",
+      "recipe": {
+        "key": {
+          "-": {
+            "item": "minecraft:nether_star"
+          },
+          "=": {
+            "item": "create:nixie_tube"
+          },
+          "S": {
+            "item": "apotheosis:godforged_pearl"
+          },
+          "o": {
+            "item": "create:brass_sheet"
+          },
+          "x": {
+            "item": "irons_spellbooks:arcane_ingot"
+          },
+          "X": {
+            "item": "kubejs:eclipse_mechanism"
+          }
+        },
+        "pattern": [
+          "oxo",
+          "X- ",
+          "S=S"
+        ],
+        "result": {
+          "id": "create_enchantment_industry:affix_augmentor",
+          "count": 1
+        },
+        "category": "misc",
+        "type": "minecraft:crafting_shaped"
+      },
+      "requires": [
+        "apotheosis:godforged_pearl",
+        "create:brass_sheet",
+        "create:nixie_tube",
+        "create_enchantment_industry:affix_augmentor",
+        "irons_spellbooks:arcane_ingot",
+        "kubejs:eclipse_mechanism",
+        "minecraft:nether_star"
+      ],
+      "remove_ids": [
+        "create_enchantment_industry:crafting/affix_augmentor"
+      ],
+      "remove_output": false,
+      "reason": "Iron's Spells Arcane Ingot supplies magical alloywork; native Godforged Pearl, Nether Star and Eclipse Mechanism remain."
+    },
+    {
+      "tier": 1,
+      "output": "create:deployer",
+      "recipe_id": "tnk:machines/tier_01/deploying/create/deployer",
+      "recipe": {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "kubejs:tk3_rotation_machine"
+          },
+          {
+            "item": "create:brass_hand"
+          }
+        ],
+        "results": [
+          {
+            "id": "create:deployer"
+          }
+        ]
+      },
+      "requires": [
+        "create:brass_hand",
+        "create:deployer",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": false,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 1,
+      "output": "create:windmill_bearing",
+      "recipe_id": "tnk:machines/tier_01/deploying/create/windmill_bearing",
+      "recipe": {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "create:mechanical_bearing"
+          },
+          {
+            "item": "kubejs:rotation_mechanism"
+          }
+        ],
+        "results": [
+          {
+            "id": "create:windmill_bearing"
+          }
+        ]
+      },
+      "requires": [
+        "create:mechanical_bearing",
+        "create:windmill_bearing",
+        "kubejs:rotation_mechanism"
+      ],
+      "remove_ids": [],
+      "remove_output": false,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 1,
+      "output": "create:sticky_mechanical_piston",
+      "recipe_id": "tnk:machines/tier_01/deploying/create/sticky_mechanical_piston",
+      "recipe": {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "create:mechanical_piston"
+          },
+          {
+            "item": "minecraft:slime_ball"
+          }
+        ],
+        "results": [
+          {
+            "id": "create:sticky_mechanical_piston"
+          }
+        ]
+      },
+      "requires": [
+        "create:mechanical_piston",
+        "create:sticky_mechanical_piston",
+        "minecraft:slime_ball"
+      ],
+      "remove_ids": [],
+      "remove_output": false,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 3,
+      "output": "create:packager",
+      "recipe_id": "tnk:machines/tier_03/deploying/create/packager",
+      "recipe": {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "kubejs:tk3_precision_machine"
+          },
+          {
+            "item": "create:chute"
+          }
+        ],
+        "results": [
+          {
+            "id": "create:packager"
+          }
+        ]
+      },
+      "requires": [
+        "create:chute",
+        "create:packager",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": false,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 3,
+      "output": "create:repackager",
+      "recipe_id": "tnk:machines/tier_03/deploying/create/repackager",
+      "recipe": {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "create:packager"
+          },
+          {
+            "item": "create:precision_mechanism"
+          }
+        ],
+        "results": [
+          {
+            "id": "create:repackager"
+          }
+        ]
+      },
+      "requires": [
+        "create:packager",
+        "create:precision_mechanism",
+        "create:repackager"
+      ],
+      "remove_ids": [],
+      "remove_output": false,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 7,
+      "output": "create_wizardry:arcane_pump",
+      "recipe_id": "tnk:machines/tier_07/deploying/create_wizardry/arcane_pump",
+      "recipe": {
+        "type": "create:deploying",
+        "ingredients": [
+          {
+            "item": "create:mechanical_pump"
+          },
+          {
+            "item": "kubejs:arcane_mechanism"
+          }
+        ],
+        "results": [
+          {
+            "id": "create_wizardry:arcane_pump"
+          }
+        ]
+      },
+      "requires": [
+        "create:mechanical_pump",
+        "create_wizardry:arcane_pump",
+        "kubejs:arcane_mechanism"
+      ],
+      "remove_ids": [],
+      "remove_output": false,
+      "reason": "Shaped crafting places the upgrade above its base machine. An equal-cost Deployer route automates it; no in-world machine application."
+    },
+    {
+      "tier": 1,
+      "output": "create:millstone",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/millstone",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:millstone",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:millstone",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/millstone",
+        "tnk:machines/tier_01/crafting/create/millstone"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_drill",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/mechanical_drill",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:mechanical_drill",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:mechanical_drill",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_drill"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_saw",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/mechanical_saw",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:mechanical_saw",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:mechanical_saw",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_saw"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:encased_fan",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/encased_fan",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:encased_fan",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:encased_fan",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/encased_fan"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_bearing",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/mechanical_bearing",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:mechanical_bearing",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:mechanical_bearing",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_bearing",
+        "tnk:machines/tier_01/crafting/create/mechanical_bearing"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_piston",
+      "recipe_id": "tnk:machines/tier_01/crafting/create/mechanical_piston",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:mechanical_piston",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:mechanical_piston",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_piston"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:rope_pulley",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/rope_pulley",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:rope_pulley",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:rope_pulley",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:weighted_ejector",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/weighted_ejector",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:weighted_ejector",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:weighted_ejector",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:schematicannon",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/schematicannon",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:schematicannon",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:schematicannon",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "rubberworks:sapper",
+      "recipe_id": "tnk:machines/tier_01/native_upgrade/rubberworks/sapper/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "rubberworks:sapper",
+          "count": 1
+        }
+      },
+      "requires": [
+        "kubejs:tk3_rotation_machine",
+        "rubberworks:sapper"
+      ],
+      "remove_ids": [
+        "rubberworks:crafting/sapper"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "rubberworks:compressor",
+      "recipe_id": "tnk:machines/tier_02/crafting/rubberworks/compressor",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "rubberworks:compressor",
+          "count": 1
+        }
+      },
+      "requires": [
+        "kubejs:tk3_rotation_machine",
+        "rubberworks:compressor"
+      ],
+      "remove_ids": [
+        "rubberworks:crafting/compressor"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:gantry_carriage",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/gantry_carriage",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:gantry_carriage",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:gantry_carriage",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:clockwork_bearing",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/clockwork_bearing",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:clockwork_bearing",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:clockwork_bearing",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_harvester",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/mechanical_harvester",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:mechanical_harvester",
+          "count": 2
+        }
+      },
+      "requires": [
+        "create:mechanical_harvester",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_harvester",
+        "tnk:machines/tier_01/crafting/create/mechanical_harvester"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_plough",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/mechanical_plough",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:mechanical_plough",
+          "count": 2
+        }
+      },
+      "requires": [
+        "create:mechanical_plough",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_plough",
+        "tnk:machines/tier_01/crafting/create/mechanical_plough"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:portable_storage_interface",
+      "recipe_id": "tnk:machines/tier_01/stonecutting/create/portable_storage_interface",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create:portable_storage_interface",
+          "count": 2
+        }
+      },
+      "requires": [
+        "create:portable_storage_interface",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/portable_storage_interface",
+        "tnk:machines/tier_01/crafting/create/portable_storage_interface"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create:mechanical_pump",
+      "recipe_id": "tnk:machines/tier_02/crafting/create/mechanical_pump",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "P",
+          "M"
+        ],
+        "key": {
+          "P": {
+            "item": "create:fluid_pipe"
+          },
+          "M": {
+            "item": "kubejs:tk3_rotation_machine"
+          }
+        },
+        "result": {
+          "id": "create:mechanical_pump",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:fluid_pipe",
+        "create:mechanical_pump",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_pump"
+      ],
+      "remove_output": true,
+      "reason": "Andesite body plus a copper pipe. No rubber or Copper Machine: this is the resin transport bootstrap."
+    },
+    {
+      "tier": 2,
+      "output": "create:spout",
+      "recipe_id": "tnk:machines/tier_02/crafting/create/spout",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create:spout",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:spout",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/spout"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create:item_drain",
+      "recipe_id": "tnk:machines/tier_02/stonecutting/create/item_drain",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create:item_drain",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:item_drain",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/item_drain",
+        "tnk:machines/tier_02/crafting/create/item_drain"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create:hose_pulley",
+      "recipe_id": "tnk:machines/tier_02/crafting/create/hose_pulley",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create:hose_pulley",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:hose_pulley",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/hose_pulley"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "createdieselgenerators:burner",
+      "recipe_id": "tnk:machines/tier_02/native_upgrade/createdieselgenerators/burner/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "createdieselgenerators:burner",
+          "count": 1
+        }
+      },
+      "requires": [
+        "createdieselgenerators:burner",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/burner"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "createdieselgenerators:distillation_controller",
+      "recipe_id": "tnk:machines/tier_02/native_upgrade/createdieselgenerators/distillation_controller/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "createdieselgenerators:distillation_controller",
+          "count": 1
+        }
+      },
+      "requires": [
+        "createdieselgenerators:distillation_controller",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/distillation_controller"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create_enchantment_industry:experience_lantern",
+      "recipe_id": "tnk:machines/tier_02/stonecutting/create_enchantment_industry/experience_lantern",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create_enchantment_industry:experience_lantern",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create_enchantment_industry:experience_lantern",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create_enchantment_industry:infuser",
+      "recipe_id": "tnk:machines/tier_07/native_upgrade/create_enchantment_industry/infuser/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create_enchantment_industry:infuser",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create_enchantment_industry:infuser",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create_enchantment_industry:crafting/infuser"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create_enchantment_industry:experience_hatch",
+      "recipe_id": "tnk:machines/tier_02/native_upgrade/create_enchantment_industry/experience_hatch/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create_enchantment_industry:experience_hatch",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create_enchantment_industry:experience_hatch",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create_enchantment_industry:item_application/experience_hatch"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create_enchantment_industry:printer",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create_enchantment_industry/printer/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create_enchantment_industry:printer",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create_enchantment_industry:printer",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create_enchantment_industry:crafting/printer"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 2,
+      "output": "create:portable_fluid_interface",
+      "recipe_id": "tnk:machines/tier_02/stonecutting/create/portable_fluid_interface",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_hydraulic_machine"
+        },
+        "result": {
+          "id": "create:portable_fluid_interface",
+          "count": 2
+        }
+      },
+      "requires": [
+        "create:portable_fluid_interface",
+        "kubejs:tk3_hydraulic_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/portable_fluid_interface",
+        "tnk:machines/tier_02/crafting/create/portable_fluid_interface"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:rotation_speed_controller",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/rotation_speed_controller",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:rotation_speed_controller",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:rotation_speed_controller",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/rotation_speed_controller"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:content_observer",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/content_observer/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:content_observer",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:content_observer",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/content_observer"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:stockpile_switch",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/stockpile_switch/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:stockpile_switch",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:stockpile_switch",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/stockpile_switch"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:sequenced_gearshift",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/sequenced_gearshift/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:sequenced_gearshift",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:sequenced_gearshift",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/sequenced_gearshift"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:mechanical_arm",
+      "recipe_id": "tnk:machines/tier_03/crafting/create/mechanical_arm",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:mechanical_arm",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:mechanical_arm",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/mechanical_arm"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:elevator_pulley",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/elevator_pulley/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:elevator_pulley",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:elevator_pulley",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/elevator_pulley"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:package_frogport",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create/package_frogport/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "create:package_frogport",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create:package_frogport",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "create:crafting/logistics/package_frogport"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "createaddition:rolling_mill",
+      "recipe_id": "tnk:machines/tier_03/crafting/createaddition/rolling_mill",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "createaddition:rolling_mill",
+          "count": 1
+        }
+      },
+      "requires": [
+        "createaddition:rolling_mill",
+        "kubejs:tk3_precision_machine"
+      ],
+      "remove_ids": [
+        "createaddition:crafting/rolling_mill"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "trading_floor:trading_depot",
+      "recipe_id": "tnk:machines/tier_03/stonecutting/trading_floor/trading_depot",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_precision_machine"
+        },
+        "result": {
+          "id": "trading_floor:trading_depot",
+          "count": 1
+        }
+      },
+      "requires": [
+        "kubejs:tk3_precision_machine",
+        "trading_floor:trading_depot"
+      ],
+      "remove_ids": [],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 1,
+      "output": "create_enchantment_industry:mechanical_grindstone",
+      "recipe_id": "tnk:machines/tier_03/native_upgrade/create_enchantment_industry/mechanical_grindstone/0",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_rotation_machine"
+        },
+        "result": {
+          "id": "create_enchantment_industry:mechanical_grindstone",
+          "count": 1
+        }
+      },
+      "requires": [
+        "create_enchantment_industry:mechanical_grindstone",
+        "kubejs:tk3_rotation_machine"
+      ],
+      "remove_ids": [
+        "create_enchantment_industry:crafting/mechanical_grindstone"
+      ],
+      "remove_output": true,
+      "reason": "Direct Stonecutter conversion: one machine body, no added casing or mechanism tax."
+    },
+    {
+      "tier": 3,
+      "output": "create:flywheel",
+      "recipe_id": "tnk:machines/tier_05/crafting/create/flywheel",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "category": "misc",
+        "key": {
+          "A": {
+            "item": "create:shaft"
+          },
+          "C": {
+            "tag": "c:ingots/brass"
+          }
+        },
+        "pattern": [
+          "CCC",
+          "CAC",
+          "CCC"
+        ],
+        "result": {
+          "count": 1,
+          "id": "create:flywheel"
+        }
+      },
+      "requires": [
+        "create:flywheel",
+        "create:shaft"
+      ],
+      "remove_ids": [
+        "create:crafting/kinetics/flywheel"
+      ],
+      "remove_output": true,
+      "reason": "Decorative flywheel: native eight Brass Ingots around one Shaft. No machine frame, steel or tier-five gate."
+    },
+    {
+      "tier": 3,
+      "output": "create:crushing_wheel",
+      "recipe_id": "tnk:machines/tier_03/mechanical_crafting/create/crushing_wheel",
+      "recipe": {
+        "type": "create:mechanical_crafting",
+        "pattern": [
+          " CCC ",
+          "CCCCC",
+          "CCSCC",
+          "CCCCC",
+          " CCC "
+        ],
+        "key": {
+          "C": {
+            "item": "minecraft:cobblestone"
+          },
+          "S": {
+            "item": "create:shaft"
+          }
+        },
+        "result": {
+          "id": "create:crushing_wheel",
+          "count": 1
+        },
+        "accept_mirrored": false
+      },
+      "requires": [
+        "create:crushing_wheel",
+        "create:shaft",
+        "minecraft:cobblestone"
+      ],
+      "remove_ids": [
+        "tnk:chapter_09/mechanical_crafting/crushing_wheels"
+      ],
+      "remove_output": true,
+      "reason": "Exact specified 5x5 wheel outline; 20 Cobblestone and one Shaft produce one Crushing Wheel for the Singularity route."
+    },
+    {
+      "tier": 6,
+      "output": "createdieselgenerators:diesel_engine",
+      "recipe_id": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/diesel_engine/0",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " MQ",
+          "PBP",
+          "SFS"
+        ],
+        "key": {
+          "P": {
+            "item": "createdieselgenerators:engine_piston"
+          },
+          "Q": {
+            "item": "minecraft:flint_and_steel"
+          },
+          "B": {
+            "tag": "c:storage_blocks/brass"
+          },
+          "S": {
+            "item": "minecraft:polished_blackstone_slab"
+          },
+          "F": {
+            "item": "create:fluid_tank"
+          },
+          "M": {
+            "item": "kubejs:tk3_heavy_engineering_machine"
+          }
+        },
+        "result": {
+          "id": "createdieselgenerators:diesel_engine"
+        }
+      },
+      "requires": [
+        "create:fluid_tank",
+        "createdieselgenerators:diesel_engine",
+        "createdieselgenerators:engine_piston",
+        "kubejs:tk3_heavy_engineering_machine",
+        "minecraft:flint_and_steel",
+        "minecraft:polished_blackstone_slab"
+      ],
+      "remove_ids": [
+        "createdieselgenerators:crafting/diesel_engine"
+      ],
+      "remove_output": true,
+      "reason": "One Heavy Engineering body plus native diesel-engine parts. Native fluid tank and ignition tool retain distinct pattern keys."
+    },
+    {
+      "tier": 4,
+      "output": "alchemicallaser:growth_lens",
+      "recipe_id": "tnk:machines/tier_04/crafting/alchemicallaser/growth_lens",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "GMG",
+          "BCB",
+          "GMG"
+        ],
+        "key": {
+          "G": {
+            "item": "create:polished_rose_quartz"
+          },
+          "M": {
+            "item": "create:precision_mechanism"
+          },
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "C": {
+            "tag": "tnk:lens_catalysts/growth"
+          }
+        },
+        "result": {
+          "id": "alchemicallaser:growth_lens",
+          "count": 1
+        }
+      },
+      "requires": [
+        "alchemicallaser:growth_lens",
+        "create:brass_sheet",
+        "create:polished_rose_quartz",
+        "create:precision_mechanism"
+      ],
+      "remove_ids": [
+        "alchemicallaser:growth_lens"
+      ],
+      "remove_output": true,
+      "reason": "Lens tier I: one boss material from #tnk:lens_catalysts/growth; all five options are alternatives. Existing optics, two mechanisms and two Brass Sheets are retained. The lens remains reusable."
+    },
+    {
+      "tier": 5,
+      "output": "alchemicallaser:convergence_lens",
+      "recipe_id": "tnk:machines/tier_05/crafting/alchemicallaser/convergence_lens",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "GMG",
+          "BCB",
+          "GMG"
+        ],
+        "key": {
+          "G": {
+            "item": "create:polished_rose_quartz"
+          },
+          "M": {
+            "item": "kubejs:calculation_mechanism"
+          },
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "C": {
+            "tag": "tnk:lens_catalysts/convergence"
+          }
+        },
+        "result": {
+          "id": "alchemicallaser:convergence_lens",
+          "count": 1
+        }
+      },
+      "requires": [
+        "alchemicallaser:convergence_lens",
+        "create:brass_sheet",
+        "create:polished_rose_quartz",
+        "kubejs:calculation_mechanism"
+      ],
+      "remove_ids": [
+        "alchemicallaser:convergence_lens"
+      ],
+      "remove_output": true,
+      "reason": "Lens tier II: one boss material from #tnk:lens_catalysts/convergence; all five options are alternatives. Existing optics, two mechanisms and two Brass Sheets are retained. The lens remains reusable."
+    },
+    {
+      "tier": 6,
+      "output": "alchemicallaser:splitting_lens",
+      "recipe_id": "tnk:machines/tier_06/crafting/alchemicallaser/splitting_lens",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "GMG",
+          "BCB",
+          "GMG"
+        ],
+        "key": {
+          "G": {
+            "item": "create:polished_rose_quartz"
+          },
+          "M": {
+            "item": "kubejs:industrial_mechanism"
+          },
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "C": {
+            "tag": "tnk:lens_catalysts/splitting"
+          }
+        },
+        "result": {
+          "id": "alchemicallaser:splitting_lens",
+          "count": 1
+        }
+      },
+      "requires": [
+        "alchemicallaser:splitting_lens",
+        "create:brass_sheet",
+        "create:polished_rose_quartz",
+        "kubejs:industrial_mechanism"
+      ],
+      "remove_ids": [
+        "alchemicallaser:splitting_lens"
+      ],
+      "remove_output": true,
+      "reason": "Lens tier III: one boss material from #tnk:lens_catalysts/splitting; all five options are alternatives. Existing optics, two mechanisms and two Brass Sheets are retained. The lens remains reusable."
+    },
+    {
+      "tier": 8,
+      "output": "alchemicallaser:power_lens",
+      "recipe_id": "tnk:machines/tier_08/crafting/alchemicallaser/power_lens",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "GMG",
+          "BCB",
+          "GMG"
+        ],
+        "key": {
+          "G": {
+            "item": "create:polished_rose_quartz"
+          },
+          "M": {
+            "item": "kubejs:eclipse_mechanism"
+          },
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "C": {
+            "tag": "tnk:lens_catalysts/power"
+          }
+        },
+        "result": {
+          "id": "alchemicallaser:power_lens",
+          "count": 1
+        }
+      },
+      "requires": [
+        "alchemicallaser:power_lens",
+        "create:brass_sheet",
+        "create:polished_rose_quartz",
+        "kubejs:eclipse_mechanism"
+      ],
+      "remove_ids": [
+        "alchemicallaser:power_lens"
+      ],
+      "remove_output": true,
+      "reason": "Lens tier IV: one boss material from #tnk:lens_catalysts/power; all five options are alternatives. Existing optics, two mechanisms and two Brass Sheets are retained. The lens remains reusable."
+    },
+    {
+      "tier": 8,
+      "output": "alchemicallaser:eclipse_lens",
+      "recipe_id": "tnk:machines/tier_08/crafting/alchemicallaser/eclipse_lens",
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "GMG",
+          "BCB",
+          "GMG"
+        ],
+        "key": {
+          "G": {
+            "item": "minecraft:tinted_glass"
+          },
+          "M": {
+            "item": "kubejs:eclipse_mechanism"
+          },
+          "B": {
+            "item": "create:brass_sheet"
+          },
+          "C": {
+            "tag": "tnk:lens_catalysts/eclipse"
+          }
+        },
+        "result": {
+          "id": "alchemicallaser:eclipse_lens",
+          "count": 1
+        }
+      },
+      "requires": [
+        "alchemicallaser:eclipse_lens",
+        "create:brass_sheet",
+        "kubejs:eclipse_mechanism",
+        "minecraft:tinted_glass"
+      ],
+      "remove_ids": [
+        "alchemicallaser:eclipse_lens"
+      ],
+      "remove_output": true,
+      "reason": "Lens tier V: one boss material from #tnk:lens_catalysts/eclipse; all five options are alternatives. Existing optics, two mechanisms and two Brass Sheets are retained. The lens remains reusable."
+    },
+    {
+      "tier": 5,
+      "output": "createaddition:alternator",
+      "recipe_id": "tnk:machines/tier_05/crafting/createaddition/alternator",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_engineering_machine"
+        },
+        "result": {
+          "id": "createaddition:alternator",
+          "count": 1
+        }
+      },
+      "requires": [
+        "createaddition:alternator",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [
+        "createaddition:mechanical_crafting/alternator"
+      ],
+      "remove_output": true,
+      "reason": "One Light Engineering Machine directly converts into the selected electrical machine; no added body or mechanism tax."
+    },
+    {
+      "tier": 5,
+      "output": "createaddition:electric_motor",
+      "recipe_id": "tnk:machines/tier_05/crafting/createaddition/electric_motor",
+      "recipe": {
+        "type": "minecraft:stonecutting",
+        "ingredient": {
+          "item": "kubejs:tk3_engineering_machine"
+        },
+        "result": {
+          "id": "createaddition:electric_motor",
+          "count": 1
+        }
+      },
+      "requires": [
+        "createaddition:electric_motor",
+        "kubejs:tk3_engineering_machine"
+      ],
+      "remove_ids": [
+        "createaddition:mechanical_crafting/electric_motor"
+      ],
+      "remove_output": true,
+      "reason": "One Light Engineering Machine directly converts into the selected electrical machine; no added body or mechanism tax."
+    }
+  ]
+}

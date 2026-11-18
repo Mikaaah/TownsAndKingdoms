@@ -1,0 +1,12 @@
+{
+  "tnkapothgui.inputs": "Inputs",
+  "tnkapothgui.results": "Results",
+  "tnkapothgui.materials": "Materials",
+  "tnkapothgui.filter": "Filter",
+  "tnkapothgui.deposit": "Store",
+  "tnkapothgui.item": "Item",
+  "tnkapothgui.sigil": "Sigil",
+  "tnkapothgui.augment_hint": "Select an affix item to augment.",
+  "tnkapothgui.upgrade": "Upgrade",
+  "tnkapothgui.reroll": "Reroll"
+}

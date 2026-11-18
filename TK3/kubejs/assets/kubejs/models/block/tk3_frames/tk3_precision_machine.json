@@ -1,1 +1,3 @@
-{"parent": "create:block/brass_casing"}
+{
+  "parent": "kubejs:block/custom/brass_machine"
+}

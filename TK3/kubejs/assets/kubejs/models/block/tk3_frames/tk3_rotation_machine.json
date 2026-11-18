@@ -1,1 +1,3 @@
-{"parent": "create:block/andesite_casing"}
+{
+  "parent": "kubejs:block/custom/andesite_machine"
+}

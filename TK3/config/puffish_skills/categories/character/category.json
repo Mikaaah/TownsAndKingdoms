@@ -1,0 +1,49 @@
+{
+  "title": "Towns & Kingdoms",
+  "description": "588 skills across six connected disciplines. 175 points earned by character level 100.",
+  "icon": {
+    "type": "texture",
+    "data": {
+      "texture": "tnk:textures/skilltree/foundation_0.png"
+    }
+  },
+  "background": {
+    "texture": "tnk:textures/gui/character_background.png",
+    "width": 1254,
+    "height": 1254,
+    "position": "fill"
+  },
+  "colors": {
+    "connections": {
+      "locked": {
+        "fill": "#775c3b",
+        "stroke": "#49331f"
+      },
+      "available": {
+        "fill": "#b38c4f",
+        "stroke": "#50371f"
+      },
+      "affordable": {
+        "fill": "#eed18d",
+        "stroke": "#745024"
+      },
+      "unlocked": {
+        "fill": "#f7e3a4",
+        "stroke": "#86602e"
+      },
+      "excluded": {
+        "fill": "#857565",
+        "stroke": "#4d4339"
+      }
+    },
+    "points": {
+      "fill": "#f4e2bc",
+      "stroke": "#493422"
+    }
+  },
+  "unlocked_by_default": true,
+  "starting_points": 0,
+  "exclusive_root": false,
+  "spent_points_limit": 175,
+  "erase_on_death": false
+}

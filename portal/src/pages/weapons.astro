@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RegistryDialog from '../components/RegistryDialog.astro';
+---
+<Layout title="Weapon registry" description="Explore weapon movesets, physical archetypes, grips and progression in Towns & Kingdoms." wide>
+ <p class="eyebrow">Reference / Combat</p><h1>Weapon registry</h1><p class="intro">A dagger should feel like a dagger. A greatsword should carry its weight. Find the weapon identity, grip and fighting style behind every blade, polearm and unusual discovery.</p>
+ <div data-registry="weapons"><div class="toolbar"><input type="search" data-filter="query" placeholder="Search weapon name or item ID…" aria-label="Search weapons"/><select data-filter="modName" aria-label="Filter by mod"><option value="">All mods</option></select><select data-filter="styleName" aria-label="Filter by style"><option value="">All styles</option></select><select data-filter="grip" aria-label="Filter by grip"><option value="">All grips</option></select><select data-filter="styleTier" aria-label="Filter by style tier"><option value="">All style tiers</option></select><select data-filter="productionTier" aria-label="Filter by crafting tier"><option value="">All crafting tiers</option></select></div><div class="results-meta"><span data-count>Finding weapons…</span><span>Choose a weapon for details</span></div><div class="weapon-grid" data-results></div><div class="pagination"><button data-prev disabled aria-label="Previous weapons">← Previous</button><span data-page-label>1 / 1</span><button data-next aria-label="Next weapons">Next →</button></div></div>
+ <div class="callout"><strong>Three different kinds of tier</strong><p>A style tier describes the moveset’s identity. A crafting tier describes its production requirements. Loot tier describes the equipment pool. A signature moveset alone does not make a material weapon a boss artifact.</p></div>
+ <RegistryDialog />
+ <script>import '../scripts/registry';</script>
+</Layout>

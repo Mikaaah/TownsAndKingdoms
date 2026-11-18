@@ -1,0 +1,82 @@
+name: Towns & Kingdoms documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'portal/**'
+      - 'TK3/kubejs/**'
+      - 'TK3/config/**'
+      - 'TK3/registry/**'
+      - 'TK3/manifest.json'
+      - 'TK3/modlist.html'
+      - 'TK3/tools/registry_items.json'
+      - 'TK3/wiki-archive/**'
+      - '.github/workflows/publish-portal.yml'
+  pull_request:
+    paths:
+      - 'portal/**'
+      - 'TK3/kubejs/**'
+      - 'TK3/config/**'
+      - 'TK3/registry/**'
+      - 'TK3/manifest.json'
+      - 'TK3/modlist.html'
+      - 'TK3/tools/registry_items.json'
+      - 'TK3/wiki-archive/**'
+      - '.github/workflows/publish-portal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: documentation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portal
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: portal/package-lock.json
+      - name: Install documentation dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Verify preserved TK2 documentation
+        run: node scripts/check-legacy.mjs
+      - name: Build the documentation portal
+        run: npm run build
+      - name: Test registries, planner rules and Ponder assets
+        run: npm test
+      - name: Verify deployed TK2 files
+        run: node scripts/check-legacy.mjs --dist
+      - name: Verify legacy links and redirects
+        run: node scripts/check-legacy-links.mjs --dist
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: portal/dist
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Publish documentation
+        id: deployment
+        uses: actions/deploy-pages@v4

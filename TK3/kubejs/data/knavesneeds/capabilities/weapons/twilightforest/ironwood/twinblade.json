@@ -1,0 +1,25 @@
+{
+  "type": "epicfight_dd:pole_blade",
+  "attributes": {
+    "common": {
+      "impact": 2.1,
+      "max_strikes": 3,
+      "armor_negation": 16.0,
+      "damage_bonus": 2.0,
+      "speed_bonus": 0.18
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.95
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.95
+    ]
+  }
+}

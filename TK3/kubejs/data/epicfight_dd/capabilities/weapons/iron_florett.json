@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 1.0,
+      "armor_negation": 28.0,
+      "max_strikes": 3,
+      "damage_bonus": 2.0,
+      "speed_bonus": 0.26
+    }
+  },
+  "type": "epicfight_dd:florett"
+}

@@ -1,0 +1,5 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {href} from '../lib/data';
+---
+<Layout title="Page not found"><p class="eyebrow">Handbook / 404</p><h1>This path ends here.</h1><p class="intro">The page may have moved. Search the handbook, explore the main references or return to the overview.</p><div class="button-row"><a class="button button-primary" href={href()}>Return to the handbook</a><a class="button" href={href('tk2/')}>Looking for TK2?</a></div></Layout>

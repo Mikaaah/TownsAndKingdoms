@@ -1,0 +1,8 @@
+{
+  "identification_payment": "xp_points",
+  "identification_xp_multiplier": 1,
+  "salvage_costs_xp": true,
+  "salvage_xp_base": 1,
+  "salvage_xp_per_tier": 1,
+  "salvage_xp_per_rarity": 1
+}

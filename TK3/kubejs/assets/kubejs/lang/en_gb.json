@@ -1,0 +1,8 @@
+{
+  "message.solcarrot.hearts.singular": "half a heart",
+  "message.solcarrot.hearts.plural": "%s half-hearts",
+  "gui.solcarrot.food_book.stats.hearts_gained": "Half-Hearts Gained",
+  "gui.solcarrot.food_book.stats.tooltip.hearts_per_milestone.singular": "Half a Heart per Milestone",
+  "gui.solcarrot.food_book.stats.tooltip.hearts_per_milestone.plural": "%s Half-Hearts per Milestone",
+  "config.solcarrot.hearts_per_milestone": "Health Points per Milestone (TNK)"
+}

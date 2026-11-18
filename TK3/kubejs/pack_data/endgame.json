@@ -1,0 +1,419 @@
+{
+  "version": 2,
+  "cells": [
+    {
+      "name": "sand",
+      "resource": "minecraft:sand",
+      "cell": "kubejs:infinity_sand_cell"
+    },
+    {
+      "name": "red_sand",
+      "resource": "minecraft:red_sand",
+      "cell": "kubejs:infinity_red_sand_cell"
+    },
+    {
+      "name": "gravel",
+      "resource": "minecraft:gravel",
+      "cell": "kubejs:infinity_gravel_cell"
+    },
+    {
+      "name": "soul_sand",
+      "resource": "minecraft:soul_sand",
+      "cell": "kubejs:infinity_soul_sand_cell"
+    },
+    {
+      "name": "soul_soil",
+      "resource": "minecraft:soul_soil",
+      "cell": "kubejs:infinity_soul_soil_cell"
+    },
+    {
+      "name": "clay",
+      "resource": "minecraft:clay",
+      "cell": "kubejs:infinity_clay_cell"
+    },
+    {
+      "name": "snow",
+      "resource": "minecraft:snow_block",
+      "cell": "kubejs:infinity_snow_cell"
+    },
+    {
+      "name": "ice",
+      "resource": "minecraft:ice",
+      "cell": "kubejs:infinity_ice_cell"
+    }
+  ],
+  "crafting": [
+    {
+      "id": "tnk:endgame/mechanical_crafting/ore_generator_catalyst",
+      "type": "create:mechanical_crafting",
+      "pattern": [
+        "DSASD",
+        "SHMHS",
+        "AMFMA",
+        "SHMHS",
+        "ESASE"
+      ],
+      "key": {
+        "D": {
+          "item": "minecraft:diamond_block"
+        },
+        "E": {
+          "item": "minecraft:emerald_block"
+        },
+        "S": {
+          "item": "ae2:singularity"
+        },
+        "A": {
+          "item": "kubejs:arcane_mechanism"
+        },
+        "H": {
+          "item": "kubejs:tk3_heavy_engineering_machine"
+        },
+        "M": {
+          "item": "kubejs:eclipse_mechanism"
+        },
+        "F": {
+          "item": "kubejs:tk3_creation_machine"
+        }
+      },
+      "result": {
+        "id": "kubejs:ore_generator_catalyst"
+      },
+      "accept_mirrored": false
+    },
+    {
+      "id": "tnk:endgame/mechanical_crafting/sigil_of_ascension",
+      "type": "create:mechanical_crafting",
+      "pattern": [
+        "XINIX",
+        "SAEAS",
+        "NEMEN",
+        "SAEAS",
+        "XINIX"
+      ],
+      "key": {
+        "X": {
+          "item": "minecraft:echo_shard"
+        },
+        "I": {
+          "item": "irons_spellbooks:legendary_ink"
+        },
+        "N": {
+          "item": "minecraft:nether_star"
+        },
+        "S": {
+          "item": "ars_nouveau:source_gem"
+        },
+        "A": {
+          "item": "kubejs:arcane_mechanism"
+        },
+        "E": {
+          "item": "kubejs:eclipse_mechanism"
+        },
+        "M": {
+          "item": "kubejs:tk3_creation_machine"
+        }
+      },
+      "result": {
+        "id": "tnkprogression:origin_ascension"
+      },
+      "accept_mirrored": false
+    },
+    {
+      "id": "tnk:endgame/mechanical_crafting/creative_blaze_cake",
+      "type": "create:mechanical_crafting",
+      "pattern": [
+        "RBBNBBR",
+        "BEAMAEB",
+        "BACCCAB",
+        "NMCFCMN",
+        "BACCCAB",
+        "BEAMAEB",
+        "RBBNBBR"
+      ],
+      "key": {
+        "R": {
+          "item": "create:refined_radiance"
+        },
+        "B": {
+          "item": "create:blaze_cake"
+        },
+        "N": {
+          "item": "minecraft:nether_star"
+        },
+        "E": {
+          "item": "kubejs:eclipse_mechanism"
+        },
+        "A": {
+          "item": "kubejs:arcane_mechanism"
+        },
+        "M": {
+          "item": "kubejs:tk3_creation_machine"
+        },
+        "F": {
+          "item": "kubejs:tk3_creation_machine"
+        },
+        "C": {
+          "item": "kubejs:creation_core"
+        }
+      },
+      "result": {
+        "id": "create:creative_blaze_cake"
+      },
+      "accept_mirrored": false
+    },
+    {
+      "id": "tnk:endgame/mechanical_crafting/creative_bookshelf",
+      "type": "create:mechanical_crafting",
+      "pattern": [
+        "PEEAEEP",
+        "ENBDBNE",
+        "EBCMCBE",
+        "ADMFMDA",
+        "EBCMCBE",
+        "ENBDBNE",
+        "PEEAEEP"
+      ],
+      "key": {
+        "P": {
+          "item": "apotheosis:godforged_pearl"
+        },
+        "E": {
+          "item": "kubejs:eclipse_mechanism"
+        },
+        "A": {
+          "item": "minecraft:enchanting_table"
+        },
+        "N": {
+          "item": "kubejs:arcane_mechanism"
+        },
+        "B": {
+          "item": "minecraft:bookshelf"
+        },
+        "D": {
+          "item": "minecraft:enchanted_golden_apple"
+        },
+        "C": {
+          "item": "kubejs:creation_core"
+        },
+        "M": {
+          "item": "kubejs:tk3_creation_machine"
+        },
+        "F": {
+          "item": "create:creative_blaze_cake"
+        }
+      },
+      "result": {
+        "id": "create_enchantment_industry:creative_bookshelf"
+      },
+      "accept_mirrored": false
+    },
+    {
+      "id": "tnk:endgame/sequenced_assembly/gold_general_trophy",
+      "type": "create:sequenced_assembly",
+      "ingredient": {
+        "item": "minecraft:gold_block"
+      },
+      "transitional_item": {
+        "id": "kubejs:incomplete_gold_general_trophy"
+      },
+      "sequence": [
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:tk3_creation_machine"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:tk3_creation_machine"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:tk3_creation_machine"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:tk3_creation_machine"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:tk3_creation_machine"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "create:creative_blaze_cake"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "create_enchantment_industry:creative_bookshelf"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:ore_generator_catalyst"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "minecraft:netherite_block"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "minecraft:nether_star"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:deploying",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            },
+            {
+              "item": "kubejs:eclipse_mechanism"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        },
+        {
+          "type": "create:pressing",
+          "ingredients": [
+            {
+              "item": "kubejs:incomplete_gold_general_trophy"
+            }
+          ],
+          "results": [
+            {
+              "id": "kubejs:incomplete_gold_general_trophy"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "id": "tnkcore:gold_general_trophy"
+        }
+      ],
+      "loops": 64
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {data,fmt} from '../lib/data';
+const mods=data('mods');
+const preferred=['Combat & Epic Fight Ecosystem','Magic, Spellbooks & Witchery','Create, Aeronautics & Mechanical Addons','Applied Energistics 2 (AE2) & Logistics','Culinary, Agriculture & Homesteading','World Generation, Dimensions & Structures','Boss Encounters, Mobs & Progression','Custom TK3 Mods & Core Performance'];
+const categories=[...new Set([...preferred,...mods.map((m:any)=>m.category)])].filter(c=>mods.some((m:any)=>m.category===c));
+---
+<Layout title="Mod index" description="The mods behind Towns & Kingdoms, grouped by their place in industry, exploration, combat and everyday life.">
+ <p class="eyebrow">Reference / The modpack</p><h1>Mod index</h1><p class="intro">Browse the installed mods by combat, magic, engineering, exploration and homesteading. Supporting libraries and integrations are grouped separately within each category.</p>
+ <div class="toolbar"><input type="search" id="mod-search" placeholder="Find a mod…" aria-label="Search mods"/><span class="subtle" id="mod-count" style="font-size:12px">{fmt(mods.length)} mods</span></div>
+ <nav class="toc-inline" aria-label="Mod categories">{categories.map((category:any,i)=><a href={`#domain-${i}`}>{category}</a>)}</nav>
+ {categories.map((category:any,i)=>{const entries=mods.filter((m:any)=>m.category===category);const main=entries.filter((m:any)=>!m.supporting);const support=entries.filter((m:any)=>m.supporting);return <section class="mod-domain" id={`domain-${i}`} data-mod-domain><div class="mod-domain-title"><h2>{category}</h2><span class="tag">{entries.length}</span></div><div class="mod-grid">{main.map((m:any)=><article class="mod-card" data-mod-name={`${m.name} ${m.id} ${m.summary}`.toLowerCase()} id={`mod-${m.id}`}><h3><a href={m.url} target="_blank" rel="noopener">{m.name} <span class="subtle" aria-hidden="true">↗</span></a></h3>{m.summary&&<p>{m.summary}</p>}</article>)}</div>{support.length>0&&<details class="section" style="margin-top:20px"><summary class="muted" style="font-size:12px">Supporting libraries & integrations <span class="tag">{support.length}</span></summary><div class="support-list">{support.map((m:any)=><a data-mod-name={`${m.name} ${m.id}`.toLowerCase()} id={`mod-${m.id}`} href={m.url} target="_blank" rel="noopener">{m.name} ↗</a>)}</div></details>}</section>;})}
+ <div id="mod-empty" class="empty-state" hidden>No mods match that search.</div>
+</Layout>
+<script>
+const field=document.querySelector<HTMLInputElement>('#mod-search');
+function filterMods(){let visible=0;const q=(field?.value||'').trim().toLowerCase();document.querySelectorAll<HTMLElement>('[data-mod-name]').forEach(el=>{const show=!q||q.split(/\s+/).every(term=>el.dataset.modName?.includes(term));el.hidden=!show;if(show)visible++;});document.querySelectorAll<HTMLElement>('[data-mod-domain]').forEach(section=>{section.hidden=!Array.from(section.querySelectorAll<HTMLElement>('[data-mod-name]')).some(el=>!el.hidden);if(q)section.querySelectorAll('details').forEach(d=>d.open=true);});const counter=document.querySelector('#mod-count');if(counter)counter.textContent=`${visible} mods`;const empty=document.querySelector<HTMLElement>('#mod-empty');if(empty)empty.hidden=visible>0;}
+field?.addEventListener('input',filterMods);
+function focusMod(){const id=new URLSearchParams(location.hash.slice(1)).get('mod');if(!id)return;const el=document.getElementById('mod-'+id);if(el){el.closest('details')?.setAttribute('open','');el.scrollIntoView({block:'center'});el.style.borderColor='var(--accent)';}}
+window.addEventListener('hashchange',focusMod);focusMod();
+</script>

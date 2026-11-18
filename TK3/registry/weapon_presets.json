@@ -1,0 +1,831 @@
+{
+  "versions": {
+    "epicfight": "21.17.3.1",
+    "wom": "2.0.178",
+    "womplus": "21.17-1.0.1",
+    "epicfight_dd": "21.17.1.2.1"
+  },
+  "types": [
+    {
+      "id": "epicfight:axe",
+      "field": "AXE",
+      "category": "unspecified/default",
+      "styles": [
+        "one_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:sword",
+      "field": "SWORD",
+      "category": "CapabilityItem.WeaponCategories.SWORD",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:greatsword",
+      "field": "GREATSWORD",
+      "category": "CapabilityItem.WeaponCategories.GREATSWORD",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:longsword",
+      "field": "LONGSWORD",
+      "category": "CapabilityItem.WeaponCategories.LONGSWORD",
+      "styles": [
+        "ochs",
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:uchigatana",
+      "field": "UCHIGATANA",
+      "category": "CapabilityItem.WeaponCategories.UCHIGATANA",
+      "styles": [
+        "sheath",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:dagger",
+      "field": "DAGGER",
+      "category": "CapabilityItem.WeaponCategories.DAGGER",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:trident",
+      "field": "TRIDENT",
+      "category": "CapabilityItem.WeaponCategories.TRIDENT",
+      "styles": [
+        "one_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:shield",
+      "field": "SHIELD",
+      "category": "CapabilityItem.WeaponCategories.SHIELD",
+      "styles": [
+        "one_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:pickaxe",
+      "field": "PICKAXE",
+      "category": "inherited",
+      "styles": [],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:shovel",
+      "field": "SHOVEL",
+      "category": "inherited",
+      "styles": [],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:hoe",
+      "field": "HOE",
+      "category": "CapabilityItem.WeaponCategories.HOE",
+      "styles": [
+        "one_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:bokken",
+      "field": "BOKKEN",
+      "category": "inherited",
+      "styles": [
+        "sheath"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:spear",
+      "field": "SPEAR",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:tachi",
+      "field": "TACHI",
+      "category": "CapabilityItem.WeaponCategories.TACHI",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:fist",
+      "field": "FIST",
+      "category": "CapabilityItem.WeaponCategories.FIST",
+      "styles": [
+        "common"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:bow",
+      "field": "BOW",
+      "category": "unspecified/default",
+      "styles": [
+        "ranged"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight:crossbow",
+      "field": "CROSSBOW",
+      "category": "unspecified/default",
+      "styles": [
+        "ranged"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/yesman/epicfight/registry/entries/EpicFightItemCapabilityPresets.java"
+    },
+    {
+      "id": "wom:staff",
+      "field": "STAFF",
+      "category": "unspecified/default",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:agony",
+      "field": "AGONY",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:torment",
+      "field": "TORMENT",
+      "category": "WOMWeaponCategories.TORMENT",
+      "styles": [
+        "ochs",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.TORMENT_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:ruine",
+      "field": "RUINE",
+      "category": "CapabilityItem.WeaponCategories.LONGSWORD",
+      "styles": [
+        "ochs",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.RUINE_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:satsujin",
+      "field": "SATSUJIN",
+      "category": "CapabilityItem.WeaponCategories.UCHIGATANA",
+      "styles": [
+        "sheath",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.SATSUJIN_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:ender_blaster",
+      "field": "ENDER_BLASTER",
+      "category": "WOMWeaponCategories.ENDERBLASTER",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:clawed_gauntle",
+      "field": "CLAWED_GAUNTLE",
+      "category": "CapabilityItem.WeaponCategories.FIST",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:antitheus",
+      "field": "ANTITHEUS",
+      "category": "WOMWeaponCategories.ANTITHEUS",
+      "styles": [
+        "ochs",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.DEMON_MARK_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:herrscher",
+      "field": "HERRSCHER",
+      "category": "CapabilityItem.WeaponCategories.SWORD",
+      "styles": [
+        "common",
+        "mount",
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [
+        "WOMSkills.HERRSCHER_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:moonless",
+      "field": "MOONLESS",
+      "category": "CapabilityItem.WeaponCategories.TACHI",
+      "styles": [
+        "ochs",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.LUNAR_ECHO_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:solar",
+      "field": "SOLAR",
+      "category": "CapabilityItem.WeaponCategories.GREATSWORD",
+      "styles": [
+        "ochs",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.SOLAR_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:napoleon",
+      "field": "NAPOLEON",
+      "category": "WOMWeaponCategories.NAPOLEON",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.NAPOLEON_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:evil_tachi",
+      "field": "EVIL_TACHI",
+      "category": "CapabilityItem.WeaponCategories.TACHI",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.EVIL_TACHI_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:orbit",
+      "field": "ORBIT",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:nova",
+      "field": "NOVA",
+      "category": "CapabilityItem.WeaponCategories.TACHI",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "wom:blackstar",
+      "field": "BLACKSTAR",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [
+        "WOMSkills.UNBREAKABLE_PASSIVE"
+      ],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/reascer/wom/world/capabilities/item/WOMWeaponCapabilityPresets.java"
+    },
+    {
+      "id": "womplus:evil_tachi_reift",
+      "field": "EVIL_TACHI_REIFT",
+      "category": "WOMPWeaponCategories.EVIL_TACHI",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/womp/world/capabilities/item/WOMPItemCapabilitesPreset.java"
+    },
+    {
+      "id": "womplus:evil_tachi",
+      "field": "EVIL_TACHI",
+      "category": "WOMPWeaponCategories.EVIL_TACHI",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/womp/world/capabilities/item/WOMPItemCapabilitesPreset.java"
+    },
+    {
+      "id": "womplus:blackstar",
+      "field": "BLACKSTAR",
+      "category": "WOMPWeaponCategories.BLACKSTAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/womp/world/capabilities/item/WOMPItemCapabilitesPreset.java"
+    },
+    {
+      "id": "womplus:nova",
+      "field": "NOVA",
+      "category": "WOMPWeaponCategories.NOVA",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/womp/world/capabilities/item/WOMPItemCapabilitesPreset.java"
+    },
+    {
+      "id": "womplus:greataxe",
+      "field": "GREATAXE",
+      "category": "WOMPWeaponCategories.WOM_GREATAXE",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/womp/world/capabilities/item/WOMPItemCapabilitesPreset.java"
+    },
+    {
+      "id": "womplus:hollow_longsword",
+      "field": "HOLLOW_LONGSWORD",
+      "category": "WOMPWeaponCategories.HOLLOW_LONGSWORD",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/womp/world/capabilities/item/WOMPItemCapabilitesPreset.java"
+    },
+    {
+      "id": "epicfight_dd:milady",
+      "field": "MILADY",
+      "category": "DawnDayWeaponCategories.LIGHT_GREATSWORD",
+      "styles": [
+        "ochs",
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:light_greatsword",
+      "field": "LIGHT_GREATSWORD",
+      "category": "CapabilityItem.WeaponCategories.LONGSWORD",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:war_sickle",
+      "field": "WAR_SICKLE",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:backhand_blade",
+      "field": "BACKHAND_BLADE",
+      "category": "CapabilityItem.WeaponCategories.DAGGER",
+      "styles": [
+        "one_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:halberd",
+      "field": "HALBERD",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:battlestaff",
+      "field": "BATTLE_STAFF",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:battlestaff_wood",
+      "field": "BATTLE_STAFF_WOOD",
+      "category": "inherited",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:battlestaff_amethyst",
+      "field": "BATTLE_STAFF_AMETHYST",
+      "category": "inherited",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": "inherited/default",
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:herb_sickle",
+      "field": "HERB_SICKLE",
+      "category": "CapabilityItem.WeaponCategories.AXE",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:steel_axe",
+      "field": "STEEL_AXE",
+      "category": "CapabilityItem.WeaponCategories.AXE",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:knife",
+      "field": "KNIFE",
+      "category": "CapabilityItem.WeaponCategories.DAGGER",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:saber",
+      "field": "SABER",
+      "category": "CapabilityItem.WeaponCategories.TACHI",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:florett",
+      "field": "FLORETT",
+      "category": "DawnDayWeaponCategories.FLORETT",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:iron_fist",
+      "field": "IRON_FIST",
+      "category": "DawnDayWeaponCategories.IRON_FIST",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:messer",
+      "field": "MESSER",
+      "category": "CapabilityItem.WeaponCategories.AXE",
+      "styles": [
+        "ochs",
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:vitreus",
+      "field": "VITREUS",
+      "category": "CapabilityItem.WeaponCategories.TACHI",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:pole_blade",
+      "field": "POLEBLADE",
+      "category": "DawnDayWeaponCategories.POLEBLADE",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:eclipse",
+      "field": "ECLIPSE",
+      "category": "CapabilityItem.WeaponCategories.GREATSWORD",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:nailbat",
+      "field": "BAT",
+      "category": "DawnDayWeaponCategories.BAT",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:bonecutting_saw",
+      "field": "BONECUTTING_SAW",
+      "category": "CapabilityItem.WeaponCategories.GREATSWORD",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:iudex_halberd",
+      "field": "IUDEX_HALBERD",
+      "category": "CapabilityItem.WeaponCategories.SPEAR",
+      "styles": [
+        "two_hand"
+      ],
+      "offhand": false,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:hookclaws",
+      "field": "HOOKCLAWS",
+      "category": "DawnDayWeaponCategories.CLAWS",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": true,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:blood_ritus_dagger",
+      "field": "BLOOD_RITUS_DAGGER",
+      "category": "DawnDayWeaponCategories.RITUS_DAGGER",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "epicfight_dd:night_ritus_dagger",
+      "field": "NIGHT_RITUS_DAGGER",
+      "category": "DawnDayWeaponCategories.RITUS_DAGGER",
+      "styles": [
+        "one_hand",
+        "two_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "native_upgrade/preset_audit/decompiled/net/dawn_day/registry/entries/DawnDayItemCapabilityPresets.java"
+    },
+    {
+      "id": "wom:gesetz",
+      "field": "GESETZ",
+      "category": "CapabilityItem.WeaponCategories.SHIELD",
+      "styles": [
+        "one_hand"
+      ],
+      "offhand": true,
+      "passive_fields": [],
+      "generic_reuse_candidate": false,
+      "evidence": "GesetzCapability-specificshieldbuilder; preserve native weapon only"
+    }
+  ],
+  "invalid_bundled_native_references": {
+    "epicfight_dd:steelaxe": "Use registered epicfight_dd:steel_axe"
+  }
+}

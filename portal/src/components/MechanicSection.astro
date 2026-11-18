@@ -1,0 +1,9 @@
+---
+import {pretty,words} from '../lib/data';
+const {section} = Astro.props;
+const paragraphs=Array.isArray(section.body)?section.body:section.body?[section.body]:[];
+const rows=section.rows||[];
+const headings=section.headings||section.columns||(rows.length&&typeof rows[0]==='object'&&!Array.isArray(rows[0])?Object.keys(rows[0]):[]);
+function cell(v:any){if(v===null||v===undefined)return '';if(Array.isArray(v))return v.map(x=>pretty(x)||JSON.stringify(x)).join(', ');if(typeof v==='object')return pretty(v)||Object.entries(v).map(([k,x])=>`${words(k)}: ${x}`).join(', ');return String(v);}
+---
+<section class="section"><h3>{section.title}</h3>{paragraphs.map((p:any)=><p>{typeof p==='string'?p:pretty(p)}</p>)}{rows.length>0&&<div class="table-wrap"><table>{headings.length>0&&<thead><tr>{headings.map((h:string)=><th>{words(h)}</th>)}</tr></thead>}<tbody>{rows.map((row:any)=><tr>{(Array.isArray(row)?row:typeof row==='object'?headings.map((k:string)=>row[k]):[row]).map((v:any)=><td>{cell(v)}</td>)}</tr>)}</tbody></table></div>}</section>

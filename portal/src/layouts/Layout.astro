@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { href } from '../lib/data';
+const { title = 'Handbook', description = 'The official Towns & Kingdoms handbook.', wide = false } = Astro.props;
+const current = Astro.url.pathname.replace(/\/$/, '');
+const groups = [
+  { title: 'Handbook', links: [['Overview', '', 'book'], ['Features', 'features/', 'compass'], ['Getting started', 'guides/', 'book'], ['What changed', 'changes/', 'changes']] },
+  { title: 'Reference', links: [['Weapons', 'weapons/', 'sword'], ['Recipes', 'recipes/', 'grid'], ['Mod index', 'mods/', 'layers'], ['Custom mods', 'custom-mods/', 'grid'], ['Boss encounters', 'bosses/', 'shield']] },
+  { title: 'Progression', links: [['Chapters', 'chapters/', 'list'], ['Character & origins', 'mechanics/#leveling', 'person'], ['Loot & appraisal', 'mechanics/#loot', 'box']] },
+  { title: 'Interactive tools', links: [['Skilltree planner', 'skills/', 'nodes'], ['Ponder scenes', 'ponder/', 'cube']] },
+  { title: 'Community & support', links: [['Servers', 'servers/', 'layers'], ['Set up a server', 'guides/server-setup/', 'grid'], ['Discord', 'discord/', 'person'], ['Support', 'support/', 'shield'], ['Frequently asked questions', 'faq/', 'book']] }
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111016" />
+    <meta name="description" content={description} />
+    <title>{title === 'Handbook' ? 'Towns & Kingdoms — Handbook' : `${title} · Towns & Kingdoms`}</title>
+    <link rel="icon" href={href('media/favicon.png')} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={`${title} · Towns & Kingdoms`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={new URL(href('media/logo.png'), Astro.site)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-sidebar"><Icon name="menu" /></button>
+      <a class="brand" href={href()} aria-label="Towns & Kingdoms handbook home">
+        <img src={href('media/logo.webp')} alt="Towns & Kingdoms — Beyond the Forge" width="145" height="58" />
+        <span class="brand-label">Handbook</span>
+      </a>
+      <button class="header-search" id="open-search" aria-label="Search the handbook" aria-haspopup="dialog">
+        <span>Search the handbook…</span><kbd>Ctrl K</kbd>
+      </button>
+      <nav class="header-links" aria-label="Community">
+        <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord ↗</a>
+        <a href="https://github.com/Mikaaah/TownsAndKingdoms" target="_blank" rel="noopener">GitHub ↗</a>
+        <details class="version-switch"><summary aria-label="Choose handbook edition">TK3</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current="page">Towns & Kingdoms 3</a><a href={href('tk2/')}>Towns & Kingdoms 2</a></nav></details>
+      </nav>
+    </header>
+    <div class="site-grid">
+      <aside class="sidebar" id="site-sidebar" aria-label="Documentation navigation">
+        {groups.map(group => <nav class="nav-group" aria-label={group.title}>
+          <p class="nav-label">{group.title}</p>
+          {group.links.map(([name, url, mark]) => <a href={href(url)} aria-current={current === href(url.split('#')[0]).replace(/\/$/, '') ? 'page' : undefined}>
+            <span class="nav-mark"><Icon name={mark} size={15} /></span>{name}
+          </a>)}
+        </nav>)}
+        <div class="nav-group"><p class="nav-label">Earlier adventures</p><a href={href('tk2/')}><span class="nav-mark"><Icon name="history" size={15} /></span>Towns & Kingdoms 2</a></div>
+      </aside>
+      <main id="main" class:list={['page', { 'page-wide': wide }]}>
+        <slot />
+        <footer class="footer">
+          <span>Towns & Kingdoms <span aria-hidden="true">·</span> Beyond the Forge</span>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="https://www.curseforge.com/minecraft/modpacks/towns-kingdoms" target="_blank" rel="noopener">CurseForge ↗</a>
+            <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord ↗</a>
+            <a href={href('support/')}>Support</a>
+            <a href={href('faq/')}>FAQ</a>
+            <a href={href('tk2/')}>TK2 archive</a>
+          </nav>
+        </footer>
+      </main>
+    </div>
+    <dialog id="global-search" class="search-dialog" aria-label="Search the handbook">
+      <div class="search-top"><Icon name="search" /><input id="global-search-input" type="search" placeholder="Search weapons, recipes, skills…" aria-label="Search terms" autocomplete="off" spellcheck="false" /><button id="close-search" aria-label="Close search">Esc</button></div>
+      <div id="search-results" class="search-results" role="listbox" aria-label="Search results"><p class="search-hint">Find a weapon, ingredient, mod, chapter or skill.</p></div>
+      <div class="search-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> Navigate</span><span><kbd>Enter</kbd> Open</span><span><kbd>Esc</kbd> Close</span><span id="search-status" role="status" aria-live="polite"></span></div>
+    </dialog>
+    <script>import '../scripts/global';</script>
+  </body>
+</html>
+
+
+<style>
+.version-switch{position:relative;font-size:12px}.version-switch summary{list-style:none;border:1px solid var(--border);border-radius:6px;padding:5px 10px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:220px;padding:6px;background:var(--surface);border:1px solid var(--border);border-radius:7px;box-shadow:0 12px 30px #0005}.version-menu a{display:block;padding:9px 10px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--accent)}
+</style>

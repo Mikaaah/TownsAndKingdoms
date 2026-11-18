@@ -1,0 +1,1109 @@
+{
+  "format": 1,
+  "version": "1.2.1",
+  "model": {
+    "gui_light": "front",
+    "ambientocclusion": false,
+    "textures": {
+      "parcel": "minecraft:item/bundle",
+      "label": "minecraft:item/iron_ingot",
+      "particle": "minecraft:item/bundle"
+    },
+    "elements": [
+      {
+        "from": [
+          0,
+          0,
+          7.5
+        ],
+        "to": [
+          16,
+          16,
+          8.5
+        ],
+        "shade": false,
+        "faces": {
+          "north": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#parcel"
+          },
+          "south": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#parcel"
+          }
+        }
+      },
+      {
+        "from": [
+          4,
+          3,
+          7.49
+        ],
+        "to": [
+          12,
+          11,
+          7.49
+        ],
+        "shade": false,
+        "faces": {
+          "north": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#label"
+          }
+        }
+      },
+      {
+        "from": [
+          4,
+          3,
+          8.51
+        ],
+        "to": [
+          12,
+          11,
+          8.51
+        ],
+        "shade": false,
+        "faces": {
+          "south": {
+            "uv": [
+              0,
+              0,
+              16,
+              16
+            ],
+            "texture": "#label"
+          }
+        }
+      }
+    ],
+    "display": {
+      "gui": {
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "ground": {
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "translation": [
+          0,
+          2,
+          0
+        ],
+        "scale": [
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "fixed": {
+        "rotation": [
+          0,
+          180,
+          0
+        ],
+        "translation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "thirdperson_righthand": {
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "translation": [
+          0,
+          3,
+          1
+        ],
+        "scale": [
+          0.55,
+          0.55,
+          0.55
+        ]
+      },
+      "firstperson_righthand": {
+        "rotation": [
+          0,
+          -90,
+          25
+        ],
+        "translation": [
+          1.13,
+          3.2,
+          1.13
+        ],
+        "scale": [
+          0.68,
+          0.68,
+          0.68
+        ]
+      }
+    }
+  },
+  "items": [
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_armorpiercing/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_armorpiercing/dry",
+      "name": "Prepared Armor-Piercing Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_armor_piercing",
+      "output": "immersiveengineering:bullet_armor_piercing",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_armorpiercing",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_armorpiercing/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_armorpiercing_netherite/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_armorpiercing_netherite/dry",
+      "name": "Prepared Armor-Piercing Cartridge (Netherite) Batch",
+      "texture": "immersiveengineering:item/bullet_armor_piercing",
+      "output": "immersiveengineering:bullet_armor_piercing",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_armorpiercing_netherite",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_armorpiercing_netherite/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_buckshot/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_buckshot/dry",
+      "name": "Prepared Buckshot Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_buckshot",
+      "output": "immersiveengineering:bullet_buckshot",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_buckshot",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_buckshot/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_casull/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_casull/dry",
+      "name": "Prepared Casull Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_casull",
+      "output": "immersiveengineering:bullet_casull",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_casull",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_casull/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_dragonsbreath/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_dragonsbreath/dry",
+      "name": "Prepared Dragon's Breath Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_dragons_breath",
+      "output": "immersiveengineering:bullet_dragons_breath",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_dragonsbreath",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_dragonsbreath/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_explosive/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_explosive/dry",
+      "name": "Prepared High-Explosive Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_he",
+      "output": "immersiveengineering:bullet_he",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_explosive",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_explosive/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_flare_green/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_flare_green/dry",
+      "name": "Prepared Green Flare Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_flare",
+      "output": "immersiveengineering:bullet_flare",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_flare_green",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_flare_green/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_flare_red/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_flare_red/dry",
+      "name": "Prepared Red Flare Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_flare",
+      "output": "immersiveengineering:bullet_flare",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_flare_red",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_flare_red/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_flare_yellow/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_flare_yellow/dry",
+      "name": "Prepared Yellow Flare Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_flare",
+      "output": "immersiveengineering:bullet_flare",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_flare_yellow",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_flare_yellow/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_homing/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_homing/dry",
+      "name": "Prepared Homing Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_homing",
+      "output": "immersiveengineering:bullet_homing",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_homing",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_homing/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_potion/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_potion/dry",
+      "name": "Prepared Phial Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_potion",
+      "output": "immersiveengineering:bullet_potion",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_potion",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_potion/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_silver/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_silver/dry",
+      "name": "Prepared Silver Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_silver",
+      "output": "immersiveengineering:bullet_silver",
+      "outputCount": 4,
+      "source": "immersiveengineering:blueprint/bullet_silver",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_silver/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:blueprint/bullet_wolfpack/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/blueprint/bullet_wolfpack/dry",
+      "name": "Prepared Wolfpack Cartridge Batch",
+      "texture": "immersiveengineering:item/bullet_wolfpack",
+      "output": "immersiveengineering:bullet_wolfpack",
+      "outputCount": 1,
+      "source": "immersiveengineering:blueprint/bullet_wolfpack",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:blueprint/bullet_wolfpack/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/blaze_rod/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/blaze_rod/dry",
+      "name": "Prepared Blaze Rod Batch",
+      "texture": "minecraft:item/blaze_rod",
+      "output": "minecraft:blaze_rod",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/blaze_rod",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/blaze_rod/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_aluminum/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_aluminum/dry",
+      "name": "Prepared Aluminium Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_aluminum",
+      "output": "#c:gears/aluminum",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_aluminum",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_aluminum/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_ardite/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_ardite/dry",
+      "name": "Prepared Ardite Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/ardite",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_ardite",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_ardite/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_brass/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_brass/dry",
+      "name": "Prepared Brass Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/brass",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_brass",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_brass/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_bronze/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_bronze/dry",
+      "name": "Prepared Bronze Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/bronze",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_bronze",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_bronze/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_cobalt/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_cobalt/dry",
+      "name": "Prepared Cobalt Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/cobalt",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_cobalt",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_cobalt/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_constantan/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_constantan/dry",
+      "name": "Prepared Constantan Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_constantan",
+      "output": "#c:gears/constantan",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_constantan",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_constantan/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_copper/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_copper/dry",
+      "name": "Prepared Copper Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_copper",
+      "output": "#c:gears/copper",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_copper",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_copper/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_electrum/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_electrum/dry",
+      "name": "Prepared Electrum Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_electrum",
+      "output": "#c:gears/electrum",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_electrum",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_electrum/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_gold/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_gold/dry",
+      "name": "Prepared Gold Gear Batch",
+      "texture": "minecraft:item/gold_ingot",
+      "output": "#c:gears/gold",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_gold",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_gold/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_invar/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_invar/dry",
+      "name": "Prepared Invar Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/invar",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_invar",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_invar/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_iron/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_iron/dry",
+      "name": "Prepared Iron Gear Batch",
+      "texture": "minecraft:item/iron_ingot",
+      "output": "#c:gears/iron",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_iron",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_iron/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_lead/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_lead/dry",
+      "name": "Prepared Lead Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_lead",
+      "output": "#c:gears/lead",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_lead",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_lead/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_manyullyn/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_manyullyn/dry",
+      "name": "Prepared Manyullyn Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/manyullyn",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_manyullyn",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_manyullyn/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_nickel/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_nickel/dry",
+      "name": "Prepared Nickel Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_nickel",
+      "output": "#c:gears/nickel",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_nickel",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_nickel/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_osmium/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_osmium/dry",
+      "name": "Prepared Osmium Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/osmium",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_osmium",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_osmium/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_platinum/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_platinum/dry",
+      "name": "Prepared Platinum Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/platinum",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_platinum",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_platinum/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_rose_gold/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_rose_gold/dry",
+      "name": "Prepared Rose Gold Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/rose_gold",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_rose_gold",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_rose_gold/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_silver/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_silver/dry",
+      "name": "Prepared Silver Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_silver",
+      "output": "#c:gears/silver",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_silver",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_silver/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_steel/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_steel/dry",
+      "name": "Prepared Steel Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_steel",
+      "output": "#c:gears/steel",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_steel",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_steel/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_tin/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_tin/dry",
+      "name": "Prepared Tin Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/tin",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_tin",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_tin/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_tungsten/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_tungsten/dry",
+      "name": "Prepared Tungsten Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/tungsten",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_tungsten",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_tungsten/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_uranium/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_uranium/dry",
+      "name": "Prepared Uranium Gear Batch",
+      "texture": "immersiveengineering:item/metal_ingot_uranium",
+      "output": "#c:gears/uranium",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_uranium",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_uranium/dry"
+      }
+    },
+    {
+      "group": "ie",
+      "marker": "immersiveengineering:metalpress/gear_zinc/dry",
+      "id": "kubejs:prepared_ie/immersiveengineering/metalpress/gear_zinc/dry",
+      "name": "Prepared Zinc Gear Batch",
+      "texture": "immersiveengineering:item/mold_gear",
+      "output": "#c:gears/zinc",
+      "outputCount": 1,
+      "source": "immersiveengineering:metalpress/gear_zinc",
+      "stage": "dry",
+      "requiredMods": [
+        "immersiveengineering"
+      ],
+      "legacy": {
+        "item": "create:incomplete_precision_mechanism",
+        "component": "tnk_ie_batch",
+        "marker": "immersiveengineering:metalpress/gear_zinc/dry"
+      }
+    },
+    {
+      "group": "qol",
+      "marker": "augmenter/gazing_pearl_pair",
+      "id": "kubejs:prepared_qol/augmenter/gazing_pearl_pair",
+      "name": "Gazing Pearl Pair",
+      "output": "alexscaves:gazing_pearl",
+      "icon_item": "alexscaves:gazing_pearl",
+      "category": "augmenter",
+      "target_count": 2,
+      "texture": "alexscaves:item/gazing_pearl",
+      "max_stack_size": 1
+    },
+    {
+      "group": "qol",
+      "marker": "copper_wire_coils",
+      "id": "kubejs:prepared_qol/copper_wire_coils",
+      "name": "Prepared Copper Wire Coil Batch",
+      "output": "immersiveengineering:wirecoil_copper",
+      "icon_item": "immersiveengineering:wirecoil_copper",
+      "category": "wire",
+      "target_count": 16,
+      "texture": "immersiveengineering:item/wirecoil_copper"
+    },
+    {
+      "group": "qol",
+      "marker": "dragon_bone_insulated_electrum",
+      "id": "kubejs:prepared_qol/dragon_bone_insulated_electrum",
+      "name": "Prepared Insulated Electrum Wire Batch",
+      "output": "immersiveengineering:wirecoil_electrum_ins",
+      "icon_item": "immersiveengineering:wirecoil_electrum_ins",
+      "category": "wire",
+      "target_count": 8,
+      "texture": "immersiveengineering:item/wirecoil_electrum_ins"
+    },
+    {
+      "group": "qol",
+      "marker": "electrum_wire_coils",
+      "id": "kubejs:prepared_qol/electrum_wire_coils",
+      "name": "Prepared Electrum Wire Coil Batch",
+      "output": "immersiveengineering:wirecoil_electrum",
+      "icon_item": "immersiveengineering:wirecoil_electrum",
+      "category": "wire",
+      "target_count": 16,
+      "texture": "immersiveengineering:item/wirecoil_electrum"
+    },
+    {
+      "group": "qol",
+      "marker": "fluix_covered_cable",
+      "id": "kubejs:prepared_qol/fluix_covered_cable",
+      "name": "Prepared Covered Fluix Cable Batch",
+      "output": "ae2:fluix_covered_cable",
+      "icon_item": "ae2:fluix_covered_cable",
+      "category": "cable",
+      "target_count": 8,
+      "texture": "ae2:part/cable/covered/transparent"
+    },
+    {
+      "group": "qol",
+      "marker": "fluix_glass_cable",
+      "id": "kubejs:prepared_qol/fluix_glass_cable",
+      "name": "Prepared Fluix Glass Cable Batch",
+      "output": "ae2:fluix_glass_cable",
+      "icon_item": "ae2:fluix_glass_cable",
+      "category": "cable",
+      "target_count": 8,
+      "texture": "ae2:part/cable/glass/transparent"
+    },
+    {
+      "group": "qol",
+      "marker": "fluix_smart_cable",
+      "id": "kubejs:prepared_qol/fluix_smart_cable",
+      "name": "Prepared Smart Fluix Cable Batch",
+      "output": "ae2:fluix_smart_cable",
+      "icon_item": "ae2:fluix_smart_cable",
+      "category": "cable",
+      "target_count": 8,
+      "texture": "ae2:part/cable/smart/transparent"
+    },
+    {
+      "group": "qol",
+      "marker": "forge_iron_mechanical_components",
+      "id": "kubejs:prepared_qol/forge_iron_mechanical_components",
+      "name": "Prepared Iron Mechanical Component Batch",
+      "output": "immersiveengineering:component_iron",
+      "icon_item": "immersiveengineering:component_iron",
+      "category": "mechanical",
+      "target_count": 16,
+      "texture": "immersiveengineering:item/material_component_iron"
+    },
+    {
+      "group": "qol",
+      "marker": "forge_steel_mechanical_components",
+      "id": "kubejs:prepared_qol/forge_steel_mechanical_components",
+      "name": "Prepared Steel Mechanical Component Batch",
+      "output": "immersiveengineering:component_steel",
+      "icon_item": "immersiveengineering:component_steel",
+      "category": "mechanical",
+      "target_count": 16,
+      "texture": "immersiveengineering:item/material_component_steel"
+    },
+    {
+      "group": "qol",
+      "marker": "fuel/thorium/eight_rods",
+      "id": "kubejs:prepared_qol/fuel/thorium/eight_rods",
+      "name": "Prepared Thorium Fuel Batch (8 Rods)",
+      "output": "createnuclear:thorium_rod",
+      "icon_item": "createnuclear:thorium_rod",
+      "category": "fuel",
+      "target_count": 8,
+      "texture": "createnuclear:item/thorium_rod"
+    },
+    {
+      "group": "qol",
+      "marker": "fuel/uranium/eight_rods",
+      "id": "kubejs:prepared_qol/fuel/uranium/eight_rods",
+      "name": "Prepared Uranium Fuel Batch (8 Rods)",
+      "output": "createnuclear:uranium_rod",
+      "icon_item": "createnuclear:uranium_rod",
+      "category": "fuel",
+      "target_count": 8,
+      "texture": "createnuclear:item/uranium_rod"
+    },
+    {
+      "group": "qol",
+      "marker": "guardian_item_cell_housings",
+      "id": "kubejs:prepared_qol/guardian_item_cell_housings",
+      "name": "Prepared Item Cell Housing Batch",
+      "output": "ae2:item_cell_housing",
+      "icon_item": "ae2:item_cell_housing",
+      "category": "storage",
+      "target_count": 8,
+      "texture": "ae2:item/item_cell_housing"
+    },
+    {
+      "group": "qol",
+      "marker": "harbinger_mv_connectors",
+      "id": "kubejs:prepared_qol/harbinger_mv_connectors",
+      "name": "Prepared MV Connector Batch",
+      "output": "immersiveengineering:connector_mv",
+      "icon_item": "immersiveengineering:connector_mv",
+      "category": "electrical",
+      "target_count": 32,
+      "texture": "immersiveengineering:block/connector/connector_mv"
+    },
+    {
+      "group": "qol",
+      "marker": "horn_gold_hands",
+      "id": "kubejs:prepared_qol/horn_gold_hands",
+      "name": "Prepared Gold Hand Batch",
+      "output": "create:brass_hand",
+      "icon_item": "create:brass_hand",
+      "category": "mechanical",
+      "target_count": 16,
+      "texture": "create:item/brass_hand"
+    },
+    {
+      "group": "qol",
+      "marker": "horn_steel_wire_coils",
+      "id": "kubejs:prepared_qol/horn_steel_wire_coils",
+      "name": "Prepared Steel Wire Coil Batch",
+      "output": "immersiveengineering:wirecoil_steel",
+      "icon_item": "immersiveengineering:wirecoil_steel",
+      "category": "wire",
+      "target_count": 16,
+      "texture": "immersiveengineering:item/wirecoil_steel"
+    },
+    {
+      "group": "qol",
+      "marker": "ice_crystal_quartz_fiber",
+      "id": "kubejs:prepared_qol/ice_crystal_quartz_fiber",
+      "name": "Prepared Quartz Fiber Batch",
+      "output": "ae2:quartz_fiber",
+      "icon_item": "ae2:quartz_fiber",
+      "category": "glass",
+      "target_count": 18,
+      "texture": "ae2:part/quartz_fiber"
+    },
+    {
+      "group": "qol",
+      "marker": "ice_crystal_quartz_glass",
+      "id": "kubejs:prepared_qol/ice_crystal_quartz_glass",
+      "name": "Prepared Quartz Glass Batch",
+      "output": "ae2:quartz_glass",
+      "icon_item": "ae2:quartz_glass",
+      "category": "glass",
+      "target_count": 8,
+      "texture": "ae2:block/glass/quartz_glass_item"
+    },
+    {
+      "group": "qol",
+      "marker": "ignitium_vibrant_quartz_glass",
+      "id": "kubejs:prepared_qol/ignitium_vibrant_quartz_glass",
+      "name": "Prepared Vibrant Quartz Glass Batch",
+      "output": "ae2:quartz_vibrant_glass",
+      "icon_item": "ae2:quartz_vibrant_glass",
+      "category": "glass",
+      "target_count": 16,
+      "texture": "minecraft:item/glowstone_dust"
+    },
+    {
+      "group": "qol",
+      "marker": "sandstorm_lv_connectors",
+      "id": "kubejs:prepared_qol/sandstorm_lv_connectors",
+      "name": "Prepared LV Connector Batch",
+      "output": "immersiveengineering:connector_lv",
+      "icon_item": "immersiveengineering:connector_lv",
+      "category": "electrical",
+      "target_count": 32,
+      "texture": "immersiveengineering:block/connector/connector_lv"
+    },
+    {
+      "group": "qol",
+      "marker": "tidal_fluid_cell_housings",
+      "id": "kubejs:prepared_qol/tidal_fluid_cell_housings",
+      "name": "Prepared Fluid Cell Housing Batch",
+      "output": "ae2:fluid_cell_housing",
+      "icon_item": "ae2:fluid_cell_housing",
+      "category": "storage",
+      "target_count": 8,
+      "texture": "ae2:item/fluid_cell_housing"
+    }
+  ]
+}

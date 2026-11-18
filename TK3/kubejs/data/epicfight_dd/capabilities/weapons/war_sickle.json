@@ -1,0 +1,9 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 1.8,
+      "max_strikes": 6
+    }
+  },
+  "type": "epicfight_dd:war_sickle"
+}

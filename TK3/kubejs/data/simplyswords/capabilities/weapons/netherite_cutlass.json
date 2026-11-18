@@ -1,0 +1,25 @@
+{
+  "type": "tnk:khopesh",
+  "attributes": {
+    "common": {
+      "impact": 2.2,
+      "max_strikes": 3,
+      "armor_negation": 24.0,
+      "damage_bonus": 4.0,
+      "speed_bonus": 0.26
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.7
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.7
+    ]
+  }
+}

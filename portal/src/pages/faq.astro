@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { href } from '../lib/data';
+const questions = [
+  {id:'installation',q:'Which Minecraft and mod loader do I need?',a:'Towns & Kingdoms 3 uses Minecraft 1.21.1 and NeoForge. Install the pack as its own launcher instance and keep the loader that comes with that installation. Towns & Kingdoms 2 belongs to the legacy handbook and uses a different installation.'},
+  {id:'memory',q:'How much memory should I allocate?',a:'Use your launcher’s Java memory setting. An 8 GB heap is a practical starting point for a client test on a machine with enough memory left for its operating system and other programs. Adjust from measured use. More Java heap does not increase GPU memory or fix a shader bottleneck. On a dedicated server, the Java heap and the host’s total memory allocation are different limits.'},
+  {id:'java',q:'Which Java version should I use?',a:'Use a 64-bit Java 21 runtime for this Minecraft installation. Check the Java selected by your launcher or server panel; a terminal’s java command may point to a different installation.'},
+  {id:'shaders',q:'Can I use shaders?',a:'The client includes Iris and Sodium, with Flywheel compatibility for Create. Use that shader stack. If a visual problem appears, disable the shader pack first and test the same place again. Shader settings and GPU memory matter independently of the Java heap.'},
+  {id:'multiplayer',q:'Why does a server reject my installation?',a:'Read the full disconnect message. Content-mod, registry or recipe mismatches usually require the same pack files and KubeJS content on the client and server. A timeout, connection refusal and missing-mod report are different problems. Keep the relevant logs and confirm the required pack file with the server host.'},
+  {id:'updates',q:'Can I update only part of the pack?',a:'Follow the update’s installation instructions. A targeted patch may replace only two JSON files; another update may require complete folder replacement to remove obsolete files. Back up the affected files and world, keep client/server content in step, and fully restart after an update that changes registrations or native weapon definitions.'},
+  {id:'progression',q:'Are the dimensions and Wither locked behind factory chapters?',a:'The manufacturing chapters describe component and machine progression. They do not impose a general dimension or Wither lock. The End still follows End Remastered’s eye requirements, and individual recipes can require advanced or boss-sourced materials.'},
+  {id:'tiers',q:'Why do the references show different kinds of tier?',a:'A weapon’s style tier describes its moveset family. A production tier describes the mechanisms and machines used to make an item. Equipment appraisal has its own loot tiers and rarity rules. These labels answer different questions; a funny signature moveset does not make a basic recipe an endgame craft.'},
+  {id:'recipes',q:'A recipe looks different from the mod’s normal recipe. Is that intentional?',a:'Many recipes connect to the pack’s manufacturing chain. Look up the output in the recipe registry and check its process, ingredients and mechanism gate. Sequenced assemblies also have intermediate items, operation order and a loop count. Keep retained tools separate from ingredients that are consumed.'},
+  {id:'skills',q:'Why can a connected skill still be unavailable?',a:'Some nodes require points already spent, not only a connected path. Check the node’s requirements in the planner and compare them with the character tree. Refunds must also leave the remaining allocation connected and valid.'},
+  {id:'staffs',q:'Why do casting staffs and battlestaffs behave differently?',a:'Spellcasting focuses use the magic Staff family. Reinforced quarterstaffs and heavy physical slam weapons use melee battlestaff families. A weapon’s name alone does not tell you its assigned moveset; check the item’s entry in the weapon registry.'},
+  {id:'loading',q:'The game or server takes a long time to start. What should I send?',a:'Keep the complete log from that start. Include how long each visible phase took, whether a shader was active and whether the problem happens before the menu, while joining or after the world is running. A timestamped log is more useful than repeatedly changing several settings at once.'}
+];
+---
+<Layout title="Frequently asked questions" description="Installation, Java, memory, shaders, multiplayer and progression questions answered.">
+  <p class="eyebrow">Handbook / FAQ</p><h1>A few things worth knowing.</h1><p class="intro">Check the installation first, then narrow the problem to the part of the pack you are actually using.</p>
+  <nav class="toc-inline" aria-label="FAQ topics"><a href="#installation">Installation</a><a href="#memory">Memory</a><a href="#shaders">Shaders</a><a href="#multiplayer">Multiplayer</a><a href="#progression">Progression</a></nav>
+  <div class="faq-list">{questions.map(({id,q,a})=><details id={id}><summary>{q}</summary><p>{a}</p></details>)}</div>
+  <script>
+    function openLinkedQuestion() {
+      const target = document.getElementById(window.location.hash.slice(1));
+      if (target instanceof HTMLDetailsElement) target.open = true;
+    }
+    openLinkedQuestion();
+    window.addEventListener('hashchange', openLinkedQuestion);
+  </script>
+  <div class="button-row section"><a class="button" href={href('support/')}>Prepare a bug report →</a><a class="button" href={href('guides/server-setup/')}>Dedicated server guide →</a><a class="button" href={href('recipes/')}>Recipe registry →</a></div>
+</Layout>
+<style>.faq-list{max-width:850px;border-top:1px solid var(--border)}.faq-list details{border-bottom:1px solid var(--border);padding:19px 0;scroll-margin-top:90px}.faq-list summary{font-size:15px;font-weight:550;padding-right:12px;line-height:1.6}.faq-list p{font-size:13px;line-height:1.9;color:var(--muted);margin:14px 20px 0 0;max-width:780px}.faq-list details:target{border-left:2px solid var(--accent);padding-left:14px}.faq-list details:target p{display:block}</style>

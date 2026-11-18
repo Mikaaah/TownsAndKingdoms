@@ -1,0 +1,992 @@
+[
+  {
+    "id": "endrem:old_eye",
+    "name": "Old Eye",
+    "bossId": "block_factorys_bosses:sandworm",
+    "bossName": "Sirok, the Sandworm",
+    "minimumLevel": 30,
+    "classification": "Boss",
+    "icon": "images/eyes/old_eye.png",
+    "url": "/bosses/#eye-old_eye",
+    "dimension": "Overworld",
+    "location": "Sandworm Nest in desert biomes.",
+    "activation": "Sirok is present at the nest and begins the encounter when it acquires a player target.",
+    "preparation": "Prepare for a mobile encounter with poison attacks and room to recover between charges.",
+    "summonItems": [],
+    "alternatives": [
+      {
+        "name": "Desert Pyramid chests",
+        "kind": "Treasure",
+        "detail": "15% chance per loot roll.",
+        "chance": 0.15,
+        "lootTable": "minecraft:chests/desert_pyramid",
+        "injectedTable": "endrem:minecraft/chests/desert_pyramid"
+      },
+      {
+        "name": "Monster Room chests",
+        "kind": "Treasure",
+        "detail": "about 2.02% chance per loot roll.",
+        "chance": 0.020202020202020204,
+        "lootTable": "minecraft:chests/simple_dungeon",
+        "injectedTable": "endrem:minecraft/chests/simple_dungeon"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "block_factorys_bosses:sandworm_gauntlet",
+        "name": "Sirok Gauntlet"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "block_factorys_bosses:sandworm_gauntlet",
+        "category": "weapon",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/old_eye.json",
+      "Native structure sandworm_nest.nbt contains block_factorys_bosses:sandworm; sandworm_nest biome tag selects minecraft:desert.",
+      "SandwormEntity PATROL_STATE starts fight with a Player target; bite applies Poison.",
+      "data/block_factorys_bosses/loot_table/entities/sandworm.json"
+    ]
+  },
+  {
+    "id": "endrem:nether_eye",
+    "name": "Nether Eye",
+    "bossId": "cataclysm:ignis",
+    "bossName": "Ignis",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/nether_eye.png",
+    "url": "/bosses/#eye-nether_eye",
+    "dimension": "Nether",
+    "location": "Burning Arena, generated in Nether Wastes.",
+    "activation": "Place Burning Ashes into the Altar of Fire to summon Ignis. The offering is consumed after a successful summon.",
+    "preparation": "Bring Burning Ashes and prepare your recovery supplies before placing the offering.",
+    "summonItems": [
+      "cataclysm:burning_ashes"
+    ],
+    "alternatives": [
+      {
+        "name": "Nether Fortress chests",
+        "kind": "Treasure",
+        "detail": "30% chance per loot roll.",
+        "chance": 0.3,
+        "lootTable": "minecraft:chests/nether_bridge",
+        "injectedTable": "endrem:minecraft/chests/nether_bridge"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "cataclysm:ignitium_ingot",
+        "name": "Ignitium Ingot"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "cataclysm:the_incinerator",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:ignitium_helmet",
+        "category": "helmet",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:ignitium_chestplate",
+        "category": "chestplate",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:ignitium_leggings",
+        "category": "leggings",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:ignitium_boots",
+        "category": "boots",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm_spellbooks:ignis_spell_book",
+        "category": "accessory",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/nether_eye.json",
+      "Native burning_arena worldgen and biome tag; burning_arena2.nbt contains altar_of_fire.",
+      "AltarOfFire_Block_Entity.tick checks BURNING_ASHES, creates IGNIS and clears the offering.",
+      "data/cataclysm/loot_table/entities/ignis.json"
+    ]
+  },
+  {
+    "id": "endrem:cold_eye",
+    "name": "Cold Eye",
+    "bossId": "twilightforest:snow_queen",
+    "bossName": "Snow Queen",
+    "minimumLevel": 45,
+    "classification": "Boss",
+    "icon": "images/eyes/cold_eye.png",
+    "url": "/bosses/#eye-cold_eye",
+    "dimension": "Twilight Forest",
+    "location": "Aurora Palace in the Twilight Forest.",
+    "activation": "Find the Snow Queen inside the palace. Use the Twilight Forest progression and Magic Map to plan the expedition.",
+    "preparation": "Prepare for the palace journey as well as the boss encounter; the eye is awarded on the Snow Queen’s defeat.",
+    "summonItems": [],
+    "alternatives": [
+      {
+        "name": "Igloo basement chests",
+        "kind": "Treasure",
+        "detail": "70% chance per loot roll.",
+        "chance": 0.7,
+        "lootTable": "minecraft:chests/igloo_chest",
+        "injectedTable": "endrem:minecraft/chests/igloo_chest"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "twilightforest:triple_bow",
+        "name": "Tri-Bow"
+      },
+      {
+        "id": "twilightforest:seeker_bow",
+        "name": "Seeker Bow"
+      },
+      {
+        "id": "twilightforest:snow_queen_trophy",
+        "name": "Snow Queen Trophy"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "twilightforest:ice_sword",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "twilightforest:ice_bow",
+        "category": "bow",
+        "weight": 1
+      },
+      {
+        "item": "twilightforest:seeker_bow",
+        "category": "bow",
+        "weight": 1
+      },
+      {
+        "item": "twilightforest:triple_bow",
+        "category": "bow",
+        "weight": 1
+      },
+      {
+        "item": "twilightforest:ender_bow",
+        "category": "bow",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/cold_eye.json",
+      "Native Snow Queen entity and Aurora Palace structures; native snow_queen entity loot table.",
+      "data/twilightforest/loot_table/entities/snow_queen.json"
+    ]
+  },
+  {
+    "id": "endrem:rogue_eye",
+    "name": "Rogue Eye",
+    "bossId": "legendary_monsters:overgrown_colossus",
+    "bossName": "Overgrown Colossus",
+    "minimumLevel": 30,
+    "classification": "Elite",
+    "icon": "images/eyes/rogue_eye.png",
+    "url": "/bosses/#eye-rogue_eye",
+    "dimension": "Overworld",
+    "location": "Mossy Temple and mossy ruins.",
+    "activation": "Find the Colossus in the generated ruins rather than crafting a summoning offering.",
+    "preparation": "Explore the temple with your combat equipment ready; this encounter also rewards a Nature Crystal.",
+    "summonItems": [],
+    "alternatives": [
+      {
+        "name": "Jungle Temple chests",
+        "kind": "Treasure",
+        "detail": "40% chance per loot roll.",
+        "chance": 0.4,
+        "lootTable": "minecraft:chests/jungle_temple",
+        "injectedTable": "endrem:minecraft/chests/jungle_temple"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "legendary_monsters:nature_crystal",
+        "name": "Nature Crystal"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "legendary_monsters:totem_of_moss",
+        "category": "accessory",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/rogue_eye.json",
+      "Native mossy_temple.nbt and mossy_ruins.nbt contain overgrown_colossus; native loot table includes nature_crystal.",
+      "data/legendary_monsters/loot_table/entities/overgrown_colossus.json"
+    ]
+  },
+  {
+    "id": "endrem:black_eye",
+    "name": "Black Eye",
+    "bossId": "cataclysm:the_harbinger",
+    "bossName": "The Harbinger",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/black_eye.png",
+    "url": "/bosses/#eye-black_eye",
+    "dimension": "Overworld",
+    "location": "Ancient Factory, an underground structure.",
+    "activation": "Use a Nether Star on the dormant Harbinger to activate it. The star is consumed in survival.",
+    "preparation": "Bring one Nether Star for the activation and finish preparing before interacting with the dormant boss.",
+    "summonItems": [
+      "minecraft:nether_star"
+    ],
+    "alternatives": [
+      {
+        "name": "Buried Treasure chests",
+        "kind": "Treasure",
+        "detail": "30% chance per loot roll.",
+        "chance": 0.3,
+        "lootTable": "minecraft:chests/buried_treasure",
+        "injectedTable": "endrem:minecraft/chests/buried_treasure"
+      },
+      {
+        "name": "Shipwreck treasure chests",
+        "kind": "Treasure",
+        "detail": "5% chance per loot roll.",
+        "chance": 0.05,
+        "lootTable": "minecraft:chests/shipwreck_treasure",
+        "injectedTable": "endrem:minecraft/chests/shipwreck_treasure"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "cataclysm:witherite_block",
+        "name": "Block of Witherite"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "cataclysm:wither_assault_shoulder_weapon",
+        "category": "bow",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/black_eye.json",
+      "Native ancient_factory worldgen; the_harbinger structure.",
+      "The_Harbinger_Entity.mobInteract checks Items.NETHER_STAR while inactive and consumes one.",
+      "data/cataclysm/loot_table/entities/the_harbinger.json"
+    ]
+  },
+  {
+    "id": "endrem:magical_eye",
+    "name": "Magical Eye",
+    "bossId": "archaion:last_of_deepslate",
+    "bossName": "Last of Deepslate",
+    "minimumLevel": 65,
+    "classification": "Boss",
+    "icon": "images/eyes/magical_eye.png",
+    "url": "/bosses/#eye-magical_eye",
+    "dimension": "Overworld",
+    "location": "Ancient Keep.",
+    "activation": "Feed the sleeping guardian four Echo Charges. The fourth begins its awakening.",
+    "preparation": "Carry four Echo Charges and prepare before offering the last charge.",
+    "summonItems": [
+      "archaion:echo_charge"
+    ],
+    "alternatives": [
+      {
+        "name": "Evokers",
+        "kind": "Mob drop",
+        "detail": "5% chance per loot roll.",
+        "chance": 0.05,
+        "lootTable": "minecraft:entities/evoker",
+        "injectedTable": "endrem:minecraft/entities/evoker"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "archaion:echo_mace_upgrade_smithing_template",
+        "name": "Echo Mace Upgrade Smithing Template"
+      },
+      {
+        "id": "archaion:echo_charge",
+        "name": "Echo Charge"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "archaion:echo_mace",
+        "category": "weapon",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/magical_eye.json",
+      "Native advancement kill_last_of_deepslate identifies the guardian of Ancient Keep.",
+      "LastOfDeepslate.mobInteract/feedEchoCharge consumes EchoChargeItem; requiredEchoCharges = 4.",
+      "data/archaion/loot_table/entities/last_of_deepslate.json"
+    ]
+  },
+  {
+    "id": "endrem:lost_eye",
+    "name": "Lost Eye",
+    "bossId": "alexscaves:luxtructosaurus",
+    "bossName": "Luxtructosaurus",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/lost_eye.png",
+    "url": "/bosses/#eye-lost_eye",
+    "dimension": "Overworld",
+    "location": "A volcano in the Primordial Caves.",
+    "activation": "Toss an Ominous Catalyst into the top of the volcano to awaken Luxtructosaurus and trigger its eruption.",
+    "preparation": "Prepare away from valuable builds: the eruption and the boss can destroy terrain. Fire protection alone does not remove the physical attack threat.",
+    "summonItems": [
+      "alexscaves:ominous_catalyst"
+    ],
+    "alternatives": [
+      {
+        "name": "Abandoned Mineshaft chests",
+        "kind": "Treasure",
+        "detail": "20% chance per loot roll.",
+        "chance": 0.2,
+        "lootTable": "minecraft:chests/abandoned_mineshaft",
+        "injectedTable": "endrem:minecraft/chests/abandoned_mineshaft"
+      },
+      {
+        "name": "Monster Room chests",
+        "kind": "Treasure",
+        "detail": "about 2.02% chance per loot roll.",
+        "chance": 0.020202020202020204,
+        "lootTable": "minecraft:chests/simple_dungeon",
+        "injectedTable": "endrem:minecraft/chests/simple_dungeon"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "alexscaves:tectonic_shard",
+        "name": "Tectonic Shard"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "alexscaves:extinction_spear",
+        "category": "weapon",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/lost_eye.json",
+      "Native Cave Compendium primordial_caves/luxtructosaurus describes volcano, Ominous Catalyst, destructive attacks and Tectonic Shards.",
+      "Native luxtructosaurus loot table includes tectonic_shard.",
+      "data/alexscaves/loot_table/entities/luxtructosaurus.json"
+    ]
+  },
+  {
+    "id": "endrem:corrupted_eye",
+    "name": "Corrupted Eye",
+    "bossId": "mowziesmobs:ferrous_wroughtnaut",
+    "bossName": "Ferrous Wroughtnaut",
+    "minimumLevel": 35,
+    "classification": "Boss",
+    "icon": "images/eyes/corrupted_eye.png",
+    "url": "/bosses/#eye-corrupted_eye",
+    "dimension": "Overworld",
+    "location": "A Wroughtnaut Chamber underground.",
+    "activation": "Find the Ferrous Wroughtnaut in its chamber.",
+    "preparation": "Prepare before approaching the armored guardian; its native player-kill rewards include the Axe of a Thousand Metals and Wrought Helm.",
+    "summonItems": [],
+    "alternatives": [
+      {
+        "name": "Pillager Outpost chests",
+        "kind": "Treasure",
+        "detail": "30% chance per loot roll.",
+        "chance": 0.3,
+        "lootTable": "minecraft:chests/pillager_outpost",
+        "injectedTable": "endrem:minecraft/chests/pillager_outpost"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "mowziesmobs:wrought_helmet",
+        "name": "Wrought Helm"
+      },
+      {
+        "id": "mowziesmobs:wrought_axe",
+        "name": "Axe of a Thousand Metals"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "mowziesmobs:wrought_axe",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "mowziesmobs:wrought_helmet",
+        "category": "helmet",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/corrupted_eye.json",
+      "Native wrought_chamber structure and wroughtnaut_chamber.nbt contain ferrous_wroughtnaut.",
+      "Native ferrous_wroughtnaut loot table gives wrought_axe and wrought_helmet with killed_by_player conditions.",
+      "data/mowziesmobs/loot_table/entities/ferrous_wroughtnaut.json"
+    ]
+  },
+  {
+    "id": "endrem:wither_eye",
+    "name": "Wither Eye",
+    "bossId": "minecraft:wither",
+    "bossName": "Wither",
+    "minimumLevel": 45,
+    "classification": "Boss",
+    "icon": "images/eyes/wither_eye.png",
+    "url": "/bosses/#eye-wither_eye",
+    "dimension": "Summoned by the player",
+    "location": "A site chosen for the summon.",
+    "activation": "Build the vanilla Wither arrangement using four soul sand or soul soil blocks and three Wither Skeleton Skulls.",
+    "preparation": "Choose a separate arena before placing the last skull. The Wither remains accessible without a chapter unlock.",
+    "summonItems": [
+      "minecraft:wither_skeleton_skull",
+      "minecraft:soul_sand"
+    ],
+    "alternatives": [],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "minecraft:nether_star",
+        "name": "Nether Star"
+      }
+    ],
+    "rewardPool": [],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/wither_eye.json",
+      "Vanilla Wither summoning pattern; TK3 has no added Wither summon gate.",
+      "Pack gameplay_drops_191 guarantees the eye; entity modifier removes previous Wither Eye rolls before adding one."
+    ]
+  },
+  {
+    "id": "endrem:guardian_eye",
+    "name": "Guardian Eye",
+    "bossId": "aether:valkyrie_queen",
+    "bossName": "Valkyrie Queen",
+    "minimumLevel": 35,
+    "classification": "Boss",
+    "icon": "images/eyes/guardian_eye.png",
+    "url": "/bosses/#eye-guardian_eye",
+    "dimension": "The Aether",
+    "location": "Silver Dungeon.",
+    "activation": "Collect ten Victory Medals, speak to the Queen and accept her challenge. She consumes the ten medals to ready the fight.",
+    "preparation": "Bring all ten Victory Medals before beginning the dialogue. The challenge cannot begin on Peaceful difficulty.",
+    "summonItems": [
+      "aether:victory_medal"
+    ],
+    "alternatives": [
+      {
+        "name": "Elder Guardians",
+        "kind": "Mob drop",
+        "detail": "35% chance per loot roll.",
+        "chance": 0.35,
+        "lootTable": "minecraft:entities/elder_guardian",
+        "injectedTable": "endrem:minecraft/entities/elder_guardian"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "aether:silver_dungeon_key",
+        "name": "Silver Key"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "aether:lightning_sword",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "aether:holy_sword",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "aether:invisibility_cloak",
+        "category": "accessory",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_helmet",
+        "category": "helmet",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_chestplate",
+        "category": "chestplate",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_leggings",
+        "category": "leggings",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_boots",
+        "category": "boots",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_gloves",
+        "category": "accessory",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_pickaxe",
+        "category": "tool",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_axe",
+        "category": "tool",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_shovel",
+        "category": "tool",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_hoe",
+        "category": "tool",
+        "weight": 1
+      },
+      {
+        "item": "aether:valkyrie_cape",
+        "category": "accessory",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/guardian_eye.json",
+      "ValkyrieQueen.finalizeSpawn uses AetherStructures.SILVER_DUNGEON.",
+      "ValkyrieQueen.handleNpcInteraction requires and consumes10 VICTORY_MEDAL; refuses challenge on Peaceful.",
+      "data/aether/loot_table/entities/valkyrie_queen.json"
+    ]
+  },
+  {
+    "id": "endrem:witch_eye",
+    "name": "Witch Eye",
+    "bossId": "ars_nouveau:wilden_boss",
+    "bossName": "Wilden Chimera",
+    "minimumLevel": 45,
+    "classification": "Boss",
+    "icon": "images/eyes/witch_eye.png",
+    "url": "/bosses/#eye-witch_eye",
+    "dimension": "Ritual summon",
+    "location": "A Ritual Brazier at a site chosen for the ritual.",
+    "activation": "Run the Summon Wilden ritual and augment it with one Wilden Horn, one Wilden Wing and one Wilden Spike. Without all three, it summons ordinary Wilden instead.",
+    "preparation": "Keep the ritual away from valuable blocks: the Chimera’s summon clears space around the brazier.",
+    "summonItems": [
+      "ars_nouveau:ritual_wilden_summon",
+      "ars_nouveau:wilden_horn",
+      "ars_nouveau:wilden_wing",
+      "ars_nouveau:wilden_spike"
+    ],
+    "alternatives": [],
+    "notes": [
+      "The original crafting recipe is unavailable; use the boss route."
+    ],
+    "notableRewards": [
+      {
+        "id": "ars_nouveau:wilden_tribute",
+        "name": "Wilden Tribute"
+      }
+    ],
+    "rewardPool": [],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/witch_eye.json",
+      "RitualWildenSummoning.isBossSpawn checks all three Wilden drops; tick creates WildenChimera and clears eligible nearby blocks.",
+      "Native entity translation is Wilden Chimera, although entity ID is wilden_boss.",
+      "Native tooltip.ars_nouveau.wilden_tribute explicitly identifies defeating the Wilden Chimera as acquisition."
+    ]
+  },
+  {
+    "id": "endrem:cursed_eye",
+    "name": "Cursed Eye",
+    "bossId": "cataclysm:maledictus",
+    "bossName": "Maledictus",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/cursed_eye.png",
+    "url": "/bosses/#eye-cursed_eye",
+    "dimension": "Overworld",
+    "location": "Frosted Prison, generated in Snowy Plains.",
+    "activation": "Interact with a ready Cursed Tombstone. Its powered state allows activation; an unready tombstone must finish its cooldown.",
+    "preparation": "The tombstone summons Maledictus after activation and is destroyed by the successful summon.",
+    "summonItems": [],
+    "alternatives": [
+      {
+        "name": "Bastion treasure-room chests",
+        "kind": "Treasure",
+        "detail": "70% chance per loot roll.",
+        "chance": 0.7,
+        "lootTable": "minecraft:chests/bastion_treasure",
+        "injectedTable": "endrem:minecraft/chests/bastion_treasure"
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "cataclysm:cursium_ingot",
+        "name": "Cursium Ingot"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "cataclysm:soul_render",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:cursed_bow",
+        "category": "bow",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:cursium_helmet",
+        "category": "helmet",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:cursium_chestplate",
+        "category": "chestplate",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:cursium_leggings",
+        "category": "leggings",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:cursium_boots",
+        "category": "boots",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm_spellbooks:codex_of_malice_spell_book",
+        "category": "accessory",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/cursed_eye.json",
+      "Native frosted_prison biome tag selects snowy_plains; frosted_prison_bottom_7.nbt contains cursed_tombstone.",
+      "Cursed_Tombstone_Block.useItemOn checks POWERED then sets LIT. Cursed_tombstone_Entity summons Maledictus and destroys the tombstone.",
+      "data/cataclysm/loot_table/entities/maledictus.json"
+    ]
+  },
+  {
+    "id": "endrem:exotic_eye",
+    "name": "Exotic Eye",
+    "bossId": "cataclysm:the_leviathan",
+    "bossName": "The Leviathan",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/exotic_eye.png",
+    "url": "/bosses/#eye-exotic_eye",
+    "dimension": "Overworld",
+    "location": "Sunken City in deep ocean biomes.",
+    "activation": "Place an Abyssal Sacrifice into the Altar of Abyss. The offering is consumed on a successful summon.",
+    "preparation": "Prepare underwater breathing and movement for the submerged arena. Leviathan is invulnerable outside water.",
+    "summonItems": [
+      "cataclysm:abyssal_sacrifice"
+    ],
+    "alternatives": [
+      {
+        "name": "Exotic Eye crafting",
+        "kind": "Crafting",
+        "detail": "Craft with one Eye of Ender, two Conduits, two Glow Ink Sacs, and one each of Bubble, Fire, Horn and Tube Coral. Use live coral items.",
+        "recipeId": "endrem:exotic_eye",
+        "pattern": [
+          "BCF",
+          "GEG",
+          "HCT"
+        ],
+        "key": {
+          "F": {
+            "item": "minecraft:fire_coral"
+          },
+          "T": {
+            "item": "minecraft:tube_coral"
+          },
+          "H": {
+            "item": "minecraft:horn_coral"
+          },
+          "B": {
+            "item": "minecraft:bubble_coral"
+          },
+          "E": {
+            "item": "minecraft:ender_eye"
+          },
+          "G": {
+            "item": "minecraft:glow_ink_sac"
+          },
+          "C": {
+            "item": "minecraft:conduit"
+          }
+        }
+      }
+    ],
+    "notes": [],
+    "notableRewards": [
+      {
+        "id": "cataclysm:tidal_claws",
+        "name": "Tidal Claws"
+      },
+      {
+        "id": "cataclysm:abyssal_egg",
+        "name": "Abyssal Egg"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "cataclysm:tidal_claws",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm_spellbooks:abyss_spell_book",
+        "category": "accessory",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/exotic_eye.json",
+      "Native sunken_city worldgen and biome tags; sunken_city_lower.nbt contains altar_of_abyss.",
+      "AltarOfAbyss_Block_Entity.tick consumes ABYSSAL_SACRIFICE and creates THE_LEVIATHAN.",
+      "Native entity.cataclysm.the_leviathan_immune translation states invulnerability outside water.",
+      "data/cataclysm/loot_table/entities/the_leviathan.json"
+    ]
+  },
+  {
+    "id": "endrem:evil_eye",
+    "name": "Evil Eye",
+    "bossId": "cataclysm:ancient_remnant",
+    "bossName": "Ancient Remnant",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/evil_eye.png",
+    "url": "/bosses/#eye-evil_eye",
+    "dimension": "Overworld",
+    "location": "Cursed Pyramid in desert biomes.",
+    "activation": "Excavate suspicious sand in the pyramid for a Necklace of the Desert, then use the necklace on the dormant Ancient Remnant. It is consumed in survival.",
+    "preparation": "Bring a brush for the pyramid excavation and finish preparing before returning the necklace.",
+    "summonItems": [
+      "minecraft:brush",
+      "cataclysm:necklace_of_the_desert"
+    ],
+    "alternatives": [],
+    "notes": [
+      "Clerics do not sell this eye."
+    ],
+    "notableRewards": [
+      {
+        "id": "cataclysm:sandstorm_in_a_bottle",
+        "name": "Sandstorm in a Bottle"
+      },
+      {
+        "id": "cataclysm:remnant_skull",
+        "name": "Remnant's Skull"
+      },
+      {
+        "id": "cataclysm:ancient_metal_block",
+        "name": "Block of Ancient Metal"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "cataclysm:ancient_spear",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:sandstorm_in_a_bottle",
+        "category": "accessory",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm:necklace_of_the_desert",
+        "category": "accessory",
+        "weight": 1
+      },
+      {
+        "item": "cataclysm_spellbooks:desert_spell_book",
+        "category": "accessory",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/evil_eye.json",
+      "Native cursed_pyramid worldgen and kill_remnant advancement description identify suspicious sand excavation.",
+      "Ancient_Remnant_Entity.mobInteract consumes NECKLACE_OF_THE_DESERT while getNecklace false.",
+      "data/cataclysm/loot_table/entities/ancient_remnant.json"
+    ]
+  },
+  {
+    "id": "endrem:undead_eye",
+    "name": "Undead Eye",
+    "bossId": "block_factorys_bosses:underworld_knight",
+    "bossName": "Helvar, the Underworld Knight",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/undead_eye.png",
+    "url": "/bosses/#eye-undead_eye",
+    "dimension": "Nether",
+    "location": "Underworld Arena in Nether Wastes or Soul Sand Valley.",
+    "activation": "Use an Underworld Arena Key to open the arena door, then enter Helvar’s chamber. Opening the door consumes one key.",
+    "preparation": "Find keys in arena treasure, arena trial-spawner rewards or drops from Soul Skeletons and Soul Knight Wither Skeletons.",
+    "summonItems": [
+      "block_factorys_bosses:underworld_arena_key"
+    ],
+    "alternatives": [],
+    "notes": [
+      "The original crafting recipe is unavailable; use the boss route."
+    ],
+    "notableRewards": [
+      {
+        "id": "block_factorys_bosses:knight_sword",
+        "name": "Helvar's Sword"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "block_factorys_bosses:knight_sword",
+        "category": "weapon",
+        "weight": 1
+      },
+      {
+        "item": "block_factorys_bosses:knight_helmet",
+        "category": "helmet",
+        "weight": 1
+      },
+      {
+        "item": "block_factorys_bosses:knight_chestplate",
+        "category": "chestplate",
+        "weight": 1
+      },
+      {
+        "item": "block_factorys_bosses:knight_leggings",
+        "category": "leggings",
+        "weight": 1
+      },
+      {
+        "item": "block_factorys_bosses:knight_boots",
+        "category": "boots",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/undead_eye.json",
+      "Native underworld_arena biome tag and spawn_overrides; underworld_arena_1.nbt contains underworld_knight.",
+      "data/block_factorys_bosses/loot_table/entities/underworld_knight.json",
+      "BossesRiseBlocks registers UNDERWORLD_ARENA_DOOR with UNDERWORLD_ARENA_KEY; HugeDoorBlock.useItemOn consumes one valid key.",
+      "Native key acquisition: loot_table/chests/underworld_arena_rare.json, chests/underworld_arena_vault.json, entities/soul_skeleton.json, entities/soul_knight_wither_skeleton.json, spawners/underworld_arena/underworld_arena_key.json."
+    ]
+  },
+  {
+    "id": "endrem:cryptic_eye",
+    "name": "Cryptic Eye",
+    "bossId": "legendary_monsters:posessed_paladin",
+    "bossName": "Possessed Paladin",
+    "minimumLevel": 55,
+    "classification": "Boss",
+    "icon": "images/eyes/cryptic_eye.png",
+    "url": "/bosses/#eye-cryptic_eye",
+    "dimension": "Overworld",
+    "location": "Collapsed Kingdom arena.",
+    "activation": "Interact with the sleeping Possessed Paladin in the Collapsed Kingdom to begin its awakening.",
+    "preparation": "Prepare for the named arena encounter before approaching the Paladin. Its native rewards include a Corrupted Soul and Soul Greatsword.",
+    "summonItems": [],
+    "alternatives": [],
+    "notes": [
+      "Enchanting does not award this eye."
+    ],
+    "notableRewards": [
+      {
+        "id": "legendary_monsters:corrupted_soul",
+        "name": "Corrupted Soul"
+      },
+      {
+        "id": "legendary_monsters:soul_great_sword",
+        "name": "Soul Great Sword"
+      }
+    ],
+    "rewardPool": [
+      {
+        "item": "legendary_monsters:soul_great_sword",
+        "category": "weapon",
+        "weight": 1
+      }
+    ],
+    "sourceNotes": [
+      "TK3/kubejs/pack_data/server_tables.json:gameplay_drops_191",
+      "TK3/kubejs/server_scripts/05_loot.js:End Remastered boss eyes",
+      "TK3/config/EndRemastered-NeoForge/Eyes/cryptic_eye.json",
+      "Native collapsed_kingdom_arena.nbt contains posessed_paladin. ModEntities maps this ID to IAnimatedBoss.PossessedPaladin.PossessedPaladinEntity.",
+      "Native posessed_paladin entity loot table includes corrupted_soul and soul_great_sword.",
+      "data/legendary_monsters/loot_table/entities/posessed_paladin.json",
+      "Registered PossessedPaladinEntity.mobInteract changes sleeping attack state34 to awakening state35 without requiring an item."
+    ]
+  }
+]

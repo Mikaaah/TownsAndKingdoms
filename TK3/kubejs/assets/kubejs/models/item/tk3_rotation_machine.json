@@ -1,1 +1,3 @@
-{"parent": "kubejs:block/tk3_rotation_machine"}
+{
+  "parent": "kubejs:block/custom/andesite_machine"
+}

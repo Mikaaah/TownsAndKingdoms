@@ -1,0 +1,3062 @@
+{
+  "leveling": {
+    "title": "Character progression",
+    "summary": "Earn character XP through exploration, combat and practical work. Spend the skill points you earn to shape a build.",
+    "maximumLevel": 100,
+    "skillPointFormula": "level + floor(3 × level / 4)",
+    "levelCost": {
+      "base": 0.0,
+      "factor": 1000.0,
+      "exponent": 1.0
+    },
+    "sections": [
+      {
+        "title": "Two kinds of experience",
+        "body": [
+          "Character XP fills the Character level bar. Vanilla XP fills Minecraft’s green bar and pays for enchanting, repairs and equipment identification.",
+          "Combat, natural mining, mature harvests, cooking, fishing and exploration award character XP directly. Campaign rewards contribute to the same bar. Crafting and engineering do not award automatic character XP.",
+          "Gameplay rewards require a living Survival or Adventure player. Machine mining, automated harvesting and artificial reward loops do not earn the corresponding activity XP."
+        ]
+      },
+      {
+        "title": "Levels and skill points",
+        "body": [
+          "Going from level L to L+1 costs 1000 × L character XP, rounded down to a whole point. Level 100 requires 4,950,000 total character XP.",
+          "Earned skill points equal level + floor(3 × level / 4), reaching 175 points at level 100. Reconnecting and refunding a build do not award those points again.",
+          "The activity reward stays the same as you level; the amount needed for the next level increases. Your build, equipment, origin and active passive title supply your combat bonuses."
+        ],
+        "rows": [
+          {
+            "Level": 1,
+            "Total character XP": "0",
+            "XP to next level": "1,000",
+            "Earned skill points": 1
+          },
+          {
+            "Level": 10,
+            "Total character XP": "45,000",
+            "XP to next level": "10,000",
+            "Earned skill points": 17
+          },
+          {
+            "Level": 25,
+            "Total character XP": "300,000",
+            "XP to next level": "25,000",
+            "Earned skill points": 43
+          },
+          {
+            "Level": 50,
+            "Total character XP": "1,225,000",
+            "XP to next level": "50,000",
+            "Earned skill points": 87
+          },
+          {
+            "Level": 75,
+            "Total character XP": "2,775,000",
+            "XP to next level": "75,000",
+            "Earned skill points": 131
+          },
+          {
+            "Level": 100,
+            "Total character XP": "4,950,000",
+            "XP to next level": "Maximum level",
+            "Earned skill points": 175
+          }
+        ]
+      },
+      {
+        "title": "Campaign ceilings",
+        "body": [
+          "Characters begin with a level ceiling of 10. Campaign unlocks raise that ceiling through the following brackets.",
+          "XP pauses at the current ceiling and is not banked for a later unlock. Character unlocks can be shared with your team; XP, origins, titles and skill spending remain personal.",
+          "Character ceilings and production chapters are separate systems. Exploration dimensions and the Wither remain accessible."
+        ],
+        "rows": [
+          {
+            "Character ceiling": 10,
+            "Highest ordinary rarity": "Uncommon"
+          },
+          {
+            "Character ceiling": 30,
+            "Highest ordinary rarity": "Rare"
+          },
+          {
+            "Character ceiling": 50,
+            "Highest ordinary rarity": "Epic"
+          },
+          {
+            "Character ceiling": 70,
+            "Highest ordinary rarity": "Legendary"
+          },
+          {
+            "Character ceiling": 80,
+            "Highest ordinary rarity": "Legendary"
+          },
+          {
+            "Character ceiling": 94,
+            "Highest ordinary rarity": "Mythic"
+          },
+          {
+            "Character ceiling": 100,
+            "Highest ordinary rarity": "Mythic"
+          }
+        ]
+      },
+      {
+        "title": "Combat rewards",
+        "body": [
+          "Base combat character XP is (10 + 2 × enemy level), multiplied by enemy category and your share of the damage.",
+          "Be alive, nearby and in the same dimension when the enemy dies. Your damage contribution expires after 60 seconds; supported owned summons can contribute.",
+          "Environmental and machine damage cannot turn a token hit into a full reward. Pets, owned enemies, spawn eggs, commands and split offspring give no combat XP. Legitimate dungeon, spawner and triggered bosses qualify."
+        ],
+        "rows": [
+          {
+            "Enemy category": "Ordinary hostile",
+            "Multiplier": "×1"
+          },
+          {
+            "Enemy category": "Passive creature",
+            "Multiplier": "×0.1"
+          },
+          {
+            "Enemy category": "Tough enemy: at least 60 maximum health",
+            "Multiplier": "×2"
+          },
+          {
+            "Enemy category": "Configured miniboss",
+            "Multiplier": "×5"
+          },
+          {
+            "Enemy category": "Configured boss",
+            "Multiplier": "×12"
+          }
+        ]
+      },
+      {
+        "title": "Natural mining",
+        "body": [
+          "Mine a natural block yourself and produce a block drop. The reward is per block, independent of Fortune yield and character level.",
+          "Placed, piston-moved, fluid-generated and already-mined positions give no mining XP. The provenance record persists through restarts.",
+          "An explicit block value takes priority. Otherwise the highest matching ore or natural-stone family reward applies."
+        ],
+        "rows": [
+          {
+            "Natural block": "Ancient Debris",
+            "Base character XP": "100"
+          },
+          {
+            "Natural block": "Blackstone",
+            "Base character XP": "1"
+          },
+          {
+            "Natural block": "Coarse Dirt",
+            "Base character XP": "0.25"
+          },
+          {
+            "Natural block": "Deepslate",
+            "Base character XP": "1"
+          },
+          {
+            "Natural block": "Dirt",
+            "Base character XP": "0.25"
+          },
+          {
+            "Natural block": "End Stone",
+            "Base character XP": "1"
+          },
+          {
+            "Natural block": "Gravel",
+            "Base character XP": "0.25"
+          },
+          {
+            "Natural block": "Nether Gold Ore",
+            "Base character XP": "20"
+          },
+          {
+            "Natural block": "Nether Quartz Ore",
+            "Base character XP": "20"
+          },
+          {
+            "Natural block": "Netherrack",
+            "Base character XP": "0.25"
+          },
+          {
+            "Natural block": "Red Sand",
+            "Base character XP": "0.25"
+          },
+          {
+            "Natural block": "Sand",
+            "Base character XP": "0.25"
+          },
+          {
+            "Natural block": "Stone",
+            "Base character XP": "1"
+          }
+        ]
+      },
+      {
+        "title": "Ore-family rewards",
+        "body": "Modded ores use the same resource-family rewards.",
+        "rows": [
+          {
+            "Ore family": "Ores / Coal",
+            "Base character XP": "8"
+          },
+          {
+            "Ore family": "Ores / Copper",
+            "Base character XP": "8"
+          },
+          {
+            "Ore family": "Ores / Diamond",
+            "Base character XP": "50"
+          },
+          {
+            "Ore family": "Ores / Emerald",
+            "Base character XP": "50"
+          },
+          {
+            "Ore family": "Ores / Gold",
+            "Base character XP": "20"
+          },
+          {
+            "Ore family": "Ores / Iron",
+            "Base character XP": "12"
+          },
+          {
+            "Ore family": "Ores / Lapis",
+            "Base character XP": "20"
+          },
+          {
+            "Ore family": "Ores / Netherite Scrap",
+            "Base character XP": "100"
+          },
+          {
+            "Ore family": "Ores / Quartz",
+            "Base character XP": "20"
+          },
+          {
+            "Ore family": "Ores / Redstone",
+            "Base character XP": "20"
+          },
+          {
+            "Ore family": "Ores / Zinc",
+            "Base character XP": "12"
+          }
+        ]
+      },
+      {
+        "title": "Farming and cooking",
+        "body": [
+          "Each harvested crop position has a shared 60-second reward cooldown. Breaking mature crops and supported right-click harvesting count; immature crops and placed fruit do not.",
+          "For cooking, insert raw ingredients manually into a furnace, smoker or campfire. Remain online, in the same dimension and within 64 blocks when the food finishes.",
+          "Hopper or pipe ingredients, taking previously stored output, crafting food and non-food smelting do not award cooking XP."
+        ],
+        "rows": [
+          {
+            "Action": "Mature crop harvested by hand",
+            "Base character XP": "1"
+          },
+          {
+            "Action": "Mature nether wart or cocoa",
+            "Base character XP": "2"
+          },
+          {
+            "Action": "Naturally grown pumpkin or melon",
+            "Base character XP": "2"
+          },
+          {
+            "Action": "Ripe berries",
+            "Base character XP": "1"
+          },
+          {
+            "Action": "Manually supplied food finished cooking",
+            "Base character XP": "2"
+          }
+        ]
+      },
+      {
+        "title": "Fishing",
+        "body": "Fish with a rod in open water. Starcatcher catches use the reward for their catch rarity; vanilla fishing XP orbs remain a separate reward.",
+        "rows": [
+          {
+            "Catch": "Vanilla rod catch",
+            "Base character XP": "25"
+          },
+          {
+            "Catch": "Starcatcher Common",
+            "Base character XP": "40"
+          },
+          {
+            "Catch": "Starcatcher Uncommon",
+            "Base character XP": "75"
+          },
+          {
+            "Catch": "Starcatcher Rare",
+            "Base character XP": "125"
+          },
+          {
+            "Catch": "Starcatcher Epic",
+            "Base character XP": "250"
+          },
+          {
+            "Catch": "Starcatcher Legendary",
+            "Base character XP": "500"
+          },
+          {
+            "Catch": "Starcatcher Golden",
+            "Base character XP": "750"
+          }
+        ]
+      },
+      {
+        "title": "Exploration",
+        "body": "Discoveries are recorded per character. Repeated visits do not repeatedly award discovery XP, and teleporting across chunks is not treated as ordinary chunk exploration.",
+        "rows": [
+          {
+            "Discovery": "New chunk visited through ordinary travel",
+            "Base character XP": "1"
+          },
+          {
+            "Discovery": "New biome",
+            "Base character XP": "150"
+          },
+          {
+            "Discovery": "New structure",
+            "Base character XP": "250"
+          },
+          {
+            "Discovery": "New dimension",
+            "Base character XP": "750"
+          }
+        ]
+      },
+      {
+        "title": "Enemy levels and scaling",
+        "body": [
+          "Ordinary eligible enemies use the nearest eligible player’s level with a random offset from −4 to +4, bounded to levels 1–100.",
+          "Bosses use the higher of their encounter minimum and nearby player level +10, up to level 110. Minibosses use the same comparison but stop at 100. Apotheosis invaders use player level +5, capped at 100.",
+          "Outside separately controlled arena encounters, maximum health scales by 1 + 0.03 × (enemy level − 1). Melee attack damage scales by 1 + 0.0125 × (enemy level − 1).",
+          "Assigned enemy levels persist. Reloading does not stack the modifiers, restore damage already taken or make ordinary enemies permanent."
+        ]
+      },
+      {
+        "title": "Spiral Abyss encounters",
+        "body": "The six floors use fixed encounter baselines, separate from ordinary nearby-player scaling. Bosses use the floor baseline +10 or their encounter minimum, whichever is higher, up to 110.",
+        "rows": [
+          {
+            "Floor": 1,
+            "Enemy baseline": 50,
+            "Boss baseline": 60
+          },
+          {
+            "Floor": 2,
+            "Enemy baseline": 60,
+            "Boss baseline": 70
+          },
+          {
+            "Floor": 3,
+            "Enemy baseline": 70,
+            "Boss baseline": 80
+          },
+          {
+            "Floor": 4,
+            "Enemy baseline": 80,
+            "Boss baseline": 90
+          },
+          {
+            "Floor": 5,
+            "Enemy baseline": 90,
+            "Boss baseline": 100
+          },
+          {
+            "Floor": 6,
+            "Enemy baseline": 100,
+            "Boss baseline": 110
+          }
+        ]
+      }
+    ]
+  },
+  "originGuide": {
+    "title": "Origins and Ascension",
+    "summary": "Choose a background for a small personal advantage, then unlock an advanced calling with the Sigil of Ascension.",
+    "sections": [
+      {
+        "title": "Choose your background",
+        "body": [
+          "Open Character, preview one of the 20 starting origins and confirm your choice. Previewing a card does not commit it.",
+          "Your origin remains a personal choice, independent of your title slots and skill allocation. Its named perks apply only in their stated situations."
+        ]
+      },
+      {
+        "title": "Ascend to a new calling",
+        "body": [
+          "Use a Sigil of Ascension to unlock 15 ascended origins and reopen your origin choice. You may choose an advanced origin or a starting background.",
+          "The sigil is consumed. Levels, skill points, titles and activity progress are retained. A later change requires another sigil.",
+          "The sigil is a Creative Core project made through a 5×5 mechanical crafting recipe using a Creation Machine, Arcane and Eclipse Mechanisms, nether stars, legendary ink, source gems and echo shards."
+        ]
+      },
+      {
+        "title": "How perks apply",
+        "body": [
+          "Mining and log bonuses require natural resources. Crop perks, potion perks, living mounts and ranged-weapon perks follow the specific actions stated on the origin card.",
+          "Block interaction reach is separate from attack reach. Stonemason and Grand Architect require a building block; Millwright and Artificer require a supported wrench.",
+          "Millwright and Artificer increase character XP from command-awarded campaign rewards. They do not create automatic engineering XP.",
+          "Mana origins use the shared Iron’s Spells mana attributes. Enchanting and anvil refunds return vanilla XP points actually spent while preserving the normal level requirements.",
+          "Origins saved on an existing character retain their stored perks. Increasing maximum health does not immediately heal the character."
+        ]
+      }
+    ]
+  },
+  "origins": [
+    {
+      "id": "tnk:deepdelver",
+      "name": "Deepdelver",
+      "description": "You spent your early years working beneath the mountains.",
+      "tier": "Origin",
+      "icon": "images/origins/ancient_pickaxe.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+10% ore mining speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "5% chance for an extra raw ore from natural deposits."
+        }
+      ],
+      "bonuses": {
+        "ORE_SPEED": 0.1,
+        "RAW_ORE_CHANCE": 0.05
+      }
+    },
+    {
+      "id": "tnk:woodcutter",
+      "name": "Woodcutter",
+      "description": "Forest camps and falling timber were your everyday life.",
+      "tier": "Origin",
+      "icon": "images/origins/mossy_axe.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+15% log chopping speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "5% chance for an extra natural log."
+        }
+      ],
+      "bonuses": {
+        "LOG_CHANCE": 0.05,
+        "LOG_SPEED": 0.15
+      }
+    },
+    {
+      "id": "tnk:homesteader",
+      "name": "Homesteader",
+      "description": "You inherited a small farm and learned to make every harvest count.",
+      "tier": "Origin",
+      "icon": "images/origins/sun_carrot.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+10% mature crop yield when harvested by hand."
+        },
+        {
+          "name": "Perk 2",
+          "description": "10% less hunger from exhaustion."
+        }
+      ],
+      "bonuses": {
+        "EXHAUSTION_REDUCTION": 0.1,
+        "CROP_YIELD": 0.1
+      }
+    },
+    {
+      "id": "tnk:stablehand",
+      "name": "Stablehand",
+      "description": "You raised livestock and cared for travelling merchants' horses.",
+      "tier": "Origin",
+      "icon": "images/origins/horseshoe.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "10% shorter animal breeding cooldowns."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+15% movement speed for living mounts you control."
+        }
+      ],
+      "bonuses": {
+        "MOUNT_SPEED": 0.15,
+        "BREEDING_REDUCTION": 0.1
+      }
+    },
+    {
+      "id": "tnk:riverfolk",
+      "name": "Riverfolk",
+      "description": "You grew up along the river, living from whatever your line caught.",
+      "tier": "Origin",
+      "icon": "images/origins/golden_hook.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "10% shorter fishing wait."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+15% vanilla fishing XP."
+        }
+      ],
+      "bonuses": {
+        "FISH_XP": 0.15,
+        "FISH_WAIT_REDUCTION": 0.1
+      }
+    },
+    {
+      "id": "tnk:huntsman",
+      "name": "Huntsman",
+      "description": "You supplied a remote settlement with meat and hides.",
+      "tier": "Origin",
+      "icon": "images/origins/bone_bow.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+5% bow and crossbow damage."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+10% meat and leather drops from your kills."
+        }
+      ],
+      "bonuses": {
+        "HUNT_YIELD": 0.1,
+        "RANGED_DAMAGE": 0.05
+      }
+    },
+    {
+      "id": "tnk:forgehand",
+      "name": "Forgehand",
+      "description": "Years at the anvil taught you how to keep equipment working.",
+      "tier": "Origin",
+      "icon": "images/origins/hammer.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "10% of anvil repair XP refunded; normal requirements apply."
+        },
+        {
+          "name": "Perk 2",
+          "description": "10% less weapon durability loss."
+        }
+      ],
+      "bonuses": {
+        "WEAPON_DURABILITY_REDUCTION": 0.1,
+        "ANVIL_REPAIR_REFUND": 0.1
+      }
+    },
+    {
+      "id": "tnk:stonemason",
+      "name": "Stonemason",
+      "description": "You helped build walls, bridges and castles that would outlive you.",
+      "tier": "Origin",
+      "icon": "images/origins/bricks.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+15% stone breaking speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+0.5 block reach while holding a building block."
+        }
+      ],
+      "bonuses": {
+        "PLACEMENT_REACH": 0.5,
+        "STONE_SPEED": 0.15
+      }
+    },
+    {
+      "id": "tnk:millwright",
+      "name": "Millwright",
+      "description": "You maintained waterwheels, mills and machinery for your village.",
+      "tier": "Origin",
+      "icon": "images/origins/wrench.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+10% quest command XP."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+1 block interaction reach while holding a wrench."
+        }
+      ],
+      "bonuses": {
+        "WRENCH_REACH": 1.0,
+        "ENGINEERING_XP": 0.1
+      }
+    },
+    {
+      "id": "tnk:librarian",
+      "name": "Librarian",
+      "description": "You cared for dusty shelves and books containing forgotten knowledge.",
+      "tier": "Origin",
+      "icon": "images/origins/golden_book.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "10% of enchanting XP refunded; normal requirements apply."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+15% XP recovered through grindstone disenchanting."
+        }
+      ],
+      "bonuses": {
+        "ENCHANT_REFUND": 0.1,
+        "GRINDSTONE_XP": 0.15
+      }
+    },
+    {
+      "id": "tnk:apothecary",
+      "name": "Apothecary",
+      "description": "Your little shop supplied remedies, tonics and questionable mixtures.",
+      "tier": "Origin",
+      "icon": "images/origins/aquatic_elixir.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+15% duration for beneficial potions you drink."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+10% healing from instant health potions you drink."
+        }
+      ],
+      "bonuses": {
+        "POTION_HEAL": 0.1,
+        "POTION_DURATION": 0.15
+      }
+    },
+    {
+      "id": "tnk:hedge_herbalist",
+      "name": "Hedge Herbalist",
+      "description": "You learned which plants could heal, feed or poison a traveller.",
+      "tier": "Origin",
+      "icon": "images/origins/ghostflower.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+10% natural health regeneration."
+        },
+        {
+          "name": "Perk 2",
+          "description": "10% chance for an extra gathered flower or mushroom."
+        }
+      ],
+      "bonuses": {
+        "NATURAL_HEAL": 0.1,
+        "HERB_CHANCE": 0.1
+      }
+    },
+    {
+      "id": "tnk:caravan_trader",
+      "name": "Caravan Trader",
+      "description": "You travelled between settlements, bargaining for your next meal.",
+      "tier": "Origin",
+      "icon": "images/origins/golden_ring.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "10% lower villager buying prices, rounded down."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+15% vanilla trading XP."
+        }
+      ],
+      "bonuses": {
+        "TRADE_DISCOUNT": 0.1,
+        "TRADE_XP": 0.15
+      }
+    },
+    {
+      "id": "tnk:wayfarer",
+      "name": "Wayfarer",
+      "description": "You rarely stayed anywhere long enough to call it home.",
+      "tier": "Origin",
+      "icon": "images/origins/portal_scroll.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+5% movement speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "20% less fall damage."
+        }
+      ],
+      "bonuses": {
+        "MOVE_SPEED": 0.05,
+        "FALL_REDUCTION": 0.2
+      }
+    },
+    {
+      "id": "tnk:deckhand",
+      "name": "Deckhand",
+      "description": "You worked aboard merchant ships and survived more than one wreck.",
+      "tier": "Origin",
+      "icon": "images/origins/blue_coral.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+15% swimming speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+5 seconds of underwater breathing time."
+        }
+      ],
+      "bonuses": {
+        "SWIM_SPEED": 0.15,
+        "AIR_TICKS": 100.0
+      }
+    },
+    {
+      "id": "tnk:town_watch",
+      "name": "Town Watch",
+      "description": "You guarded the gates and broke up trouble at the local tavern.",
+      "tier": "Origin",
+      "icon": "images/origins/spear.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+1 armour point."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+10% knockback resistance."
+        }
+      ],
+      "bonuses": {
+        "KNOCKBACK_RESISTANCE": 0.1,
+        "ARMOUR": 1.0
+      }
+    },
+    {
+      "id": "tnk:street_urchin",
+      "name": "Street Urchin",
+      "description": "You survived by staying unnoticed and finding a way through tight places.",
+      "tier": "Origin",
+      "icon": "images/origins/bone_knife.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+15% sneaking speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "10% shorter hostile detection range while sneaking."
+        }
+      ],
+      "bonuses": {
+        "SNEAK_VISIBILITY_REDUCTION": 0.1,
+        "SNEAK_SPEED": 0.15
+      }
+    },
+    {
+      "id": "tnk:gravekeeper",
+      "name": "Gravekeeper",
+      "description": "You tended the cemetery and occasionally dealt with its restless residents.",
+      "tier": "Origin",
+      "icon": "images/origins/simple_skull.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "10% less damage from undead attackers."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+15% vanilla XP from undead kills."
+        }
+      ],
+      "bonuses": {
+        "UNDEAD_REDUCTION": 0.1,
+        "UNDEAD_XP": 0.15
+      }
+    },
+    {
+      "id": "tnk:temple_acolyte",
+      "name": "Temple Acolyte",
+      "description": "You served a small sanctuary, tending its visitors and protecting its grounds.",
+      "tier": "Origin",
+      "icon": "images/origins/book_of_star.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+2 maximum health (one heart)."
+        },
+        {
+          "name": "Perk 2",
+          "description": "10% shorter harmful potion effects."
+        }
+      ],
+      "bonuses": {
+        "HEALTH": 2.0,
+        "HARMFUL_DURATION_REDUCTION": 0.1
+      }
+    },
+    {
+      "id": "tnk:hedge_mage",
+      "name": "Hedge Mage",
+      "description": "Your magical education came from borrowed books and dangerous experiments.",
+      "tier": "Origin",
+      "icon": "images/origins/mythic_book.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+5% maximum mana."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+5% mana regeneration. Requires Iron's Spells mana attributes."
+        }
+      ],
+      "bonuses": {
+        "MANA_REGEN": 0.05,
+        "MANA": 0.05
+      }
+    },
+    {
+      "id": "tnk:archmage",
+      "name": "Archmage",
+      "description": "You have mastered the currents that bind spell and machine.",
+      "tier": "Ascended",
+      "icon": "images/origins/mythic_book.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+30% maximum mana."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+25% mana regeneration."
+        }
+      ],
+      "bonuses": {
+        "MANA_REGEN": 0.25,
+        "MANA": 0.3
+      }
+    },
+    {
+      "id": "tnk:battlemage",
+      "name": "Battlemage",
+      "description": "Steel and sorcery answer the same practiced hand.",
+      "tier": "Ascended",
+      "icon": "images/origins/spear.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+2 attack damage."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+3 armour."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+20% maximum mana."
+        }
+      ],
+      "bonuses": {
+        "MANA": 0.2,
+        "ATTACK": 2.0,
+        "ARMOUR": 3.0
+      }
+    },
+    {
+      "id": "tnk:dreadnought",
+      "name": "Dreadnought",
+      "description": "Your resolve has become the wall others shelter behind.",
+      "tier": "Ascended",
+      "icon": "images/origins/bricks.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+8 maximum health."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+5 armour."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+25% knockback resistance."
+        }
+      ],
+      "bonuses": {
+        "HEALTH": 8.0,
+        "KNOCKBACK_RESISTANCE": 0.25,
+        "ARMOUR": 5.0
+      }
+    },
+    {
+      "id": "tnk:berserker",
+      "name": "Berserker",
+      "description": "Every battle has sharpened your will to press forward.",
+      "tier": "Ascended",
+      "icon": "images/origins/bone_knife.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+4 attack damage."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+4 maximum health."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+10% movement speed."
+        }
+      ],
+      "bonuses": {
+        "MOVE_SPEED": 0.1,
+        "HEALTH": 4.0,
+        "ATTACK": 4.0
+      }
+    },
+    {
+      "id": "tnk:deadeye",
+      "name": "Deadeye",
+      "description": "Your aim has outgrown distance and doubt.",
+      "tier": "Ascended",
+      "icon": "images/origins/bone_bow.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+25% bow and crossbow damage."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+10% movement speed."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+1 luck."
+        }
+      ],
+      "bonuses": {
+        "RANGED_DAMAGE": 0.25,
+        "MOVE_SPEED": 0.1,
+        "LUCK": 1.0
+      }
+    },
+    {
+      "id": "tnk:shadowblade",
+      "name": "Shadowblade",
+      "description": "You learned to cross the space between a shadow and its owner.",
+      "tier": "Ascended",
+      "icon": "images/origins/bone_knife.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+30% sneaking speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "30% shorter hostile detection range while sneaking."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+3 attack damage."
+        }
+      ],
+      "bonuses": {
+        "ATTACK": 3.0,
+        "SNEAK_SPEED": 0.3,
+        "SNEAK_VISIBILITY_REDUCTION": 0.3
+      }
+    },
+    {
+      "id": "tnk:worldstrider",
+      "name": "Worldstrider",
+      "description": "No horizon has proved distant enough to stop you.",
+      "tier": "Ascended",
+      "icon": "images/origins/portal_scroll.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+15% movement speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "60% less fall damage."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+30% swimming speed."
+        }
+      ],
+      "bonuses": {
+        "MOVE_SPEED": 0.15,
+        "SWIM_SPEED": 0.3,
+        "FALL_REDUCTION": 0.6
+      }
+    },
+    {
+      "id": "tnk:deepforged",
+      "name": "Deepforged",
+      "description": "The deep earth recognizes the hand that shaped its treasures.",
+      "tier": "Ascended",
+      "icon": "images/origins/ancient_pickaxe.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+40% ore mining speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "15% chance for extra raw ore from natural deposits."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+3 armour."
+        }
+      ],
+      "bonuses": {
+        "RAW_ORE_CHANCE": 0.15,
+        "ORE_SPEED": 0.4,
+        "ARMOUR": 3.0
+      }
+    },
+    {
+      "id": "tnk:grand_architect",
+      "name": "Grand Architect",
+      "description": "You now build the landmarks that others journey to discover.",
+      "tier": "Ascended",
+      "icon": "images/origins/bricks.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+50% stone breaking speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+2 block reach while holding a building block."
+        }
+      ],
+      "bonuses": {
+        "PLACEMENT_REACH": 2.0,
+        "STONE_SPEED": 0.5
+      }
+    },
+    {
+      "id": "tnk:artificer",
+      "name": "Artificer",
+      "description": "Your factories have turned impossible ideas into ordinary work.",
+      "tier": "Ascended",
+      "icon": "images/origins/wrench.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+35% quest command XP."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+3 block interaction reach while holding a wrench."
+        },
+        {
+          "name": "Perk 3",
+          "description": "20% of anvil repair XP refunded; normal requirements apply."
+        }
+      ],
+      "bonuses": {
+        "WRENCH_REACH": 3.0,
+        "ENGINEERING_XP": 0.35,
+        "ANVIL_REPAIR_REFUND": 0.2
+      }
+    },
+    {
+      "id": "tnk:runesmith",
+      "name": "Runesmith",
+      "description": "You weave enchantment into steel with the certainty of a master.",
+      "tier": "Ascended",
+      "icon": "images/origins/hammer.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "25% of enchanting XP refunded; normal requirements apply."
+        },
+        {
+          "name": "Perk 2",
+          "description": "25% of anvil repair XP refunded."
+        },
+        {
+          "name": "Perk 3",
+          "description": "35% less weapon durability loss."
+        }
+      ],
+      "bonuses": {
+        "ENCHANT_REFUND": 0.25,
+        "WEAPON_DURABILITY_REDUCTION": 0.35,
+        "ANVIL_REPAIR_REFUND": 0.25
+      }
+    },
+    {
+      "id": "tnk:wildwarden",
+      "name": "Wildwarden",
+      "description": "The fields and forests flourish beneath your patient care.",
+      "tier": "Ascended",
+      "icon": "images/origins/sun_carrot.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+30% mature crop yield when harvested by hand."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+25% natural health regeneration."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+25% meat and leather drops from your kills."
+        }
+      ],
+      "bonuses": {
+        "NATURAL_HEAL": 0.25,
+        "CROP_YIELD": 0.3,
+        "HUNT_YIELD": 0.25
+      }
+    },
+    {
+      "id": "tnk:tidecaller",
+      "name": "Tidecaller",
+      "description": "The rivers that once guided you now answer your passage.",
+      "tier": "Ascended",
+      "icon": "images/origins/blue_coral.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+50% swimming speed."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+30 seconds of underwater breathing time."
+        },
+        {
+          "name": "Perk 3",
+          "description": "25% shorter fishing wait."
+        }
+      ],
+      "bonuses": {
+        "FISH_WAIT_REDUCTION": 0.25,
+        "SWIM_SPEED": 0.5,
+        "AIR_TICKS": 600.0
+      }
+    },
+    {
+      "id": "tnk:grand_alchemist",
+      "name": "Grand Alchemist",
+      "description": "Your remedies have become a discipline of measured miracles.",
+      "tier": "Ascended",
+      "icon": "images/origins/aquatic_elixir.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+35% duration for beneficial potions you drink."
+        },
+        {
+          "name": "Perk 2",
+          "description": "+25% healing from instant health potions you drink."
+        },
+        {
+          "name": "Perk 3",
+          "description": "25% shorter harmful potion effects."
+        }
+      ],
+      "bonuses": {
+        "HARMFUL_DURATION_REDUCTION": 0.25,
+        "POTION_HEAL": 0.25,
+        "POTION_DURATION": 0.35
+      }
+    },
+    {
+      "id": "tnk:dawnbringer",
+      "name": "Dawnbringer",
+      "description": "You have stood against the darkness and returned bearing its end.",
+      "tier": "Ascended",
+      "icon": "images/origins/book_of_star.png",
+      "perks": [
+        {
+          "name": "Perk 1",
+          "description": "+8 maximum health."
+        },
+        {
+          "name": "Perk 2",
+          "description": "25% less damage from undead attackers."
+        },
+        {
+          "name": "Perk 3",
+          "description": "+35% vanilla XP from undead kills."
+        }
+      ],
+      "bonuses": {
+        "HEALTH": 8.0,
+        "UNDEAD_REDUCTION": 0.25,
+        "UNDEAD_XP": 0.35
+      }
+    }
+  ],
+  "titles": {
+    "title": "Titles",
+    "summary": "Collect recognition for your journey, then choose your displayed title and active title bonuses independently.",
+    "catalog": [
+      {
+        "id": "tnk:apprentice",
+        "name": "Apprentice",
+        "description": "complete Chapter I | Getting Started.",
+        "requirements": [],
+        "colour": "#DADADA",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3.0% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:technician",
+        "name": "Technician",
+        "description": "complete Chapter II | Andesite (Kinetic).",
+        "requirements": [],
+        "colour": "#DD873A",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.033,
+            "operation": "multiply_base",
+            "description": "+3.3% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:engineer",
+        "name": "Engineer",
+        "description": "complete Chapter III | Copper (Sealed).",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.036,
+            "operation": "multiply_base",
+            "description": "+3.6% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:specialist",
+        "name": "Specialist",
+        "description": "complete Chapter IV | Brass (Precision).",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.039,
+            "operation": "multiply_base",
+            "description": "+3.9% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:expert",
+        "name": "Expert",
+        "description": "complete Chapter V | AE2 (Calculation).",
+        "requirements": [],
+        "colour": "#50C5BE",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.041999999999999996,
+            "operation": "multiply_base",
+            "description": "+4.2% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:master",
+        "name": "Master",
+        "description": "complete Chapter VI | Light Engineering (Steel).",
+        "requirements": [],
+        "colour": "#4BD6ED",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.045,
+            "operation": "multiply_base",
+            "description": "+4.5% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:grandmaster",
+        "name": "Grandmaster",
+        "description": "complete Chapter VII | Heavy Engineering (Aluminium & Oil).",
+        "requirements": [],
+        "colour": "#6489FF",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.048,
+            "operation": "multiply_base",
+            "description": "+4.8% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:champion",
+        "name": "Champion",
+        "description": "complete Chapter VIII | Magic & Mana.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.051000000000000004,
+            "operation": "multiply_base",
+            "description": "+5.1% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:legend",
+        "name": "Legend",
+        "description": "complete Chapter IX | Radiant & Shadow.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.054,
+            "operation": "multiply_base",
+            "description": "+5.4% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:monarch",
+        "name": "Monarch",
+        "description": "complete Chapter X | Creative Core.",
+        "requirements": [],
+        "colour": "#F3EADA",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.056999999999999995,
+            "operation": "multiply_base",
+            "description": "+5.7% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          }
+        ]
+      },
+      {
+        "id": "tnk:initiate",
+        "name": "Initiate",
+        "description": "spend 10 Skill Points in the Character skill tree.",
+        "requirements": [
+          "Spend 10 skill points"
+        ],
+        "colour": "#DADADA",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          },
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% block breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:disciplined",
+        "name": "Disciplined",
+        "description": "spend 25 Skill Points in the Character skill tree.",
+        "requirements": [
+          "Spend 25 skill points"
+        ],
+        "colour": "#DD873A",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          },
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% block breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:veteran",
+        "name": "Veteran",
+        "description": "spend 50 Skill Points in the Character skill tree.",
+        "requirements": [
+          "Spend 50 skill points"
+        ],
+        "colour": "#C58BF5",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% block breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:paragon",
+        "name": "Paragon",
+        "description": "spend 100 Skill Points in the Character skill tree.",
+        "requirements": [
+          "Spend 100 skill points"
+        ],
+        "colour": "#F3EADA",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% block breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:skill_wayfarer",
+        "name": "Wanderer",
+        "description": "unlock Ranger Mastery in Character > Hunter > Ranger.",
+        "requirements": [
+          "Hunter Subclass 1 Mastery"
+        ],
+        "colour": "#4BD6ED",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 block safe fall distance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:skill_delver",
+        "name": "Adamant",
+        "description": "unlock Miner Mastery in the Character skill tree.",
+        "requirements": [
+          "Miner Mastery"
+        ],
+        "colour": "#DD873A",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.08,
+            "operation": "multiply_base",
+            "description": "+8% block breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:skill_homesteader",
+        "name": "Caretaker",
+        "description": "unlock Cook Mastery in the Character skill tree.",
+        "requirements": [
+          "Cook Mastery"
+        ],
+        "colour": "#51D975",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.03,
+            "operation": "add",
+            "description": "+3% knockback resistance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:skill_artificer",
+        "name": "Creator",
+        "description": "unlock Blacksmith Mastery in the Character skill tree.",
+        "requirements": [
+          "Blacksmith Mastery"
+        ],
+        "colour": "#EDC74B",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.25,
+            "operation": "add",
+            "description": "+0.25 block interaction reach"
+          }
+        ]
+      },
+      {
+        "id": "tnk:skill_survivor",
+        "name": "Unbroken",
+        "description": "unlock the first Blacksmith Defensive Keystone in the Character skill tree.",
+        "requirements": [
+          "Blacksmith Defensive Keystone 1"
+        ],
+        "colour": "#F3EADA",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 armor"
+          }
+        ]
+      },
+      {
+        "id": "tnk:skill_adventurer",
+        "name": "Adventurer",
+        "description": "unlock Hunter Mastery in the Character skill tree.",
+        "requirements": [
+          "Hunter Mastery"
+        ],
+        "colour": "#EF5D8C",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.02,
+            "operation": "multiply_base",
+            "description": "+2% attack speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:board_recruit",
+        "name": "Recruit",
+        "description": "complete the Adventure milestone for your first project-board assignment.",
+        "requirements": [],
+        "colour": "#DADADA",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 block safe fall distance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:board_citizen",
+        "name": "Citizen",
+        "description": "complete the Adventure milestone for three project-board assignments.",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.03,
+            "operation": "add",
+            "description": "+3% knockback resistance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:board_taskmaster",
+        "name": "Taskmaster",
+        "description": "complete the Adventure milestone for all seven project-board assignments.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 armor"
+          }
+        ]
+      },
+      {
+        "id": "tnk:prepared",
+        "name": "Survivor",
+        "description": "complete the Adventure preparation quest for a Backpack, Hopper Upgrade and Pickup Upgrade.",
+        "requirements": [],
+        "colour": "#DD873A",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 armor"
+          }
+        ]
+      },
+      {
+        "id": "tnk:planner",
+        "name": "Planner",
+        "description": "complete the Adventure storage and transport milestone.",
+        "requirements": [],
+        "colour": "#50C5BE",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% block breaking speed"
+          },
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.25,
+            "operation": "add",
+            "description": "+0.25 block interaction reach"
+          }
+        ]
+      },
+      {
+        "id": "tnk:architect",
+        "name": "Architect",
+        "description": "complete the Adventure building milestone.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.08,
+            "operation": "multiply_base",
+            "description": "+8% block breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:irons_arcane",
+        "name": "Arcane",
+        "description": "complete the Iron's Spells questline in Magic & Mana.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          },
+          {
+            "attribute": "irons_spellbooks:spell_power",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% spell power"
+          }
+        ]
+      },
+      {
+        "id": "tnk:ars_mystic",
+        "name": "Mystic",
+        "description": "complete the Ars Nouveau questline in Magic & Mana.",
+        "requirements": [],
+        "colour": "#50C5BE",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          },
+          {
+            "attribute": "puffish_attributes:magic_damage",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% tagged magic damage"
+          }
+        ]
+      },
+      {
+        "id": "tnk:witchery_oracle",
+        "name": "Oracle",
+        "description": "complete the Witchery questline in Magic & Mana.",
+        "requirements": [],
+        "colour": "#AA8DDD",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 blocks safe fall distance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:dragon_slayer",
+        "name": "Slayer",
+        "description": "complete Adventure > Defeat Ender Dragon.",
+        "requirements": [],
+        "colour": "#C17AFF",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.02,
+            "operation": "multiply_base",
+            "description": "+2% attack speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:wither_vanquisher",
+        "name": "Vanquisher",
+        "description": "complete Adventure > Defeat Wither.",
+        "requirements": [],
+        "colour": "#F3EADA",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.02,
+            "operation": "multiply_base",
+            "description": "+2% attack speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:ignis_inferno",
+        "name": "Inferno",
+        "description": "complete Adventure > Defeat Ignis.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "+5% knockback resistance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:harbinger_conqueror",
+        "name": "Conqueror",
+        "description": "complete Adventure > Defeat Harbinger.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.02,
+            "operation": "multiply_base",
+            "description": "+2% attack speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:leviathan_tidal",
+        "name": "Tidal",
+        "description": "complete Adventure > Defeat Leviathan.",
+        "requirements": [],
+        "colour": "#50C5BE",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 maximum health"
+          },
+          {
+            "attribute": "minecraft:generic.oxygen_bonus",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 oxygen endurance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:monstrosity_titanium",
+        "name": "Titanium",
+        "description": "complete Adventure > Defeat Netherite Monstrosity.",
+        "requirements": [],
+        "colour": "#DADADA",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "+5% knockback resistance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:remnant_ancient",
+        "name": "Ancient",
+        "description": "complete Adventure > Defeat Ancient Remnant.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "+5% knockback resistance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:naga_hunter",
+        "name": "Hunter",
+        "description": "complete Adventure > Defeat Naga.",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.02,
+            "operation": "multiply_base",
+            "description": "+2% attack speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:lich_phantom",
+        "name": "Phantom",
+        "description": "complete Adventure > Defeat Twilight Lich.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% attack speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:guardian_sentinel",
+        "name": "Sentinel",
+        "description": "complete Adventure > Defeat Ender Guardian.",
+        "requirements": [],
+        "colour": "#C17AFF",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "+5% knockback resistance"
+          }
+        ]
+      },
+      {
+        "id": "tnk:beta_tester",
+        "name": "Founder",
+        "description": "Staff award: participation in the Towns & Kingdoms 3 beta. Assigned by pack staff.",
+        "requirements": [],
+        "colour": "#B896D6",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.003,
+            "operation": "add",
+            "description": "First Footsteps: +3% base movement speed"
+          },
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "Founding Hands: +5% base block-breaking speed"
+          }
+        ]
+      },
+      {
+        "id": "tnk:owner",
+        "name": "Owner",
+        "description": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
+        "requirements": [],
+        "colour": "#7DABF2",
+        "perks": []
+      },
+      {
+        "id": "tnk:admin",
+        "name": "Admin",
+        "description": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": []
+      }
+    ],
+    "sections": [
+      {
+        "title": "Two independent slots",
+        "body": [
+          "The cosmetic slot chooses the title shown beside your character. The passive slot chooses the unlocked title whose bonuses apply.",
+          "Only one title passive is active at a time. Owning more titles or displaying a different cosmetic title does not stack their bonuses.",
+          "Changing the active passive has a 30-second cooldown. You can leave the passive slot empty. Maximum-health changes do not heal you."
+        ]
+      },
+      {
+        "title": "How titles unlock",
+        "body": [
+          "Skill titles unlock automatically when their spent-point or exact skill-node requirements are met. Character level alone is not a substitute for those requirements.",
+          "Campaign and encounter titles follow their designated reward. Complete and claim that milestone reward; kills and activity totals alone do not grant a command-awarded title.",
+          "Founder is awarded by pack staff for beta participation. Owner and Admin are staff-assigned cosmetic titles and grant neither gameplay bonuses nor permissions.",
+          "Previously earned retired titles remain available to their owners with their saved artwork and passive choices."
+        ]
+      },
+      {
+        "title": "Title catalogue",
+        "body": "There are 42 titles in the active collection.",
+        "rows": [
+          {
+            "Title": "Apprentice",
+            "How to earn it": "complete Chapter I | Getting Started.",
+            "Passive bonuses": "+3.0% block breaking speed; +1 maximum health"
+          },
+          {
+            "Title": "Technician",
+            "How to earn it": "complete Chapter II | Andesite (Kinetic).",
+            "Passive bonuses": "+3.3% block breaking speed; +1 maximum health"
+          },
+          {
+            "Title": "Engineer",
+            "How to earn it": "complete Chapter III | Copper (Sealed).",
+            "Passive bonuses": "+3.6% block breaking speed; +1 maximum health"
+          },
+          {
+            "Title": "Specialist",
+            "How to earn it": "complete Chapter IV | Brass (Precision).",
+            "Passive bonuses": "+3.9% block breaking speed; +1 maximum health"
+          },
+          {
+            "Title": "Expert",
+            "How to earn it": "complete Chapter V | AE2 (Calculation).",
+            "Passive bonuses": "+4.2% block breaking speed; +1 maximum health"
+          },
+          {
+            "Title": "Master",
+            "How to earn it": "complete Chapter VI | Light Engineering (Steel).",
+            "Passive bonuses": "+4.5% block breaking speed; +2 maximum health"
+          },
+          {
+            "Title": "Grandmaster",
+            "How to earn it": "complete Chapter VII | Heavy Engineering (Aluminium & Oil).",
+            "Passive bonuses": "+4.8% block breaking speed; +2 maximum health"
+          },
+          {
+            "Title": "Champion",
+            "How to earn it": "complete Chapter VIII | Magic & Mana.",
+            "Passive bonuses": "+5.1% block breaking speed; +2 maximum health"
+          },
+          {
+            "Title": "Legend",
+            "How to earn it": "complete Chapter IX | Radiant & Shadow.",
+            "Passive bonuses": "+5.4% block breaking speed; +2 maximum health"
+          },
+          {
+            "Title": "Monarch",
+            "How to earn it": "complete Chapter X | Creative Core.",
+            "Passive bonuses": "+5.7% block breaking speed; +2 maximum health"
+          },
+          {
+            "Title": "Initiate",
+            "How to earn it": "spend 10 Skill Points in the Character skill tree.",
+            "Passive bonuses": "+1 maximum health; +3% block breaking speed"
+          },
+          {
+            "Title": "Disciplined",
+            "How to earn it": "spend 25 Skill Points in the Character skill tree.",
+            "Passive bonuses": "+1 maximum health; +3% block breaking speed"
+          },
+          {
+            "Title": "Veteran",
+            "How to earn it": "spend 50 Skill Points in the Character skill tree.",
+            "Passive bonuses": "+2 maximum health; +5% block breaking speed"
+          },
+          {
+            "Title": "Paragon",
+            "How to earn it": "spend 100 Skill Points in the Character skill tree.",
+            "Passive bonuses": "+2 maximum health; +5% block breaking speed"
+          },
+          {
+            "Title": "Wanderer",
+            "How to earn it": "unlock Ranger Mastery in Character > Hunter > Ranger.",
+            "Passive bonuses": "+3% movement speed; +1 block safe fall distance"
+          },
+          {
+            "Title": "Adamant",
+            "How to earn it": "unlock Miner Mastery in the Character skill tree.",
+            "Passive bonuses": "+8% block breaking speed"
+          },
+          {
+            "Title": "Caretaker",
+            "How to earn it": "unlock Cook Mastery in the Character skill tree.",
+            "Passive bonuses": "+2 maximum health; +3% knockback resistance"
+          },
+          {
+            "Title": "Creator",
+            "How to earn it": "unlock Blacksmith Mastery in the Character skill tree.",
+            "Passive bonuses": "+5% block breaking speed; +0.25 block interaction reach"
+          },
+          {
+            "Title": "Unbroken",
+            "How to earn it": "unlock the first Blacksmith Defensive Keystone in the Character skill tree.",
+            "Passive bonuses": "+2 maximum health; +1 armor"
+          },
+          {
+            "Title": "Adventurer",
+            "How to earn it": "unlock Hunter Mastery in the Character skill tree.",
+            "Passive bonuses": "+4% attack damage; +2% attack speed"
+          },
+          {
+            "Title": "Recruit",
+            "How to earn it": "complete the Adventure milestone for your first project-board assignment.",
+            "Passive bonuses": "+3% movement speed; +1 block safe fall distance"
+          },
+          {
+            "Title": "Citizen",
+            "How to earn it": "complete the Adventure milestone for three project-board assignments.",
+            "Passive bonuses": "+2 maximum health; +3% knockback resistance"
+          },
+          {
+            "Title": "Taskmaster",
+            "How to earn it": "complete the Adventure milestone for all seven project-board assignments.",
+            "Passive bonuses": "+2 maximum health; +1 armor"
+          },
+          {
+            "Title": "Survivor",
+            "How to earn it": "complete the Adventure preparation quest for a Backpack, Hopper Upgrade and Pickup Upgrade.",
+            "Passive bonuses": "+2 maximum health; +1 armor"
+          },
+          {
+            "Title": "Planner",
+            "How to earn it": "complete the Adventure storage and transport milestone.",
+            "Passive bonuses": "+5% block breaking speed; +0.25 block interaction reach"
+          },
+          {
+            "Title": "Architect",
+            "How to earn it": "complete the Adventure building milestone.",
+            "Passive bonuses": "+8% block breaking speed"
+          },
+          {
+            "Title": "Arcane",
+            "How to earn it": "complete the Iron's Spells questline in Magic & Mana.",
+            "Passive bonuses": "+1 maximum health; +5% spell power"
+          },
+          {
+            "Title": "Mystic",
+            "How to earn it": "complete the Ars Nouveau questline in Magic & Mana.",
+            "Passive bonuses": "+1 maximum health; +5% tagged magic damage"
+          },
+          {
+            "Title": "Oracle",
+            "How to earn it": "complete the Witchery questline in Magic & Mana.",
+            "Passive bonuses": "+1 maximum health; +2 blocks safe fall distance"
+          },
+          {
+            "Title": "Slayer",
+            "How to earn it": "complete Adventure > Defeat Ender Dragon.",
+            "Passive bonuses": "+4% attack damage; +2% attack speed"
+          },
+          {
+            "Title": "Vanquisher",
+            "How to earn it": "complete Adventure > Defeat Wither.",
+            "Passive bonuses": "+4% attack damage; +2% attack speed"
+          },
+          {
+            "Title": "Inferno",
+            "How to earn it": "complete Adventure > Defeat Ignis.",
+            "Passive bonuses": "+2 armor; +5% knockback resistance"
+          },
+          {
+            "Title": "Conqueror",
+            "How to earn it": "complete Adventure > Defeat Harbinger.",
+            "Passive bonuses": "+4% attack damage; +2% attack speed"
+          },
+          {
+            "Title": "Tidal",
+            "How to earn it": "complete Adventure > Defeat Leviathan.",
+            "Passive bonuses": "+2 maximum health; +1 oxygen endurance"
+          },
+          {
+            "Title": "Titanium",
+            "How to earn it": "complete Adventure > Defeat Netherite Monstrosity.",
+            "Passive bonuses": "+2 armor; +5% knockback resistance"
+          },
+          {
+            "Title": "Ancient",
+            "How to earn it": "complete Adventure > Defeat Ancient Remnant.",
+            "Passive bonuses": "+2 armor; +5% knockback resistance"
+          },
+          {
+            "Title": "Hunter",
+            "How to earn it": "complete Adventure > Defeat Naga.",
+            "Passive bonuses": "+4% attack damage; +2% attack speed"
+          },
+          {
+            "Title": "Phantom",
+            "How to earn it": "complete Adventure > Defeat Twilight Lich.",
+            "Passive bonuses": "+3% movement speed; +3% attack speed"
+          },
+          {
+            "Title": "Sentinel",
+            "How to earn it": "complete Adventure > Defeat Ender Guardian.",
+            "Passive bonuses": "+2 armor; +5% knockback resistance"
+          },
+          {
+            "Title": "Founder",
+            "How to earn it": "Staff award: participation in the Towns & Kingdoms 3 beta. Assigned by pack staff.",
+            "Passive bonuses": "First Footsteps: +3% base movement speed; Founding Hands: +5% base block-breaking speed"
+          },
+          {
+            "Title": "Owner",
+            "How to earn it": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Admin",
+            "How to earn it": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
+            "Passive bonuses": "Cosmetic only"
+          }
+        ]
+      }
+    ]
+  },
+  "loot": {
+    "title": "Unidentified Loot",
+    "summary": "Bring equipment discoveries home, reveal their identity and affixes, then keep, trade or salvage what you find.",
+    "equipmentEntries": 987,
+    "tiers": [
+      {
+        "rank": 0,
+        "id": "novice",
+        "name": "Novice",
+        "apotheosis_rarity": "tnkloot:common",
+        "advancements": []
+      },
+      {
+        "rank": 1,
+        "id": "apprentice",
+        "name": "Apprentice",
+        "apotheosis_rarity": "tnkloot:uncommon",
+        "advancements": []
+      },
+      {
+        "rank": 2,
+        "id": "adventurer",
+        "name": "Adventurer",
+        "apotheosis_rarity": "tnkloot:rare",
+        "advancements": []
+      },
+      {
+        "rank": 3,
+        "id": "explorer",
+        "name": "Explorer",
+        "apotheosis_rarity": "tnkloot:epic",
+        "advancements": []
+      },
+      {
+        "rank": 4,
+        "id": "veteran",
+        "name": "Veteran",
+        "apotheosis_rarity": "tnkloot:legendary",
+        "advancements": []
+      },
+      {
+        "rank": 5,
+        "id": "champion",
+        "name": "Champion",
+        "apotheosis_rarity": "tnkloot:mythic",
+        "advancements": []
+      },
+      {
+        "rank": 6,
+        "id": "hero",
+        "name": "Hero",
+        "apotheosis_rarity": "tnkloot:mythic",
+        "advancements": []
+      },
+      {
+        "rank": 7,
+        "id": "legendary",
+        "name": "Legendary",
+        "apotheosis_rarity": "tnkloot:mythic",
+        "advancements": []
+      }
+    ],
+    "rarities": [
+      {
+        "id": "common",
+        "name": "Common",
+        "color": "#FFFFFF",
+        "weight": 54,
+        "boss_weight": 5,
+        "cost_multiplier": 1,
+        "apotheosis_rarity": "tnkloot:common",
+        "roll_floor": 0
+      },
+      {
+        "id": "uncommon",
+        "name": "Uncommon",
+        "color": "#55FF55",
+        "weight": 25,
+        "boss_weight": 20,
+        "cost_multiplier": 1.2,
+        "apotheosis_rarity": "tnkloot:uncommon",
+        "roll_floor": 0.15
+      },
+      {
+        "id": "rare",
+        "name": "Rare",
+        "color": "#FF77CC",
+        "weight": 14,
+        "boss_weight": 38,
+        "cost_multiplier": 1.5,
+        "apotheosis_rarity": "tnkloot:rare",
+        "roll_floor": 0.35
+      },
+      {
+        "id": "epic",
+        "name": "Epic",
+        "color": "#AA55FF",
+        "weight": 5,
+        "boss_weight": 25,
+        "cost_multiplier": 2,
+        "apotheosis_rarity": "tnkloot:epic",
+        "roll_floor": 0.55
+      },
+      {
+        "id": "legendary",
+        "name": "Legendary",
+        "color": "#55DDFF",
+        "weight": 1,
+        "boss_weight": 10,
+        "cost_multiplier": 3,
+        "apotheosis_rarity": "tnkloot:legendary",
+        "roll_floor": 0.75
+      },
+      {
+        "id": "mythic",
+        "name": "Mythic",
+        "color": "#FF9922",
+        "weight": 1,
+        "boss_weight": 2,
+        "cost_multiplier": 4,
+        "apotheosis_rarity": "tnkloot:mythic",
+        "roll_floor": 0.9
+      }
+    ],
+    "sections": [
+      {
+        "title": "The appraisal loop",
+        "body": [
+          "Find unidentified equipment in exploration loot or from eligible enemies. Its token carries the equipment category, loot tier, source and sealed roll information.",
+          "Bring it to an Identifier station to inspect the pool and reveal the result. Handheld identification is disabled; the station and Mechanical Identifier provide the reveal routes.",
+          "Identification spends vanilla XP points. Salvage fragments can reduce the station’s bill. Character XP is never spent on appraisal.",
+          "Keep a useful find, trade it, or salvage unwanted identified gear. Discoveries fill your personal collection and pool previews help you plan future expeditions."
+        ]
+      },
+      {
+        "title": "Equipment discovery",
+        "body": [
+          "Ordinary eligible hostile kills have a 2% equipment roll. Ordinary eligible chests have a 2% equipment roll.",
+          "Eligible dungeon chests also have a separate 12% accessory roll. Dedicated boss pools and authored dungeon rewards use their own reward rules."
+        ]
+      },
+      {
+        "title": "Tier, rarity and fighting style",
+        "body": [
+          "Loot tier describes the equipment band. Rarity controls the quality of its roll. Neither is the weapon’s Epic Fight moveset or the production chapter used to craft machines.",
+          "The equipment pools contain 987 entries across eight tiers. Loot tiers range from 0 to 7; Common through Mythic are six separate rarity grades.",
+          "Tier bounds the relative affix roll band. The band is a quality range for attribute rolls, not a direct percentage increase to attack damage."
+        ],
+        "rows": [
+          {
+            "Tier": 0,
+            "Name": "Novice",
+            "Base identification XP": 1,
+            "Affix roll band": "3–13%"
+          },
+          {
+            "Tier": 1,
+            "Name": "Apprentice",
+            "Base identification XP": 2,
+            "Affix roll band": "10–25%"
+          },
+          {
+            "Tier": 2,
+            "Name": "Adventurer",
+            "Base identification XP": 3,
+            "Affix roll band": "20–36%"
+          },
+          {
+            "Tier": 3,
+            "Name": "Explorer",
+            "Base identification XP": 5,
+            "Affix roll band": "30–48%"
+          },
+          {
+            "Tier": 4,
+            "Name": "Veteran",
+            "Base identification XP": 8,
+            "Affix roll band": "40–60%"
+          },
+          {
+            "Tier": 5,
+            "Name": "Champion",
+            "Base identification XP": 12,
+            "Affix roll band": "52–74%"
+          },
+          {
+            "Tier": 6,
+            "Name": "Hero",
+            "Base identification XP": 18,
+            "Affix roll band": "65–88%"
+          },
+          {
+            "Tier": 7,
+            "Name": "Legendary",
+            "Base identification XP": 25,
+            "Affix roll band": "78–100%"
+          }
+        ]
+      },
+      {
+        "title": "Ordinary loot follows encounter level",
+        "body": [
+          "For ordinary progression-aware equipment, effective source level is the lower of the encounter’s source level and your character ceiling, bounded to 1–100.",
+          "The following tier distribution is rolled at that effective level. The token is sealed when generated; postponing identification does not reroll its progression band."
+        ],
+        "rows": [
+          {
+            "Effective source level": "1–10",
+            "Tier roll": "75% Novice · 25% Apprentice"
+          },
+          {
+            "Effective source level": "11–30",
+            "Tier roll": "50% Novice · 35% Apprentice · 15% Adventurer"
+          },
+          {
+            "Effective source level": "31–50",
+            "Tier roll": "50% Apprentice · 35% Adventurer · 15% Explorer"
+          },
+          {
+            "Effective source level": "51–70",
+            "Tier roll": "50% Adventurer · 35% Explorer · 15% Veteran"
+          },
+          {
+            "Effective source level": "71–80",
+            "Tier roll": "50% Explorer · 35% Veteran · 15% Champion"
+          },
+          {
+            "Effective source level": "81–94",
+            "Tier roll": "50% Veteran · 35% Champion · 15% Hero"
+          },
+          {
+            "Effective source level": "95–100",
+            "Tier roll": "60% Champion · 35% Hero · 5% Legendary"
+          }
+        ]
+      },
+      {
+        "title": "Rarity rolls",
+        "body": [
+          "These are the full-range ordinary and boss rarity chances. Your character’s rarity cap removes grades above its current bracket and the remaining eligible weights are renormalized.",
+          "Boss rewards use their boss rarity weights. Ordinary equipment uses the ordinary column; the two rolls have different distributions."
+        ],
+        "rows": [
+          {
+            "Rarity": "Common",
+            "Ordinary roll": "60%",
+            "Boss roll": "5%",
+            "Identification multiplier": "×1",
+            "Salvage base": 1
+          },
+          {
+            "Rarity": "Uncommon",
+            "Ordinary roll": "25%",
+            "Boss roll": "20%",
+            "Identification multiplier": "×1.2",
+            "Salvage base": 2
+          },
+          {
+            "Rarity": "Rare",
+            "Ordinary roll": "10%",
+            "Boss roll": "38%",
+            "Identification multiplier": "×1.5",
+            "Salvage base": 4
+          },
+          {
+            "Rarity": "Epic",
+            "Ordinary roll": "4%",
+            "Boss roll": "25%",
+            "Identification multiplier": "×2",
+            "Salvage base": 7
+          },
+          {
+            "Rarity": "Legendary",
+            "Ordinary roll": "0.9%",
+            "Boss roll": "10%",
+            "Identification multiplier": "×3",
+            "Salvage base": 12
+          },
+          {
+            "Rarity": "Mythic",
+            "Ordinary roll": "0.1%",
+            "Boss roll": "2%",
+            "Identification multiplier": "×4",
+            "Salvage base": 20
+          }
+        ]
+      },
+      {
+        "title": "Rarity ceilings",
+        "body": "The active character ceiling determines the highest eligible ordinary rarity.",
+        "rows": [
+          {
+            "Character ceiling": 10,
+            "Highest ordinary rarity": "Uncommon"
+          },
+          {
+            "Character ceiling": 30,
+            "Highest ordinary rarity": "Rare"
+          },
+          {
+            "Character ceiling": 50,
+            "Highest ordinary rarity": "Epic"
+          },
+          {
+            "Character ceiling": 70,
+            "Highest ordinary rarity": "Legendary"
+          },
+          {
+            "Character ceiling": 80,
+            "Highest ordinary rarity": "Legendary"
+          },
+          {
+            "Character ceiling": 94,
+            "Highest ordinary rarity": "Mythic"
+          },
+          {
+            "Character ceiling": 100,
+            "Highest ordinary rarity": "Mythic"
+          }
+        ]
+      },
+      {
+        "title": "Identification prices",
+        "body": [
+          "For affix-capable equipment and native jewellery, identification cost is the loot-tier base price multiplied by the rarity multiplier, rounded up to a whole vanilla XP point. Other compatibility items retain their base price.",
+          "At the manual station, available salvage fragments reduce the total bill before vanilla XP is charged. The table shows the full price before fragments.",
+          "A Rare Veteran item costs 12 vanilla XP points: tier 4 base 8 × Rare multiplier 1.5."
+        ],
+        "rows": [
+          {
+            "Tier": "0 · Novice",
+            "Common": 1,
+            "Uncommon": 2,
+            "Rare": 2,
+            "Epic": 2,
+            "Legendary": 3,
+            "Mythic": 4
+          },
+          {
+            "Tier": "1 · Apprentice",
+            "Common": 2,
+            "Uncommon": 3,
+            "Rare": 3,
+            "Epic": 4,
+            "Legendary": 6,
+            "Mythic": 8
+          },
+          {
+            "Tier": "2 · Adventurer",
+            "Common": 3,
+            "Uncommon": 4,
+            "Rare": 5,
+            "Epic": 6,
+            "Legendary": 9,
+            "Mythic": 12
+          },
+          {
+            "Tier": "3 · Explorer",
+            "Common": 5,
+            "Uncommon": 6,
+            "Rare": 8,
+            "Epic": 10,
+            "Legendary": 15,
+            "Mythic": 20
+          },
+          {
+            "Tier": "4 · Veteran",
+            "Common": 8,
+            "Uncommon": 10,
+            "Rare": 12,
+            "Epic": 16,
+            "Legendary": 24,
+            "Mythic": 32
+          },
+          {
+            "Tier": "5 · Champion",
+            "Common": 12,
+            "Uncommon": 15,
+            "Rare": 18,
+            "Epic": 24,
+            "Legendary": 36,
+            "Mythic": 48
+          },
+          {
+            "Tier": "6 · Hero",
+            "Common": 18,
+            "Uncommon": 22,
+            "Rare": 27,
+            "Epic": 36,
+            "Legendary": 54,
+            "Mythic": 72
+          },
+          {
+            "Tier": "7 · Legendary",
+            "Common": 25,
+            "Uncommon": 30,
+            "Rare": 38,
+            "Epic": 50,
+            "Legendary": 75,
+            "Mythic": 100
+          }
+        ]
+      },
+      {
+        "title": "Mechanical Identifier",
+        "body": [
+          "The Mechanical Identifier automates appraisal with an internal 4,000 mB tank and 40 ticks of processing per item (2 seconds at 20 ticks per second).",
+          "Insert one unidentified token per input slot, supply a supported XP fluid and leave room for identified output. Seven input slots are available.",
+          "Fluid cost is ceil(full identification XP cost × the fluid’s mB-per-XP ratio). The mechanical route uses fluid directly and does not spend the player’s salvage fragments.",
+          "The machine waits when fluid is insufficient or output is blocked. It consumes the token and fluid when the prepared result completes. Rotational power is not a processing requirement."
+        ],
+        "rows": [
+          {
+            "XP fluid": "Experience",
+            "Fluid ID": "create_enchantment_industry:experience",
+            "mB per vanilla XP point": "1"
+          },
+          {
+            "XP fluid": "Xp Still",
+            "Fluid ID": "sophisticatedcore:xp_still",
+            "mB per vanilla XP point": "20"
+          }
+        ]
+      },
+      {
+        "title": "Salvaging",
+        "body": [
+          "Salvaging identified equipment costs 1 + 1 × loot tier + 1 × rarity index vanilla XP points. Common has index 0 and Mythic index 5.",
+          "The starting fragment value is the rarity’s salvage base × (loot tier + 1). Its cap is 40% of the identification price, rounded down, with a minimum cap of one fragment for eligible positive-price gear.",
+          "You receive the lower of that starting value and cap. Review the batch before confirming; the stored fragment balance can hold up to 1,000,000.",
+          "Fragments are personal credit for future station identification. They are not character XP and do not reroll already revealed gear."
+        ]
+      },
+      {
+        "title": "Boss equipment and signature effects",
+        "body": [
+          "50 encounters have dedicated reward pools. Eligible player kills use those encounter-specific equipment choices rather than treating every material toolset as a unique boss artifact.",
+          "Pool entries are weighted choices, not a guarantee that every listed item drops together. Some encounters add equipment when no matching equipment would otherwise be awarded.",
+          "Boss signature affixes are enabled. Their shared effect cooldown is 8 seconds and their configured effect duration is 3 seconds."
+        ],
+        "rows": [
+          {
+            "Encounter": "Helvar",
+            "Loot tier": 6,
+            "Pool entries": 5
+          },
+          {
+            "Encounter": "Skor",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Sirok",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Kraken",
+            "Loot tier": 6,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Infernal Dragon",
+            "Loot tier": 7,
+            "Pool entries": 4
+          },
+          {
+            "Encounter": "Dead King",
+            "Loot tier": 6,
+            "Pool entries": 3
+          },
+          {
+            "Encounter": "Fire Boss",
+            "Loot tier": 7,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Ferrous Wroughtnaut",
+            "Loot tier": 5,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Frostmaw",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Umvuthi",
+            "Loot tier": 6,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Sculptor",
+            "Loot tier": 6,
+            "Pool entries": 5
+          },
+          {
+            "Encounter": "Ender Guardian",
+            "Loot tier": 6,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Netherite Monstrosity",
+            "Loot tier": 6,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Ignis",
+            "Loot tier": 7,
+            "Pool entries": 6
+          },
+          {
+            "Encounter": "Maledictus",
+            "Loot tier": 7,
+            "Pool entries": 7
+          },
+          {
+            "Encounter": "The Leviathan",
+            "Loot tier": 7,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "The Harbinger",
+            "Loot tier": 7,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Ancient Remnant",
+            "Loot tier": 7,
+            "Pool entries": 4
+          },
+          {
+            "Encounter": "Scylla",
+            "Loot tier": 7,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Clawdian",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Mossy Golem",
+            "Loot tier": 4,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Frostbitten Golem",
+            "Loot tier": 4,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Ancient Guardian",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Possessed Paladin",
+            "Loot tier": 6,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Hovering Hurricane",
+            "Loot tier": 5,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Cloud Golem",
+            "Loot tier": 4,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Withered Abomination",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Overgrown Colossus",
+            "Loot tier": 5,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Skeletosaurus",
+            "Loot tier": 5,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Shulker Mimic",
+            "Loot tier": 4,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Endersent",
+            "Loot tier": 5,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Lava Eater",
+            "Loot tier": 5,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Annihilation Pursuer",
+            "Loot tier": 7,
+            "Pool entries": 4
+          },
+          {
+            "Encounter": "Luxtructosaurus",
+            "Loot tier": 7,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Forsaken",
+            "Loot tier": 6,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Hullbreaker",
+            "Loot tier": 6,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "The Slider",
+            "Loot tier": 2,
+            "Pool entries": 9
+          },
+          {
+            "Encounter": "Valkyrie Queen",
+            "Loot tier": 4,
+            "Pool entries": 13
+          },
+          {
+            "Encounter": "Sun Spirit",
+            "Loot tier": 6,
+            "Pool entries": 9
+          },
+          {
+            "Encounter": "Naga",
+            "Loot tier": 2,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Twilight Lich",
+            "Loot tier": 3,
+            "Pool entries": 4
+          },
+          {
+            "Encounter": "Minoshroom",
+            "Loot tier": 3,
+            "Pool entries": 2
+          },
+          {
+            "Encounter": "Hydra",
+            "Loot tier": 5,
+            "Pool entries": 6
+          },
+          {
+            "Encounter": "Knight Phantoms",
+            "Loot tier": 4,
+            "Pool entries": 5
+          },
+          {
+            "Encounter": "Ur-Ghast",
+            "Loot tier": 6,
+            "Pool entries": 6
+          },
+          {
+            "Encounter": "Alpha Yeti",
+            "Loot tier": 5,
+            "Pool entries": 4
+          },
+          {
+            "Encounter": "Snow Queen",
+            "Loot tier": 6,
+            "Pool entries": 5
+          },
+          {
+            "Encounter": "Eye of the Storm",
+            "Loot tier": 6,
+            "Pool entries": 7
+          },
+          {
+            "Encounter": "The Obliterator",
+            "Loot tier": 7,
+            "Pool entries": 1
+          },
+          {
+            "Encounter": "Last of Deepslate",
+            "Loot tier": 6,
+            "Pool entries": 1
+          }
+        ]
+      },
+      {
+        "title": "Sealed dungeon rewards",
+        "body": [
+          "Authored dungeon rewards retain their selected equipment, source level, loot tier, rarity and guaranteed bonuses through delivery and identification.",
+          "Receiving a sealed reward on a lower-level character does not downgrade or reroll it. A boss’s encounter level and its reward chest’s authored source level remain separate.",
+          "The same saved result is used when the token is revealed manually or through the Mechanical Identifier."
+        ]
+      },
+      {
+        "title": "Regional equipment pools",
+        "body": [
+          "Aether, Twilight Forest, Nether, End and Otherside exploration can draw from their local equipment families alongside global gear.",
+          "Regional equipment uses the ordinary discovery rules. The item’s origin dimension helps choose which local families can appear."
+        ],
+        "rows": [
+          {
+            "Dimension": "The Aether",
+            "Local equipment families": "Aether, Deep Aether",
+            "Global equipment": "Included"
+          },
+          {
+            "Dimension": "Twilight Forest",
+            "Local equipment families": "Twilightforest",
+            "Global equipment": "Included"
+          },
+          {
+            "Dimension": "The Nether",
+            "Local equipment families": "Netherexp, Scorchingnether",
+            "Global equipment": "Included"
+          },
+          {
+            "Dimension": "The End",
+            "Local equipment families": "Enderscape, The Beyond",
+            "Global equipment": "Included"
+          },
+          {
+            "Dimension": "Otherside",
+            "Local equipment families": "Deeperdarker",
+            "Global equipment": "Included"
+          }
+        ]
+      },
+      {
+        "title": "Affixes and collections",
+        "body": [
+          "Apotheosis supplies the affix system. The item’s loot tier and rarity shape its bounded roll while native item properties and supported custom weapon behavior remain part of the result.",
+          "Collection records, pool previews, rarity reveals and salvaging are enabled. Unseen collection entries can remain silhouettes until discovered."
+        ]
+      }
+    ]
+  }
+}

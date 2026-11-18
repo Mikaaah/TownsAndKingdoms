@@ -1,0 +1,39 @@
+{
+  "type": "womplus:greataxe",
+  "attributes": {
+    "common": {
+      "impact": 4.7,
+      "max_strikes": 4,
+      "armor_negation": 47.0,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.24
+    },
+    "one_hand": {
+      "armor_negation": 47.0,
+      "impact": 4.7,
+      "max_strikes": 4,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.24
+    },
+    "two_hand": {
+      "armor_negation": 47.0,
+      "impact": 4.7,
+      "max_strikes": 4,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.24
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.9
+    ],
+    "size": [
+      0.4,
+      0.45,
+      0.9
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "apothic_attributes:flying",
+      "required": false
+    },
+    {
+      "id": "apothic_attributes:long_flying",
+      "required": false
+    },
+    {
+      "id": "apothic_attributes:extra_long_flying",
+      "required": false
+    }
+  ]
+}

@@ -1,1 +1,3 @@
-{"parent": "kubejs:block/tk3_precision_machine"}
+{
+  "parent": "kubejs:block/tk3_frames/tk3_precision_machine"
+}

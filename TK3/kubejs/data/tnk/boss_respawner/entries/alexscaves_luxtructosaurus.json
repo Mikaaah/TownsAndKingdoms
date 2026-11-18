@@ -1,0 +1,15 @@
+{
+  "schema_version": 4,
+  "entity": "alexscaves:luxtructosaurus",
+  "activation": {
+    "item": "kubejs:boss_respawn_token"
+  },
+  "placement": {
+    "mode": "death",
+    "death": {}
+  },
+  "spawn": {
+    "mode": "summon",
+    "summon": {}
+  }
+}

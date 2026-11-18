@@ -1,0 +1,25 @@
+{
+  "type": "epicfight_dd:nailbat",
+  "attributes": {
+    "common": {
+      "impact": 6.0,
+      "max_strikes": 3,
+      "armor_negation": 60.0,
+      "damage_bonus": 5.0,
+      "speed_bonus": 0.24
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.85
+    ],
+    "size": [
+      0.4,
+      0.45,
+      0.85
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "type": "epicfight_dd:light_greatsword",
+  "attributes": {
+    "common": {
+      "impact": 3.7,
+      "max_strikes": 3,
+      "armor_negation": 38.0,
+      "damage_bonus": 2.0,
+      "speed_bonus": 0.24
+    },
+    "one_hand": {
+      "armor_negation": 38.0,
+      "impact": 3.7,
+      "max_strikes": 3,
+      "damage_bonus": 2.0,
+      "speed_bonus": 0.24
+    },
+    "two_hand": {
+      "armor_negation": 38.0,
+      "impact": 3.7,
+      "max_strikes": 3,
+      "damage_bonus": 2.0,
+      "speed_bonus": 0.24
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.925
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.925
+    ]
+  }
+}

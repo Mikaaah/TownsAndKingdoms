@@ -1,0 +1,26 @@
+{
+  "attributes": {
+    "one_hand": {
+      "armor_negation": 29.0,
+      "impact": 2.0,
+      "max_strikes": 1,
+      "damage_bonus": 1.5,
+      "speed_bonus": 0.2
+    },
+    "two_hand": {
+      "impact": 2.4,
+      "max_strikes": 3,
+      "damage_bonus": 1.5,
+      "speed_bonus": 0.2,
+      "armor_negation": 29.0
+    },
+    "common": {
+      "armor_negation": 29.0,
+      "impact": 2.0,
+      "max_strikes": 1,
+      "damage_bonus": 1.5,
+      "speed_bonus": 0.17
+    }
+  },
+  "type": "epicfight:spear"
+}

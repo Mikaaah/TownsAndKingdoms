@@ -1,0 +1,25 @@
+{
+  "type": "epicfight_dd:night_ritus_dagger",
+  "attributes": {
+    "common": {
+      "impact": 1.0,
+      "max_strikes": 1,
+      "armor_negation": 25.0,
+      "damage_bonus": 5.0,
+      "speed_bonus": 0.35
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.275
+    ],
+    "size": [
+      0.15,
+      0.15,
+      0.275
+    ]
+  }
+}

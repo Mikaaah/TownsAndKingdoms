@@ -1,0 +1,10 @@
+{
+  "type": "epicfight:bokken",
+  "attributes": {
+    "common": {
+      "impact": 1.18,
+      "max_strikes": 2,
+      "armor_negation": 0.0
+    }
+  }
+}

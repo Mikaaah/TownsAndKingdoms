@@ -1,0 +1,13 @@
+{
+  "tnkironsgui.research": "Eldritch Research",
+  "tnkironsgui.anvil_hint": "Imbue & Upgrade",
+  "tnkironsgui.forge_hint": "Add a school focus",
+  "tnkironsgui.book_hint": "Insert a spellbook",
+  "tnkironsgui.inscribe": "Inscribe",
+  "tnkironsgui.inscribe_hint": "Inscribe the scroll into an empty spell slot.",
+  "tnkironsgui.select_hint": "Select a spell slot to view its details.",
+  "tnkironsgui.extract": "Extract Scroll",
+  "tnkironsgui.spells": "Spell Slots",
+  "tnkironsgui.book": "Book",
+  "tnkironsgui.scroll": "Scroll"
+}

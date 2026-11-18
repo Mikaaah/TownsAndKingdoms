@@ -1,0 +1,39 @@
+{
+  "type": "epicfight_dd:nailbat",
+  "attributes": {
+    "common": {
+      "impact": 2.8,
+      "max_strikes": 2,
+      "armor_negation": 45.0,
+      "damage_bonus": 5.0,
+      "speed_bonus": 0.25
+    },
+    "one_hand": {
+      "armor_negation": 45.0,
+      "impact": 2.8,
+      "max_strikes": 2,
+      "damage_bonus": 5.0,
+      "speed_bonus": 0.25
+    },
+    "two_hand": {
+      "armor_negation": 45.0,
+      "impact": 3.2,
+      "max_strikes": 3,
+      "damage_bonus": 5.0,
+      "speed_bonus": 0.25
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.95
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.95
+    ]
+  }
+}

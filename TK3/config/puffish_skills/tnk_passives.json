@@ -1,0 +1,561 @@
+{
+  "version": 1,
+  "skills": {
+    "alchemist_class": {
+      "potion_duration": 0.05
+    },
+    "alchemist_crafting_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_crafting_2": {
+      "potion_duration": 0.025
+    },
+    "alchemist_crafting_3": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_1": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_2": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_3": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_4": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_5": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_6": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_7": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_8": {
+      "evasion": 0.0025
+    },
+    "alchemist_defensive_crafting_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_2": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_3": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_4": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_5": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_6": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_7": {
+      "potion_duration": 0.025
+    },
+    "alchemist_defensive_crafting_keystone_1": {
+      "potion_duration": 0.05
+    },
+    "alchemist_defensive_keystone_1": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_notable_1": {
+      "evasion": 0.0025
+    },
+    "alchemist_healing_1": {
+      "leech": 0.025
+    },
+    "alchemist_healing_2": {
+      "leech": 0.025
+    },
+    "alchemist_healing_3": {
+      "leech": 0.025
+    },
+    "alchemist_healing_4": {
+      "leech": 0.025
+    },
+    "alchemist_healing_notable_1": {
+      "leech": 0.025
+    },
+    "alchemist_lesser_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_lesser_2": {
+      "potion_duration": 0.025
+    },
+    "alchemist_lesser_3": {
+      "potion_duration": 0.025
+    },
+    "alchemist_lesser_4": {
+      "potion_duration": 0.025
+    },
+    "alchemist_lesser_5": {
+      "potion_duration": 0.025
+    },
+    "alchemist_lesser_6": {
+      "potion_duration": 0.025
+    },
+    "alchemist_mastery": {
+      "potion_duration": 0.05
+    },
+    "alchemist_offensive_crafting_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_2": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_3": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_4": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_5": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_6": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_7": {
+      "potion_duration": 0.025
+    },
+    "alchemist_offensive_crafting_keystone_1": {
+      "potion_duration": 0.05
+    },
+    "alchemist_subclass_1_crafting_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_1_crafting_2": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_1_crafting_3": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_1_crafting_4": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_1_crafting_5": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_1_crafting_notable_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_1_defensive_1": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_1_defensive_2": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_1_defensive_3": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_1_defensive_4": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_2_crafting_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_2_crafting_2": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_2_crafting_3": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_2_crafting_4": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_2_crafting_5": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_2_crafting_notable_1": {
+      "potion_duration": 0.025
+    },
+    "alchemist_subclass_2_defensive_1": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_2_defensive_2": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_2_defensive_3": {
+      "evasion": 0.0025
+    },
+    "alchemist_subclass_2_defensive_4": {
+      "evasion": 0.0025
+    },
+    "blacksmith_defensive_keystone_1": {
+      "second_wind": 1
+    },
+    "blacksmith_subclass_1": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_defensive_1": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_defensive_2": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_defensive_3": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_defensive_4": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_mastery": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_offensive_1": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_offensive_2": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_offensive_3": {
+      "guard": 0.005
+    },
+    "blacksmith_subclass_1_offensive_4": {
+      "guard": 0.005
+    },
+    "cook_class": {
+      "food_recovery": 0.3
+    },
+    "cook_crafting_1": {
+      "food_recovery": 0.15
+    },
+    "cook_crafting_2": {
+      "food_recovery": 0.15
+    },
+    "cook_crafting_3": {
+      "food_recovery": 0.15
+    },
+    "cook_crafting_notable_1": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_1": {
+      "guard": 0.005
+    },
+    "cook_defensive_2": {
+      "guard": 0.005
+    },
+    "cook_defensive_3": {
+      "guard": 0.005
+    },
+    "cook_defensive_4": {
+      "guard": 0.005
+    },
+    "cook_defensive_5": {
+      "guard": 0.005
+    },
+    "cook_defensive_6": {
+      "guard": 0.005
+    },
+    "cook_defensive_7": {
+      "guard": 0.005
+    },
+    "cook_defensive_8": {
+      "guard": 0.005
+    },
+    "cook_defensive_crafting_1": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_2": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_3": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_4": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_5": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_6": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_7": {
+      "food_recovery": 0.15
+    },
+    "cook_defensive_crafting_keystone_1": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_keystone_1": {
+      "guard": 0.01
+    },
+    "cook_defensive_notable_1": {
+      "guard": 0.005
+    },
+    "cook_healing_1": {
+      "leech": 0.025
+    },
+    "cook_healing_2": {
+      "leech": 0.025
+    },
+    "cook_healing_3": {
+      "leech": 0.025
+    },
+    "cook_healing_4": {
+      "leech": 0.025
+    },
+    "cook_healing_notable_1": {
+      "leech": 0.025
+    },
+    "cook_lesser_1": {
+      "food_recovery": 0.15
+    },
+    "cook_lesser_2": {
+      "food_recovery": 0.15
+    },
+    "cook_lesser_3": {
+      "food_recovery": 0.15
+    },
+    "cook_lesser_4": {
+      "food_recovery": 0.15
+    },
+    "cook_lesser_5": {
+      "food_recovery": 0.15
+    },
+    "cook_lesser_6": {
+      "food_recovery": 0.15
+    },
+    "cook_mastery": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_1": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_2": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_3": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_4": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_5": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_6": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_7": {
+      "food_recovery": 0.15
+    },
+    "cook_offensive_crafting_keystone_1": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_keystone_1": {
+      "well_fed_damage": 0.03
+    },
+    "cook_subclass_1_defensive_1": {
+      "guard": 0.005
+    },
+    "cook_subclass_1_defensive_2": {
+      "guard": 0.005
+    },
+    "cook_subclass_1_defensive_3": {
+      "guard": 0.005
+    },
+    "cook_subclass_1_defensive_4": {
+      "guard": 0.005
+    },
+    "cook_subclass_1_mastery": {
+      "leech": 0.05
+    },
+    "cook_subclass_2_defensive_1": {
+      "guard": 0.005
+    },
+    "cook_subclass_2_defensive_2": {
+      "guard": 0.005
+    },
+    "cook_subclass_2_defensive_3": {
+      "guard": 0.005
+    },
+    "cook_subclass_2_defensive_4": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_1": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_2": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_3": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_4": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_5": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_6": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_7": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_8": {
+      "guard": 0.005
+    },
+    "enchanter_defensive_keystone_1": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_notable_1": {
+      "guard": 0.005
+    },
+    "enchanter_healing_1": {
+      "leech": 0.025
+    },
+    "enchanter_healing_2": {
+      "leech": 0.025
+    },
+    "enchanter_healing_3": {
+      "leech": 0.025
+    },
+    "enchanter_healing_4": {
+      "leech": 0.025
+    },
+    "enchanter_healing_notable_1": {
+      "leech": 0.025
+    },
+    "enchanter_subclass_1": {
+      "burning_damage": 0.05,
+      "ignite": 0.05
+    },
+    "enchanter_subclass_1_defensive_1": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "enchanter_subclass_1_defensive_2": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "enchanter_subclass_1_defensive_3": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "enchanter_subclass_1_defensive_4": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "enchanter_subclass_1_mastery": {
+      "ignite": 0.05,
+      "burning_damage": 0.05
+    },
+    "enchanter_subclass_1_offensive_1": {
+      "burning_damage": 0.025
+    },
+    "enchanter_subclass_1_offensive_2": {
+      "burning_damage": 0.025
+    },
+    "enchanter_subclass_1_offensive_3": {
+      "burning_damage": 0.025
+    },
+    "enchanter_subclass_1_offensive_4": {
+      "burning_damage": 0.025
+    },
+    "enchanter_subclass_2_defensive_1": {
+      "guard": 0.005
+    },
+    "enchanter_subclass_2_defensive_2": {
+      "guard": 0.005
+    },
+    "enchanter_subclass_2_defensive_3": {
+      "guard": 0.005
+    },
+    "enchanter_subclass_2_defensive_4": {
+      "guard": 0.005
+    },
+    "hunter_defensive_1": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_2": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_3": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_4": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_5": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_6": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_7": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_8": {
+      "evasion": 0.0025
+    },
+    "hunter_defensive_notable_1": {
+      "evasion": 0.0025
+    },
+    "hunter_healing_1": {
+      "leech": 0.025
+    },
+    "hunter_healing_2": {
+      "leech": 0.025
+    },
+    "hunter_healing_3": {
+      "leech": 0.025
+    },
+    "hunter_healing_4": {
+      "leech": 0.025
+    },
+    "hunter_healing_notable_1": {
+      "leech": 0.025
+    },
+    "hunter_offensive_keystone_1": {
+      "longshot": 0.12
+    },
+    "hunter_subclass_1_defensive_1": {
+      "evasion": 0.0025
+    },
+    "hunter_subclass_1_defensive_2": {
+      "evasion": 0.0025
+    },
+    "hunter_subclass_1_defensive_3": {
+      "evasion": 0.0025
+    },
+    "hunter_subclass_1_defensive_4": {
+      "evasion": 0.0025
+    },
+    "hunter_subclass_2_defensive_1": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "hunter_subclass_2_defensive_2": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "hunter_subclass_2_defensive_3": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "hunter_subclass_2_defensive_4": {
+      "evasion": 0.0025,
+      "guard": 0.005
+    },
+    "miner_subclass_2_defensive_1": {
+      "evasion": 0.0025
+    },
+    "miner_subclass_2_defensive_2": {
+      "evasion": 0.0025
+    },
+    "miner_subclass_2_defensive_3": {
+      "evasion": 0.0025
+    },
+    "miner_subclass_2_defensive_4": {
+      "evasion": 0.0025
+    }
+  }
+}

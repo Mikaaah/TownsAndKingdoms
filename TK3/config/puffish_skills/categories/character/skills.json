@@ -1,0 +1,3530 @@
+{
+  "alchemist_class": {
+    "x": 0,
+    "y": 304,
+    "definition": "alchemist_class",
+    "root": true
+  },
+  "alchemist_crafting_1": {
+    "x": 0,
+    "y": 242,
+    "definition": "alchemist_crafting_1",
+    "root": false
+  },
+  "alchemist_crafting_2": {
+    "x": 0,
+    "y": 188,
+    "definition": "alchemist_crafting_2",
+    "root": false
+  },
+  "alchemist_crafting_3": {
+    "x": 0,
+    "y": 134,
+    "definition": "alchemist_crafting_3",
+    "root": false
+  },
+  "alchemist_crafting_notable_1": {
+    "x": 0,
+    "y": 74,
+    "definition": "alchemist_crafting_notable_1",
+    "root": false
+  },
+  "alchemist_crit_1": {
+    "x": 56,
+    "y": 595,
+    "definition": "alchemist_crit_1",
+    "root": false
+  },
+  "alchemist_crit_2": {
+    "x": -56,
+    "y": 595,
+    "definition": "alchemist_crit_2",
+    "root": false
+  },
+  "alchemist_crit_notable_1": {
+    "x": 0,
+    "y": 595,
+    "definition": "alchemist_crit_notable_1",
+    "root": false
+  },
+  "alchemist_defensive_1": {
+    "x": 30,
+    "y": 356,
+    "definition": "alchemist_defensive_1",
+    "root": false
+  },
+  "alchemist_defensive_2": {
+    "x": 56,
+    "y": 401,
+    "definition": "alchemist_defensive_2",
+    "root": false
+  },
+  "alchemist_defensive_3": {
+    "x": 82,
+    "y": 446,
+    "definition": "alchemist_defensive_3",
+    "root": false
+  },
+  "alchemist_defensive_4": {
+    "x": 108,
+    "y": 491,
+    "definition": "alchemist_defensive_4",
+    "root": false
+  },
+  "alchemist_defensive_5": {
+    "x": 108,
+    "y": 543,
+    "definition": "alchemist_defensive_5",
+    "root": false
+  },
+  "alchemist_defensive_6": {
+    "x": 108,
+    "y": 595,
+    "definition": "alchemist_defensive_6",
+    "root": false
+  },
+  "alchemist_defensive_7": {
+    "x": 108,
+    "y": 647,
+    "definition": "alchemist_defensive_7",
+    "root": false
+  },
+  "alchemist_defensive_8": {
+    "x": 108,
+    "y": 699,
+    "definition": "alchemist_defensive_8",
+    "root": false
+  },
+  "alchemist_defensive_crafting_1": {
+    "x": 52,
+    "y": 274,
+    "definition": "alchemist_defensive_crafting_1",
+    "root": false
+  },
+  "alchemist_defensive_crafting_2": {
+    "x": 78,
+    "y": 319,
+    "definition": "alchemist_defensive_crafting_2",
+    "root": false
+  },
+  "alchemist_defensive_crafting_3": {
+    "x": 104,
+    "y": 364,
+    "definition": "alchemist_defensive_crafting_3",
+    "root": false
+  },
+  "alchemist_defensive_crafting_4": {
+    "x": 130,
+    "y": 409,
+    "definition": "alchemist_defensive_crafting_4",
+    "root": false
+  },
+  "alchemist_defensive_crafting_5": {
+    "x": 186,
+    "y": 506,
+    "definition": "alchemist_defensive_crafting_5",
+    "root": false
+  },
+  "alchemist_defensive_crafting_6": {
+    "x": 186,
+    "y": 558,
+    "definition": "alchemist_defensive_crafting_6",
+    "root": false
+  },
+  "alchemist_defensive_crafting_7": {
+    "x": 186,
+    "y": 610,
+    "definition": "alchemist_defensive_crafting_7",
+    "root": false
+  },
+  "alchemist_defensive_crafting_keystone_1": {
+    "x": 186,
+    "y": 678,
+    "definition": "alchemist_defensive_crafting_keystone_1",
+    "root": false
+  },
+  "alchemist_defensive_keystone_1": {
+    "x": 108,
+    "y": 767,
+    "definition": "alchemist_defensive_keystone_1",
+    "root": false
+  },
+  "alchemist_defensive_notable_1": {
+    "x": 160,
+    "y": 461,
+    "definition": "alchemist_defensive_notable_1",
+    "root": false
+  },
+  "alchemist_gateway": {
+    "x": 212,
+    "y": 369,
+    "definition": "alchemist_gateway",
+    "root": false
+  },
+  "alchemist_healing_1": {
+    "x": 152,
+    "y": 336,
+    "definition": "alchemist_healing_1",
+    "root": false
+  },
+  "alchemist_healing_2": {
+    "x": 216,
+    "y": 299,
+    "definition": "alchemist_healing_2",
+    "root": false
+  },
+  "alchemist_healing_3": {
+    "x": 166,
+    "y": 286,
+    "definition": "alchemist_healing_3",
+    "root": false
+  },
+  "alchemist_healing_4": {
+    "x": 140,
+    "y": 241,
+    "definition": "alchemist_healing_4",
+    "root": false
+  },
+  "alchemist_healing_notable_1": {
+    "x": 110,
+    "y": 189,
+    "definition": "alchemist_healing_notable_1",
+    "root": false
+  },
+  "alchemist_lesser_1": {
+    "x": 56,
+    "y": 647,
+    "definition": "alchemist_lesser_1",
+    "root": false
+  },
+  "alchemist_lesser_2": {
+    "x": -56,
+    "y": 647,
+    "definition": "alchemist_lesser_2",
+    "root": false
+  },
+  "alchemist_lesser_3": {
+    "x": 56,
+    "y": 699,
+    "definition": "alchemist_lesser_3",
+    "root": false
+  },
+  "alchemist_lesser_4": {
+    "x": -56,
+    "y": 699,
+    "definition": "alchemist_lesser_4",
+    "root": false
+  },
+  "alchemist_lesser_5": {
+    "x": 0,
+    "y": 699,
+    "definition": "alchemist_lesser_5",
+    "root": false
+  },
+  "alchemist_lesser_6": {
+    "x": 0,
+    "y": 751,
+    "definition": "alchemist_lesser_6",
+    "root": false
+  },
+  "alchemist_life_1": {
+    "x": 56,
+    "y": 491,
+    "definition": "alchemist_life_1",
+    "root": false
+  },
+  "alchemist_life_2": {
+    "x": -56,
+    "y": 491,
+    "definition": "alchemist_life_2",
+    "root": false
+  },
+  "alchemist_life_notable_1": {
+    "x": 0,
+    "y": 491,
+    "definition": "alchemist_life_notable_1",
+    "root": false
+  },
+  "alchemist_mastery": {
+    "x": 0,
+    "y": 819,
+    "definition": "alchemist_mastery",
+    "root": false
+  },
+  "alchemist_offensive_1": {
+    "x": -30,
+    "y": 356,
+    "definition": "alchemist_offensive_1",
+    "root": false
+  },
+  "alchemist_offensive_2": {
+    "x": -56,
+    "y": 401,
+    "definition": "alchemist_offensive_2",
+    "root": false
+  },
+  "alchemist_offensive_3": {
+    "x": -82,
+    "y": 446,
+    "definition": "alchemist_offensive_3",
+    "root": false
+  },
+  "alchemist_offensive_4": {
+    "x": -108,
+    "y": 491,
+    "definition": "alchemist_offensive_4",
+    "root": false
+  },
+  "alchemist_offensive_5": {
+    "x": -108,
+    "y": 543,
+    "definition": "alchemist_offensive_5",
+    "root": false
+  },
+  "alchemist_offensive_6": {
+    "x": -108,
+    "y": 595,
+    "definition": "alchemist_offensive_6",
+    "root": false
+  },
+  "alchemist_offensive_7": {
+    "x": -108,
+    "y": 647,
+    "definition": "alchemist_offensive_7",
+    "root": false
+  },
+  "alchemist_offensive_8": {
+    "x": -108,
+    "y": 699,
+    "definition": "alchemist_offensive_8",
+    "root": false
+  },
+  "alchemist_offensive_crafting_1": {
+    "x": -52,
+    "y": 274,
+    "definition": "alchemist_offensive_crafting_1",
+    "root": false
+  },
+  "alchemist_offensive_crafting_2": {
+    "x": -78,
+    "y": 319,
+    "definition": "alchemist_offensive_crafting_2",
+    "root": false
+  },
+  "alchemist_offensive_crafting_3": {
+    "x": -104,
+    "y": 364,
+    "definition": "alchemist_offensive_crafting_3",
+    "root": false
+  },
+  "alchemist_offensive_crafting_4": {
+    "x": -130,
+    "y": 409,
+    "definition": "alchemist_offensive_crafting_4",
+    "root": false
+  },
+  "alchemist_offensive_crafting_5": {
+    "x": -186,
+    "y": 506,
+    "definition": "alchemist_offensive_crafting_5",
+    "root": false
+  },
+  "alchemist_offensive_crafting_6": {
+    "x": -186,
+    "y": 558,
+    "definition": "alchemist_offensive_crafting_6",
+    "root": false
+  },
+  "alchemist_offensive_crafting_7": {
+    "x": -186,
+    "y": 610,
+    "definition": "alchemist_offensive_crafting_7",
+    "root": false
+  },
+  "alchemist_offensive_crafting_keystone_1": {
+    "x": -186,
+    "y": 678,
+    "definition": "alchemist_offensive_crafting_keystone_1",
+    "root": false
+  },
+  "alchemist_offensive_keystone_1": {
+    "x": -108,
+    "y": 767,
+    "definition": "alchemist_offensive_keystone_1",
+    "root": false
+  },
+  "alchemist_offensive_notable_1": {
+    "x": -160,
+    "y": 461,
+    "definition": "alchemist_offensive_notable_1",
+    "root": false
+  },
+  "alchemist_speed_1": {
+    "x": 56,
+    "y": 543,
+    "definition": "alchemist_speed_1",
+    "root": false
+  },
+  "alchemist_speed_2": {
+    "x": -56,
+    "y": 543,
+    "definition": "alchemist_speed_2",
+    "root": false
+  },
+  "alchemist_speed_notable_1": {
+    "x": 0,
+    "y": 543,
+    "definition": "alchemist_speed_notable_1",
+    "root": false
+  },
+  "alchemist_subclass_1": {
+    "x": -290,
+    "y": 630,
+    "definition": "alchemist_subclass_1",
+    "root": false
+  },
+  "alchemist_subclass_1_crafting_1": {
+    "x": -322,
+    "y": 686,
+    "definition": "alchemist_subclass_1_crafting_1",
+    "root": false
+  },
+  "alchemist_subclass_1_crafting_2": {
+    "x": -322,
+    "y": 738,
+    "definition": "alchemist_subclass_1_crafting_2",
+    "root": false
+  },
+  "alchemist_subclass_1_crafting_3": {
+    "x": -322,
+    "y": 790,
+    "definition": "alchemist_subclass_1_crafting_3",
+    "root": false
+  },
+  "alchemist_subclass_1_crafting_4": {
+    "x": -322,
+    "y": 842,
+    "definition": "alchemist_subclass_1_crafting_4",
+    "root": false
+  },
+  "alchemist_subclass_1_crafting_5": {
+    "x": -367,
+    "y": 764,
+    "definition": "alchemist_subclass_1_crafting_5",
+    "root": false
+  },
+  "alchemist_subclass_1_crafting_notable_1": {
+    "x": -374,
+    "y": 872,
+    "definition": "alchemist_subclass_1_crafting_notable_1",
+    "root": false
+  },
+  "alchemist_subclass_1_defensive_1": {
+    "x": -212,
+    "y": 431,
+    "definition": "alchemist_subclass_1_defensive_1",
+    "root": false
+  },
+  "alchemist_subclass_1_defensive_2": {
+    "x": -238,
+    "y": 476,
+    "definition": "alchemist_subclass_1_defensive_2",
+    "root": false
+  },
+  "alchemist_subclass_1_defensive_3": {
+    "x": -264,
+    "y": 521,
+    "definition": "alchemist_subclass_1_defensive_3",
+    "root": false
+  },
+  "alchemist_subclass_1_defensive_4": {
+    "x": -290,
+    "y": 566,
+    "definition": "alchemist_subclass_1_defensive_4",
+    "root": false
+  },
+  "alchemist_subclass_1_mastery": {
+    "x": -286,
+    "y": 904,
+    "definition": "alchemist_subclass_1_mastery",
+    "root": false
+  },
+  "alchemist_subclass_1_offensive_1": {
+    "x": -258,
+    "y": 686,
+    "definition": "alchemist_subclass_1_offensive_1",
+    "root": false
+  },
+  "alchemist_subclass_1_offensive_2": {
+    "x": -258,
+    "y": 738,
+    "definition": "alchemist_subclass_1_offensive_2",
+    "root": false
+  },
+  "alchemist_subclass_1_offensive_3": {
+    "x": -258,
+    "y": 790,
+    "definition": "alchemist_subclass_1_offensive_3",
+    "root": false
+  },
+  "alchemist_subclass_1_offensive_4": {
+    "x": -258,
+    "y": 842,
+    "definition": "alchemist_subclass_1_offensive_4",
+    "root": false
+  },
+  "alchemist_subclass_1_offensive_notable_1": {
+    "x": -206,
+    "y": 872,
+    "definition": "alchemist_subclass_1_offensive_notable_1",
+    "root": false
+  },
+  "alchemist_subclass_2": {
+    "x": 290,
+    "y": 630,
+    "definition": "alchemist_subclass_2",
+    "root": false
+  },
+  "alchemist_subclass_2_crafting_1": {
+    "x": 322,
+    "y": 686,
+    "definition": "alchemist_subclass_2_crafting_1",
+    "root": false
+  },
+  "alchemist_subclass_2_crafting_2": {
+    "x": 322,
+    "y": 738,
+    "definition": "alchemist_subclass_2_crafting_2",
+    "root": false
+  },
+  "alchemist_subclass_2_crafting_3": {
+    "x": 322,
+    "y": 790,
+    "definition": "alchemist_subclass_2_crafting_3",
+    "root": false
+  },
+  "alchemist_subclass_2_crafting_4": {
+    "x": 322,
+    "y": 842,
+    "definition": "alchemist_subclass_2_crafting_4",
+    "root": false
+  },
+  "alchemist_subclass_2_crafting_5": {
+    "x": 367,
+    "y": 764,
+    "definition": "alchemist_subclass_2_crafting_5",
+    "root": false
+  },
+  "alchemist_subclass_2_crafting_notable_1": {
+    "x": 374,
+    "y": 872,
+    "definition": "alchemist_subclass_2_crafting_notable_1",
+    "root": false
+  },
+  "alchemist_subclass_2_defensive_1": {
+    "x": 212,
+    "y": 431,
+    "definition": "alchemist_subclass_2_defensive_1",
+    "root": false
+  },
+  "alchemist_subclass_2_defensive_2": {
+    "x": 238,
+    "y": 476,
+    "definition": "alchemist_subclass_2_defensive_2",
+    "root": false
+  },
+  "alchemist_subclass_2_defensive_3": {
+    "x": 264,
+    "y": 521,
+    "definition": "alchemist_subclass_2_defensive_3",
+    "root": false
+  },
+  "alchemist_subclass_2_defensive_4": {
+    "x": 290,
+    "y": 566,
+    "definition": "alchemist_subclass_2_defensive_4",
+    "root": false
+  },
+  "alchemist_subclass_2_life_1": {
+    "x": 258,
+    "y": 686,
+    "definition": "alchemist_subclass_2_life_1",
+    "root": false
+  },
+  "alchemist_subclass_2_life_2": {
+    "x": 258,
+    "y": 738,
+    "definition": "alchemist_subclass_2_life_2",
+    "root": false
+  },
+  "alchemist_subclass_2_life_3": {
+    "x": 258,
+    "y": 790,
+    "definition": "alchemist_subclass_2_life_3",
+    "root": false
+  },
+  "alchemist_subclass_2_life_4": {
+    "x": 258,
+    "y": 842,
+    "definition": "alchemist_subclass_2_life_4",
+    "root": false
+  },
+  "alchemist_subclass_2_life_notable_1": {
+    "x": 206,
+    "y": 872,
+    "definition": "alchemist_subclass_2_life_notable_1",
+    "root": false
+  },
+  "alchemist_subclass_2_mastery": {
+    "x": 286,
+    "y": 904,
+    "definition": "alchemist_subclass_2_mastery",
+    "root": false
+  },
+  "alchemist_subclass_special": {
+    "x": -422,
+    "y": 732,
+    "definition": "alchemist_subclass_special",
+    "root": false
+  },
+  "blacksmith_class": {
+    "x": -263,
+    "y": -152,
+    "definition": "blacksmith_class",
+    "root": true
+  },
+  "blacksmith_crafting_1": {
+    "x": -210,
+    "y": -121,
+    "definition": "blacksmith_crafting_1",
+    "root": false
+  },
+  "blacksmith_crafting_2": {
+    "x": -163,
+    "y": -94,
+    "definition": "blacksmith_crafting_2",
+    "root": false
+  },
+  "blacksmith_crafting_3": {
+    "x": -116,
+    "y": -67,
+    "definition": "blacksmith_crafting_3",
+    "root": false
+  },
+  "blacksmith_crafting_notable_1": {
+    "x": -64,
+    "y": -37,
+    "definition": "blacksmith_crafting_notable_1",
+    "root": false
+  },
+  "blacksmith_crit_1": {
+    "x": -543,
+    "y": -249,
+    "definition": "blacksmith_crit_1",
+    "root": false
+  },
+  "blacksmith_crit_2": {
+    "x": -487,
+    "y": -346,
+    "definition": "blacksmith_crit_2",
+    "root": false
+  },
+  "blacksmith_crit_notable_1": {
+    "x": -515,
+    "y": -298,
+    "definition": "blacksmith_crit_notable_1",
+    "root": false
+  },
+  "blacksmith_defensive_1": {
+    "x": -323,
+    "y": -152,
+    "definition": "blacksmith_defensive_1",
+    "root": false
+  },
+  "blacksmith_defensive_2": {
+    "x": -375,
+    "y": -152,
+    "definition": "blacksmith_defensive_2",
+    "root": false
+  },
+  "blacksmith_defensive_3": {
+    "x": -427,
+    "y": -152,
+    "definition": "blacksmith_defensive_3",
+    "root": false
+  },
+  "blacksmith_defensive_4": {
+    "x": -479,
+    "y": -152,
+    "definition": "blacksmith_defensive_4",
+    "root": false
+  },
+  "blacksmith_defensive_5": {
+    "x": -524,
+    "y": -178,
+    "definition": "blacksmith_defensive_5",
+    "root": false
+  },
+  "blacksmith_defensive_6": {
+    "x": -569,
+    "y": -204,
+    "definition": "blacksmith_defensive_6",
+    "root": false
+  },
+  "blacksmith_defensive_7": {
+    "x": -614,
+    "y": -230,
+    "definition": "blacksmith_defensive_7",
+    "root": false
+  },
+  "blacksmith_defensive_8": {
+    "x": -659,
+    "y": -256,
+    "definition": "blacksmith_defensive_8",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_1": {
+    "x": -263,
+    "y": -92,
+    "definition": "blacksmith_defensive_crafting_1",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_2": {
+    "x": -315,
+    "y": -92,
+    "definition": "blacksmith_defensive_crafting_2",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_3": {
+    "x": -367,
+    "y": -92,
+    "definition": "blacksmith_defensive_crafting_3",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_4": {
+    "x": -419,
+    "y": -92,
+    "definition": "blacksmith_defensive_crafting_4",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_5": {
+    "x": -531,
+    "y": -92,
+    "definition": "blacksmith_defensive_crafting_5",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_6": {
+    "x": -576,
+    "y": -118,
+    "definition": "blacksmith_defensive_crafting_6",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_7": {
+    "x": -621,
+    "y": -144,
+    "definition": "blacksmith_defensive_crafting_7",
+    "root": false
+  },
+  "blacksmith_defensive_crafting_keystone_1": {
+    "x": -680,
+    "y": -178,
+    "definition": "blacksmith_defensive_crafting_keystone_1",
+    "root": false
+  },
+  "blacksmith_defensive_keystone_1": {
+    "x": -718,
+    "y": -290,
+    "definition": "blacksmith_defensive_keystone_1",
+    "root": false
+  },
+  "blacksmith_defensive_notable_1": {
+    "x": -479,
+    "y": -92,
+    "definition": "blacksmith_defensive_notable_1",
+    "root": false
+  },
+  "blacksmith_gateway": {
+    "x": -426,
+    "y": -1,
+    "definition": "blacksmith_gateway",
+    "root": false
+  },
+  "blacksmith_healing_1": {
+    "x": -367,
+    "y": -36,
+    "definition": "blacksmith_healing_1",
+    "root": false
+  },
+  "blacksmith_healing_2": {
+    "x": -367,
+    "y": 38,
+    "definition": "blacksmith_healing_2",
+    "root": false
+  },
+  "blacksmith_healing_3": {
+    "x": -330,
+    "y": 1,
+    "definition": "blacksmith_healing_3",
+    "root": false
+  },
+  "blacksmith_healing_4": {
+    "x": -278,
+    "y": 1,
+    "definition": "blacksmith_healing_4",
+    "root": false
+  },
+  "blacksmith_healing_notable_1": {
+    "x": -218,
+    "y": 1,
+    "definition": "blacksmith_healing_notable_1",
+    "root": false
+  },
+  "blacksmith_lesser_1": {
+    "x": -588,
+    "y": -275,
+    "definition": "blacksmith_lesser_1",
+    "root": false
+  },
+  "blacksmith_lesser_2": {
+    "x": -532,
+    "y": -372,
+    "definition": "blacksmith_lesser_2",
+    "root": false
+  },
+  "blacksmith_lesser_3": {
+    "x": -633,
+    "y": -301,
+    "definition": "blacksmith_lesser_3",
+    "root": false
+  },
+  "blacksmith_lesser_4": {
+    "x": -577,
+    "y": -398,
+    "definition": "blacksmith_lesser_4",
+    "root": false
+  },
+  "blacksmith_lesser_5": {
+    "x": -605,
+    "y": -350,
+    "definition": "blacksmith_lesser_5",
+    "root": false
+  },
+  "blacksmith_lesser_6": {
+    "x": -650,
+    "y": -376,
+    "definition": "blacksmith_lesser_6",
+    "root": false
+  },
+  "blacksmith_life_1": {
+    "x": -453,
+    "y": -197,
+    "definition": "blacksmith_life_1",
+    "root": false
+  },
+  "blacksmith_life_2": {
+    "x": -397,
+    "y": -294,
+    "definition": "blacksmith_life_2",
+    "root": false
+  },
+  "blacksmith_life_notable_1": {
+    "x": -425,
+    "y": -246,
+    "definition": "blacksmith_life_notable_1",
+    "root": false
+  },
+  "blacksmith_mastery": {
+    "x": -709,
+    "y": -410,
+    "definition": "blacksmith_mastery",
+    "root": false
+  },
+  "blacksmith_offensive_1": {
+    "x": -293,
+    "y": -204,
+    "definition": "blacksmith_offensive_1",
+    "root": false
+  },
+  "blacksmith_offensive_2": {
+    "x": -319,
+    "y": -249,
+    "definition": "blacksmith_offensive_2",
+    "root": false
+  },
+  "blacksmith_offensive_3": {
+    "x": -345,
+    "y": -294,
+    "definition": "blacksmith_offensive_3",
+    "root": false
+  },
+  "blacksmith_offensive_4": {
+    "x": -371,
+    "y": -339,
+    "definition": "blacksmith_offensive_4",
+    "root": false
+  },
+  "blacksmith_offensive_5": {
+    "x": -416,
+    "y": -365,
+    "definition": "blacksmith_offensive_5",
+    "root": false
+  },
+  "blacksmith_offensive_6": {
+    "x": -461,
+    "y": -391,
+    "definition": "blacksmith_offensive_6",
+    "root": false
+  },
+  "blacksmith_offensive_7": {
+    "x": -506,
+    "y": -417,
+    "definition": "blacksmith_offensive_7",
+    "root": false
+  },
+  "blacksmith_offensive_8": {
+    "x": -551,
+    "y": -443,
+    "definition": "blacksmith_offensive_8",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_1": {
+    "x": -211,
+    "y": -182,
+    "definition": "blacksmith_offensive_crafting_1",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_2": {
+    "x": -237,
+    "y": -227,
+    "definition": "blacksmith_offensive_crafting_2",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_3": {
+    "x": -263,
+    "y": -272,
+    "definition": "blacksmith_offensive_crafting_3",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_4": {
+    "x": -289,
+    "y": -317,
+    "definition": "blacksmith_offensive_crafting_4",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_5": {
+    "x": -345,
+    "y": -414,
+    "definition": "blacksmith_offensive_crafting_5",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_6": {
+    "x": -390,
+    "y": -440,
+    "definition": "blacksmith_offensive_crafting_6",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_7": {
+    "x": -435,
+    "y": -466,
+    "definition": "blacksmith_offensive_crafting_7",
+    "root": false
+  },
+  "blacksmith_offensive_crafting_keystone_1": {
+    "x": -494,
+    "y": -500,
+    "definition": "blacksmith_offensive_crafting_keystone_1",
+    "root": false
+  },
+  "blacksmith_offensive_keystone_1": {
+    "x": -610,
+    "y": -477,
+    "definition": "blacksmith_offensive_keystone_1",
+    "root": false
+  },
+  "blacksmith_offensive_notable_1": {
+    "x": -319,
+    "y": -369,
+    "definition": "blacksmith_offensive_notable_1",
+    "root": false
+  },
+  "blacksmith_speed_1": {
+    "x": -498,
+    "y": -223,
+    "definition": "blacksmith_speed_1",
+    "root": false
+  },
+  "blacksmith_speed_2": {
+    "x": -442,
+    "y": -320,
+    "definition": "blacksmith_speed_2",
+    "root": false
+  },
+  "blacksmith_speed_notable_1": {
+    "x": -470,
+    "y": -272,
+    "definition": "blacksmith_speed_notable_1",
+    "root": false
+  },
+  "blacksmith_subclass_1": {
+    "x": -401,
+    "y": -566,
+    "definition": "blacksmith_subclass_1",
+    "root": false
+  },
+  "blacksmith_subclass_1_crafting_1": {
+    "x": -433,
+    "y": -622,
+    "definition": "blacksmith_subclass_1_crafting_1",
+    "root": false
+  },
+  "blacksmith_subclass_1_crafting_2": {
+    "x": -478,
+    "y": -648,
+    "definition": "blacksmith_subclass_1_crafting_2",
+    "root": false
+  },
+  "blacksmith_subclass_1_crafting_3": {
+    "x": -523,
+    "y": -674,
+    "definition": "blacksmith_subclass_1_crafting_3",
+    "root": false
+  },
+  "blacksmith_subclass_1_crafting_4": {
+    "x": -568,
+    "y": -700,
+    "definition": "blacksmith_subclass_1_crafting_4",
+    "root": false
+  },
+  "blacksmith_subclass_1_crafting_5": {
+    "x": -478,
+    "y": -700,
+    "definition": "blacksmith_subclass_1_crafting_5",
+    "root": false
+  },
+  "blacksmith_subclass_1_crafting_notable_1": {
+    "x": -568,
+    "y": -760,
+    "definition": "blacksmith_subclass_1_crafting_notable_1",
+    "root": false
+  },
+  "blacksmith_subclass_1_defensive_1": {
+    "x": -267,
+    "y": -399,
+    "definition": "blacksmith_subclass_1_defensive_1",
+    "root": false
+  },
+  "blacksmith_subclass_1_defensive_2": {
+    "x": -293,
+    "y": -444,
+    "definition": "blacksmith_subclass_1_defensive_2",
+    "root": false
+  },
+  "blacksmith_subclass_1_defensive_3": {
+    "x": -319,
+    "y": -489,
+    "definition": "blacksmith_subclass_1_defensive_3",
+    "root": false
+  },
+  "blacksmith_subclass_1_defensive_4": {
+    "x": -345,
+    "y": -534,
+    "definition": "blacksmith_subclass_1_defensive_4",
+    "root": false
+  },
+  "blacksmith_subclass_1_mastery": {
+    "x": -640,
+    "y": -700,
+    "definition": "blacksmith_subclass_1_mastery",
+    "root": false
+  },
+  "blacksmith_subclass_1_offensive_1": {
+    "x": -465,
+    "y": -566,
+    "definition": "blacksmith_subclass_1_offensive_1",
+    "root": false
+  },
+  "blacksmith_subclass_1_offensive_2": {
+    "x": -510,
+    "y": -592,
+    "definition": "blacksmith_subclass_1_offensive_2",
+    "root": false
+  },
+  "blacksmith_subclass_1_offensive_3": {
+    "x": -555,
+    "y": -618,
+    "definition": "blacksmith_subclass_1_offensive_3",
+    "root": false
+  },
+  "blacksmith_subclass_1_offensive_4": {
+    "x": -600,
+    "y": -644,
+    "definition": "blacksmith_subclass_1_offensive_4",
+    "root": false
+  },
+  "blacksmith_subclass_1_offensive_notable_1": {
+    "x": -652,
+    "y": -614,
+    "definition": "blacksmith_subclass_1_offensive_notable_1",
+    "root": false
+  },
+  "blacksmith_subclass_2": {
+    "x": -691,
+    "y": -64,
+    "definition": "blacksmith_subclass_2",
+    "root": false
+  },
+  "blacksmith_subclass_2_crafting_1": {
+    "x": -755,
+    "y": -64,
+    "definition": "blacksmith_subclass_2_crafting_1",
+    "root": false
+  },
+  "blacksmith_subclass_2_crafting_2": {
+    "x": -800,
+    "y": -90,
+    "definition": "blacksmith_subclass_2_crafting_2",
+    "root": false
+  },
+  "blacksmith_subclass_2_crafting_3": {
+    "x": -845,
+    "y": -116,
+    "definition": "blacksmith_subclass_2_crafting_3",
+    "root": false
+  },
+  "blacksmith_subclass_2_crafting_4": {
+    "x": -890,
+    "y": -142,
+    "definition": "blacksmith_subclass_2_crafting_4",
+    "root": false
+  },
+  "blacksmith_subclass_2_crafting_5": {
+    "x": -845,
+    "y": -64,
+    "definition": "blacksmith_subclass_2_crafting_5",
+    "root": false
+  },
+  "blacksmith_subclass_2_crafting_notable_1": {
+    "x": -942,
+    "y": -112,
+    "definition": "blacksmith_subclass_2_crafting_notable_1",
+    "root": false
+  },
+  "blacksmith_subclass_2_defensive_1": {
+    "x": -479,
+    "y": -32,
+    "definition": "blacksmith_subclass_2_defensive_1",
+    "root": false
+  },
+  "blacksmith_subclass_2_defensive_2": {
+    "x": -531,
+    "y": -32,
+    "definition": "blacksmith_subclass_2_defensive_2",
+    "root": false
+  },
+  "blacksmith_subclass_2_defensive_3": {
+    "x": -583,
+    "y": -32,
+    "definition": "blacksmith_subclass_2_defensive_3",
+    "root": false
+  },
+  "blacksmith_subclass_2_defensive_4": {
+    "x": -635,
+    "y": -32,
+    "definition": "blacksmith_subclass_2_defensive_4",
+    "root": false
+  },
+  "blacksmith_subclass_2_life_1": {
+    "x": -723,
+    "y": -119,
+    "definition": "blacksmith_subclass_2_life_1",
+    "root": false
+  },
+  "blacksmith_subclass_2_life_2": {
+    "x": -768,
+    "y": -145,
+    "definition": "blacksmith_subclass_2_life_2",
+    "root": false
+  },
+  "blacksmith_subclass_2_life_3": {
+    "x": -813,
+    "y": -171,
+    "definition": "blacksmith_subclass_2_life_3",
+    "root": false
+  },
+  "blacksmith_subclass_2_life_4": {
+    "x": -858,
+    "y": -197,
+    "definition": "blacksmith_subclass_2_life_4",
+    "root": false
+  },
+  "blacksmith_subclass_2_life_notable_1": {
+    "x": -858,
+    "y": -257,
+    "definition": "blacksmith_subclass_2_life_notable_1",
+    "root": false
+  },
+  "blacksmith_subclass_2_mastery": {
+    "x": -926,
+    "y": -204,
+    "definition": "blacksmith_subclass_2_mastery",
+    "root": false
+  },
+  "blacksmith_subclass_special": {
+    "x": -422,
+    "y": -732,
+    "definition": "blacksmith_subclass_special",
+    "root": false
+  },
+  "cook_class": {
+    "x": 0,
+    "y": -304,
+    "definition": "cook_class",
+    "root": true
+  },
+  "cook_crafting_1": {
+    "x": 0,
+    "y": -242,
+    "definition": "cook_crafting_1",
+    "root": false
+  },
+  "cook_crafting_2": {
+    "x": 0,
+    "y": -188,
+    "definition": "cook_crafting_2",
+    "root": false
+  },
+  "cook_crafting_3": {
+    "x": 0,
+    "y": -134,
+    "definition": "cook_crafting_3",
+    "root": false
+  },
+  "cook_crafting_notable_1": {
+    "x": 0,
+    "y": -74,
+    "definition": "cook_crafting_notable_1",
+    "root": false
+  },
+  "cook_crit_1": {
+    "x": -56,
+    "y": -595,
+    "definition": "cook_crit_1",
+    "root": false
+  },
+  "cook_crit_2": {
+    "x": 56,
+    "y": -595,
+    "definition": "cook_crit_2",
+    "root": false
+  },
+  "cook_crit_notable_1": {
+    "x": 0,
+    "y": -595,
+    "definition": "cook_crit_notable_1",
+    "root": false
+  },
+  "cook_defensive_1": {
+    "x": -30,
+    "y": -356,
+    "definition": "cook_defensive_1",
+    "root": false
+  },
+  "cook_defensive_2": {
+    "x": -56,
+    "y": -401,
+    "definition": "cook_defensive_2",
+    "root": false
+  },
+  "cook_defensive_3": {
+    "x": -82,
+    "y": -446,
+    "definition": "cook_defensive_3",
+    "root": false
+  },
+  "cook_defensive_4": {
+    "x": -108,
+    "y": -491,
+    "definition": "cook_defensive_4",
+    "root": false
+  },
+  "cook_defensive_5": {
+    "x": -108,
+    "y": -543,
+    "definition": "cook_defensive_5",
+    "root": false
+  },
+  "cook_defensive_6": {
+    "x": -108,
+    "y": -595,
+    "definition": "cook_defensive_6",
+    "root": false
+  },
+  "cook_defensive_7": {
+    "x": -108,
+    "y": -647,
+    "definition": "cook_defensive_7",
+    "root": false
+  },
+  "cook_defensive_8": {
+    "x": -108,
+    "y": -699,
+    "definition": "cook_defensive_8",
+    "root": false
+  },
+  "cook_defensive_crafting_1": {
+    "x": -52,
+    "y": -274,
+    "definition": "cook_defensive_crafting_1",
+    "root": false
+  },
+  "cook_defensive_crafting_2": {
+    "x": -78,
+    "y": -319,
+    "definition": "cook_defensive_crafting_2",
+    "root": false
+  },
+  "cook_defensive_crafting_3": {
+    "x": -104,
+    "y": -364,
+    "definition": "cook_defensive_crafting_3",
+    "root": false
+  },
+  "cook_defensive_crafting_4": {
+    "x": -130,
+    "y": -409,
+    "definition": "cook_defensive_crafting_4",
+    "root": false
+  },
+  "cook_defensive_crafting_5": {
+    "x": -186,
+    "y": -506,
+    "definition": "cook_defensive_crafting_5",
+    "root": false
+  },
+  "cook_defensive_crafting_6": {
+    "x": -186,
+    "y": -558,
+    "definition": "cook_defensive_crafting_6",
+    "root": false
+  },
+  "cook_defensive_crafting_7": {
+    "x": -186,
+    "y": -610,
+    "definition": "cook_defensive_crafting_7",
+    "root": false
+  },
+  "cook_defensive_crafting_keystone_1": {
+    "x": -186,
+    "y": -678,
+    "definition": "cook_defensive_crafting_keystone_1",
+    "root": false
+  },
+  "cook_defensive_keystone_1": {
+    "x": -108,
+    "y": -767,
+    "definition": "cook_defensive_keystone_1",
+    "root": false
+  },
+  "cook_defensive_notable_1": {
+    "x": -160,
+    "y": -461,
+    "definition": "cook_defensive_notable_1",
+    "root": false
+  },
+  "cook_gateway": {
+    "x": -212,
+    "y": -369,
+    "definition": "cook_gateway",
+    "root": false
+  },
+  "cook_healing_1": {
+    "x": -152,
+    "y": -336,
+    "definition": "cook_healing_1",
+    "root": false
+  },
+  "cook_healing_2": {
+    "x": -216,
+    "y": -299,
+    "definition": "cook_healing_2",
+    "root": false
+  },
+  "cook_healing_3": {
+    "x": -166,
+    "y": -286,
+    "definition": "cook_healing_3",
+    "root": false
+  },
+  "cook_healing_4": {
+    "x": -140,
+    "y": -241,
+    "definition": "cook_healing_4",
+    "root": false
+  },
+  "cook_healing_notable_1": {
+    "x": -110,
+    "y": -189,
+    "definition": "cook_healing_notable_1",
+    "root": false
+  },
+  "cook_lesser_1": {
+    "x": -56,
+    "y": -647,
+    "definition": "cook_lesser_1",
+    "root": false
+  },
+  "cook_lesser_2": {
+    "x": 56,
+    "y": -647,
+    "definition": "cook_lesser_2",
+    "root": false
+  },
+  "cook_lesser_3": {
+    "x": -56,
+    "y": -699,
+    "definition": "cook_lesser_3",
+    "root": false
+  },
+  "cook_lesser_4": {
+    "x": 56,
+    "y": -699,
+    "definition": "cook_lesser_4",
+    "root": false
+  },
+  "cook_lesser_5": {
+    "x": 0,
+    "y": -699,
+    "definition": "cook_lesser_5",
+    "root": false
+  },
+  "cook_lesser_6": {
+    "x": 0,
+    "y": -751,
+    "definition": "cook_lesser_6",
+    "root": false
+  },
+  "cook_life_1": {
+    "x": -56,
+    "y": -491,
+    "definition": "cook_life_1",
+    "root": false
+  },
+  "cook_life_2": {
+    "x": 56,
+    "y": -491,
+    "definition": "cook_life_2",
+    "root": false
+  },
+  "cook_life_notable_1": {
+    "x": 0,
+    "y": -491,
+    "definition": "cook_life_notable_1",
+    "root": false
+  },
+  "cook_mastery": {
+    "x": 0,
+    "y": -819,
+    "definition": "cook_mastery",
+    "root": false
+  },
+  "cook_offensive_1": {
+    "x": 30,
+    "y": -356,
+    "definition": "cook_offensive_1",
+    "root": false
+  },
+  "cook_offensive_2": {
+    "x": 56,
+    "y": -401,
+    "definition": "cook_offensive_2",
+    "root": false
+  },
+  "cook_offensive_3": {
+    "x": 82,
+    "y": -446,
+    "definition": "cook_offensive_3",
+    "root": false
+  },
+  "cook_offensive_4": {
+    "x": 108,
+    "y": -491,
+    "definition": "cook_offensive_4",
+    "root": false
+  },
+  "cook_offensive_5": {
+    "x": 108,
+    "y": -543,
+    "definition": "cook_offensive_5",
+    "root": false
+  },
+  "cook_offensive_6": {
+    "x": 108,
+    "y": -595,
+    "definition": "cook_offensive_6",
+    "root": false
+  },
+  "cook_offensive_7": {
+    "x": 108,
+    "y": -647,
+    "definition": "cook_offensive_7",
+    "root": false
+  },
+  "cook_offensive_8": {
+    "x": 108,
+    "y": -699,
+    "definition": "cook_offensive_8",
+    "root": false
+  },
+  "cook_offensive_crafting_1": {
+    "x": 52,
+    "y": -274,
+    "definition": "cook_offensive_crafting_1",
+    "root": false
+  },
+  "cook_offensive_crafting_2": {
+    "x": 78,
+    "y": -319,
+    "definition": "cook_offensive_crafting_2",
+    "root": false
+  },
+  "cook_offensive_crafting_3": {
+    "x": 104,
+    "y": -364,
+    "definition": "cook_offensive_crafting_3",
+    "root": false
+  },
+  "cook_offensive_crafting_4": {
+    "x": 130,
+    "y": -409,
+    "definition": "cook_offensive_crafting_4",
+    "root": false
+  },
+  "cook_offensive_crafting_5": {
+    "x": 186,
+    "y": -506,
+    "definition": "cook_offensive_crafting_5",
+    "root": false
+  },
+  "cook_offensive_crafting_6": {
+    "x": 186,
+    "y": -558,
+    "definition": "cook_offensive_crafting_6",
+    "root": false
+  },
+  "cook_offensive_crafting_7": {
+    "x": 186,
+    "y": -610,
+    "definition": "cook_offensive_crafting_7",
+    "root": false
+  },
+  "cook_offensive_crafting_keystone_1": {
+    "x": 186,
+    "y": -678,
+    "definition": "cook_offensive_crafting_keystone_1",
+    "root": false
+  },
+  "cook_offensive_keystone_1": {
+    "x": 108,
+    "y": -767,
+    "definition": "cook_offensive_keystone_1",
+    "root": false
+  },
+  "cook_offensive_notable_1": {
+    "x": 160,
+    "y": -461,
+    "definition": "cook_offensive_notable_1",
+    "root": false
+  },
+  "cook_speed_1": {
+    "x": -56,
+    "y": -543,
+    "definition": "cook_speed_1",
+    "root": false
+  },
+  "cook_speed_2": {
+    "x": 56,
+    "y": -543,
+    "definition": "cook_speed_2",
+    "root": false
+  },
+  "cook_speed_notable_1": {
+    "x": 0,
+    "y": -543,
+    "definition": "cook_speed_notable_1",
+    "root": false
+  },
+  "cook_subclass_1": {
+    "x": 290,
+    "y": -630,
+    "definition": "cook_subclass_1",
+    "root": false
+  },
+  "cook_subclass_1_crafting_1": {
+    "x": 322,
+    "y": -686,
+    "definition": "cook_subclass_1_crafting_1",
+    "root": false
+  },
+  "cook_subclass_1_crafting_2": {
+    "x": 322,
+    "y": -738,
+    "definition": "cook_subclass_1_crafting_2",
+    "root": false
+  },
+  "cook_subclass_1_crafting_3": {
+    "x": 322,
+    "y": -790,
+    "definition": "cook_subclass_1_crafting_3",
+    "root": false
+  },
+  "cook_subclass_1_crafting_4": {
+    "x": 322,
+    "y": -842,
+    "definition": "cook_subclass_1_crafting_4",
+    "root": false
+  },
+  "cook_subclass_1_crafting_5": {
+    "x": 367,
+    "y": -764,
+    "definition": "cook_subclass_1_crafting_5",
+    "root": false
+  },
+  "cook_subclass_1_crafting_notable_1": {
+    "x": 374,
+    "y": -872,
+    "definition": "cook_subclass_1_crafting_notable_1",
+    "root": false
+  },
+  "cook_subclass_1_defensive_1": {
+    "x": 212,
+    "y": -431,
+    "definition": "cook_subclass_1_defensive_1",
+    "root": false
+  },
+  "cook_subclass_1_defensive_2": {
+    "x": 238,
+    "y": -476,
+    "definition": "cook_subclass_1_defensive_2",
+    "root": false
+  },
+  "cook_subclass_1_defensive_3": {
+    "x": 264,
+    "y": -521,
+    "definition": "cook_subclass_1_defensive_3",
+    "root": false
+  },
+  "cook_subclass_1_defensive_4": {
+    "x": 290,
+    "y": -566,
+    "definition": "cook_subclass_1_defensive_4",
+    "root": false
+  },
+  "cook_subclass_1_mastery": {
+    "x": 286,
+    "y": -904,
+    "definition": "cook_subclass_1_mastery",
+    "root": false
+  },
+  "cook_subclass_1_offensive_1": {
+    "x": 258,
+    "y": -686,
+    "definition": "cook_subclass_1_offensive_1",
+    "root": false
+  },
+  "cook_subclass_1_offensive_2": {
+    "x": 258,
+    "y": -738,
+    "definition": "cook_subclass_1_offensive_2",
+    "root": false
+  },
+  "cook_subclass_1_offensive_3": {
+    "x": 258,
+    "y": -790,
+    "definition": "cook_subclass_1_offensive_3",
+    "root": false
+  },
+  "cook_subclass_1_offensive_4": {
+    "x": 258,
+    "y": -842,
+    "definition": "cook_subclass_1_offensive_4",
+    "root": false
+  },
+  "cook_subclass_1_offensive_notable_1": {
+    "x": 206,
+    "y": -872,
+    "definition": "cook_subclass_1_offensive_notable_1",
+    "root": false
+  },
+  "cook_subclass_2": {
+    "x": -290,
+    "y": -630,
+    "definition": "cook_subclass_2",
+    "root": false
+  },
+  "cook_subclass_2_crafting_1": {
+    "x": -322,
+    "y": -686,
+    "definition": "cook_subclass_2_crafting_1",
+    "root": false
+  },
+  "cook_subclass_2_crafting_2": {
+    "x": -322,
+    "y": -738,
+    "definition": "cook_subclass_2_crafting_2",
+    "root": false
+  },
+  "cook_subclass_2_crafting_3": {
+    "x": -322,
+    "y": -790,
+    "definition": "cook_subclass_2_crafting_3",
+    "root": false
+  },
+  "cook_subclass_2_crafting_4": {
+    "x": -322,
+    "y": -842,
+    "definition": "cook_subclass_2_crafting_4",
+    "root": false
+  },
+  "cook_subclass_2_crafting_5": {
+    "x": -367,
+    "y": -764,
+    "definition": "cook_subclass_2_crafting_5",
+    "root": false
+  },
+  "cook_subclass_2_crafting_notable_1": {
+    "x": -374,
+    "y": -872,
+    "definition": "cook_subclass_2_crafting_notable_1",
+    "root": false
+  },
+  "cook_subclass_2_defensive_1": {
+    "x": -212,
+    "y": -431,
+    "definition": "cook_subclass_2_defensive_1",
+    "root": false
+  },
+  "cook_subclass_2_defensive_2": {
+    "x": -238,
+    "y": -476,
+    "definition": "cook_subclass_2_defensive_2",
+    "root": false
+  },
+  "cook_subclass_2_defensive_3": {
+    "x": -264,
+    "y": -521,
+    "definition": "cook_subclass_2_defensive_3",
+    "root": false
+  },
+  "cook_subclass_2_defensive_4": {
+    "x": -290,
+    "y": -566,
+    "definition": "cook_subclass_2_defensive_4",
+    "root": false
+  },
+  "cook_subclass_2_life_1": {
+    "x": -258,
+    "y": -686,
+    "definition": "cook_subclass_2_life_1",
+    "root": false
+  },
+  "cook_subclass_2_life_2": {
+    "x": -258,
+    "y": -738,
+    "definition": "cook_subclass_2_life_2",
+    "root": false
+  },
+  "cook_subclass_2_life_3": {
+    "x": -258,
+    "y": -790,
+    "definition": "cook_subclass_2_life_3",
+    "root": false
+  },
+  "cook_subclass_2_life_4": {
+    "x": -258,
+    "y": -842,
+    "definition": "cook_subclass_2_life_4",
+    "root": false
+  },
+  "cook_subclass_2_life_notable_1": {
+    "x": -206,
+    "y": -872,
+    "definition": "cook_subclass_2_life_notable_1",
+    "root": false
+  },
+  "cook_subclass_2_mastery": {
+    "x": -286,
+    "y": -904,
+    "definition": "cook_subclass_2_mastery",
+    "root": false
+  },
+  "cook_subclass_special": {
+    "x": 422,
+    "y": -732,
+    "definition": "cook_subclass_special",
+    "root": false
+  },
+  "enchanter_class": {
+    "x": 263,
+    "y": -152,
+    "definition": "enchanter_class",
+    "root": true
+  },
+  "enchanter_crafting_1": {
+    "x": 210,
+    "y": -121,
+    "definition": "enchanter_crafting_1",
+    "root": false
+  },
+  "enchanter_crafting_2": {
+    "x": 163,
+    "y": -94,
+    "definition": "enchanter_crafting_2",
+    "root": false
+  },
+  "enchanter_crafting_3": {
+    "x": 116,
+    "y": -67,
+    "definition": "enchanter_crafting_3",
+    "root": false
+  },
+  "enchanter_crafting_notable_1": {
+    "x": 64,
+    "y": -37,
+    "definition": "enchanter_crafting_notable_1",
+    "root": false
+  },
+  "enchanter_crit_1": {
+    "x": 487,
+    "y": -346,
+    "definition": "enchanter_crit_1",
+    "root": false
+  },
+  "enchanter_crit_2": {
+    "x": 543,
+    "y": -249,
+    "definition": "enchanter_crit_2",
+    "root": false
+  },
+  "enchanter_crit_notable_1": {
+    "x": 515,
+    "y": -298,
+    "definition": "enchanter_crit_notable_1",
+    "root": false
+  },
+  "enchanter_defensive_1": {
+    "x": 293,
+    "y": -204,
+    "definition": "enchanter_defensive_1",
+    "root": false
+  },
+  "enchanter_defensive_2": {
+    "x": 319,
+    "y": -249,
+    "definition": "enchanter_defensive_2",
+    "root": false
+  },
+  "enchanter_defensive_3": {
+    "x": 345,
+    "y": -294,
+    "definition": "enchanter_defensive_3",
+    "root": false
+  },
+  "enchanter_defensive_4": {
+    "x": 371,
+    "y": -339,
+    "definition": "enchanter_defensive_4",
+    "root": false
+  },
+  "enchanter_defensive_5": {
+    "x": 416,
+    "y": -365,
+    "definition": "enchanter_defensive_5",
+    "root": false
+  },
+  "enchanter_defensive_6": {
+    "x": 461,
+    "y": -391,
+    "definition": "enchanter_defensive_6",
+    "root": false
+  },
+  "enchanter_defensive_7": {
+    "x": 506,
+    "y": -417,
+    "definition": "enchanter_defensive_7",
+    "root": false
+  },
+  "enchanter_defensive_8": {
+    "x": 551,
+    "y": -443,
+    "definition": "enchanter_defensive_8",
+    "root": false
+  },
+  "enchanter_defensive_crafting_1": {
+    "x": 211,
+    "y": -182,
+    "definition": "enchanter_defensive_crafting_1",
+    "root": false
+  },
+  "enchanter_defensive_crafting_2": {
+    "x": 237,
+    "y": -227,
+    "definition": "enchanter_defensive_crafting_2",
+    "root": false
+  },
+  "enchanter_defensive_crafting_3": {
+    "x": 263,
+    "y": -272,
+    "definition": "enchanter_defensive_crafting_3",
+    "root": false
+  },
+  "enchanter_defensive_crafting_4": {
+    "x": 289,
+    "y": -317,
+    "definition": "enchanter_defensive_crafting_4",
+    "root": false
+  },
+  "enchanter_defensive_crafting_5": {
+    "x": 345,
+    "y": -414,
+    "definition": "enchanter_defensive_crafting_5",
+    "root": false
+  },
+  "enchanter_defensive_crafting_6": {
+    "x": 390,
+    "y": -440,
+    "definition": "enchanter_defensive_crafting_6",
+    "root": false
+  },
+  "enchanter_defensive_crafting_7": {
+    "x": 435,
+    "y": -466,
+    "definition": "enchanter_defensive_crafting_7",
+    "root": false
+  },
+  "enchanter_defensive_crafting_keystone_1": {
+    "x": 494,
+    "y": -500,
+    "definition": "enchanter_defensive_crafting_keystone_1",
+    "root": false
+  },
+  "enchanter_defensive_keystone_1": {
+    "x": 610,
+    "y": -477,
+    "definition": "enchanter_defensive_keystone_1",
+    "root": false
+  },
+  "enchanter_defensive_notable_1": {
+    "x": 319,
+    "y": -369,
+    "definition": "enchanter_defensive_notable_1",
+    "root": false
+  },
+  "enchanter_gateway": {
+    "x": 214,
+    "y": -368,
+    "definition": "enchanter_gateway",
+    "root": false
+  },
+  "enchanter_healing_1": {
+    "x": 215,
+    "y": -300,
+    "definition": "enchanter_healing_1",
+    "root": false
+  },
+  "enchanter_healing_2": {
+    "x": 151,
+    "y": -337,
+    "definition": "enchanter_healing_2",
+    "root": false
+  },
+  "enchanter_healing_3": {
+    "x": 165,
+    "y": -287,
+    "definition": "enchanter_healing_3",
+    "root": false
+  },
+  "enchanter_healing_4": {
+    "x": 139,
+    "y": -242,
+    "definition": "enchanter_healing_4",
+    "root": false
+  },
+  "enchanter_healing_notable_1": {
+    "x": 109,
+    "y": -190,
+    "definition": "enchanter_healing_notable_1",
+    "root": false
+  },
+  "enchanter_lesser_1": {
+    "x": 532,
+    "y": -372,
+    "definition": "enchanter_lesser_1",
+    "root": false
+  },
+  "enchanter_lesser_2": {
+    "x": 588,
+    "y": -275,
+    "definition": "enchanter_lesser_2",
+    "root": false
+  },
+  "enchanter_lesser_3": {
+    "x": 577,
+    "y": -398,
+    "definition": "enchanter_lesser_3",
+    "root": false
+  },
+  "enchanter_lesser_4": {
+    "x": 633,
+    "y": -301,
+    "definition": "enchanter_lesser_4",
+    "root": false
+  },
+  "enchanter_lesser_5": {
+    "x": 605,
+    "y": -350,
+    "definition": "enchanter_lesser_5",
+    "root": false
+  },
+  "enchanter_lesser_6": {
+    "x": 650,
+    "y": -376,
+    "definition": "enchanter_lesser_6",
+    "root": false
+  },
+  "enchanter_life_1": {
+    "x": 397,
+    "y": -294,
+    "definition": "enchanter_life_1",
+    "root": false
+  },
+  "enchanter_life_2": {
+    "x": 453,
+    "y": -197,
+    "definition": "enchanter_life_2",
+    "root": false
+  },
+  "enchanter_life_notable_1": {
+    "x": 425,
+    "y": -246,
+    "definition": "enchanter_life_notable_1",
+    "root": false
+  },
+  "enchanter_mastery": {
+    "x": 709,
+    "y": -410,
+    "definition": "enchanter_mastery",
+    "root": false
+  },
+  "enchanter_offensive_1": {
+    "x": 323,
+    "y": -152,
+    "definition": "enchanter_offensive_1",
+    "root": false
+  },
+  "enchanter_offensive_2": {
+    "x": 375,
+    "y": -152,
+    "definition": "enchanter_offensive_2",
+    "root": false
+  },
+  "enchanter_offensive_3": {
+    "x": 427,
+    "y": -152,
+    "definition": "enchanter_offensive_3",
+    "root": false
+  },
+  "enchanter_offensive_4": {
+    "x": 479,
+    "y": -152,
+    "definition": "enchanter_offensive_4",
+    "root": false
+  },
+  "enchanter_offensive_5": {
+    "x": 524,
+    "y": -178,
+    "definition": "enchanter_offensive_5",
+    "root": false
+  },
+  "enchanter_offensive_6": {
+    "x": 569,
+    "y": -204,
+    "definition": "enchanter_offensive_6",
+    "root": false
+  },
+  "enchanter_offensive_7": {
+    "x": 614,
+    "y": -230,
+    "definition": "enchanter_offensive_7",
+    "root": false
+  },
+  "enchanter_offensive_8": {
+    "x": 659,
+    "y": -256,
+    "definition": "enchanter_offensive_8",
+    "root": false
+  },
+  "enchanter_offensive_crafting_1": {
+    "x": 263,
+    "y": -92,
+    "definition": "enchanter_offensive_crafting_1",
+    "root": false
+  },
+  "enchanter_offensive_crafting_2": {
+    "x": 315,
+    "y": -92,
+    "definition": "enchanter_offensive_crafting_2",
+    "root": false
+  },
+  "enchanter_offensive_crafting_3": {
+    "x": 367,
+    "y": -92,
+    "definition": "enchanter_offensive_crafting_3",
+    "root": false
+  },
+  "enchanter_offensive_crafting_4": {
+    "x": 419,
+    "y": -92,
+    "definition": "enchanter_offensive_crafting_4",
+    "root": false
+  },
+  "enchanter_offensive_crafting_5": {
+    "x": 531,
+    "y": -92,
+    "definition": "enchanter_offensive_crafting_5",
+    "root": false
+  },
+  "enchanter_offensive_crafting_6": {
+    "x": 576,
+    "y": -118,
+    "definition": "enchanter_offensive_crafting_6",
+    "root": false
+  },
+  "enchanter_offensive_crafting_7": {
+    "x": 621,
+    "y": -144,
+    "definition": "enchanter_offensive_crafting_7",
+    "root": false
+  },
+  "enchanter_offensive_crafting_keystone_1": {
+    "x": 680,
+    "y": -178,
+    "definition": "enchanter_offensive_crafting_keystone_1",
+    "root": false
+  },
+  "enchanter_offensive_keystone_1": {
+    "x": 718,
+    "y": -290,
+    "definition": "enchanter_offensive_keystone_1",
+    "root": false
+  },
+  "enchanter_offensive_notable_1": {
+    "x": 479,
+    "y": -92,
+    "definition": "enchanter_offensive_notable_1",
+    "root": false
+  },
+  "enchanter_speed_1": {
+    "x": 442,
+    "y": -320,
+    "definition": "enchanter_speed_1",
+    "root": false
+  },
+  "enchanter_speed_2": {
+    "x": 498,
+    "y": -223,
+    "definition": "enchanter_speed_2",
+    "root": false
+  },
+  "enchanter_speed_notable_1": {
+    "x": 470,
+    "y": -272,
+    "definition": "enchanter_speed_notable_1",
+    "root": false
+  },
+  "enchanter_subclass_1": {
+    "x": 691,
+    "y": -64,
+    "definition": "enchanter_subclass_1",
+    "root": false
+  },
+  "enchanter_subclass_1_crafting_1": {
+    "x": 755,
+    "y": -64,
+    "definition": "enchanter_subclass_1_crafting_1",
+    "root": false
+  },
+  "enchanter_subclass_1_crafting_2": {
+    "x": 800,
+    "y": -90,
+    "definition": "enchanter_subclass_1_crafting_2",
+    "root": false
+  },
+  "enchanter_subclass_1_crafting_3": {
+    "x": 845,
+    "y": -116,
+    "definition": "enchanter_subclass_1_crafting_3",
+    "root": false
+  },
+  "enchanter_subclass_1_crafting_4": {
+    "x": 890,
+    "y": -142,
+    "definition": "enchanter_subclass_1_crafting_4",
+    "root": false
+  },
+  "enchanter_subclass_1_crafting_5": {
+    "x": 845,
+    "y": -64,
+    "definition": "enchanter_subclass_1_crafting_5",
+    "root": false
+  },
+  "enchanter_subclass_1_crafting_notable_1": {
+    "x": 942,
+    "y": -112,
+    "definition": "enchanter_subclass_1_crafting_notable_1",
+    "root": false
+  },
+  "enchanter_subclass_1_defensive_1": {
+    "x": 479,
+    "y": -32,
+    "definition": "enchanter_subclass_1_defensive_1",
+    "root": false
+  },
+  "enchanter_subclass_1_defensive_2": {
+    "x": 531,
+    "y": -32,
+    "definition": "enchanter_subclass_1_defensive_2",
+    "root": false
+  },
+  "enchanter_subclass_1_defensive_3": {
+    "x": 583,
+    "y": -32,
+    "definition": "enchanter_subclass_1_defensive_3",
+    "root": false
+  },
+  "enchanter_subclass_1_defensive_4": {
+    "x": 635,
+    "y": -32,
+    "definition": "enchanter_subclass_1_defensive_4",
+    "root": false
+  },
+  "enchanter_subclass_1_mastery": {
+    "x": 926,
+    "y": -204,
+    "definition": "enchanter_subclass_1_mastery",
+    "root": false
+  },
+  "enchanter_subclass_1_offensive_1": {
+    "x": 723,
+    "y": -119,
+    "definition": "enchanter_subclass_1_offensive_1",
+    "root": false
+  },
+  "enchanter_subclass_1_offensive_2": {
+    "x": 768,
+    "y": -145,
+    "definition": "enchanter_subclass_1_offensive_2",
+    "root": false
+  },
+  "enchanter_subclass_1_offensive_3": {
+    "x": 813,
+    "y": -171,
+    "definition": "enchanter_subclass_1_offensive_3",
+    "root": false
+  },
+  "enchanter_subclass_1_offensive_4": {
+    "x": 858,
+    "y": -197,
+    "definition": "enchanter_subclass_1_offensive_4",
+    "root": false
+  },
+  "enchanter_subclass_1_offensive_notable_1": {
+    "x": 858,
+    "y": -257,
+    "definition": "enchanter_subclass_1_offensive_notable_1",
+    "root": false
+  },
+  "enchanter_subclass_2": {
+    "x": 401,
+    "y": -566,
+    "definition": "enchanter_subclass_2",
+    "root": false
+  },
+  "enchanter_subclass_2_crafting_1": {
+    "x": 433,
+    "y": -622,
+    "definition": "enchanter_subclass_2_crafting_1",
+    "root": false
+  },
+  "enchanter_subclass_2_crafting_2": {
+    "x": 478,
+    "y": -648,
+    "definition": "enchanter_subclass_2_crafting_2",
+    "root": false
+  },
+  "enchanter_subclass_2_crafting_3": {
+    "x": 523,
+    "y": -674,
+    "definition": "enchanter_subclass_2_crafting_3",
+    "root": false
+  },
+  "enchanter_subclass_2_crafting_4": {
+    "x": 568,
+    "y": -700,
+    "definition": "enchanter_subclass_2_crafting_4",
+    "root": false
+  },
+  "enchanter_subclass_2_crafting_5": {
+    "x": 478,
+    "y": -700,
+    "definition": "enchanter_subclass_2_crafting_5",
+    "root": false
+  },
+  "enchanter_subclass_2_crafting_notable_1": {
+    "x": 568,
+    "y": -760,
+    "definition": "enchanter_subclass_2_crafting_notable_1",
+    "root": false
+  },
+  "enchanter_subclass_2_defensive_1": {
+    "x": 267,
+    "y": -399,
+    "definition": "enchanter_subclass_2_defensive_1",
+    "root": false
+  },
+  "enchanter_subclass_2_defensive_2": {
+    "x": 293,
+    "y": -444,
+    "definition": "enchanter_subclass_2_defensive_2",
+    "root": false
+  },
+  "enchanter_subclass_2_defensive_3": {
+    "x": 319,
+    "y": -489,
+    "definition": "enchanter_subclass_2_defensive_3",
+    "root": false
+  },
+  "enchanter_subclass_2_defensive_4": {
+    "x": 345,
+    "y": -534,
+    "definition": "enchanter_subclass_2_defensive_4",
+    "root": false
+  },
+  "enchanter_subclass_2_life_1": {
+    "x": 465,
+    "y": -566,
+    "definition": "enchanter_subclass_2_life_1",
+    "root": false
+  },
+  "enchanter_subclass_2_life_2": {
+    "x": 510,
+    "y": -592,
+    "definition": "enchanter_subclass_2_life_2",
+    "root": false
+  },
+  "enchanter_subclass_2_life_3": {
+    "x": 555,
+    "y": -618,
+    "definition": "enchanter_subclass_2_life_3",
+    "root": false
+  },
+  "enchanter_subclass_2_life_4": {
+    "x": 600,
+    "y": -644,
+    "definition": "enchanter_subclass_2_life_4",
+    "root": false
+  },
+  "enchanter_subclass_2_life_notable_1": {
+    "x": 652,
+    "y": -614,
+    "definition": "enchanter_subclass_2_life_notable_1",
+    "root": false
+  },
+  "enchanter_subclass_2_mastery": {
+    "x": 640,
+    "y": -700,
+    "definition": "enchanter_subclass_2_mastery",
+    "root": false
+  },
+  "enchanter_subclass_special": {
+    "x": 845,
+    "y": 0,
+    "definition": "enchanter_subclass_special",
+    "root": false
+  },
+  "hunter_class": {
+    "x": 263,
+    "y": 152,
+    "definition": "hunter_class",
+    "root": true
+  },
+  "hunter_crafting_1": {
+    "x": 210,
+    "y": 121,
+    "definition": "hunter_crafting_1",
+    "root": false
+  },
+  "hunter_crafting_2": {
+    "x": 163,
+    "y": 94,
+    "definition": "hunter_crafting_2",
+    "root": false
+  },
+  "hunter_crafting_3": {
+    "x": 116,
+    "y": 67,
+    "definition": "hunter_crafting_3",
+    "root": false
+  },
+  "hunter_crafting_notable_1": {
+    "x": 64,
+    "y": 37,
+    "definition": "hunter_crafting_notable_1",
+    "root": false
+  },
+  "hunter_crit_1": {
+    "x": 543,
+    "y": 249,
+    "definition": "hunter_crit_1",
+    "root": false
+  },
+  "hunter_crit_2": {
+    "x": 487,
+    "y": 346,
+    "definition": "hunter_crit_2",
+    "root": false
+  },
+  "hunter_crit_notable_1": {
+    "x": 515,
+    "y": 298,
+    "definition": "hunter_crit_notable_1",
+    "root": false
+  },
+  "hunter_defensive_1": {
+    "x": 323,
+    "y": 152,
+    "definition": "hunter_defensive_1",
+    "root": false
+  },
+  "hunter_defensive_2": {
+    "x": 375,
+    "y": 152,
+    "definition": "hunter_defensive_2",
+    "root": false
+  },
+  "hunter_defensive_3": {
+    "x": 427,
+    "y": 152,
+    "definition": "hunter_defensive_3",
+    "root": false
+  },
+  "hunter_defensive_4": {
+    "x": 479,
+    "y": 152,
+    "definition": "hunter_defensive_4",
+    "root": false
+  },
+  "hunter_defensive_5": {
+    "x": 524,
+    "y": 178,
+    "definition": "hunter_defensive_5",
+    "root": false
+  },
+  "hunter_defensive_6": {
+    "x": 569,
+    "y": 204,
+    "definition": "hunter_defensive_6",
+    "root": false
+  },
+  "hunter_defensive_7": {
+    "x": 614,
+    "y": 230,
+    "definition": "hunter_defensive_7",
+    "root": false
+  },
+  "hunter_defensive_8": {
+    "x": 659,
+    "y": 256,
+    "definition": "hunter_defensive_8",
+    "root": false
+  },
+  "hunter_defensive_crafting_1": {
+    "x": 263,
+    "y": 92,
+    "definition": "hunter_defensive_crafting_1",
+    "root": false
+  },
+  "hunter_defensive_crafting_2": {
+    "x": 315,
+    "y": 92,
+    "definition": "hunter_defensive_crafting_2",
+    "root": false
+  },
+  "hunter_defensive_crafting_3": {
+    "x": 367,
+    "y": 92,
+    "definition": "hunter_defensive_crafting_3",
+    "root": false
+  },
+  "hunter_defensive_crafting_4": {
+    "x": 419,
+    "y": 92,
+    "definition": "hunter_defensive_crafting_4",
+    "root": false
+  },
+  "hunter_defensive_crafting_5": {
+    "x": 531,
+    "y": 92,
+    "definition": "hunter_defensive_crafting_5",
+    "root": false
+  },
+  "hunter_defensive_crafting_6": {
+    "x": 576,
+    "y": 118,
+    "definition": "hunter_defensive_crafting_6",
+    "root": false
+  },
+  "hunter_defensive_crafting_7": {
+    "x": 621,
+    "y": 144,
+    "definition": "hunter_defensive_crafting_7",
+    "root": false
+  },
+  "hunter_defensive_crafting_keystone_1": {
+    "x": 680,
+    "y": 178,
+    "definition": "hunter_defensive_crafting_keystone_1",
+    "root": false
+  },
+  "hunter_defensive_keystone_1": {
+    "x": 718,
+    "y": 290,
+    "definition": "hunter_defensive_keystone_1",
+    "root": false
+  },
+  "hunter_defensive_notable_1": {
+    "x": 479,
+    "y": 92,
+    "definition": "hunter_defensive_notable_1",
+    "root": false
+  },
+  "hunter_gateway": {
+    "x": 426,
+    "y": 1,
+    "definition": "hunter_gateway",
+    "root": false
+  },
+  "hunter_healing_1": {
+    "x": 367,
+    "y": 36,
+    "definition": "hunter_healing_1",
+    "root": false
+  },
+  "hunter_healing_2": {
+    "x": 367,
+    "y": -38,
+    "definition": "hunter_healing_2",
+    "root": false
+  },
+  "hunter_healing_3": {
+    "x": 330,
+    "y": -1,
+    "definition": "hunter_healing_3",
+    "root": false
+  },
+  "hunter_healing_4": {
+    "x": 278,
+    "y": -1,
+    "definition": "hunter_healing_4",
+    "root": false
+  },
+  "hunter_healing_notable_1": {
+    "x": 218,
+    "y": -1,
+    "definition": "hunter_healing_notable_1",
+    "root": false
+  },
+  "hunter_lesser_1": {
+    "x": 588,
+    "y": 275,
+    "definition": "hunter_lesser_1",
+    "root": false
+  },
+  "hunter_lesser_2": {
+    "x": 532,
+    "y": 372,
+    "definition": "hunter_lesser_2",
+    "root": false
+  },
+  "hunter_lesser_3": {
+    "x": 633,
+    "y": 301,
+    "definition": "hunter_lesser_3",
+    "root": false
+  },
+  "hunter_lesser_4": {
+    "x": 577,
+    "y": 398,
+    "definition": "hunter_lesser_4",
+    "root": false
+  },
+  "hunter_lesser_5": {
+    "x": 605,
+    "y": 350,
+    "definition": "hunter_lesser_5",
+    "root": false
+  },
+  "hunter_lesser_6": {
+    "x": 650,
+    "y": 376,
+    "definition": "hunter_lesser_6",
+    "root": false
+  },
+  "hunter_life_1": {
+    "x": 453,
+    "y": 197,
+    "definition": "hunter_life_1",
+    "root": false
+  },
+  "hunter_life_2": {
+    "x": 397,
+    "y": 294,
+    "definition": "hunter_life_2",
+    "root": false
+  },
+  "hunter_life_notable_1": {
+    "x": 425,
+    "y": 246,
+    "definition": "hunter_life_notable_1",
+    "root": false
+  },
+  "hunter_mastery": {
+    "x": 709,
+    "y": 410,
+    "definition": "hunter_mastery",
+    "root": false
+  },
+  "hunter_offensive_1": {
+    "x": 293,
+    "y": 204,
+    "definition": "hunter_offensive_1",
+    "root": false
+  },
+  "hunter_offensive_2": {
+    "x": 319,
+    "y": 249,
+    "definition": "hunter_offensive_2",
+    "root": false
+  },
+  "hunter_offensive_3": {
+    "x": 345,
+    "y": 294,
+    "definition": "hunter_offensive_3",
+    "root": false
+  },
+  "hunter_offensive_4": {
+    "x": 371,
+    "y": 339,
+    "definition": "hunter_offensive_4",
+    "root": false
+  },
+  "hunter_offensive_5": {
+    "x": 416,
+    "y": 365,
+    "definition": "hunter_offensive_5",
+    "root": false
+  },
+  "hunter_offensive_6": {
+    "x": 461,
+    "y": 391,
+    "definition": "hunter_offensive_6",
+    "root": false
+  },
+  "hunter_offensive_7": {
+    "x": 506,
+    "y": 417,
+    "definition": "hunter_offensive_7",
+    "root": false
+  },
+  "hunter_offensive_8": {
+    "x": 551,
+    "y": 443,
+    "definition": "hunter_offensive_8",
+    "root": false
+  },
+  "hunter_offensive_crafting_1": {
+    "x": 211,
+    "y": 182,
+    "definition": "hunter_offensive_crafting_1",
+    "root": false
+  },
+  "hunter_offensive_crafting_2": {
+    "x": 237,
+    "y": 227,
+    "definition": "hunter_offensive_crafting_2",
+    "root": false
+  },
+  "hunter_offensive_crafting_3": {
+    "x": 263,
+    "y": 272,
+    "definition": "hunter_offensive_crafting_3",
+    "root": false
+  },
+  "hunter_offensive_crafting_4": {
+    "x": 289,
+    "y": 317,
+    "definition": "hunter_offensive_crafting_4",
+    "root": false
+  },
+  "hunter_offensive_crafting_5": {
+    "x": 345,
+    "y": 414,
+    "definition": "hunter_offensive_crafting_5",
+    "root": false
+  },
+  "hunter_offensive_crafting_6": {
+    "x": 390,
+    "y": 440,
+    "definition": "hunter_offensive_crafting_6",
+    "root": false
+  },
+  "hunter_offensive_crafting_7": {
+    "x": 435,
+    "y": 466,
+    "definition": "hunter_offensive_crafting_7",
+    "root": false
+  },
+  "hunter_offensive_crafting_keystone_1": {
+    "x": 494,
+    "y": 500,
+    "definition": "hunter_offensive_crafting_keystone_1",
+    "root": false
+  },
+  "hunter_offensive_keystone_1": {
+    "x": 610,
+    "y": 477,
+    "definition": "hunter_offensive_keystone_1",
+    "root": false
+  },
+  "hunter_offensive_notable_1": {
+    "x": 319,
+    "y": 369,
+    "definition": "hunter_offensive_notable_1",
+    "root": false
+  },
+  "hunter_speed_1": {
+    "x": 498,
+    "y": 223,
+    "definition": "hunter_speed_1",
+    "root": false
+  },
+  "hunter_speed_2": {
+    "x": 442,
+    "y": 320,
+    "definition": "hunter_speed_2",
+    "root": false
+  },
+  "hunter_speed_notable_1": {
+    "x": 470,
+    "y": 272,
+    "definition": "hunter_speed_notable_1",
+    "root": false
+  },
+  "hunter_subclass_1": {
+    "x": 401,
+    "y": 566,
+    "definition": "hunter_subclass_1",
+    "root": false
+  },
+  "hunter_subclass_1_crafting_1": {
+    "x": 433,
+    "y": 622,
+    "definition": "hunter_subclass_1_crafting_1",
+    "root": false
+  },
+  "hunter_subclass_1_crafting_2": {
+    "x": 478,
+    "y": 648,
+    "definition": "hunter_subclass_1_crafting_2",
+    "root": false
+  },
+  "hunter_subclass_1_crafting_3": {
+    "x": 523,
+    "y": 674,
+    "definition": "hunter_subclass_1_crafting_3",
+    "root": false
+  },
+  "hunter_subclass_1_crafting_4": {
+    "x": 568,
+    "y": 700,
+    "definition": "hunter_subclass_1_crafting_4",
+    "root": false
+  },
+  "hunter_subclass_1_crafting_5": {
+    "x": 478,
+    "y": 700,
+    "definition": "hunter_subclass_1_crafting_5",
+    "root": false
+  },
+  "hunter_subclass_1_crafting_notable_1": {
+    "x": 568,
+    "y": 760,
+    "definition": "hunter_subclass_1_crafting_notable_1",
+    "root": false
+  },
+  "hunter_subclass_1_defensive_1": {
+    "x": 267,
+    "y": 399,
+    "definition": "hunter_subclass_1_defensive_1",
+    "root": false
+  },
+  "hunter_subclass_1_defensive_2": {
+    "x": 293,
+    "y": 444,
+    "definition": "hunter_subclass_1_defensive_2",
+    "root": false
+  },
+  "hunter_subclass_1_defensive_3": {
+    "x": 319,
+    "y": 489,
+    "definition": "hunter_subclass_1_defensive_3",
+    "root": false
+  },
+  "hunter_subclass_1_defensive_4": {
+    "x": 345,
+    "y": 534,
+    "definition": "hunter_subclass_1_defensive_4",
+    "root": false
+  },
+  "hunter_subclass_1_mastery": {
+    "x": 640,
+    "y": 700,
+    "definition": "hunter_subclass_1_mastery",
+    "root": false
+  },
+  "hunter_subclass_1_offensive_1": {
+    "x": 465,
+    "y": 566,
+    "definition": "hunter_subclass_1_offensive_1",
+    "root": false
+  },
+  "hunter_subclass_1_offensive_2": {
+    "x": 510,
+    "y": 592,
+    "definition": "hunter_subclass_1_offensive_2",
+    "root": false
+  },
+  "hunter_subclass_1_offensive_3": {
+    "x": 555,
+    "y": 618,
+    "definition": "hunter_subclass_1_offensive_3",
+    "root": false
+  },
+  "hunter_subclass_1_offensive_4": {
+    "x": 600,
+    "y": 644,
+    "definition": "hunter_subclass_1_offensive_4",
+    "root": false
+  },
+  "hunter_subclass_1_offensive_notable_1": {
+    "x": 652,
+    "y": 614,
+    "definition": "hunter_subclass_1_offensive_notable_1",
+    "root": false
+  },
+  "hunter_subclass_2": {
+    "x": 691,
+    "y": 64,
+    "definition": "hunter_subclass_2",
+    "root": false
+  },
+  "hunter_subclass_2_crafting_1": {
+    "x": 755,
+    "y": 64,
+    "definition": "hunter_subclass_2_crafting_1",
+    "root": false
+  },
+  "hunter_subclass_2_crafting_2": {
+    "x": 800,
+    "y": 90,
+    "definition": "hunter_subclass_2_crafting_2",
+    "root": false
+  },
+  "hunter_subclass_2_crafting_3": {
+    "x": 845,
+    "y": 116,
+    "definition": "hunter_subclass_2_crafting_3",
+    "root": false
+  },
+  "hunter_subclass_2_crafting_4": {
+    "x": 890,
+    "y": 142,
+    "definition": "hunter_subclass_2_crafting_4",
+    "root": false
+  },
+  "hunter_subclass_2_crafting_5": {
+    "x": 845,
+    "y": 64,
+    "definition": "hunter_subclass_2_crafting_5",
+    "root": false
+  },
+  "hunter_subclass_2_crafting_notable_1": {
+    "x": 942,
+    "y": 112,
+    "definition": "hunter_subclass_2_crafting_notable_1",
+    "root": false
+  },
+  "hunter_subclass_2_defensive_1": {
+    "x": 479,
+    "y": 32,
+    "definition": "hunter_subclass_2_defensive_1",
+    "root": false
+  },
+  "hunter_subclass_2_defensive_2": {
+    "x": 531,
+    "y": 32,
+    "definition": "hunter_subclass_2_defensive_2",
+    "root": false
+  },
+  "hunter_subclass_2_defensive_3": {
+    "x": 583,
+    "y": 32,
+    "definition": "hunter_subclass_2_defensive_3",
+    "root": false
+  },
+  "hunter_subclass_2_defensive_4": {
+    "x": 635,
+    "y": 32,
+    "definition": "hunter_subclass_2_defensive_4",
+    "root": false
+  },
+  "hunter_subclass_2_life_1": {
+    "x": 723,
+    "y": 119,
+    "definition": "hunter_subclass_2_life_1",
+    "root": false
+  },
+  "hunter_subclass_2_life_2": {
+    "x": 768,
+    "y": 145,
+    "definition": "hunter_subclass_2_life_2",
+    "root": false
+  },
+  "hunter_subclass_2_life_3": {
+    "x": 813,
+    "y": 171,
+    "definition": "hunter_subclass_2_life_3",
+    "root": false
+  },
+  "hunter_subclass_2_life_4": {
+    "x": 858,
+    "y": 197,
+    "definition": "hunter_subclass_2_life_4",
+    "root": false
+  },
+  "hunter_subclass_2_life_notable_1": {
+    "x": 858,
+    "y": 257,
+    "definition": "hunter_subclass_2_life_notable_1",
+    "root": false
+  },
+  "hunter_subclass_2_mastery": {
+    "x": 926,
+    "y": 204,
+    "definition": "hunter_subclass_2_mastery",
+    "root": false
+  },
+  "hunter_subclass_special": {
+    "x": 422,
+    "y": 732,
+    "definition": "hunter_subclass_special",
+    "root": false
+  },
+  "miner_class": {
+    "x": -263,
+    "y": 152,
+    "definition": "miner_class",
+    "root": true
+  },
+  "miner_crafting_1": {
+    "x": -210,
+    "y": 121,
+    "definition": "miner_crafting_1",
+    "root": false
+  },
+  "miner_crafting_2": {
+    "x": -163,
+    "y": 94,
+    "definition": "miner_crafting_2",
+    "root": false
+  },
+  "miner_crafting_3": {
+    "x": -116,
+    "y": 67,
+    "definition": "miner_crafting_3",
+    "root": false
+  },
+  "miner_crafting_notable_1": {
+    "x": -64,
+    "y": 37,
+    "definition": "miner_crafting_notable_1",
+    "root": false
+  },
+  "miner_crit_1": {
+    "x": -487,
+    "y": 346,
+    "definition": "miner_crit_1",
+    "root": false
+  },
+  "miner_crit_2": {
+    "x": -543,
+    "y": 249,
+    "definition": "miner_crit_2",
+    "root": false
+  },
+  "miner_crit_notable_1": {
+    "x": -515,
+    "y": 298,
+    "definition": "miner_crit_notable_1",
+    "root": false
+  },
+  "miner_defensive_1": {
+    "x": -293,
+    "y": 204,
+    "definition": "miner_defensive_1",
+    "root": false
+  },
+  "miner_defensive_2": {
+    "x": -319,
+    "y": 249,
+    "definition": "miner_defensive_2",
+    "root": false
+  },
+  "miner_defensive_3": {
+    "x": -345,
+    "y": 294,
+    "definition": "miner_defensive_3",
+    "root": false
+  },
+  "miner_defensive_4": {
+    "x": -371,
+    "y": 339,
+    "definition": "miner_defensive_4",
+    "root": false
+  },
+  "miner_defensive_5": {
+    "x": -416,
+    "y": 365,
+    "definition": "miner_defensive_5",
+    "root": false
+  },
+  "miner_defensive_6": {
+    "x": -461,
+    "y": 391,
+    "definition": "miner_defensive_6",
+    "root": false
+  },
+  "miner_defensive_7": {
+    "x": -506,
+    "y": 417,
+    "definition": "miner_defensive_7",
+    "root": false
+  },
+  "miner_defensive_8": {
+    "x": -551,
+    "y": 443,
+    "definition": "miner_defensive_8",
+    "root": false
+  },
+  "miner_defensive_crafting_1": {
+    "x": -211,
+    "y": 182,
+    "definition": "miner_defensive_crafting_1",
+    "root": false
+  },
+  "miner_defensive_crafting_2": {
+    "x": -237,
+    "y": 227,
+    "definition": "miner_defensive_crafting_2",
+    "root": false
+  },
+  "miner_defensive_crafting_3": {
+    "x": -263,
+    "y": 272,
+    "definition": "miner_defensive_crafting_3",
+    "root": false
+  },
+  "miner_defensive_crafting_4": {
+    "x": -289,
+    "y": 317,
+    "definition": "miner_defensive_crafting_4",
+    "root": false
+  },
+  "miner_defensive_crafting_5": {
+    "x": -345,
+    "y": 414,
+    "definition": "miner_defensive_crafting_5",
+    "root": false
+  },
+  "miner_defensive_crafting_6": {
+    "x": -390,
+    "y": 440,
+    "definition": "miner_defensive_crafting_6",
+    "root": false
+  },
+  "miner_defensive_crafting_7": {
+    "x": -435,
+    "y": 466,
+    "definition": "miner_defensive_crafting_7",
+    "root": false
+  },
+  "miner_defensive_crafting_keystone_1": {
+    "x": -494,
+    "y": 500,
+    "definition": "miner_defensive_crafting_keystone_1",
+    "root": false
+  },
+  "miner_defensive_keystone_1": {
+    "x": -610,
+    "y": 477,
+    "definition": "miner_defensive_keystone_1",
+    "root": false
+  },
+  "miner_defensive_notable_1": {
+    "x": -319,
+    "y": 369,
+    "definition": "miner_defensive_notable_1",
+    "root": false
+  },
+  "miner_gateway": {
+    "x": -214,
+    "y": 368,
+    "definition": "miner_gateway",
+    "root": false
+  },
+  "miner_healing_1": {
+    "x": -215,
+    "y": 300,
+    "definition": "miner_healing_1",
+    "root": false
+  },
+  "miner_healing_2": {
+    "x": -151,
+    "y": 337,
+    "definition": "miner_healing_2",
+    "root": false
+  },
+  "miner_healing_3": {
+    "x": -165,
+    "y": 287,
+    "definition": "miner_healing_3",
+    "root": false
+  },
+  "miner_healing_4": {
+    "x": -139,
+    "y": 242,
+    "definition": "miner_healing_4",
+    "root": false
+  },
+  "miner_healing_notable_1": {
+    "x": -109,
+    "y": 190,
+    "definition": "miner_healing_notable_1",
+    "root": false
+  },
+  "miner_lesser_1": {
+    "x": -532,
+    "y": 372,
+    "definition": "miner_lesser_1",
+    "root": false
+  },
+  "miner_lesser_2": {
+    "x": -588,
+    "y": 275,
+    "definition": "miner_lesser_2",
+    "root": false
+  },
+  "miner_lesser_3": {
+    "x": -577,
+    "y": 398,
+    "definition": "miner_lesser_3",
+    "root": false
+  },
+  "miner_lesser_4": {
+    "x": -633,
+    "y": 301,
+    "definition": "miner_lesser_4",
+    "root": false
+  },
+  "miner_lesser_5": {
+    "x": -605,
+    "y": 350,
+    "definition": "miner_lesser_5",
+    "root": false
+  },
+  "miner_lesser_6": {
+    "x": -650,
+    "y": 376,
+    "definition": "miner_lesser_6",
+    "root": false
+  },
+  "miner_life_1": {
+    "x": -397,
+    "y": 294,
+    "definition": "miner_life_1",
+    "root": false
+  },
+  "miner_life_2": {
+    "x": -453,
+    "y": 197,
+    "definition": "miner_life_2",
+    "root": false
+  },
+  "miner_life_notable_1": {
+    "x": -425,
+    "y": 246,
+    "definition": "miner_life_notable_1",
+    "root": false
+  },
+  "miner_mastery": {
+    "x": -709,
+    "y": 410,
+    "definition": "miner_mastery",
+    "root": false
+  },
+  "miner_offensive_1": {
+    "x": -323,
+    "y": 152,
+    "definition": "miner_offensive_1",
+    "root": false
+  },
+  "miner_offensive_2": {
+    "x": -375,
+    "y": 152,
+    "definition": "miner_offensive_2",
+    "root": false
+  },
+  "miner_offensive_3": {
+    "x": -427,
+    "y": 152,
+    "definition": "miner_offensive_3",
+    "root": false
+  },
+  "miner_offensive_4": {
+    "x": -479,
+    "y": 152,
+    "definition": "miner_offensive_4",
+    "root": false
+  },
+  "miner_offensive_5": {
+    "x": -524,
+    "y": 178,
+    "definition": "miner_offensive_5",
+    "root": false
+  },
+  "miner_offensive_6": {
+    "x": -569,
+    "y": 204,
+    "definition": "miner_offensive_6",
+    "root": false
+  },
+  "miner_offensive_7": {
+    "x": -614,
+    "y": 230,
+    "definition": "miner_offensive_7",
+    "root": false
+  },
+  "miner_offensive_8": {
+    "x": -659,
+    "y": 256,
+    "definition": "miner_offensive_8",
+    "root": false
+  },
+  "miner_offensive_crafting_1": {
+    "x": -263,
+    "y": 92,
+    "definition": "miner_offensive_crafting_1",
+    "root": false
+  },
+  "miner_offensive_crafting_2": {
+    "x": -315,
+    "y": 92,
+    "definition": "miner_offensive_crafting_2",
+    "root": false
+  },
+  "miner_offensive_crafting_3": {
+    "x": -367,
+    "y": 92,
+    "definition": "miner_offensive_crafting_3",
+    "root": false
+  },
+  "miner_offensive_crafting_4": {
+    "x": -419,
+    "y": 92,
+    "definition": "miner_offensive_crafting_4",
+    "root": false
+  },
+  "miner_offensive_crafting_5": {
+    "x": -531,
+    "y": 92,
+    "definition": "miner_offensive_crafting_5",
+    "root": false
+  },
+  "miner_offensive_crafting_6": {
+    "x": -576,
+    "y": 118,
+    "definition": "miner_offensive_crafting_6",
+    "root": false
+  },
+  "miner_offensive_crafting_7": {
+    "x": -621,
+    "y": 144,
+    "definition": "miner_offensive_crafting_7",
+    "root": false
+  },
+  "miner_offensive_crafting_keystone_1": {
+    "x": -680,
+    "y": 178,
+    "definition": "miner_offensive_crafting_keystone_1",
+    "root": false
+  },
+  "miner_offensive_keystone_1": {
+    "x": -718,
+    "y": 290,
+    "definition": "miner_offensive_keystone_1",
+    "root": false
+  },
+  "miner_offensive_notable_1": {
+    "x": -479,
+    "y": 92,
+    "definition": "miner_offensive_notable_1",
+    "root": false
+  },
+  "miner_speed_1": {
+    "x": -442,
+    "y": 320,
+    "definition": "miner_speed_1",
+    "root": false
+  },
+  "miner_speed_2": {
+    "x": -498,
+    "y": 223,
+    "definition": "miner_speed_2",
+    "root": false
+  },
+  "miner_speed_notable_1": {
+    "x": -470,
+    "y": 272,
+    "definition": "miner_speed_notable_1",
+    "root": false
+  },
+  "miner_subclass_1": {
+    "x": -691,
+    "y": 64,
+    "definition": "miner_subclass_1",
+    "root": false
+  },
+  "miner_subclass_1_crafting_1": {
+    "x": -755,
+    "y": 64,
+    "definition": "miner_subclass_1_crafting_1",
+    "root": false
+  },
+  "miner_subclass_1_crafting_2": {
+    "x": -800,
+    "y": 90,
+    "definition": "miner_subclass_1_crafting_2",
+    "root": false
+  },
+  "miner_subclass_1_crafting_3": {
+    "x": -845,
+    "y": 116,
+    "definition": "miner_subclass_1_crafting_3",
+    "root": false
+  },
+  "miner_subclass_1_crafting_4": {
+    "x": -890,
+    "y": 142,
+    "definition": "miner_subclass_1_crafting_4",
+    "root": false
+  },
+  "miner_subclass_1_crafting_5": {
+    "x": -845,
+    "y": 64,
+    "definition": "miner_subclass_1_crafting_5",
+    "root": false
+  },
+  "miner_subclass_1_crafting_notable_1": {
+    "x": -942,
+    "y": 112,
+    "definition": "miner_subclass_1_crafting_notable_1",
+    "root": false
+  },
+  "miner_subclass_1_defensive_1": {
+    "x": -479,
+    "y": 32,
+    "definition": "miner_subclass_1_defensive_1",
+    "root": false
+  },
+  "miner_subclass_1_defensive_2": {
+    "x": -531,
+    "y": 32,
+    "definition": "miner_subclass_1_defensive_2",
+    "root": false
+  },
+  "miner_subclass_1_defensive_3": {
+    "x": -583,
+    "y": 32,
+    "definition": "miner_subclass_1_defensive_3",
+    "root": false
+  },
+  "miner_subclass_1_defensive_4": {
+    "x": -635,
+    "y": 32,
+    "definition": "miner_subclass_1_defensive_4",
+    "root": false
+  },
+  "miner_subclass_1_mastery": {
+    "x": -926,
+    "y": 204,
+    "definition": "miner_subclass_1_mastery",
+    "root": false
+  },
+  "miner_subclass_1_offensive_1": {
+    "x": -723,
+    "y": 119,
+    "definition": "miner_subclass_1_offensive_1",
+    "root": false
+  },
+  "miner_subclass_1_offensive_2": {
+    "x": -768,
+    "y": 145,
+    "definition": "miner_subclass_1_offensive_2",
+    "root": false
+  },
+  "miner_subclass_1_offensive_3": {
+    "x": -813,
+    "y": 171,
+    "definition": "miner_subclass_1_offensive_3",
+    "root": false
+  },
+  "miner_subclass_1_offensive_4": {
+    "x": -858,
+    "y": 197,
+    "definition": "miner_subclass_1_offensive_4",
+    "root": false
+  },
+  "miner_subclass_1_offensive_notable_1": {
+    "x": -858,
+    "y": 257,
+    "definition": "miner_subclass_1_offensive_notable_1",
+    "root": false
+  },
+  "miner_subclass_2": {
+    "x": -401,
+    "y": 566,
+    "definition": "miner_subclass_2",
+    "root": false
+  },
+  "miner_subclass_2_crafting_1": {
+    "x": -433,
+    "y": 622,
+    "definition": "miner_subclass_2_crafting_1",
+    "root": false
+  },
+  "miner_subclass_2_crafting_2": {
+    "x": -478,
+    "y": 648,
+    "definition": "miner_subclass_2_crafting_2",
+    "root": false
+  },
+  "miner_subclass_2_crafting_3": {
+    "x": -523,
+    "y": 674,
+    "definition": "miner_subclass_2_crafting_3",
+    "root": false
+  },
+  "miner_subclass_2_crafting_4": {
+    "x": -568,
+    "y": 700,
+    "definition": "miner_subclass_2_crafting_4",
+    "root": false
+  },
+  "miner_subclass_2_crafting_5": {
+    "x": -478,
+    "y": 700,
+    "definition": "miner_subclass_2_crafting_5",
+    "root": false
+  },
+  "miner_subclass_2_crafting_notable_1": {
+    "x": -568,
+    "y": 760,
+    "definition": "miner_subclass_2_crafting_notable_1",
+    "root": false
+  },
+  "miner_subclass_2_defensive_1": {
+    "x": -267,
+    "y": 399,
+    "definition": "miner_subclass_2_defensive_1",
+    "root": false
+  },
+  "miner_subclass_2_defensive_2": {
+    "x": -293,
+    "y": 444,
+    "definition": "miner_subclass_2_defensive_2",
+    "root": false
+  },
+  "miner_subclass_2_defensive_3": {
+    "x": -319,
+    "y": 489,
+    "definition": "miner_subclass_2_defensive_3",
+    "root": false
+  },
+  "miner_subclass_2_defensive_4": {
+    "x": -345,
+    "y": 534,
+    "definition": "miner_subclass_2_defensive_4",
+    "root": false
+  },
+  "miner_subclass_2_life_1": {
+    "x": -465,
+    "y": 566,
+    "definition": "miner_subclass_2_life_1",
+    "root": false
+  },
+  "miner_subclass_2_life_2": {
+    "x": -510,
+    "y": 592,
+    "definition": "miner_subclass_2_life_2",
+    "root": false
+  },
+  "miner_subclass_2_life_3": {
+    "x": -555,
+    "y": 618,
+    "definition": "miner_subclass_2_life_3",
+    "root": false
+  },
+  "miner_subclass_2_life_4": {
+    "x": -600,
+    "y": 644,
+    "definition": "miner_subclass_2_life_4",
+    "root": false
+  },
+  "miner_subclass_2_life_notable_1": {
+    "x": -652,
+    "y": 614,
+    "definition": "miner_subclass_2_life_notable_1",
+    "root": false
+  },
+  "miner_subclass_2_mastery": {
+    "x": -640,
+    "y": 700,
+    "definition": "miner_subclass_2_mastery",
+    "root": false
+  },
+  "miner_subclass_special": {
+    "x": -845,
+    "y": 0,
+    "definition": "miner_subclass_special",
+    "root": false
+  }
+}

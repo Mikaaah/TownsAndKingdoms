@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 2.3,
+      "max_strikes": 4,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.2,
+      "armor_negation": 22.0
+    }
+  },
+  "type": "epicfight_dd:battlestaff"
+}

@@ -1,0 +1,1382 @@
+{
+  "enabled": true,
+  "require_player_kill": true,
+  "pools": [
+    {
+      "id": "block_factorys_bosses/underworld_knight",
+      "mod": "block_factorys_bosses",
+      "entity": "block_factorys_bosses:underworld_knight",
+      "name": "Helvar",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "block_factorys_bosses:knight_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:knight_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:knight_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:knight_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:knight_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "block_factorys_bosses/yeti",
+      "mod": "block_factorys_bosses",
+      "entity": "block_factorys_bosses:yeti",
+      "name": "Skor",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "block_factorys_bosses:ice_gauntlet",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "block_factorys_bosses/sandworm",
+      "mod": "block_factorys_bosses",
+      "entity": "block_factorys_bosses:sandworm",
+      "name": "Sirok",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "block_factorys_bosses:sandworm_gauntlet",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "block_factorys_bosses/kraken",
+      "mod": "block_factorys_bosses",
+      "entity": "block_factorys_bosses:kraken",
+      "name": "Kraken",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "block_factorys_bosses:kraken_trident",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "block_factorys_bosses/infernal_dragon",
+      "mod": "block_factorys_bosses",
+      "entity": "block_factorys_bosses:infernal_dragon",
+      "name": "Infernal Dragon",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "block_factorys_bosses:dragon_guard_shield",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:dragon_bones_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:dragon_bones_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "block_factorys_bosses:dragon_bones_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "irons_spellbooks/dead_king",
+      "mod": "irons_spellbooks",
+      "entity": "irons_spellbooks:dead_king",
+      "name": "Dead King",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "irons_spellbooks:blood_staff",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "irons_spellbooks:wicked_bone_ring",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "irons_spellbooks:necronomicon_spell_book",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "irons_spellbooks/fire_boss",
+      "mod": "irons_spellbooks",
+      "entity": "irons_spellbooks:fire_boss",
+      "name": "Fire Boss",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "irons_spellbooks:decrepit_scythe",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "irons_spellbooks:betrayer_signet",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "mowziesmobs/ferrous_wroughtnaut",
+      "mod": "mowziesmobs",
+      "entity": "mowziesmobs:ferrous_wroughtnaut",
+      "name": "Ferrous Wroughtnaut",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "mowziesmobs:wrought_axe",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "mowziesmobs:wrought_helmet",
+          "category": "helmet",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "mowziesmobs/frostmaw",
+      "mod": "mowziesmobs",
+      "entity": "mowziesmobs:frostmaw",
+      "name": "Frostmaw",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "mowziesmobs:ice_crystal",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "mowziesmobs/umvuthi",
+      "mod": "mowziesmobs",
+      "entity": "mowziesmobs:umvuthi",
+      "name": "Umvuthi",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "mowziesmobs:sol_visage",
+          "category": "helmet",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "mowziesmobs/sculptor",
+      "mod": "mowziesmobs",
+      "entity": "mowziesmobs:sculptor",
+      "name": "Sculptor",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "mowziesmobs:sculptor_staff",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "mowziesmobs:geomancer_robe",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "mowziesmobs:geomancer_belt",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "mowziesmobs:geomancer_sandals",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "mowziesmobs:geomancer_beads",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/ender_guardian",
+      "mod": "cataclysm",
+      "entity": "cataclysm:ender_guardian",
+      "name": "Ender Guardian",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:gauntlet_of_guard",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:gauntlet_of_bulwark",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/netherite_monstrosity",
+      "mod": "cataclysm",
+      "entity": "cataclysm:netherite_monstrosity",
+      "name": "Netherite Monstrosity",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:infernal_forge",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:monstrous_helm",
+          "category": "helmet",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/ignis",
+      "mod": "cataclysm",
+      "entity": "cataclysm:ignis",
+      "name": "Ignis",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:the_incinerator",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:ignitium_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:ignitium_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:ignitium_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:ignitium_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm_spellbooks:ignis_spell_book",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/maledictus",
+      "mod": "cataclysm",
+      "entity": "cataclysm:maledictus",
+      "name": "Maledictus",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:soul_render",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:cursed_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:cursium_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:cursium_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:cursium_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:cursium_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm_spellbooks:codex_of_malice_spell_book",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/the_leviathan",
+      "mod": "cataclysm",
+      "entity": "cataclysm:the_leviathan",
+      "name": "The Leviathan",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:tidal_claws",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm_spellbooks:abyss_spell_book",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/the_harbinger",
+      "mod": "cataclysm",
+      "entity": "cataclysm:the_harbinger",
+      "name": "The Harbinger",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:wither_assault_shoulder_weapon",
+          "category": "bow",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/ancient_remnant",
+      "mod": "cataclysm",
+      "entity": "cataclysm:ancient_remnant",
+      "name": "Ancient Remnant",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:ancient_spear",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:sandstorm_in_a_bottle",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm:necklace_of_the_desert",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "cataclysm_spellbooks:desert_spell_book",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/scylla",
+      "mod": "cataclysm",
+      "entity": "cataclysm:scylla",
+      "name": "Scylla",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:gauntlet_of_maelstrom",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "cataclysm/clawdian",
+      "mod": "cataclysm",
+      "entity": "cataclysm:clawdian",
+      "name": "Clawdian",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "cataclysm:chitin_claw",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/mossy_golem",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:mossy_golem",
+      "name": "Mossy Golem",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:mossy_hammer",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:mossy_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/frostbitten_golem",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:frostbitten_golem",
+      "name": "Frostbitten Golem",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:frostbitten_shield",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:the_great_frost",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/ancient_guardian",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:ancient_guardian",
+      "name": "Ancient Guardian",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:monstrous_anchor",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/posessed_paladin",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:posessed_paladin",
+      "name": "Possessed Paladin",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:soul_great_sword",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/hovering_hurricane",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:hovering_hurricane",
+      "name": "Hovering Hurricane",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:axe_of_lightning",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:wand_of_clouds",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/cloud_golem",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:cloud_golem",
+      "name": "Cloud Golem",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:atmospheric_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "legendary_spellbooks:stormbound_grimoire",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/withered_abomination",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:withered_abomination",
+      "name": "Withered Abomination",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:withered_scythe",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/overgrown_colossus",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:overgrown_colossus",
+      "name": "Overgrown Colossus",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:totem_of_moss",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/skeletosaurus",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:skeletosaurus",
+      "name": "Skeletosaurus",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:dinosaur_bone_club",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:dinosaur_bone_shield",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/shulker_mimic",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:shulker_mimic",
+      "name": "Shulker Mimic",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:shulker_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:shulker_shield",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/endersent",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:endersent",
+      "name": "Endersent",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:chorus_blade",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:chorus_mask",
+          "category": "helmet",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/lava_eater",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:lava_eater",
+      "name": "Lava Eater",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:fiery_jaw",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:fiery_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/annihilation_pursuer",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:annihilation_pursuer",
+      "name": "Annihilation Pursuer",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "legendary_monsters:annihilator_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:annihilator_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:annihilator_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "legendary_monsters:annihilator_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "alexscaves/luxtructosaurus",
+      "mod": "alexscaves",
+      "entity": "alexscaves:luxtructosaurus",
+      "name": "Luxtructosaurus",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "alexscaves:extinction_spear",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "alexscaves/forsaken",
+      "mod": "alexscaves",
+      "entity": "alexscaves:forsaken",
+      "name": "Forsaken",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "alexscaves:dreadbow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "alexscaves:cloak_of_darkness",
+          "category": "chestplate",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "alexscaves/hullbreaker",
+      "mod": "alexscaves",
+      "entity": "alexscaves:hullbreaker",
+      "name": "Hullbreaker",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "alexscaves:ortholance",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "aether/slider",
+      "mod": "aether",
+      "entity": "aether:slider",
+      "name": "The Slider",
+      "tier": 2,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "aether:flaming_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_lance",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:hammer_of_kingbdogz",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:lightning_knife",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "aether:sentry_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "aether:cloud_staff",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:shield_of_repulsion",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:agility_cape",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "aether/valkyrie_queen",
+      "mod": "aether",
+      "entity": "aether:valkyrie_queen",
+      "name": "Valkyrie Queen",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "aether:lightning_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:holy_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:invisibility_cloak",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_gloves",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_pickaxe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_axe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_shovel",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_hoe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "aether:valkyrie_cape",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "aether/sun_spirit",
+      "mod": "aether",
+      "entity": "aether:sun_spirit",
+      "name": "Sun Spirit",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "aether:pig_slayer",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:vampire_blade",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "aether:ice_ring",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:ice_pendant",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "aether:phoenix_gloves",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/naga",
+      "mod": "twilightforest",
+      "entity": "twilightforest:naga",
+      "name": "Naga",
+      "tier": 2,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:naga_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:naga_leggings",
+          "category": "leggings",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/lich",
+      "mod": "twilightforest",
+      "entity": "twilightforest:lich",
+      "name": "Twilight Lich",
+      "tier": 3,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:twilight_scepter",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:lifedrain_scepter",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:zombie_scepter",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fortification_scepter",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/minoshroom",
+      "mod": "twilightforest",
+      "entity": "twilightforest:minoshroom",
+      "name": "Minoshroom",
+      "tier": 3,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:diamond_minotaur_axe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:mazebreaker_pickaxe",
+          "category": "tool",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/hydra",
+      "mod": "twilightforest",
+      "entity": "twilightforest:hydra",
+      "name": "Hydra",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:fiery_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_pickaxe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/knight_phantom",
+      "mod": "twilightforest",
+      "entity": "twilightforest:knight_phantom",
+      "name": "Knight Phantoms",
+      "tier": 4,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "twilightforest:phantom_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:phantom_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:knightmetal_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:knightmetal_axe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:knightmetal_pickaxe",
+          "category": "tool",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/ur_ghast",
+      "mod": "twilightforest",
+      "entity": "twilightforest:ur_ghast",
+      "name": "Ur-Ghast",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "twilightforest:fiery_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_pickaxe",
+          "category": "tool",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:fiery_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/alpha_yeti",
+      "mod": "twilightforest",
+      "entity": "twilightforest:alpha_yeti",
+      "name": "Alpha Yeti",
+      "tier": 5,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:yeti_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:yeti_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:yeti_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:yeti_boots",
+          "category": "boots",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "twilightforest/snow_queen",
+      "mod": "twilightforest",
+      "entity": "twilightforest:snow_queen",
+      "name": "Snow Queen",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "twilightforest:ice_sword",
+          "category": "weapon",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:ice_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:seeker_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:triple_bow",
+          "category": "bow",
+          "weight": 1
+        },
+        {
+          "item": "twilightforest:ender_bow",
+          "category": "bow",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "deep_aether/eots_controller",
+      "mod": "deep_aether",
+      "entity": "deep_aether:eots_controller",
+      "name": "Eye of the Storm",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "deep_aether:stormforged_helmet",
+          "category": "helmet",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_chestplate",
+          "category": "chestplate",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_leggings",
+          "category": "leggings",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_boots",
+          "category": "boots",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:stormforged_gloves",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:cloud_cape",
+          "category": "accessory",
+          "weight": 1
+        },
+        {
+          "item": "deep_aether:aercloud_necklace",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary_monsters/the_obliterator",
+      "mod": "legendary_monsters",
+      "entity": "legendary_monsters:the_obliterator",
+      "name": "The Obliterator",
+      "tier": 7,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": false,
+      "items": [
+        {
+          "item": "legendary_spellbooks:annihilators_protocol",
+          "category": "accessory",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "archaion/last_of_deepslate",
+      "mod": "archaion",
+      "entity": "archaion:last_of_deepslate",
+      "name": "Last of Deepslate",
+      "tier": 6,
+      "enabled": true,
+      "chance": 1.0,
+      "additional_if_no_equipment": true,
+      "items": [
+        {
+          "item": "archaion:echo_mace",
+          "category": "weapon",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "base_compat_extras": [
+    "cataclysm/ignis|cataclysm_spellbooks:ignis_spell_book",
+    "cataclysm/the_leviathan|cataclysm_spellbooks:abyss_spell_book",
+    "cataclysm/ancient_remnant|cataclysm_spellbooks:desert_spell_book",
+    "cataclysm/maledictus|cataclysm_spellbooks:codex_of_malice_spell_book"
+  ]
+}

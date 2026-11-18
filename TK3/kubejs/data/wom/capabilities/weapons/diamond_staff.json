@@ -1,0 +1,19 @@
+{
+  "attributes": {
+    "two_hand": {
+      "impact": 2.9,
+      "max_strikes": 3,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.2,
+      "armor_negation": 25.0
+    },
+    "common": {
+      "armor_negation": 19.0,
+      "impact": 2.3,
+      "max_strikes": 3,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.2
+    }
+  },
+  "type": "wom:staff"
+}
