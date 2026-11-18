@@ -38,7 +38,8 @@
     "totalEntries": 646,
     "knownAutomaticMappings": 10,
     "unverifiedStyleEntries": 3,
-    "knavesNeedsScope": "Twilight Forest weapons only, confirmed by the pack owner on 2026-11-18."
+    "knavesNeedsScope": "Twilight Forest weapons only, confirmed by the pack owner on 2026-11-18.",
+    "iconCount": 602
   },
   "items": [
     {
@@ -52,7 +53,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/desolate_dagger.png",
       "bonuses": [
         {
           "style": "Common",
@@ -108,7 +109,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/dreadbow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -133,7 +134,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/extinction_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -204,7 +205,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/frostmint_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -316,7 +317,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/limestone_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -387,7 +388,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/ortholance.png",
       "bonuses": [
         {
           "style": "Common",
@@ -458,7 +459,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/primitive_club.png",
       "bonuses": [
         {
           "style": "Common",
@@ -564,7 +565,7 @@
       "type_name": "No explicit mapping",
       "type_family": "Unassigned",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/sea_staff.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Registered in the installed mod. No explicit Epic Fight capability was verified for this item.",
@@ -587,7 +588,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/sharpened_candy_cane.png",
       "bonuses": [
         {
           "style": "Common",
@@ -643,7 +644,7 @@
       "type_name": "No explicit mapping",
       "type_family": "Unassigned",
       "status": "included",
-      "icon": null,
+      "icon": "icons/alexscaves/sugar_staff.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Registered in the installed mod. No explicit Epic Fight capability was verified for this item.",
@@ -666,7 +667,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/certus_quartz_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -722,7 +723,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/certus_quartz_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -763,7 +764,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/certus_quartz_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -804,7 +805,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/certus_quartz_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -845,7 +846,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/certus_quartz_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -901,7 +902,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/fluix_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -957,7 +958,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/fluix_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -998,7 +999,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/fluix_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1039,7 +1040,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/fluix_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1080,7 +1081,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/fluix_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1136,7 +1137,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/nether_quartz_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1192,7 +1193,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/nether_quartz_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1233,7 +1234,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/nether_quartz_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1274,7 +1275,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/nether_quartz_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1315,7 +1316,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/ae2/nether_quartz_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1371,7 +1372,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/archaion/echo_mace.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1427,7 +1428,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/archaion/echos_grace.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -1599,7 +1600,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/dagger.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1655,7 +1656,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/dragon_guard_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -1680,7 +1681,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/enhanced_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -1705,7 +1706,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/knight_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1761,7 +1762,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/kraken_trident.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1832,7 +1833,7 @@
       "type_name": "Eclipse",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/large_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1888,7 +1889,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/pirate_saber.png",
       "bonuses": [
         {
           "style": "Common",
@@ -1944,7 +1945,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/block_factorys_bosses/warrior_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -2172,7 +2173,7 @@
       "type_name": "Night Ritus Dagger",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/athame.png",
       "bonuses": [
         {
           "style": "Common",
@@ -2253,7 +2254,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/black_steel_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -2309,7 +2310,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/black_steel_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -2350,7 +2351,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/black_steel_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -2391,7 +2392,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/black_steel_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -2432,7 +2433,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/black_steel_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -3161,7 +3162,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm/khopesh.png",
       "bonuses": [
         {
           "style": "Common",
@@ -3816,7 +3817,7 @@
       "type_name": "Battlestaff Wood",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm_spellbooks/bloom_stone_staff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -3872,7 +3873,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm_spellbooks/coral_staff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -3928,7 +3929,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm_spellbooks/fake_wudjets_staff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4040,7 +4041,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm_spellbooks/monstrous_flamberge.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4096,7 +4097,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm_spellbooks/soul_brazier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4208,7 +4209,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/cataclysm_spellbooks/void_staff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4264,7 +4265,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/aquaflora.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4320,7 +4321,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/breezebreaker.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4376,7 +4377,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/crescentia.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4419,7 +4420,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/frostbound.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4475,7 +4476,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/keres.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4531,7 +4532,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/poltergeist.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4617,7 +4618,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/rainfall_serenity.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -4642,7 +4643,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/celestisynth/solaris.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4698,7 +4699,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/create/cardboard_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4754,7 +4755,7 @@
       "type_name": "Crossbow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/create/potato_cannon.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -4779,7 +4780,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/create/wrench.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4820,7 +4821,7 @@
       "type_name": "Crossbow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/createdieselgenerators/chemical_sprayer.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -4845,7 +4846,7 @@
       "type_name": "Crossbow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/createdieselgenerators/chemical_sprayer_lighter.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -4870,7 +4871,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/createdieselgenerators/hammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4911,7 +4912,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/blade_of_luck.png",
       "bonuses": [
         {
           "style": "Common",
@@ -4967,7 +4968,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/skyjade_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5023,7 +5024,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/skyjade_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5064,7 +5065,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/skyjade_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5105,7 +5106,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/skyjade_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5146,7 +5147,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/skyjade_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5202,7 +5203,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/storm_bow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -5227,7 +5228,7 @@
       "type_name": "Nova",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/storm_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5283,7 +5284,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/stratus_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5339,7 +5340,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/stratus_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5380,7 +5381,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/stratus_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5421,7 +5422,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/stratus_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5462,7 +5463,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deep_aether/stratus_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5518,7 +5519,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/resonarium_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5574,7 +5575,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/resonarium_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5615,7 +5616,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/resonarium_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5656,7 +5657,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/resonarium_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5697,7 +5698,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/resonarium_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5753,7 +5754,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/warden_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5809,7 +5810,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/warden_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5850,7 +5851,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/warden_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5891,7 +5892,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/warden_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5932,7 +5933,7 @@
       "type_name": "Hollow Longsword",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/deeperdarker/warden_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -5988,7 +5989,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/enderscape/end_stone_rubble_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -6013,7 +6014,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/enderscape/kurodite_rubble_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -6038,7 +6039,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/enderscape/mirestone_rubble_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -6063,7 +6064,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/enderscape/veradite_rubble_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -6088,7 +6089,7 @@
       "type_name": "Bokken",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/bokken.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6130,7 +6131,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/diamond_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -6203,7 +6204,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/diamond_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6246,7 +6247,7 @@
       "type_name": "Longsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/diamond_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6289,7 +6290,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/diamond_spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -6362,7 +6363,7 @@
       "type_name": "Tachi",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/diamond_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6405,7 +6406,7 @@
       "type_name": "Fist",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/glove.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6447,7 +6448,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/golden_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -6520,7 +6521,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/golden_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6563,7 +6564,7 @@
       "type_name": "Longsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/golden_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6606,7 +6607,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/golden_spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -6679,7 +6680,7 @@
       "type_name": "Tachi",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/golden_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6722,7 +6723,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/iron_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -6795,7 +6796,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/iron_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6838,7 +6839,7 @@
       "type_name": "Longsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/iron_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6881,7 +6882,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/iron_spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -6954,7 +6955,7 @@
       "type_name": "Tachi",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/iron_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -6997,7 +6998,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/netherite_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -7070,7 +7071,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/netherite_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7113,7 +7114,7 @@
       "type_name": "Longsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/netherite_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7156,7 +7157,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/netherite_spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -7229,7 +7230,7 @@
       "type_name": "Tachi",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/netherite_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7272,7 +7273,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/stone_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -7345,7 +7346,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/stone_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7388,7 +7389,7 @@
       "type_name": "Longsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/stone_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7431,7 +7432,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/stone_spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -7504,7 +7505,7 @@
       "type_name": "Tachi",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/stone_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7547,7 +7548,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/uchigatana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7590,7 +7591,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/wooden_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -7663,7 +7664,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/wooden_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7706,7 +7707,7 @@
       "type_name": "Longsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/wooden_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7749,7 +7750,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/wooden_spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -7822,7 +7823,7 @@
       "type_name": "Tachi",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight/wooden_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7865,7 +7866,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/amethyst_battlestaff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7905,7 +7906,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/backhand_blade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7946,7 +7947,7 @@
       "type_name": "Battlestaff Wood",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/wooden_battlestaff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -7989,7 +7990,7 @@
       "type_name": "Blood Ritus Dagger",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/blood_ritus_dagger.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8029,7 +8030,7 @@
       "type_name": "Bonecutting Saw",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/bonecutting_saw.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8070,7 +8071,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_battlestaff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8113,7 +8114,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_florett.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8156,7 +8157,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8199,7 +8200,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8242,7 +8243,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_light_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8285,7 +8286,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_messer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8328,7 +8329,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/diamond_sickle.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8371,7 +8372,7 @@
       "type_name": "Eclipse",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/eclipse.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8411,7 +8412,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_battlestaff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8454,7 +8455,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_florett.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8497,7 +8498,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8540,7 +8541,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8583,7 +8584,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_light_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8626,7 +8627,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_messer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8669,7 +8670,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/golden_sickle.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8753,7 +8754,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_battlestaff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8836,7 +8837,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_florett.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8879,7 +8880,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8922,7 +8923,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -8965,7 +8966,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_light_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9008,7 +9009,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_messer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9051,7 +9052,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iron_sickle.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9094,7 +9095,7 @@
       "type_name": "Iudex Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/iudex_gundyr_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9135,7 +9136,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/milady.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9175,7 +9176,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_battlestaff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9218,7 +9219,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_florett.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9261,7 +9262,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9304,7 +9305,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9347,7 +9348,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_light_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9390,7 +9391,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_messer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9433,7 +9434,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/netherite_sickle.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9476,7 +9477,7 @@
       "type_name": "Night Ritus Dagger",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/night_ritus_dagger.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9517,7 +9518,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/poleblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9557,7 +9558,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/saber.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9597,7 +9598,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/nailbat.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9638,7 +9639,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/steelaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9678,7 +9679,7 @@
       "type_name": "Vitreus",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/vitreus.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9718,7 +9719,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/war_sickle.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9758,7 +9759,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/epicfight_dd/bat.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9798,7 +9799,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farmersdelight/diamond_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9854,7 +9855,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farmersdelight/flint_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9910,7 +9911,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farmersdelight/golden_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -9966,7 +9967,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farmersdelight/iron_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10022,7 +10023,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farmersdelight/netherite_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10078,7 +10079,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/coral_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10134,7 +10135,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/coral_blade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10205,7 +10206,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/coral_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10246,7 +10247,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/coral_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10287,7 +10288,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/coral_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10328,7 +10329,7 @@
       "type_name": "Hookclaws",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/karkinos_claw.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10414,7 +10415,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/seashell_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10470,7 +10471,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/seashell_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10511,7 +10512,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/seashell_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10552,7 +10553,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/seashell_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10593,7 +10594,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/hybrid_aquatic/seashell_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10664,7 +10665,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/immersiveengineering/axe_steel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10745,7 +10746,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/immersiveengineering/hoe_steel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10786,7 +10787,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/immersiveengineering/pickaxe_steel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10877,7 +10878,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/immersiveengineering/shovel_steel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10918,7 +10919,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/immersiveengineering/sword_steel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -10974,7 +10975,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/amethyst_rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11060,7 +11061,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/artificer_cane.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11085,7 +11086,7 @@
       "type_name": "Crossbow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/autoloader_crossbow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -11110,7 +11111,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/boreal_blade.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11135,7 +11136,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/claymore.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11160,7 +11161,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/decrepit_scythe.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11185,7 +11186,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/graybeard_staff.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11210,7 +11211,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/hellrazor.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11235,7 +11236,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/ice_staff.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11260,7 +11261,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/keeper_flamberge.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11316,7 +11317,7 @@
       "type_name": "Hollow Longsword",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/legionnaire_flamberge.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11372,7 +11373,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/magehunter.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11428,7 +11429,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/misery.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11453,7 +11454,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/pyrium_staff.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11478,7 +11479,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/lightning_rod.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11503,7 +11504,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/spellbreaker.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11559,7 +11560,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/blood_staff.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Explicit native compatibility JSON (Iron Spells X Epic Fight). ",
@@ -11584,7 +11585,7 @@
       "type_name": "Orbit",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/irons_spellbooks/twilight_gale.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11655,7 +11656,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11711,7 +11712,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11797,7 +11798,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11853,7 +11854,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -11939,7 +11940,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12025,7 +12026,7 @@
       "type_name": "Great Hammer",
       "type_family": "TNK",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12081,7 +12082,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12152,7 +12153,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12208,7 +12209,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12264,7 +12265,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12350,7 +12351,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12406,7 +12407,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12477,7 +12478,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12563,7 +12564,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12619,7 +12620,7 @@
       "type_name": "Orbit",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/fiery/warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12675,7 +12676,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12731,7 +12732,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12817,7 +12818,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12873,7 +12874,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -12959,7 +12960,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13045,7 +13046,7 @@
       "type_name": "Great Hammer",
       "type_family": "TNK",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13101,7 +13102,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13172,7 +13173,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13228,7 +13229,7 @@
       "type_name": "Hollow Longsword",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13284,7 +13285,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13370,7 +13371,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13426,7 +13427,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13497,7 +13498,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13583,7 +13584,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13639,7 +13640,7 @@
       "type_name": "Orbit",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/ironwood/warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13695,7 +13696,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13751,7 +13752,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13837,7 +13838,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13893,7 +13894,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -13979,7 +13980,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14065,7 +14066,7 @@
       "type_name": "Great Hammer",
       "type_family": "TNK",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14121,7 +14122,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14192,7 +14193,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14248,7 +14249,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14304,7 +14305,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14390,7 +14391,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14446,7 +14447,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14517,7 +14518,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14603,7 +14604,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14659,7 +14660,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/knightmetal/warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14715,7 +14716,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14771,7 +14772,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14857,7 +14858,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14913,7 +14914,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -14999,7 +15000,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15085,7 +15086,7 @@
       "type_name": "Great Hammer",
       "type_family": "TNK",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15141,7 +15142,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15212,7 +15213,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15268,7 +15269,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15324,7 +15325,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15410,7 +15411,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15466,7 +15467,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15537,7 +15538,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15623,7 +15624,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15679,7 +15680,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/knavesneeds/twilightforest/steeleaf/warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15735,7 +15736,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/axe_of_lightning.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15791,7 +15792,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/buckler_of_annihilation.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -15816,7 +15817,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/chorus_blade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15872,7 +15873,7 @@
       "type_name": "No explicit mapping",
       "type_family": "Unassigned",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/chorus_cannon.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Registered in the installed mod. No explicit Epic Fight capability was verified for this item.",
@@ -15895,7 +15896,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/dinosaur_bone_club.png",
       "bonuses": [
         {
           "style": "Common",
@@ -15951,7 +15952,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/dinosaur_bone_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -15976,7 +15977,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/enderitium_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16032,7 +16033,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/enderitium_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16073,7 +16074,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/enderitium_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16114,7 +16115,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/enderitium_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16155,7 +16156,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/enderitium_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16211,7 +16212,7 @@
       "type_name": "Clawed Gauntle",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/fiery_jaw.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16297,7 +16298,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/frostbitten_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -16322,7 +16323,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/golden_halbert.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16393,7 +16394,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/knights_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16449,7 +16450,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/monstrous_anchor.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16535,7 +16536,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/mossy_hammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16591,7 +16592,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/resurrected_javelin.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16662,7 +16663,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/sharp_battle_axe.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -16685,7 +16686,7 @@
       "type_name": "Bonecutting Saw",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/shattered_greatsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16741,7 +16742,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/shulker_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -16766,7 +16767,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/somber_key.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16807,7 +16808,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/soul_great_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16863,7 +16864,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/spiky_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -16888,7 +16889,7 @@
       "type_name": "Moonless",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/the_great_frost.png",
       "bonuses": [
         {
           "style": "Common",
@@ -16944,7 +16945,7 @@
       "type_name": "Eclipse",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/the_tesseract.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17000,7 +17001,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/void_sword.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -17023,7 +17024,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/wand_of_clouds.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17079,7 +17080,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/legendary_monsters/withered_scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17135,7 +17136,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/bakery/bread_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17191,7 +17192,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/bakery/rolling_pin.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17232,7 +17233,7 @@
       "type_name": "Greatsword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/bakery/small_cooking_pot.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17273,7 +17274,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farm_and_charm/diamond_cleaver.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17329,7 +17330,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farm_and_charm/iron_cleaver.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17385,7 +17386,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farm_and_charm/netherite_cleaver.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17441,7 +17442,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/farm_and_charm/pitchfork.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17512,7 +17513,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/bow.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17551,7 +17552,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/copper_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17607,7 +17608,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/copper_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17648,7 +17649,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/copper_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -17671,7 +17672,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/copper_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17727,7 +17728,7 @@
       "type_name": "Crossbow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/crossbow.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17766,7 +17767,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/diamond_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17809,7 +17810,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/diamond_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17848,7 +17849,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/diamond_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17888,7 +17889,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/diamond_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17927,7 +17928,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/diamond_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -17950,7 +17951,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/diamond_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -17993,7 +17994,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/golden_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18036,7 +18037,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/golden_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18075,7 +18076,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/golden_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18114,7 +18115,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/golden_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18153,7 +18154,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/golden_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -18176,7 +18177,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/golden_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18219,7 +18220,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/iron_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18262,7 +18263,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/iron_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18301,7 +18302,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/iron_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18341,7 +18342,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/iron_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18380,7 +18381,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/iron_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -18403,7 +18404,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/iron_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18446,7 +18447,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/mace.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18486,7 +18487,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/netherite_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18529,7 +18530,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/netherite_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18569,7 +18570,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/netherite_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18609,7 +18610,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/netherite_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18649,7 +18650,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/netherite_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -18672,7 +18673,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/netherite_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18738,7 +18739,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/stone_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18781,7 +18782,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/stone_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18820,7 +18821,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/stone_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18860,7 +18861,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/stone_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18899,7 +18900,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/stone_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -18922,7 +18923,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/stone_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -18965,7 +18966,7 @@
       "type_name": "Trident",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/trident.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19005,7 +19006,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/wooden_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19048,7 +19049,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/wooden_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19087,7 +19088,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/wooden_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19126,7 +19127,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/wooden_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19165,7 +19166,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/wooden_spear.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "Automatic keyword match; not a pack capability override. ",
@@ -19188,7 +19189,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/minecraft/wooden_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19233,7 +19234,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/mowziesmobs/blowgun.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -19258,7 +19259,7 @@
       "type_name": "Earthrend Gauntlet",
       "type_family": "TNK",
       "status": "included",
-      "icon": null,
+      "icon": "icons/mowziesmobs/earthrend_gauntlet.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19327,7 +19328,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/mowziesmobs/naga_fang_dagger.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -19398,7 +19399,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/mowziesmobs/sculptor_staff.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19453,7 +19454,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/mowziesmobs/spear.png",
       "bonuses": [
         {
           "style": "One Hand",
@@ -19519,7 +19520,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/mowziesmobs/wrought_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19574,7 +19575,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/arcanethyst.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19637,7 +19638,7 @@
       "type_name": "Eclipse",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/awakened_lichblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19700,7 +19701,7 @@
       "type_name": "Blood Ritus Dagger",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/bloodwake.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19763,7 +19764,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/bramblethorn.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19826,7 +19827,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/brimstone_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19889,7 +19890,7 @@
       "type_name": "Vitreus",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/caelestis.png",
       "bonuses": [
         {
           "style": "Common",
@@ -19952,7 +19953,7 @@
       "type_name": "Hookclaws",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/chompolotl.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20015,7 +20016,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/dawnquiver.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20078,7 +20079,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/decaying_relic.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20141,7 +20142,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20202,7 +20203,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20293,7 +20294,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20354,7 +20355,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20415,7 +20416,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20506,7 +20507,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20567,7 +20568,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20643,7 +20644,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20704,7 +20705,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20765,7 +20766,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20826,7 +20827,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20887,7 +20888,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -20963,7 +20964,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21054,7 +21055,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21115,7 +21116,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/diamond_warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21176,7 +21177,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/dormant_relic.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21239,7 +21240,7 @@
       "type_name": "Nova",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/dreadwhisper.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21302,7 +21303,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/emberblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21365,7 +21366,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/emberlash.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21428,7 +21429,7 @@
       "type_name": "Vitreus",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/enigma.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21491,7 +21492,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/flamewind.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21554,7 +21555,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/frostfall.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21647,7 +21648,7 @@
       "type_name": "Agony",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gloampiercer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21710,7 +21711,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21771,7 +21772,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21862,7 +21863,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -21923,7 +21924,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22014,7 +22015,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22105,7 +22106,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22166,7 +22167,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22242,7 +22243,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22303,7 +22304,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22364,7 +22365,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22455,7 +22456,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22516,7 +22517,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22592,7 +22593,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22683,7 +22684,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22744,7 +22745,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/gold_warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22805,7 +22806,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/harbinger.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22868,7 +22869,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/hearthflame.png",
       "bonuses": [
         {
           "style": "Common",
@@ -22931,7 +22932,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/hiveheart.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23024,7 +23025,7 @@
       "type_name": "Orbit",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/icewhisper.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23087,7 +23088,7 @@
       "type_name": "Agony",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/ionbound_stormscale.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23150,7 +23151,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23211,7 +23212,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23302,7 +23303,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23363,7 +23364,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23454,7 +23455,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23545,7 +23546,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23606,7 +23607,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23682,7 +23683,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23743,7 +23744,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23804,7 +23805,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23895,7 +23896,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -23956,7 +23957,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24032,7 +24033,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24123,7 +24124,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24184,7 +24185,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/iron_warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24245,7 +24246,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/livyatan.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24308,7 +24309,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/toxic_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24371,7 +24372,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/magiblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24434,7 +24435,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/magiscythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24512,7 +24513,7 @@
       "type_name": "Orbit",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/magispear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24575,7 +24576,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/mjolnir.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24668,7 +24669,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/molten_edge.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24761,7 +24762,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24822,7 +24823,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24913,7 +24914,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -24974,7 +24975,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25065,7 +25066,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25156,7 +25157,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25217,7 +25218,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25293,7 +25294,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25354,7 +25355,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25415,7 +25416,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25506,7 +25507,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25567,7 +25568,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25643,7 +25644,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25734,7 +25735,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25795,7 +25796,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/netherite_warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25856,7 +25857,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/ribboncleaver.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25919,7 +25920,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/riftmane.png",
       "bonuses": [
         {
           "style": "Common",
@@ -25982,7 +25983,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/righteous_relic.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26045,7 +26046,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_chakram.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26106,7 +26107,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26197,7 +26198,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_cutlass.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26258,7 +26259,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_glaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26349,7 +26350,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26440,7 +26441,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_greathammer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26501,7 +26502,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_halberd.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26577,7 +26578,7 @@
       "type_name": "Uchigatana",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_katana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26638,7 +26639,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26699,7 +26700,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_rapier.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26790,7 +26791,7 @@
       "type_name": "Dagger",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_sai.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26851,7 +26852,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_scythe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -26927,7 +26928,7 @@
       "type_name": "Spear",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_spear.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27018,7 +27019,7 @@
       "type_name": "Battlestaff Amethyst",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_twinblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27079,7 +27080,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/runic_warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27140,7 +27141,7 @@
       "type_name": "Florett",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/shadowsting.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27233,7 +27234,7 @@
       "type_name": "Eclipse",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/slumbering_lichblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27296,7 +27297,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/soulpyre.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27389,7 +27390,7 @@
       "type_name": "Torment",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/soulkeeper.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27452,7 +27453,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/soulrender.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27545,7 +27546,7 @@
       "type_name": "Pole Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/soulstalker.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27608,7 +27609,7 @@
       "type_name": "Night Ritus Dagger",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/soulstealer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27671,7 +27672,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/stars_edge.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27734,7 +27735,7 @@
       "type_name": "Battlestaff",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/storms_edge.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27797,7 +27798,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/stormbringer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27860,7 +27861,7 @@
       "type_name": "Agony",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/stormscale.png",
       "bonuses": [
         {
           "style": "Common",
@@ -27953,7 +27954,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/sunfire.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28016,7 +28017,7 @@
       "type_name": "Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/sword_on_a_stick.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28109,7 +28110,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/tainted_relic.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28172,7 +28173,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/tempest.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28235,7 +28236,7 @@
       "type_name": "Bonecutting Saw",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/the_devourer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28298,7 +28299,7 @@
       "type_name": "Hollow Longsword",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/watcher_claymore.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28361,7 +28362,7 @@
       "type_name": "Iudex Halberd",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/thunderbrand.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28424,7 +28425,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/twisted_blade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28487,7 +28488,7 @@
       "type_name": "Eclipse",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/waking_lichblade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28550,7 +28551,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/watching_warglaive.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28613,7 +28614,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/waxweaver.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28676,7 +28677,7 @@
       "type_name": "Backhand Blade",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/whisperwind.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28739,7 +28740,7 @@
       "type_name": "Agony",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/wickpiercer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28802,7 +28803,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/wraithfang.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28865,7 +28866,7 @@
       "type_name": "Herb Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/simplyswords/wraithmaw.png",
       "bonuses": [
         {
           "style": "Common",
@@ -28928,7 +28929,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/supplementaries/wrench.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29042,7 +29043,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/thaumaturgetinker/ichor_shield_gem.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -29261,7 +29262,7 @@
       "type_name": "Shield",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/thaumaturgetinker/ichor_shield.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -29359,7 +29360,7 @@
       "type_name": "Saber",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/candy_cane_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29415,7 +29416,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/enchanted_dart_shooter.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -29440,7 +29441,7 @@
       "type_name": "Moonless",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/flaming_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29496,7 +29497,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/golden_dart_shooter.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -29521,7 +29522,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/gravitite_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29577,7 +29578,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/gravitite_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29618,7 +29619,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/gravitite_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29659,7 +29660,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/gravitite_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29700,7 +29701,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/gravitite_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29756,7 +29757,7 @@
       "type_name": "Nailbat",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/hammer_of_kingbdogz.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29812,7 +29813,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/holy_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29868,7 +29869,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/holystone_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29924,7 +29925,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/holystone_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -29965,7 +29966,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/holystone_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30006,7 +30007,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/holystone_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30047,7 +30048,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/holystone_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30103,7 +30104,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/lightning_knife.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30159,7 +30160,7 @@
       "type_name": "Vitreus",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/lightning_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30215,7 +30216,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/phoenix_bow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -30240,7 +30241,7 @@
       "type_name": "Knife",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/pig_slayer.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30296,7 +30297,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/poison_dart_shooter.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -30321,7 +30322,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/skyroot_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30377,7 +30378,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/skyroot_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30418,7 +30419,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/skyroot_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30459,7 +30460,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/skyroot_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30500,7 +30501,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/skyroot_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30556,7 +30557,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/valkyrie_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30612,7 +30613,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/valkyrie_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30653,7 +30654,7 @@
       "type_name": "Blackstar",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/valkyrie_lance.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30709,7 +30710,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/valkyrie_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30750,7 +30751,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/valkyrie_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30791,7 +30792,7 @@
       "type_name": "Moonless",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/vampire_blade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30847,7 +30848,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/zanite_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30903,7 +30904,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/zanite_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30944,7 +30945,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/zanite_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -30985,7 +30986,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/zanite_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31026,7 +31027,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/aether/zanite_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31082,7 +31083,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/the_beyond/brittle_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31138,7 +31139,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/the_beyond/brittle_hoe.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -31163,7 +31164,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/the_beyond/brittle_pickaxe.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -31188,7 +31189,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/the_beyond/brittle_shovel.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -31213,7 +31214,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/the_beyond/brittle_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31269,7 +31270,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/automaton_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31325,7 +31326,7 @@
       "type_name": "Vitreus",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/igneus_laser_blade.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31381,7 +31382,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/igneus_war_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31437,7 +31438,7 @@
       "type_name": "Moonless",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/inky_sword_of_the_sky.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31493,7 +31494,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/pale_sword_of_the_sky.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31549,7 +31550,7 @@
       "type_name": "Light Greatsword",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/pearlecent_sword_of_the_sky.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31605,7 +31606,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/sword_of_the_sky.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31661,7 +31662,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/skylands/verdant_sword_of_the_sky.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31717,7 +31718,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/diamond_minotaur_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31773,7 +31774,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ender_bow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -31798,7 +31799,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/fiery_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31839,7 +31840,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/fiery_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -31992,7 +31993,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/glass_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32048,7 +32049,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/gold_minotaur_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32104,7 +32105,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ice_bow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -32129,7 +32130,7 @@
       "type_name": "Vitreus",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ice_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32185,7 +32186,7 @@
       "type_name": "Axe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ironwood_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32241,7 +32242,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ironwood_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32282,7 +32283,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ironwood_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32323,7 +32324,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ironwood_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32364,7 +32365,7 @@
       "type_name": "Sword",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/ironwood_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32420,7 +32421,7 @@
       "type_name": "Steel Axe",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/knightmetal_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32476,7 +32477,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/knightmetal_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32542,7 +32543,7 @@
       "type_name": "Hollow Longsword",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/knightmetal_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32598,7 +32599,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/mazebreaker_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32639,7 +32640,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/seeker_bow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -32664,7 +32665,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/steeleaf_axe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32720,7 +32721,7 @@
       "type_name": "Hoe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/steeleaf_hoe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32761,7 +32762,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/steeleaf_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32802,7 +32803,7 @@
       "type_name": "Shovel",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/steeleaf_shovel.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32843,7 +32844,7 @@
       "type_name": "Milady",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/steeleaf_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -32899,7 +32900,7 @@
       "type_name": "Bow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/twilightforest/triple_bow.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -32924,7 +32925,7 @@
       "type_name": "Agony",
       "type_family": "WoM",
       "status": "provisional",
-      "icon": null,
+      "icon": "icons/wom/agony.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -32964,7 +32965,7 @@
       "type_name": "Antitheus",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/antitheus.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33005,7 +33006,7 @@
       "type_name": "Blackstar",
       "type_family": "WoM Plus",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/blackstar.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33046,7 +33047,7 @@
       "type_name": "Clawed Gauntle",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/jabberwocky.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33086,7 +33087,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/diamond_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33129,7 +33130,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/diamond_staff.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -33187,7 +33188,7 @@
       "type_name": "Ender Blaster",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/ender_blaster.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33227,7 +33228,7 @@
       "type_name": "Evil Tachi Reift",
       "type_family": "WoM Plus",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/evil_tachi.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33268,7 +33269,7 @@
       "type_name": "Gesetz",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/gesetz.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33309,7 +33310,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/golden_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33352,7 +33353,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/golden_staff.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -33410,7 +33411,7 @@
       "type_name": "Herrscher",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/herrscher.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33450,7 +33451,7 @@
       "type_name": "Hollow Longsword",
       "type_family": "WoM Plus",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/hollow_longsword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33493,7 +33494,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/iron_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33536,7 +33537,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/iron_staff.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -33594,7 +33595,7 @@
       "type_name": "Moonless",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/moonless.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33634,7 +33635,7 @@
       "type_name": "Napoleon",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/napoleon.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -33674,7 +33675,7 @@
       "type_name": "Greataxe",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/netherite_greataxe.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33717,7 +33718,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/netherite_staff.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -33775,7 +33776,7 @@
       "type_name": "Nova",
       "type_family": "WoM Plus",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/nova.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33815,7 +33816,7 @@
       "type_name": "Orbit",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/orbit.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -33855,7 +33856,7 @@
       "type_name": "Ruine",
       "type_family": "WoM",
       "status": "provisional",
-      "icon": null,
+      "icon": "icons/wom/ruine.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33895,7 +33896,7 @@
       "type_name": "Satsujin",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/satsujin.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33935,7 +33936,7 @@
       "type_name": "Solar",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/solar.png",
       "bonuses": [
         {
           "style": "Common",
@@ -33976,7 +33977,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/stone_staff.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -34034,7 +34035,7 @@
       "type_name": "Torment",
       "type_family": "WoM",
       "status": "excluded",
-      "icon": null,
+      "icon": "icons/wom/tormented_mind.png",
       "bonuses": [
         {
           "style": "Common",
@@ -34075,7 +34076,7 @@
       "type_name": "Staff",
       "type_family": "WoM",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wom/wooden_staff.png",
       "bonuses": [
         {
           "style": "Two Hand",
@@ -34133,7 +34134,7 @@
       "type_name": "Crossbow",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/wildernature/blunderbuss.png",
       "bonuses": [],
       "base_stats": null,
       "notes": "",
@@ -34158,7 +34159,7 @@
       "type_name": "Blood Ritus Dagger",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/witchery/arthana.png",
       "bonuses": [
         {
           "style": "Common",
@@ -34214,7 +34215,7 @@
       "type_name": "Messer",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/witchery/cane_sword.png",
       "bonuses": [
         {
           "style": "Common",
@@ -34270,7 +34271,7 @@
       "type_name": "War Sickle",
       "type_family": "Dawn Day",
       "status": "included",
-      "icon": null,
+      "icon": "icons/witchery/death_sickle.png",
       "bonuses": [
         {
           "style": "Common",
@@ -34427,7 +34428,7 @@
       "type_name": "Pickaxe",
       "type_family": "Epic Fight",
       "status": "included",
-      "icon": null,
+      "icon": "icons/witchery/koboldite_pickaxe.png",
       "bonuses": [
         {
           "style": "Common",

@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Check documentation coverage, displayed stats and published catalogue parity."""
 from collections import Counter
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import csv
 import json
 import re
+import struct
 
 PACK=Path(__file__).resolve().parents[1]
 SOURCE=PACK/'handbook-source/current'
+output=PACK/'player-guide'
+icon_root=SOURCE/'assets/weapons'
 catalogue=json.loads((SOURCE/'data/weapons.json').read_text())
 items=catalogue['items'];meta=catalogue['meta']
 assert len(items)==meta['totalEntries']
@@ -45,7 +48,19 @@ for item in items:
             for field in fields:
                 assert row.get(field)==attrs[style].get(field,common.get(field)),(item['id'],style,field)
     if item['icon']:
-        assert (SOURCE/'assets/weapons'/item['icon']).is_file(),item['id']
+        icon=item['icon']
+        assert isinstance(icon,str) and re.fullmatch(r'icons/[a-z0-9_./-]+\.png',icon),item['id']
+        assert not PurePosixPath(icon).is_absolute() and '..'not in PurePosixPath(icon).parts,item['id']
+        source=(icon_root/icon).resolve()
+        assert source.is_relative_to(icon_root.resolve()) and source.is_file(),item['id']
+        image=source.read_bytes()
+        assert len(image)>33 and image[:8]==b'\x89PNG\r\n\x1a\n' and image[12:16]==b'IHDR',item['id']
+        width,height=struct.unpack('>II',image[16:24])
+        assert 0<width<=2048 and 0<height<=2048,(item['id'],width,height)
+        published=output/'assets/weapons'/icon
+        assert published.is_file() and published.read_bytes()==image,('Published icon differs',item['id'])
+icon_count=sum(bool(item['icon'])for item in items)
+if 'iconCount'in meta:assert meta['iconCount']==icon_count
 assert all(not item['id'].startswith('knavesneeds:deeperdarker/resonarium/')for item in items)
 assert all(item['id'].startswith('knavesneeds:twilightforest/')for item in items if item['mod']=='knavesneeds')
 assert 'legendary_monsters:sand_cannon'not in by_id
@@ -57,7 +72,6 @@ assert len(rows)==len(items)
 table=(PACK/'docs/WEAPONS_EN.md').read_text()
 for item in items:
     assert table.count('<code>'+item['id']+'</code>')==1,item['id']
-output=PACK/'player-guide'
 for path in ['data/weapons.json','data/weapon-coverage-audit.json','assets/weapons/weapon-overview.csv',
              'assets/weapons/catalogue.js','assets/weapons/catalogue.css']:
     relative=path.removeprefix('assets/')
@@ -65,5 +79,6 @@ for path in ['data/weapons.json','data/weapon-coverage-audit.json','assets/weapo
     assert published.read_bytes()==(SOURCE/path).read_bytes(),path
 assert (output/'weapons/index.html').exists()
 print(json.dumps({'entries':len(items),'weapons':meta['weaponCount'],'base_item_stats':meta['baseItemStatsCount'],
+                  'item_icons':icon_count,
                   'mapping_counts':dict(mapping_counts),'excluded_wom_items':status_counts['excluded'],
                   'status':'passed'},indent=2))

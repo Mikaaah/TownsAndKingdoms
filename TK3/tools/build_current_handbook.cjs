@@ -20,7 +20,7 @@ const search=[],rendered=[],routes=new Set;
 const groups=[
  ['Start here',[['start/','Your first workshop'],['quests/','Questbook'],['jei/','JEI & Ponder controls'],['servers/','Play together']]],
  ['Build & automate',[['progression/','The ten chapters'],['automation/','Reliable automation'],['recipes/','Construction recipes'],['storage/','AE2 & storage'],['engineering/','Immersive Engineering'],['magic/','Magic & lasers'],['transport/','Transport & Aeronautics'],['nuclear/','Nuclear engineering'],['workshop/','Workshop features'],['trading-hub/','Trading Hub'],['farming/','Farming & building']]],
- ['Character & adventure',[['character/','Your character'],['skills/','Skill tree'],['origins/','Twenty origins'],['titles/','Titles & rewards'],['loot/','Unidentified Loot'],['exploration/','Exploration & combat']]],
+ ['Character & adventure',[['character/','Your character'],['skills/','Skill tree'],['origins/','Twenty origins'],['titles/','Titles & rewards'],['loot/','Unidentified Loot'],['weapons/','Weapon catalogue'],['exploration/','Exploration & combat']]],
  ['Project reference',[['projects/','Modding Hub'],['mods/','Mod inventory'],['mods/comparison/','TK2 → TNK3 projects'],['ponder/','Ponder lesson index'],['changelog/','Beta 1.0 changelog'],['status/','Snapshot & sources'],['credits/','Credits']]],
 ];
 const artFiles=['rotation_mechanism','sealed_mechanism','calculation_mechanism','reinforced_mechanism','industrial_mechanism','arcane_mechanism','eclipse_mechanism'];

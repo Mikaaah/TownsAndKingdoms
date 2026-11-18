@@ -68,7 +68,7 @@
       '<div class="wk-results-header"><p class="wk-count" role="status" aria-live="polite"></p><span>Bonuses, not final damage or DPS</span></div><div class="wk-grid"></div>' +
       '<div class="wk-empty" hidden><strong>No matching equipment.</strong><p>Try a different name or reset the filters.</p><button class="wk-button" type="button" data-reset>Reset filters</button></div>' +
       '<div class="wk-more-wrap"><button class="wk-button" type="button" data-more>Show more weapons</button></div>' +
-      '<p class="wk-footnote">A dash means the value is inherited or absent from this item definition. Type bonuses and in-game item attributes can still apply. Category silhouettes identify equipment classes; they are not weapon renders.</p>' +
+      '<p class="wk-footnote">A dash means the value is inherited or absent from this item definition. Type bonuses and in-game item attributes can still apply. Item artwork uses the pack’s textures and models where available; a category symbol appears when artwork is unavailable.</p>' +
       '<dialog class="wk-dialog" aria-labelledby="wk-detail-title"><div class="wk-dialog-top"><span>WEAPON REFERENCE</span><button type="button" data-close aria-label="Close weapon details">×</button></div><div class="wk-detail"></div></dialog>';
     const form = root.querySelector('form');
     const params = new URLSearchParams(location.search);

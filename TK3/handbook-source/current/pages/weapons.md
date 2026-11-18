@@ -8,6 +8,9 @@ Browse blades, battlestaves, boss weapons and everything between. Compare
 their combat styles and native attribute bonuses, then open a weapon for the
 full breakdown.
 
+Item artwork uses the pack’s textures and models where available. A category
+symbol appears when an item’s artwork is unavailable.
+
 **CB 1.1.2 development catalogue · 18 November 2026 · Minecraft 1.21.1 / NeoForge.**
 This catalogue follows the current combat export; other field-guide chapters
 still describe the Beta 1.0 snapshot.

@@ -85,15 +85,15 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Desolate Dagger**<br><sub><code>alexscaves:desolate_dagger</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.35 | +25 pp |
-| **Dreadbow**<br><sub><code>alexscaves:dreadbow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Extinction Spear**<br><sub><code>alexscaves:extinction_spear</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
-| **Frostmint Spear**<br><sub><code>alexscaves:frostmint_spear</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
-| **Limestone Spear**<br><sub><code>alexscaves:limestone_spear</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
-| **Ortholance**<br><sub><code>alexscaves:ortholance</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
-| **Primitive Club**<br><sub><code>alexscaves:primitive_club</code></sub> | `epicfight_dd:nailbat` | +5 | +0.24 | +60 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/desolate_dagger.png" alt="" width="24" height="24"> **Desolate Dagger**<br><sub><code>alexscaves:desolate_dagger</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/dreadbow.png" alt="" width="24" height="24"> **Dreadbow**<br><sub><code>alexscaves:dreadbow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/extinction_spear.png" alt="" width="24" height="24"> **Extinction Spear**<br><sub><code>alexscaves:extinction_spear</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/frostmint_spear.png" alt="" width="24" height="24"> **Frostmint Spear**<br><sub><code>alexscaves:frostmint_spear</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/limestone_spear.png" alt="" width="24" height="24"> **Limestone Spear**<br><sub><code>alexscaves:limestone_spear</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/ortholance.png" alt="" width="24" height="24"> **Ortholance**<br><sub><code>alexscaves:ortholance</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/primitive_club.png" alt="" width="24" height="24"> **Primitive Club**<br><sub><code>alexscaves:primitive_club</code></sub> | `epicfight_dd:nailbat` | +5 | +0.24 | +60 pp |
 | **Raygun**<br><sub><code>alexscaves:raygun</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Sharpened Candy Cane**<br><sub><code>alexscaves:sharpened_candy_cane</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/sharpened_candy_cane.png" alt="" width="24" height="24"> **Sharpened Candy Cane**<br><sub><code>alexscaves:sharpened_candy_cane</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.22 | +25 pp |
 
 <a id="weapons-combat-ae2"></a>
 ### Applied Energistics 2
@@ -101,12 +101,12 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Certus Quartz Axe**<br><sub><code>ae2:certus_quartz_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
-| **Certus Quartz Sword**<br><sub><code>ae2:certus_quartz_sword</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
-| **Fluix Axe**<br><sub><code>ae2:fluix_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
-| **Fluix Sword**<br><sub><code>ae2:fluix_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
-| **Nether Quartz Axe**<br><sub><code>ae2:nether_quartz_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
-| **Nether Quartz Sword**<br><sub><code>ae2:nether_quartz_sword</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/certus_quartz_axe.png" alt="" width="24" height="24"> **Certus Quartz Axe**<br><sub><code>ae2:certus_quartz_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/certus_quartz_sword.png" alt="" width="24" height="24"> **Certus Quartz Sword**<br><sub><code>ae2:certus_quartz_sword</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/fluix_axe.png" alt="" width="24" height="24"> **Fluix Axe**<br><sub><code>ae2:fluix_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/fluix_sword.png" alt="" width="24" height="24"> **Fluix Sword**<br><sub><code>ae2:fluix_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/nether_quartz_axe.png" alt="" width="24" height="24"> **Nether Quartz Axe**<br><sub><code>ae2:nether_quartz_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/nether_quartz_sword.png" alt="" width="24" height="24"> **Nether Quartz Sword**<br><sub><code>ae2:nether_quartz_sword</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.16 | +16 pp |
 
 <a id="weapons-combat-archaion"></a>
 ### Archaion
@@ -114,8 +114,8 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Echo Mace**<br><sub><code>archaion:echo_mace</code></sub> | `epicfight_dd:nailbat` | +5 | +0.24 | +60 pp |
-| **Echos Grace**<br><sub><code>archaion:echos_grace</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/archaion/echo_mace.png" alt="" width="24" height="24"> **Echo Mace**<br><sub><code>archaion:echo_mace</code></sub> | `epicfight_dd:nailbat` | +5 | +0.24 | +60 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/archaion/echos_grace.png" alt="" width="24" height="24"> **Echos Grace**<br><sub><code>archaion:echos_grace</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
 
 <a id="weapons-combat-ars_nouveau"></a>
 ### Ars Nouveau
@@ -132,12 +132,12 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Dagger**<br><sub><code>block_factorys_bosses:dagger</code></sub> | `epicfight_dd:backhand_blade` | +6 | +0.37 | +28 pp |
-| **Knight Sword**<br><sub><code>block_factorys_bosses:knight_sword</code></sub> | `epicfight_dd:milady` | +6 | +0.27 | +33 pp |
-| **Kraken Trident**<br><sub><code>block_factorys_bosses:kraken_trident</code></sub> | `epicfight:trident` | +6 | +0.27 | +49 pp |
-| **Large Sword**<br><sub><code>block_factorys_bosses:large_sword</code></sub> | `epicfight_dd:eclipse` | +6 | +0.32 | +54 pp |
-| **Pirate Saber**<br><sub><code>block_factorys_bosses:pirate_saber</code></sub> | `epicfight_dd:saber` | +6 | +0.3 | +30 pp |
-| **Warrior Sword**<br><sub><code>block_factorys_bosses:warrior_sword</code></sub> | `epicfight_dd:messer` | +6 | +0.24 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/dagger.png" alt="" width="24" height="24"> **Dagger**<br><sub><code>block_factorys_bosses:dagger</code></sub> | `epicfight_dd:backhand_blade` | +6 | +0.37 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/knight_sword.png" alt="" width="24" height="24"> **Knight Sword**<br><sub><code>block_factorys_bosses:knight_sword</code></sub> | `epicfight_dd:milady` | +6 | +0.27 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/kraken_trident.png" alt="" width="24" height="24"> **Kraken Trident**<br><sub><code>block_factorys_bosses:kraken_trident</code></sub> | `epicfight:trident` | +6 | +0.27 | +49 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/large_sword.png" alt="" width="24" height="24"> **Large Sword**<br><sub><code>block_factorys_bosses:large_sword</code></sub> | `epicfight_dd:eclipse` | +6 | +0.32 | +54 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/pirate_saber.png" alt="" width="24" height="24"> **Pirate Saber**<br><sub><code>block_factorys_bosses:pirate_saber</code></sub> | `epicfight_dd:saber` | +6 | +0.3 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/warrior_sword.png" alt="" width="24" height="24"> **Warrior Sword**<br><sub><code>block_factorys_bosses:warrior_sword</code></sub> | `epicfight_dd:messer` | +6 | +0.24 | +28 pp |
 
 <a id="weapons-combat-cataclysm"></a>
 ### Cataclysm
@@ -147,9 +147,9 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 | --- | --- | ---: | ---: | ---: |
 | **Ancient Spear**<br><sub><code>cataclysm:ancient_spear</code></sub> | `wom:orbit` | +6 | +0.27 | +49 pp |
 | **Astrape**<br><sub><code>cataclysm:astrape</code></sub> | `wom:agony` | +6 | +0.27 | +49 pp |
-| **Athame**<br><sub><code>cataclysm:athame</code></sub> | `epicfight_dd:night_ritus_dagger` | +6 | +0.37 | +28 pp |
-| **Black Steel Axe**<br><sub><code>cataclysm:black_steel_axe</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +30 pp |
-| **Black Steel Sword**<br><sub><code>cataclysm:black_steel_sword</code></sub> | `epicfight_dd:messer` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/athame.png" alt="" width="24" height="24"> **Athame**<br><sub><code>cataclysm:athame</code></sub> | `epicfight_dd:night_ritus_dagger` | +6 | +0.37 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/black_steel_axe.png" alt="" width="24" height="24"> **Black Steel Axe**<br><sub><code>cataclysm:black_steel_axe</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/black_steel_sword.png" alt="" width="24" height="24"> **Black Steel Sword**<br><sub><code>cataclysm:black_steel_sword</code></sub> | `epicfight_dd:messer` | +3 | +0.18 | +19 pp |
 | **Brontes**<br><sub><code>cataclysm:brontes</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.26 | +64 pp |
 | **Ceraunus**<br><sub><code>cataclysm:ceraunus</code></sub> | `womplus:greataxe` | +6 | +0.3 | +59 pp |
 | **Coral Bardiche**<br><sub><code>cataclysm:coral_bardiche</code></sub> | `epicfight_dd:halberd` | +6 | +0.27 | +49 pp |
@@ -159,7 +159,7 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 | **Gauntlet Of Guard**<br><sub><code>cataclysm:gauntlet_of_guard</code></sub> | `epicfight_dd:iron_fist` | +6 | +0.32 | +28 pp |
 | **Gauntlet Of Maelstrom**<br><sub><code>cataclysm:gauntlet_of_maelstrom</code></sub> | `epicfight_dd:iron_fist` | +6 | +0.32 | +28 pp |
 | **Infernal Forge**<br><sub><code>cataclysm:infernal_forge</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.26 | +64 pp |
-| **Khopesh**<br><sub><code>cataclysm:khopesh</code></sub> | `epicfight_dd:saber` | +6 | +0.3 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/khopesh.png" alt="" width="24" height="24"> **Khopesh**<br><sub><code>cataclysm:khopesh</code></sub> | `epicfight_dd:saber` | +6 | +0.3 | +30 pp |
 | **Laser Gatling**<br><sub><code>cataclysm:laser_gatling</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
 | **Meat Shredder**<br><sub><code>cataclysm:meat_shredder</code></sub> | `womplus:greataxe` | +6 | +0.3 | +59 pp |
 | **Soul Render**<br><sub><code>cataclysm:soul_render</code></sub> | `epicfight_dd:pole_blade` | +6 | +0.3 | +59 pp |
@@ -178,14 +178,14 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Bloom Stone Staff**<br><sub><code>cataclysm_spellbooks:bloom_stone_staff</code></sub> | `epicfight_dd:battlestaff_wood` | +6 | +0.26 | +28 pp |
-| **Coral Staff**<br><sub><code>cataclysm_spellbooks:coral_staff</code></sub> | `epicfight_dd:battlestaff` | +6 | +0.26 | +28 pp |
-| **Fake Wudjets Staff**<br><sub><code>cataclysm_spellbooks:fake_wudjets_staff</code></sub> | `epicfight_dd:battlestaff_amethyst` | +6 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm_spellbooks/bloom_stone_staff.png" alt="" width="24" height="24"> **Bloom Stone Staff**<br><sub><code>cataclysm_spellbooks:bloom_stone_staff</code></sub> | `epicfight_dd:battlestaff_wood` | +6 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm_spellbooks/coral_staff.png" alt="" width="24" height="24"> **Coral Staff**<br><sub><code>cataclysm_spellbooks:coral_staff</code></sub> | `epicfight_dd:battlestaff` | +6 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm_spellbooks/fake_wudjets_staff.png" alt="" width="24" height="24"> **Fake Wudjets Staff**<br><sub><code>cataclysm_spellbooks:fake_wudjets_staff</code></sub> | `epicfight_dd:battlestaff_amethyst` | +6 | +0.26 | +28 pp |
 | **Hellfire Forge**<br><sub><code>cataclysm_spellbooks:hellfire_forge</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.26 | +64 pp |
-| **Monstrous Flamberge**<br><sub><code>cataclysm_spellbooks:monstrous_flamberge</code></sub> | `wom:ruine` | +6 | +0.27 | +33 pp |
-| **Soul Brazier**<br><sub><code>cataclysm_spellbooks:soul_brazier</code></sub> | `epicfight_dd:battlestaff_amethyst` | +6 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm_spellbooks/monstrous_flamberge.png" alt="" width="24" height="24"> **Monstrous Flamberge**<br><sub><code>cataclysm_spellbooks:monstrous_flamberge</code></sub> | `wom:ruine` | +6 | +0.27 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm_spellbooks/soul_brazier.png" alt="" width="24" height="24"> **Soul Brazier**<br><sub><code>cataclysm_spellbooks:soul_brazier</code></sub> | `epicfight_dd:battlestaff_amethyst` | +6 | +0.26 | +28 pp |
 | **Spirit Sunderer**<br><sub><code>cataclysm_spellbooks:spirit_sunderer</code></sub> | `wom:staff` | +6 | +0.26 | +28 pp |
-| **Void Staff**<br><sub><code>cataclysm_spellbooks:void_staff</code></sub> | `epicfight_dd:battlestaff_amethyst` | +6 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm_spellbooks/void_staff.png" alt="" width="24" height="24"> **Void Staff**<br><sub><code>cataclysm_spellbooks:void_staff</code></sub> | `epicfight_dd:battlestaff_amethyst` | +6 | +0.26 | +28 pp |
 
 <a id="weapons-combat-celestisynth"></a>
 ### Celestisynth
@@ -193,14 +193,14 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Aquaflora**<br><sub><code>celestisynth:aquaflora</code></sub> | `epicfight_dd:milady` | +6 | +0.24 | +28 pp |
-| **Breezebreaker**<br><sub><code>celestisynth:breezebreaker</code></sub> | `epicfight_dd:florett` | +6 | +0.3 | +30 pp |
-| **Crescentia**<br><sub><code>celestisynth:crescentia</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.24 | +40 pp |
-| **Frostbound**<br><sub><code>celestisynth:frostbound</code></sub> | `epicfight_dd:war_sickle` | +6 | +0.26 | +28 pp |
-| **Keres**<br><sub><code>celestisynth:keres</code></sub> | `epicfight_dd:pole_blade` | +6 | +0.27 | +49 pp |
-| **Poltergeist**<br><sub><code>celestisynth:poltergeist</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.3 | +59 pp |
-| **Rainfall Serenity**<br><sub><code>celestisynth:rainfall_serenity</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Solaris**<br><sub><code>celestisynth:solaris</code></sub> | `epicfight_dd:messer` | +6 | +0.37 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/aquaflora.png" alt="" width="24" height="24"> **Aquaflora**<br><sub><code>celestisynth:aquaflora</code></sub> | `epicfight_dd:milady` | +6 | +0.24 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/breezebreaker.png" alt="" width="24" height="24"> **Breezebreaker**<br><sub><code>celestisynth:breezebreaker</code></sub> | `epicfight_dd:florett` | +6 | +0.3 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/crescentia.png" alt="" width="24" height="24"> **Crescentia**<br><sub><code>celestisynth:crescentia</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.24 | +40 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/frostbound.png" alt="" width="24" height="24"> **Frostbound**<br><sub><code>celestisynth:frostbound</code></sub> | `epicfight_dd:war_sickle` | +6 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/keres.png" alt="" width="24" height="24"> **Keres**<br><sub><code>celestisynth:keres</code></sub> | `epicfight_dd:pole_blade` | +6 | +0.27 | +49 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/poltergeist.png" alt="" width="24" height="24"> **Poltergeist**<br><sub><code>celestisynth:poltergeist</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.3 | +59 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/rainfall_serenity.png" alt="" width="24" height="24"> **Rainfall Serenity**<br><sub><code>celestisynth:rainfall_serenity</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/celestisynth/solaris.png" alt="" width="24" height="24"> **Solaris**<br><sub><code>celestisynth:solaris</code></sub> | `epicfight_dd:messer` | +6 | +0.37 | +28 pp |
 
 <a id="weapons-combat-create"></a>
 ### Create
@@ -208,8 +208,8 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Cardboard Sword**<br><sub><code>create:cardboard_sword</code></sub> | `epicfight:sword` | +1 | +0.12 | +10 pp |
-| **Potato Cannon**<br><sub><code>create:potato_cannon</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/create/cardboard_sword.png" alt="" width="24" height="24"> **Cardboard Sword**<br><sub><code>create:cardboard_sword</code></sub> | `epicfight:sword` | +1 | +0.12 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/create/potato_cannon.png" alt="" width="24" height="24"> **Potato Cannon**<br><sub><code>create:potato_cannon</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
 
 <a id="weapons-combat-createdieselgenerators"></a>
 ### Create: Diesel Generators
@@ -217,8 +217,8 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Chemical Sprayer**<br><sub><code>createdieselgenerators:chemical_sprayer</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
-| **Chemical Sprayer Lighter**<br><sub><code>createdieselgenerators:chemical_sprayer_lighter</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/createdieselgenerators/chemical_sprayer.png" alt="" width="24" height="24"> **Chemical Sprayer**<br><sub><code>createdieselgenerators:chemical_sprayer</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/createdieselgenerators/chemical_sprayer_lighter.png" alt="" width="24" height="24"> **Chemical Sprayer Lighter**<br><sub><code>createdieselgenerators:chemical_sprayer_lighter</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
 
 <a id="weapons-combat-deep_aether"></a>
 ### Deep Aether
@@ -226,13 +226,13 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Blade Of Luck**<br><sub><code>deep_aether:blade_of_luck</code></sub> | `epicfight_dd:milady` | +5 | +0.22 | +25 pp |
-| **Skyjade Axe**<br><sub><code>deep_aether:skyjade_axe</code></sub> | `epicfight:axe` | +3 | +0.2 | +30 pp |
-| **Skyjade Sword**<br><sub><code>deep_aether:skyjade_sword</code></sub> | `epicfight_dd:messer` | +3 | +0.18 | +19 pp |
-| **Storm Bow**<br><sub><code>deep_aether:storm_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Storm Sword**<br><sub><code>deep_aether:storm_sword</code></sub> | `wom:nova` | +5 | +0.22 | +25 pp |
-| **Stratus Axe**<br><sub><code>deep_aether:stratus_axe</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +34 pp |
-| **Stratus Sword**<br><sub><code>deep_aether:stratus_sword</code></sub> | `wom:ruine` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/blade_of_luck.png" alt="" width="24" height="24"> **Blade Of Luck**<br><sub><code>deep_aether:blade_of_luck</code></sub> | `epicfight_dd:milady` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/skyjade_axe.png" alt="" width="24" height="24"> **Skyjade Axe**<br><sub><code>deep_aether:skyjade_axe</code></sub> | `epicfight:axe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/skyjade_sword.png" alt="" width="24" height="24"> **Skyjade Sword**<br><sub><code>deep_aether:skyjade_sword</code></sub> | `epicfight_dd:messer` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/storm_bow.png" alt="" width="24" height="24"> **Storm Bow**<br><sub><code>deep_aether:storm_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/storm_sword.png" alt="" width="24" height="24"> **Storm Sword**<br><sub><code>deep_aether:storm_sword</code></sub> | `wom:nova` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/stratus_axe.png" alt="" width="24" height="24"> **Stratus Axe**<br><sub><code>deep_aether:stratus_axe</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/stratus_sword.png" alt="" width="24" height="24"> **Stratus Sword**<br><sub><code>deep_aether:stratus_sword</code></sub> | `wom:ruine` | +4 | +0.2 | +22 pp |
 
 <a id="weapons-combat-deeperdarker"></a>
 ### Deeper and Darker
@@ -240,10 +240,10 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Resonarium Axe**<br><sub><code>deeperdarker:resonarium_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
-| **Resonarium Sword**<br><sub><code>deeperdarker:resonarium_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
-| **Warden Axe**<br><sub><code>deeperdarker:warden_axe</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +34 pp |
-| **Warden Sword**<br><sub><code>deeperdarker:warden_sword</code></sub> | `womplus:hollow_longsword` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/resonarium_axe.png" alt="" width="24" height="24"> **Resonarium Axe**<br><sub><code>deeperdarker:resonarium_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/resonarium_sword.png" alt="" width="24" height="24"> **Resonarium Sword**<br><sub><code>deeperdarker:resonarium_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/warden_axe.png" alt="" width="24" height="24"> **Warden Axe**<br><sub><code>deeperdarker:warden_axe</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/warden_sword.png" alt="" width="24" height="24"> **Warden Sword**<br><sub><code>deeperdarker:warden_sword</code></sub> | `womplus:hollow_longsword` | +4 | +0.2 | +22 pp |
 
 <a id="weapons-combat-epicfight"></a>
 ### Epic Fight
@@ -251,39 +251,39 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Bokken**<br><sub><code>epicfight:bokken</code></sub> | `epicfight:bokken` | +1 | +0.1 | +5 pp |
-| **Diamond Dagger**<br><sub><code>epicfight:diamond_dagger</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 … +22 pp |
-| **Diamond Greatsword**<br><sub><code>epicfight:diamond_greatsword</code></sub> | `epicfight:greatsword` | +3 | +0.26 | +42 pp |
-| **Diamond Longsword**<br><sub><code>epicfight:diamond_longsword</code></sub> | `epicfight:longsword` | +3 | +0.21 | +24 pp |
-| **Diamond Spear**<br><sub><code>epicfight:diamond_spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
-| **Diamond Tachi**<br><sub><code>epicfight:diamond_tachi</code></sub> | `epicfight:tachi` | +3 | +0.24 | +24 pp |
-| **Glove**<br><sub><code>epicfight:glove</code></sub> | `epicfight:fist` | +1.5 | +0.15 | +8 pp |
-| **Golden Dagger**<br><sub><code>epicfight:golden_dagger</code></sub> | `epicfight:dagger` | +1.5 | +0.27 | +13 pp |
-| **Golden Greatsword**<br><sub><code>epicfight:golden_greatsword</code></sub> | `epicfight:greatsword` | +1.5 | +0.22 | +34 pp |
-| **Golden Longsword**<br><sub><code>epicfight:golden_longsword</code></sub> | `epicfight:longsword` | +1.5 | +0.2 | +18 pp |
-| **Golden Spear**<br><sub><code>epicfight:golden_spear</code></sub> | `epicfight:spear` | +1.5 | +0.17 … +0.2 | +29 pp |
-| **Golden Tachi**<br><sub><code>epicfight:golden_tachi</code></sub> | `epicfight:tachi` | +1.5 | +0.2 | +15 pp |
-| **Iron Dagger**<br><sub><code>epicfight:iron_dagger</code></sub> | `epicfight:dagger` | +2 | +0.29 | +16 … +18 pp |
-| **Iron Greatsword**<br><sub><code>epicfight:iron_greatsword</code></sub> | `epicfight:greatsword` | +2 | +0.24 | +38 pp |
-| **Iron Longsword**<br><sub><code>epicfight:iron_longsword</code></sub> | `epicfight:longsword` | +2 | +0.19 | +21 pp |
-| **Iron Spear**<br><sub><code>epicfight:iron_spear</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
-| **Iron Tachi**<br><sub><code>epicfight:iron_tachi</code></sub> | `epicfight:tachi` | +2 | +0.22 | +18 pp |
-| **Netherite Dagger**<br><sub><code>epicfight:netherite_dagger</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 … +28 pp |
-| **Netherite Greatsword**<br><sub><code>epicfight:netherite_greatsword</code></sub> | `epicfight:greatsword` | +4 | +0.28 | +50 pp |
-| **Netherite Longsword**<br><sub><code>epicfight:netherite_longsword</code></sub> | `epicfight:longsword` | +4 | +0.23 | +30 pp |
-| **Netherite Spear**<br><sub><code>epicfight:netherite_spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
-| **Netherite Tachi**<br><sub><code>epicfight:netherite_tachi</code></sub> | `epicfight:tachi` | +4 | +0.26 | +30 pp |
-| **Stone Dagger**<br><sub><code>epicfight:stone_dagger</code></sub> | `epicfight:dagger` | +1.5 | +0.27 | +13 pp |
-| **Stone Greatsword**<br><sub><code>epicfight:stone_greatsword</code></sub> | `epicfight:greatsword` | +1.5 | +0.22 | +34 pp |
-| **Stone Longsword**<br><sub><code>epicfight:stone_longsword</code></sub> | `epicfight:longsword` | +1.5 | +0.17 | +18 pp |
-| **Stone Spear**<br><sub><code>epicfight:stone_spear</code></sub> | `epicfight:spear` | +1.5 | +0.17 | +29 pp |
-| **Stone Tachi**<br><sub><code>epicfight:stone_tachi</code></sub> | `epicfight:tachi` | +1.5 | +0.2 | +15 pp |
-| **Uchigatana**<br><sub><code>epicfight:uchigatana</code></sub> | `epicfight:uchigatana` | +3 | +0.15 | +20 pp |
-| **Wooden Dagger**<br><sub><code>epicfight:wooden_dagger</code></sub> | `epicfight:dagger` | +1 | +0.25 | +10 pp |
-| **Wooden Greatsword**<br><sub><code>epicfight:wooden_greatsword</code></sub> | `epicfight:greatsword` | +1 | +0.2 | +30 pp |
-| **Wooden Longsword**<br><sub><code>epicfight:wooden_longsword</code></sub> | `epicfight:longsword` | +1 | +0.15 | +15 pp |
-| **Wooden Spear**<br><sub><code>epicfight:wooden_spear</code></sub> | `epicfight:spear` | +1 | +0.15 | +25 pp |
-| **Wooden Tachi**<br><sub><code>epicfight:wooden_tachi</code></sub> | `epicfight:tachi` | +1 | +0.18 | +12 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/bokken.png" alt="" width="24" height="24"> **Bokken**<br><sub><code>epicfight:bokken</code></sub> | `epicfight:bokken` | +1 | +0.1 | +5 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/diamond_dagger.png" alt="" width="24" height="24"> **Diamond Dagger**<br><sub><code>epicfight:diamond_dagger</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 … +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/diamond_greatsword.png" alt="" width="24" height="24"> **Diamond Greatsword**<br><sub><code>epicfight:diamond_greatsword</code></sub> | `epicfight:greatsword` | +3 | +0.26 | +42 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/diamond_longsword.png" alt="" width="24" height="24"> **Diamond Longsword**<br><sub><code>epicfight:diamond_longsword</code></sub> | `epicfight:longsword` | +3 | +0.21 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/diamond_spear.png" alt="" width="24" height="24"> **Diamond Spear**<br><sub><code>epicfight:diamond_spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/diamond_tachi.png" alt="" width="24" height="24"> **Diamond Tachi**<br><sub><code>epicfight:diamond_tachi</code></sub> | `epicfight:tachi` | +3 | +0.24 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/glove.png" alt="" width="24" height="24"> **Glove**<br><sub><code>epicfight:glove</code></sub> | `epicfight:fist` | +1.5 | +0.15 | +8 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/golden_dagger.png" alt="" width="24" height="24"> **Golden Dagger**<br><sub><code>epicfight:golden_dagger</code></sub> | `epicfight:dagger` | +1.5 | +0.27 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/golden_greatsword.png" alt="" width="24" height="24"> **Golden Greatsword**<br><sub><code>epicfight:golden_greatsword</code></sub> | `epicfight:greatsword` | +1.5 | +0.22 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/golden_longsword.png" alt="" width="24" height="24"> **Golden Longsword**<br><sub><code>epicfight:golden_longsword</code></sub> | `epicfight:longsword` | +1.5 | +0.2 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/golden_spear.png" alt="" width="24" height="24"> **Golden Spear**<br><sub><code>epicfight:golden_spear</code></sub> | `epicfight:spear` | +1.5 | +0.17 … +0.2 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/golden_tachi.png" alt="" width="24" height="24"> **Golden Tachi**<br><sub><code>epicfight:golden_tachi</code></sub> | `epicfight:tachi` | +1.5 | +0.2 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/iron_dagger.png" alt="" width="24" height="24"> **Iron Dagger**<br><sub><code>epicfight:iron_dagger</code></sub> | `epicfight:dagger` | +2 | +0.29 | +16 … +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/iron_greatsword.png" alt="" width="24" height="24"> **Iron Greatsword**<br><sub><code>epicfight:iron_greatsword</code></sub> | `epicfight:greatsword` | +2 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/iron_longsword.png" alt="" width="24" height="24"> **Iron Longsword**<br><sub><code>epicfight:iron_longsword</code></sub> | `epicfight:longsword` | +2 | +0.19 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/iron_spear.png" alt="" width="24" height="24"> **Iron Spear**<br><sub><code>epicfight:iron_spear</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/iron_tachi.png" alt="" width="24" height="24"> **Iron Tachi**<br><sub><code>epicfight:iron_tachi</code></sub> | `epicfight:tachi` | +2 | +0.22 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/netherite_dagger.png" alt="" width="24" height="24"> **Netherite Dagger**<br><sub><code>epicfight:netherite_dagger</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 … +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/netherite_greatsword.png" alt="" width="24" height="24"> **Netherite Greatsword**<br><sub><code>epicfight:netherite_greatsword</code></sub> | `epicfight:greatsword` | +4 | +0.28 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/netherite_longsword.png" alt="" width="24" height="24"> **Netherite Longsword**<br><sub><code>epicfight:netherite_longsword</code></sub> | `epicfight:longsword` | +4 | +0.23 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/netherite_spear.png" alt="" width="24" height="24"> **Netherite Spear**<br><sub><code>epicfight:netherite_spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/netherite_tachi.png" alt="" width="24" height="24"> **Netherite Tachi**<br><sub><code>epicfight:netherite_tachi</code></sub> | `epicfight:tachi` | +4 | +0.26 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/stone_dagger.png" alt="" width="24" height="24"> **Stone Dagger**<br><sub><code>epicfight:stone_dagger</code></sub> | `epicfight:dagger` | +1.5 | +0.27 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/stone_greatsword.png" alt="" width="24" height="24"> **Stone Greatsword**<br><sub><code>epicfight:stone_greatsword</code></sub> | `epicfight:greatsword` | +1.5 | +0.22 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/stone_longsword.png" alt="" width="24" height="24"> **Stone Longsword**<br><sub><code>epicfight:stone_longsword</code></sub> | `epicfight:longsword` | +1.5 | +0.17 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/stone_spear.png" alt="" width="24" height="24"> **Stone Spear**<br><sub><code>epicfight:stone_spear</code></sub> | `epicfight:spear` | +1.5 | +0.17 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/stone_tachi.png" alt="" width="24" height="24"> **Stone Tachi**<br><sub><code>epicfight:stone_tachi</code></sub> | `epicfight:tachi` | +1.5 | +0.2 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/uchigatana.png" alt="" width="24" height="24"> **Uchigatana**<br><sub><code>epicfight:uchigatana</code></sub> | `epicfight:uchigatana` | +3 | +0.15 | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/wooden_dagger.png" alt="" width="24" height="24"> **Wooden Dagger**<br><sub><code>epicfight:wooden_dagger</code></sub> | `epicfight:dagger` | +1 | +0.25 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/wooden_greatsword.png" alt="" width="24" height="24"> **Wooden Greatsword**<br><sub><code>epicfight:wooden_greatsword</code></sub> | `epicfight:greatsword` | +1 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/wooden_longsword.png" alt="" width="24" height="24"> **Wooden Longsword**<br><sub><code>epicfight:wooden_longsword</code></sub> | `epicfight:longsword` | +1 | +0.15 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/wooden_spear.png" alt="" width="24" height="24"> **Wooden Spear**<br><sub><code>epicfight:wooden_spear</code></sub> | `epicfight:spear` | +1 | +0.15 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight/wooden_tachi.png" alt="" width="24" height="24"> **Wooden Tachi**<br><sub><code>epicfight:wooden_tachi</code></sub> | `epicfight:tachi` | +1 | +0.18 | +12 pp |
 
 <a id="weapons-combat-epicfight_dd"></a>
 ### Epic Fight: Dawn Day
@@ -291,52 +291,52 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Amethyst Battlestaff**<br><sub><code>epicfight_dd:amethyst_battlestaff</code></sub> | `epicfight_dd:battlestaff_amethyst` | Preset | Preset | Preset |
-| **Backhand Blade**<br><sub><code>epicfight_dd:backhand_blade</code></sub> | `epicfight_dd:backhand_blade` | Preset | Preset | +33 pp |
-| **Big Stick**<br><sub><code>epicfight_dd:wooden_battlestaff</code></sub> | `epicfight_dd:battlestaff_wood` | +1 | +0.14 | +10 pp |
-| **Blood Ritual Dagger**<br><sub><code>epicfight_dd:blood_ritus_dagger</code></sub> | `epicfight_dd:blood_ritus_dagger` | Preset | Preset | Preset |
-| **Bonecutting Saw**<br><sub><code>epicfight_dd:bonecutting_saw</code></sub> | `epicfight_dd:bonecutting_saw` | Preset | Preset | +15 pp |
-| **Diamond Battlestaff**<br><sub><code>epicfight_dd:diamond_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +3 | +0.2 | +22 pp |
-| **Diamond Florett**<br><sub><code>epicfight_dd:diamond_florett</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +35 pp |
-| **Diamond Halberd**<br><sub><code>epicfight_dd:diamond_halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
-| **Diamond Knife**<br><sub><code>epicfight_dd:diamond_knife</code></sub> | `epicfight_dd:knife` | +3 | +0.31 | +28 pp |
-| **Diamond Light Greatsword**<br><sub><code>epicfight_dd:diamond_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
-| **Diamond Messer**<br><sub><code>epicfight_dd:diamond_messer</code></sub> | `epicfight_dd:messer` | +3 | +0.15 | +25 pp |
-| **Diamond Sickle**<br><sub><code>epicfight_dd:diamond_sickle</code></sub> | `epicfight_dd:herb_sickle` | +3 | +0.31 | +25 pp |
-| **Eclipse**<br><sub><code>epicfight_dd:eclipse</code></sub> | `epicfight_dd:eclipse` | Preset | Preset | Preset |
-| **Golden Battlestaff**<br><sub><code>epicfight_dd:golden_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +1.5 | +0.25 | +20 pp |
-| **Golden Florett**<br><sub><code>epicfight_dd:golden_florett</code></sub> | `epicfight_dd:florett` | +1.5 | +0.25 | +25 pp |
-| **Golden Halberd**<br><sub><code>epicfight_dd:golden_halberd</code></sub> | `epicfight_dd:halberd` | +1.5 | +0.25 | +29 pp |
-| **Golden Knife**<br><sub><code>epicfight_dd:golden_knife</code></sub> | `epicfight_dd:knife` | +1.5 | +0.27 | +35 pp |
-| **Golden Light Greatsword**<br><sub><code>epicfight_dd:golden_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +1.5 | +0.25 | +34 pp |
-| **Golden Messer**<br><sub><code>epicfight_dd:golden_messer</code></sub> | `epicfight_dd:messer` | +1.5 | +0.25 | +15 pp |
-| **Golden Sickle**<br><sub><code>epicfight_dd:golden_sickle</code></sub> | `epicfight_dd:herb_sickle` | +1.5 | +0.27 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/amethyst_battlestaff.png" alt="" width="24" height="24"> **Amethyst Battlestaff**<br><sub><code>epicfight_dd:amethyst_battlestaff</code></sub> | `epicfight_dd:battlestaff_amethyst` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/backhand_blade.png" alt="" width="24" height="24"> **Backhand Blade**<br><sub><code>epicfight_dd:backhand_blade</code></sub> | `epicfight_dd:backhand_blade` | Preset | Preset | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/wooden_battlestaff.png" alt="" width="24" height="24"> **Big Stick**<br><sub><code>epicfight_dd:wooden_battlestaff</code></sub> | `epicfight_dd:battlestaff_wood` | +1 | +0.14 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/blood_ritus_dagger.png" alt="" width="24" height="24"> **Blood Ritual Dagger**<br><sub><code>epicfight_dd:blood_ritus_dagger</code></sub> | `epicfight_dd:blood_ritus_dagger` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/bonecutting_saw.png" alt="" width="24" height="24"> **Bonecutting Saw**<br><sub><code>epicfight_dd:bonecutting_saw</code></sub> | `epicfight_dd:bonecutting_saw` | Preset | Preset | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_battlestaff.png" alt="" width="24" height="24"> **Diamond Battlestaff**<br><sub><code>epicfight_dd:diamond_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +3 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_florett.png" alt="" width="24" height="24"> **Diamond Florett**<br><sub><code>epicfight_dd:diamond_florett</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +35 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_halberd.png" alt="" width="24" height="24"> **Diamond Halberd**<br><sub><code>epicfight_dd:diamond_halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_knife.png" alt="" width="24" height="24"> **Diamond Knife**<br><sub><code>epicfight_dd:diamond_knife</code></sub> | `epicfight_dd:knife` | +3 | +0.31 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_light_greatsword.png" alt="" width="24" height="24"> **Diamond Light Greatsword**<br><sub><code>epicfight_dd:diamond_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_messer.png" alt="" width="24" height="24"> **Diamond Messer**<br><sub><code>epicfight_dd:diamond_messer</code></sub> | `epicfight_dd:messer` | +3 | +0.15 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/diamond_sickle.png" alt="" width="24" height="24"> **Diamond Sickle**<br><sub><code>epicfight_dd:diamond_sickle</code></sub> | `epicfight_dd:herb_sickle` | +3 | +0.31 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/eclipse.png" alt="" width="24" height="24"> **Eclipse**<br><sub><code>epicfight_dd:eclipse</code></sub> | `epicfight_dd:eclipse` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_battlestaff.png" alt="" width="24" height="24"> **Golden Battlestaff**<br><sub><code>epicfight_dd:golden_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +1.5 | +0.25 | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_florett.png" alt="" width="24" height="24"> **Golden Florett**<br><sub><code>epicfight_dd:golden_florett</code></sub> | `epicfight_dd:florett` | +1.5 | +0.25 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_halberd.png" alt="" width="24" height="24"> **Golden Halberd**<br><sub><code>epicfight_dd:golden_halberd</code></sub> | `epicfight_dd:halberd` | +1.5 | +0.25 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_knife.png" alt="" width="24" height="24"> **Golden Knife**<br><sub><code>epicfight_dd:golden_knife</code></sub> | `epicfight_dd:knife` | +1.5 | +0.27 | +35 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_light_greatsword.png" alt="" width="24" height="24"> **Golden Light Greatsword**<br><sub><code>epicfight_dd:golden_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +1.5 | +0.25 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_messer.png" alt="" width="24" height="24"> **Golden Messer**<br><sub><code>epicfight_dd:golden_messer</code></sub> | `epicfight_dd:messer` | +1.5 | +0.25 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/golden_sickle.png" alt="" width="24" height="24"> **Golden Sickle**<br><sub><code>epicfight_dd:golden_sickle</code></sub> | `epicfight_dd:herb_sickle` | +1.5 | +0.27 | +30 pp |
 | **Hookclaws**<br><sub><code>epicfight_dd:hookclaws</code></sub> | `epicfight_dd:hookclaws` | Preset | Preset | +26 pp |
-| **Iron Battlestaff**<br><sub><code>epicfight_dd:iron_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +2 | +0.18 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_battlestaff.png" alt="" width="24" height="24"> **Iron Battlestaff**<br><sub><code>epicfight_dd:iron_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +2 | +0.18 | +16 pp |
 | **Iron Fist**<br><sub><code>epicfight_dd:iron_fist</code></sub> | `epicfight_dd:iron_fist` | Preset | Preset | Preset |
-| **Iron Florett**<br><sub><code>epicfight_dd:iron_florett</code></sub> | `epicfight_dd:florett` | +2 | +0.26 | +28 pp |
-| **Iron Halberd**<br><sub><code>epicfight_dd:iron_halberd</code></sub> | `epicfight_dd:halberd` | +2 | +0.19 | +33 pp |
-| **Iron Knife**<br><sub><code>epicfight_dd:iron_knife</code></sub> | `epicfight_dd:knife` | +2 | +0.29 | +20 pp |
-| **Iron Light Greatsword**<br><sub><code>epicfight_dd:iron_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.24 | +38 pp |
-| **Iron Messer**<br><sub><code>epicfight_dd:iron_messer</code></sub> | `epicfight_dd:messer` | +2 | +0.15 | +15 pp |
-| **Iron Sickle**<br><sub><code>epicfight_dd:iron_sickle</code></sub> | `epicfight_dd:herb_sickle` | +2 | +0.29 | +16 pp |
-| **Iudex Gundyr's Halberd**<br><sub><code>epicfight_dd:iudex_gundyr_halberd</code></sub> | `epicfight_dd:iudex_halberd` | Preset | Preset | +20 pp |
-| **Milady**<br><sub><code>epicfight_dd:milady</code></sub> | `epicfight_dd:milady` | Preset | Preset | Preset |
-| **Netherite Battlestaff**<br><sub><code>epicfight_dd:netherite_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +4 | +0.22 | +32 pp |
-| **Netherite Florett**<br><sub><code>epicfight_dd:netherite_florett</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +45 pp |
-| **Netherite Halberd**<br><sub><code>epicfight_dd:netherite_halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +45 pp |
-| **Netherite Knife**<br><sub><code>epicfight_dd:netherite_knife</code></sub> | `epicfight_dd:knife` | +4 | +0.33 | +35 pp |
-| **Netherite Light Greatsword**<br><sub><code>epicfight_dd:netherite_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
-| **Netherite Messer**<br><sub><code>epicfight_dd:netherite_messer</code></sub> | `epicfight_dd:messer` | +4 | +0.15 | +35 pp |
-| **Netherite Sickle**<br><sub><code>epicfight_dd:netherite_sickle</code></sub> | `epicfight_dd:herb_sickle` | +4 | +0.33 | +35 pp |
-| **Night Ritual Dagger**<br><sub><code>epicfight_dd:night_ritus_dagger</code></sub> | `epicfight_dd:night_ritus_dagger` | Preset | Preset | +20 pp |
-| **Poleblade**<br><sub><code>epicfight_dd:poleblade</code></sub> | `epicfight_dd:pole_blade` | Preset | Preset | Preset |
-| **Saber**<br><sub><code>epicfight_dd:saber</code></sub> | `epicfight_dd:saber` | Preset | Preset | Preset |
-| **Spiked Bat**<br><sub><code>epicfight_dd:nailbat</code></sub> | `epicfight_dd:nailbat` | Preset | Preset | +10 pp |
-| **Steel Axe**<br><sub><code>epicfight_dd:steelaxe</code></sub> | `epicfight_dd:steel_axe` | Preset | Preset | Preset |
-| **Vitreus**<br><sub><code>epicfight_dd:vitreus</code></sub> | `epicfight_dd:vitreus` | Preset | Preset | Preset |
-| **War Sickle**<br><sub><code>epicfight_dd:war_sickle</code></sub> | `epicfight_dd:war_sickle` | Preset | Preset | Preset |
-| **Wooden Bat**<br><sub><code>epicfight_dd:bat</code></sub> | `epicfight_dd:nailbat` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_florett.png" alt="" width="24" height="24"> **Iron Florett**<br><sub><code>epicfight_dd:iron_florett</code></sub> | `epicfight_dd:florett` | +2 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_halberd.png" alt="" width="24" height="24"> **Iron Halberd**<br><sub><code>epicfight_dd:iron_halberd</code></sub> | `epicfight_dd:halberd` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_knife.png" alt="" width="24" height="24"> **Iron Knife**<br><sub><code>epicfight_dd:iron_knife</code></sub> | `epicfight_dd:knife` | +2 | +0.29 | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_light_greatsword.png" alt="" width="24" height="24"> **Iron Light Greatsword**<br><sub><code>epicfight_dd:iron_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_messer.png" alt="" width="24" height="24"> **Iron Messer**<br><sub><code>epicfight_dd:iron_messer</code></sub> | `epicfight_dd:messer` | +2 | +0.15 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iron_sickle.png" alt="" width="24" height="24"> **Iron Sickle**<br><sub><code>epicfight_dd:iron_sickle</code></sub> | `epicfight_dd:herb_sickle` | +2 | +0.29 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/iudex_gundyr_halberd.png" alt="" width="24" height="24"> **Iudex Gundyr's Halberd**<br><sub><code>epicfight_dd:iudex_gundyr_halberd</code></sub> | `epicfight_dd:iudex_halberd` | Preset | Preset | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/milady.png" alt="" width="24" height="24"> **Milady**<br><sub><code>epicfight_dd:milady</code></sub> | `epicfight_dd:milady` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_battlestaff.png" alt="" width="24" height="24"> **Netherite Battlestaff**<br><sub><code>epicfight_dd:netherite_battlestaff</code></sub> | `epicfight_dd:battlestaff` | +4 | +0.22 | +32 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_florett.png" alt="" width="24" height="24"> **Netherite Florett**<br><sub><code>epicfight_dd:netherite_florett</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_halberd.png" alt="" width="24" height="24"> **Netherite Halberd**<br><sub><code>epicfight_dd:netherite_halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_knife.png" alt="" width="24" height="24"> **Netherite Knife**<br><sub><code>epicfight_dd:netherite_knife</code></sub> | `epicfight_dd:knife` | +4 | +0.33 | +35 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_light_greatsword.png" alt="" width="24" height="24"> **Netherite Light Greatsword**<br><sub><code>epicfight_dd:netherite_light_greatsword</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_messer.png" alt="" width="24" height="24"> **Netherite Messer**<br><sub><code>epicfight_dd:netherite_messer</code></sub> | `epicfight_dd:messer` | +4 | +0.15 | +35 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/netherite_sickle.png" alt="" width="24" height="24"> **Netherite Sickle**<br><sub><code>epicfight_dd:netherite_sickle</code></sub> | `epicfight_dd:herb_sickle` | +4 | +0.33 | +35 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/night_ritus_dagger.png" alt="" width="24" height="24"> **Night Ritual Dagger**<br><sub><code>epicfight_dd:night_ritus_dagger</code></sub> | `epicfight_dd:night_ritus_dagger` | Preset | Preset | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/poleblade.png" alt="" width="24" height="24"> **Poleblade**<br><sub><code>epicfight_dd:poleblade</code></sub> | `epicfight_dd:pole_blade` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/saber.png" alt="" width="24" height="24"> **Saber**<br><sub><code>epicfight_dd:saber</code></sub> | `epicfight_dd:saber` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/nailbat.png" alt="" width="24" height="24"> **Spiked Bat**<br><sub><code>epicfight_dd:nailbat</code></sub> | `epicfight_dd:nailbat` | Preset | Preset | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/steelaxe.png" alt="" width="24" height="24"> **Steel Axe**<br><sub><code>epicfight_dd:steelaxe</code></sub> | `epicfight_dd:steel_axe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/vitreus.png" alt="" width="24" height="24"> **Vitreus**<br><sub><code>epicfight_dd:vitreus</code></sub> | `epicfight_dd:vitreus` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/war_sickle.png" alt="" width="24" height="24"> **War Sickle**<br><sub><code>epicfight_dd:war_sickle</code></sub> | `epicfight_dd:war_sickle` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/epicfight_dd/bat.png" alt="" width="24" height="24"> **Wooden Bat**<br><sub><code>epicfight_dd:bat</code></sub> | `epicfight_dd:nailbat` | Preset | Preset | Preset |
 
 <a id="weapons-combat-farmersdelight"></a>
 ### Farmer’s Delight
@@ -344,11 +344,11 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Diamond Knife**<br><sub><code>farmersdelight:diamond_knife</code></sub> | `epicfight_dd:knife` | +3 | +0.31 | +19 pp |
-| **Flint Knife**<br><sub><code>farmersdelight:flint_knife</code></sub> | `epicfight_dd:knife` | +1.5 | +0.27 | +13 pp |
-| **Golden Knife**<br><sub><code>farmersdelight:golden_knife</code></sub> | `epicfight_dd:knife` | +1.5 | +0.27 | +13 pp |
-| **Iron Knife**<br><sub><code>farmersdelight:iron_knife</code></sub> | `epicfight_dd:knife` | +2 | +0.29 | +16 pp |
-| **Netherite Knife**<br><sub><code>farmersdelight:netherite_knife</code></sub> | `epicfight_dd:knife` | +4 | +0.33 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farmersdelight/diamond_knife.png" alt="" width="24" height="24"> **Diamond Knife**<br><sub><code>farmersdelight:diamond_knife</code></sub> | `epicfight_dd:knife` | +3 | +0.31 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farmersdelight/flint_knife.png" alt="" width="24" height="24"> **Flint Knife**<br><sub><code>farmersdelight:flint_knife</code></sub> | `epicfight_dd:knife` | +1.5 | +0.27 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farmersdelight/golden_knife.png" alt="" width="24" height="24"> **Golden Knife**<br><sub><code>farmersdelight:golden_knife</code></sub> | `epicfight_dd:knife` | +1.5 | +0.27 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farmersdelight/iron_knife.png" alt="" width="24" height="24"> **Iron Knife**<br><sub><code>farmersdelight:iron_knife</code></sub> | `epicfight_dd:knife` | +2 | +0.29 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farmersdelight/netherite_knife.png" alt="" width="24" height="24"> **Netherite Knife**<br><sub><code>farmersdelight:netherite_knife</code></sub> | `epicfight_dd:knife` | +4 | +0.33 | +22 pp |
 
 <a id="weapons-combat-hybrid_aquatic"></a>
 ### Hybrid Aquatic
@@ -356,11 +356,11 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Coral Axe**<br><sub><code>hybrid_aquatic:coral_axe</code></sub> | `womplus:greataxe` | +2 | +0.18 | +26 pp |
-| **Coral Blade**<br><sub><code>hybrid_aquatic:coral_blade</code></sub> | `epicfight:trident` | +2 | +0.19 | +33 pp |
-| **Karkinos Claw**<br><sub><code>hybrid_aquatic:karkinos_claw</code></sub> | `epicfight_dd:hookclaws` | +5 | +0.3 | +25 pp |
-| **Seashell Axe**<br><sub><code>hybrid_aquatic:seashell_axe</code></sub> | `epicfight_dd:steel_axe` | +2 | +0.18 | +26 pp |
-| **Seashell Spear**<br><sub><code>hybrid_aquatic:seashell_spear</code></sub> | `epicfight:trident` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/coral_axe.png" alt="" width="24" height="24"> **Coral Axe**<br><sub><code>hybrid_aquatic:coral_axe</code></sub> | `womplus:greataxe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/coral_blade.png" alt="" width="24" height="24"> **Coral Blade**<br><sub><code>hybrid_aquatic:coral_blade</code></sub> | `epicfight:trident` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/karkinos_claw.png" alt="" width="24" height="24"> **Karkinos Claw**<br><sub><code>hybrid_aquatic:karkinos_claw</code></sub> | `epicfight_dd:hookclaws` | +5 | +0.3 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/seashell_axe.png" alt="" width="24" height="24"> **Seashell Axe**<br><sub><code>hybrid_aquatic:seashell_axe</code></sub> | `epicfight_dd:steel_axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/seashell_spear.png" alt="" width="24" height="24"> **Seashell Spear**<br><sub><code>hybrid_aquatic:seashell_spear</code></sub> | `epicfight:trident` | +2 | +0.19 | +33 pp |
 
 <a id="weapons-combat-immersiveengineering"></a>
 ### Immersive Engineering
@@ -368,11 +368,11 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Axe Steel**<br><sub><code>immersiveengineering:axe_steel</code></sub> | `epicfight_dd:steel_axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/immersiveengineering/axe_steel.png" alt="" width="24" height="24"> **Axe Steel**<br><sub><code>immersiveengineering:axe_steel</code></sub> | `epicfight_dd:steel_axe` | +2 | +0.18 | +26 pp |
 | **Chemthrower**<br><sub><code>immersiveengineering:chemthrower</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
 | **Railgun**<br><sub><code>immersiveengineering:railgun</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
 | **Revolver**<br><sub><code>immersiveengineering:revolver</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
-| **Sword Steel**<br><sub><code>immersiveengineering:sword_steel</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/immersiveengineering/sword_steel.png" alt="" width="24" height="24"> **Sword Steel**<br><sub><code>immersiveengineering:sword_steel</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
 
 <a id="weapons-combat-irons_spellbooks"></a>
 ### Iron’s Spells ’n Spellbooks
@@ -380,24 +380,24 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Amethyst Rapier**<br><sub><code>irons_spellbooks:amethyst_rapier</code></sub> | `epicfight_dd:florett` | +5 | +0.32 | +40 pp |
-| **Artificer's Cane**<br><sub><code>irons_spellbooks:artificer_cane</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Autoloader Crossbow**<br><sub><code>irons_spellbooks:autoloader_crossbow</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
-| **Boreal Blade**<br><sub><code>irons_spellbooks:boreal_blade</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
-| **Claymore**<br><sub><code>irons_spellbooks:claymore</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
-| **Decrepit Scythe**<br><sub><code>irons_spellbooks:decrepit_scythe</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
-| **Graybeard Staff**<br><sub><code>irons_spellbooks:graybeard_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Hellrazor**<br><sub><code>irons_spellbooks:hellrazor</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
-| **Ice Staff**<br><sub><code>irons_spellbooks:ice_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Keeper Flamberge**<br><sub><code>irons_spellbooks:keeper_flamberge</code></sub> | `wom:ruine` | +5 | +0.22 | +25 pp |
-| **Legionnaire Flamberge**<br><sub><code>irons_spellbooks:legionnaire_flamberge</code></sub> | `womplus:hollow_longsword` | +5 | +0.25 | +30 pp |
-| **Magehunter**<br><sub><code>irons_spellbooks:magehunter</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
-| **Misery**<br><sub><code>irons_spellbooks:misery</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
-| **Pyrium Staff**<br><sub><code>irons_spellbooks:pyrium_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Rod o' Lightning**<br><sub><code>irons_spellbooks:lightning_rod</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Spellbreaker**<br><sub><code>irons_spellbooks:spellbreaker</code></sub> | `wom:ruine` | +5 | +0.22 | +25 pp |
-| **The Blood Staff**<br><sub><code>irons_spellbooks:blood_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Twilight Gale**<br><sub><code>irons_spellbooks:twilight_gale</code></sub> | `wom:orbit` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/amethyst_rapier.png" alt="" width="24" height="24"> **Amethyst Rapier**<br><sub><code>irons_spellbooks:amethyst_rapier</code></sub> | `epicfight_dd:florett` | +5 | +0.32 | +40 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/artificer_cane.png" alt="" width="24" height="24"> **Artificer's Cane**<br><sub><code>irons_spellbooks:artificer_cane</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/autoloader_crossbow.png" alt="" width="24" height="24"> **Autoloader Crossbow**<br><sub><code>irons_spellbooks:autoloader_crossbow</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/boreal_blade.png" alt="" width="24" height="24"> **Boreal Blade**<br><sub><code>irons_spellbooks:boreal_blade</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/claymore.png" alt="" width="24" height="24"> **Claymore**<br><sub><code>irons_spellbooks:claymore</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/decrepit_scythe.png" alt="" width="24" height="24"> **Decrepit Scythe**<br><sub><code>irons_spellbooks:decrepit_scythe</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/graybeard_staff.png" alt="" width="24" height="24"> **Graybeard Staff**<br><sub><code>irons_spellbooks:graybeard_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/hellrazor.png" alt="" width="24" height="24"> **Hellrazor**<br><sub><code>irons_spellbooks:hellrazor</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/ice_staff.png" alt="" width="24" height="24"> **Ice Staff**<br><sub><code>irons_spellbooks:ice_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/keeper_flamberge.png" alt="" width="24" height="24"> **Keeper Flamberge**<br><sub><code>irons_spellbooks:keeper_flamberge</code></sub> | `wom:ruine` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/legionnaire_flamberge.png" alt="" width="24" height="24"> **Legionnaire Flamberge**<br><sub><code>irons_spellbooks:legionnaire_flamberge</code></sub> | `womplus:hollow_longsword` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/magehunter.png" alt="" width="24" height="24"> **Magehunter**<br><sub><code>irons_spellbooks:magehunter</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/misery.png" alt="" width="24" height="24"> **Misery**<br><sub><code>irons_spellbooks:misery</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/pyrium_staff.png" alt="" width="24" height="24"> **Pyrium Staff**<br><sub><code>irons_spellbooks:pyrium_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/lightning_rod.png" alt="" width="24" height="24"> **Rod o' Lightning**<br><sub><code>irons_spellbooks:lightning_rod</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/spellbreaker.png" alt="" width="24" height="24"> **Spellbreaker**<br><sub><code>irons_spellbooks:spellbreaker</code></sub> | `wom:ruine` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/blood_staff.png" alt="" width="24" height="24"> **The Blood Staff**<br><sub><code>irons_spellbooks:blood_staff</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/irons_spellbooks/twilight_gale.png" alt="" width="24" height="24"> **Twilight Gale**<br><sub><code>irons_spellbooks:twilight_gale</code></sub> | `wom:orbit` | +5 | +0.25 | +45 pp |
 
 <a id="weapons-combat-knavesneeds"></a>
 ### Knaves’ Needs
@@ -405,66 +405,66 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Twilightforest / Fiery / Chakram**<br><sub><code>knavesneeds:twilightforest/fiery/chakram</code></sub> | `epicfight_dd:backhand_blade` | +4 | +0.2 | +22 pp |
-| **Twilightforest / Fiery / Claymore**<br><sub><code>knavesneeds:twilightforest/fiery/claymore</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
-| **Twilightforest / Fiery / Cutlass**<br><sub><code>knavesneeds:twilightforest/fiery/cutlass</code></sub> | `epicfight_dd:saber` | +4 | +0.26 | +24 pp |
-| **Twilightforest / Fiery / Glaive**<br><sub><code>knavesneeds:twilightforest/fiery/glaive</code></sub> | `epicfight_dd:pole_blade` | +4 | +0.23 | +41 pp |
-| **Twilightforest / Fiery / Greataxe**<br><sub><code>knavesneeds:twilightforest/fiery/greataxe</code></sub> | `womplus:greataxe` | +4 | +0.26 | +51 pp |
-| **Twilightforest / Fiery / Greathammer**<br><sub><code>knavesneeds:twilightforest/fiery/greathammer</code></sub> | `tnk:great_hammer` | +4 | +0.22 | +56 pp |
-| **Twilightforest / Fiery / Halberd**<br><sub><code>knavesneeds:twilightforest/fiery/halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +41 pp |
-| **Twilightforest / Fiery / Katana**<br><sub><code>knavesneeds:twilightforest/fiery/katana</code></sub> | `epicfight:uchigatana` | +4 | +0.26 | +24 pp |
-| **Twilightforest / Fiery / Longsword**<br><sub><code>knavesneeds:twilightforest/fiery/longsword</code></sub> | `epicfight_dd:messer` | +4 | +0.23 | +27 pp |
-| **Twilightforest / Fiery / Rapier**<br><sub><code>knavesneeds:twilightforest/fiery/rapier</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +36 pp |
-| **Twilightforest / Fiery / Sai**<br><sub><code>knavesneeds:twilightforest/fiery/sai</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 pp |
-| **Twilightforest / Fiery / Scythe**<br><sub><code>knavesneeds:twilightforest/fiery/scythe</code></sub> | `epicfight_dd:war_sickle` | +4 | +0.23 | +41 pp |
-| **Twilightforest / Fiery / Spear**<br><sub><code>knavesneeds:twilightforest/fiery/spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
-| **Twilightforest / Fiery / Twinblade**<br><sub><code>knavesneeds:twilightforest/fiery/twinblade</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
-| **Twilightforest / Fiery / Warglaive**<br><sub><code>knavesneeds:twilightforest/fiery/warglaive</code></sub> | `wom:orbit` | +4 | +0.22 | +22 pp |
-| **Twilightforest / Ironwood / Chakram**<br><sub><code>knavesneeds:twilightforest/ironwood/chakram</code></sub> | `epicfight_dd:backhand_blade` | +2 | +0.16 | +16 pp |
-| **Twilightforest / Ironwood / Claymore**<br><sub><code>knavesneeds:twilightforest/ironwood/claymore</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.24 | +38 pp |
-| **Twilightforest / Ironwood / Cutlass**<br><sub><code>knavesneeds:twilightforest/ironwood/cutlass</code></sub> | `epicfight_dd:saber` | +2 | +0.22 | +18 pp |
-| **Twilightforest / Ironwood / Glaive**<br><sub><code>knavesneeds:twilightforest/ironwood/glaive</code></sub> | `epicfight_dd:pole_blade` | +2 | +0.19 | +33 pp |
-| **Twilightforest / Ironwood / Greataxe**<br><sub><code>knavesneeds:twilightforest/ironwood/greataxe</code></sub> | `womplus:greataxe` | +2 | +0.22 | +43 pp |
-| **Twilightforest / Ironwood / Greathammer**<br><sub><code>knavesneeds:twilightforest/ironwood/greathammer</code></sub> | `tnk:great_hammer` | +2 | +0.18 | +48 pp |
-| **Twilightforest / Ironwood / Halberd**<br><sub><code>knavesneeds:twilightforest/ironwood/halberd</code></sub> | `epicfight_dd:halberd` | +2 | +0.19 | +33 pp |
-| **Twilightforest / Ironwood / Katana**<br><sub><code>knavesneeds:twilightforest/ironwood/katana</code></sub> | `epicfight:uchigatana` | +2 | +0.22 | +18 pp |
-| **Twilightforest / Ironwood / Longsword**<br><sub><code>knavesneeds:twilightforest/ironwood/longsword</code></sub> | `womplus:hollow_longsword` | +2 | +0.19 | +21 pp |
-| **Twilightforest / Ironwood / Rapier**<br><sub><code>knavesneeds:twilightforest/ironwood/rapier</code></sub> | `epicfight_dd:florett` | +2 | +0.26 | +28 pp |
-| **Twilightforest / Ironwood / Sai**<br><sub><code>knavesneeds:twilightforest/ironwood/sai</code></sub> | `epicfight:dagger` | +2 | +0.29 | +16 pp |
-| **Twilightforest / Ironwood / Scythe**<br><sub><code>knavesneeds:twilightforest/ironwood/scythe</code></sub> | `epicfight_dd:war_sickle` | +2 | +0.19 | +33 pp |
-| **Twilightforest / Ironwood / Spear**<br><sub><code>knavesneeds:twilightforest/ironwood/spear</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
-| **Twilightforest / Ironwood / Twinblade**<br><sub><code>knavesneeds:twilightforest/ironwood/twinblade</code></sub> | `wom:staff` | +2 | +0.18 | +16 pp |
-| **Twilightforest / Ironwood / Warglaive**<br><sub><code>knavesneeds:twilightforest/ironwood/warglaive</code></sub> | `wom:orbit` | +2 | +0.18 | +16 pp |
-| **Twilightforest / Knightmetal / Chakram**<br><sub><code>knavesneeds:twilightforest/knightmetal/chakram</code></sub> | `epicfight_dd:backhand_blade` | +3 | +0.18 | +19 pp |
-| **Twilightforest / Knightmetal / Claymore**<br><sub><code>knavesneeds:twilightforest/knightmetal/claymore</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
-| **Twilightforest / Knightmetal / Cutlass**<br><sub><code>knavesneeds:twilightforest/knightmetal/cutlass</code></sub> | `epicfight_dd:saber` | +3 | +0.24 | +21 pp |
-| **Twilightforest / Knightmetal / Glaive**<br><sub><code>knavesneeds:twilightforest/knightmetal/glaive</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Knightmetal / Greataxe**<br><sub><code>knavesneeds:twilightforest/knightmetal/greataxe</code></sub> | `womplus:greataxe` | +3 | +0.24 | +47 pp |
-| **Twilightforest / Knightmetal / Greathammer**<br><sub><code>knavesneeds:twilightforest/knightmetal/greathammer</code></sub> | `tnk:great_hammer` | +3 | +0.2 | +52 pp |
-| **Twilightforest / Knightmetal / Halberd**<br><sub><code>knavesneeds:twilightforest/knightmetal/halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Knightmetal / Katana**<br><sub><code>knavesneeds:twilightforest/knightmetal/katana</code></sub> | `epicfight:uchigatana` | +3 | +0.24 | +21 pp |
-| **Twilightforest / Knightmetal / Longsword**<br><sub><code>knavesneeds:twilightforest/knightmetal/longsword</code></sub> | `wom:ruine` | +3 | +0.21 | +24 pp |
-| **Twilightforest / Knightmetal / Rapier**<br><sub><code>knavesneeds:twilightforest/knightmetal/rapier</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +32 pp |
-| **Twilightforest / Knightmetal / Sai**<br><sub><code>knavesneeds:twilightforest/knightmetal/sai</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 pp |
-| **Twilightforest / Knightmetal / Scythe**<br><sub><code>knavesneeds:twilightforest/knightmetal/scythe</code></sub> | `epicfight_dd:war_sickle` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Knightmetal / Spear**<br><sub><code>knavesneeds:twilightforest/knightmetal/spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Knightmetal / Twinblade**<br><sub><code>knavesneeds:twilightforest/knightmetal/twinblade</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.2 | +19 pp |
-| **Twilightforest / Knightmetal / Warglaive**<br><sub><code>knavesneeds:twilightforest/knightmetal/warglaive</code></sub> | `wom:staff` | +3 | +0.2 | +19 pp |
-| **Twilightforest / Steeleaf / Chakram**<br><sub><code>knavesneeds:twilightforest/steeleaf/chakram</code></sub> | `epicfight_dd:backhand_blade` | +3 | +0.18 | +19 pp |
-| **Twilightforest / Steeleaf / Claymore**<br><sub><code>knavesneeds:twilightforest/steeleaf/claymore</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
-| **Twilightforest / Steeleaf / Cutlass**<br><sub><code>knavesneeds:twilightforest/steeleaf/cutlass</code></sub> | `epicfight_dd:saber` | +3 | +0.24 | +21 pp |
-| **Twilightforest / Steeleaf / Glaive**<br><sub><code>knavesneeds:twilightforest/steeleaf/glaive</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Steeleaf / Greataxe**<br><sub><code>knavesneeds:twilightforest/steeleaf/greataxe</code></sub> | `womplus:greataxe` | +3 | +0.24 | +47 pp |
-| **Twilightforest / Steeleaf / Greathammer**<br><sub><code>knavesneeds:twilightforest/steeleaf/greathammer</code></sub> | `tnk:great_hammer` | +3 | +0.2 | +52 pp |
-| **Twilightforest / Steeleaf / Halberd**<br><sub><code>knavesneeds:twilightforest/steeleaf/halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Steeleaf / Katana**<br><sub><code>knavesneeds:twilightforest/steeleaf/katana</code></sub> | `epicfight:uchigatana` | +3 | +0.24 | +21 pp |
-| **Twilightforest / Steeleaf / Longsword**<br><sub><code>knavesneeds:twilightforest/steeleaf/longsword</code></sub> | `epicfight_dd:milady` | +3 | +0.21 | +24 pp |
-| **Twilightforest / Steeleaf / Rapier**<br><sub><code>knavesneeds:twilightforest/steeleaf/rapier</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +32 pp |
-| **Twilightforest / Steeleaf / Sai**<br><sub><code>knavesneeds:twilightforest/steeleaf/sai</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 pp |
-| **Twilightforest / Steeleaf / Scythe**<br><sub><code>knavesneeds:twilightforest/steeleaf/scythe</code></sub> | `epicfight_dd:war_sickle` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Steeleaf / Spear**<br><sub><code>knavesneeds:twilightforest/steeleaf/spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
-| **Twilightforest / Steeleaf / Twinblade**<br><sub><code>knavesneeds:twilightforest/steeleaf/twinblade</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.2 | +19 pp |
-| **Twilightforest / Steeleaf / Warglaive**<br><sub><code>knavesneeds:twilightforest/steeleaf/warglaive</code></sub> | `wom:staff` | +3 | +0.2 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/chakram.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Chakram**<br><sub><code>knavesneeds:twilightforest/fiery/chakram</code></sub> | `epicfight_dd:backhand_blade` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/claymore.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Claymore**<br><sub><code>knavesneeds:twilightforest/fiery/claymore</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/cutlass.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Cutlass**<br><sub><code>knavesneeds:twilightforest/fiery/cutlass</code></sub> | `epicfight_dd:saber` | +4 | +0.26 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/glaive.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Glaive**<br><sub><code>knavesneeds:twilightforest/fiery/glaive</code></sub> | `epicfight_dd:pole_blade` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/greataxe.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Greataxe**<br><sub><code>knavesneeds:twilightforest/fiery/greataxe</code></sub> | `womplus:greataxe` | +4 | +0.26 | +51 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/greathammer.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Greathammer**<br><sub><code>knavesneeds:twilightforest/fiery/greathammer</code></sub> | `tnk:great_hammer` | +4 | +0.22 | +56 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/halberd.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Halberd**<br><sub><code>knavesneeds:twilightforest/fiery/halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/katana.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Katana**<br><sub><code>knavesneeds:twilightforest/fiery/katana</code></sub> | `epicfight:uchigatana` | +4 | +0.26 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/longsword.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Longsword**<br><sub><code>knavesneeds:twilightforest/fiery/longsword</code></sub> | `epicfight_dd:messer` | +4 | +0.23 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/rapier.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Rapier**<br><sub><code>knavesneeds:twilightforest/fiery/rapier</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +36 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/sai.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Sai**<br><sub><code>knavesneeds:twilightforest/fiery/sai</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/scythe.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Scythe**<br><sub><code>knavesneeds:twilightforest/fiery/scythe</code></sub> | `epicfight_dd:war_sickle` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/spear.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Spear**<br><sub><code>knavesneeds:twilightforest/fiery/spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/twinblade.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Twinblade**<br><sub><code>knavesneeds:twilightforest/fiery/twinblade</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/fiery/warglaive.png" alt="" width="24" height="24"> **Twilightforest / Fiery / Warglaive**<br><sub><code>knavesneeds:twilightforest/fiery/warglaive</code></sub> | `wom:orbit` | +4 | +0.22 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/chakram.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Chakram**<br><sub><code>knavesneeds:twilightforest/ironwood/chakram</code></sub> | `epicfight_dd:backhand_blade` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/claymore.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Claymore**<br><sub><code>knavesneeds:twilightforest/ironwood/claymore</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/cutlass.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Cutlass**<br><sub><code>knavesneeds:twilightforest/ironwood/cutlass</code></sub> | `epicfight_dd:saber` | +2 | +0.22 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/glaive.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Glaive**<br><sub><code>knavesneeds:twilightforest/ironwood/glaive</code></sub> | `epicfight_dd:pole_blade` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/greataxe.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Greataxe**<br><sub><code>knavesneeds:twilightforest/ironwood/greataxe</code></sub> | `womplus:greataxe` | +2 | +0.22 | +43 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/greathammer.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Greathammer**<br><sub><code>knavesneeds:twilightforest/ironwood/greathammer</code></sub> | `tnk:great_hammer` | +2 | +0.18 | +48 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/halberd.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Halberd**<br><sub><code>knavesneeds:twilightforest/ironwood/halberd</code></sub> | `epicfight_dd:halberd` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/katana.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Katana**<br><sub><code>knavesneeds:twilightforest/ironwood/katana</code></sub> | `epicfight:uchigatana` | +2 | +0.22 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/longsword.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Longsword**<br><sub><code>knavesneeds:twilightforest/ironwood/longsword</code></sub> | `womplus:hollow_longsword` | +2 | +0.19 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/rapier.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Rapier**<br><sub><code>knavesneeds:twilightforest/ironwood/rapier</code></sub> | `epicfight_dd:florett` | +2 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/sai.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Sai**<br><sub><code>knavesneeds:twilightforest/ironwood/sai</code></sub> | `epicfight:dagger` | +2 | +0.29 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/scythe.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Scythe**<br><sub><code>knavesneeds:twilightforest/ironwood/scythe</code></sub> | `epicfight_dd:war_sickle` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/spear.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Spear**<br><sub><code>knavesneeds:twilightforest/ironwood/spear</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/twinblade.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Twinblade**<br><sub><code>knavesneeds:twilightforest/ironwood/twinblade</code></sub> | `wom:staff` | +2 | +0.18 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/ironwood/warglaive.png" alt="" width="24" height="24"> **Twilightforest / Ironwood / Warglaive**<br><sub><code>knavesneeds:twilightforest/ironwood/warglaive</code></sub> | `wom:orbit` | +2 | +0.18 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/chakram.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Chakram**<br><sub><code>knavesneeds:twilightforest/knightmetal/chakram</code></sub> | `epicfight_dd:backhand_blade` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/claymore.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Claymore**<br><sub><code>knavesneeds:twilightforest/knightmetal/claymore</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/cutlass.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Cutlass**<br><sub><code>knavesneeds:twilightforest/knightmetal/cutlass</code></sub> | `epicfight_dd:saber` | +3 | +0.24 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/glaive.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Glaive**<br><sub><code>knavesneeds:twilightforest/knightmetal/glaive</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/greataxe.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Greataxe**<br><sub><code>knavesneeds:twilightforest/knightmetal/greataxe</code></sub> | `womplus:greataxe` | +3 | +0.24 | +47 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/greathammer.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Greathammer**<br><sub><code>knavesneeds:twilightforest/knightmetal/greathammer</code></sub> | `tnk:great_hammer` | +3 | +0.2 | +52 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/halberd.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Halberd**<br><sub><code>knavesneeds:twilightforest/knightmetal/halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/katana.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Katana**<br><sub><code>knavesneeds:twilightforest/knightmetal/katana</code></sub> | `epicfight:uchigatana` | +3 | +0.24 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/longsword.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Longsword**<br><sub><code>knavesneeds:twilightforest/knightmetal/longsword</code></sub> | `wom:ruine` | +3 | +0.21 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/rapier.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Rapier**<br><sub><code>knavesneeds:twilightforest/knightmetal/rapier</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +32 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/sai.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Sai**<br><sub><code>knavesneeds:twilightforest/knightmetal/sai</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/scythe.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Scythe**<br><sub><code>knavesneeds:twilightforest/knightmetal/scythe</code></sub> | `epicfight_dd:war_sickle` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/spear.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Spear**<br><sub><code>knavesneeds:twilightforest/knightmetal/spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/twinblade.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Twinblade**<br><sub><code>knavesneeds:twilightforest/knightmetal/twinblade</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.2 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/knightmetal/warglaive.png" alt="" width="24" height="24"> **Twilightforest / Knightmetal / Warglaive**<br><sub><code>knavesneeds:twilightforest/knightmetal/warglaive</code></sub> | `wom:staff` | +3 | +0.2 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/chakram.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Chakram**<br><sub><code>knavesneeds:twilightforest/steeleaf/chakram</code></sub> | `epicfight_dd:backhand_blade` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/claymore.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Claymore**<br><sub><code>knavesneeds:twilightforest/steeleaf/claymore</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/cutlass.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Cutlass**<br><sub><code>knavesneeds:twilightforest/steeleaf/cutlass</code></sub> | `epicfight_dd:saber` | +3 | +0.24 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/glaive.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Glaive**<br><sub><code>knavesneeds:twilightforest/steeleaf/glaive</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/greataxe.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Greataxe**<br><sub><code>knavesneeds:twilightforest/steeleaf/greataxe</code></sub> | `womplus:greataxe` | +3 | +0.24 | +47 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/greathammer.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Greathammer**<br><sub><code>knavesneeds:twilightforest/steeleaf/greathammer</code></sub> | `tnk:great_hammer` | +3 | +0.2 | +52 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/halberd.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Halberd**<br><sub><code>knavesneeds:twilightforest/steeleaf/halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/katana.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Katana**<br><sub><code>knavesneeds:twilightforest/steeleaf/katana</code></sub> | `epicfight:uchigatana` | +3 | +0.24 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/longsword.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Longsword**<br><sub><code>knavesneeds:twilightforest/steeleaf/longsword</code></sub> | `epicfight_dd:milady` | +3 | +0.21 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/rapier.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Rapier**<br><sub><code>knavesneeds:twilightforest/steeleaf/rapier</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +32 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/sai.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Sai**<br><sub><code>knavesneeds:twilightforest/steeleaf/sai</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/scythe.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Scythe**<br><sub><code>knavesneeds:twilightforest/steeleaf/scythe</code></sub> | `epicfight_dd:war_sickle` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/spear.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Spear**<br><sub><code>knavesneeds:twilightforest/steeleaf/spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/twinblade.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Twinblade**<br><sub><code>knavesneeds:twilightforest/steeleaf/twinblade</code></sub> | `epicfight_dd:pole_blade` | +3 | +0.2 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/knavesneeds/twilightforest/steeleaf/warglaive.png" alt="" width="24" height="24"> **Twilightforest / Steeleaf / Warglaive**<br><sub><code>knavesneeds:twilightforest/steeleaf/warglaive</code></sub> | `wom:staff` | +3 | +0.2 | +19 pp |
 
 <a id="weapons-combat-legendary_monsters"></a>
 ### Legendary Monsters
@@ -472,26 +472,26 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Axe Of Lightning**<br><sub><code>legendary_monsters:axe_of_lightning</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.32 | +54 pp |
-| **Chorus Blade**<br><sub><code>legendary_monsters:chorus_blade</code></sub> | `epicfight_dd:light_greatsword` | +6 | +0.32 | +54 pp |
-| **Chorus Cannon**<br><sub><code>legendary_monsters:chorus_cannon</code></sub> | **Unverified** | Unverified | Unverified | Unverified |
-| **Dinosaur Bone Club**<br><sub><code>legendary_monsters:dinosaur_bone_club</code></sub> | `epicfight_dd:nailbat` | +6 | +0.26 | +64 pp |
-| **Enderitium Axe**<br><sub><code>legendary_monsters:enderitium_axe</code></sub> | `womplus:greataxe` | +5 | +0.24 | +38 pp |
-| **Enderitium Sword**<br><sub><code>legendary_monsters:enderitium_sword</code></sub> | `wom:ruine` | +5 | +0.22 | +25 pp |
-| **Fiery Jaw**<br><sub><code>legendary_monsters:fiery_jaw</code></sub> | `wom:clawed_gauntle` | +6 | +0.32 | +28 pp |
-| **Golden Halbert**<br><sub><code>legendary_monsters:golden_halbert</code></sub> | `epicfight_dd:halberd` | +6 | +0.27 | +49 pp |
-| **Knights Sword**<br><sub><code>legendary_monsters:knights_sword</code></sub> | `epicfight_dd:milady` | +6 | +0.27 | +33 pp |
-| **Monstrous Anchor**<br><sub><code>legendary_monsters:monstrous_anchor</code></sub> | `womplus:greataxe` | +6 | +0.3 | +59 pp |
-| **Mossy Hammer**<br><sub><code>legendary_monsters:mossy_hammer</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.26 | +64 pp |
-| **Resurrected Javelin**<br><sub><code>legendary_monsters:resurrected_javelin</code></sub> | `epicfight:trident` | +6 | +0.27 | +49 pp |
-| **Sharp Battle Axe**<br><sub><code>legendary_monsters:sharp_battle_axe</code></sub> | `epicfight:axe` | Preset | Preset | Preset |
-| **Shattered Greatsword**<br><sub><code>legendary_monsters:shattered_greatsword</code></sub> | `epicfight_dd:bonecutting_saw` | +6 | +0.32 | +54 pp |
-| **Soul Great Sword**<br><sub><code>legendary_monsters:soul_great_sword</code></sub> | `wom:ruine` | +6 | +0.27 | +33 pp |
-| **The Great Frost**<br><sub><code>legendary_monsters:the_great_frost</code></sub> | `wom:moonless` | +6 | +0.27 | +33 pp |
-| **The Tesseract**<br><sub><code>legendary_monsters:the_tesseract</code></sub> | `epicfight_dd:eclipse` | +6 | +0.32 | +54 pp |
-| **Void Sword**<br><sub><code>legendary_monsters:void_sword</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
-| **Wand Of Clouds**<br><sub><code>legendary_monsters:wand_of_clouds</code></sub> | `epicfight_dd:battlestaff` | +6 | +0.24 | +28 pp |
-| **Withered Scythe**<br><sub><code>legendary_monsters:withered_scythe</code></sub> | `epicfight_dd:war_sickle` | +6 | +0.27 | +49 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/axe_of_lightning.png" alt="" width="24" height="24"> **Axe Of Lightning**<br><sub><code>legendary_monsters:axe_of_lightning</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.32 | +54 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/chorus_blade.png" alt="" width="24" height="24"> **Chorus Blade**<br><sub><code>legendary_monsters:chorus_blade</code></sub> | `epicfight_dd:light_greatsword` | +6 | +0.32 | +54 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/chorus_cannon.png" alt="" width="24" height="24"> **Chorus Cannon**<br><sub><code>legendary_monsters:chorus_cannon</code></sub> | **Unverified** | Unverified | Unverified | Unverified |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/dinosaur_bone_club.png" alt="" width="24" height="24"> **Dinosaur Bone Club**<br><sub><code>legendary_monsters:dinosaur_bone_club</code></sub> | `epicfight_dd:nailbat` | +6 | +0.26 | +64 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/enderitium_axe.png" alt="" width="24" height="24"> **Enderitium Axe**<br><sub><code>legendary_monsters:enderitium_axe</code></sub> | `womplus:greataxe` | +5 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/enderitium_sword.png" alt="" width="24" height="24"> **Enderitium Sword**<br><sub><code>legendary_monsters:enderitium_sword</code></sub> | `wom:ruine` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/fiery_jaw.png" alt="" width="24" height="24"> **Fiery Jaw**<br><sub><code>legendary_monsters:fiery_jaw</code></sub> | `wom:clawed_gauntle` | +6 | +0.32 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/golden_halbert.png" alt="" width="24" height="24"> **Golden Halbert**<br><sub><code>legendary_monsters:golden_halbert</code></sub> | `epicfight_dd:halberd` | +6 | +0.27 | +49 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/knights_sword.png" alt="" width="24" height="24"> **Knights Sword**<br><sub><code>legendary_monsters:knights_sword</code></sub> | `epicfight_dd:milady` | +6 | +0.27 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/monstrous_anchor.png" alt="" width="24" height="24"> **Monstrous Anchor**<br><sub><code>legendary_monsters:monstrous_anchor</code></sub> | `womplus:greataxe` | +6 | +0.3 | +59 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/mossy_hammer.png" alt="" width="24" height="24"> **Mossy Hammer**<br><sub><code>legendary_monsters:mossy_hammer</code></sub> | `epicfight_dd:steel_axe` | +6 | +0.26 | +64 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/resurrected_javelin.png" alt="" width="24" height="24"> **Resurrected Javelin**<br><sub><code>legendary_monsters:resurrected_javelin</code></sub> | `epicfight:trident` | +6 | +0.27 | +49 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/sharp_battle_axe.png" alt="" width="24" height="24"> **Sharp Battle Axe**<br><sub><code>legendary_monsters:sharp_battle_axe</code></sub> | `epicfight:axe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/shattered_greatsword.png" alt="" width="24" height="24"> **Shattered Greatsword**<br><sub><code>legendary_monsters:shattered_greatsword</code></sub> | `epicfight_dd:bonecutting_saw` | +6 | +0.32 | +54 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/soul_great_sword.png" alt="" width="24" height="24"> **Soul Great Sword**<br><sub><code>legendary_monsters:soul_great_sword</code></sub> | `wom:ruine` | +6 | +0.27 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/the_great_frost.png" alt="" width="24" height="24"> **The Great Frost**<br><sub><code>legendary_monsters:the_great_frost</code></sub> | `wom:moonless` | +6 | +0.27 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/the_tesseract.png" alt="" width="24" height="24"> **The Tesseract**<br><sub><code>legendary_monsters:the_tesseract</code></sub> | `epicfight_dd:eclipse` | +6 | +0.32 | +54 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/void_sword.png" alt="" width="24" height="24"> **Void Sword**<br><sub><code>legendary_monsters:void_sword</code></sub> | `epicfight:sword` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/wand_of_clouds.png" alt="" width="24" height="24"> **Wand Of Clouds**<br><sub><code>legendary_monsters:wand_of_clouds</code></sub> | `epicfight_dd:battlestaff` | +6 | +0.24 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/withered_scythe.png" alt="" width="24" height="24"> **Withered Scythe**<br><sub><code>legendary_monsters:withered_scythe</code></sub> | `epicfight_dd:war_sickle` | +6 | +0.27 | +49 pp |
 
 <a id="weapons-combat-bakery"></a>
 ### Let’s Do: Bakery
@@ -499,7 +499,7 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Bread Knife**<br><sub><code>bakery:bread_knife</code></sub> | `epicfight_dd:knife` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/bakery/bread_knife.png" alt="" width="24" height="24"> **Bread Knife**<br><sub><code>bakery:bread_knife</code></sub> | `epicfight_dd:knife` | +5 | +0.35 | +25 pp |
 
 <a id="weapons-combat-farm_and_charm"></a>
 ### Let’s Do: Farm & Charm
@@ -507,10 +507,10 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Diamond Cleaver**<br><sub><code>farm_and_charm:diamond_cleaver</code></sub> | `epicfight_dd:messer` | +3 | +0.18 | +19 pp |
-| **Iron Cleaver**<br><sub><code>farm_and_charm:iron_cleaver</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
-| **Netherite Cleaver**<br><sub><code>farm_and_charm:netherite_cleaver</code></sub> | `epicfight_dd:messer` | +4 | +0.2 | +22 pp |
-| **Pitchfork**<br><sub><code>farm_and_charm:pitchfork</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farm_and_charm/diamond_cleaver.png" alt="" width="24" height="24"> **Diamond Cleaver**<br><sub><code>farm_and_charm:diamond_cleaver</code></sub> | `epicfight_dd:messer` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farm_and_charm/iron_cleaver.png" alt="" width="24" height="24"> **Iron Cleaver**<br><sub><code>farm_and_charm:iron_cleaver</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farm_and_charm/netherite_cleaver.png" alt="" width="24" height="24"> **Netherite Cleaver**<br><sub><code>farm_and_charm:netherite_cleaver</code></sub> | `epicfight_dd:messer` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/farm_and_charm/pitchfork.png" alt="" width="24" height="24"> **Pitchfork**<br><sub><code>farm_and_charm:pitchfork</code></sub> | `epicfight:trident` | +5 | +0.25 | +45 pp |
 
 <a id="weapons-combat-minecraft"></a>
 ### Minecraft / Vanilla Backport
@@ -518,31 +518,31 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Bow**<br><sub><code>minecraft:bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Copper Axe**<br><sub><code>minecraft:copper_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
-| **Copper Spear**<br><sub><code>minecraft:copper_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Copper Sword**<br><sub><code>minecraft:copper_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
-| **Crossbow**<br><sub><code>minecraft:crossbow</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
-| **Diamond Axe**<br><sub><code>minecraft:diamond_axe</code></sub> | `epicfight:axe` | +3 | +0.2 | +30 pp |
-| **Diamond Spear**<br><sub><code>minecraft:diamond_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Diamond Sword**<br><sub><code>minecraft:diamond_sword</code></sub> | `epicfight:sword` | +3 | +0.18 | +19 pp |
-| **Golden Axe**<br><sub><code>minecraft:golden_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
-| **Golden Spear**<br><sub><code>minecraft:golden_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Golden Sword**<br><sub><code>minecraft:golden_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
-| **Iron Axe**<br><sub><code>minecraft:iron_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
-| **Iron Spear**<br><sub><code>minecraft:iron_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Iron Sword**<br><sub><code>minecraft:iron_sword</code></sub> | `epicfight:sword` | +2 | +0.16 | +16 pp |
-| **Mace**<br><sub><code>minecraft:mace</code></sub> | `epicfight:axe` | Preset | Preset | +50 pp |
-| **Netherite Axe**<br><sub><code>minecraft:netherite_axe</code></sub> | `epicfight:axe` | +4 | +0.22 | +40 pp |
-| **Netherite Spear**<br><sub><code>minecraft:netherite_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Netherite Sword**<br><sub><code>minecraft:netherite_sword</code></sub> | `epicfight:sword` | +4 | +0.2 | +22 pp |
-| **Stone Axe**<br><sub><code>minecraft:stone_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
-| **Stone Spear**<br><sub><code>minecraft:stone_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Stone Sword**<br><sub><code>minecraft:stone_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
-| **Trident**<br><sub><code>minecraft:trident</code></sub> | `epicfight:trident` | Preset | Preset | Preset |
-| **Wooden Axe**<br><sub><code>minecraft:wooden_axe</code></sub> | `epicfight:axe` | +1 | +0.14 | +18 pp |
-| **Wooden Spear**<br><sub><code>minecraft:wooden_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
-| **Wooden Sword**<br><sub><code>minecraft:wooden_sword</code></sub> | `epicfight:sword` | +1 | +0.12 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/bow.png" alt="" width="24" height="24"> **Bow**<br><sub><code>minecraft:bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/copper_axe.png" alt="" width="24" height="24"> **Copper Axe**<br><sub><code>minecraft:copper_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/copper_spear.png" alt="" width="24" height="24"> **Copper Spear**<br><sub><code>minecraft:copper_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/copper_sword.png" alt="" width="24" height="24"> **Copper Sword**<br><sub><code>minecraft:copper_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/crossbow.png" alt="" width="24" height="24"> **Crossbow**<br><sub><code>minecraft:crossbow</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/diamond_axe.png" alt="" width="24" height="24"> **Diamond Axe**<br><sub><code>minecraft:diamond_axe</code></sub> | `epicfight:axe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/diamond_spear.png" alt="" width="24" height="24"> **Diamond Spear**<br><sub><code>minecraft:diamond_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/diamond_sword.png" alt="" width="24" height="24"> **Diamond Sword**<br><sub><code>minecraft:diamond_sword</code></sub> | `epicfight:sword` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/golden_axe.png" alt="" width="24" height="24"> **Golden Axe**<br><sub><code>minecraft:golden_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/golden_spear.png" alt="" width="24" height="24"> **Golden Spear**<br><sub><code>minecraft:golden_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/golden_sword.png" alt="" width="24" height="24"> **Golden Sword**<br><sub><code>minecraft:golden_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/iron_axe.png" alt="" width="24" height="24"> **Iron Axe**<br><sub><code>minecraft:iron_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/iron_spear.png" alt="" width="24" height="24"> **Iron Spear**<br><sub><code>minecraft:iron_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/iron_sword.png" alt="" width="24" height="24"> **Iron Sword**<br><sub><code>minecraft:iron_sword</code></sub> | `epicfight:sword` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/mace.png" alt="" width="24" height="24"> **Mace**<br><sub><code>minecraft:mace</code></sub> | `epicfight:axe` | Preset | Preset | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/netherite_axe.png" alt="" width="24" height="24"> **Netherite Axe**<br><sub><code>minecraft:netherite_axe</code></sub> | `epicfight:axe` | +4 | +0.22 | +40 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/netherite_spear.png" alt="" width="24" height="24"> **Netherite Spear**<br><sub><code>minecraft:netherite_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/netherite_sword.png" alt="" width="24" height="24"> **Netherite Sword**<br><sub><code>minecraft:netherite_sword</code></sub> | `epicfight:sword` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/stone_axe.png" alt="" width="24" height="24"> **Stone Axe**<br><sub><code>minecraft:stone_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/stone_spear.png" alt="" width="24" height="24"> **Stone Spear**<br><sub><code>minecraft:stone_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/stone_sword.png" alt="" width="24" height="24"> **Stone Sword**<br><sub><code>minecraft:stone_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/trident.png" alt="" width="24" height="24"> **Trident**<br><sub><code>minecraft:trident</code></sub> | `epicfight:trident` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/wooden_axe.png" alt="" width="24" height="24"> **Wooden Axe**<br><sub><code>minecraft:wooden_axe</code></sub> | `epicfight:axe` | +1 | +0.14 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/wooden_spear.png" alt="" width="24" height="24"> **Wooden Spear**<br><sub><code>minecraft:wooden_spear</code></sub> | `epicfight:spear` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/wooden_sword.png" alt="" width="24" height="24"> **Wooden Sword**<br><sub><code>minecraft:wooden_sword</code></sub> | `epicfight:sword` | +1 | +0.12 | +10 pp |
 
 <a id="weapons-combat-mowziesmobs"></a>
 ### Mowzie’s Mobs
@@ -550,12 +550,12 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Blowgun**<br><sub><code>mowziesmobs:blowgun</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Earthrend Gauntlet**<br><sub><code>mowziesmobs:earthrend_gauntlet</code></sub> | `tnk:earthrend_gauntlet` | Preset | +0.5 … +0.8 | +8 pp |
-| **Naga Fang Dagger**<br><sub><code>mowziesmobs:naga_fang_dagger</code></sub> | `epicfight_dd:knife` | +1 | +0.4 | +10 pp |
-| **Sculptor Staff**<br><sub><code>mowziesmobs:sculptor_staff</code></sub> | `epicfight_dd:battlestaff_amethyst` | +3 | +0.6 | Preset |
-| **Spear**<br><sub><code>mowziesmobs:spear</code></sub> | `epicfight:spear` | Preset | Preset | +4 pp |
-| **Wrought Axe**<br><sub><code>mowziesmobs:wrought_axe</code></sub> | `epicfight_dd:steel_axe` | Preset | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/mowziesmobs/blowgun.png" alt="" width="24" height="24"> **Blowgun**<br><sub><code>mowziesmobs:blowgun</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/mowziesmobs/earthrend_gauntlet.png" alt="" width="24" height="24"> **Earthrend Gauntlet**<br><sub><code>mowziesmobs:earthrend_gauntlet</code></sub> | `tnk:earthrend_gauntlet` | Preset | +0.5 … +0.8 | +8 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/mowziesmobs/naga_fang_dagger.png" alt="" width="24" height="24"> **Naga Fang Dagger**<br><sub><code>mowziesmobs:naga_fang_dagger</code></sub> | `epicfight_dd:knife` | +1 | +0.4 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/mowziesmobs/sculptor_staff.png" alt="" width="24" height="24"> **Sculptor Staff**<br><sub><code>mowziesmobs:sculptor_staff</code></sub> | `epicfight_dd:battlestaff_amethyst` | +3 | +0.6 | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/mowziesmobs/spear.png" alt="" width="24" height="24"> **Spear**<br><sub><code>mowziesmobs:spear</code></sub> | `epicfight:spear` | Preset | Preset | +4 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/mowziesmobs/wrought_axe.png" alt="" width="24" height="24"> **Wrought Axe**<br><sub><code>mowziesmobs:wrought_axe</code></sub> | `epicfight_dd:steel_axe` | Preset | +0.3 | +50 pp |
 
 <a id="weapons-combat-simplyswords"></a>
 ### Simply Swords
@@ -563,139 +563,139 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Arcanethyst**<br><sub><code>simplyswords:arcanethyst</code></sub> | `epicfight_dd:battlestaff_amethyst` | +5 | +0.25 | +45 pp |
-| **Awakened Lichblade**<br><sub><code>simplyswords:awakened_lichblade</code></sub> | `epicfight_dd:eclipse` | +6 | +0.3 | +54 pp |
-| **Bloodwake**<br><sub><code>simplyswords:bloodwake</code></sub> | `epicfight_dd:blood_ritus_dagger` | +5 | +0.35 | +25 pp |
-| **Bramblethorn**<br><sub><code>simplyswords:bramblethorn</code></sub> | `epicfight_dd:florett` | +5 | +0.25 | +30 pp |
-| **Brimstone Claymore**<br><sub><code>simplyswords:brimstone_claymore</code></sub> | `epicfight_dd:light_greatsword` | +5 | +0.3 | +50 pp |
-| **Caelestis**<br><sub><code>simplyswords:caelestis</code></sub> | `epicfight_dd:vitreus` | +5 | +0.25 | +30 pp |
-| **Chomp'olotl**<br><sub><code>simplyswords:chompolotl</code></sub> | `epicfight_dd:hookclaws` | +5 | +0.32 | +27 pp |
-| **Dawnquiver**<br><sub><code>simplyswords:dawnquiver</code></sub> | `epicfight_dd:milady` | +5 | +0.3 | +50 pp |
-| **Decaying relic**<br><sub><code>simplyswords:decaying_relic</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.24 | +25 pp |
-| **Diamond Chakram**<br><sub><code>simplyswords:diamond_chakram</code></sub> | `epicfight_dd:backhand_blade` | +3 | +0.28 | +21 pp |
-| **Diamond Claymore**<br><sub><code>simplyswords:diamond_claymore</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
-| **Diamond Cutlass**<br><sub><code>simplyswords:diamond_cutlass</code></sub> | `epicfight_dd:saber` | +3 | +0.24 | +21 pp |
-| **Diamond Glaive**<br><sub><code>simplyswords:diamond_glaive</code></sub> | `epicfight_dd:halberd` | +3 | +0.22 | +24 pp |
-| **Diamond Greataxe**<br><sub><code>simplyswords:diamond_greataxe</code></sub> | `womplus:greataxe` | +3 | +0.24 | +47 pp |
-| **Diamond Greathammer**<br><sub><code>simplyswords:diamond_greathammer</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +52 pp |
-| **Diamond Halberd**<br><sub><code>simplyswords:diamond_halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
-| **Diamond Katana**<br><sub><code>simplyswords:diamond_katana</code></sub> | `epicfight:uchigatana` | +3 | +0.24 | +21 pp |
-| **Diamond Longsword**<br><sub><code>simplyswords:diamond_longsword</code></sub> | `epicfight_dd:messer` | +3 | +0.21 | +24 pp |
-| **Diamond Rapier**<br><sub><code>simplyswords:diamond_rapier</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +21 pp |
-| **Diamond Sai**<br><sub><code>simplyswords:diamond_sai</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 pp |
-| **Diamond Scythe**<br><sub><code>simplyswords:diamond_scythe</code></sub> | `epicfight_dd:war_sickle` | +3 | +0.21 | +37 pp |
-| **Diamond Spear**<br><sub><code>simplyswords:diamond_spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
-| **Diamond Twinblade**<br><sub><code>simplyswords:diamond_twinblade</code></sub> | `epicfight_dd:battlestaff_amethyst` | +3 | +0.2 | +19 pp |
-| **Diamond Warglaive**<br><sub><code>simplyswords:diamond_warglaive</code></sub> | `wom:staff` | +3 | +0.2 | +19 pp |
-| **Dormant Relic**<br><sub><code>simplyswords:dormant_relic</code></sub> | `epicfight_dd:milady` | +5 | +0.25 | +30 pp |
-| **Dreadwhisper**<br><sub><code>simplyswords:dreadwhisper</code></sub> | `wom:nova` | +5 | +0.26 | +30 pp |
-| **Emberblade**<br><sub><code>simplyswords:emberblade</code></sub> | `epicfight_dd:milady` | +5 | +0.3 | +50 pp |
-| **Emberlash**<br><sub><code>simplyswords:emberlash</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.35 | +25 pp |
-| **Enigma**<br><sub><code>simplyswords:enigma</code></sub> | `epicfight_dd:vitreus` | +5 | +0.25 | +30 pp |
-| **Flamewind**<br><sub><code>simplyswords:flamewind</code></sub> | `epicfight_dd:pole_blade` | +5 | +0.25 | +45 pp |
-| **Frostfall**<br><sub><code>simplyswords:frostfall</code></sub> | `epicfight_dd:nailbat` | +5 | +0.28 | +55 pp |
-| **Gloampiercer**<br><sub><code>simplyswords:gloampiercer</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
-| **Gold Chakram**<br><sub><code>simplyswords:gold_chakram</code></sub> | `epicfight_dd:backhand_blade` | +1.5 | +0.24 | +15 pp |
-| **Gold Claymore**<br><sub><code>simplyswords:gold_claymore</code></sub> | `epicfight_dd:light_greatsword` | +1.5 | +0.22 | +34 pp |
-| **Gold Cutlass**<br><sub><code>simplyswords:gold_cutlass</code></sub> | `epicfight_dd:saber` | +1.5 | +0.2 | +15 pp |
-| **Gold Glaive**<br><sub><code>simplyswords:gold_glaive</code></sub> | `epicfight:spear` | +1.5 | +0.17 | +29 pp |
-| **Gold Greataxe**<br><sub><code>simplyswords:gold_greataxe</code></sub> | `womplus:greataxe` | +1.5 | +0.2 | +39 pp |
-| **Gold Greathammer**<br><sub><code>simplyswords:gold_greathammer</code></sub> | `epicfight_dd:steel_axe` | +1.5 | +0.16 | +44 pp |
-| **Gold Halberd**<br><sub><code>simplyswords:gold_halberd</code></sub> | `epicfight_dd:halberd` | +1.5 | +0.17 | +29 pp |
-| **Gold Katana**<br><sub><code>simplyswords:gold_katana</code></sub> | `epicfight:uchigatana` | +1.5 | +0.2 | +15 pp |
-| **Gold Longsword**<br><sub><code>simplyswords:gold_longsword</code></sub> | `epicfight_dd:messer` | +1.5 | +0.17 | +18 pp |
-| **Gold Rapier**<br><sub><code>simplyswords:gold_rapier</code></sub> | `epicfight_dd:florett` | +1.5 | +0.24 | +24 pp |
-| **Gold Sai**<br><sub><code>simplyswords:gold_sai</code></sub> | `epicfight:dagger` | +1.5 | +0.27 | +13 pp |
-| **Gold Scythe**<br><sub><code>simplyswords:gold_scythe</code></sub> | `epicfight_dd:war_sickle` | +1.5 | +0.17 | +29 pp |
-| **Gold Spear**<br><sub><code>simplyswords:gold_spear</code></sub> | `epicfight:spear` | +1.5 | +0.17 | +29 pp |
-| **Gold Twinblade**<br><sub><code>simplyswords:gold_twinblade</code></sub> | `epicfight_dd:battlestaff` | +1.5 | +0.16 | +13 pp |
-| **Gold Warglaive**<br><sub><code>simplyswords:gold_warglaive</code></sub> | `wom:staff` | +1.5 | +0.16 | +13 pp |
-| **Harbinger**<br><sub><code>simplyswords:harbinger</code></sub> | `wom:ruine` | +5 | +0.26 | +30 pp |
-| **Hearthflame**<br><sub><code>simplyswords:hearthflame</code></sub> | `epicfight_dd:steel_axe` | +5 | +0.24 | +60 pp |
-| **Hiveheart**<br><sub><code>simplyswords:hiveheart</code></sub> | `epicfight_dd:steel_axe` | +5 | +0.28 | +55 pp |
-| **Icewhisper**<br><sub><code>simplyswords:icewhisper</code></sub> | `wom:orbit` | +5 | +0.25 | +45 pp |
-| **Ionbound Stormscale**<br><sub><code>simplyswords:ionbound_stormscale</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
-| **Iron Chakram**<br><sub><code>simplyswords:iron_chakram</code></sub> | `epicfight_dd:backhand_blade` | +2 | +0.26 | +18 pp |
-| **Iron Claymore**<br><sub><code>simplyswords:iron_claymore</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.24 | +38 pp |
-| **Iron Cutlass**<br><sub><code>simplyswords:iron_cutlass</code></sub> | `epicfight_dd:saber` | +2 | +0.22 | +18 pp |
-| **Iron Glaive**<br><sub><code>simplyswords:iron_glaive</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
-| **Iron Greataxe**<br><sub><code>simplyswords:iron_greataxe</code></sub> | `womplus:greataxe` | +2 | +0.22 | +43 pp |
-| **Iron Greathammer**<br><sub><code>simplyswords:iron_greathammer</code></sub> | `epicfight_dd:steel_axe` | +2 | +0.18 | +48 pp |
-| **Iron Halberd**<br><sub><code>simplyswords:iron_halberd</code></sub> | `epicfight_dd:halberd` | +2 | +0.19 | +33 pp |
-| **Iron Katana**<br><sub><code>simplyswords:iron_katana</code></sub> | `epicfight:uchigatana` | +2 | +0.22 | +18 pp |
-| **Iron Longsword**<br><sub><code>simplyswords:iron_longsword</code></sub> | `epicfight_dd:messer` | +2 | +0.19 | +21 pp |
-| **Iron Rapier**<br><sub><code>simplyswords:iron_rapier</code></sub> | `epicfight_dd:florett` | +2 | +0.26 | +28 pp |
-| **Iron Sai**<br><sub><code>simplyswords:iron_sai</code></sub> | `epicfight:dagger` | +2 | +0.29 | +16 pp |
-| **Iron Scythe**<br><sub><code>simplyswords:iron_scythe</code></sub> | `epicfight_dd:war_sickle` | +2 | +0.19 | +33 pp |
-| **Iron Spear**<br><sub><code>simplyswords:iron_spear</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
-| **Iron Twinblade**<br><sub><code>simplyswords:iron_twinblade</code></sub> | `epicfight_dd:battlestaff` | +2 | +0.18 | +16 pp |
-| **Iron Warglaive**<br><sub><code>simplyswords:iron_warglaive</code></sub> | `wom:staff` | +2 | +0.18 | +18 pp |
-| **Livyatan**<br><sub><code>simplyswords:livyatan</code></sub> | `womplus:greataxe` | +5 | +0.24 | +38 pp |
-| **Longsword of the Plague**<br><sub><code>simplyswords:toxic_longsword</code></sub> | `epicfight_dd:messer` | +5 | +0.25 | +30 pp |
-| **Magiblade**<br><sub><code>simplyswords:magiblade</code></sub> | `epicfight_dd:battlestaff_amethyst` | +5 | +0.24 | +25 pp |
-| **Magiscythe**<br><sub><code>simplyswords:magiscythe</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.25 | +45 pp |
-| **Magispear**<br><sub><code>simplyswords:magispear</code></sub> | `wom:orbit` | +5 | +0.25 | +45 pp |
-| **Mjolnir**<br><sub><code>simplyswords:mjolnir</code></sub> | `epicfight_dd:steel_axe` | +5 | +0.28 | +55 pp |
-| **Molten Edge**<br><sub><code>simplyswords:molten_edge</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.28 | +55 pp |
-| **Netherite Chakram**<br><sub><code>simplyswords:netherite_chakram</code></sub> | `epicfight_dd:backhand_blade` | +4 | +0.3 | +24 pp |
-| **Netherite Claymore**<br><sub><code>simplyswords:netherite_claymore</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
-| **Netherite Cutlass**<br><sub><code>simplyswords:netherite_cutlass</code></sub> | `epicfight_dd:saber` | +4 | +0.26 | +24 pp |
-| **Netherite Glaive**<br><sub><code>simplyswords:netherite_glaive</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
-| **Netherite Greataxe**<br><sub><code>simplyswords:netherite_greataxe</code></sub> | `womplus:greataxe` | +4 | +0.26 | +51 pp |
-| **Netherite Greathammer**<br><sub><code>simplyswords:netherite_greathammer</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +56 pp |
-| **Netherite Halberd**<br><sub><code>simplyswords:netherite_halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +41 pp |
-| **Netherite Katana**<br><sub><code>simplyswords:netherite_katana</code></sub> | `epicfight:uchigatana` | +4 | +0.26 | +24 pp |
-| **Netherite Longsword**<br><sub><code>simplyswords:netherite_longsword</code></sub> | `epicfight_dd:messer` | +4 | +0.23 | +27 pp |
-| **Netherite Rapier**<br><sub><code>simplyswords:netherite_rapier</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +36 pp |
-| **Netherite Sai**<br><sub><code>simplyswords:netherite_sai</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 pp |
-| **Netherite Scythe**<br><sub><code>simplyswords:netherite_scythe</code></sub> | `epicfight_dd:war_sickle` | +4 | +0.23 | +41 pp |
-| **Netherite Spear**<br><sub><code>simplyswords:netherite_spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
-| **Netherite Twinblade**<br><sub><code>simplyswords:netherite_twinblade</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
-| **Netherite Warglaive**<br><sub><code>simplyswords:netherite_warglaive</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
-| **Ribboncleaver**<br><sub><code>simplyswords:ribboncleaver</code></sub> | `epicfight_dd:messer` | +5 | +0.25 | +30 pp |
-| **Riftmane**<br><sub><code>simplyswords:riftmane</code></sub> | `wom:ruine` | +5 | +0.3 | +50 pp |
-| **Righteous Relic**<br><sub><code>simplyswords:righteous_relic</code></sub> | `epicfight_dd:milady` | +5 | +0.26 | +30 pp |
-| **Runic Chakram**<br><sub><code>simplyswords:runic_chakram</code></sub> | `epicfight_dd:backhand_blade` | +4 | +0.3 | +24 pp |
-| **Runic Claymore**<br><sub><code>simplyswords:runic_claymore</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
-| **Runic Cutlass**<br><sub><code>simplyswords:runic_cutlass</code></sub> | `epicfight_dd:saber` | +4 | +0.26 | +24 pp |
-| **Runic Glaive**<br><sub><code>simplyswords:runic_glaive</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
-| **Runic Greataxe**<br><sub><code>simplyswords:runic_greataxe</code></sub> | `womplus:greataxe` | +4 | +0.26 | +51 pp |
-| **Runic Greathammer**<br><sub><code>simplyswords:runic_greathammer</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +56 pp |
-| **Runic Halberd**<br><sub><code>simplyswords:runic_halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +41 pp |
-| **Runic Katana**<br><sub><code>simplyswords:runic_katana</code></sub> | `epicfight:uchigatana` | +4 | +0.26 | +24 pp |
-| **Runic Longsword**<br><sub><code>simplyswords:runic_longsword</code></sub> | `epicfight_dd:messer` | +4 | +0.23 | +27 pp |
-| **Runic Rapier**<br><sub><code>simplyswords:runic_rapier</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +36 pp |
-| **Runic Sai**<br><sub><code>simplyswords:runic_sai</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 pp |
-| **Runic Scythe**<br><sub><code>simplyswords:runic_scythe</code></sub> | `epicfight_dd:war_sickle` | +4 | +0.23 | +41 pp |
-| **Runic Spear**<br><sub><code>simplyswords:runic_spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
-| **Runic Twinblade**<br><sub><code>simplyswords:runic_twinblade</code></sub> | `epicfight_dd:battlestaff_amethyst` | +4 | +0.22 | +22 pp |
-| **Runic Warglaive**<br><sub><code>simplyswords:runic_warglaive</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
-| **Shadowsting**<br><sub><code>simplyswords:shadowsting</code></sub> | `epicfight_dd:florett` | +5 | +0.32 | +40 pp |
-| **Slumbering Lichblade**<br><sub><code>simplyswords:slumbering_lichblade</code></sub> | `epicfight_dd:eclipse` | +5 | +0.3 | +50 pp |
-| **Soul Pyre**<br><sub><code>simplyswords:soulpyre</code></sub> | `womplus:greataxe` | +5 | +0.28 | +55 pp |
-| **Soulkeeper**<br><sub><code>simplyswords:soulkeeper</code></sub> | `wom:torment` | +5 | +0.24 | +60 pp |
-| **Soulrender**<br><sub><code>simplyswords:soulrender</code></sub> | `epicfight_dd:pole_blade` | +5 | +0.25 | +45 pp |
-| **Soulstalker**<br><sub><code>simplyswords:soulstalker</code></sub> | `epicfight_dd:pole_blade` | +5 | +0.25 | +45 pp |
-| **Soulstealer**<br><sub><code>simplyswords:soulstealer</code></sub> | `epicfight_dd:night_ritus_dagger` | +5 | +0.35 | +25 pp |
-| **Star's Edge**<br><sub><code>simplyswords:stars_edge</code></sub> | `wom:staff` | +5 | +0.24 | +25 pp |
-| **Storm's Edge**<br><sub><code>simplyswords:storms_edge</code></sub> | `epicfight_dd:battlestaff` | +5 | +0.24 | +25 pp |
-| **Stormbringer**<br><sub><code>simplyswords:stormbringer</code></sub> | `epicfight_dd:messer` | +5 | +0.3 | +50 pp |
-| **Stormscale**<br><sub><code>simplyswords:stormscale</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
-| **Sunfire**<br><sub><code>simplyswords:sunfire</code></sub> | `epicfight_dd:milady` | +5 | +0.26 | +30 pp |
-| **Sword on a Stick**<br><sub><code>simplyswords:sword_on_a_stick</code></sub> | `epicfight_dd:halberd` | +5 | +0.25 | +45 pp |
-| **Tainted Relic**<br><sub><code>simplyswords:tainted_relic</code></sub> | `wom:ruine` | +5 | +0.26 | +30 pp |
-| **Tempest**<br><sub><code>simplyswords:tempest</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.32 | +27 pp |
-| **The Devourer**<br><sub><code>simplyswords:the_devourer</code></sub> | `epicfight_dd:bonecutting_saw` | +5 | +0.28 | +50 pp |
-| **The Watcher**<br><sub><code>simplyswords:watcher_claymore</code></sub> | `womplus:hollow_longsword` | +5 | +0.25 | +30 pp |
-| **Thunderbrand**<br><sub><code>simplyswords:thunderbrand</code></sub> | `epicfight_dd:iudex_halberd` | +5 | +0.25 | +45 pp |
-| **Twisted Blade**<br><sub><code>simplyswords:twisted_blade</code></sub> | `wom:ruine` | +5 | +0.25 | +30 pp |
-| **Waking Lichblade**<br><sub><code>simplyswords:waking_lichblade</code></sub> | `epicfight_dd:eclipse` | +5 | +0.28 | +50 pp |
-| **Watching Warglaive**<br><sub><code>simplyswords:watching_warglaive</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.24 | +25 pp |
-| **Waxweaver**<br><sub><code>simplyswords:waxweaver</code></sub> | `epicfight_dd:messer` | +5 | +0.3 | +50 pp |
-| **Whisperwind**<br><sub><code>simplyswords:whisperwind</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.28 | +27 pp |
-| **Wickpiercer**<br><sub><code>simplyswords:wickpiercer</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
-| **Wraithfang**<br><sub><code>simplyswords:wraithfang</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.35 | +25 pp |
-| **Wraithmaw**<br><sub><code>simplyswords:wraithmaw</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.32 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/arcanethyst.png" alt="" width="24" height="24"> **Arcanethyst**<br><sub><code>simplyswords:arcanethyst</code></sub> | `epicfight_dd:battlestaff_amethyst` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/awakened_lichblade.png" alt="" width="24" height="24"> **Awakened Lichblade**<br><sub><code>simplyswords:awakened_lichblade</code></sub> | `epicfight_dd:eclipse` | +6 | +0.3 | +54 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/bloodwake.png" alt="" width="24" height="24"> **Bloodwake**<br><sub><code>simplyswords:bloodwake</code></sub> | `epicfight_dd:blood_ritus_dagger` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/bramblethorn.png" alt="" width="24" height="24"> **Bramblethorn**<br><sub><code>simplyswords:bramblethorn</code></sub> | `epicfight_dd:florett` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/brimstone_claymore.png" alt="" width="24" height="24"> **Brimstone Claymore**<br><sub><code>simplyswords:brimstone_claymore</code></sub> | `epicfight_dd:light_greatsword` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/caelestis.png" alt="" width="24" height="24"> **Caelestis**<br><sub><code>simplyswords:caelestis</code></sub> | `epicfight_dd:vitreus` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/chompolotl.png" alt="" width="24" height="24"> **Chomp'olotl**<br><sub><code>simplyswords:chompolotl</code></sub> | `epicfight_dd:hookclaws` | +5 | +0.32 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/dawnquiver.png" alt="" width="24" height="24"> **Dawnquiver**<br><sub><code>simplyswords:dawnquiver</code></sub> | `epicfight_dd:milady` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/decaying_relic.png" alt="" width="24" height="24"> **Decaying relic**<br><sub><code>simplyswords:decaying_relic</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.24 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_chakram.png" alt="" width="24" height="24"> **Diamond Chakram**<br><sub><code>simplyswords:diamond_chakram</code></sub> | `epicfight_dd:backhand_blade` | +3 | +0.28 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_claymore.png" alt="" width="24" height="24"> **Diamond Claymore**<br><sub><code>simplyswords:diamond_claymore</code></sub> | `epicfight_dd:light_greatsword` | +3 | +0.26 | +42 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_cutlass.png" alt="" width="24" height="24"> **Diamond Cutlass**<br><sub><code>simplyswords:diamond_cutlass</code></sub> | `epicfight_dd:saber` | +3 | +0.24 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_glaive.png" alt="" width="24" height="24"> **Diamond Glaive**<br><sub><code>simplyswords:diamond_glaive</code></sub> | `epicfight_dd:halberd` | +3 | +0.22 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_greataxe.png" alt="" width="24" height="24"> **Diamond Greataxe**<br><sub><code>simplyswords:diamond_greataxe</code></sub> | `womplus:greataxe` | +3 | +0.24 | +47 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_greathammer.png" alt="" width="24" height="24"> **Diamond Greathammer**<br><sub><code>simplyswords:diamond_greathammer</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +52 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_halberd.png" alt="" width="24" height="24"> **Diamond Halberd**<br><sub><code>simplyswords:diamond_halberd</code></sub> | `epicfight_dd:halberd` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_katana.png" alt="" width="24" height="24"> **Diamond Katana**<br><sub><code>simplyswords:diamond_katana</code></sub> | `epicfight:uchigatana` | +3 | +0.24 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_longsword.png" alt="" width="24" height="24"> **Diamond Longsword**<br><sub><code>simplyswords:diamond_longsword</code></sub> | `epicfight_dd:messer` | +3 | +0.21 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_rapier.png" alt="" width="24" height="24"> **Diamond Rapier**<br><sub><code>simplyswords:diamond_rapier</code></sub> | `epicfight_dd:florett` | +3 | +0.28 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_sai.png" alt="" width="24" height="24"> **Diamond Sai**<br><sub><code>simplyswords:diamond_sai</code></sub> | `epicfight:dagger` | +3 | +0.31 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_scythe.png" alt="" width="24" height="24"> **Diamond Scythe**<br><sub><code>simplyswords:diamond_scythe</code></sub> | `epicfight_dd:war_sickle` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_spear.png" alt="" width="24" height="24"> **Diamond Spear**<br><sub><code>simplyswords:diamond_spear</code></sub> | `epicfight:spear` | +3 | +0.21 | +37 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_twinblade.png" alt="" width="24" height="24"> **Diamond Twinblade**<br><sub><code>simplyswords:diamond_twinblade</code></sub> | `epicfight_dd:battlestaff_amethyst` | +3 | +0.2 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/diamond_warglaive.png" alt="" width="24" height="24"> **Diamond Warglaive**<br><sub><code>simplyswords:diamond_warglaive</code></sub> | `wom:staff` | +3 | +0.2 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/dormant_relic.png" alt="" width="24" height="24"> **Dormant Relic**<br><sub><code>simplyswords:dormant_relic</code></sub> | `epicfight_dd:milady` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/dreadwhisper.png" alt="" width="24" height="24"> **Dreadwhisper**<br><sub><code>simplyswords:dreadwhisper</code></sub> | `wom:nova` | +5 | +0.26 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/emberblade.png" alt="" width="24" height="24"> **Emberblade**<br><sub><code>simplyswords:emberblade</code></sub> | `epicfight_dd:milady` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/emberlash.png" alt="" width="24" height="24"> **Emberlash**<br><sub><code>simplyswords:emberlash</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/enigma.png" alt="" width="24" height="24"> **Enigma**<br><sub><code>simplyswords:enigma</code></sub> | `epicfight_dd:vitreus` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/flamewind.png" alt="" width="24" height="24"> **Flamewind**<br><sub><code>simplyswords:flamewind</code></sub> | `epicfight_dd:pole_blade` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/frostfall.png" alt="" width="24" height="24"> **Frostfall**<br><sub><code>simplyswords:frostfall</code></sub> | `epicfight_dd:nailbat` | +5 | +0.28 | +55 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gloampiercer.png" alt="" width="24" height="24"> **Gloampiercer**<br><sub><code>simplyswords:gloampiercer</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_chakram.png" alt="" width="24" height="24"> **Gold Chakram**<br><sub><code>simplyswords:gold_chakram</code></sub> | `epicfight_dd:backhand_blade` | +1.5 | +0.24 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_claymore.png" alt="" width="24" height="24"> **Gold Claymore**<br><sub><code>simplyswords:gold_claymore</code></sub> | `epicfight_dd:light_greatsword` | +1.5 | +0.22 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_cutlass.png" alt="" width="24" height="24"> **Gold Cutlass**<br><sub><code>simplyswords:gold_cutlass</code></sub> | `epicfight_dd:saber` | +1.5 | +0.2 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_glaive.png" alt="" width="24" height="24"> **Gold Glaive**<br><sub><code>simplyswords:gold_glaive</code></sub> | `epicfight:spear` | +1.5 | +0.17 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_greataxe.png" alt="" width="24" height="24"> **Gold Greataxe**<br><sub><code>simplyswords:gold_greataxe</code></sub> | `womplus:greataxe` | +1.5 | +0.2 | +39 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_greathammer.png" alt="" width="24" height="24"> **Gold Greathammer**<br><sub><code>simplyswords:gold_greathammer</code></sub> | `epicfight_dd:steel_axe` | +1.5 | +0.16 | +44 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_halberd.png" alt="" width="24" height="24"> **Gold Halberd**<br><sub><code>simplyswords:gold_halberd</code></sub> | `epicfight_dd:halberd` | +1.5 | +0.17 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_katana.png" alt="" width="24" height="24"> **Gold Katana**<br><sub><code>simplyswords:gold_katana</code></sub> | `epicfight:uchigatana` | +1.5 | +0.2 | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_longsword.png" alt="" width="24" height="24"> **Gold Longsword**<br><sub><code>simplyswords:gold_longsword</code></sub> | `epicfight_dd:messer` | +1.5 | +0.17 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_rapier.png" alt="" width="24" height="24"> **Gold Rapier**<br><sub><code>simplyswords:gold_rapier</code></sub> | `epicfight_dd:florett` | +1.5 | +0.24 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_sai.png" alt="" width="24" height="24"> **Gold Sai**<br><sub><code>simplyswords:gold_sai</code></sub> | `epicfight:dagger` | +1.5 | +0.27 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_scythe.png" alt="" width="24" height="24"> **Gold Scythe**<br><sub><code>simplyswords:gold_scythe</code></sub> | `epicfight_dd:war_sickle` | +1.5 | +0.17 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_spear.png" alt="" width="24" height="24"> **Gold Spear**<br><sub><code>simplyswords:gold_spear</code></sub> | `epicfight:spear` | +1.5 | +0.17 | +29 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_twinblade.png" alt="" width="24" height="24"> **Gold Twinblade**<br><sub><code>simplyswords:gold_twinblade</code></sub> | `epicfight_dd:battlestaff` | +1.5 | +0.16 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/gold_warglaive.png" alt="" width="24" height="24"> **Gold Warglaive**<br><sub><code>simplyswords:gold_warglaive</code></sub> | `wom:staff` | +1.5 | +0.16 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/harbinger.png" alt="" width="24" height="24"> **Harbinger**<br><sub><code>simplyswords:harbinger</code></sub> | `wom:ruine` | +5 | +0.26 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/hearthflame.png" alt="" width="24" height="24"> **Hearthflame**<br><sub><code>simplyswords:hearthflame</code></sub> | `epicfight_dd:steel_axe` | +5 | +0.24 | +60 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/hiveheart.png" alt="" width="24" height="24"> **Hiveheart**<br><sub><code>simplyswords:hiveheart</code></sub> | `epicfight_dd:steel_axe` | +5 | +0.28 | +55 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/icewhisper.png" alt="" width="24" height="24"> **Icewhisper**<br><sub><code>simplyswords:icewhisper</code></sub> | `wom:orbit` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/ionbound_stormscale.png" alt="" width="24" height="24"> **Ionbound Stormscale**<br><sub><code>simplyswords:ionbound_stormscale</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_chakram.png" alt="" width="24" height="24"> **Iron Chakram**<br><sub><code>simplyswords:iron_chakram</code></sub> | `epicfight_dd:backhand_blade` | +2 | +0.26 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_claymore.png" alt="" width="24" height="24"> **Iron Claymore**<br><sub><code>simplyswords:iron_claymore</code></sub> | `epicfight_dd:light_greatsword` | +2 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_cutlass.png" alt="" width="24" height="24"> **Iron Cutlass**<br><sub><code>simplyswords:iron_cutlass</code></sub> | `epicfight_dd:saber` | +2 | +0.22 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_glaive.png" alt="" width="24" height="24"> **Iron Glaive**<br><sub><code>simplyswords:iron_glaive</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_greataxe.png" alt="" width="24" height="24"> **Iron Greataxe**<br><sub><code>simplyswords:iron_greataxe</code></sub> | `womplus:greataxe` | +2 | +0.22 | +43 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_greathammer.png" alt="" width="24" height="24"> **Iron Greathammer**<br><sub><code>simplyswords:iron_greathammer</code></sub> | `epicfight_dd:steel_axe` | +2 | +0.18 | +48 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_halberd.png" alt="" width="24" height="24"> **Iron Halberd**<br><sub><code>simplyswords:iron_halberd</code></sub> | `epicfight_dd:halberd` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_katana.png" alt="" width="24" height="24"> **Iron Katana**<br><sub><code>simplyswords:iron_katana</code></sub> | `epicfight:uchigatana` | +2 | +0.22 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_longsword.png" alt="" width="24" height="24"> **Iron Longsword**<br><sub><code>simplyswords:iron_longsword</code></sub> | `epicfight_dd:messer` | +2 | +0.19 | +21 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_rapier.png" alt="" width="24" height="24"> **Iron Rapier**<br><sub><code>simplyswords:iron_rapier</code></sub> | `epicfight_dd:florett` | +2 | +0.26 | +28 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_sai.png" alt="" width="24" height="24"> **Iron Sai**<br><sub><code>simplyswords:iron_sai</code></sub> | `epicfight:dagger` | +2 | +0.29 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_scythe.png" alt="" width="24" height="24"> **Iron Scythe**<br><sub><code>simplyswords:iron_scythe</code></sub> | `epicfight_dd:war_sickle` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_spear.png" alt="" width="24" height="24"> **Iron Spear**<br><sub><code>simplyswords:iron_spear</code></sub> | `epicfight:spear` | +2 | +0.19 | +33 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_twinblade.png" alt="" width="24" height="24"> **Iron Twinblade**<br><sub><code>simplyswords:iron_twinblade</code></sub> | `epicfight_dd:battlestaff` | +2 | +0.18 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/iron_warglaive.png" alt="" width="24" height="24"> **Iron Warglaive**<br><sub><code>simplyswords:iron_warglaive</code></sub> | `wom:staff` | +2 | +0.18 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/livyatan.png" alt="" width="24" height="24"> **Livyatan**<br><sub><code>simplyswords:livyatan</code></sub> | `womplus:greataxe` | +5 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/toxic_longsword.png" alt="" width="24" height="24"> **Longsword of the Plague**<br><sub><code>simplyswords:toxic_longsword</code></sub> | `epicfight_dd:messer` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/magiblade.png" alt="" width="24" height="24"> **Magiblade**<br><sub><code>simplyswords:magiblade</code></sub> | `epicfight_dd:battlestaff_amethyst` | +5 | +0.24 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/magiscythe.png" alt="" width="24" height="24"> **Magiscythe**<br><sub><code>simplyswords:magiscythe</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/magispear.png" alt="" width="24" height="24"> **Magispear**<br><sub><code>simplyswords:magispear</code></sub> | `wom:orbit` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/mjolnir.png" alt="" width="24" height="24"> **Mjolnir**<br><sub><code>simplyswords:mjolnir</code></sub> | `epicfight_dd:steel_axe` | +5 | +0.28 | +55 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/molten_edge.png" alt="" width="24" height="24"> **Molten Edge**<br><sub><code>simplyswords:molten_edge</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.28 | +55 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_chakram.png" alt="" width="24" height="24"> **Netherite Chakram**<br><sub><code>simplyswords:netherite_chakram</code></sub> | `epicfight_dd:backhand_blade` | +4 | +0.3 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_claymore.png" alt="" width="24" height="24"> **Netherite Claymore**<br><sub><code>simplyswords:netherite_claymore</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_cutlass.png" alt="" width="24" height="24"> **Netherite Cutlass**<br><sub><code>simplyswords:netherite_cutlass</code></sub> | `epicfight_dd:saber` | +4 | +0.26 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_glaive.png" alt="" width="24" height="24"> **Netherite Glaive**<br><sub><code>simplyswords:netherite_glaive</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_greataxe.png" alt="" width="24" height="24"> **Netherite Greataxe**<br><sub><code>simplyswords:netherite_greataxe</code></sub> | `womplus:greataxe` | +4 | +0.26 | +51 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_greathammer.png" alt="" width="24" height="24"> **Netherite Greathammer**<br><sub><code>simplyswords:netherite_greathammer</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +56 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_halberd.png" alt="" width="24" height="24"> **Netherite Halberd**<br><sub><code>simplyswords:netherite_halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_katana.png" alt="" width="24" height="24"> **Netherite Katana**<br><sub><code>simplyswords:netherite_katana</code></sub> | `epicfight:uchigatana` | +4 | +0.26 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_longsword.png" alt="" width="24" height="24"> **Netherite Longsword**<br><sub><code>simplyswords:netherite_longsword</code></sub> | `epicfight_dd:messer` | +4 | +0.23 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_rapier.png" alt="" width="24" height="24"> **Netherite Rapier**<br><sub><code>simplyswords:netherite_rapier</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +36 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_sai.png" alt="" width="24" height="24"> **Netherite Sai**<br><sub><code>simplyswords:netherite_sai</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_scythe.png" alt="" width="24" height="24"> **Netherite Scythe**<br><sub><code>simplyswords:netherite_scythe</code></sub> | `epicfight_dd:war_sickle` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_spear.png" alt="" width="24" height="24"> **Netherite Spear**<br><sub><code>simplyswords:netherite_spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_twinblade.png" alt="" width="24" height="24"> **Netherite Twinblade**<br><sub><code>simplyswords:netherite_twinblade</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/netherite_warglaive.png" alt="" width="24" height="24"> **Netherite Warglaive**<br><sub><code>simplyswords:netherite_warglaive</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/ribboncleaver.png" alt="" width="24" height="24"> **Ribboncleaver**<br><sub><code>simplyswords:ribboncleaver</code></sub> | `epicfight_dd:messer` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/riftmane.png" alt="" width="24" height="24"> **Riftmane**<br><sub><code>simplyswords:riftmane</code></sub> | `wom:ruine` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/righteous_relic.png" alt="" width="24" height="24"> **Righteous Relic**<br><sub><code>simplyswords:righteous_relic</code></sub> | `epicfight_dd:milady` | +5 | +0.26 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_chakram.png" alt="" width="24" height="24"> **Runic Chakram**<br><sub><code>simplyswords:runic_chakram</code></sub> | `epicfight_dd:backhand_blade` | +4 | +0.3 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_claymore.png" alt="" width="24" height="24"> **Runic Claymore**<br><sub><code>simplyswords:runic_claymore</code></sub> | `epicfight_dd:light_greatsword` | +4 | +0.28 | +46 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_cutlass.png" alt="" width="24" height="24"> **Runic Cutlass**<br><sub><code>simplyswords:runic_cutlass</code></sub> | `epicfight_dd:saber` | +4 | +0.26 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_glaive.png" alt="" width="24" height="24"> **Runic Glaive**<br><sub><code>simplyswords:runic_glaive</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_greataxe.png" alt="" width="24" height="24"> **Runic Greataxe**<br><sub><code>simplyswords:runic_greataxe</code></sub> | `womplus:greataxe` | +4 | +0.26 | +51 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_greathammer.png" alt="" width="24" height="24"> **Runic Greathammer**<br><sub><code>simplyswords:runic_greathammer</code></sub> | `epicfight_dd:steel_axe` | +4 | +0.22 | +56 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_halberd.png" alt="" width="24" height="24"> **Runic Halberd**<br><sub><code>simplyswords:runic_halberd</code></sub> | `epicfight_dd:halberd` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_katana.png" alt="" width="24" height="24"> **Runic Katana**<br><sub><code>simplyswords:runic_katana</code></sub> | `epicfight:uchigatana` | +4 | +0.26 | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_longsword.png" alt="" width="24" height="24"> **Runic Longsword**<br><sub><code>simplyswords:runic_longsword</code></sub> | `epicfight_dd:messer` | +4 | +0.23 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_rapier.png" alt="" width="24" height="24"> **Runic Rapier**<br><sub><code>simplyswords:runic_rapier</code></sub> | `epicfight_dd:florett` | +4 | +0.3 | +36 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_sai.png" alt="" width="24" height="24"> **Runic Sai**<br><sub><code>simplyswords:runic_sai</code></sub> | `epicfight:dagger` | +4 | +0.33 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_scythe.png" alt="" width="24" height="24"> **Runic Scythe**<br><sub><code>simplyswords:runic_scythe</code></sub> | `epicfight_dd:war_sickle` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_spear.png" alt="" width="24" height="24"> **Runic Spear**<br><sub><code>simplyswords:runic_spear</code></sub> | `epicfight:spear` | +4 | +0.23 | +41 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_twinblade.png" alt="" width="24" height="24"> **Runic Twinblade**<br><sub><code>simplyswords:runic_twinblade</code></sub> | `epicfight_dd:battlestaff_amethyst` | +4 | +0.22 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/runic_warglaive.png" alt="" width="24" height="24"> **Runic Warglaive**<br><sub><code>simplyswords:runic_warglaive</code></sub> | `wom:staff` | +4 | +0.22 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/shadowsting.png" alt="" width="24" height="24"> **Shadowsting**<br><sub><code>simplyswords:shadowsting</code></sub> | `epicfight_dd:florett` | +5 | +0.32 | +40 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/slumbering_lichblade.png" alt="" width="24" height="24"> **Slumbering Lichblade**<br><sub><code>simplyswords:slumbering_lichblade</code></sub> | `epicfight_dd:eclipse` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/soulpyre.png" alt="" width="24" height="24"> **Soul Pyre**<br><sub><code>simplyswords:soulpyre</code></sub> | `womplus:greataxe` | +5 | +0.28 | +55 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/soulkeeper.png" alt="" width="24" height="24"> **Soulkeeper**<br><sub><code>simplyswords:soulkeeper</code></sub> | `wom:torment` | +5 | +0.24 | +60 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/soulrender.png" alt="" width="24" height="24"> **Soulrender**<br><sub><code>simplyswords:soulrender</code></sub> | `epicfight_dd:pole_blade` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/soulstalker.png" alt="" width="24" height="24"> **Soulstalker**<br><sub><code>simplyswords:soulstalker</code></sub> | `epicfight_dd:pole_blade` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/soulstealer.png" alt="" width="24" height="24"> **Soulstealer**<br><sub><code>simplyswords:soulstealer</code></sub> | `epicfight_dd:night_ritus_dagger` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/stars_edge.png" alt="" width="24" height="24"> **Star's Edge**<br><sub><code>simplyswords:stars_edge</code></sub> | `wom:staff` | +5 | +0.24 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/storms_edge.png" alt="" width="24" height="24"> **Storm's Edge**<br><sub><code>simplyswords:storms_edge</code></sub> | `epicfight_dd:battlestaff` | +5 | +0.24 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/stormbringer.png" alt="" width="24" height="24"> **Stormbringer**<br><sub><code>simplyswords:stormbringer</code></sub> | `epicfight_dd:messer` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/stormscale.png" alt="" width="24" height="24"> **Stormscale**<br><sub><code>simplyswords:stormscale</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/sunfire.png" alt="" width="24" height="24"> **Sunfire**<br><sub><code>simplyswords:sunfire</code></sub> | `epicfight_dd:milady` | +5 | +0.26 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/sword_on_a_stick.png" alt="" width="24" height="24"> **Sword on a Stick**<br><sub><code>simplyswords:sword_on_a_stick</code></sub> | `epicfight_dd:halberd` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/tainted_relic.png" alt="" width="24" height="24"> **Tainted Relic**<br><sub><code>simplyswords:tainted_relic</code></sub> | `wom:ruine` | +5 | +0.26 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/tempest.png" alt="" width="24" height="24"> **Tempest**<br><sub><code>simplyswords:tempest</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.32 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/the_devourer.png" alt="" width="24" height="24"> **The Devourer**<br><sub><code>simplyswords:the_devourer</code></sub> | `epicfight_dd:bonecutting_saw` | +5 | +0.28 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/watcher_claymore.png" alt="" width="24" height="24"> **The Watcher**<br><sub><code>simplyswords:watcher_claymore</code></sub> | `womplus:hollow_longsword` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/thunderbrand.png" alt="" width="24" height="24"> **Thunderbrand**<br><sub><code>simplyswords:thunderbrand</code></sub> | `epicfight_dd:iudex_halberd` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/twisted_blade.png" alt="" width="24" height="24"> **Twisted Blade**<br><sub><code>simplyswords:twisted_blade</code></sub> | `wom:ruine` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/waking_lichblade.png" alt="" width="24" height="24"> **Waking Lichblade**<br><sub><code>simplyswords:waking_lichblade</code></sub> | `epicfight_dd:eclipse` | +5 | +0.28 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/watching_warglaive.png" alt="" width="24" height="24"> **Watching Warglaive**<br><sub><code>simplyswords:watching_warglaive</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.24 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/waxweaver.png" alt="" width="24" height="24"> **Waxweaver**<br><sub><code>simplyswords:waxweaver</code></sub> | `epicfight_dd:messer` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/whisperwind.png" alt="" width="24" height="24"> **Whisperwind**<br><sub><code>simplyswords:whisperwind</code></sub> | `epicfight_dd:backhand_blade` | +5 | +0.28 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/wickpiercer.png" alt="" width="24" height="24"> **Wickpiercer**<br><sub><code>simplyswords:wickpiercer</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/wraithfang.png" alt="" width="24" height="24"> **Wraithfang**<br><sub><code>simplyswords:wraithfang</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/simplyswords/wraithmaw.png" alt="" width="24" height="24"> **Wraithmaw**<br><sub><code>simplyswords:wraithmaw</code></sub> | `epicfight_dd:herb_sickle` | +5 | +0.32 | +27 pp |
 
 <a id="weapons-combat-thaumaturgetinker"></a>
 ### Thaumaturge Tinker
@@ -715,28 +715,28 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Candy Cane Sword**<br><sub><code>aether:candy_cane_sword</code></sub> | `epicfight_dd:saber` | +5 | +0.25 | +30 pp |
-| **Enchanted Dart Shooter**<br><sub><code>aether:enchanted_dart_shooter</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Flaming Sword**<br><sub><code>aether:flaming_sword</code></sub> | `wom:moonless` | +5 | +0.25 | +30 pp |
-| **Golden Dart Shooter**<br><sub><code>aether:golden_dart_shooter</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Gravitite Axe**<br><sub><code>aether:gravitite_axe</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +30 pp |
-| **Gravitite Sword**<br><sub><code>aether:gravitite_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
-| **Hammer Of Kingbdogz**<br><sub><code>aether:hammer_of_kingbdogz</code></sub> | `epicfight_dd:nailbat` | +5 | +0.24 | +60 pp |
-| **Holy Sword**<br><sub><code>aether:holy_sword</code></sub> | `epicfight_dd:light_greatsword` | +5 | +0.3 | +50 pp |
-| **Holystone Axe**<br><sub><code>aether:holystone_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
-| **Holystone Sword**<br><sub><code>aether:holystone_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
-| **Lightning Knife**<br><sub><code>aether:lightning_knife</code></sub> | `epicfight_dd:knife` | +5 | +0.35 | +25 pp |
-| **Lightning Sword**<br><sub><code>aether:lightning_sword</code></sub> | `epicfight_dd:vitreus` | +5 | +0.28 | +27 pp |
-| **Phoenix Bow**<br><sub><code>aether:phoenix_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Pig Slayer**<br><sub><code>aether:pig_slayer</code></sub> | `epicfight_dd:knife` | +5 | +0.35 | +25 pp |
-| **Poison Dart Shooter**<br><sub><code>aether:poison_dart_shooter</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Skyroot Axe**<br><sub><code>aether:skyroot_axe</code></sub> | `epicfight:axe` | +1 | +0.14 | +18 pp |
-| **Skyroot Sword**<br><sub><code>aether:skyroot_sword</code></sub> | `epicfight:sword` | +1 | +0.12 | +10 pp |
-| **Valkyrie Axe**<br><sub><code>aether:valkyrie_axe</code></sub> | `womplus:greataxe` | +4 | +0.22 | +34 pp |
-| **Valkyrie Lance**<br><sub><code>aether:valkyrie_lance</code></sub> | `wom:blackstar` | +4 | +0.2 | +22 pp |
-| **Vampire Blade**<br><sub><code>aether:vampire_blade</code></sub> | `wom:moonless` | +5 | +0.3 | +50 pp |
-| **Zanite Axe**<br><sub><code>aether:zanite_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
-| **Zanite Sword**<br><sub><code>aether:zanite_sword</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/candy_cane_sword.png" alt="" width="24" height="24"> **Candy Cane Sword**<br><sub><code>aether:candy_cane_sword</code></sub> | `epicfight_dd:saber` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/enchanted_dart_shooter.png" alt="" width="24" height="24"> **Enchanted Dart Shooter**<br><sub><code>aether:enchanted_dart_shooter</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/flaming_sword.png" alt="" width="24" height="24"> **Flaming Sword**<br><sub><code>aether:flaming_sword</code></sub> | `wom:moonless` | +5 | +0.25 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/golden_dart_shooter.png" alt="" width="24" height="24"> **Golden Dart Shooter**<br><sub><code>aether:golden_dart_shooter</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/gravitite_axe.png" alt="" width="24" height="24"> **Gravitite Axe**<br><sub><code>aether:gravitite_axe</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/gravitite_sword.png" alt="" width="24" height="24"> **Gravitite Sword**<br><sub><code>aether:gravitite_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/hammer_of_kingbdogz.png" alt="" width="24" height="24"> **Hammer Of Kingbdogz**<br><sub><code>aether:hammer_of_kingbdogz</code></sub> | `epicfight_dd:nailbat` | +5 | +0.24 | +60 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/holy_sword.png" alt="" width="24" height="24"> **Holy Sword**<br><sub><code>aether:holy_sword</code></sub> | `epicfight_dd:light_greatsword` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/holystone_axe.png" alt="" width="24" height="24"> **Holystone Axe**<br><sub><code>aether:holystone_axe</code></sub> | `epicfight:axe` | +1.5 | +0.16 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/holystone_sword.png" alt="" width="24" height="24"> **Holystone Sword**<br><sub><code>aether:holystone_sword</code></sub> | `epicfight:sword` | +1.5 | +0.14 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/lightning_knife.png" alt="" width="24" height="24"> **Lightning Knife**<br><sub><code>aether:lightning_knife</code></sub> | `epicfight_dd:knife` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/lightning_sword.png" alt="" width="24" height="24"> **Lightning Sword**<br><sub><code>aether:lightning_sword</code></sub> | `epicfight_dd:vitreus` | +5 | +0.28 | +27 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/phoenix_bow.png" alt="" width="24" height="24"> **Phoenix Bow**<br><sub><code>aether:phoenix_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/pig_slayer.png" alt="" width="24" height="24"> **Pig Slayer**<br><sub><code>aether:pig_slayer</code></sub> | `epicfight_dd:knife` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/poison_dart_shooter.png" alt="" width="24" height="24"> **Poison Dart Shooter**<br><sub><code>aether:poison_dart_shooter</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/skyroot_axe.png" alt="" width="24" height="24"> **Skyroot Axe**<br><sub><code>aether:skyroot_axe</code></sub> | `epicfight:axe` | +1 | +0.14 | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/skyroot_sword.png" alt="" width="24" height="24"> **Skyroot Sword**<br><sub><code>aether:skyroot_sword</code></sub> | `epicfight:sword` | +1 | +0.12 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/valkyrie_axe.png" alt="" width="24" height="24"> **Valkyrie Axe**<br><sub><code>aether:valkyrie_axe</code></sub> | `womplus:greataxe` | +4 | +0.22 | +34 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/valkyrie_lance.png" alt="" width="24" height="24"> **Valkyrie Lance**<br><sub><code>aether:valkyrie_lance</code></sub> | `wom:blackstar` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/vampire_blade.png" alt="" width="24" height="24"> **Vampire Blade**<br><sub><code>aether:vampire_blade</code></sub> | `wom:moonless` | +5 | +0.3 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/zanite_axe.png" alt="" width="24" height="24"> **Zanite Axe**<br><sub><code>aether:zanite_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/zanite_sword.png" alt="" width="24" height="24"> **Zanite Sword**<br><sub><code>aether:zanite_sword</code></sub> | `epicfight_dd:messer` | +2 | +0.16 | +16 pp |
 
 <a id="weapons-combat-the_beyond"></a>
 ### The Beyond
@@ -744,8 +744,8 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Brittle Axe**<br><sub><code>the_beyond:brittle_axe</code></sub> | `epicfight:axe` | +5 | +0.24 | +38 pp |
-| **Brittle Sword**<br><sub><code>the_beyond:brittle_sword</code></sub> | `epicfight:sword` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/the_beyond/brittle_axe.png" alt="" width="24" height="24"> **Brittle Axe**<br><sub><code>the_beyond:brittle_axe</code></sub> | `epicfight:axe` | +5 | +0.24 | +38 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/the_beyond/brittle_sword.png" alt="" width="24" height="24"> **Brittle Sword**<br><sub><code>the_beyond:brittle_sword</code></sub> | `epicfight:sword` | +5 | +0.22 | +25 pp |
 
 <a id="weapons-combat-skylands"></a>
 ### The Sky Lands
@@ -753,14 +753,14 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Automaton Sword**<br><sub><code>skylands:automaton_sword</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
-| **Igneus Laser Blade**<br><sub><code>skylands:igneus_laser_blade</code></sub> | `epicfight_dd:vitreus` | +5 | +0.22 | +25 pp |
-| **Igneus War Axe**<br><sub><code>skylands:igneus_war_axe</code></sub> | `womplus:greataxe` | +5 | +0.22 | +25 pp |
-| **Inky Sword Of The Sky**<br><sub><code>skylands:inky_sword_of_the_sky</code></sub> | `wom:moonless` | +5 | +0.22 | +25 pp |
-| **Pale Sword Of The Sky**<br><sub><code>skylands:pale_sword_of_the_sky</code></sub> | `epicfight_dd:milady` | +5 | +0.22 | +25 pp |
-| **Pearlecent Sword Of The Sky**<br><sub><code>skylands:pearlecent_sword_of_the_sky</code></sub> | `epicfight_dd:light_greatsword` | +5 | +0.22 | +25 pp |
-| **Sword Of The Sky**<br><sub><code>skylands:sword_of_the_sky</code></sub> | `epicfight:sword` | +5 | +0.22 | +25 pp |
-| **Verdant Sword Of The Sky**<br><sub><code>skylands:verdant_sword_of_the_sky</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/automaton_sword.png" alt="" width="24" height="24"> **Automaton Sword**<br><sub><code>skylands:automaton_sword</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/igneus_laser_blade.png" alt="" width="24" height="24"> **Igneus Laser Blade**<br><sub><code>skylands:igneus_laser_blade</code></sub> | `epicfight_dd:vitreus` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/igneus_war_axe.png" alt="" width="24" height="24"> **Igneus War Axe**<br><sub><code>skylands:igneus_war_axe</code></sub> | `womplus:greataxe` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/inky_sword_of_the_sky.png" alt="" width="24" height="24"> **Inky Sword Of The Sky**<br><sub><code>skylands:inky_sword_of_the_sky</code></sub> | `wom:moonless` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/pale_sword_of_the_sky.png" alt="" width="24" height="24"> **Pale Sword Of The Sky**<br><sub><code>skylands:pale_sword_of_the_sky</code></sub> | `epicfight_dd:milady` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/pearlecent_sword_of_the_sky.png" alt="" width="24" height="24"> **Pearlecent Sword Of The Sky**<br><sub><code>skylands:pearlecent_sword_of_the_sky</code></sub> | `epicfight_dd:light_greatsword` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/sword_of_the_sky.png" alt="" width="24" height="24"> **Sword Of The Sky**<br><sub><code>skylands:sword_of_the_sky</code></sub> | `epicfight:sword` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/skylands/verdant_sword_of_the_sky.png" alt="" width="24" height="24"> **Verdant Sword Of The Sky**<br><sub><code>skylands:verdant_sword_of_the_sky</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
 
 <a id="weapons-combat-twilightforest"></a>
 ### The Twilight Forest
@@ -768,22 +768,22 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Diamond Minotaur Axe**<br><sub><code>twilightforest:diamond_minotaur_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
-| **Ender Bow**<br><sub><code>twilightforest:ender_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Fiery Sword**<br><sub><code>twilightforest:fiery_sword</code></sub> | `epicfight_dd:messer` | +4 | +0.2 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/diamond_minotaur_axe.png" alt="" width="24" height="24"> **Diamond Minotaur Axe**<br><sub><code>twilightforest:diamond_minotaur_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ender_bow.png" alt="" width="24" height="24"> **Ender Bow**<br><sub><code>twilightforest:ender_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/fiery_sword.png" alt="" width="24" height="24"> **Fiery Sword**<br><sub><code>twilightforest:fiery_sword</code></sub> | `epicfight_dd:messer` | +4 | +0.2 | +22 pp |
 | **Giant Sword**<br><sub><code>twilightforest:giant_sword</code></sub> | `tnk:colossal_blade` | +5 | +0.3 | +50 pp |
-| **Glass Sword**<br><sub><code>twilightforest:glass_sword</code></sub> | `epicfight_dd:milady` | +5 | +0.22 | +25 pp |
-| **Gold Minotaur Axe**<br><sub><code>twilightforest:gold_minotaur_axe</code></sub> | `womplus:greataxe` | +1.5 | +0.16 | +22 pp |
-| **Ice Bow**<br><sub><code>twilightforest:ice_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Ice Sword**<br><sub><code>twilightforest:ice_sword</code></sub> | `epicfight_dd:vitreus` | +5 | +0.22 | +25 pp |
-| **Ironwood Axe**<br><sub><code>twilightforest:ironwood_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
-| **Ironwood Sword**<br><sub><code>twilightforest:ironwood_sword</code></sub> | `epicfight:sword` | +2 | +0.16 | +16 pp |
-| **Knightmetal Axe**<br><sub><code>twilightforest:knightmetal_axe</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +30 pp |
-| **Knightmetal Sword**<br><sub><code>twilightforest:knightmetal_sword</code></sub> | `womplus:hollow_longsword` | +3 | +0.26 | +42 pp |
-| **Seeker Bow**<br><sub><code>twilightforest:seeker_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
-| **Steeleaf Axe**<br><sub><code>twilightforest:steeleaf_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
-| **Steeleaf Sword**<br><sub><code>twilightforest:steeleaf_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
-| **Triple Bow**<br><sub><code>twilightforest:triple_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/glass_sword.png" alt="" width="24" height="24"> **Glass Sword**<br><sub><code>twilightforest:glass_sword</code></sub> | `epicfight_dd:milady` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/gold_minotaur_axe.png" alt="" width="24" height="24"> **Gold Minotaur Axe**<br><sub><code>twilightforest:gold_minotaur_axe</code></sub> | `womplus:greataxe` | +1.5 | +0.16 | +22 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ice_bow.png" alt="" width="24" height="24"> **Ice Bow**<br><sub><code>twilightforest:ice_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ice_sword.png" alt="" width="24" height="24"> **Ice Sword**<br><sub><code>twilightforest:ice_sword</code></sub> | `epicfight_dd:vitreus` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ironwood_axe.png" alt="" width="24" height="24"> **Ironwood Axe**<br><sub><code>twilightforest:ironwood_axe</code></sub> | `epicfight:axe` | +2 | +0.18 | +26 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ironwood_sword.png" alt="" width="24" height="24"> **Ironwood Sword**<br><sub><code>twilightforest:ironwood_sword</code></sub> | `epicfight:sword` | +2 | +0.16 | +16 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/knightmetal_axe.png" alt="" width="24" height="24"> **Knightmetal Axe**<br><sub><code>twilightforest:knightmetal_axe</code></sub> | `epicfight_dd:steel_axe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/knightmetal_sword.png" alt="" width="24" height="24"> **Knightmetal Sword**<br><sub><code>twilightforest:knightmetal_sword</code></sub> | `womplus:hollow_longsword` | +3 | +0.26 | +42 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/seeker_bow.png" alt="" width="24" height="24"> **Seeker Bow**<br><sub><code>twilightforest:seeker_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/steeleaf_axe.png" alt="" width="24" height="24"> **Steeleaf Axe**<br><sub><code>twilightforest:steeleaf_axe</code></sub> | `womplus:greataxe` | +3 | +0.2 | +30 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/steeleaf_sword.png" alt="" width="24" height="24"> **Steeleaf Sword**<br><sub><code>twilightforest:steeleaf_sword</code></sub> | `epicfight_dd:milady` | +3 | +0.18 | +19 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/triple_bow.png" alt="" width="24" height="24"> **Triple Bow**<br><sub><code>twilightforest:triple_bow</code></sub> | `epicfight:bow` | Preset | Preset | Preset |
 
 <a id="weapons-combat-wom"></a>
 ### Weapons of Miracles
@@ -791,19 +791,19 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Agony**<br><sub><code>wom:agony</code></sub><br><sub>Provisionally retained</sub> | `wom:agony` | Preset | Preset | Preset |
-| **Diamond Greataxe**<br><sub><code>wom:diamond_greataxe</code></sub> | `womplus:greataxe` | +4 | +0.24 | +50 pp |
-| **Diamond staff**<br><sub><code>wom:diamond_staff</code></sub> | `wom:staff` | +3 | +0.2 | +19 … +25 pp |
-| **Golden Greataxe**<br><sub><code>wom:golden_greataxe</code></sub> | `womplus:greataxe` | +2.5 | +0.2 | +39 pp |
-| **Golden staff **<br><sub><code>wom:golden_staff</code></sub> | `wom:staff` | +1.5 | +0.16 | +13 pp |
-| **Iron Greataxe**<br><sub><code>wom:iron_greataxe</code></sub> | `womplus:greataxe` | +3 | +0.22 | +43 pp |
-| **Iron staff**<br><sub><code>wom:iron_staff</code></sub> | `wom:staff` | +2 | +0.18 | +16 … +18 pp |
-| **Netherite Greataxe**<br><sub><code>wom:netherite_greataxe</code></sub> | `womplus:greataxe` | +5 | +0.26 | +60 pp |
-| **Netherite staff**<br><sub><code>wom:netherite_staff</code></sub> | `wom:staff` | +4 | +0.22 | +22 … +32 pp |
-| **Nova**<br><sub><code>wom:nova</code></sub> | `womplus:nova` | Preset | Preset | Preset |
-| **Ruine**<br><sub><code>wom:ruine</code></sub><br><sub>Provisionally retained</sub> | `wom:ruine` | Preset | Preset | Preset |
-| **Stone staff**<br><sub><code>wom:stone_staff</code></sub> | `wom:staff` | +1.5 | +0.16 | +13 pp |
-| **Wooden staff**<br><sub><code>wom:wooden_staff</code></sub> | `wom:staff` | +1 | +0.14 … +0.15 | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/agony.png" alt="" width="24" height="24"> **Agony**<br><sub><code>wom:agony</code></sub><br><sub>Provisionally retained</sub> | `wom:agony` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/diamond_greataxe.png" alt="" width="24" height="24"> **Diamond Greataxe**<br><sub><code>wom:diamond_greataxe</code></sub> | `womplus:greataxe` | +4 | +0.24 | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/diamond_staff.png" alt="" width="24" height="24"> **Diamond staff**<br><sub><code>wom:diamond_staff</code></sub> | `wom:staff` | +3 | +0.2 | +19 … +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/golden_greataxe.png" alt="" width="24" height="24"> **Golden Greataxe**<br><sub><code>wom:golden_greataxe</code></sub> | `womplus:greataxe` | +2.5 | +0.2 | +39 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/golden_staff.png" alt="" width="24" height="24"> **Golden staff **<br><sub><code>wom:golden_staff</code></sub> | `wom:staff` | +1.5 | +0.16 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/iron_greataxe.png" alt="" width="24" height="24"> **Iron Greataxe**<br><sub><code>wom:iron_greataxe</code></sub> | `womplus:greataxe` | +3 | +0.22 | +43 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/iron_staff.png" alt="" width="24" height="24"> **Iron staff**<br><sub><code>wom:iron_staff</code></sub> | `wom:staff` | +2 | +0.18 | +16 … +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/netherite_greataxe.png" alt="" width="24" height="24"> **Netherite Greataxe**<br><sub><code>wom:netherite_greataxe</code></sub> | `womplus:greataxe` | +5 | +0.26 | +60 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/netherite_staff.png" alt="" width="24" height="24"> **Netherite staff**<br><sub><code>wom:netherite_staff</code></sub> | `wom:staff` | +4 | +0.22 | +22 … +32 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/nova.png" alt="" width="24" height="24"> **Nova**<br><sub><code>wom:nova</code></sub> | `womplus:nova` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/ruine.png" alt="" width="24" height="24"> **Ruine**<br><sub><code>wom:ruine</code></sub><br><sub>Provisionally retained</sub> | `wom:ruine` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/stone_staff.png" alt="" width="24" height="24"> **Stone staff**<br><sub><code>wom:stone_staff</code></sub> | `wom:staff` | +1.5 | +0.16 | +13 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/wooden_staff.png" alt="" width="24" height="24"> **Wooden staff**<br><sub><code>wom:wooden_staff</code></sub> | `wom:staff` | +1 | +0.14 … +0.15 | +10 pp |
 
 <a id="weapons-combat-wildernature"></a>
 ### WilderNature
@@ -811,7 +811,7 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Blunderbuss**<br><sub><code>wildernature:blunderbuss</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wildernature/blunderbuss.png" alt="" width="24" height="24"> **Blunderbuss**<br><sub><code>wildernature:blunderbuss</code></sub> | `epicfight:crossbow` | Preset | Preset | Preset |
 
 <a id="weapons-combat-witchery"></a>
 ### Witchery
@@ -819,9 +819,9 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Arthana**<br><sub><code>witchery:arthana</code></sub> | `epicfight_dd:blood_ritus_dagger` | +5 | +0.35 | +25 pp |
-| **Cane Sword**<br><sub><code>witchery:cane_sword</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
-| **Death Sickle**<br><sub><code>witchery:death_sickle</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.25 | +45 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/witchery/arthana.png" alt="" width="24" height="24"> **Arthana**<br><sub><code>witchery:arthana</code></sub> | `epicfight_dd:blood_ritus_dagger` | +5 | +0.35 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/witchery/cane_sword.png" alt="" width="24" height="24"> **Cane Sword**<br><sub><code>witchery:cane_sword</code></sub> | `epicfight_dd:messer` | +5 | +0.22 | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/witchery/death_sickle.png" alt="" width="24" height="24"> **Death Sickle**<br><sub><code>witchery:death_sickle</code></sub> | `epicfight_dd:war_sickle` | +5 | +0.25 | +45 pp |
 | **Huntsman Spear**<br><sub><code>witchery:huntsman_spear</code></sub> | `wom:agony` | +5 | +0.25 | +45 pp |
 
 ## Shields
@@ -851,8 +851,8 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Dragon Guard Shield**<br><sub><code>block_factorys_bosses:dragon_guard_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Enhanced Shield**<br><sub><code>block_factorys_bosses:enhanced_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/dragon_guard_shield.png" alt="" width="24" height="24"> **Dragon Guard Shield**<br><sub><code>block_factorys_bosses:dragon_guard_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/block_factorys_bosses/enhanced_shield.png" alt="" width="24" height="24"> **Enhanced Shield**<br><sub><code>block_factorys_bosses:enhanced_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
 
 <a id="weapons-shields-cataclysm"></a>
 ### Cataclysm
@@ -870,10 +870,10 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **End Stone Rubble Shield**<br><sub><code>enderscape:end_stone_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Kurodite Rubble Shield**<br><sub><code>enderscape:kurodite_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Mirestone Rubble Shield**<br><sub><code>enderscape:mirestone_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Veradite Rubble Shield**<br><sub><code>enderscape:veradite_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/enderscape/end_stone_rubble_shield.png" alt="" width="24" height="24"> **End Stone Rubble Shield**<br><sub><code>enderscape:end_stone_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/enderscape/kurodite_rubble_shield.png" alt="" width="24" height="24"> **Kurodite Rubble Shield**<br><sub><code>enderscape:kurodite_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/enderscape/mirestone_rubble_shield.png" alt="" width="24" height="24"> **Mirestone Rubble Shield**<br><sub><code>enderscape:mirestone_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/enderscape/veradite_rubble_shield.png" alt="" width="24" height="24"> **Veradite Rubble Shield**<br><sub><code>enderscape:veradite_rubble_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
 
 <a id="weapons-shields-legendary_monsters"></a>
 ### Legendary Monsters
@@ -881,11 +881,11 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Buckler Of Annihilation**<br><sub><code>legendary_monsters:buckler_of_annihilation</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Dinosaur Bone Shield**<br><sub><code>legendary_monsters:dinosaur_bone_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Frostbitten Shield**<br><sub><code>legendary_monsters:frostbitten_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Shulker Shield**<br><sub><code>legendary_monsters:shulker_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Spiky Shield**<br><sub><code>legendary_monsters:spiky_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/buckler_of_annihilation.png" alt="" width="24" height="24"> **Buckler Of Annihilation**<br><sub><code>legendary_monsters:buckler_of_annihilation</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/dinosaur_bone_shield.png" alt="" width="24" height="24"> **Dinosaur Bone Shield**<br><sub><code>legendary_monsters:dinosaur_bone_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/frostbitten_shield.png" alt="" width="24" height="24"> **Frostbitten Shield**<br><sub><code>legendary_monsters:frostbitten_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/shulker_shield.png" alt="" width="24" height="24"> **Shulker Shield**<br><sub><code>legendary_monsters:shulker_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/spiky_shield.png" alt="" width="24" height="24"> **Spiky Shield**<br><sub><code>legendary_monsters:spiky_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
 
 <a id="weapons-shields-minecraft"></a>
 ### Minecraft / Vanilla Backport
@@ -901,8 +901,8 @@ Browse the visual armoury for filters, item details, per-hand attributes, impact
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Awakened Ichorium Shield**<br><sub><code>thaumaturgetinker:ichor_shield_gem</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
-| **Ichorium Shield**<br><sub><code>thaumaturgetinker:ichor_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/thaumaturgetinker/ichor_shield_gem.png" alt="" width="24" height="24"> **Awakened Ichorium Shield**<br><sub><code>thaumaturgetinker:ichor_shield_gem</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/thaumaturgetinker/ichor_shield.png" alt="" width="24" height="24"> **Ichorium Shield**<br><sub><code>thaumaturgetinker:ichor_shield</code></sub> | `epicfight:shield` | Preset | Preset | Preset |
 
 <a id="weapons-shields-twilightforest"></a>
 ### The Twilight Forest
@@ -928,8 +928,8 @@ These entries are included for capability coverage; they are not counted as comb
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
 | **Galena Gauntlet**<br><sub><code>alexscaves:galena_gauntlet</code></sub> | `epicfight:fist` | Preset | Preset | +5 pp |
-| **Sea Staff**<br><sub><code>alexscaves:sea_staff</code></sub> | **Unverified** | Unverified | Unverified | Unverified |
-| **Sugar Staff**<br><sub><code>alexscaves:sugar_staff</code></sub> | **Unverified** | Unverified | Unverified | Unverified |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/sea_staff.png" alt="" width="24" height="24"> **Sea Staff**<br><sub><code>alexscaves:sea_staff</code></sub> | **Unverified** | Unverified | Unverified | Unverified |
+| <img src="../handbook-source/current/assets/weapons/icons/alexscaves/sugar_staff.png" alt="" width="24" height="24"> **Sugar Staff**<br><sub><code>alexscaves:sugar_staff</code></sub> | **Unverified** | Unverified | Unverified | Unverified |
 
 <a id="weapons-tools-ae2"></a>
 ### Applied Energistics 2
@@ -937,15 +937,15 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Certus Quartz Hoe**<br><sub><code>ae2:certus_quartz_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Certus Quartz Pickaxe**<br><sub><code>ae2:certus_quartz_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Certus Quartz Shovel**<br><sub><code>ae2:certus_quartz_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Fluix Hoe**<br><sub><code>ae2:fluix_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Fluix Pickaxe**<br><sub><code>ae2:fluix_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Fluix Shovel**<br><sub><code>ae2:fluix_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Nether Quartz Hoe**<br><sub><code>ae2:nether_quartz_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Nether Quartz Pickaxe**<br><sub><code>ae2:nether_quartz_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Nether Quartz Shovel**<br><sub><code>ae2:nether_quartz_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/certus_quartz_hoe.png" alt="" width="24" height="24"> **Certus Quartz Hoe**<br><sub><code>ae2:certus_quartz_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/certus_quartz_pickaxe.png" alt="" width="24" height="24"> **Certus Quartz Pickaxe**<br><sub><code>ae2:certus_quartz_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/certus_quartz_shovel.png" alt="" width="24" height="24"> **Certus Quartz Shovel**<br><sub><code>ae2:certus_quartz_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/fluix_hoe.png" alt="" width="24" height="24"> **Fluix Hoe**<br><sub><code>ae2:fluix_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/fluix_pickaxe.png" alt="" width="24" height="24"> **Fluix Pickaxe**<br><sub><code>ae2:fluix_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/fluix_shovel.png" alt="" width="24" height="24"> **Fluix Shovel**<br><sub><code>ae2:fluix_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/nether_quartz_hoe.png" alt="" width="24" height="24"> **Nether Quartz Hoe**<br><sub><code>ae2:nether_quartz_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/nether_quartz_pickaxe.png" alt="" width="24" height="24"> **Nether Quartz Pickaxe**<br><sub><code>ae2:nether_quartz_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/ae2/nether_quartz_shovel.png" alt="" width="24" height="24"> **Nether Quartz Shovel**<br><sub><code>ae2:nether_quartz_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-ars_nouveau"></a>
 ### Ars Nouveau
@@ -961,9 +961,9 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Black Steel Hoe**<br><sub><code>cataclysm:black_steel_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Black Steel Pickaxe**<br><sub><code>cataclysm:black_steel_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Black Steel Shovel**<br><sub><code>cataclysm:black_steel_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/black_steel_hoe.png" alt="" width="24" height="24"> **Black Steel Hoe**<br><sub><code>cataclysm:black_steel_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/black_steel_pickaxe.png" alt="" width="24" height="24"> **Black Steel Pickaxe**<br><sub><code>cataclysm:black_steel_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/cataclysm/black_steel_shovel.png" alt="" width="24" height="24"> **Black Steel Shovel**<br><sub><code>cataclysm:black_steel_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-create"></a>
 ### Create
@@ -971,7 +971,7 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Wrench**<br><sub><code>create:wrench</code></sub> | `epicfight:sword` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/create/wrench.png" alt="" width="24" height="24"> **Wrench**<br><sub><code>create:wrench</code></sub> | `epicfight:sword` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-createdieselgenerators"></a>
 ### Create: Diesel Generators
@@ -979,7 +979,7 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Hammer**<br><sub><code>createdieselgenerators:hammer</code></sub> | `epicfight:axe` | Preset | Preset | +12 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/createdieselgenerators/hammer.png" alt="" width="24" height="24"> **Hammer**<br><sub><code>createdieselgenerators:hammer</code></sub> | `epicfight:axe` | Preset | Preset | +12 pp |
 
 <a id="weapons-tools-deep_aether"></a>
 ### Deep Aether
@@ -987,12 +987,12 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Skyjade Hoe**<br><sub><code>deep_aether:skyjade_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Skyjade Pickaxe**<br><sub><code>deep_aether:skyjade_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Skyjade Shovel**<br><sub><code>deep_aether:skyjade_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Stratus Hoe**<br><sub><code>deep_aether:stratus_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Stratus Pickaxe**<br><sub><code>deep_aether:stratus_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Stratus Shovel**<br><sub><code>deep_aether:stratus_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/skyjade_hoe.png" alt="" width="24" height="24"> **Skyjade Hoe**<br><sub><code>deep_aether:skyjade_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/skyjade_pickaxe.png" alt="" width="24" height="24"> **Skyjade Pickaxe**<br><sub><code>deep_aether:skyjade_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/skyjade_shovel.png" alt="" width="24" height="24"> **Skyjade Shovel**<br><sub><code>deep_aether:skyjade_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/stratus_hoe.png" alt="" width="24" height="24"> **Stratus Hoe**<br><sub><code>deep_aether:stratus_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/stratus_pickaxe.png" alt="" width="24" height="24"> **Stratus Pickaxe**<br><sub><code>deep_aether:stratus_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deep_aether/stratus_shovel.png" alt="" width="24" height="24"> **Stratus Shovel**<br><sub><code>deep_aether:stratus_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-deeperdarker"></a>
 ### Deeper and Darker
@@ -1000,12 +1000,12 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Resonarium Hoe**<br><sub><code>deeperdarker:resonarium_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Resonarium Pickaxe**<br><sub><code>deeperdarker:resonarium_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Resonarium Shovel**<br><sub><code>deeperdarker:resonarium_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Warden Hoe**<br><sub><code>deeperdarker:warden_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Warden Pickaxe**<br><sub><code>deeperdarker:warden_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Warden Shovel**<br><sub><code>deeperdarker:warden_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/resonarium_hoe.png" alt="" width="24" height="24"> **Resonarium Hoe**<br><sub><code>deeperdarker:resonarium_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/resonarium_pickaxe.png" alt="" width="24" height="24"> **Resonarium Pickaxe**<br><sub><code>deeperdarker:resonarium_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/resonarium_shovel.png" alt="" width="24" height="24"> **Resonarium Shovel**<br><sub><code>deeperdarker:resonarium_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/warden_hoe.png" alt="" width="24" height="24"> **Warden Hoe**<br><sub><code>deeperdarker:warden_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/warden_pickaxe.png" alt="" width="24" height="24"> **Warden Pickaxe**<br><sub><code>deeperdarker:warden_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/deeperdarker/warden_shovel.png" alt="" width="24" height="24"> **Warden Shovel**<br><sub><code>deeperdarker:warden_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-hybrid_aquatic"></a>
 ### Hybrid Aquatic
@@ -1013,12 +1013,12 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Coral Hoe**<br><sub><code>hybrid_aquatic:coral_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Coral Pickaxe**<br><sub><code>hybrid_aquatic:coral_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Coral Shovel**<br><sub><code>hybrid_aquatic:coral_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Seashell Hoe**<br><sub><code>hybrid_aquatic:seashell_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Seashell Pickaxe**<br><sub><code>hybrid_aquatic:seashell_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Seashell Shovel**<br><sub><code>hybrid_aquatic:seashell_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/coral_hoe.png" alt="" width="24" height="24"> **Coral Hoe**<br><sub><code>hybrid_aquatic:coral_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/coral_pickaxe.png" alt="" width="24" height="24"> **Coral Pickaxe**<br><sub><code>hybrid_aquatic:coral_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/coral_shovel.png" alt="" width="24" height="24"> **Coral Shovel**<br><sub><code>hybrid_aquatic:coral_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/seashell_hoe.png" alt="" width="24" height="24"> **Seashell Hoe**<br><sub><code>hybrid_aquatic:seashell_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/seashell_pickaxe.png" alt="" width="24" height="24"> **Seashell Pickaxe**<br><sub><code>hybrid_aquatic:seashell_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/hybrid_aquatic/seashell_shovel.png" alt="" width="24" height="24"> **Seashell Shovel**<br><sub><code>hybrid_aquatic:seashell_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-immersiveengineering"></a>
 ### Immersive Engineering
@@ -1026,9 +1026,9 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Hoe Steel**<br><sub><code>immersiveengineering:hoe_steel</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Pickaxe Steel**<br><sub><code>immersiveengineering:pickaxe_steel</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Shovel Steel**<br><sub><code>immersiveengineering:shovel_steel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/immersiveengineering/hoe_steel.png" alt="" width="24" height="24"> **Hoe Steel**<br><sub><code>immersiveengineering:hoe_steel</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/immersiveengineering/pickaxe_steel.png" alt="" width="24" height="24"> **Pickaxe Steel**<br><sub><code>immersiveengineering:pickaxe_steel</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/immersiveengineering/shovel_steel.png" alt="" width="24" height="24"> **Shovel Steel**<br><sub><code>immersiveengineering:shovel_steel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-legendary_monsters"></a>
 ### Legendary Monsters
@@ -1036,10 +1036,10 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Enderitium Hoe**<br><sub><code>legendary_monsters:enderitium_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Enderitium Pickaxe**<br><sub><code>legendary_monsters:enderitium_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Enderitium Shovel**<br><sub><code>legendary_monsters:enderitium_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Somber Key**<br><sub><code>legendary_monsters:somber_key</code></sub> | `epicfight:sword` | Preset | Preset | +3 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/enderitium_hoe.png" alt="" width="24" height="24"> **Enderitium Hoe**<br><sub><code>legendary_monsters:enderitium_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/enderitium_pickaxe.png" alt="" width="24" height="24"> **Enderitium Pickaxe**<br><sub><code>legendary_monsters:enderitium_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/enderitium_shovel.png" alt="" width="24" height="24"> **Enderitium Shovel**<br><sub><code>legendary_monsters:enderitium_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/legendary_monsters/somber_key.png" alt="" width="24" height="24"> **Somber Key**<br><sub><code>legendary_monsters:somber_key</code></sub> | `epicfight:sword` | Preset | Preset | +3 pp |
 
 <a id="weapons-tools-bakery"></a>
 ### Let’s Do: Bakery
@@ -1047,8 +1047,8 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Rolling Pin**<br><sub><code>bakery:rolling_pin</code></sub> | `epicfight:sword` | Preset | Preset | +0 pp |
-| **Small Cooking Pot**<br><sub><code>bakery:small_cooking_pot</code></sub> | `epicfight:greatsword` | Preset | Preset | +15 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/bakery/rolling_pin.png" alt="" width="24" height="24"> **Rolling Pin**<br><sub><code>bakery:rolling_pin</code></sub> | `epicfight:sword` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/bakery/small_cooking_pot.png" alt="" width="24" height="24"> **Small Cooking Pot**<br><sub><code>bakery:small_cooking_pot</code></sub> | `epicfight:greatsword` | Preset | Preset | +15 pp |
 
 <a id="weapons-tools-minecraft"></a>
 ### Minecraft / Vanilla Backport
@@ -1056,25 +1056,25 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Copper Pickaxe**<br><sub><code>minecraft:copper_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Diamond Hoe**<br><sub><code>minecraft:diamond_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
-| **Diamond Pickaxe**<br><sub><code>minecraft:diamond_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +18 pp |
-| **Diamond Shovel**<br><sub><code>minecraft:diamond_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
-| **Golden Hoe**<br><sub><code>minecraft:golden_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
-| **Golden Pickaxe**<br><sub><code>minecraft:golden_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | Preset |
-| **Golden Shovel**<br><sub><code>minecraft:golden_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
-| **Iron Hoe**<br><sub><code>minecraft:iron_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
-| **Iron Pickaxe**<br><sub><code>minecraft:iron_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +12 pp |
-| **Iron Shovel**<br><sub><code>minecraft:iron_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
-| **Netherite Hoe**<br><sub><code>minecraft:netherite_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +10 pp |
-| **Netherite Pickaxe**<br><sub><code>minecraft:netherite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +24 pp |
-| **Netherite Shovel**<br><sub><code>minecraft:netherite_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +10 pp |
-| **Stone Hoe**<br><sub><code>minecraft:stone_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
-| **Stone Pickaxe**<br><sub><code>minecraft:stone_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +6 pp |
-| **Stone Shovel**<br><sub><code>minecraft:stone_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
-| **Wooden Hoe**<br><sub><code>minecraft:wooden_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
-| **Wooden Pickaxe**<br><sub><code>minecraft:wooden_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | Preset |
-| **Wooden Shovel**<br><sub><code>minecraft:wooden_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/copper_pickaxe.png" alt="" width="24" height="24"> **Copper Pickaxe**<br><sub><code>minecraft:copper_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/diamond_hoe.png" alt="" width="24" height="24"> **Diamond Hoe**<br><sub><code>minecraft:diamond_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/diamond_pickaxe.png" alt="" width="24" height="24"> **Diamond Pickaxe**<br><sub><code>minecraft:diamond_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +18 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/diamond_shovel.png" alt="" width="24" height="24"> **Diamond Shovel**<br><sub><code>minecraft:diamond_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/golden_hoe.png" alt="" width="24" height="24"> **Golden Hoe**<br><sub><code>minecraft:golden_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/golden_pickaxe.png" alt="" width="24" height="24"> **Golden Pickaxe**<br><sub><code>minecraft:golden_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/golden_shovel.png" alt="" width="24" height="24"> **Golden Shovel**<br><sub><code>minecraft:golden_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/iron_hoe.png" alt="" width="24" height="24"> **Iron Hoe**<br><sub><code>minecraft:iron_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/iron_pickaxe.png" alt="" width="24" height="24"> **Iron Pickaxe**<br><sub><code>minecraft:iron_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +12 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/iron_shovel.png" alt="" width="24" height="24"> **Iron Shovel**<br><sub><code>minecraft:iron_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/netherite_hoe.png" alt="" width="24" height="24"> **Netherite Hoe**<br><sub><code>minecraft:netherite_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/netherite_pickaxe.png" alt="" width="24" height="24"> **Netherite Pickaxe**<br><sub><code>minecraft:netherite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +24 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/netherite_shovel.png" alt="" width="24" height="24"> **Netherite Shovel**<br><sub><code>minecraft:netherite_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/stone_hoe.png" alt="" width="24" height="24"> **Stone Hoe**<br><sub><code>minecraft:stone_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/stone_pickaxe.png" alt="" width="24" height="24"> **Stone Pickaxe**<br><sub><code>minecraft:stone_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +6 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/stone_shovel.png" alt="" width="24" height="24"> **Stone Shovel**<br><sub><code>minecraft:stone_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/wooden_hoe.png" alt="" width="24" height="24"> **Wooden Hoe**<br><sub><code>minecraft:wooden_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/wooden_pickaxe.png" alt="" width="24" height="24"> **Wooden Pickaxe**<br><sub><code>minecraft:wooden_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/minecraft/wooden_shovel.png" alt="" width="24" height="24"> **Wooden Shovel**<br><sub><code>minecraft:wooden_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
 
 <a id="weapons-tools-supplementaries"></a>
 ### Supplementaries
@@ -1082,7 +1082,7 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Wrench**<br><sub><code>supplementaries:wrench</code></sub> | `epicfight:sword` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/supplementaries/wrench.png" alt="" width="24" height="24"> **Wrench**<br><sub><code>supplementaries:wrench</code></sub> | `epicfight:sword` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-thaumaturgetinker"></a>
 ### Thaumaturge Tinker
@@ -1101,21 +1101,21 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Gravitite Hoe**<br><sub><code>aether:gravitite_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Gravitite Pickaxe**<br><sub><code>aether:gravitite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Gravitite Shovel**<br><sub><code>aether:gravitite_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Holystone Hoe**<br><sub><code>aether:holystone_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Holystone Pickaxe**<br><sub><code>aether:holystone_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Holystone Shovel**<br><sub><code>aether:holystone_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Skyroot Hoe**<br><sub><code>aether:skyroot_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Skyroot Pickaxe**<br><sub><code>aether:skyroot_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Skyroot Shovel**<br><sub><code>aether:skyroot_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Valkyrie Hoe**<br><sub><code>aether:valkyrie_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Valkyrie Pickaxe**<br><sub><code>aether:valkyrie_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Valkyrie Shovel**<br><sub><code>aether:valkyrie_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Zanite Hoe**<br><sub><code>aether:zanite_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Zanite Pickaxe**<br><sub><code>aether:zanite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Zanite Shovel**<br><sub><code>aether:zanite_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/gravitite_hoe.png" alt="" width="24" height="24"> **Gravitite Hoe**<br><sub><code>aether:gravitite_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/gravitite_pickaxe.png" alt="" width="24" height="24"> **Gravitite Pickaxe**<br><sub><code>aether:gravitite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/gravitite_shovel.png" alt="" width="24" height="24"> **Gravitite Shovel**<br><sub><code>aether:gravitite_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/holystone_hoe.png" alt="" width="24" height="24"> **Holystone Hoe**<br><sub><code>aether:holystone_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/holystone_pickaxe.png" alt="" width="24" height="24"> **Holystone Pickaxe**<br><sub><code>aether:holystone_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/holystone_shovel.png" alt="" width="24" height="24"> **Holystone Shovel**<br><sub><code>aether:holystone_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/skyroot_hoe.png" alt="" width="24" height="24"> **Skyroot Hoe**<br><sub><code>aether:skyroot_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/skyroot_pickaxe.png" alt="" width="24" height="24"> **Skyroot Pickaxe**<br><sub><code>aether:skyroot_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/skyroot_shovel.png" alt="" width="24" height="24"> **Skyroot Shovel**<br><sub><code>aether:skyroot_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/valkyrie_hoe.png" alt="" width="24" height="24"> **Valkyrie Hoe**<br><sub><code>aether:valkyrie_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/valkyrie_pickaxe.png" alt="" width="24" height="24"> **Valkyrie Pickaxe**<br><sub><code>aether:valkyrie_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/valkyrie_shovel.png" alt="" width="24" height="24"> **Valkyrie Shovel**<br><sub><code>aether:valkyrie_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/zanite_hoe.png" alt="" width="24" height="24"> **Zanite Hoe**<br><sub><code>aether:zanite_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/zanite_pickaxe.png" alt="" width="24" height="24"> **Zanite Pickaxe**<br><sub><code>aether:zanite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/aether/zanite_shovel.png" alt="" width="24" height="24"> **Zanite Shovel**<br><sub><code>aether:zanite_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-the_beyond"></a>
 ### The Beyond
@@ -1123,9 +1123,9 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Brittle Hoe**<br><sub><code>the_beyond:brittle_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
-| **Brittle Pickaxe**<br><sub><code>the_beyond:brittle_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | Preset |
-| **Brittle Shovel**<br><sub><code>the_beyond:brittle_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/the_beyond/brittle_hoe.png" alt="" width="24" height="24"> **Brittle Hoe**<br><sub><code>the_beyond:brittle_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/the_beyond/brittle_pickaxe.png" alt="" width="24" height="24"> **Brittle Pickaxe**<br><sub><code>the_beyond:brittle_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/the_beyond/brittle_shovel.png" alt="" width="24" height="24"> **Brittle Shovel**<br><sub><code>the_beyond:brittle_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | Preset |
 
 <a id="weapons-tools-twilightforest"></a>
 ### The Twilight Forest
@@ -1133,16 +1133,16 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Fiery Pickaxe**<br><sub><code>twilightforest:fiery_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/fiery_pickaxe.png" alt="" width="24" height="24"> **Fiery Pickaxe**<br><sub><code>twilightforest:fiery_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
 | **Giant Pickaxe**<br><sub><code>twilightforest:giant_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Ironwood Hoe**<br><sub><code>twilightforest:ironwood_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Ironwood Pickaxe**<br><sub><code>twilightforest:ironwood_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Ironwood Shovel**<br><sub><code>twilightforest:ironwood_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
-| **Knightmetal Pickaxe**<br><sub><code>twilightforest:knightmetal_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Mazebreaker Pickaxe**<br><sub><code>twilightforest:mazebreaker_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Steeleaf Hoe**<br><sub><code>twilightforest:steeleaf_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
-| **Steeleaf Pickaxe**<br><sub><code>twilightforest:steeleaf_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
-| **Steeleaf Shovel**<br><sub><code>twilightforest:steeleaf_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ironwood_hoe.png" alt="" width="24" height="24"> **Ironwood Hoe**<br><sub><code>twilightforest:ironwood_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ironwood_pickaxe.png" alt="" width="24" height="24"> **Ironwood Pickaxe**<br><sub><code>twilightforest:ironwood_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/ironwood_shovel.png" alt="" width="24" height="24"> **Ironwood Shovel**<br><sub><code>twilightforest:ironwood_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/knightmetal_pickaxe.png" alt="" width="24" height="24"> **Knightmetal Pickaxe**<br><sub><code>twilightforest:knightmetal_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/mazebreaker_pickaxe.png" alt="" width="24" height="24"> **Mazebreaker Pickaxe**<br><sub><code>twilightforest:mazebreaker_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/steeleaf_hoe.png" alt="" width="24" height="24"> **Steeleaf Hoe**<br><sub><code>twilightforest:steeleaf_hoe</code></sub> | `epicfight:hoe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/steeleaf_pickaxe.png" alt="" width="24" height="24"> **Steeleaf Pickaxe**<br><sub><code>twilightforest:steeleaf_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/twilightforest/steeleaf_shovel.png" alt="" width="24" height="24"> **Steeleaf Shovel**<br><sub><code>twilightforest:steeleaf_shovel</code></sub> | `epicfight:shovel` | Preset | Preset | +0 pp |
 
 <a id="weapons-tools-witchery"></a>
 ### Witchery
@@ -1150,7 +1150,7 @@ These entries are included for capability coverage; they are not counted as comb
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Koboldite Pickaxe**<br><sub><code>witchery:koboldite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/witchery/koboldite_pickaxe.png" alt="" width="24" height="24"> **Koboldite Pickaxe**<br><sub><code>witchery:koboldite_pickaxe</code></sub> | `epicfight:pickaxe` | Preset | Preset | +0 pp |
 
 </details>
 
@@ -1166,20 +1166,20 @@ The following original items are excluded from recipes, loot and recipe viewers.
 
 | Weapon / item | Combat type | Damage bonus | Speed bonus | Armor negation bonus |
 | --- | --- | ---: | ---: | ---: |
-| **Antitheus**<br><sub><code>wom:antitheus</code></sub> | `wom:antitheus` | Preset | Preset | +20 pp |
-| **Blackstar**<br><sub><code>wom:blackstar</code></sub> | `womplus:blackstar` | Preset | Preset | +25 pp |
-| **Clawed Gauntle**<br><sub><code>wom:jabberwocky</code></sub> | `wom:clawed_gauntle` | Preset | Preset | Preset |
-| **Ender blaster**<br><sub><code>wom:ender_blaster</code></sub> | `wom:ender_blaster` | Preset | Preset | Preset |
-| **Evil Ôdachi**<br><sub><code>wom:evil_tachi</code></sub> | `womplus:evil_tachi_reift` | Preset | Preset | +10 pp |
-| **Gesetz**<br><sub><code>wom:gesetz</code></sub> | `wom:gesetz` | Preset | Preset | +20 pp |
-| **Herrscher**<br><sub><code>wom:herrscher</code></sub> | `wom:herrscher` | Preset | Preset | Preset |
-| **Hollow Longsword**<br><sub><code>wom:hollow_longsword</code></sub> | `womplus:hollow_longsword` | +3 | +0.15 | +20 pp |
-| **Moonless**<br><sub><code>wom:moonless</code></sub> | `wom:moonless` | Preset | Preset | Preset |
-| **Napoleon**<br><sub><code>wom:napoleon</code></sub> | `wom:napoleon` | Preset | Preset | Preset |
-| **Orbit**<br><sub><code>wom:orbit</code></sub> | `wom:orbit` | Preset | Preset | Preset |
-| **Satsujin**<br><sub><code>wom:satsujin</code></sub> | `wom:satsujin` | Preset | Preset | Preset |
-| **Solar**<br><sub><code>wom:solar</code></sub> | `wom:solar` | Preset | Preset | +20 pp |
-| **Torment**<br><sub><code>wom:tormented_mind</code></sub> | `wom:torment` | Preset | Preset | +50 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/antitheus.png" alt="" width="24" height="24"> **Antitheus**<br><sub><code>wom:antitheus</code></sub> | `wom:antitheus` | Preset | Preset | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/blackstar.png" alt="" width="24" height="24"> **Blackstar**<br><sub><code>wom:blackstar</code></sub> | `womplus:blackstar` | Preset | Preset | +25 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/jabberwocky.png" alt="" width="24" height="24"> **Clawed Gauntle**<br><sub><code>wom:jabberwocky</code></sub> | `wom:clawed_gauntle` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/ender_blaster.png" alt="" width="24" height="24"> **Ender blaster**<br><sub><code>wom:ender_blaster</code></sub> | `wom:ender_blaster` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/evil_tachi.png" alt="" width="24" height="24"> **Evil Ôdachi**<br><sub><code>wom:evil_tachi</code></sub> | `womplus:evil_tachi_reift` | Preset | Preset | +10 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/gesetz.png" alt="" width="24" height="24"> **Gesetz**<br><sub><code>wom:gesetz</code></sub> | `wom:gesetz` | Preset | Preset | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/herrscher.png" alt="" width="24" height="24"> **Herrscher**<br><sub><code>wom:herrscher</code></sub> | `wom:herrscher` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/hollow_longsword.png" alt="" width="24" height="24"> **Hollow Longsword**<br><sub><code>wom:hollow_longsword</code></sub> | `womplus:hollow_longsword` | +3 | +0.15 | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/moonless.png" alt="" width="24" height="24"> **Moonless**<br><sub><code>wom:moonless</code></sub> | `wom:moonless` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/napoleon.png" alt="" width="24" height="24"> **Napoleon**<br><sub><code>wom:napoleon</code></sub> | `wom:napoleon` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/orbit.png" alt="" width="24" height="24"> **Orbit**<br><sub><code>wom:orbit</code></sub> | `wom:orbit` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/satsujin.png" alt="" width="24" height="24"> **Satsujin**<br><sub><code>wom:satsujin</code></sub> | `wom:satsujin` | Preset | Preset | Preset |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/solar.png" alt="" width="24" height="24"> **Solar**<br><sub><code>wom:solar</code></sub> | `wom:solar` | Preset | Preset | +20 pp |
+| <img src="../handbook-source/current/assets/weapons/icons/wom/tormented_mind.png" alt="" width="24" height="24"> **Torment**<br><sub><code>wom:tormented_mind</code></sub> | `wom:torment` | Preset | Preset | +50 pp |
 
 ## Snapshot and coverage
 
