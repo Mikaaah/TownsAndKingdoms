@@ -1,6 +1,6 @@
 {
   "snapshot": "tnk3-beta-1.0",
-  "build_fingerprint": "539be8099c1033e37524",
+  "build_fingerprint": "7a59ad69de17e9d16971",
   "pages": [
     {
       "route": "",
@@ -115,6 +115,11 @@
     {
       "route": "exploration/",
       "title": "Explore, fight, return",
+      "legacy": false
+    },
+    {
+      "route": "weapons/",
+      "title": "Weapons & combat styles",
       "legacy": false
     },
     {
@@ -319,5 +324,5 @@
     "3.0/witchery/": "magic/",
     "maintenance/preview/": "guides/"
   },
-  "search_entries": 1390
+  "search_entries": 1391
 }

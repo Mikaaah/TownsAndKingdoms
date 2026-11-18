@@ -16,7 +16,7 @@
 | --- | --- |
 | ⚙️ Get the first machine turning | [Your first workshop](https://mikaaah.github.io/TownsAndKingdoms/start/) |
 | 🏭 Plan a factory with a future | [The ten chapters](https://mikaaah.github.io/TownsAndKingdoms/progression/) |
-| 🗡️ Find your fighting style | [Character, skills and origins](https://mikaaah.github.io/TownsAndKingdoms/character/) |
+| 🗡️ Find your fighting style | [Weapon catalogue & stats](https://mikaaah.github.io/TownsAndKingdoms/weapons/) · [GitHub tables](TK3/docs/WEAPONS_EN.md) |
 | 🔮 Put magic to work | [Magic and alchemical lasers](https://mikaaah.github.io/TownsAndKingdoms/magic/) |
 | 🏡 Give the town useful tools | [Workshop and Trading Hub](https://mikaaah.github.io/TownsAndKingdoms/workshop/) |
 | 🧭 Take the scenic route | [Exploration and combat](https://mikaaah.github.io/TownsAndKingdoms/exploration/) |

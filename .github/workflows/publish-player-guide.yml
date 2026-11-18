@@ -10,6 +10,8 @@ on:
       - 'TK3/tools/build_handbook.cjs'
       - 'TK3/tools/build_current_handbook.cjs'
       - 'TK3/tools/verify_current_wiki.py'
+      - 'TK3/tools/build_weapon_overview.py'
+      - 'TK3/tools/verify_weapon_catalogue.py'
       - 'TK3/wiki/**'
       - 'TK3/wiki-archive/**'
       - '.github/workflows/publish-player-guide.yml'
@@ -45,8 +47,11 @@ jobs:
         run: |
           node --check TK3/handbook-source/current/wiki.js
           node --check TK3/tools/build_current_handbook.cjs
+          node --check TK3/handbook-source/current/assets/weapons/catalogue.js
+          python3 TK3/tools/build_weapon_overview.py
           node TK3/tools/build_handbook.cjs
           python3 TK3/tools/verify_current_wiki.py
+          python3 TK3/tools/verify_weapon_catalogue.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
