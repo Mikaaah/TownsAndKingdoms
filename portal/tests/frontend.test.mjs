@@ -53,6 +53,7 @@ test('recipe details preserve shaped layouts, assembly stages and retained boss 
  query(dom,'let_it_walk:walker_core');doc.querySelector('[data-detail]').click();
  assert.match(doc.querySelector('#record-title').textContent,/Walker Core/);
  assert.equal(doc.querySelectorAll('.recipe-slot').length,9);
+ assert.match(doc.querySelector('.recipe-slot').textContent,/Light Engineering Machine/);
  assert.match(doc.querySelector('.dialog-body').textContent,/Light Engineering Machine/);
  assert.match(doc.querySelector('.dialog-body').textContent,/Chapter VI/);
  doc.querySelector('[data-close-detail]').click();

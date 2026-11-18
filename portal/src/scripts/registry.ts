@@ -38,6 +38,12 @@ function itemName(v:any):string {
  return [words(v.id || v.item || (typeof v.tag==='string'?v.tag:'') || v.fluid || v.type),componentLabel(v.components)].filter(Boolean).join(' · ') || 'Ingredient';
 }
 function outputQuantity(v:any):string {return v.outputKind==='fluid'?`${v.outputAmount??v.count??1} mB`:`${v.count||1} ×`;}
+function recipeIngredientName(recipe:any,entry:any):string {
+ if(Array.isArray(entry))return entry.map(value=>recipeIngredientName(recipe,value)).join(' or ');
+ const id=entry?.id||entry?.item||entry?.tag||entry?.fluid;
+ const known=arr(recipe.ingredients).flatMap(value=>[value,...arr(value.options)]).find(value=>id&&value.id===id);
+ return itemName(known?{...entry,name:known.name,componentLabel:known.componentLabel}:entry);
+}
 function ingredient(v:any) {
  const fluid=v?.kind==='fluid'||v?.fluid||v?.amount!==undefined;
  const amount=v?.amount??v?.count;
@@ -78,7 +84,7 @@ function statRows(r:any) {
 }
 function recipeDetail(r:any) {
   const d=r.recipe||{};let staging='';
-  if(d.pattern?.length && d.key){const width=Math.max(...d.pattern.map((p:string)=>p.length));staging=`<div class="detail-section"><h3>${d.type==='create:mechanical_crafting'?'Mechanical crafting':'Crafting arrangement'}</h3><div style="overflow-x:auto"><div class="recipe-grid" style="grid-template-columns:repeat(${width},68px)">${d.pattern.flatMap((line:string)=>line.padEnd(width,' ').split('')).map((symbol:string)=>{const entry=d.key[symbol];return `<div class="recipe-slot" title="${escape(entry?itemName(entry):'Empty slot')}">${entry?escape(itemName(entry)):'<span class="subtle">·</span>'}</div>`;}).join('')}</div></div></div>`;}
+  if(d.pattern?.length && d.key){const width=Math.max(...d.pattern.map((p:string)=>p.length));staging=`<div class="detail-section"><h3>${d.type==='create:mechanical_crafting'?'Mechanical crafting':'Crafting arrangement'}</h3><div style="overflow-x:auto"><div class="recipe-grid" style="grid-template-columns:repeat(${width},68px)">${d.pattern.flatMap((line:string)=>line.padEnd(width,' ').split('')).map((symbol:string)=>{const entry=d.key[symbol];return `<div class="recipe-slot" title="${escape(entry?recipeIngredientName(r,entry):'Empty slot')}">${entry?escape(recipeIngredientName(r,entry)):'<span class="subtle">·</span>'}</div>`;}).join('')}</div></div></div>`;}
   const sequence=d.sequence||[];
   const steps=sequence.length?`<div class="detail-section"><h3>Assembly sequence ${d.loops?`<span class="tag">${d.loops} loop${d.loops===1?'':'s'}</span>`:''}</h3><ol class="sequence-list">${sequence.map((s:any)=>`<li><span><strong>${escape(words(s.type))}</strong>${assemblyIngredients(s,d)}</span></li>`).join('')}</ol>${d.transitional_item?`<p class="detail-note">Work in progress: <code>${escape(d.transitional_item.id||d.transitional_item.item)}</code></p>`:''}</div>`:'';
   const outputList=arr(r.outputs||d.results).filter((o:any)=>o.id!==r.output||o.chance!==undefined);
