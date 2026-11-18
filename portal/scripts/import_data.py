@@ -204,7 +204,7 @@ for row,(url,text)in zip(manifest['files'],links):
     for ns,display in namespace_mod.items():
         if re.sub('[^a-z0-9]','',ns)in compact or re.sub('[^a-z0-9]','',display.lower())in compact:mod_names[ns]=name;loaded.add(ns)
     mods.append({'id':ident,'projectId':row['projectID'],'name':name,'slug':slug,'url':url,'category':category(slug,name),'summary':flagships.get(slug,''),'supporting':bool(support.search(slug+' '+name))})
-mod_names.update(namespace_mod)
+for namespace,display_name in namespace_mod.items():mod_names.setdefault(namespace,display_name)
 mod_names.update({'minecraft':'Minecraft','kubejs':'Towns & Kingdoms','tnk':'Towns & Kingdoms','epicfight':'Epic Fight','epicfight_dd':'Dawn Day','wom':'Weapons of Miracles','womplus':'WoM Plus','let_it_walk':'Let It Walk','simulated':'Create: Simulated'})
 loaded.update(['minecraft','kubejs','tnk','simulated','aeronautics','alchemicallaser','tnkprogression','tnkloot','create'])
 metadata_path=ROOT/'portal/scripts/registry_metadata.json'
@@ -223,6 +223,9 @@ for lang in sorted((KUBE/'assets').glob('*/lang/en_us.json')):
     for key,value in read(lang).items():
         match=re.match(r'(?:item|block)\.([^.]+)\.(.+)',key)
         if match and isinstance(value,str):names[match[1]+':'+match[2].replace('.','/')]=value
+mod_names['cataclysm']="L_Ender's Cataclysm"
+for mod in mods:
+    if mod['slug']=='lendercataclysm':mod['name']="L_Ender's Cataclysm"
 dump('mods',mods)
 
 chapternames=[('Getting Started','makeshift_kinetic_mechanism','Build the first hand-crafted tools and establish a workshop.'),('Andesite · Kinetic','rotation_mechanism','Turn rotational power into repeatable processing.'),('Copper · Sealed','sealed_mechanism','Build sealed systems, fluid handling and dependable production.'),('Brass · Precision','precision_mechanism','Use precision assemblies to coordinate more capable machines.'),('AE2 · Calculation','calculation_mechanism','Connect digital storage, processors and automated crafting.'),('Light Engineering · Steel','reinforced_mechanism','Produce reinforced components and establish electrical engineering.'),('Heavy Engineering · Aluminium & Oil','industrial_mechanism','Scale industrial processing and fluid production.'),('Magic & Mana','arcane_mechanism','Connect source, mana and magical manufacturing.'),('Radiant & Shadow','eclipse_mechanism','Combine radiant and shadow materials in advanced machinery.'),('Creative Core','creation_mechanism','Bring the factory together in the Creation Core production chain.')]

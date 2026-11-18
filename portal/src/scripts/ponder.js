@@ -35,6 +35,7 @@ async function mount(root) {
   let three = null, renderer = null, camera = null, controls = null, world = null, scene3d = null, bounds = null;
   let modelBank = null, hoverBox = null, focusBox = null, itemSprite = null, referenceSprite = null, fluidEffect = null;
   let meshes = [], frame = 0, itemKey = '', lastProgress = -1, init3dPromise = null;
+  let threeUnavailable = false;
   const textures = new Map(), materials = new Map(), worlds = new Map();
   const getWorld = slug => {
     if (!worlds.has(slug)) worlds.set(slug, fetch(absolute('data/ponder/'+slug+'.json'))
@@ -72,6 +73,24 @@ async function mount(root) {
     const label = document.createElement('span'); label.textContent = name || decodeItem(raw); chip.append(label);
     if (raw) chip.title = String(raw);
     return chip;
+  }
+  function showStepFallback() {
+    threeUnavailable=true;
+    root.classList.add('ponder-no-3d');
+    status.hidden=false;
+    status.textContent='3D preview is unavailable in this browser. Follow the steps below.';
+    const cameraButton=root.querySelector('[data-ponder-camera]');cameraButton.disabled=true;
+    canvasRoot.setAttribute('aria-hidden','true');canvasRoot.removeAttribute('tabindex');
+    hover.hidden=true;focusLabel.hidden=true;
+    const wrapper=root.querySelector('[data-ponder-staged-fallback]');
+    const items=root.querySelector('[data-ponder-staged-items]');items.replaceChildren();
+    const grouped=new Map();
+    for(const item of current?.stagedItems || []){
+      const group=grouped.get(item.item);
+      if(group)group.slots++;else grouped.set(item.item,{...item,slots:1});
+    }
+    for(const item of grouped.values())items.append(itemChip(`${item.name} · ${item.slots} ${item.slots===1 ? 'slot' : 'slots'}`,item.icon,item.item));
+    wrapper.hidden=grouped.size===0;
   }
   function update() {
     if (!current) return;
@@ -117,8 +136,9 @@ async function mount(root) {
     canvasRoot.setAttribute('aria-label',data.title+' — interactive three-dimensional scene');
     update();
     if (updateUrl) { const url=new URL(location.href);url.searchParams.set('scene',slug);url.searchParams.delete('q');history.replaceState(null,'',url); }
-    try { await ensure3d(); if (serial !== ticket) return; buildWorld(data); status.hidden=true; }
-    catch (error) { console.warn('3D view unavailable:',error);status.textContent='Step-by-step view'; }
+    if(threeUnavailable)showStepFallback();
+    else try { await ensure3d(); if (serial !== ticket) return; buildWorld(data); status.hidden=true; }
+    catch (error) { if(serial !== ticket)return;console.warn('3D view unavailable:',error);showStepFallback(); }
     update(); requestRender();
   }
 
@@ -314,7 +334,7 @@ async function mount(root) {
     camera.userData.fitHeight=Math.max(...projected.map(v=>v.y))-Math.min(...projected.map(v=>v.y));resize();
   }
   function updateStage(step,progress){
-    if(!three || !world)return;
+    if(threeUnavailable || !three || !world)return;
     const focus=step.focus || step.machinePos || step.itemPoint;
     if(focus){
       focusBox.scale.set(1,1,1);focusBox.position.set(...focus.map(v=>v+.5));
@@ -356,7 +376,7 @@ async function mount(root) {
   function render(time){
     frame=0;
     if(playing){if(lastTime)elapsed+=Math.min((time-lastTime)/1000,.1);lastTime=time;if(elapsed>=duration()){elapsed=duration();setPlaying(false);}update();}
-    if(renderer&&scene3d&&camera){
+    if(!threeUnavailable&&renderer&&scene3d&&camera){
       if(focusBox?.visible){const v=focusBox.position.clone();v.y+=focusBox.scale.y/2+.6;v.project(camera);focusLabel.style.left=((v.x+1)/2*canvasRoot.clientWidth)+'px';focusLabel.style.top=Math.max(28,(-v.y+1)/2*canvasRoot.clientHeight)+'px';}
       renderer.render(scene3d,camera);
     }
