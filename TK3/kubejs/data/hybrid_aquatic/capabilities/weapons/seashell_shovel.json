@@ -1,0 +1,10 @@
+{
+  "type": "epicfight:shovel",
+  "attributes": {
+    "common": {
+      "impact": 0.83,
+      "max_strikes": 1,
+      "armor_negation": 0.0
+    }
+  }
+}

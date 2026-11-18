@@ -1,0 +1,73 @@
+---
+import index from '../data/ponder.json';
+const { initialScene = '' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const first = index.scenes.find(scene => scene.slug === initialScene || scene.id === initialScene) || index.scenes[0];
+const choices = index.scenes.map(({id,slug,title,anchors,dataUrl,category}) => ({id,slug,title,anchors,dataUrl,category}));
+---
+<section class="ponder" data-ponder data-base={base} data-initial={first.slug} data-scenes={JSON.stringify(choices)} aria-label="Interactive Ponder scenes">
+  <div class="ponder-picker">
+    <label>Find a scene<input data-ponder-filter type="search" placeholder="Search an item, process, or machine" autocomplete="off" /></label>
+    <label>Scene<select data-ponder-select aria-label="Choose a Ponder scene">
+      {index.scenes.map(scene => <option value={scene.slug} selected={scene.slug === first.slug}>{scene.title}</option>)}
+    </select></label>
+    <p class="ponder-filter-status" data-ponder-filter-status role="status" aria-live="polite">{index.scenes.length} scenes</p>
+  </div>
+  <div class="ponder-stage" data-ponder-stage>
+    <div class="ponder-canvas" data-ponder-canvas role="img" tabindex="0" aria-label="Interactive three-dimensional machine and item staging"></div>
+    <div class="ponder-stage-status" data-ponder-status aria-live="polite">Preparing the scene…</div>
+    <div class="ponder-hover" data-ponder-hover hidden></div>
+    <div class="ponder-focus" data-ponder-focus hidden></div>
+    <button class="ponder-camera" data-ponder-camera type="button" title="Reset the camera">Reset view</button>
+    <span class="ponder-controls-hint">Drag to orbit · scroll to zoom · right-drag to pan</span>
+  </div>
+  <div class="ponder-timeline" aria-label="Scene timeline">
+    <div class="ponder-transport">
+      <button data-ponder-prev type="button" aria-label="Previous step">←</button>
+      <button data-ponder-play type="button" aria-label="Play scene">Play</button>
+      <button data-ponder-next type="button" aria-label="Next step">→</button>
+      <span data-ponder-counter>Step 1 of {first.steps.length}</span>
+    </div>
+    <label class="ponder-scrub-label"><span class="sr-only">Scrub through the scene</span><input data-ponder-scrub type="range" min="0" max="1000" value="0" step="1" aria-label="Scene progress" /></label>
+  </div>
+  <div class="ponder-instruction" aria-live="polite" aria-atomic="true">
+    <div class="ponder-step-eyebrow" data-ponder-step-label>Step 1</div>
+    <h3 data-ponder-step-title>{first.steps[0]?.title}</h3>
+    <p data-ponder-step-text>{first.steps[0]?.text}</p>
+    <div class="ponder-item-flow" data-ponder-item-flow></div>
+  </div>
+  <div class="ponder-step-list" data-ponder-step-list aria-label="Choose a scene step">
+    {first.steps.map((step,index) => <button data-step={index} class:list={{active:index === 0}} type="button"><span>{index+1}</span>{step.title}</button>)}
+  </div>
+  <noscript><p>Scene instructions</p><ol>{first.steps.map(step => <li>{step.text}</li>)}</ol></noscript>
+</section>
+<script>
+  import { initPonders } from '../scripts/ponder.js';
+  initPonders();
+</script>
+<style is:global>
+  .ponder{border:1px solid var(--border,#34303e);border-radius:12px;overflow:hidden;background:var(--surface,#201c29)}
+  .ponder-picker{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;padding:20px;border-bottom:1px solid var(--border,#34303e)}
+  .ponder-picker label{display:grid;gap:7px;color:var(--muted,#b2aabf);font-size:.78rem;font-weight:600}
+  .ponder-filter-status{grid-column:1/-1;margin:0;color:var(--muted,#b2aabf);font-size:.72rem}
+  .ponder-picker input,.ponder-picker select{width:100%;min-height:42px;border:1px solid var(--border,#34303e);border-radius:6px;background:var(--bg,#17141d);color:var(--text,#f3eff7);padding:9px 12px;font:inherit;font-size:.88rem}
+  .ponder-stage{height:480px;position:relative;overflow:hidden;background:#18151e;isolation:isolate}
+  .ponder-canvas,.ponder-canvas canvas{display:block;width:100%;height:100%;touch-action:none}
+  .ponder-stage-status{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted,#b2aabf);font-size:.9rem;pointer-events:none}
+  .ponder-stage-status[hidden]{display:none}
+  .ponder-camera{position:absolute;right:16px;top:16px;background:var(--surface,#201c29);border:1px solid var(--border,#34303e);border-radius:6px;color:var(--text,#f3eff7);padding:7px 10px;font-size:.75rem;cursor:pointer}
+  .ponder-controls-hint{position:absolute;left:16px;bottom:12px;color:#aaa1b6;font-size:.67rem;pointer-events:none}
+  .ponder-hover{position:absolute;padding:8px 11px;max-width:240px;border:1px solid var(--border,#34303e);border-radius:6px;background:#211c2bf2;box-shadow:0 8px 20px #0003;color:var(--text,#f3eff7);font-size:.75rem;pointer-events:none;z-index:3}
+  .ponder-hover small{display:block;margin-top:3px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted,#b2aabf);font-size:.65rem;overflow-wrap:anywhere}
+  .ponder-focus{position:absolute;transform:translate(-50%,-100%);padding:5px 9px;border:1px solid #b59ac466;border-radius:5px;color:#e7d9f0;background:#282031e8;white-space:nowrap;font-size:.72rem;pointer-events:none;z-index:2}
+  .ponder-timeline{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:18px;padding:13px 20px;border-top:1px solid var(--border,#34303e);border-bottom:1px solid var(--border,#34303e)}
+  .ponder-transport{display:flex;align-items:center;gap:7px}.ponder-transport button{min-width:32px;height:32px;padding:0 11px;background:transparent;border:1px solid var(--border,#34303e);border-radius:5px;color:var(--text,#f3eff7);cursor:pointer}.ponder-transport button:disabled{opacity:.4;cursor:default}
+  .ponder-transport span{margin-left:7px;color:var(--muted,#b2aabf);font-size:.72rem;white-space:nowrap}
+  .ponder-scrub-label{display:flex}.ponder-scrub-label input{width:100%;accent-color:var(--accent,#b39acb);cursor:pointer}
+  .ponder-instruction{padding:24px 26px 21px;min-height:150px}.ponder-step-eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--accent,#b39acb);font-size:.66rem;font-weight:700}.ponder-instruction h3{margin:8px 0 10px!important;font-size:1.18rem!important;letter-spacing:-.02em}.ponder-instruction p{margin:0;max-width:80ch;color:var(--muted,#b2aabf);font-size:.9rem;line-height:1.7}
+  .ponder-item-flow{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}.ponder-item-flow:empty{display:none}.ponder-item-flow .ponder-item{display:flex;align-items:center;gap:7px;border:1px solid var(--border,#34303e);border-radius:5px;background:var(--bg,#17141d);padding:6px 9px;color:var(--text,#f3eff7);font-size:.74rem}.ponder-item-flow img{width:22px;height:22px;object-fit:contain;image-rendering:pixelated}.ponder-item-flow .flow-arrow{color:var(--muted,#b2aabf);font-size:.85rem}
+  .ponder-step-list{display:flex;flex-wrap:wrap;gap:8px;padding:0 26px 24px}.ponder-step-list button{display:flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid var(--border,#34303e);border-radius:5px;background:transparent;color:var(--muted,#b2aabf);font:inherit;font-size:.73rem;cursor:pointer}.ponder-step-list button.active{border-color:#b39acb88;color:var(--text,#f3eff7);background:#b39acb10}.ponder-step-list button span{font-family:ui-monospace,monospace;font-size:.65rem;color:var(--accent,#b39acb)}
+  .ponder button:focus-visible,.ponder input:focus-visible,.ponder select:focus-visible{outline:2px solid var(--accent,#b39acb);outline-offset:3px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  @media(max-width:700px){.ponder-picker{grid-template-columns:1fr;gap:12px;padding:16px}.ponder-stage{height:365px}.ponder-timeline{grid-template-columns:1fr;gap:10px;padding:12px 16px}.ponder-instruction{padding:20px 18px}.ponder-step-list{padding:0 18px 20px}.ponder-controls-hint{font-size:.58rem;left:12px;max-width:75%}.ponder-transport{justify-content:space-between}}
+</style>

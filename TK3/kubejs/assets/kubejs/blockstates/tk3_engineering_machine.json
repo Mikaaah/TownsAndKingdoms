@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "kubejs:block/tk3_frames/tk3_engineering_machine"
+    },
+    "facing=east": {
+      "model": "kubejs:block/tk3_frames/tk3_engineering_machine",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "kubejs:block/tk3_frames/tk3_engineering_machine",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kubejs:block/tk3_frames/tk3_engineering_machine",
+      "y": 270
+    }
+  }
+}

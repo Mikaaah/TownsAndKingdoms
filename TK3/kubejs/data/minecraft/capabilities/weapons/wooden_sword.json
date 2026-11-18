@@ -1,0 +1,14 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 1.0,
+      "max_strikes": 1,
+      "armor_negation": 10.0,
+      "damage_bonus": 1.0,
+      "speed_bonus": 0.12
+    }
+  },
+  "hit_particle": "blunt",
+  "hit_sound": "entity.hit.blunt",
+  "type": "epicfight:sword"
+}

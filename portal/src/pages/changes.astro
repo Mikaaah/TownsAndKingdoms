@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {href} from '../lib/data';
+
+// Historical statements are limited to the preserved TK2 feature, mod-list
+// and changelog pages. Current statements follow the TK3 registries and rules.
+const comparison=[
+ {system:'Production',before:'Create-led progression covered eleven custom recipe tiers, with Thermal machinery and AE2 among its integrations.',after:'Ten production chapters connect mechanisms and machine frames to Create, AE2, Immersive Engineering and late-game magic.'},
+ {system:'Combat',before:'Epic Fight already supported Simply Swords, Knaves’ Needs and weapons from the adventure mods.',after:'Epic Fight remains the combat foundation. Dawn Day, WoM Plus and six TNK styles extend the weapon assignments and handling options.'},
+ {system:'Character builds',before:'Passive Skill Tree used Skill Point Scrolls from quests and bosses, with Reset Scrolls for reallocating a build.',after:'Character XP feeds levels and Pufferfish skill points. Origins, ascended origins and separate cosmetic/passive title slots add personal choices.'},
+ {system:'Equipment rewards',before:'Apotheosis and equipment found through exploration were already part of the pack.',after:'Unidentified Loot adds sealed equipment rolls, station appraisal, a Mechanical Identifier, collections and salvage fragments.'},
+ {system:'Transport',before:'Create contraptions and Steam ’n’ Rails were part of the transport lineup.',after:'Aeronautics adds flight systems, while Let It Walk adds walking contraptions. Their key machines share the Reinforced production stage.'},
+ {system:'Magic',before:'Ars Nouveau, Iron’s Spells, Botania and Malum provided distinct magical paths.',after:'Ars Nouveau and Iron’s Spells continue, joined by Witchery, Thaumaturge and Resonant Arcana. Botania and Malum are no longer included.'},
+];
+const additions=[
+ {system:'Character and equipment',mods:'Towns & Kingdoms — Progression; Pufferfish’s Skills and Attributes; Unidentified Loot'},
+ {system:'Moving machines',mods:'Create Aeronautics; Let It Walk; Aeronautics claim and combat integrations'},
+ {system:'Engineering',mods:'Immersive Engineering; Create — Alchemical Lasers; Create Riftborne'},
+ {system:'Magic',mods:'Just Another Witchery Remake; Thaumaturge; Resonant Arcana'},
+ {system:'Worlds and encounters',mods:'Enderscape; The Beyond; Isleweaver; Streams Reflowing; Legendary Monsters; Bosses’ Rise'},
+ {system:'Pack tools',mods:'Towns & Kingdoms — Workshop; Flow Control; Combat Punchy'},
+];
+const removals=[
+ {system:'Industrial route',mods:'Thermal Expansion and its Thermal companions; Create: The Factory Must Grow'},
+ {system:'Magic paths',mods:'Botania; Malum'},
+ {system:'Colony management',mods:'MineColonies'},
+ {system:'Dimension generation',mods:'BetterEnd; BetterNether'},
+ {system:'Skill framework',mods:'Passive Skill Tree and Passive Skill Tree Additions'},
+ {system:'Creatures and space',mods:'Alex’s Mobs; Ice and Fire; Ad Astra'},
+];
+---
+<Layout title="From TK2 to TK3" description="The changes to production, combat, character progression, equipment and exploration between Towns & Kingdoms 2 and Towns & Kingdoms 3.">
+ <p class="eyebrow">Handbook / What changed</p>
+ <h1>From TK2 to TK3</h1>
+ <p class="intro">Create, action combat, magic and exploration remain central to Towns & Kingdoms. TK3 rebuilds the production route, introduces a character progression system and changes how equipment discoveries become part of a build.</p>
+ <nav class="toc-inline" aria-label="Changelog sections"><a href="#overview">System comparison</a><a href="#production">Production</a><a href="#character">Character and combat</a><a href="#equipment">Equipment</a><a href="#worlds">Exploration</a><a href="#lineup">Mod lineup</a></nav>
+ <section id="overview" class="section">
+  <h2>System comparison</h2>
+  <div class="table-wrap"><table class="comparison-table" aria-label="Core system comparison"><thead><tr><th scope="col">System</th><th scope="col">TK2</th><th scope="col">TK3</th></tr></thead><tbody>{comparison.map(c=><tr><th scope="row">{c.system}</th><td>{c.before}</td><td>{c.after}</td></tr>)}</tbody></table></div>
+ </section>
+ <div class="prose">
+  <section id="production" class="section">
+   <h2>Ten chapters of production</h2>
+   <p>Create was already the centre of TK2’s eleven-tier automation route. TK3 keeps that foundation and reorganizes it into ten chapters: Getting Started, Andesite, Copper, Brass, AE2, Light Engineering, Heavy Engineering, Magic &amp; Mana, Radiant &amp; Shadow, and Creative Core.</p>
+   <p>Mechanisms and machine frames carry the crafting requirements between those stages. AE2 provides storage and autocrafting; Immersive Engineering supplies electrical and industrial systems alongside Create’s mechanical production. Thermal machinery and The Factory Must Grow are no longer part of that route.</p>
+   <p>Aeronautics and Let It Walk meet at the Reinforced stage. Flight components, walker cores, controls and actuators draw on the same engineering progression rather than forming separate endgame unlocks.</p>
+   <p><a href={href('chapters/')}>Follow the ten chapters →</a> <span class="link-separator">·</span> <a href={href('recipes/')}>Look up a recipe →</a></p>
+  </section>
+  <section id="character" class="section">
+   <h2>Character growth and combat</h2>
+   <p>TK2 already had a Passive Skill Tree and weapon-specific Epic Fight combat. Those are familiar foundations, rather than new additions to the series.</p>
+   <p>TK3’s Character system awards XP directly for supported exploration, combat, mining, harvesting, cooking and fishing. Levels supply Pufferfish skill points; Origins and titles add separate choices for your character.</p>
+   <p>Weapon assignments distinguish combat daggers from utility knives, casting staffs from physical battlestaffs, and ordinary material sets from named artifacts. The TNK styles include Colossal Blade, Great Hammer, Reaper Glaive, Earthrend Gauntlet, Khopesh and Double Greatsword.</p>
+   <p><a href={href('skills/')}>Plan a skill build →</a> <span class="link-separator">·</span> <a href={href('weapons/')}>Compare weapon handling →</a></p>
+  </section>
+  <section id="equipment" class="section">
+   <h2>Equipment discovery and appraisal</h2>
+   <p>Apotheosis continues from TK2. Unidentified Loot adds a separate discovery and appraisal loop around eligible equipment: find a token, reveal its item and affixes, then keep, trade or salvage the result.</p>
+   <p>Loot tier, rarity and combat moveset describe different things. Identification uses vanilla XP points or supported XP fluids in the Mechanical Identifier; unwanted identified gear can provide salvage fragments toward later station identification.</p>
+   <p>Character XP, skill allocation and equipment appraisal remain separate systems. Sealed dungeon rewards retain their selected item, tier, rarity and guaranteed bonuses when they are revealed.</p>
+   <p><a href={href('mechanics/#loot')}>Understand equipment appraisal →</a></p>
+  </section>
+  <section id="worlds" class="section">
+   <h2>Exploration, magic and settlement building</h2>
+   <p>Biomes O’ Plenty and Regions Unexplored remain part of the biome and building palette. Streams Reflowing joins the world-generation systems. Enderscape, The Beyond and Isleweaver take the place of BetterEnd in the End lineup; Jaden’s Nether Expansion, Amplified Nether and Scorching Nether are part of the new Nether selection.</p>
+   <p>TK2’s changelog introduced quest-based dimension locks. In TK3, exploration dimensions and the Wither remain accessible independently of production chapters. End Remastered still shapes the route to the End.</p>
+   <p>Ars Nouveau and Iron’s Spells continue from TK2. Witchery, Thaumaturge and Resonant Arcana expand the magic selection, while Botania and Malum are no longer included.</p>
+   <p>MineColonies is also removed. Settlement building continues through the building palette and Create automation, without MineColonies’ citizen, job or colony-management system.</p>
+   <p><a href={href('bosses/')}>Browse encounters →</a> <span class="link-separator">·</span> <a href={href('mods/')}>Explore the grouped mod index →</a></p>
+  </section>
+ </div>
+ <section id="lineup" class="section">
+  <h2>Major mod lineup changes</h2>
+  <p class="lineup-intro">Create, AE2, Epic Fight, Simply Swords, Ars Nouveau, Iron’s Spells and Apotheosis continue from TK2. The tables below highlight changes around those shared systems.</p>
+  <div class="lineup-grid">
+   <div><h3>Added to the lineup</h3><div class="table-wrap"><table aria-label="Major additions in TK3"><thead><tr><th scope="col">System</th><th scope="col">Mods</th></tr></thead><tbody>{additions.map(c=><tr><th scope="row">{c.system}</th><td>{c.mods}</td></tr>)}</tbody></table></div></div>
+   <div><h3>No longer included</h3><div class="table-wrap"><table aria-label="Major removals from TK2"><thead><tr><th scope="col">System</th><th scope="col">Mods</th></tr></thead><tbody>{removals.map(c=><tr><th scope="row">{c.system}</th><td>{c.mods}</td></tr>)}</tbody></table></div></div>
+  </div>
+ </section>
+ <div class="prose"><section class="section"><h2>Playing TK2?</h2><p>The original TK2 handbook remains available separately, including its mod list, features, changelog and server instructions.</p><p><a href={href('tk2/')}>Open the TK2 handbook →</a></p></section></div>
+</Layout>
+<style>
+ .comparison-table{min-width:650px}.comparison-table th:first-child{width:16%}.comparison-table td{width:42%;font-size:12px;line-height:1.8}.comparison-table tbody th,.lineup-grid tbody th{font-size:12px;font-weight:550;color:var(--text);text-align:left;vertical-align:top}
+ .link-separator{margin:0 8px;color:var(--subtle)}.lineup-intro{color:var(--muted);max-width:850px}.lineup-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.lineup-grid h3{font-size:16px}.lineup-grid table{min-width:320px}.lineup-grid td{font-size:12px;line-height:1.8}.lineup-grid th:first-child{width:30%}
+ @media(max-width:900px){.lineup-grid{grid-template-columns:1fr}}
+</style>

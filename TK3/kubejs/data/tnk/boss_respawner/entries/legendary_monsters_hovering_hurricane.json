@@ -1,0 +1,15 @@
+{
+  "schema_version": 4,
+  "entity": "legendary_monsters:hovering_hurricane",
+  "activation": {
+    "item": "kubejs:boss_respawn_token"
+  },
+  "placement": {
+    "mode": "home",
+    "home": {}
+  },
+  "spawn": {
+    "mode": "summon",
+    "summon": {}
+  }
+}

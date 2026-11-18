@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "capes": [
+    {
+      "id": "beta_tester",
+      "name": "Beta Tester",
+      "texture": "tnk/beta_tester",
+      "source_texture": "SkinMC-Cape-130619.png",
+      "reward": "Beta testing"
+    },
+    {
+      "id": "beyond_the_forge",
+      "name": "Beyond the Forge",
+      "texture": "tnk/beyond_the_forge",
+      "source_texture": "SkinMC-Cape-4873.png",
+      "reward": "Main progression completion"
+    },
+    {
+      "id": "completionist",
+      "name": "Completionist",
+      "texture": "tnk/completionist",
+      "source_texture": "SkinMC-Cape-4.png",
+      "reward": "Full pack completion \u2014 golden creeper"
+    },
+    {
+      "id": "seasoned_adventurer",
+      "name": "Seasoned Adventurer",
+      "texture": "tnk/seasoned_adventurer",
+      "source_texture": "SkinMC-Cape-154919.png",
+      "reward": "Adventure quests"
+    },
+    {
+      "id": "community_champion",
+      "name": "Community Champion",
+      "texture": "tnk/community_champion",
+      "source_texture": "SkinMC-Cape-75438.png",
+      "reward": "Server quest board"
+    },
+    {
+      "id": "guild_veteran",
+      "name": "Guild Veteran",
+      "texture": "tnk/guild_veteran",
+      "source_texture": "SkinMC-Cape-151612.png",
+      "reward": "Bulletin Board quests"
+    },
+    {
+      "id": "archmage",
+      "name": "Archmage",
+      "texture": "tnk/archmage",
+      "source_texture": "SkinMC-Cape-148919.png",
+      "reward": "Magic quests"
+    },
+    {
+      "id": "beyond_the_horizon",
+      "name": "Beyond the Horizon",
+      "texture": "tnk/beyond_the_horizon",
+      "source_texture": "SkinMC-Cape-49425.png",
+      "reward": "Exploration quests"
+    },
+    {
+      "id": "winterbound_2026",
+      "name": "Winterbound 2026",
+      "texture": "tnk/winterbound_2026",
+      "source_texture": "SkinMC-Cape-170379.png",
+      "reward": "The First Winter | The Winterbound Expedition"
+    },
+    {
+      "id": "secret_challenge",
+      "name": "Secret Challenge",
+      "texture": "tnk/secret_challenge",
+      "source_texture": "SkinMC-Cape-39816.png",
+      "reward": "Secret / lighthearted challenge"
+    }
+  ]
+}

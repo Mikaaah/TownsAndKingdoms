@@ -1,0 +1,25 @@
+{
+  "type": "epicfight_dd:knife",
+  "attributes": {
+    "common": {
+      "impact": 0.7,
+      "max_strikes": 1,
+      "armor_negation": 16.0,
+      "damage_bonus": 2.0,
+      "speed_bonus": 0.29
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.325
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.325
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:remove_spawns",
+  "biomes": {
+    "type": "neoforge:any"
+  },
+  "entity_types": [
+    "wildernature:deer",
+    "wildernature:boar",
+    "wildernature:turkey",
+    "wildernature:giraffe",
+    "wildernature:elephant",
+    "wildernature:hedgehog",
+    "wildernature:hippo",
+    "wildernature:lion",
+    "wildernature:scorpion"
+  ]
+}

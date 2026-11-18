@@ -1,0 +1,25 @@
+{
+  "type": "epicfight:longsword",
+  "attributes": {
+    "common": {
+      "impact": 2.45,
+      "max_strikes": 3,
+      "armor_negation": 24.0,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.21
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.775
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.775
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "towns-and-kingdoms-portal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "data": "python3 scripts/import_data.py && node scripts/generate-skills.mjs && python3 scripts/import_ponder.py && python3 tools/extract_mechanics.py && python3 tools/extract_end_eyes.py && node scripts/publish_data.mjs",
+    "dev": "node scripts/publish_data.mjs && astro dev --host 0.0.0.0",
+    "build": "npm run data && astro build",
+    "preview": "astro preview --host 0.0.0.0",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.12",
+    "minisearch": "^7.2.0",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "jsdom": "^31.0.1"
+  }
+}

@@ -1,0 +1,553 @@
+[
+  {
+    "id": "tnk:deepdelver",
+    "name": "Deepdelver",
+    "description": "You spent your early years working beneath the mountains.",
+    "iconResource": "tnkprogression:textures/gui/origins/ancient_pickaxe.png",
+    "tier": "Origin",
+    "perks": [
+      "+10% ore mining speed.",
+      "5% chance for an extra raw ore from natural deposits."
+    ],
+    "bonuses": {
+      "ORE_SPEED": 0.1,
+      "RAW_ORE_CHANCE": 0.05
+    }
+  },
+  {
+    "id": "tnk:woodcutter",
+    "name": "Woodcutter",
+    "description": "Forest camps and falling timber were your everyday life.",
+    "iconResource": "tnkprogression:textures/gui/origins/mossy_axe.png",
+    "tier": "Origin",
+    "perks": [
+      "+15% log chopping speed.",
+      "5% chance for an extra natural log."
+    ],
+    "bonuses": {
+      "LOG_CHANCE": 0.05,
+      "LOG_SPEED": 0.15
+    }
+  },
+  {
+    "id": "tnk:homesteader",
+    "name": "Homesteader",
+    "description": "You inherited a small farm and learned to make every harvest count.",
+    "iconResource": "tnkprogression:textures/gui/origins/sun_carrot.png",
+    "tier": "Origin",
+    "perks": [
+      "+10% mature crop yield when harvested by hand.",
+      "10% less hunger from exhaustion."
+    ],
+    "bonuses": {
+      "EXHAUSTION_REDUCTION": 0.1,
+      "CROP_YIELD": 0.1
+    }
+  },
+  {
+    "id": "tnk:stablehand",
+    "name": "Stablehand",
+    "description": "You raised livestock and cared for travelling merchants' horses.",
+    "iconResource": "tnkprogression:textures/gui/origins/horseshoe.png",
+    "tier": "Origin",
+    "perks": [
+      "10% shorter animal breeding cooldowns.",
+      "+15% movement speed for living mounts you control."
+    ],
+    "bonuses": {
+      "MOUNT_SPEED": 0.15,
+      "BREEDING_REDUCTION": 0.1
+    }
+  },
+  {
+    "id": "tnk:riverfolk",
+    "name": "Riverfolk",
+    "description": "You grew up along the river, living from whatever your line caught.",
+    "iconResource": "tnkprogression:textures/gui/origins/golden_hook.png",
+    "tier": "Origin",
+    "perks": [
+      "10% shorter fishing wait.",
+      "+15% vanilla fishing XP."
+    ],
+    "bonuses": {
+      "FISH_XP": 0.15,
+      "FISH_WAIT_REDUCTION": 0.1
+    }
+  },
+  {
+    "id": "tnk:huntsman",
+    "name": "Huntsman",
+    "description": "You supplied a remote settlement with meat and hides.",
+    "iconResource": "tnkprogression:textures/gui/origins/bone_bow.png",
+    "tier": "Origin",
+    "perks": [
+      "+5% bow and crossbow damage.",
+      "+10% meat and leather drops from your kills."
+    ],
+    "bonuses": {
+      "HUNT_YIELD": 0.1,
+      "RANGED_DAMAGE": 0.05
+    }
+  },
+  {
+    "id": "tnk:forgehand",
+    "name": "Forgehand",
+    "description": "Years at the anvil taught you how to keep equipment working.",
+    "iconResource": "tnkprogression:textures/gui/origins/hammer.png",
+    "tier": "Origin",
+    "perks": [
+      "10% of anvil repair XP refunded; normal requirements apply.",
+      "10% less weapon durability loss."
+    ],
+    "bonuses": {
+      "WEAPON_DURABILITY_REDUCTION": 0.1,
+      "ANVIL_REPAIR_REFUND": 0.1
+    }
+  },
+  {
+    "id": "tnk:stonemason",
+    "name": "Stonemason",
+    "description": "You helped build walls, bridges and castles that would outlive you.",
+    "iconResource": "tnkprogression:textures/gui/origins/bricks.png",
+    "tier": "Origin",
+    "perks": [
+      "+15% stone breaking speed.",
+      "+0.5 block reach while holding a building block."
+    ],
+    "bonuses": {
+      "PLACEMENT_REACH": 0.5,
+      "STONE_SPEED": 0.15
+    }
+  },
+  {
+    "id": "tnk:millwright",
+    "name": "Millwright",
+    "description": "You maintained waterwheels, mills and machinery for your village.",
+    "iconResource": "tnkprogression:textures/gui/origins/wrench.png",
+    "tier": "Origin",
+    "perks": [
+      "+10% quest command XP.",
+      "+1 block interaction reach while holding a wrench."
+    ],
+    "bonuses": {
+      "WRENCH_REACH": 1.0,
+      "ENGINEERING_XP": 0.1
+    }
+  },
+  {
+    "id": "tnk:librarian",
+    "name": "Librarian",
+    "description": "You cared for dusty shelves and books containing forgotten knowledge.",
+    "iconResource": "tnkprogression:textures/gui/origins/golden_book.png",
+    "tier": "Origin",
+    "perks": [
+      "10% of enchanting XP refunded; normal requirements apply.",
+      "+15% XP recovered through grindstone disenchanting."
+    ],
+    "bonuses": {
+      "ENCHANT_REFUND": 0.1,
+      "GRINDSTONE_XP": 0.15
+    }
+  },
+  {
+    "id": "tnk:apothecary",
+    "name": "Apothecary",
+    "description": "Your little shop supplied remedies, tonics and questionable mixtures.",
+    "iconResource": "tnkprogression:textures/gui/origins/aquatic_elixir.png",
+    "tier": "Origin",
+    "perks": [
+      "+15% duration for beneficial potions you drink.",
+      "+10% healing from instant health potions you drink."
+    ],
+    "bonuses": {
+      "POTION_HEAL": 0.1,
+      "POTION_DURATION": 0.15
+    }
+  },
+  {
+    "id": "tnk:hedge_herbalist",
+    "name": "Hedge Herbalist",
+    "description": "You learned which plants could heal, feed or poison a traveller.",
+    "iconResource": "tnkprogression:textures/gui/origins/ghostflower.png",
+    "tier": "Origin",
+    "perks": [
+      "+10% natural health regeneration.",
+      "10% chance for an extra gathered flower or mushroom."
+    ],
+    "bonuses": {
+      "NATURAL_HEAL": 0.1,
+      "HERB_CHANCE": 0.1
+    }
+  },
+  {
+    "id": "tnk:caravan_trader",
+    "name": "Caravan Trader",
+    "description": "You travelled between settlements, bargaining for your next meal.",
+    "iconResource": "tnkprogression:textures/gui/origins/golden_ring.png",
+    "tier": "Origin",
+    "perks": [
+      "10% lower villager buying prices, rounded down.",
+      "+15% vanilla trading XP."
+    ],
+    "bonuses": {
+      "TRADE_DISCOUNT": 0.1,
+      "TRADE_XP": 0.15
+    }
+  },
+  {
+    "id": "tnk:wayfarer",
+    "name": "Wayfarer",
+    "description": "You rarely stayed anywhere long enough to call it home.",
+    "iconResource": "tnkprogression:textures/gui/origins/portal_scroll.png",
+    "tier": "Origin",
+    "perks": [
+      "+5% movement speed.",
+      "20% less fall damage."
+    ],
+    "bonuses": {
+      "MOVE_SPEED": 0.05,
+      "FALL_REDUCTION": 0.2
+    }
+  },
+  {
+    "id": "tnk:deckhand",
+    "name": "Deckhand",
+    "description": "You worked aboard merchant ships and survived more than one wreck.",
+    "iconResource": "tnkprogression:textures/gui/origins/blue_coral.png",
+    "tier": "Origin",
+    "perks": [
+      "+15% swimming speed.",
+      "+5 seconds of underwater breathing time."
+    ],
+    "bonuses": {
+      "SWIM_SPEED": 0.15,
+      "AIR_TICKS": 100.0
+    }
+  },
+  {
+    "id": "tnk:town_watch",
+    "name": "Town Watch",
+    "description": "You guarded the gates and broke up trouble at the local tavern.",
+    "iconResource": "tnkprogression:textures/gui/origins/spear.png",
+    "tier": "Origin",
+    "perks": [
+      "+1 armour point.",
+      "+10% knockback resistance."
+    ],
+    "bonuses": {
+      "KNOCKBACK_RESISTANCE": 0.1,
+      "ARMOUR": 1.0
+    }
+  },
+  {
+    "id": "tnk:street_urchin",
+    "name": "Street Urchin",
+    "description": "You survived by staying unnoticed and finding a way through tight places.",
+    "iconResource": "tnkprogression:textures/gui/origins/bone_knife.png",
+    "tier": "Origin",
+    "perks": [
+      "+15% sneaking speed.",
+      "10% shorter hostile detection range while sneaking."
+    ],
+    "bonuses": {
+      "SNEAK_VISIBILITY_REDUCTION": 0.1,
+      "SNEAK_SPEED": 0.15
+    }
+  },
+  {
+    "id": "tnk:gravekeeper",
+    "name": "Gravekeeper",
+    "description": "You tended the cemetery and occasionally dealt with its restless residents.",
+    "iconResource": "tnkprogression:textures/gui/origins/simple_skull.png",
+    "tier": "Origin",
+    "perks": [
+      "10% less damage from undead attackers.",
+      "+15% vanilla XP from undead kills."
+    ],
+    "bonuses": {
+      "UNDEAD_REDUCTION": 0.1,
+      "UNDEAD_XP": 0.15
+    }
+  },
+  {
+    "id": "tnk:temple_acolyte",
+    "name": "Temple Acolyte",
+    "description": "You served a small sanctuary, tending its visitors and protecting its grounds.",
+    "iconResource": "tnkprogression:textures/gui/origins/book_of_star.png",
+    "tier": "Origin",
+    "perks": [
+      "+2 maximum health (one heart).",
+      "10% shorter harmful potion effects."
+    ],
+    "bonuses": {
+      "HEALTH": 2.0,
+      "HARMFUL_DURATION_REDUCTION": 0.1
+    }
+  },
+  {
+    "id": "tnk:hedge_mage",
+    "name": "Hedge Mage",
+    "description": "Your magical education came from borrowed books and dangerous experiments.",
+    "iconResource": "tnkprogression:textures/gui/origins/mythic_book.png",
+    "tier": "Origin",
+    "perks": [
+      "+5% maximum mana.",
+      "+5% mana regeneration. Requires Iron's Spells mana attributes."
+    ],
+    "bonuses": {
+      "MANA_REGEN": 0.05,
+      "MANA": 0.05
+    }
+  },
+  {
+    "id": "tnk:archmage",
+    "name": "Archmage",
+    "description": "You have mastered the currents that bind spell and machine.",
+    "iconResource": "tnkprogression:textures/gui/origins/mythic_book.png",
+    "tier": "Ascended",
+    "perks": [
+      "+30% maximum mana.",
+      "+25% mana regeneration."
+    ],
+    "bonuses": {
+      "MANA_REGEN": 0.25,
+      "MANA": 0.3
+    }
+  },
+  {
+    "id": "tnk:battlemage",
+    "name": "Battlemage",
+    "description": "Steel and sorcery answer the same practiced hand.",
+    "iconResource": "tnkprogression:textures/gui/origins/spear.png",
+    "tier": "Ascended",
+    "perks": [
+      "+2 attack damage.",
+      "+3 armour.",
+      "+20% maximum mana."
+    ],
+    "bonuses": {
+      "MANA": 0.2,
+      "ATTACK": 2.0,
+      "ARMOUR": 3.0
+    }
+  },
+  {
+    "id": "tnk:dreadnought",
+    "name": "Dreadnought",
+    "description": "Your resolve has become the wall others shelter behind.",
+    "iconResource": "tnkprogression:textures/gui/origins/bricks.png",
+    "tier": "Ascended",
+    "perks": [
+      "+8 maximum health.",
+      "+5 armour.",
+      "+25% knockback resistance."
+    ],
+    "bonuses": {
+      "HEALTH": 8.0,
+      "KNOCKBACK_RESISTANCE": 0.25,
+      "ARMOUR": 5.0
+    }
+  },
+  {
+    "id": "tnk:berserker",
+    "name": "Berserker",
+    "description": "Every battle has sharpened your will to press forward.",
+    "iconResource": "tnkprogression:textures/gui/origins/bone_knife.png",
+    "tier": "Ascended",
+    "perks": [
+      "+4 attack damage.",
+      "+4 maximum health.",
+      "+10% movement speed."
+    ],
+    "bonuses": {
+      "MOVE_SPEED": 0.1,
+      "HEALTH": 4.0,
+      "ATTACK": 4.0
+    }
+  },
+  {
+    "id": "tnk:deadeye",
+    "name": "Deadeye",
+    "description": "Your aim has outgrown distance and doubt.",
+    "iconResource": "tnkprogression:textures/gui/origins/bone_bow.png",
+    "tier": "Ascended",
+    "perks": [
+      "+25% bow and crossbow damage.",
+      "+10% movement speed.",
+      "+1 luck."
+    ],
+    "bonuses": {
+      "RANGED_DAMAGE": 0.25,
+      "MOVE_SPEED": 0.1,
+      "LUCK": 1.0
+    }
+  },
+  {
+    "id": "tnk:shadowblade",
+    "name": "Shadowblade",
+    "description": "You learned to cross the space between a shadow and its owner.",
+    "iconResource": "tnkprogression:textures/gui/origins/bone_knife.png",
+    "tier": "Ascended",
+    "perks": [
+      "+30% sneaking speed.",
+      "30% shorter hostile detection range while sneaking.",
+      "+3 attack damage."
+    ],
+    "bonuses": {
+      "ATTACK": 3.0,
+      "SNEAK_SPEED": 0.3,
+      "SNEAK_VISIBILITY_REDUCTION": 0.3
+    }
+  },
+  {
+    "id": "tnk:worldstrider",
+    "name": "Worldstrider",
+    "description": "No horizon has proved distant enough to stop you.",
+    "iconResource": "tnkprogression:textures/gui/origins/portal_scroll.png",
+    "tier": "Ascended",
+    "perks": [
+      "+15% movement speed.",
+      "60% less fall damage.",
+      "+30% swimming speed."
+    ],
+    "bonuses": {
+      "MOVE_SPEED": 0.15,
+      "SWIM_SPEED": 0.3,
+      "FALL_REDUCTION": 0.6
+    }
+  },
+  {
+    "id": "tnk:deepforged",
+    "name": "Deepforged",
+    "description": "The deep earth recognizes the hand that shaped its treasures.",
+    "iconResource": "tnkprogression:textures/gui/origins/ancient_pickaxe.png",
+    "tier": "Ascended",
+    "perks": [
+      "+40% ore mining speed.",
+      "15% chance for extra raw ore from natural deposits.",
+      "+3 armour."
+    ],
+    "bonuses": {
+      "RAW_ORE_CHANCE": 0.15,
+      "ORE_SPEED": 0.4,
+      "ARMOUR": 3.0
+    }
+  },
+  {
+    "id": "tnk:grand_architect",
+    "name": "Grand Architect",
+    "description": "You now build the landmarks that others journey to discover.",
+    "iconResource": "tnkprogression:textures/gui/origins/bricks.png",
+    "tier": "Ascended",
+    "perks": [
+      "+50% stone breaking speed.",
+      "+2 block reach while holding a building block."
+    ],
+    "bonuses": {
+      "PLACEMENT_REACH": 2.0,
+      "STONE_SPEED": 0.5
+    }
+  },
+  {
+    "id": "tnk:artificer",
+    "name": "Artificer",
+    "description": "Your factories have turned impossible ideas into ordinary work.",
+    "iconResource": "tnkprogression:textures/gui/origins/wrench.png",
+    "tier": "Ascended",
+    "perks": [
+      "+35% quest command XP.",
+      "+3 block interaction reach while holding a wrench.",
+      "20% of anvil repair XP refunded; normal requirements apply."
+    ],
+    "bonuses": {
+      "WRENCH_REACH": 3.0,
+      "ENGINEERING_XP": 0.35,
+      "ANVIL_REPAIR_REFUND": 0.2
+    }
+  },
+  {
+    "id": "tnk:runesmith",
+    "name": "Runesmith",
+    "description": "You weave enchantment into steel with the certainty of a master.",
+    "iconResource": "tnkprogression:textures/gui/origins/hammer.png",
+    "tier": "Ascended",
+    "perks": [
+      "25% of enchanting XP refunded; normal requirements apply.",
+      "25% of anvil repair XP refunded.",
+      "35% less weapon durability loss."
+    ],
+    "bonuses": {
+      "ENCHANT_REFUND": 0.25,
+      "WEAPON_DURABILITY_REDUCTION": 0.35,
+      "ANVIL_REPAIR_REFUND": 0.25
+    }
+  },
+  {
+    "id": "tnk:wildwarden",
+    "name": "Wildwarden",
+    "description": "The fields and forests flourish beneath your patient care.",
+    "iconResource": "tnkprogression:textures/gui/origins/sun_carrot.png",
+    "tier": "Ascended",
+    "perks": [
+      "+30% mature crop yield when harvested by hand.",
+      "+25% natural health regeneration.",
+      "+25% meat and leather drops from your kills."
+    ],
+    "bonuses": {
+      "NATURAL_HEAL": 0.25,
+      "CROP_YIELD": 0.3,
+      "HUNT_YIELD": 0.25
+    }
+  },
+  {
+    "id": "tnk:tidecaller",
+    "name": "Tidecaller",
+    "description": "The rivers that once guided you now answer your passage.",
+    "iconResource": "tnkprogression:textures/gui/origins/blue_coral.png",
+    "tier": "Ascended",
+    "perks": [
+      "+50% swimming speed.",
+      "+30 seconds of underwater breathing time.",
+      "25% shorter fishing wait."
+    ],
+    "bonuses": {
+      "FISH_WAIT_REDUCTION": 0.25,
+      "SWIM_SPEED": 0.5,
+      "AIR_TICKS": 600.0
+    }
+  },
+  {
+    "id": "tnk:grand_alchemist",
+    "name": "Grand Alchemist",
+    "description": "Your remedies have become a discipline of measured miracles.",
+    "iconResource": "tnkprogression:textures/gui/origins/aquatic_elixir.png",
+    "tier": "Ascended",
+    "perks": [
+      "+35% duration for beneficial potions you drink.",
+      "+25% healing from instant health potions you drink.",
+      "25% shorter harmful potion effects."
+    ],
+    "bonuses": {
+      "HARMFUL_DURATION_REDUCTION": 0.25,
+      "POTION_HEAL": 0.25,
+      "POTION_DURATION": 0.35
+    }
+  },
+  {
+    "id": "tnk:dawnbringer",
+    "name": "Dawnbringer",
+    "description": "You have stood against the darkness and returned bearing its end.",
+    "iconResource": "tnkprogression:textures/gui/origins/book_of_star.png",
+    "tier": "Ascended",
+    "perks": [
+      "+8 maximum health.",
+      "25% less damage from undead attackers.",
+      "+35% vanilla XP from undead kills."
+    ],
+    "bonuses": {
+      "HEALTH": 8.0,
+      "UNDEAD_REDUCTION": 0.25,
+      "UNDEAD_XP": 0.35
+    }
+  }
+]

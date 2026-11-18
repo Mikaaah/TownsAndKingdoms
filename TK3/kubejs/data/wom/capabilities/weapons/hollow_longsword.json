@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 1.6,
+      "max_strikes": 3,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.15,
+      "armor_negation": 20.0
+    }
+  },
+  "type": "womplus:hollow_longsword"
+}

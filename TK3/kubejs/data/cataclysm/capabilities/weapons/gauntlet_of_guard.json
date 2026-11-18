@@ -1,0 +1,39 @@
+{
+  "type": "tnk:earthrend_gauntlet",
+  "attributes": {
+    "common": {
+      "impact": 1.9,
+      "max_strikes": 2,
+      "armor_negation": 28.0,
+      "damage_bonus": 6.0,
+      "speed_bonus": 0.32
+    },
+    "one_hand": {
+      "armor_negation": 28.0,
+      "impact": 1.9,
+      "max_strikes": 2,
+      "damage_bonus": 6.0,
+      "speed_bonus": 0.32
+    },
+    "two_hand": {
+      "armor_negation": 28.0,
+      "impact": 1.9,
+      "max_strikes": 2,
+      "damage_bonus": 6.0,
+      "speed_bonus": 0.32
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.225
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.225
+    ]
+  }
+}

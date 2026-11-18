@@ -1,0 +1,2280 @@
+{
+  "credit": "TNK assembled model. Original mod geometry credited in docs/ASSET_SOURCES.json.",
+  "parent": "kubejs:block/machine",
+  "ambientocclusion": true,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "ae2:block/quantum_ring",
+    "t1": "ae2:block/controller_lights",
+    "t2": "ae2:block/controller_powered",
+    "t3": "create:block/brass_block",
+    "t4": "ae2:block/glass/quartz_glass_a"
+  },
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.61,
+        0.61,
+        0.61
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        3,
+        0
+      ],
+      "scale": [
+        0.25,
+        0.25,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "loader": "neoforge:composite",
+  "children": {
+    "body": {
+      "textures": {
+        "particle": "ae2:block/quantum_ring",
+        "t1": "ae2:block/controller_lights",
+        "t2": "ae2:block/controller_powered",
+        "t3": "create:block/brass_block",
+        "t4": "ae2:block/glass/quartz_glass_a"
+      },
+      "render_type": "minecraft:cutout",
+      "elements": [
+        {
+          "from": [
+            0,
+            0,
+            0
+          ],
+          "to": [
+            16,
+            2.4,
+            2.4
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4
+              ]
+            }
+          },
+          "name": "Open cage / bottom north rail"
+        },
+        {
+          "from": [
+            0,
+            0,
+            13.6
+          ],
+          "to": [
+            16,
+            2.4,
+            16
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4
+              ]
+            }
+          },
+          "name": "Open cage / bottom south rail"
+        },
+        {
+          "from": [
+            0,
+            0,
+            2.4
+          ],
+          "to": [
+            2.4,
+            2.4,
+            13.6
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ],
+              "rotation": 90
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ],
+              "rotation": 90
+            }
+          },
+          "name": "Open cage / bottom west rail"
+        },
+        {
+          "from": [
+            13.6,
+            0,
+            2.4
+          ],
+          "to": [
+            16,
+            2.4,
+            13.6
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ],
+              "rotation": 90
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ],
+              "rotation": 90
+            }
+          },
+          "name": "Open cage / bottom east rail"
+        },
+        {
+          "from": [
+            0,
+            13.6,
+            0
+          ],
+          "to": [
+            16,
+            16,
+            2.4
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                16
+              ],
+              "rotation": 90
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4000000000000004
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4000000000000004
+              ]
+            }
+          },
+          "name": "Open cage / top north rail"
+        },
+        {
+          "from": [
+            0,
+            13.6,
+            13.6
+          ],
+          "to": [
+            16,
+            16,
+            16
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                16
+              ],
+              "rotation": 90
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4000000000000004
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4000000000000004
+              ]
+            }
+          },
+          "name": "Open cage / top south rail"
+        },
+        {
+          "from": [
+            0,
+            13.6,
+            2.4
+          ],
+          "to": [
+            2.4,
+            16,
+            13.6
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4000000000000004
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4000000000000004
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ],
+              "rotation": 90
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ],
+              "rotation": 90
+            }
+          },
+          "name": "Open cage / top west rail"
+        },
+        {
+          "from": [
+            13.6,
+            13.6,
+            2.4
+          ],
+          "to": [
+            16,
+            16,
+            13.6
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4000000000000004
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4000000000000004
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ],
+              "rotation": 90
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ],
+              "rotation": 90
+            }
+          },
+          "name": "Open cage / top east rail"
+        },
+        {
+          "from": [
+            0,
+            2.4,
+            0
+          ],
+          "to": [
+            2.4,
+            13.6,
+            2.4
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            }
+          },
+          "name": "Open cage / north west post"
+        },
+        {
+          "from": [
+            0,
+            2.4,
+            13.6
+          ],
+          "to": [
+            2.4,
+            13.6,
+            16
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4000000000000004
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                2.4000000000000004
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            }
+          },
+          "name": "Open cage / south west post"
+        },
+        {
+          "from": [
+            13.6,
+            2.4,
+            0
+          ],
+          "to": [
+            16,
+            13.6,
+            2.4
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4,
+                11.2
+              ]
+            }
+          },
+          "name": "Open cage / north east post"
+        },
+        {
+          "from": [
+            13.6,
+            2.4,
+            13.6
+          ],
+          "to": [
+            16,
+            13.6,
+            16
+          ],
+          "faces": {
+            "down": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4000000000000004
+              ]
+            },
+            "up": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                2.4000000000000004
+              ]
+            },
+            "north": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "south": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "west": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            },
+            "east": {
+              "texture": "#particle",
+              "uv": [
+                0,
+                0,
+                2.4000000000000004,
+                11.2
+              ]
+            }
+          },
+          "name": "Open cage / south east post"
+        },
+        {
+          "faces": {
+            "down": {
+              "texture": "#t1",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+              }
+            },
+            "east": {
+              "texture": "#t1",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+              }
+            },
+            "north": {
+              "texture": "#t1",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+              }
+            },
+            "south": {
+              "texture": "#t1",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+              }
+            },
+            "up": {
+              "texture": "#t1",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+              }
+            },
+            "west": {
+              "texture": "#t1",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "neoforge_data": {
+                "block_light": 15,
+                "sky_light": 15
+              }
+            }
+          },
+          "from": [
+            4.244,
+            4.244,
+            4.244
+          ],
+          "shade": false,
+          "to": [
+            11.756,
+            11.756,
+            11.756
+          ],
+          "name": "Mini AE2 controller / native lights"
+        },
+        {
+          "faces": {
+            "down": {
+              "texture": "#t2",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "east": {
+              "texture": "#t2",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "north": {
+              "texture": "#t2",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "south": {
+              "texture": "#t2",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "up": {
+              "texture": "#t2",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            },
+            "west": {
+              "texture": "#t2",
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ]
+            }
+          },
+          "from": [
+            4.25,
+            4.25,
+            4.25
+          ],
+          "to": [
+            11.75,
+            11.75,
+            11.75
+          ],
+          "name": "Mini AE2 controller / native powered body"
+        },
+        {
+          "from": [
+            -0.12,
+            -0.12,
+            -0.12
+          ],
+          "to": [
+            1.45,
+            1.45,
+            1.45
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 0 0 0"
+        },
+        {
+          "from": [
+            -0.12,
+            -0.12,
+            14.55
+          ],
+          "to": [
+            1.45,
+            1.45,
+            16.12
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 0 0 16"
+        },
+        {
+          "from": [
+            -0.12,
+            14.55,
+            -0.12
+          ],
+          "to": [
+            1.45,
+            16.12,
+            1.45
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 0 16 0"
+        },
+        {
+          "from": [
+            -0.12,
+            14.55,
+            14.55
+          ],
+          "to": [
+            1.45,
+            16.12,
+            16.12
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 0 16 16"
+        },
+        {
+          "from": [
+            14.55,
+            -0.12,
+            -0.12
+          ],
+          "to": [
+            16.12,
+            1.45,
+            1.45
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 16 0 0"
+        },
+        {
+          "from": [
+            14.55,
+            -0.12,
+            14.55
+          ],
+          "to": [
+            16.12,
+            1.45,
+            16.12
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 16 0 16"
+        },
+        {
+          "from": [
+            14.55,
+            14.55,
+            -0.12
+          ],
+          "to": [
+            16.12,
+            16.12,
+            1.45
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 16 16 0"
+        },
+        {
+          "from": [
+            14.55,
+            14.55,
+            14.55
+          ],
+          "to": [
+            16.12,
+            16.12,
+            16.12
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.57,
+                7.57
+              ]
+            }
+          },
+          "name": "Brass corner cap / 16 16 16"
+        },
+        {
+          "from": [
+            1.2,
+            1.7,
+            7.6
+          ],
+          "to": [
+            14.8,
+            2.3,
+            8.4
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                0,
+                6,
+                13.600000000000001,
+                6.800000000000001
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                0,
+                6,
+                13.600000000000001,
+                6.800000000000001
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                0,
+                6,
+                13.600000000000001,
+                6.6
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                0,
+                6,
+                13.600000000000001,
+                6.6
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                6.800000000000001,
+                6.6
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                6.800000000000001,
+                6.6
+              ]
+            }
+          },
+          "name": "Brass controller mounting crossbar"
+        },
+        {
+          "from": [
+            7.25,
+            2.2,
+            7.25
+          ],
+          "to": [
+            8.75,
+            4.26,
+            8.75
+          ],
+          "faces": {
+            "down": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.5,
+                7.5
+              ]
+            },
+            "up": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.5,
+                7.5
+              ]
+            },
+            "north": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.5,
+                8.059999999999999
+              ]
+            },
+            "south": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.5,
+                8.059999999999999
+              ]
+            },
+            "west": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.5,
+                8.059999999999999
+              ]
+            },
+            "east": {
+              "texture": "#t3",
+              "uv": [
+                6,
+                6,
+                7.5,
+                8.059999999999999
+              ]
+            }
+          },
+          "name": "Brass controller mounting stem"
+        }
+      ]
+    },
+    "glass": {
+      "textures": {
+        "particle": "ae2:block/quantum_ring",
+        "t1": "ae2:block/controller_lights",
+        "t2": "ae2:block/controller_powered",
+        "t3": "create:block/brass_block",
+        "t4": "ae2:block/glass/quartz_glass_a"
+      },
+      "render_type": "minecraft:translucent",
+      "elements": [
+        {
+          "name": "Fluix tinted glass pane / 0 1.2",
+          "from": [
+            1.075,
+            2.38,
+            2.38
+          ],
+          "to": [
+            1.325,
+            13.62,
+            13.62
+          ],
+          "faces": {
+            "west": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            },
+            "east": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Native AE2 glass reflection / 0 1.2",
+          "from": [
+            1.069,
+            2.38,
+            2.38
+          ],
+          "to": [
+            1.331,
+            13.62,
+            13.62
+          ],
+          "faces": {
+            "west": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            },
+            "east": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Fluix tinted glass pane / 0 14.8",
+          "from": [
+            14.675,
+            2.38,
+            2.38
+          ],
+          "to": [
+            14.925,
+            13.62,
+            13.62
+          ],
+          "faces": {
+            "west": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            },
+            "east": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Native AE2 glass reflection / 0 14.8",
+          "from": [
+            14.669,
+            2.38,
+            2.38
+          ],
+          "to": [
+            14.931000000000001,
+            13.62,
+            13.62
+          ],
+          "faces": {
+            "west": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            },
+            "east": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Fluix tinted glass pane / 1 1.2",
+          "from": [
+            2.38,
+            1.075,
+            2.38
+          ],
+          "to": [
+            13.62,
+            1.325,
+            13.62
+          ],
+          "faces": {
+            "down": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            },
+            "up": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Native AE2 glass reflection / 1 1.2",
+          "from": [
+            2.38,
+            1.069,
+            2.38
+          ],
+          "to": [
+            13.62,
+            1.331,
+            13.62
+          ],
+          "faces": {
+            "down": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            },
+            "up": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Fluix tinted glass pane / 1 14.8",
+          "from": [
+            2.38,
+            14.675,
+            2.38
+          ],
+          "to": [
+            13.62,
+            14.925,
+            13.62
+          ],
+          "faces": {
+            "down": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            },
+            "up": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Native AE2 glass reflection / 1 14.8",
+          "from": [
+            2.38,
+            14.669,
+            2.38
+          ],
+          "to": [
+            13.62,
+            14.931000000000001,
+            13.62
+          ],
+          "faces": {
+            "down": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            },
+            "up": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Fluix tinted glass pane / 2 1.2",
+          "from": [
+            2.38,
+            2.38,
+            1.075
+          ],
+          "to": [
+            13.62,
+            13.62,
+            1.325
+          ],
+          "faces": {
+            "north": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            },
+            "south": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Native AE2 glass reflection / 2 1.2",
+          "from": [
+            2.38,
+            2.38,
+            1.069
+          ],
+          "to": [
+            13.62,
+            13.62,
+            1.331
+          ],
+          "faces": {
+            "north": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            },
+            "south": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Fluix tinted glass pane / 2 14.8",
+          "from": [
+            2.38,
+            2.38,
+            14.675
+          ],
+          "to": [
+            13.62,
+            13.62,
+            14.925
+          ],
+          "faces": {
+            "north": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            },
+            "south": {
+              "uv": [
+                4.5,
+                2.5,
+                4.5,
+                2.5
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "2AAC7DE3",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        },
+        {
+          "name": "Native AE2 glass reflection / 2 14.8",
+          "from": [
+            2.38,
+            2.38,
+            14.669
+          ],
+          "to": [
+            13.62,
+            13.62,
+            14.931000000000001
+          ],
+          "faces": {
+            "north": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            },
+            "south": {
+              "uv": [
+                0,
+                0,
+                16,
+                16
+              ],
+              "texture": "#t4",
+              "neoforge_data": {
+                "color": "C8D9C4FF",
+                "ambient_occlusion": false
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

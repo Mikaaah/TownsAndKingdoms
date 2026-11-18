@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "common": {
+      "armor_negation": 43.0,
+      "impact": 4.3,
+      "max_strikes": 4,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.22
+    }
+  },
+  "type": "womplus:greataxe"
+}

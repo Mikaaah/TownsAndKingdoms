@@ -1,0 +1,45 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "minecraft:stronghold",
+      "required": false
+    },
+    {
+      "id": "minecraft:desert_pyramid",
+      "required": false
+    },
+    {
+      "id": "minecraft:fortress",
+      "required": false
+    },
+    {
+      "id": "minecraft:monument",
+      "required": false
+    },
+    {
+      "id": "minecraft:mineshaft",
+      "required": false
+    },
+    {
+      "id": "minecraft:mineshaft_mesa",
+      "required": false
+    },
+    {
+      "id": "minecraft:jungle_pyramid",
+      "required": false
+    },
+    {
+      "id": "minecraft:swamp_hut",
+      "required": false
+    },
+    {
+      "id": "idas:iceandfire/dread_citadel",
+      "required": false
+    },
+    {
+      "id": "idas:iceandfire/sirens_cove",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "attributes": {
+    "common": {
+      "armor_negation": 50.0,
+      "impact": 3.5
+    }
+  },
+  "type": "tnk:great_hammer"
+}

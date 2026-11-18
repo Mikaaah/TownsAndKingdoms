@@ -1,0 +1,99 @@
+{
+  "qualities": [
+    {
+      "id": "common",
+      "name": "Common",
+      "color": "#FFFFFF",
+      "weight": 54,
+      "boss_weight": 5,
+      "cost_multiplier": 1,
+      "apotheosis_rarity": "tnkloot:common",
+      "roll_floor": 0
+    },
+    {
+      "id": "uncommon",
+      "name": "Uncommon",
+      "color": "#55FF55",
+      "weight": 25,
+      "boss_weight": 20,
+      "cost_multiplier": 1.2,
+      "apotheosis_rarity": "tnkloot:uncommon",
+      "roll_floor": 0.15
+    },
+    {
+      "id": "rare",
+      "name": "Rare",
+      "color": "#FF77CC",
+      "weight": 14,
+      "boss_weight": 38,
+      "cost_multiplier": 1.5,
+      "apotheosis_rarity": "tnkloot:rare",
+      "roll_floor": 0.35
+    },
+    {
+      "id": "epic",
+      "name": "Epic",
+      "color": "#AA55FF",
+      "weight": 5,
+      "boss_weight": 25,
+      "cost_multiplier": 2,
+      "apotheosis_rarity": "tnkloot:epic",
+      "roll_floor": 0.55
+    },
+    {
+      "id": "legendary",
+      "name": "Legendary",
+      "color": "#55DDFF",
+      "weight": 1,
+      "boss_weight": 10,
+      "cost_multiplier": 3,
+      "apotheosis_rarity": "tnkloot:legendary",
+      "roll_floor": 0.75
+    },
+    {
+      "id": "mythic",
+      "name": "Mythic",
+      "color": "#FF9922",
+      "weight": 1,
+      "boss_weight": 2,
+      "cost_multiplier": 4,
+      "apotheosis_rarity": "tnkloot:mythic",
+      "roll_floor": 0.9
+    }
+  ],
+  "per_tier_weights": {},
+  "tier_affix_bands": [
+    {
+      "min": 0.03,
+      "max": 0.13
+    },
+    {
+      "min": 0.1,
+      "max": 0.25
+    },
+    {
+      "min": 0.2,
+      "max": 0.36
+    },
+    {
+      "min": 0.3,
+      "max": 0.48
+    },
+    {
+      "min": 0.4,
+      "max": 0.6
+    },
+    {
+      "min": 0.52,
+      "max": 0.74
+    },
+    {
+      "min": 0.65,
+      "max": 0.88
+    },
+    {
+      "min": 0.78,
+      "max": 1
+    }
+  ]
+}

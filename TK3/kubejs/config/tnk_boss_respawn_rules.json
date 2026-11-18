@@ -1,0 +1,2030 @@
+{
+  "format": 1,
+  "source": {
+    "mod_id": "boss_respawner",
+    "mod_version": "0.2.0",
+    "curseforge_file_id": 9433758,
+    "jar_sha256": "986d093f5c0fab1f4a8bd42aa2b32ecce98e450dc71630cd58c97d94c0e35e20"
+  },
+  "entries": [
+    {
+      "resource": "block_factorys_bosses:boss_respawner/entries/infernal_dragon.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "block_factorys_bosses:infernal_dragon",
+        "activation": {
+          "item": "block_factorys_bosses:ancient_trial_key",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "block_factorys_bosses:boss_respawner/entries/sandworm.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "block_factorys_bosses:sandworm",
+        "activation": {
+          "item": "block_factorys_bosses:ancient_trial_key",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "block_factorys_bosses:boss_respawner/entries/underworld_knight.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "block_factorys_bosses:underworld_knight",
+        "activation": {
+          "item": "block_factorys_bosses:ancient_trial_key",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/ancient_guardian.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:ancient_guardian",
+        "activation": {
+          "item": "legendary_monsters:eye_of_many_ribs",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/annihilation_pursuer.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:annihilation_pursuer",
+        "activation": {
+          "item": "legendary_monsters:eye_of_annihilation",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/beheaded_knight.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:beheaded_knight",
+        "activation": {
+          "item": "legendary_monsters:eye_of_ghost",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/cloud_golem.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:cloud_golem",
+        "activation": {
+          "item": "legendary_monsters:eye_of_air",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "keep_existing",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/dune_sentinel.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:dune_sentinel",
+        "activation": {
+          "item": "legendary_monsters:eye_of_sandstorm",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/endersent.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:endersent",
+        "activation": {
+          "item": "legendary_monsters:eye_of_chorus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/frostbitten_golem.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:frostbitten_golem",
+        "activation": {
+          "item": "legendary_monsters:eye_of_frost",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/lava_eater.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:lava_eater",
+        "activation": {
+          "item": "legendary_monsters:eye_of_magma",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/overgrown_colossus.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:overgrown_colossus",
+        "activation": {
+          "item": "legendary_monsters:eye_of_moss",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/posessed_paladin.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:posessed_paladin",
+        "activation": {
+          "item": "legendary_monsters:eye_of_ghost",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "keep_existing",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/resurrected_knight.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:resurrected_knight",
+        "activation": {
+          "item": "legendary_monsters:eye_of_ghost",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/shulker_mimic.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:shulker_mimic",
+        "activation": {
+          "item": "legendary_monsters:eye_of_shulker",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/skeletosaurus.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:skeletosaurus",
+        "activation": {
+          "item": "legendary_monsters:eye_of_bones",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "legendary_monsters:boss_respawner/entries/withered_abomination.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "legendary_monsters:withered_abomination",
+        "activation": {
+          "item": "legendary_monsters:eye_of_soul",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "mowziesmobs:boss_respawner/entries/ferrous_wroughtnaut.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "mowziesmobs:ferrous_wroughtnaut",
+        "activation": {
+          "item": "mowziesmobs:captured_grottol",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "keep_existing",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "mowziesmobs:boss_respawner/entries/frostmaw.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "mowziesmobs:frostmaw",
+        "activation": {
+          "item": "mowziesmobs:glowing_jelly",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "keep_existing",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "mowziesmobs:boss_respawner/entries/sculptor.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "mowziesmobs:sculptor",
+        "activation": {
+          "item": "mowziesmobs:bluff_rod",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "keep_existing",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "mowziesmobs:boss_respawner/entries/umvuthi.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "mowziesmobs:umvuthi",
+        "activation": {
+          "item": "mowziesmobs:naga_fang",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 0,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "keep_existing",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/alpha_yeti.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:alpha_yeti",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:alpha_yeti_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/hydra.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:hydra",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:hydra_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/knight_phantom.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:knight_phantom",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:knight_phantom_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/lich.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:lich",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:lich_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              -1,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/minoshroom.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:minoshroom",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:minoshroom_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/naga.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:naga",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:naga_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/quest_ram.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:quest_ram",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "home",
+          "home": {
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_delay_ticks": 30,
+            "force_place": false,
+            "search_failure_fallback": true,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": true,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ]
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "summon",
+          "summon": {
+            "delay_ticks": 20,
+            "require_player_nearby": true,
+            "player_range": 9.0,
+            "allow_peaceful": false,
+            "count": 1,
+            "spawn_offset": [
+              0,
+              0,
+              0
+            ],
+            "nbt": "",
+            "finalize_spawn": true,
+            "max_attempts": 20,
+            "retry_interval_ticks": 4
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/snow_queen.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:snow_queen",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:snow_queen_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    },
+    {
+      "resource": "twilightforest:boss_respawner/entries/ur_ghast.json",
+      "rule": {
+        "schema_version": 4,
+        "enabled": true,
+        "priority": 0,
+        "entity": "twilightforest:ur_ghast",
+        "activation": {
+          "item": "twilightforest:magic_map_focus",
+          "amount": 1,
+          "consume": true
+        },
+        "placement": {
+          "mode": "twilightforest",
+          "twilightforest": {
+            "offset": [
+              0,
+              -1,
+              1
+            ],
+            "force_place": true,
+            "search_failure_fallback": false,
+            "search_down": 32,
+            "search_up": 16,
+            "horizontal_radius": 4,
+            "require_ground": false,
+            "avoid_fluids": false,
+            "avoid_blocks": [
+              "cataclysm:boss_respawner",
+              "twilightforest:canopy_chest",
+              "twilightforest:canopy_trapped_chest",
+              "twilightforest:dark_chest",
+              "twilightforest:dark_trapped_chest",
+              "twilightforest:mangrove_chest",
+              "twilightforest:mangrove_trapped_chest",
+              "twilightforest:mining_chest",
+              "twilightforest:mining_trapped_chest",
+              "twilightforest:skull_chest",
+              "twilightforest:sorting_chest",
+              "twilightforest:sorting_trapped_chest",
+              "twilightforest:time_chest",
+              "twilightforest:time_trapped_chest",
+              "twilightforest:transformation_chest",
+              "twilightforest:transformation_trapped_chest",
+              "twilightforest:twilight_oak_chest",
+              "twilightforest:twilight_oak_trapped_chest"
+            ],
+            "place_delay_ticks": 0
+          }
+        },
+        "death": {
+          "player_kill_only": false,
+          "dimensions": [],
+          "biomes": []
+        },
+        "spawn": {
+          "mode": "transform",
+          "transform": {
+            "transform_block": "twilightforest:ur_ghast_boss_spawner",
+            "delay_ticks": 20,
+            "allow_peaceful": false,
+            "nbt": "",
+            "at": "anchor",
+            "spawner_offset": [
+              0,
+              0,
+              0
+            ],
+            "force_place": true
+          }
+        },
+        "duplicate": {
+          "mode": "allow_multiple",
+          "search_radius": 16
+        }
+      }
+    }
+  ]
+}

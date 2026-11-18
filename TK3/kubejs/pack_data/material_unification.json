@@ -1,0 +1,40 @@
+{
+    "format": 1,
+    "namespacePriority": [
+        "minecraft",
+        "create",
+        "createaddition",
+        "createnuclear",
+        "immersiveengineering"
+    ],
+    "forms": [
+        "ingots",
+        "nuggets",
+        "plates",
+        "wires",
+        "rods",
+        "gears",
+        "dusts",
+        "small_dusts",
+        "raw_materials",
+        "crushed_raw_materials",
+        "storage_blocks"
+    ],
+    "requireIngotFamily": [
+        "storage_blocks",
+        "raw_materials",
+        "crushed_raw_materials"
+    ],
+    "excludedMaterials": [
+        "all",
+        "all_metal",
+        "metal",
+        "wooden",
+        "any",
+        "cheap"
+    ],
+    "materialNames": {
+        "aluminium": "aluminum"
+    },
+    "legacyRecipePrefix": "tnk:ie_compat/legacy_material/"
+}

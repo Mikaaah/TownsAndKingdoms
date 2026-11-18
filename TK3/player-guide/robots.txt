@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://mikaaah.github.io/TownsAndKingdoms/sitemap.xml

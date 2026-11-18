@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "levelBase": 0.0,
+  "levelFactor": 1000.0,
+  "levelExponent": 1.0,
+  "legacyLevelBase": 150.0,
+  "legacyLevelFactor": 45.0,
+  "legacyLevelExponent": 1.35,
+  "activityGrowth": 0.12,
+  "requirementExponent": 0.65,
+  "rewardExponent": 0.5
+}

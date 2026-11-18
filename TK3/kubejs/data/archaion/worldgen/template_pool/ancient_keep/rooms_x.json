@@ -1,0 +1,69 @@
+{
+  "name": "archaion:ancient_keep",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/map_room_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/storage_room_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/water_room_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/sentinel_barracks_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/sentinel_crossroad_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/tram_station_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "archaion:ancient_keep/tram_station_2_x",
+        "processors": "archaion:ancient_keep/ancient_keep_decay",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

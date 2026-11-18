@@ -1,0 +1,18 @@
+newmtl steel
+Kd 1 1 1
+map_Kd immersiveengineering:block/metal/storage_steel
+newmtl sheet
+Kd 1 1 1
+map_Kd immersiveengineering:block/metal/sheetmetal_steel
+newmtl edge
+Kd 1 1 1
+map_Kd create:block/industrial_iron_block
+newmtl copper
+Kd 1 1 1
+map_Kd immersiveengineering:block/metal_decoration/coil_lv_side
+newmtl shaft
+Kd 1 1 1
+map_Kd immersiveengineering:block/metal/storage_aluminum
+newmtl shaft_end
+Kd 1 1 1
+map_Kd create:block/axis_top

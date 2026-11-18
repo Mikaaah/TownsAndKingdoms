@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "kubejs:block/runic_catalyst",
+    "particle": "kubejs:block/runic_catalyst"
+  }
+}

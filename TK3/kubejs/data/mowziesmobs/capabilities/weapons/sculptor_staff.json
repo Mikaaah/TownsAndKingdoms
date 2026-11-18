@@ -1,0 +1,24 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 0.2,
+      "speed_bonus": 0.6,
+      "max_strikes": 1,
+      "damage_bonus": 3
+    }
+  },
+  "collider": {
+    "center": [
+      0.0,
+      0.0,
+      -0.4
+    ],
+    "number": 3,
+    "size": [
+      0.4,
+      0.4,
+      0.8
+    ]
+  },
+  "type": "wom:staff"
+}

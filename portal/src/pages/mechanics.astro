@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MechanicSection from '../components/MechanicSection.astro';
+import {data,href,pretty,words} from '../lib/data';
+const mechanics=data('mechanics',{});
+const origins=Array.isArray(mechanics.origins)?mechanics.origins:mechanics.origins?.entries||[];
+const titleEntries=mechanics.titles?.entries||mechanics.titles?.titles||[];
+---
+<Layout title="Character & equipment" description="Player leveling, Origins, titles and the equipment identification loop in Towns & Kingdoms.">
+ <p class="eyebrow">Handbook / Character systems</p><h1>Character & equipment</h1><p class="intro">Character levels grant skill points and affect encounter scaling. Origins and titles add distinct bonuses, while appraisal reveals the equipment found on your expeditions.</p>
+ <nav class="toc-inline" aria-label="Character systems"><a href="#leveling">Leveling</a><a href="#origins">Origins</a><a href="#titles">Titles</a><a href="#loot">Equipment & appraisal</a></nav>
+ <div class="prose">
+ <section id="leveling" class="section"><p class="eyebrow">Character / Growth</p><h2>{mechanics.leveling?.title||'Leveling & the world around you'}</h2>{mechanics.leveling?.summary&&<p>{mechanics.leveling.summary}</p>}{(mechanics.leveling?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}<p><a href={href('skills/')}>Explore skill choices in the planner →</a></p></section>
+ <section id="origins" class="section"><p class="eyebrow">Character / Identity</p><h2>Origins</h2><p>{mechanics.originGuide?.summary||'Your Origin adds a distinct starting identity and set of perks. Advanced Origins extend those possibilities through ascension.'}</p>{(mechanics.originGuide?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}</section>
+ </div>
+ <div class="origin-grid">{origins.map((o:any)=><article class="card" id={'origin-'+o.id}><div class="card-top">{o.icon&&<img src={href(o.icon)} alt="" width="38" height="38" style="image-rendering:pixelated;object-fit:contain"/>}<h3>{o.name}</h3>{o.tier&&<span class="tag">{o.tier}</span>}</div>{o.description&&<p style="margin-top:12px">{o.description}</p>}{o.perks?.length>0&&<ul>{o.perks.map((p:any)=><li><strong>{p.name}</strong>{p.description&&<> — {p.description}</>}</li>)}</ul>}</article>)}</div>
+ <div class="prose">
+ <section id="titles" class="section"><p class="eyebrow">Character / Recognition</p><h2>{mechanics.titles?.title||'Titles'}</h2>{mechanics.titles?.summary&&<p>{mechanics.titles.summary}</p>}{(mechanics.titles?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}{titleEntries.length>0&&<div class="table-wrap"><table><thead><tr><th>Title</th><th>Requirement</th><th>Effect</th></tr></thead><tbody>{titleEntries.map((t:any)=><tr><td>{t.name||t.title||words(t.id)}</td><td>{pretty(t.requirement)||pretty(t.requirements)||t.description||''}</td><td>{pretty(t.perk)||pretty(t.effect)||pretty(t.perks)||''}</td></tr>)}</tbody></table></div>}</section>
+ <section id="loot" class="section"><p class="eyebrow">Equipment / Discovery</p><h2>{mechanics.loot?.title||'Unidentified equipment & appraisal'}</h2>{mechanics.loot?.summary&&<p>{mechanics.loot.summary}</p>}{(mechanics.loot?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}</section>
+ </div>
+</Layout>

@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "public_files": {
+    "tk2/a-new-world/index.html": "5070e38e16ad4d52a5809ca924827ffa5af8306275c322a82c3edd2215d4023b",
+    "tk2/changelog/index.html": "55e3f32f3aa8d0db91ec37130aa4541d23b9c54818a49796145c5525453827f5",
+    "tk2/features/index.html": "a9593eee6fa75dee67014ab068204e5fe1113b8e4fd65741977b5e77544affde",
+    "tk2/index.html": "48211889701d600c486daa2cb3982d94fc1d70fd7d780761613b79f464976555",
+    "tk2/modlist/index.html": "93197eeb2846b9ab3d87d2ecc4d6688b368c37ec81d7e976db26af404de41836",
+    "tk2/original-home/index.html": "ed39a3bd01cd8ea3f34cbfc16c382c04aa9a9a54a8418c7d98cecbf151c4f626",
+    "tk2/progression/index.html": "fc6d98361cd6f1b95911294e2383c82d2e6eb80d8755ff2d61bb8d829b332a53",
+    "tk2/screenshots/index.html": "8c1c5e40d02a6502b080ea52e49de44af35fcae304d9b1c35efb260b42f59bc9",
+    "tk2/server-installation/index.html": "06a52fc76c658b10b4db0da45fad502111a377463ab7d8b6f22d6584ae4656a1",
+    "assets/wiki.css": "749cc0cd312d5350ac7e5225cdbaa5d1d83f31581e17db75b92fb51b71c56eb2",
+    "assets/wiki.js": "4eba8217e03f0919a33481e69d75b566004ab0755c506713dd5c1ee6794bc56b",
+    "assets/search.json": "59e0cc83b3e340c68e5f2e438b5603da34c1a79a7c2c7b093fff97ce27bd3955",
+    "assets/brand/favicon.png": "790c83f64cbb3fafaa905aa04afc40facb71e0462fa61a75229b060f416f42cf",
+    "assets/brand/kingdom-landscape.png": "660eb76ceb4869f61e39cb67a0e88da9c2e579ec756164dcd9631d0d139eac0f",
+    "assets/brand/montserrat-OFL.txt": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+    "assets/brand/montserrat-latin.woff": "62f3c587fdb5025d89ffba8f957d7db299129ee5b572d4c031c18491780dfe90",
+    "assets/brand/tklogo.png": "5afff6b1d5789e21a5d058bab9ade0fcb871841b3889a75528b683c8d0ecb6cc",
+    "archive/2026-10-02/Home.md": "c0ba266dde2c0a408c38aabbafa65ae3dd49f5b23fb1b533f27f3faa4c9ea757",
+    "archive/2026-10-02/Features.md": "6d8d5ae4c99703f89d758176068f5ac49fb38373355d1c037a7c9ba99c35fbf0",
+    "archive/2026-10-02/Modslist.md": "40e8ff20dc8b66cb67b747e2df16560d8bc4d626f0ccb6f2abd1b69945d7c1e0",
+    "archive/2026-10-02/Changelogs.md": "2dcfa32d083cc9cdbdace4cdb6fb5d978db4de8640f425c093a4a2684276c2c2",
+    "archive/2026-10-02/A-New-World-|-The-1.20.1-Update.md": "0839dae4cf0008e53c76ee1e4ced10ca63883e83e17b9ef0c30f1b996d31720e",
+    "archive/2026-10-02/Server-Installation.md": "132ff0dc3fa6568a0643f7c7c238e775a7853894dac71d1057d3cf58aefc8456",
+    "archive/2026-10-02/Progression.md": "2e52c2e857dfb10b1ef790f94acc823b5ba7653d7e102e10a1cb0c2fe25840e2",
+    "archive/2026-10-02/Screenshots.md": "2e52c2e857dfb10b1ef790f94acc823b5ba7653d7e102e10a1cb0c2fe25840e2"
+  },
+  "archived_sources": {
+    "TK3/wiki-archive/2026-10-02/Home.md": "c0ba266dde2c0a408c38aabbafa65ae3dd49f5b23fb1b533f27f3faa4c9ea757",
+    "TK3/wiki-archive/2026-10-02/Features.md": "6d8d5ae4c99703f89d758176068f5ac49fb38373355d1c037a7c9ba99c35fbf0",
+    "TK3/wiki-archive/2026-10-02/Modslist.md": "40e8ff20dc8b66cb67b747e2df16560d8bc4d626f0ccb6f2abd1b69945d7c1e0",
+    "TK3/wiki-archive/2026-10-02/Changelogs.md": "2dcfa32d083cc9cdbdace4cdb6fb5d978db4de8640f425c093a4a2684276c2c2",
+    "TK3/wiki-archive/2026-10-02/A-New-World-|-The-1.20.1-Update.md": "0839dae4cf0008e53c76ee1e4ced10ca63883e83e17b9ef0c30f1b996d31720e",
+    "TK3/wiki-archive/2026-10-02/Server-Installation.md": "132ff0dc3fa6568a0643f7c7c238e775a7853894dac71d1057d3cf58aefc8456",
+    "TK3/wiki-archive/2026-10-02/Progression.md": "2e52c2e857dfb10b1ef790f94acc823b5ba7653d7e102e10a1cb0c2fe25840e2",
+    "TK3/wiki-archive/2026-10-02/Screenshots.md": "2e52c2e857dfb10b1ef790f94acc823b5ba7653d7e102e10a1cb0c2fe25840e2"
+  },
+  "aliases": {
+    "2.0/a-new-world/index.html": "/TownsAndKingdoms/tk2/a-new-world/",
+    "2.0/changelog/index.html": "/TownsAndKingdoms/tk2/changelog/",
+    "2.0/features/index.html": "/TownsAndKingdoms/tk2/features/",
+    "2.0/index.html": "/TownsAndKingdoms/tk2/",
+    "2.0/modlist/index.html": "/TownsAndKingdoms/tk2/modlist/",
+    "2.0/original-home/index.html": "/TownsAndKingdoms/tk2/original-home/",
+    "2.0/progression/index.html": "/TownsAndKingdoms/tk2/progression/",
+    "2.0/screenshots/index.html": "/TownsAndKingdoms/tk2/screenshots/",
+    "2.0/server-installation/index.html": "/TownsAndKingdoms/tk2/server-installation/"
+  }
+}

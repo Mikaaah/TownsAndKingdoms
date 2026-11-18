@@ -1,0 +1,25 @@
+{
+  "type": "tnk:colossal_blade",
+  "attributes": {
+    "common": {
+      "impact": 2.95,
+      "max_strikes": 4,
+      "armor_negation": 30.0,
+      "damage_bonus": 5.0,
+      "speed_bonus": 0.25
+    }
+  },
+  "collider": {
+    "number": 3,
+    "size": [
+      0.25,
+      0.25,
+      0.775
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.775
+    ]
+  }
+}

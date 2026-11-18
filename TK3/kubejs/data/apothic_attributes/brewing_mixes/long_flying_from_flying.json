@@ -1,0 +1,13 @@
+{
+  "mix_type": "potion",
+  "from": "apothic_attributes:flying",
+  "ingredient": {
+    "item": "minecraft:redstone"
+  },
+  "to": "apothic_attributes:long_flying",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:false"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "category": "fist",
+  "usable_in_offhand": true,
+  "hit_particle": "epicfight:hit_blunt",
+  "hit_sound": "epicfight:entity.hit.blunt",
+  "swing_sound": "epicfight:entity.weapon.whoosh_hard",
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.1
+    ],
+    "size": [
+      0.4,
+      0.4,
+      0.6
+    ]
+  },
+  "styles": {
+    "default": "one_hand",
+    "cases": [
+      {
+        "style": "two_hand",
+        "conditions": [
+          {
+            "predicate": "epicfight:offhand_item_category",
+            "category": "fist"
+          }
+        ]
+      }
+    ]
+  },
+  "combos": {
+    "one_hand": [
+      "epicfight_dd:biped/combat/iron_fist_auto1",
+      "epicfight_dd:biped/combat/iron_fist_auto2",
+      "epicfight_dd:biped/combat/iron_fist_auto3",
+      "epicfight_dd:biped/combat/iron_fist_auto4",
+      "epicfight_dd:biped/combat/iron_fist_auto5",
+      "epicfight_dd:biped/combat/iron_fist_dash",
+      "epicfight_dd:biped/combat/iron_fist_airslash"
+    ],
+    "two_hand": [
+      "epicfight_dd:biped/combat/iron_fist_auto1",
+      "epicfight_dd:biped/combat/iron_fist_auto2",
+      "epicfight_dd:biped/combat/iron_fist_auto3",
+      "epicfight_dd:biped/combat/iron_fist_auto4",
+      "epicfight_dd:biped/combat/iron_fist_auto5",
+      "epicfight_dd:biped/combat/iron_fist_dash",
+      "epicfight_dd:biped/combat/iron_fist_airslash"
+    ]
+  },
+  "innate_skills": {
+    "one_hand": "epicfight:relentless_combo",
+    "two_hand": "epicfight:relentless_combo"
+  },
+  "livingmotion_modifier": {
+    "one_hand": {
+      "idle": "epicfight_dd:biped/living/iron_fist_idle",
+      "walk": "epicfight_dd:biped/living/iron_fist_walk",
+      "run": "epicfight:biped/living/run",
+      "chase": "epicfight:biped/living/run",
+      "block": "epicfight_dd:biped/living/iron_fist_guard"
+    },
+    "two_hand": {
+      "idle": "epicfight_dd:biped/living/iron_fist_idle",
+      "walk": "epicfight_dd:biped/living/iron_fist_walk",
+      "run": "epicfight:biped/living/run",
+      "chase": "epicfight:biped/living/run",
+      "block": "epicfight_dd:biped/living/iron_fist_guard"
+    }
+  }
+}

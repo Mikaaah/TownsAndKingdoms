@@ -1,0 +1,33 @@
+{
+  "dungeon_accessories": true,
+  "dungeon_accessory_chance": 0.12,
+  "dungeon_table_prefixes": [
+    "minecraft:chests/",
+    "*:chests/"
+  ],
+  "discovery_collection": true,
+  "salvaging": true,
+  "pool_previews": true,
+  "rarity_reveals": true,
+  "boss_signature_affixes": true,
+  "boss_proc_cooldown_ticks": 160,
+  "boss_proc_duration_ticks": 60,
+  "max_salvage_credit": 1000000,
+  "salvage_values": [
+    1,
+    2,
+    4,
+    7,
+    12,
+    20
+  ],
+  "boss_theme_overrides": {
+    "cataclysm/ignis": "ember",
+    "cataclysm/ender_guardian": "void",
+    "cataclysm/netherite_monstrosity": "ember",
+    "cataclysm/the_leviathan": "frost",
+    "cataclysm/the_harbinger": "storm",
+    "cataclysm/ancient_remnant": "earth"
+  },
+  "max_salvage_refund_fraction": 0.4
+}

@@ -1,0 +1,25 @@
+{
+  "type": "wom:agony",
+  "attributes": {
+    "common": {
+      "impact": 3.0,
+      "max_strikes": 3,
+      "armor_negation": 49.0,
+      "damage_bonus": 6.0,
+      "speed_bonus": 0.27
+    }
+  },
+  "collider": {
+    "number": 3,
+    "size": [
+      0.35,
+      0.25,
+      0.95
+    ],
+    "center": [
+      0.0,
+      0.0,
+      -0.95
+    ]
+  }
+}

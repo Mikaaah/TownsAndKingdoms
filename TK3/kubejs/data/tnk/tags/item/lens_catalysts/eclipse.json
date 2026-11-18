@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "cataclysm:ignitium_ingot",
+      "required": false
+    },
+    {
+      "id": "cataclysm:cursium_ingot",
+      "required": false
+    },
+    {
+      "id": "cataclysm:essence_of_the_storm",
+      "required": false
+    },
+    {
+      "id": "cataclysm:abyssal_egg",
+      "required": false
+    },
+    {
+      "id": "alexscaves:tectonic_shard",
+      "required": false
+    }
+  ]
+}

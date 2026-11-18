@@ -1,0 +1,41 @@
+{
+  "category": "sword",
+  "usable_in_offhand": true,
+  "hit_particle": "epicfight:hit_blade",
+  "hit_sound": "epicfight:entity.hit.blade",
+  "swing_sound": "epicfight:entity.weapon.whoosh",
+  "collider": {
+    "number": 3,
+    "center": [0.0, 0.0, -0.35],
+    "size": [0.4, 0.4, 0.7]
+  },
+  "styles": {
+    "default": "one_hand",
+    "cases": []
+  },
+  "combos": {
+    "one_hand": [
+      "epicfight_dd:biped/combat/messer_onehanded_auto1",
+      "epicfight_dd:biped/combat/messer_onehanded_auto2",
+      "epicfight_dd:biped/combat/messer_onehanded_auto3",
+      "epicfight_dd:biped/combat/sickle_onehand_dash",
+      "epicfight:biped/combat/sword_airslash"
+    ],
+    "mount": [
+      "epicfight:biped/combat/sword_mount_attack"
+    ]
+  },
+  "innate_skills": {
+    "one_hand": "epicfight:sweeping_edge"
+  },
+  "livingmotion_modifier": {
+    "one_hand": {
+      "idle": "epicfight_dd:biped/living/messer_onehanded_idle",
+      "kneel": "epicfight_dd:biped/living/messer_onehanded_idle",
+      "walk": "epicfight:biped/living/walk",
+      "run": "epicfight:biped/living/run",
+      "chase": "epicfight:biped/living/run",
+      "block": "epicfight:biped/skill/guard_sword"
+    }
+  }
+}

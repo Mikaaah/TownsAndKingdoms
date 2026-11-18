@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "twilightforest:naga_scale",
+      "required": false
+    },
+    {
+      "id": "twilightforest:lich_trophy",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:totem_of_moss",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:frozen_rune",
+      "required": false
+    },
+    {
+      "id": "legendary_monsters:air_rune",
+      "required": false
+    }
+  ]
+}

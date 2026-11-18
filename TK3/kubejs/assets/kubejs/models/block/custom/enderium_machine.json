@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "kubejs:block/enderium_machine_top",
+    "bottom": "kubejs:block/enderium_machine_bottom",
+    "side": "kubejs:block/enderium_machine_side",
+    "particle": "kubejs:block/enderium_machine_side"
+  }
+}

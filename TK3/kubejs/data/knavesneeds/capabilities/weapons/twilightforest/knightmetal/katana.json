@@ -1,0 +1,25 @@
+{
+  "type": "epicfight:uchigatana",
+  "attributes": {
+    "common": {
+      "impact": 2.0,
+      "max_strikes": 2,
+      "armor_negation": 21.0,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.24
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.625
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.625
+    ]
+  }
+}

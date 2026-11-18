@@ -1,0 +1,32 @@
+{
+  "type": "epicfight_dd:halberd",
+  "attributes": {
+    "common": {
+      "impact": 2.6,
+      "max_strikes": 2,
+      "armor_negation": 41.0,
+      "damage_bonus": 4.0,
+      "speed_bonus": 0.23
+    },
+    "two_hand": {
+      "armor_negation": 41.0,
+      "impact": 3.0,
+      "max_strikes": 3,
+      "damage_bonus": 4.0,
+      "speed_bonus": 0.23
+    }
+  },
+  "collider": {
+    "number": 3,
+    "center": [
+      0.0,
+      0.0,
+      -0.475
+    ],
+    "size": [
+      0.25,
+      0.25,
+      0.475
+    ]
+  }
+}

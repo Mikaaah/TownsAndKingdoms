@@ -1,0 +1,12 @@
+{
+  "attributes": {
+    "common": {
+      "impact": 1.8,
+      "armor_negation": 25.0,
+      "max_strikes": 6,
+      "damage_bonus": 3.0,
+      "speed_bonus": 0.15
+    }
+  },
+  "type": "epicfight_dd:messer"
+}

@@ -1,0 +1,63 @@
+{
+  "weapons": 542,
+  "styles": 51,
+  "recipes": 1064,
+  "production_rules": 21,
+  "mods": 327,
+  "chapters": 10,
+  "bosses": 82,
+  "captured_js_recipes": 1085,
+  "capture_errors": [],
+  "recipe_handler_runs": 11,
+  "recipe_function_calls": {
+    "prepareCompatibility": 1,
+    "prepareMachines": 1,
+    "chapter01": 1,
+    "chapter02": 1,
+    "chapter03": 1,
+    "chapter04": 1,
+    "bossCatalysts": 1,
+    "immersiveManufacturing": 1,
+    "ae2Manufacturing": 1,
+    "excavatorDeposits": 1,
+    "chapter05": 1,
+    "chapter06": 1,
+    "chapter07": 1,
+    "chapter08": 1,
+    "chapter09": 1,
+    "angelRing": 1,
+    "infinityCells": 1,
+    "chapter10": 1,
+    "compatibility": 1,
+    "rubberLogistics": 1,
+    "laserUtilities": 1,
+    "createAddition": 1,
+    "electricalMachines": 1,
+    "buildingMaterials": 1,
+    "scrollAutomation": 1,
+    "endgameEquipment": 1,
+    "oreCooking": 1,
+    "restrictedItems": 1,
+    "restrictedPotions": 1,
+    "processingPolicy": 1,
+    "nuclearFurnace": 1,
+    "finishMaterials": 1
+  },
+  "runtime_recipe_families": [
+    {
+      "function": "scrollAutomation",
+      "family": "spell-scroll-binding",
+      "reason": "Native spell registry selects enabled craftable spell levels at runtime."
+    }
+  ],
+  "ingredient_kinds": {
+    "difference": 4,
+    "item": 1921,
+    "tag": 481,
+    "fluid": 122,
+    "alternatives": 32,
+    "predicate": 4
+  },
+  "fluid_output_recipes": 47,
+  "weapon_icon_fallbacks": 29
+}

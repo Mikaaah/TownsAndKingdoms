@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { data, href, fmt } from '../lib/data';
+const weapons=data('weapons'), mods=data('mods'), chapters=data('chapters'), skills=data('skills',{});
+const cards=[
+ {title:'Weapon registry',mark:'sword',description:'Compare weapon styles, physical archetypes, grips and equipment tiers.',link:'weapons/',foot:`${fmt(weapons.length)} weapons & combat items`},
+ {title:'Recipes & production',mark:'grid',description:'Look up ingredients, crafting arrangements, processing steps and progression requirements.',link:'recipes/',foot:'Ingredients, gates & assembly'},
+ {title:'Skilltree planner',mark:'nodes',description:'Allocate skill points, compare bonuses and share a character build.',link:'skills/',foot:`${fmt(skills.nodes?.length)} connected skills`},
+ {title:'Progression chapters',mark:'list',description:'Follow the manufacturing path from your first workshop to the Creation Core.',link:'chapters/',foot:`${chapters.length || 10} chapters`},
+ {title:'Ponder workshop',mark:'cube',description:'Rotate a block scene, inspect its machinery and play through the process step by step.',link:'ponder/',foot:'Interactive block & item scenes'},
+ {title:'The modpack',mark:'layers',description:'Browse gameplay systems, mechanical addons and supporting libraries by category.',link:'mods/',foot:`${fmt(mods.length)} mods & integrations`},
+];
+---
+<Layout description="The Towns & Kingdoms handbook: weapon styles, custom recipes, progression, character systems and interactive planning tools.">
+ <section class="hero">
+  <div><p class="eyebrow">Towns & Kingdoms · The official handbook</p><h1>The player handbook.</h1><p class="intro">Find weapon styles, crafting requirements and progression systems in one place. Plan a skill build, inspect a recipe or step through a production scene before heading back into the world.</p><div class="button-row"><a class="button button-primary" href={href('guides/')}>Getting started <span aria-hidden="true">→</span></a><a class="button" href={href('recipes/')}>Browse recipes</a></div></div>
+  <div class="hero-emblem"><img src={href('media/logo.webp')} alt="Towns & Kingdoms — Beyond the Forge" width="235" height="95" /></div>
+ </section>
+ <div class="stats-strip" aria-label="Inside the handbook"><div class="stat"><strong>{fmt(weapons.length)}</strong><span>weapons</span></div><div class="stat"><strong>{fmt(skills.nodes?.length)}</strong><span>skill nodes</span></div><div class="stat"><strong>{chapters.length || 10}</strong><span>chapters</span></div><div class="stat"><strong>{fmt(mods.length)}</strong><span>mods</span></div></div>
+ <section class="section"><div class="section-heading"><h2>Reference & planning</h2><span class="subtle" style="font-size:11px">Explore the handbook</span></div><div class="card-grid">{cards.map(c=><a class="card card-link" href={href(c.link)}><div class="card-top"><span class="card-icon"><Icon name={c.mark} /></span><span class="arrow" aria-hidden="true">↗</span></div><h3>{c.title}</h3><p>{c.description}</p><span class="card-foot">{c.foot}</span></a>)}</div></section>
+ <section class="section"><div class="section-heading"><h2>A good place to begin</h2><a href={href('guides/')}>All guides →</a></div><div class="guide-list"><a class="guide-row" href={href('guides/#first-steps')}><span class="number">01</span><div><h3>Your first evening</h3><p>Make a home, find your bearings and put your first machines to work.</p></div><span class="arrow">→</span></a><a class="guide-row" href={href('guides/#combat')}><span class="number">02</span><div><h3>Find your fighting style</h3><p>Learn how weapon identity, grip and innate attacks shape every encounter.</p></div><span class="arrow">→</span></a><a class="guide-row" href={href('mechanics/#loot')}><span class="number">03</span><div><h3>Bring your discoveries home</h3><p>Turn unidentified dungeon gear into equipment that belongs in your build.</p></div><span class="arrow">→</span></a></div></section>
+ <section class="section"><div class="callout"><strong>Coming from Towns & Kingdoms 2?</strong><p>Explore <a href={href('changes/')}>what changed</a>, or return to the complete <a href={href('tk2/')}>TK2 handbook</a>.</p></div></section>
+</Layout>
