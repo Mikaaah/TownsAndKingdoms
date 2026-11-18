@@ -1,4 +1,5 @@
 <p align="center"><img src="../handbook-source/brand/tklogo.png" alt="Towns & Kingdoms 3 — Beyond the Forge" width="440"></p>
+
 # Weapons & combat styles
 
 **CB 1.1.2 development catalogue · Minecraft 1.21.1 · NeoForge · Java 21**

@@ -54,7 +54,7 @@ live=weapons+shields+other
 melee=[item for item in weapons if item['kind']=='Melee weapon']
 types=Counter(item['type_family']for item in melee)
 lines=['<p align="center"><img src="../handbook-source/brand/tklogo.png" alt="Towns & Kingdoms 3 — Beyond the Forge" width="440"></p>',
-       '# Weapons & combat styles','',
+       '', '# Weapons & combat styles','',
        '**CB 1.1.2 development catalogue · Minecraft 1.21.1 · NeoForge · Java 21**','',
        '[Open the visual armoury](https://mikaaah.github.io/TownsAndKingdoms/weapons/) · '
        '[Download CSV](../handbook-source/current/assets/weapons/weapon-overview.csv) · '
