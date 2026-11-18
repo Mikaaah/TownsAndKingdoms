@@ -154,6 +154,13 @@
     "file": "exploration.md"
   },
   {
+    "route": "weapons/",
+    "title": "Weapons & combat styles",
+    "group": "Character & adventure",
+    "summary": "Browse the CB 1.1.2 weapon catalogue: fighting styles, native bonuses and item stats.",
+    "file": "weapons.md"
+  },
+  {
     "route": "workshop/",
     "title": "Towns & Kingdoms Workshop",
     "group": "Build & automate",

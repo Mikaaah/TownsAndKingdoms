@@ -1,0 +1,284 @@
+{
+  "source": "current CB1.1.2 full export version6 manifest; exact installed JARs",
+  "known_additional_mappings": [
+    {
+      "id": "irons_spellbooks:artificer_cane",
+      "name": "Artificer's Cane",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/artificer_cane.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:spear"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:blood_staff",
+      "name": "The Blood Staff",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/blood_staff.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:spear"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:boreal_blade",
+      "name": "Boreal Blade",
+      "type": "epicfight:sword",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/boreal_blade.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:sword"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:claymore",
+      "name": "Claymore",
+      "type": "epicfight:sword",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/claymore.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:sword"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:decrepit_scythe",
+      "name": "Decrepit Scythe",
+      "type": "epicfight:sword",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/decrepit_scythe.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:sword"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:graybeard_staff",
+      "name": "Graybeard Staff",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/graybeard_staff.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:spear"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:hellrazor",
+      "name": "Hellrazor",
+      "type": "epicfight:sword",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/hellrazor.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:sword"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:ice_staff",
+      "name": "Ice Staff",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/ice_staff.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:spear"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:lightning_rod",
+      "name": "Rod o' Lightning",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/lightning_rod.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:spear"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:misery",
+      "name": "Misery",
+      "type": "epicfight:sword",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/misery.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:sword"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "irons_spellbooks:pyrium_staff",
+      "name": "Pyrium Staff",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Iron Spells X Epic Fight CF1664976/file9127582",
+      "evidence": "data/irons_spellbooks/capabilities/weapons/pyrium_staff.json; exact registered ItemRegistry in Iron Spells 3.16.3 CF855414/file8680204",
+      "native_capability": {
+        "type": "epicfight:spear"
+      },
+      "resolution": "Explicit native compatibility JSON (Iron Spells X Epic Fight)"
+    },
+    {
+      "id": "minecraft:wooden_spear",
+      "name": "Wooden Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers wooden_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:stone_spear",
+      "name": "Stone Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers stone_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:copper_spear",
+      "name": "Copper Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers copper_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:iron_spear",
+      "name": "Iron Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers iron_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:golden_spear",
+      "name": "Golden Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers golden_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:diamond_spear",
+      "name": "Diamond Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers diamond_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:netherite_spear",
+      "name": "Netherite Spear",
+      "type": "epicfight:spear",
+      "category": "Melee weapon",
+      "source": "Vanilla Backport CF417430/file9318571; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java registers netherite_spear; data/epicfight/capabilities/weapons/item_keyword/spear.json regex .*_spear",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "minecraft:shield",
+      "name": "Shield",
+      "type": "epicfight:shield",
+      "category": "Shield",
+      "source": "Minecraft 1.21.1; Epic Fight21.17.3.1 default class mapping",
+      "evidence": "CommonItemCapabilityProvider.registerWeaponTypesByClass: ShieldItem.class -> EpicFightItemCapabilityPresets.SHIELD",
+      "resolution": "Automatic class default; not a pack capability override"
+    },
+    {
+      "id": "legendary_monsters:sharp_battle_axe",
+      "name": "Sharp Battle Axe",
+      "type": "epicfight:axe",
+      "category": "Melee weapon",
+      "source": "Legendary Monsters CF944035/file9301784; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java explicit registration; supplied EpicFight item_keyword axe.json",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    },
+    {
+      "id": "legendary_monsters:void_sword",
+      "name": "Void Sword",
+      "type": "epicfight:sword",
+      "category": "Melee weapon",
+      "source": "Legendary Monsters CF944035/file9301784; Epic Fight21.17.3.1 keyword fallback",
+      "evidence": "ModItems.java explicit registration; supplied EpicFight item_keyword sword.json",
+      "resolution": "Automatic keyword match; not a pack capability override"
+    }
+  ],
+  "registered_weapons_without_verified_mapping": [],
+  "excluded_unregistered_or_disabled": [
+    {
+      "id": "legendary_monsters:sand_cannon",
+      "reason": "English lang text exists but absent installed2.2.4 ModItems registrations; do not claim registered from lang alone."
+    },
+    {
+      "id": "knavesneeds:deeperdarker/resonarium/*",
+      "reason": "15types present in code, but latestpack config resonariumEnabled=false."
+    }
+  ],
+  "nonweapon_missing_loot_rows": [
+    "wom:demon_bracelet",
+    "wom:celerity_bracelet",
+    "wom:obsidian_bracelet",
+    "ars_nouveau:novice_spell_book",
+    "ars_nouveau:apprentice_spell_book",
+    "ars_nouveau:archmage_spell_book"
+  ],
+  "known_current_casting_or_native_weapon_items_without_verified_ef_type": [
+    "alexscaves:sea_staff",
+    "alexscaves:sugar_staff",
+    "legendary_monsters:chorus_cannon"
+  ],
+  "not_yet_classified": [
+    "legendary_monsters:anchor_handle",
+    "block_factorys_bosses:undying_tentacle",
+    "relics:chorus_staff",
+    "reliquified_irons_spells_and_spellbooks:slicer",
+    "reliquified_irons_spells_and_spellbooks:shadow_claws",
+    "ars_elemental:spell_horn",
+    "twilightforest:stale_bread",
+    "ars_nouveau:spell_crossbow"
+  ],
+  "omitted_by_user_pack_scope": [
+    {
+      "mod": "knavesneeds",
+      "scope": "Only Twilight Forest weapons are included in this pack, confirmed by the owner on 2026-11-18.",
+      "omitted_ids": [
+        "knavesneeds:deeperdarker/warden/chakram",
+        "knavesneeds:deeperdarker/warden/claymore",
+        "knavesneeds:deeperdarker/warden/cutlass",
+        "knavesneeds:deeperdarker/warden/glaive",
+        "knavesneeds:deeperdarker/warden/greataxe",
+        "knavesneeds:deeperdarker/warden/greathammer",
+        "knavesneeds:deeperdarker/warden/halberd",
+        "knavesneeds:deeperdarker/warden/katana",
+        "knavesneeds:deeperdarker/warden/longsword",
+        "knavesneeds:deeperdarker/warden/rapier",
+        "knavesneeds:deeperdarker/warden/sai",
+        "knavesneeds:deeperdarker/warden/scythe",
+        "knavesneeds:deeperdarker/warden/spear",
+        "knavesneeds:deeperdarker/warden/twinblade",
+        "knavesneeds:deeperdarker/warden/warglaive"
+      ]
+    }
+  ]
+}

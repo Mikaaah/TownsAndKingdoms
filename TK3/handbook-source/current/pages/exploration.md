@@ -33,6 +33,8 @@ Lootr supports per-player container loot where compatible. **Unidentified Loot**
 
 ## Combat and camera
 
+Browse the [CB 1.1.2 weapons and combat styles catalogue](../weapons/) for the newer development weapon assignments and stat reference.
+
 Epic Fight and Weapons of Miracles provide action combat and weapon movesets. Punchy! and Punchy! Moves add animation systems, with **Combat Punchy** handling automatic handoffs between Epic Fight and Punchy behavior. The beta also includes the dedicated Punchy / Iron's Spells first-person compatibility addon.
 
 Shoulder Surfing Reloaded, Do a Barrel Roll and Reach Behind provide additional camera and perspective options. Check their controls alongside combat keybinds before changing several settings at once.
