@@ -31,6 +31,30 @@ function query(dom,text) {
  const field=dom.window.document.querySelector('[data-filter="query"]');
  field.value=text;field.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
 }
+test('each End eye encounter has a credited portrait and a matching registry thumbnail',async()=>{
+ const dom=browser('bosses');const doc=dom.window.document;
+ const eyes=json('end-eyes');
+ const portraits=json('boss-portraits');
+ assert.equal(doc.querySelectorAll('.boss-portrait img').length,eyes.length);
+ assert.equal(doc.querySelectorAll('.boss-credits li').length,eyes.length);
+ for(const eye of eyes){
+  const portrait=portraits[eye.bossId];
+  const card=doc.getElementById('eye-'+eye.id.split(':')[1]);
+  const image=card.querySelector('.boss-portrait img');
+  assert.equal(image.alt,eye.bossName);
+  assert.equal(image.getAttribute('src'),'/TownsAndKingdoms/media/bosses/'+portrait.file);
+  assert.equal(image.width,portrait.width);
+  assert.equal(image.height,portrait.height);
+  assert.ok(readFileSync(resolve(root,'dist/media/bosses',portrait.file)).length);
+ }
+ evaluate(dom,'registry.ts');await tick();
+ query(dom,'cataclysm:ignis');
+ const result=doc.querySelector('[data-results] [data-detail]');
+ assert.match(result.querySelector('.encounter-thumbnail').src,/\/ignis\.webp$/);
+ result.click();
+ assert.match(doc.querySelector('.dialog-header .encounter-thumbnail').src,/\/ignis\.webp$/);
+ dom.window.close();
+});
 test('weapon filters, detail links and copied IDs use the actual weapon registry',async()=>{
  const dom=browser('weapons');evaluate(dom,'registry.ts');await tick();
  const doc=dom.window.document;

@@ -5,12 +5,24 @@ import RegistryDialog from '../components/RegistryDialog.astro';
 import {data, href} from '../lib/data';
 const eyes = data('end-eyes', []);
 const bosses = data('bosses', []);
+interface BossPortrait {
+  file: string;
+  width: number;
+  height: number;
+  credit: string;
+  source: string;
+  license?: { name: string; url: string };
+}
+const portraits: Record<string, BossPortrait> = data('boss-portraits', {});
+const portraitUrl = (portrait: BossPortrait) => href('media/bosses/' + portrait.file);
+const portraitUrls = Object.fromEntries(Object.entries(portraits).map(([id, portrait]) => [id, portraitUrl(portrait)]));
+const credits = eyes.filter((eye: any) => portraits[eye.bossId]);
 ---
 <Layout title="Bosses & the End" description="Find every End Remastered eye, prepare the required offerings and explore the boss encounters of Towns & Kingdoms.">
  <p class="eyebrow">Handbook / Adventure</p>
  <h1>Bosses & the End</h1>
  <p class="intro">Sixteen boss encounters each award a different End Remastered eye. Collect any twelve to open the End portal.</p>
- <nav class="toc-inline" aria-label="Boss guide sections"><a href="#end-portal">Opening the portal</a><a href="#eye-routes">Boss eye drops</a><a href="#eye-guide">Encounter preparation</a><a href="#encounters">All encounters</a></nav>
+ <nav class="toc-inline" aria-label="Boss guide sections"><a href="#end-portal">Opening the portal</a><a href="#eye-routes">Boss eye drops</a><a href="#eye-guide">Boss encounter guide</a><a href="#encounters">All encounters</a></nav>
 
  <section id="end-portal" class="section prose">
   <p class="eyebrow">End Remastered / The journey</p><h2>Twelve different eyes</h2>
@@ -28,23 +40,43 @@ const bosses = data('bosses', []);
  </section>
 
  <section id="eye-guide" class="section">
-  <p class="eyebrow">Field guide / Locations & offerings</p><h2>Prepare each expedition</h2>
+  <p class="eyebrow">Field guide / Locations & offerings</p><h2>Prepare for each boss</h2>
   <p>Appraise your equipment, allocate your skill points and bring food and recovery supplies before activating an encounter. The level shown is the enemy’s configured floor, not a required player level. Bosses can scale above that floor with nearby players.</p>
-  <div class="eye-grid">{eyes.map((eye:any)=><article class="card eye-card" id={'eye-'+eye.id.split(':')[1]}>
-   <header class="eye-heading"><EyeIcon eye={eye} size={40} /><div><h3>{eye.name}</h3><code>{eye.id}</code></div></header>
-   <div class="tags"><span class="tag">{eye.dimension}</span>{eye.minimumLevel!==null&&<span class="tag tag-gold">Enemy L{eye.minimumLevel}+ · {eye.classification}</span>}</div>
-   <h4><button class="table-button" data-detail={eye.bossId}>{eye.bossName}</button></h4>
-   <dl class="eye-facts"><div><dt>Find it</dt><dd>{eye.location}</dd></div><div><dt>Begin the encounter</dt><dd>{eye.activation}</dd></div><div><dt>Prepare</dt><dd>{eye.preparation}</dd></div></dl>
-   {eye.notableRewards.length>0&&<div class="eye-rewards"><h4>Notable rewards</h4><p>{eye.notableRewards.map((reward:any,index:number)=><>{index>0?' · ':''}{reward.name}</>)}</p></div>}
-   {eye.rewardPool.length>0&&<p class="eye-pool"><button class="table-button" data-detail={eye.bossId}>View the equipment reward pool →</button></p>}
-  </article>)}</div>
+  <div class="eye-grid">{eyes.map((eye:any) => {
+   const portrait = portraits[eye.bossId];
+   return <article class="card eye-card" id={'eye-'+eye.id.split(':')[1]}>
+    <header class="eye-heading">
+     <EyeIcon eye={eye} size={40} />
+     <div>
+      <h3><button class="table-button" data-detail={eye.bossId}>{eye.bossName}</button></h3>
+      <p class="eye-drop-name" title={eye.id}>{eye.name}</p>
+     </div>
+    </header>
+    {portrait && <figure class="boss-portrait">
+     <img src={portraitUrl(portrait)} alt={eye.bossName} width={portrait.width} height={portrait.height} loading="lazy" decoding="async" />
+    </figure>}
+    <div class="tags"><span class="tag">{eye.dimension}</span>{eye.minimumLevel!==null&&<span class="tag tag-gold">Enemy L{eye.minimumLevel}+ · {eye.classification}</span>}</div>
+    <dl class="eye-facts"><div><dt>Find it</dt><dd>{eye.location}</dd></div><div><dt>Begin the encounter</dt><dd>{eye.activation}</dd></div><div><dt>Prepare</dt><dd>{eye.preparation}</dd></div></dl>
+    {eye.notableRewards.length>0&&<div class="eye-rewards"><h4>Notable rewards</h4><p>{eye.notableRewards.map((reward:any,index:number)=><>{index>0?' · ':''}{reward.name}</>)}</p></div>}
+    {eye.rewardPool.length>0&&<p class="eye-pool"><button class="table-button" data-detail={eye.bossId}>View the equipment reward pool →</button></p>}
+   </article>;
+  })}</div>
+  {credits.length > 0 && <details class="boss-credits">
+   <summary>Image credits</summary>
+   <ul>{credits.map((eye: any) => {
+    const portrait = portraits[eye.bossId];
+    return <li>{eye.bossName} · <a href={portrait.source}>{portrait.credit}</a>
+     {portrait.license && <> · <a href={portrait.license.url}>{portrait.license.name}</a></>}
+    </li>;
+   })}</ul>
+  </details>}
  </section>
 
  <section id="encounters" class="section">
   <p class="eyebrow">Reference / {bosses.length} encounters</p><h2>Encounter registry</h2>
   <p>Browse bosses and elite enemies across the pack. Reward pools list possible equipment selections; their entries are alternatives rather than a promise that every item drops together. Appraisal reveals sealed equipment.</p>
   <div class="encounter-notes"><div class="callout"><strong>Enemy levels</strong><p>Ordinary bosses use the higher of their floor or the nearby player’s level +10, up to level 110. Configured elite encounters cap at 100. These values describe enemy scaling, not entry locks.</p></div><div class="callout"><strong>Equipment rewards</strong><p>Dedicated equipment pools require a player kill. A boss’s equipment reward tier is separate from its combat level and weapon handling style. <a href={href('loot/')}>Read about appraisal and rarity →</a></p></div></div>
-  <div data-registry="bosses"><div class="toolbar"><input type="search" data-filter="query" placeholder="Search an encounter or mod…" aria-label="Search bosses"/><select data-filter="modName" aria-label="Filter by mod"><option value="">All mods</option></select><select data-filter="classification" aria-label="Filter encounter type"><option value="">All encounters</option></select></div><div class="results-meta"><span data-count>Finding encounters…</span><span>Select an encounter for its rewards</span></div><div class="weapon-grid" data-results></div><div class="pagination"><button data-prev disabled>← Previous</button><span data-page-label>1 / 1</span><button data-next>Next →</button></div></div>
+  <div data-registry="bosses" data-boss-portraits={JSON.stringify(portraitUrls)}><div class="toolbar"><input type="search" data-filter="query" placeholder="Search an encounter or mod…" aria-label="Search bosses"/><select data-filter="modName" aria-label="Filter by mod"><option value="">All mods</option></select><select data-filter="classification" aria-label="Filter encounter type"><option value="">All encounters</option></select></div><div class="results-meta"><span data-count>Finding encounters…</span><span>Select an encounter for its rewards</span></div><div class="weapon-grid" data-results></div><div class="pagination"><button data-prev disabled>← Previous</button><span data-page-label>1 / 1</span><button data-next>Next →</button></div></div>
  </section>
  <RegistryDialog />
  <script>import '../scripts/registry';</script>
@@ -52,6 +84,11 @@ const bosses = data('bosses', []);
 <style>
  .portal-steps{padding-left:24px}.portal-steps li{padding-left:5px;margin:15px 0;line-height:1.8}
  .eye-table td{vertical-align:top}.eye-name{display:flex;align-items:center;gap:10px;font-weight:600;white-space:nowrap}
- .eye-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}.eye-card{padding:26px;scroll-margin-top:95px}.eye-heading{display:flex;align-items:center;gap:14px;margin-bottom:18px}.eye-heading h3{margin:0 0 5px;font-size:21px}.eye-heading>div{min-width:0}.eye-heading code{overflow-wrap:anywhere;font-size:13px;color:var(--muted)}.eye-card>.tags{margin-bottom:22px}.eye-card h4{font-size:14px;margin:20px 0 9px}.eye-card h4>.table-button{font-size:15px;font-weight:650;text-align:left}.eye-facts{margin:0}.eye-facts>div{margin-top:15px}.eye-facts dt{font-size:13px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin-bottom:5px}.eye-facts dd{margin:0;font-size:16px;line-height:1.8;color:var(--muted)}.eye-rewards p{font-size:16px;line-height:1.8;margin-bottom:0}.eye-pool{margin:8px 0 0!important}.eye-pool button{font-size:14px}.encounter-notes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.encounter-notes .callout{margin:0}.encounter-notes p{font-size:16px;margin-bottom:0}
+ .eye-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}.eye-card{padding:26px;scroll-margin-top:95px}.eye-heading{display:flex;align-items:center;gap:14px;margin-bottom:18px}.eye-heading h3{margin:0}.eye-heading h3 .table-button{min-height:0;font-size:1.25rem;line-height:1.35}.eye-heading>div{min-width:0}.eye-drop-name{margin:.25rem 0 0;font-size:.875rem;color:var(--muted)}.eye-card>.tags{margin-bottom:22px}.eye-card h4{font-size:14px;margin:20px 0 9px}.eye-card h4>.table-button{font-size:15px;font-weight:650;text-align:left}.eye-facts{margin:0}.eye-facts>div{margin-top:15px}.eye-facts dt{font-size:13px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin-bottom:5px}.eye-facts dd{margin:0;font-size:16px;line-height:1.8;color:var(--muted)}.eye-rewards p{font-size:16px;line-height:1.8;margin-bottom:0}.eye-pool{margin:8px 0 0!important}.eye-pool button{font-size:14px}.encounter-notes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.encounter-notes .callout{margin:0}.encounter-notes p{font-size:16px;margin-bottom:0}
+ .boss-portrait{display:grid;place-items:center;aspect-ratio:16/10;margin:0 0 16px;overflow:hidden;border:1px solid var(--border-soft);border-radius:5px;background:var(--bg)}
+ .boss-portrait img{display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+ .boss-credits{margin-top:18px;font-size:.875rem;color:var(--muted)}
+ .boss-credits ul{margin-bottom:0}
+ :global(.item-art img.encounter-thumbnail){image-rendering:auto}
  @media(max-width:760px){.eye-grid,.encounter-notes{grid-template-columns:1fr}.eye-card{padding:22px}.eye-table th,.eye-table td{padding:14px 12px}.eye-name{white-space:normal}}
 </style>
