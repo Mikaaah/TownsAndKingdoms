@@ -10,6 +10,7 @@ const guideEntries = [
 ];
 const articleEntries = [
   ['features/','Features and world showcase','Exploration, building, combat, magic and factory automation.'],
+  ['guides/tutorial/','In-game tutorial','Quest Book, Story progression, quest rewards, JEI recipe lookup, claiming, travel, Lootr, Ultimine, combat, character progression and spells.'],
   ['changes/','From Towns & Kingdoms 2 to 3','Changes to progression, character systems, mods and equipment.'],
   ['custom-mods/','Pack-exclusive mods and mechanics','Progression, Workshop, Unidentified Loot, Resonant Arcana, Flow Control, Wildshape, Combat Punchy, Combat Afloat and Alchemical Lasers.'],
   ['guides/server-setup/','Dedicated server setup','Minecraft 1.21.1, NeoForge, Java 21, server files, installation, memory, BisectHosting and code Mika.'],
