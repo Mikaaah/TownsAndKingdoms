@@ -17,10 +17,11 @@ const groups = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111016" />
+    <meta name="theme-color" content="#131216" />
     <meta name="description" content={description} />
     <title>{title === 'Handbook' ? 'Towns & Kingdoms — Handbook' : `${title} · Towns & Kingdoms`}</title>
     <link rel="icon" href={href('media/favicon.png')} />
+    <link rel="preload" href={href('media/fonts/Geist.woff2')} as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="og:title" content={`${title} · Towns & Kingdoms`} />
     <meta property="og:description" content={description} />
@@ -36,7 +37,7 @@ const groups = [
         <span class="brand-label">Handbook</span>
       </a>
       <button class="header-search" id="open-search" aria-label="Search the handbook" aria-haspopup="dialog">
-        <span>Search the handbook…</span><kbd>Ctrl K</kbd>
+        <Icon name="search" size={18} /><span>Search the handbook…</span><kbd>Ctrl K</kbd>
       </button>
       <nav class="header-links" aria-label="Community">
         <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord</a>
@@ -44,6 +45,7 @@ const groups = [
         <details class="version-switch"><summary aria-label="Choose handbook edition">TK3</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current="page">Towns & Kingdoms 3</a><a href={href('tk2/')}>Towns & Kingdoms 2</a></nav></details>
       </nav>
     </header>
+    <button class="nav-backdrop" id="nav-backdrop" aria-label="Close navigation" tabindex="-1" hidden></button>
     <div class="site-grid">
       <aside class="sidebar" id="site-sidebar" aria-label="Documentation navigation">
         {groups.map(group => <nav class="nav-group" aria-label={group.title}>
@@ -79,5 +81,5 @@ const groups = [
 
 
 <style>
-.version-switch{position:relative;font-size:12px}.version-switch summary{list-style:none;border:1px solid var(--border);border-radius:6px;padding:5px 10px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:220px;padding:6px;background:var(--surface);border:1px solid var(--border);border-radius:7px;box-shadow:0 12px 30px #0005}.version-menu a{display:block;padding:9px 10px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--accent)}
+.version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--gold)}
 </style>
