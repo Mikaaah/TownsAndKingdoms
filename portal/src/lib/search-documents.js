@@ -14,6 +14,8 @@ const articleEntries = [
   ['tutorials/','Build guides','Tutorials for Cobblestone Generators, tree farms, AE2, Nuclear, Riftborne, Iron’s Spells, Ars Nouveau, Witchery, Thaumaturge, Let It Walk, portals and boss respawning.'],
   ['dungeons/','Dungeons','Dungeon expeditions, loot and rewards, boss encounters and Spiral Abyss.'],
   ['dimensions/','Dimensions','Travel to the Aether, Twilight Forest, the Otherside, Nether and End.'],
+  ['dimensions/#nether','Explore the Nether','Jaden’s Nether Expansion, Nether biomes, dungeons, mobs and bosses.'],
+  ['dimensions/#end','Explore the End','Enderscape, The Beyond, End dungeons, mobs, bosses and portals.'],
   ['changes/','From Towns & Kingdoms 2 to 3','Changes to progression, character systems, mods and equipment.'],
   ['custom-mods/','Pack-exclusive mods and mechanics','Progression, Workshop, Unidentified Loot, Resonant Arcana, Flow Control, Wildshape, Combat Punchy, Combat Afloat and Alchemical Lasers.'],
   ['guides/server-setup/','Dedicated server setup','Minecraft 1.21.1, NeoForge, Java 21, server files, installation, memory, BisectHosting and code Mika.'],

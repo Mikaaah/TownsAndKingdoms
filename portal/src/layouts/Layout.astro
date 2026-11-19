@@ -9,12 +9,12 @@ const isTk2 = edition === 'tk2';
 const handbookName = isTk2 ? 'Towns & Kingdoms 2' : 'Towns & Kingdoms';
 const current = Astro.url.pathname.replace(/\/$/, '');
 const groups = isTk2 ? tk2Nav : [
-  { title: 'Handbook', links: [['Overview', '', 'bookred'], ['Getting started', 'guides/', 'bookopen'], ['Chapters', 'chapters/', 'scroll'], ['Features', 'features/', 'map'], ['What changed', 'changes/', 'hourglass']] },
-  { title: 'Character', links: [['Weapons', 'weapons/', 'hammer'], ['Loot & Appraisal', 'loot/', 'satchel'], ['Levels & Origins', 'mechanics/', 'mirror']] },
-  { title: 'Practical', links: [['Recipes', 'recipes/', 'paper'], ['Mod index', 'mods/', 'journal'], ['Custom mods', 'custom-mods/', 'pickaxe'], ['Build guides', 'tutorials/', 'rotation_mechanism'], ['Player shops', 'guides/player-shops/', 'market']] },
+  { title: 'Handbook', links: [['Overview', '', 'bookred'], ['Getting started', 'guides/', 'rope'], ['Chapters', 'chapters/', 'scroll'], ['Features', 'features/', 'torch'], ['What changed', 'changes/', 'hourglass']] },
+  { title: 'Character', links: [['Weapons', 'weapons/', 'steel_sword'], ['Loot & Appraisal', 'loot/', 'satchel'], ['Levels & Origins', 'mechanics/', 'mirror']] },
+  { title: 'Practical', links: [['Recipes', 'recipes/', 'paper'], ['Mod index', 'mods/', 'journal'], ['Custom mods', 'custom-mods/', 'pickaxe'], ['Build guides', 'tutorials/', 'bookopen'], ['Player shops', 'guides/player-shops/', 'sack']] },
   { title: 'World', links: [['Boss encounters', 'bosses/', 'horn'], ['Dungeons', 'dungeons/', 'key'], ['Dimensions', 'dimensions/', 'map']] },
-  { title: 'Tools', links: [['Skilltree planner', 'skills/', 'skill_point']] },
-  { title: 'Community & support', links: [['Servers', 'servers/', 'lantern'], ['Set up a server', 'guides/server-setup/', 'key'], ['Discord', 'discord/', 'envelope'], ['Support', 'support/', 'bell'], ['Frequently asked questions', 'faq/', 'book']] }
+  { title: 'Tools', links: [['Skilltree planner', 'skills/', 'root']] },
+  { title: 'Community & support', links: [['Servers', 'servers/', 'lantern'], ['Set up a server', 'guides/server-setup/', 'hammer'], ['Discord', 'discord/', 'envelope'], ['Support', 'support/', 'bell'], ['Frequently asked questions', 'faq/', 'book']] }
 ];
 ---
 <!doctype html>

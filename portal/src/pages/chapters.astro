@@ -52,6 +52,7 @@ interface Chapter {
   number: number;
   roman: string;
   title: string;
+  icon?: string;
   titleImage?: string;
   images?: BoardImage[];
   quests: Quest[];
@@ -83,6 +84,7 @@ const chapters: Chapter[] = data('chapter-questlines');
 const chapterInfo: Record<string, ChapterInfo> = data('chapter-machines', {});
 const assets: BoardAssets = data('quest-board-assets', { titles: {}, icons: {} });
 const spruce = href('media/textures/spruce-planks.png');
+const chapterBackboard = href('media/chapters/chapter-backboard.png');
 const isSecret = (chapter: Chapter) => chapter.number === 10 && chapter.quests.length === 0;
 const objectiveLabel = (objective: QuestObjective) =>
   (objective.count ?? 1) > 1 ? `${objective.count} × ${objective.label}` : objective.label;
@@ -143,13 +145,20 @@ function boardEdges(chapter: Chapter) {
 
   <div data-quest-chapters style={{ '--quest-planks': `url("${spruce}")` }}>
     <nav aria-label="Chapters">
-      <ol class="chapter-picker">
-        {chapters.map((chapter, index) => <li>
-          <a class="chapter-jump" href={'#' + chapter.id} data-chapter-link aria-current={index === 0 ? 'true' : undefined}>
-            <span class="chapter-number"><span class="sr-only">Chapter </span>{chapter.roman}</span>
-            <span>{isSecret(chapter) ? 'Secret' : chapter.title}</span>
-          </a>
-        </li>)}
+      <ol class="chapter-picker" style={{ '--chapter-backboard': `url("${chapterBackboard}")` }}>
+        {chapters.map((chapter, index) => {
+          const secret = isSecret(chapter);
+          const icon = secret ? undefined : assets.icons[chapter.icon ?? ''];
+          return <li>
+            <a class="chapter-jump" href={'#' + chapter.id} data-chapter-link aria-current={index === 0 ? 'true' : undefined}>
+              <span class="chapter-mark">
+                {icon && <QuestBoardTexture texture={icon} width={24} height={24} />}
+                <span class="chapter-number"><span class="sr-only">Chapter </span>{chapter.roman}</span>
+              </span>
+              <span>{secret ? 'Secret' : chapter.title}</span>
+            </a>
+          </li>;
+        })}
       </ol>
     </nav>
 
@@ -332,26 +341,30 @@ function boardEdges(chapter: Chapter) {
     align-items: center;
     gap: 8px;
     width: 100%;
-    min-height: 52px;
-    padding: 8px 10px;
-    background: var(--surface);
-    border: 1px solid var(--border);
+    min-height: 56px;
+    padding: 6px 10px;
+    background: #352213 var(--chapter-backboard) 0 0 / 48px 48px repeat;
+    border: 1px solid #85654a;
     border-radius: 6px;
-    color: var(--text);
+    box-shadow: inset 0 1px #ffdb9b28, inset 0 -2px #100a06a3;
+    color: #fff4e8;
     font-size: 13px;
     font-weight: 550;
+    image-rendering: pixelated;
     line-height: 1.35;
   }
 
   .chapter-jump:hover, .chapter-jump[aria-current] {
-    background: var(--surface-raised);
-    border-color: var(--gold-text);
-    color: var(--text);
+    background-color: #62442b;
+    background-blend-mode: screen;
+    border-color: #f0c075;
+    color: #fff4e8;
     text-decoration: none;
   }
 
-  .chapter-jump[aria-current] { box-shadow: inset 0 -2px var(--gold-text); }
-  .chapter-number { color: var(--gold-text); font-weight: 650; text-align: center; }
+  .chapter-jump[aria-current] { box-shadow: inset 0 -2px #f0c075; }
+  .chapter-mark { display: grid; justify-items: center; gap: 1px; }
+  .chapter-number { color: #f6d39e; font-size: 11px; font-weight: 650; line-height: 1.2; }
   .chapter-stage { min-width: 0; scroll-margin-top: calc(var(--header-height) + 14px); }
 
   .chapter-header {
@@ -550,7 +563,7 @@ function boardEdges(chapter: Chapter) {
   @media (max-width: 520px) {
     .chapter-header { padding: 9px 11px; }
     .chapter-info-body { left: 0; right: auto; }
-    .chapter-jump { min-height: 44px; padding: 6px 7px; gap: 4px; }
+    .chapter-jump { min-height: 50px; padding: 6px 7px; gap: 6px; }
     .board-toolbar { padding: 7px 8px 7px 10px; }
     .board-toolbar > p { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
     .quest-detail { padding: 14px; }
