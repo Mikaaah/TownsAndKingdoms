@@ -10,9 +10,10 @@ for (const name of await readdir(source)) {
 }
 
 const datasets = {};
-for(const key of ['weapons','recipes','mods','chapters','bosses','skills','ponder','mechanics']) {
+for(const key of ['weapons','recipes','mods','bosses','skills','ponder','mechanics']) {
  try { datasets[key] = JSON.parse(await readFile(resolve(source,key+'.json'),'utf8')); } catch { datasets[key] = ['skills','ponder','mechanics'].includes(key)?{}:[]; }
 }
+datasets.chapters=JSON.parse(await readFile(resolve(source,'chapter-questlines.json'),'utf8'));
 try { datasets.families=JSON.parse(await readFile(resolve(source,'recipe-families.json'),'utf8')); } catch {datasets.families=[];}
 try { datasets.eyes=JSON.parse(await readFile(resolve(source,'end-eyes.json'),'utf8')); } catch {datasets.eyes=[];}
 try { datasets.productionRules=JSON.parse(await readFile(resolve(source,'production-rules.json'),'utf8')); } catch {datasets.productionRules=[];}

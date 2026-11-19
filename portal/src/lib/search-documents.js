@@ -26,7 +26,11 @@ export function buildSearchDocuments(datasets, base) {
   for(const w of weapons)add('Weapons',w.id,w.name,[w.styleName,w.archetype,w.grip,w.modName].join(' '),base+'weapons/#item='+encodeURIComponent(w.id),w.modName+' · '+w.styleName,{mod:w.modName,style:w.styleName});
   for(const r of recipes)add('Recipes',r.id,r.name||r.outputName||words(r.output),[r.output,...(r.ingredients||[]).map(i=>clean(i)),...(r.gates||[]).map(clean)].join(' '),base+'recipes/#recipe='+encodeURIComponent(r.id),r.id,{mod:r.modName});
   for(const m of mods)add('Mods',m.id,m.name,[m.summary,m.category].join(' '),base+'mods/#mod='+encodeURIComponent(m.id),m.category);
-  for(const c of chapters)add('Chapters',c.id,c.title,[c.summary,c.mechanism,c.milestones],base+'chapters/#'+encodeURIComponent(c.id),'Chapter '+c.roman);
+  for(const chapter of chapters){
+    const quests=chapter.quests||[];
+    const title=chapter.number===10 && !quests.length ? 'Secret until release' : chapter.title;
+    add('Chapters',chapter.id,title,quests.map(quest=>quest.title),base+'chapters/#'+encodeURIComponent(chapter.id),'Chapter '+chapter.roman);
+  }
   for(const b of bosses)add('Bosses',b.id,b.name,[b.modName,b.classification,...(b.rewards||[]).map(r=>r.name||r.item||r.id||r)],base+'bosses/#boss='+encodeURIComponent(b.id),b.modName);
   for(const n of skills.nodes||[])add('Skills',n.id,n.title,n.description,base+'skills/#node='+encodeURIComponent(n.id),n.branch+' · '+n.cost+' point'+(n.cost===1?'':'s'));
   for(const s of ponder.scenes||[])add('Ponder',s.id,s.title,(s.anchors||[]).join(' '),base+'ponder/?scene='+encodeURIComponent(s.slug),'Ponder item guide');

@@ -2,160 +2,162 @@
 import Layout from '../layouts/Layout.astro';
 import { data, href } from '../lib/data';
 
-interface ChapterOutput {
+interface Prerequisite {
   id: string;
-  name: string;
+  title: string;
+  chapterId?: string;
+  chapterTitle?: string;
 }
+
+interface QuestObjective {
+  label: string;
+  type: string;
+  count?: number;
+}
+
+interface Quest {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description: string[];
+  dependencyRequirement?: 'one_completed';
+  prerequisites: Prerequisite[];
+  tasks: QuestObjective[];
+  rewards?: QuestObjective[];
+}
+
 interface Chapter {
   id: string;
   number: number;
   roman: string;
   title: string;
-  mechanism: string;
-  summary: string;
-  milestones: ChapterOutput[];
-}
-interface Recipe extends ChapterOutput {
-  chapter: number | null;
-  output: string;
-  outputKind: string;
-  ingredients: { id: string }[];
-}
-type Texture = string | [number, number, number];
-const chapterData: Chapter[] = data('chapters');
-const recipes: Recipe[] = data('recipes');
-const textures: Record<string, Texture> = data('recipe-textures', {});
-
-const keyOutputs: Record<number, string> = {
-  4: 'create:precision_mechanism',
-  10: 'kubejs:creation_core',
-};
-const chapterExamples = [
-  ['create:andesite_alloy'],
-  ['kubejs:tk3_rotation_machine', 'create:deployer', 'create:mechanical_press'],
-  ['kubejs:tk3_hydraulic_machine', 'create:fluid_tank', 'create:spout'],
-  ['kubejs:tk3_precision_machine', 'create:mechanical_crafter', 'create:brass_funnel'],
-  ['kubejs:calculation_machine', 'ae2:controller', 'createappliedkinetics:energy_provider'],
-  ['kubejs:tk3_engineering_machine', 'immersiveengineering:capacitor_lv', 'immersiveengineering:dynamo'],
-  ['kubejs:tk3_heavy_engineering_machine', 'createdieselgenerators:diesel_engine', 'immersiveengineering:component_electronic_adv'],
-  ['create_wizardry:mana', 'kubejs:mana_tube', 'create_wizardry:mana_siphon'],
-  ['kubejs:radiant_coil', 'kubejs:refined_shadow_alloy', 'create_riftborne:fluid_slipgate'],
-  ['kubejs:unstable_creation_core', 'kubejs:matter_construct', 'kubejs:tk3_creation_machine'],
-];
-
-const stages = chapterData.map(chapter => {
-  const chapterRecipes = recipes.filter(recipe => recipe.chapter === chapter.number);
-  const key = chapterRecipes.find(recipe => recipe.output === (keyOutputs[chapter.number] ?? chapter.mechanism));
-  const featured = (chapterExamples[chapter.number - 1] ?? []).flatMap(id => {
-    const recipe = chapterRecipes.find(row => row.output === id);
-    return recipe ? [recipe] : [];
-  });
-  const other = chapter.milestones.filter(item => item.id !== key?.output && !featured.some(recipe => recipe.output === item.id));
-  return { ...chapter, key, featured, other, shortTitle: chapter.title.split(' · ')[0] };
-});
-
-function recipeHref(chapter: number, recipe?: Recipe) {
-  return href(`recipes/?chapter=${chapter}${recipe ? '#recipe=' + encodeURIComponent(recipe.id) : '#recipe-results'}`);
+  quests: Quest[];
 }
 
-function itemArt(recipe: Recipe) {
-  const id = recipe.outputKind === 'fluid' ? 'fluid:' + recipe.output : recipe.output;
-  const art = textures[id];
-  if (typeof art === 'string') return { backgroundImage: `url("${href(art)}")` };
-  if (!art) return null;
-  const [atlas, column, row] = art;
-  return {
-    backgroundImage: `url("${href(`media/recipe-textures/items-${atlas}.webp`)}")`,
-    backgroundSize: '1600% 1600%',
-    backgroundPosition: `${column * 100 / 15}% ${row * 100 / 15}%`,
-  };
+interface ChapterInfo {
+  purpose: string;
+  machineSource?: string;
+  machines: { id: string; title: string }[];
 }
+
+const chapters: Chapter[] = data('chapter-questlines');
+const chapterInfo: Record<string, ChapterInfo> = data('chapter-machines', {});
 const spruce = href('media/textures/spruce-planks.png');
+const isSecret = (chapter: Chapter) => chapter.number === 10 && chapter.quests.length === 0;
+const objectiveLabel = (objective: QuestObjective) =>
+  (objective.count ?? 1) > 1 ? `${objective.count} × ${objective.label}` : objective.label;
 ---
-<Layout title="Progression chapters" description="The Towns & Kingdoms roadmap, from the first workshop to advanced engineering, magic and the Creation Core.">
+<Layout title="Chapter questlines" description="Follow the Towns & Kingdoms chapter questlines from the in-game quest book.">
   <p class="eyebrow">Handbook / Progression</p>
-  <h1>Progression chapters</h1>
-  <p class="intro chapter-intro">Build your workshop from the first hand-crafted mechanism to the Creation Core. Each chapter shows its key recipe and what you can make along the way.</p>
-  <p class="chapter-scope">Exploration and character development can continue alongside your workshop. Individual recipes list their required materials and machines.</p>
+  <h1>Chapter questlines</h1>
+  <p class="intro">Pick a chapter, then open a quest to see its objectives. Prerequisite links take you to the quests it depends on.</p>
 
   <nav class="chapter-roadmap" aria-label="Jump to a chapter">
     <ol class="chapter-jumps">
-      {stages.map(stage => <li>
-        <a class="chapter-jump" href={'#' + stage.id} aria-label={`Chapter ${stage.roman}, ${stage.title}`}>
-          <span class="chapter-jump-number">{stage.roman}</span>
-          <span>{stage.shortTitle}</span>
+      {chapters.map(chapter => <li>
+        <a class="chapter-jump" href={'#' + chapter.id}>
+          <span class="chapter-jump-number"><span class="sr-only">Chapter </span>{chapter.roman}</span>
+          <span>{isSecret(chapter) ? 'Secret' : chapter.title}</span>
         </a>
       </li>)}
     </ol>
   </nav>
 
   <div class="chapter-stages" style={{ '--chapter-spruce': `url("${spruce}")` }}>
-    {stages.map(stage => {
-      const keyArt = stage.key && itemArt(stage.key);
-      const earlier = stages.filter(earlierStage =>
-        earlierStage.number < stage.number && earlierStage.key &&
-        stage.key?.ingredients.some(input => input.id === earlierStage.key?.output));
+    {chapters.map(chapter => {
+      const secret = isSecret(chapter);
+      const info = secret ? undefined : chapterInfo[chapter.id];
       return (
-        <article class="chapter-stage" id={stage.id} aria-labelledby={stage.id + '-title'}>
-          <header class="chapter-stage-heading">
-            <span class="chapter-stage-number" aria-hidden="true">{stage.roman}</span>
-            <div>
-              <h2 id={stage.id + '-title'}><span class="sr-only">Chapter {stage.roman} · </span>{stage.title}</h2>
-              <p class="chapter-summary">{stage.summary}</p>
-            </div>
-          </header>
-
-          {stage.key && <div class="chapter-key">
-            {keyArt && <span class="chapter-sprite chapter-key-sprite" aria-hidden="true" style={keyArt}></span>}
-            <div>
-              <p class="chapter-key-label">Key recipe</p>
-              <h3>{stage.key.name}</h3>
-              {earlier.length === 1 && <p class="chapter-key-link">Uses the <a href={'#' + earlier[0].id}>{earlier[0].key?.name}</a> from Chapter {earlier[0].roman}.</p>}
-              {earlier.length > 1 && <p class="chapter-key-link">Uses mechanisms from Chapters {earlier.map((row, i) =>
-                <>{i > 0 && ', '}<a href={'#' + row.id} aria-label={`Chapter ${row.roman}, ${row.key?.name}`}>{row.roman}</a></>
-              )}.</p>}
-            </div>
-          </div>}
-
-          {stage.featured.length > 0 && <div class="chapter-examples">
-            <h3>Also in this chapter</h3>
-            <ul>
-              {stage.featured.map(recipe => {
-                const art = itemArt(recipe);
-                return <li><a href={recipeHref(stage.number, recipe)}>
-                  {art && <span class="chapter-sprite chapter-example-sprite" aria-hidden="true" style={art}></span>}
-                  <span>{recipe.name}</span>
-                </a></li>;
-              })}
-            </ul>
-          </div>}
-
-          <div class="chapter-actions">
-            {stage.key && <a class="button button-primary" href={recipeHref(stage.number, stage.key)} aria-label={`Open the ${stage.key.name} recipe`}>Open key recipe</a>}
-            <a class="button" href={recipeHref(stage.number)} aria-label={`Browse recipes for Chapter ${stage.roman}`}>Browse chapter recipes</a>
-          </div>
-
-          {stage.other.length > 0 && <details class="chapter-more">
-            <summary>More examples</summary>
-            <ul>{stage.other.map(item => <li><a href={href('recipes/?q=' + encodeURIComponent(item.id))}>{item.name}</a></li>)}</ul>
-          </details>}
+        <article class="chapter-stage" id={chapter.id} data-quest-chapter={chapter.id} aria-labelledby={chapter.id + '-title'}>
+          <details class="chapter-disclosure" open={chapter.number === 1 || secret}>
+            <summary class="chapter-heading">
+              <h2 id={chapter.id + '-title'}>
+                <span class="chapter-roman"><span class="sr-only">Chapter </span>{chapter.roman}</span>
+                <span>{chapter.title}</span>
+                {!secret && <span class="chapter-count">{chapter.quests.length} quests</span>}
+              </h2>
+            </summary>
+            {secret ? <div class="chapter-secret"><p>Secret until release</p></div> : <>
+              {info && <div class="chapter-info">
+                <p>{info.purpose}</p>
+                {info.machines.length > 0 && <p class="chapter-machines">
+                  <strong>{info.machineSource ? `Machines using ${info.machineSource} include` : 'Machines include'}</strong>
+                  <span>{info.machines.map(machine => machine.title).join(' · ')}</span>
+                </p>}
+              </div>}
+              {chapter.quests.length > 0 && <ol class="questline" aria-label={chapter.title + ' quests'}>
+                {chapter.quests.map(quest => {
+                  const objective = quest.tasks.find(task => task.type !== 'checkmark');
+                  const preview = objective && objectiveLabel(objective);
+                  return (
+                    <li class="quest-entry" id={'quest-' + quest.id} data-quest-id={quest.id}>
+                      <details class="quest-detail">
+                        <summary>
+                          <span>{quest.title}</span>
+                          {preview && preview !== quest.title && <span class="quest-preview">{preview}</span>}
+                        </summary>
+                        <div class="quest-body">
+                          {quest.subtitle && quest.subtitle !== chapter.title && <p class="quest-subtitle">{quest.subtitle}</p>}
+                          {quest.description.map(paragraph => <p>{paragraph}</p>)}
+                          {quest.tasks.length > 0 && <>
+                            <p class="quest-section-label">Objectives</p>
+                            <ul aria-label="Objectives">
+                              {quest.tasks.map(task => <li>{objectiveLabel(task)}</li>)}
+                            </ul>
+                          </>}
+                          {quest.rewards && quest.rewards.length > 0 && <>
+                            <p class="quest-section-label">Rewards</p>
+                            <ul aria-label="Rewards">
+                              {quest.rewards.map(reward => <li>{objectiveLabel(reward)}</li>)}
+                            </ul>
+                          </>}
+                        </div>
+                      </details>
+                      {quest.prerequisites.length > 0 && <p class="quest-prerequisites">
+                        <strong>{quest.dependencyRequirement === 'one_completed' ? 'Requires one of' : 'Requires'}</strong>
+                        {' '}
+                        {quest.prerequisites.map((prerequisite, index) => <>
+                          {index > 0 && ' · '}
+                          {prerequisite.chapterId ? <a href={'#quest-' + prerequisite.id}>{prerequisite.title}</a> :
+                            <span>{prerequisite.title}{prerequisite.chapterTitle && ` (${prerequisite.chapterTitle})`}</span>}
+                        </>)}
+                      </p>}
+                    </li>
+                  );
+                })}
+              </ol>}
+            </>}
+          </details>
         </article>
       );
     })}
   </div>
 </Layout>
 
-<style>
-  .chapter-intro { margin-bottom: 10px; }
-
-  .chapter-scope {
-    max-width: 72ch;
-    margin: 0;
-    color: var(--subtle);
-    font-size: 15px;
+<script>
+  function revealChapter(hash: string) {
+    const target = document.getElementById(hash.slice(1));
+    const panel = target?.closest('[data-quest-chapter]')?.querySelector<HTMLDetailsElement>('.chapter-disclosure');
+    if (!panel || panel.open) return;
+    panel.open = true;
+    return target;
   }
 
-  .chapter-roadmap { margin: 24px 0 34px; }
+  for (const link of document.querySelectorAll<HTMLAnchorElement>('.chapter-jump, .quest-prerequisites a')) {
+    link.addEventListener('click', () => revealChapter(link.hash));
+  }
+
+  function revealHash() {
+    const target = revealChapter(location.hash);
+    target?.scrollIntoView();
+  }
+
+  window.addEventListener('hashchange', revealHash);
+  revealHash();
+</script>
+
+<style>
+  .chapter-roadmap { margin: 24px 0 30px; }
 
   .chapter-jumps {
     display: grid;
@@ -171,11 +173,11 @@ const spruce = href('media/textures/spruce-planks.png');
 
   .chapter-jump {
     display: grid;
-    grid-template-columns: 2.1em minmax(0, 1fr);
+    grid-template-columns: 2em minmax(0, 1fr);
     align-items: center;
     gap: 8px;
     width: 100%;
-    min-height: 56px;
+    min-height: 54px;
     padding: 8px 10px;
     background: var(--surface);
     border: 1px solid var(--border);
@@ -183,97 +185,160 @@ const spruce = href('media/textures/spruce-planks.png');
     color: var(--text);
     font-size: 14px;
     font-weight: 550;
-    line-height: 1.25;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
   }
 
-  .chapter-jump:hover { background: var(--surface-raised); text-decoration: none; border-color: var(--control-border); }
+  .chapter-jump:hover {
+    background: var(--surface-raised);
+    border-color: var(--control-border);
+    text-decoration: none;
+  }
   .chapter-jump-number { color: var(--gold-text); font-weight: 650; text-align: center; }
 
-  .chapter-stages { display: grid; gap: 16px; }
+  .chapter-stages { display: grid; gap: 12px; }
 
   .chapter-stage {
-    padding: clamp(16px, 2vw, 24px);
+    min-width: 0;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--surface);
   }
 
   .chapter-stage:target { border-color: var(--gold-text); }
-  .chapter-stage-heading { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px; }
 
-  .chapter-stage-number {
-    display: grid;
-    place-items: center;
-    flex: 0 0 auto;
-    width: 48px;
-    height: 48px;
-    background: var(--gold-surface);
-    border: 1px solid var(--gold-border);
-    border-radius: 6px;
-    color: var(--gold-text);
-    font-size: 17px;
-    font-weight: 650;
-  }
-
-  .chapter-stage h2 { font-size: clamp(22px, 2.2vw, 30px); text-wrap: initial; margin: 0 0 5px; }
-  .chapter-summary { color: var(--muted); margin: 0; }
-
-  .chapter-key {
+  .chapter-heading {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    background-color: #271d17;
-    background-image: linear-gradient(#211813c9, #211813db), var(--chapter-spruce);
-    background-size: auto, 52px;
-    border: 1px solid #665245;
-    border-radius: 6px;
+    min-height: 62px;
+    padding: 10px 50px 10px 16px;
+    border-radius: calc(var(--radius) - 1px);
+    background: linear-gradient(#211813c9, #211813df), var(--chapter-spruce) 0 0 / 48px 48px repeat;
     color: #fff4e8;
+    list-style: none;
   }
 
-  .chapter-key h3 { font-size: 18px; margin: 0; }
-  .chapter-key-label { margin: 0 0 1px; color: #efc286; font-size: 13px; font-weight: 600; }
-  .chapter-key-link { margin: 4px 0 0; color: #eadacd; font-size: 14px; }
-  .chapter-key-link a { color: #ffdcaa; text-decoration: underline; text-underline-offset: 3px; }
-  .chapter-key-link a:focus-visible { outline-color: #ffdcaa; }
+  .chapter-disclosure[open] > .chapter-heading {
+    margin: 0;
+    border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  }
+  .chapter-heading::-webkit-details-marker,
+  .quest-detail > summary::-webkit-details-marker { display: none; }
 
-  .chapter-sprite {
-    display: block;
-    flex: 0 0 auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    image-rendering: pixelated;
+  .chapter-heading::after, .quest-detail > summary::after {
+    position: absolute;
+    inset-inline-end: 22px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    content: '';
   }
 
-  .chapter-key-sprite { width: 48px; height: 48px; }
-  .chapter-example-sprite { width: 24px; height: 24px; }
-  .chapter-examples { margin-top: 16px; }
-  .chapter-examples h3 { font-size: 15px; margin: 0 0 4px; }
-  .chapter-examples ul, .chapter-more ul { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0; list-style: none; }
-  .chapter-examples li, .chapter-more li { margin: 0; }
-  .chapter-examples a { display: inline-flex; align-items: center; gap: 6px; min-height: 34px; font-size: 14px; }
-  .chapter-more a { display: inline-block; padding: 4px 0; min-height: 34px; font-size: 14px; }
+  .chapter-disclosure[open] > .chapter-heading::after,
+  .quest-detail[open] > summary::after { transform: translateY(2px) rotate(225deg); }
 
-  .chapter-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 11.75rem)); gap: 8px; margin-top: 14px; }
-  .chapter-actions .button { padding-inline: 8px; text-align: center; }
-  .chapter-more { margin-top: 14px; border-top: 1px solid var(--border); }
-  .chapter-more summary { min-height: 44px; padding-top: 10px; color: var(--muted); font-size: 14px; }
-  .chapter-more[open] summary { margin-bottom: 4px; }
-  .chapter-more ul { padding-bottom: 2px; }
+  .chapter-heading h2 {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    margin: 0;
+    font-size: clamp(17px, 2.25vw, 22px);
+    line-height: 1.25;
+    text-wrap: initial;
+  }
 
-  @media (min-width: 801px) and (max-width: 1180px), (max-width: 690px) {
+  .chapter-roman { min-width: 2em; color: #ffda9e; font-size: .82em; text-align: center; }
+  .chapter-count { margin-inline-start: auto; color: #eadacd; font-size: 13px; font-weight: 500; }
+
+  .chapter-info {
+    display: grid;
+    gap: 6px;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .chapter-info p { margin: 0; }
+  .chapter-machines { color: var(--subtle); font-size: 14px; overflow-wrap: anywhere; }
+  .chapter-machines strong { margin-inline-end: 8px; color: var(--text); font-weight: 600; }
+
+  .questline { margin: 0; padding: 0 0 5px; list-style: none; }
+  .quest-entry { margin: 0; padding: 0 18px; }
+  .quest-entry + .quest-entry { border-top: 1px solid var(--border-soft); }
+  .quest-entry:target { background: var(--accent-dark); }
+  .quest-detail > summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    min-height: 44px;
+    padding: 7px 28px 7px 0;
+    list-style: none;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .quest-detail > summary:hover { color: var(--accent); }
+  .quest-detail[open] > summary { margin: 0; }
+  .quest-detail > summary::after { inset-inline-end: 4px; width: 6px; height: 6px; color: var(--subtle); }
+  .quest-preview { color: var(--subtle); font-size: 13px; font-weight: 450; }
+  .quest-body { margin: 0 0 12px; color: var(--muted); }
+  .quest-body p, .quest-body ul { margin: 0 0 6px; }
+  .quest-body p { white-space: pre-line; }
+  .quest-body li + li { margin-top: 2px; }
+  .quest-subtitle { color: var(--subtle); font-size: 14px; }
+  .quest-section-label { color: var(--text); font-size: 14px; font-weight: 600; }
+  .quest-prerequisites { margin: -3px 23px 9px 0; color: var(--subtle); font-size: 13px; }
+  .quest-prerequisites strong { color: var(--muted); font-weight: 560; }
+
+  .chapter-secret {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    min-height: 130px;
+    place-items: center;
+    overflow: hidden;
+    background: #261b1c;
+    border-radius: 0 0 calc(var(--radius) - 1px) calc(var(--radius) - 1px);
+  }
+
+  .chapter-secret::before, .chapter-secret::after {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width: 125%;
+    height: 23px;
+    background: repeating-linear-gradient(135deg, #aa2332 0 17px, #f3e5e4 17px 34px);
+    border-block: 1px solid #693135;
+    transform: translate(-50%, -50%) rotate(10deg);
+    content: '';
+  }
+  .chapter-secret::after { transform: translate(-50%, -50%) rotate(-10deg); }
+  .chapter-secret p {
+    z-index: 1;
+    margin: 12px;
+    padding: 8px 14px;
+    background: #261b1c;
+    border: 1px solid #bd6873;
+    border-radius: 5px;
+    color: #fff2f2;
+    font-size: 16px;
+    font-weight: 650;
+    text-align: center;
+  }
+
+  @media (min-width: 801px) and (max-width: 1210px), (max-width: 730px) {
     .chapter-jumps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
-  @media (max-width: 460px) {
-    .chapter-jump { min-height: 48px; padding: 7px 8px; }
-    .chapter-stage-heading { gap: 10px; }
-    .chapter-stage-number { width: 36px; height: 36px; font-size: 15px; }
-    .chapter-key { gap: 10px; padding: 12px; }
-    .chapter-key-sprite { width: 36px; height: 36px; }
-    .chapter-examples ul { gap: 0 14px; }
-    .chapter-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .chapter-actions .button { min-height: 48px; }
+  @media (max-width: 440px) {
+    .chapter-jump { min-height: 48px; padding: 7px 8px; gap: 5px; }
+    .chapter-heading { min-height: 54px; padding-inline: 10px 34px; }
+    .chapter-heading::after { inset-inline-end: 15px; }
+    .chapter-count { margin-inline-start: 0; }
+    .chapter-info, .quest-entry { padding-inline: 12px; }
   }
 </style>

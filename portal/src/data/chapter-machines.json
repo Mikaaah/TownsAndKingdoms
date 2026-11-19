@@ -1,0 +1,379 @@
+{
+  "chapter-01": {
+    "purpose": "Gather the materials for Makeshift Mechanisms and craft your first Andesite Machine by hand.",
+    "machineSource": "Makeshift Mechanism",
+    "machines": [
+      {
+        "id": "kubejs:tk3_rotation_machine",
+        "title": "Andesite Machine",
+        "sourceId": "kubejs:makeshift_kinetic_mechanism"
+      }
+    ]
+  },
+  "chapter-02": {
+    "purpose": "Put rotational power to work milling stone, pressing plates and automating Rotation Mechanism production.",
+    "machineSource": "Rotation Mechanism / Andesite Machine",
+    "machines": [
+      {
+        "id": "create:windmill_bearing",
+        "title": "Windmill Bearing",
+        "sourceId": "kubejs:rotation_mechanism",
+        "recipeId": "tnk:machines/tier_01/crafting/create/windmill_bearing"
+      },
+      {
+        "id": "create:deployer",
+        "title": "Deployer",
+        "sourceId": "kubejs:tk3_rotation_machine",
+        "recipeId": "tnk:machines/tier_01/crafting/create/deployer"
+      },
+      {
+        "id": "create:mechanical_press",
+        "title": "Mechanical Press",
+        "sourceId": "kubejs:tk3_rotation_machine",
+        "recipeId": "tnk:machines/tier_01/crafting/create/mechanical_press"
+      },
+      {
+        "id": "create:mechanical_mixer",
+        "title": "Mechanical Mixer",
+        "sourceId": "kubejs:tk3_rotation_machine",
+        "recipeId": "tnk:machines/tier_01/crafting/create/mechanical_mixer"
+      },
+      {
+        "id": "create:millstone",
+        "title": "Millstone",
+        "sourceId": "kubejs:tk3_rotation_machine",
+        "recipeId": "tnk:machines/tier_01/stonecutting/create/millstone"
+      },
+      {
+        "id": "create:encased_fan",
+        "title": "Encased Fan",
+        "sourceId": "kubejs:tk3_rotation_machine",
+        "recipeId": "tnk:machines/tier_01/crafting/create/encased_fan"
+      },
+      {
+        "id": "create:mechanical_drill",
+        "title": "Mechanical Drill",
+        "sourceId": "kubejs:tk3_rotation_machine",
+        "recipeId": "tnk:machines/tier_01/crafting/create/mechanical_drill"
+      }
+    ]
+  },
+  "chapter-03": {
+    "purpose": "Process rubber and copper to make Sealed Mechanisms and a Copper Machine for storing, filling and moving fluids.",
+    "machineSource": "Sealed Mechanism / Copper Machine",
+    "machines": [
+      {
+        "id": "create:fluid_tank",
+        "title": "Fluid Tank",
+        "sourceId": "kubejs:sealed_mechanism",
+        "recipeId": "tnk:machines/tier_02/crafting/create/fluid_tank"
+      },
+      {
+        "id": "create:spout",
+        "title": "Spout",
+        "sourceId": "kubejs:tk3_hydraulic_machine",
+        "recipeId": "tnk:machines/tier_02/crafting/create/spout"
+      },
+      {
+        "id": "create:item_drain",
+        "title": "Item Drain",
+        "sourceId": "kubejs:tk3_hydraulic_machine",
+        "recipeId": "tnk:machines/tier_02/stonecutting/create/item_drain"
+      },
+      {
+        "id": "create:hose_pulley",
+        "title": "Hose Pulley",
+        "sourceId": "kubejs:tk3_hydraulic_machine",
+        "recipeId": "tnk:machines/tier_02/crafting/create/hose_pulley"
+      },
+      {
+        "id": "create:portable_fluid_interface",
+        "title": "Portable Fluid Interface",
+        "sourceId": "kubejs:tk3_hydraulic_machine",
+        "recipeId": "tnk:machines/tier_02/stonecutting/create/portable_fluid_interface"
+      },
+      {
+        "id": "createdieselgenerators:distillation_controller",
+        "title": "Distillation Controller",
+        "sourceId": "kubejs:tk3_hydraulic_machine",
+        "recipeId": "tnk:machines/tier_02/native_upgrade/createdieselgenerators/distillation_controller/0"
+      }
+    ]
+  },
+  "chapter-04": {
+    "purpose": "Build Brass machinery for filtered item routing, automated crafting and the packaging setup used by Create shops.",
+    "machineSource": "Precision Mechanism / Brass Machine",
+    "machines": [
+      {
+        "id": "create:brass_funnel",
+        "title": "Brass Funnel",
+        "sourceId": "create:precision_mechanism",
+        "recipeId": "tnk:machines/tier_03/crafting/create/brass_funnel"
+      },
+      {
+        "id": "create:brass_tunnel",
+        "title": "Brass Tunnel",
+        "sourceId": "create:precision_mechanism",
+        "recipeId": "tnk:machines/tier_03/crafting/create/brass_tunnel"
+      },
+      {
+        "id": "create:mechanical_crafter",
+        "title": "Mechanical Crafter",
+        "sourceId": "kubejs:tk3_precision_machine",
+        "recipeId": "tnk:machines/tier_03/crafting/create/mechanical_crafter"
+      },
+      {
+        "id": "create:mechanical_arm",
+        "title": "Mechanical Arm",
+        "sourceId": "kubejs:tk3_precision_machine",
+        "recipeId": "tnk:machines/tier_03/crafting/create/mechanical_arm"
+      },
+      {
+        "id": "create:rotation_speed_controller",
+        "title": "Rotation Speed Controller",
+        "sourceId": "kubejs:tk3_precision_machine",
+        "recipeId": "tnk:machines/tier_03/crafting/create/rotation_speed_controller"
+      },
+      {
+        "id": "create:packager",
+        "title": "Packager",
+        "sourceId": "kubejs:tk3_precision_machine",
+        "recipeId": "tnk:machines/tier_03/crafting/create/packager"
+      },
+      {
+        "id": "create:stock_ticker",
+        "title": "Stock Ticker",
+        "sourceId": "create:precision_mechanism",
+        "recipeId": "tnk:machines/tier_03/native_upgrade/create/stock_ticker/0"
+      }
+    ]
+  },
+  "chapter-05": {
+    "purpose": "Build your first Applied Energistics 2 network for searchable digital storage and automated crafting.",
+    "machineSource": "Calculation Mechanism / Calculation Machine",
+    "machines": [
+      {
+        "id": "ae2:controller",
+        "title": "ME Controller",
+        "sourceId": "kubejs:calculation_machine",
+        "recipeId": "tnk:chapter_05/stonecutting/controller"
+      },
+      {
+        "id": "ae2:drive",
+        "title": "ME Drive",
+        "sourceId": "kubejs:calculation_machine",
+        "recipeId": "tnk:machines/tier_04/native_upgrade/ae2/drive/0"
+      },
+      {
+        "id": "ae2:interface",
+        "title": "ME Interface",
+        "sourceId": "kubejs:calculation_machine",
+        "recipeId": "tnk:machines/tier_04/native_upgrade/ae2/interface/0"
+      },
+      {
+        "id": "ae2:pattern_provider",
+        "title": "ME Pattern Provider",
+        "sourceId": "kubejs:calculation_machine",
+        "recipeId": "tnk:machines/tier_04/native_upgrade/ae2/pattern_provider/0"
+      },
+      {
+        "id": "ae2:crafting_unit",
+        "title": "Crafting Unit",
+        "sourceId": "kubejs:calculation_machine",
+        "recipeId": "tnk:machines/tier_04/native_upgrade/ae2/crafting_unit/0"
+      },
+      {
+        "id": "ae2:crafting_terminal",
+        "title": "ME Crafting Terminal",
+        "sourceId": "kubejs:calculation_mechanism",
+        "recipeId": "tnk:machines/tier_04/native_upgrade/ae2/crafting_terminal/0"
+      }
+    ]
+  },
+  "chapter-06": {
+    "purpose": "Add electrical generation and storage to your workshop, convert electricity to rotation, and set up steam engines and trains.",
+    "machineSource": "Reinforced Mechanism / Light Engineering Machine",
+    "machines": [
+      {
+        "id": "create:steam_engine",
+        "title": "Steam Engine",
+        "sourceId": "kubejs:tk3_engineering_machine",
+        "recipeId": "tnk:machines/tier_05/native_upgrade/create/steam_engine/0"
+      },
+      {
+        "id": "createaddition:alternator",
+        "title": "Alternator",
+        "sourceId": "kubejs:tk3_engineering_machine",
+        "recipeId": "tnk:machines/tier_05/crafting/createaddition/alternator"
+      },
+      {
+        "id": "createaddition:electric_motor",
+        "title": "Electric Motor",
+        "sourceId": "kubejs:tk3_engineering_machine",
+        "recipeId": "tnk:machines/tier_05/crafting/createaddition/electric_motor"
+      },
+      {
+        "id": "immersiveengineering:dynamo",
+        "title": "Kinetic Dynamo",
+        "sourceId": "kubejs:tk3_engineering_machine",
+        "recipeId": "tnk:machines/tier_05/native_upgrade/immersiveengineering/dynamo/0"
+      },
+      {
+        "id": "immersiveengineering:thermoelectric_generator",
+        "title": "Thermoelectric Generator",
+        "sourceId": "kubejs:tk3_engineering_machine",
+        "recipeId": "tnk:machines/tier_05/native_upgrade/immersiveengineering/thermoelectric_generator/0"
+      },
+      {
+        "id": "createaddition:modular_accumulator",
+        "title": "Modular Accumulator",
+        "sourceId": "kubejs:reinforced_mechanism",
+        "recipeId": "tnk:machines/tier_05/native_upgrade/createaddition/modular_accumulator/0"
+      },
+      {
+        "id": "create:track_station",
+        "title": "Train Station",
+        "sourceId": "kubejs:reinforced_mechanism",
+        "recipeId": "tnk:machines/tier_05/native_upgrade/create/track_station/0"
+      }
+    ]
+  },
+  "chapter-07": {
+    "purpose": "Expand the factory with oil extraction, diesel power, faster steel production and higher-voltage power distribution.",
+    "machineSource": "Industrial Mechanism / Heavy Engineering Machine",
+    "machines": [
+      {
+        "id": "createdieselgenerators:diesel_engine",
+        "title": "Diesel Engine",
+        "sourceId": "kubejs:tk3_heavy_engineering_machine",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/diesel_engine/0"
+      },
+      {
+        "id": "createdieselgenerators:large_diesel_engine",
+        "title": "Modular Diesel Engine",
+        "sourceId": "kubejs:industrial_mechanism",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/large_diesel_engine/0"
+      },
+      {
+        "id": "createdieselgenerators:pumpjack_bearing",
+        "title": "Pumpjack Bearing",
+        "sourceId": "kubejs:tk3_heavy_engineering_machine",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/pumpjack_bearing/0"
+      },
+      {
+        "id": "createdieselgenerators:pumpjack_head",
+        "title": "Pumpjack Head",
+        "sourceId": "kubejs:industrial_mechanism",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/createdieselgenerators/pumpjack_head/0"
+      },
+      {
+        "id": "immersiveengineering:blastfurnace_preheater",
+        "title": "Blast Furnace Preheater",
+        "sourceId": "kubejs:tk3_heavy_engineering_machine",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/immersiveengineering/blastfurnace_preheater/0"
+      },
+      {
+        "id": "immersiveengineering:transformer_hv",
+        "title": "HV Transformer",
+        "sourceId": "kubejs:industrial_mechanism",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/immersiveengineering/transformer_hv/0"
+      },
+      {
+        "id": "immersiveengineering:capacitor_hv",
+        "title": "HV Accumulator",
+        "sourceId": "kubejs:industrial_mechanism",
+        "recipeId": "tnk:machines/tier_06/native_upgrade/immersiveengineering/capacitor_hv/0"
+      }
+    ]
+  },
+  "chapter-08": {
+    "purpose": "Bring magical manufacturing into the workshop with Mana transport, extraction, casting and ritual automation.",
+    "machineSource": "Arcane Mechanism",
+    "machines": [
+      {
+        "id": "create_wizardry:arcane_pump",
+        "title": "Arcane Pump",
+        "sourceId": "kubejs:arcane_mechanism",
+        "recipeId": "tnk:machines/tier_07/crafting/create_wizardry/arcane_pump"
+      },
+      {
+        "id": "create_wizardry:mana_siphon",
+        "title": "Mana Siphon",
+        "sourceId": "kubejs:arcane_mechanism",
+        "recipeId": "tnk:machines/tier_07/native_upgrade/create_wizardry/mana_siphon/0"
+      },
+      {
+        "id": "create_wizardry:blaze_caster",
+        "title": "Blaze Caster",
+        "sourceId": "kubejs:arcane_mechanism",
+        "recipeId": "tnk:machines/tier_07/native_upgrade/create_wizardry/blaze_caster/0"
+      },
+      {
+        "id": "create_wizardry:channeler",
+        "title": "Channeler",
+        "sourceId": "kubejs:arcane_mechanism",
+        "recipeId": "tnk:machines/tier_07/native_upgrade/create_wizardry/channeler/0"
+      },
+      {
+        "id": "create_wizardry:smart_arcane_pipe",
+        "title": "Smart Arcane Pipe",
+        "sourceId": "kubejs:arcane_mechanism",
+        "recipeId": "tnk:machines/tier_07/native_upgrade/create_wizardry/smart_arcane_pipe/0"
+      },
+      {
+        "id": "ars_nouveau:brazier_relay",
+        "title": "Ritual Brazier Relay",
+        "sourceId": "kubejs:arcane_mechanism",
+        "recipeId": "tnk:machines/tier_07/native_upgrade/ars_nouveau/brazier_relay/0"
+      }
+    ]
+  },
+  "chapter-09": {
+    "purpose": "Combine radiant and shadow materials into Eclipse Mechanisms for Riftborne logistics, reactor hardware and equipment upgrades.",
+    "machineSource": "Eclipse Mechanism",
+    "machines": [
+      {
+        "id": "create_riftborne:item_slipgate",
+        "title": "Item Slipgate",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:compat/create_riftborne/item_slipgate"
+      },
+      {
+        "id": "create_riftborne:fluid_slipgate",
+        "title": "Fluid Slipgate",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:compat/create_riftborne/fluid_slipgate"
+      },
+      {
+        "id": "create_riftborne:rift_anchor",
+        "title": "Rift Anchor",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:compat/create_riftborne/rift_anchor"
+      },
+      {
+        "id": "create_riftborne:rift_engine_console",
+        "title": "Rift Engine Console",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:compat/create_riftborne/rift_engine_console"
+      },
+      {
+        "id": "create_riftborne:anomaly_manipulator",
+        "title": "Anomaly Manipulator",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:compat/create_riftborne/anomaly_manipulator"
+      },
+      {
+        "id": "createnuclear:reactor_core",
+        "title": "Reactor Core",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:machines/tier_08/native_upgrade/createnuclear/reactor_core/0"
+      },
+      {
+        "id": "create_enchantment_industry:affix_augmentor",
+        "title": "Affix Augmentor",
+        "sourceId": "kubejs:eclipse_mechanism",
+        "recipeId": "tnk:machines/tier_08/native_upgrade/create_enchantment_industry/affix_augmentor/0"
+      }
+    ]
+  }
+}

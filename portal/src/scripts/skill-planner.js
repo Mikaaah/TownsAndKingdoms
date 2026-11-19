@@ -1,4 +1,5 @@
 import skills from '../data/skills.json';
+import professionLabels from '../lib/skill-profession-labels.json';
 import {createSkillModel,spentPoints,allocationState,validateSelection,refundSelection,planSkillRoute,summarizeSelection,encodeBuild,decodeBuild,pointsForLevel,levelForPoints,PASSIVE_CAPS} from './skill-planner-core.mjs';
 
 const NS='http://www.w3.org/2000/svg';
@@ -56,7 +57,18 @@ function mountPlanner(root){
     const frame=svgElement('image',{class:'sp-node-frame',href:base+skills.frameStyles[node.frame].locked,x:-border,y:-border,width:border*2,height:border*2,'aria-hidden':'true'});
     const icon=svgElement('image',{class:'sp-node-icon',href:base+node.icon,x:-radius*.78,y:-radius*.78,width:radius*1.56,height:radius*1.56,'aria-hidden':'true'});
     group.append(title,svgElement('circle',{r:radius*1.42}),frame,icon,svgElement('circle',{r:radius*1.42+4,class:'sp-route-ring','aria-hidden':'true'}));
-    if(node.root){const label=svgElement('text',{x:0,y:-radius-12,'text-anchor':'middle',fill:'currentColor','font-size':13,'font-weight':600,'aria-hidden':'true'});label.textContent=branchName(node.branch);group.append(label);}
+    if(node.root){
+      const labelWidth=professionLabels.widths[node.branch],labelHeight=professionLabels.height;
+      if(labelWidth){
+        group.append(svgElement('image',{
+          class:'sp-profession-label',href:base+professionLabels.path+node.branch+'.png',
+          x:-labelWidth/2,y:-radius-12-labelHeight,width:labelWidth,height:labelHeight,'aria-hidden':'true',
+        }));
+      }else{
+        const label=svgElement('text',{x:0,y:-radius-12,'text-anchor':'middle',fill:'currentColor','font-size':13,'font-weight':600,'aria-hidden':'true'});
+        label.textContent=branchName(node.branch);group.append(label);
+      }
+    }
     group.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')showTooltip(node,event);});
     group.addEventListener('pointermove',event=>{if(!gesture&&event.pointerType!=='touch')showTooltip(node,event);});
     group.addEventListener('pointerleave',()=>tooltip.hidden=true);

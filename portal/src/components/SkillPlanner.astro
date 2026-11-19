@@ -1,5 +1,6 @@
 ---
 import skills from '../data/skills.json';
+import professionLabels from '../lib/skill-profession-labels.json';
 const {background, connectionColors}=skills.category;
 const base=import.meta.env.BASE_URL;
 const mapTheme={
@@ -29,7 +30,13 @@ const mapTheme={
       </div>
       <nav class="sp-branches" aria-label="Skill disciplines">{skills.branches.map(branch=>{
         const root=skills.nodes.find(node=>node.root&&node.branch===branch.id);
-        return <button type="button" data-skill-branch={branch.id}>{root&&<img src={base+root.icon} width="20" height="20" alt="" />}{branch.title}</button>;
+        const labelWidth=professionLabels.widths[branch.id as keyof typeof professionLabels.widths];
+        return <button type="button" data-skill-branch={branch.id}>
+          {root&&<img src={base+root.icon} width="20" height="20" alt="" />}
+          {labelWidth
+            ? <img class="sp-profession-label" src={base+professionLabels.path+branch.id+'.png'} width={labelWidth} height={professionLabels.height} alt={branch.title} />
+            : branch.title}
+        </button>;
       })}</nav>
       <div class="sp-canvas" data-skill-canvas data-background-position={background.position}>
         <svg data-skill-map tabindex="0" role="group" aria-label="Skill tree. Drag to pan and scroll or pinch to zoom." aria-describedby="skill-map-help"><g data-skill-camera></g></svg>
@@ -57,6 +64,7 @@ const mapTheme={
   </div>
   <p class="sp-status" data-skill-status role="status" aria-live="polite">{skills.nodes.length} skills · {skills.category.pointCap}-point limit</p>
 </section>
+<p class="sp-lettering-credit subtle">Profession lettering by CraftronGaming.</p>
 <script>
   import {initSkillPlanners} from '../scripts/skill-planner.js';
   initSkillPlanners();
@@ -102,6 +110,8 @@ const mapTheme={
   .sp-branches{display:flex;gap:.3rem;flex-wrap:wrap;padding:0 1rem .85rem;border-bottom:1px solid var(--sp-border)}
   .sp-branches button{display:inline-flex;align-items:center;gap:.35rem;font-size:.8125rem;padding:.5rem .65rem;background:transparent}
   .sp-branches img{image-rendering:pixelated}
+  .sp-branches .sp-profession-label{flex:none;width:auto;height:.875rem}
+  :root[data-theme='light'] .sp-branches .sp-profession-label{filter:invert(1)}
   .sp-canvas{height:600px;min-height:560px;position:relative;overflow:hidden;background:#211e2d var(--sp-map-image) center center/cover;color:#f2e3f4;--sp-map-highlight:#fff2bc}
   .sp-canvas[data-background-position="tile"]{background-size:var(--sp-map-tile)}
   .sp-canvas svg{display:block;width:100%;height:100%;touch-action:none;cursor:grab;user-select:none;outline-offset:-4px}
@@ -160,6 +170,7 @@ const mapTheme={
   .sp-passive-title{font-size:.875rem!important;margin:1rem 0 .35rem!important}
   .sp-passive-note{font-size:.8125rem;line-height:1.6;color:var(--sp-muted);margin:.6rem 0 0}
   .sp-status{margin:0;padding:.75rem 1.1rem;font-size:.8125rem;color:var(--sp-muted);border-top:1px solid var(--sp-border);min-height:1.2em}
+  .sp-lettering-credit{font-size:.75rem;margin:.45rem 0 0}
   .skill-planner [hidden]{display:none!important}
   @media(max-width:1000px){.sp-layout{grid-template-columns:minmax(0,1fr) 250px}.sp-sidebar .sp-detail,.sp-sidebar .sp-summary,.sp-sidebar .sp-route{padding:.9rem}.sp-search{display:block}.sp-search label{display:block;margin-bottom:.4rem}}
   @media(max-width:760px){.sp-layout{display:block}.sp-sidebar{border-left:0;border-top:1px solid var(--sp-border);display:grid;grid-template-columns:1fr 1fr}.sp-detail{border-bottom:0;border-right:1px solid var(--sp-border)}.sp-summary{max-height:380px}.sp-route{grid-column:1/-1;border-top:1px solid var(--sp-border);grid-row:2}.sp-canvas{height:500px;min-height:480px}.sp-toolbar{gap:.7rem;padding:.8rem}.sp-actions{width:100%;margin-left:0}.sp-actions button{flex:1}.sp-search{display:flex}.sp-search label{margin:0}.sp-map-footer{font-size:.75rem}.sp-legend{gap:.4rem}}

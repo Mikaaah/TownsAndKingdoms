@@ -149,13 +149,37 @@ test('global search indexes every requested category and opens through Ctrl+K',a
  window.document.querySelector('#close-search').click();assert.equal(window.document.querySelector('#global-search').open,false);
  dom.window.close();
 });
+test('Chapters shows each authored quest and keeps the final chapter secret',()=>{
+ const dom=browser('chapters');
+ const doc=dom.window.document;
+ const questlines=json('chapter-questlines');
+ const machineInfo=json('chapter-machines');
+ const chapters=[...doc.querySelectorAll('[data-quest-chapter]')];
+ assert.equal(chapters.length,10);
+ assert.deepEqual(chapters.map(chapter=>chapter.id),questlines.map(chapter=>chapter.id));
+ for(const chapter of questlines){
+  const stage=doc.getElementById(chapter.id);
+  const rendered=[...stage.querySelectorAll('[data-quest-id]')].map(quest=>quest.dataset.questId);
+  assert.deepEqual(rendered.sort(),chapter.quests.map(quest=>quest.id).sort(),chapter.id);
+  if(chapter.quests.length){
+   const info=stage.querySelector('.chapter-info');
+   assert.ok(info?.textContent.includes(machineInfo[chapter.id].purpose));
+   for(const machine of machineInfo[chapter.id].machines)assert.ok(info.textContent.includes(machine.title),machine.title);
+  }
+ }
+ const final=doc.getElementById('chapter-10');
+ assert.match(final.textContent,/Secret until release/i);
+ assert.equal(final.querySelector('[data-quest-id]'),null);
+ assert.equal(final.querySelector('.chapter-info'),null);
+ const search=json('search');
+ assert.equal(search.find(entry=>entry._key==='Chapters:chapter-10')?.name,'Secret until release');
+ assert.equal(search.find(entry=>entry._key==='Chapters:chapter-01')?.name,questlines[0].title);
+ dom.window.close();
+});
 test('character and loot navigate independently and expose their complete reference',()=>{
- const character=browser('mechanics'),loot=browser('loot'),chapters=browser('chapters');
+ const character=browser('mechanics'),loot=browser('loot');
  const characterDoc=character.window.document,lootDoc=loot.window.document;
  assert.equal(characterDoc.querySelectorAll('.origin-grid article').length,35);
- const chapterIds=[...chapters.window.document.querySelectorAll('.chapter-stage')].map(stage=>stage.id);
- assert.deepEqual(chapterIds,json('chapters').map(chapter=>chapter.id));
- assert.equal(chapters.window.document.querySelectorAll('.chapter-key-sprite').length,10);
  for(const id of ['leveling','origins','titles'])assert(characterDoc.getElementById(id));
  assert(characterDoc.querySelector('main a[href="/TownsAndKingdoms/loot/"]'));
  assert.equal(characterDoc.querySelector('[data-loot-calculator]'),null);
@@ -168,7 +192,7 @@ test('character and loot navigate independently and expose their complete refere
   assert(!doc.body.textContent.includes('[object Object]'));
  }
  assert.equal(json('search').find(entry=>entry._key==='Mechanics:loot')?.url,'/TownsAndKingdoms/loot/');
- character.window.close();loot.window.close();chapters.window.close();
+ character.window.close();loot.window.close();
 });
 test('clearing search discards a result that arrives after the input was emptied',()=>{
  const dom=browser('index');const {window}=dom;let instance;
