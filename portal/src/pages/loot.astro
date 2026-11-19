@@ -61,7 +61,8 @@ const steps = [
       <h2 id="appraisal-workshop-title">Automate appraisal</h2>
       <p>Feed sealed items into the top or an ordinary side of the <strong>Mechanical Identifier</strong>. Pump a supported XP fluid into its right-hand port and collect the identified equipment from underneath.</p>
       <figure>
-        <img src={href('media/loot/mechanical-identifier.webp')} width="850" height="338" loading="lazy" decoding="async" alt="The Mechanical Identifier takes a sealed item from above and pumped Liquid XP through its side port. Identified equipment leaves underneath." />
+        <img src={href('media/loot/mechanical-identifier.webp?style=minecrafter')} width="850" height="338" loading="lazy" decoding="async" alt="The Mechanical Identifier takes a sealed item from above and pumped Liquid XP through its side port. Identified equipment leaves underneath." />
+        <figcaption class="subtle">Tutorial lettering by <a href="https://www.dafont.com/minecrafter.font">MadPixel</a>.</figcaption>
       </figure>
     </section>
     <div class="mechanics-reference">
@@ -111,6 +112,7 @@ const steps = [
   .appraisal-workshop p { max-width: 74ch; color: var(--muted); }
   .appraisal-workshop figure { margin: 14px 0 0; }
   .appraisal-workshop img { display: block; max-width: 100%; height: auto; }
+  .appraisal-workshop figcaption { margin-top: 6px; font-size: .875rem; }
   .loot-options {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

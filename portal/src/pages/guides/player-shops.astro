@@ -12,6 +12,7 @@ const kit = [
   { name: 'Table Cloth', use: 'Displays an offer. One wool block in your chosen color and one Andesite Alloy make two cloths.' },
 ];
 const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(id));
+const spruceTexture = href('media/textures/spruce-planks.png');
 const tutorialVideo = 'baWJ_Xg-4gU';
 const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
 ---
@@ -20,13 +21,13 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
   <h1>Build a player shop</h1>
   <p class="intro">Sell items from a Create counter and use Workshop's Trading Hub to let other players find and visit it.</p>
 
-  <nav class="toc-inline" aria-label="Shop guide sections">
-    <a href="#supplies">What you need</a>
-    <a href="#create-shop">Build the shop</a>
-    <a href="#shop-teleporter">List your shop</a>
-    <a href="#checkout">Buy from a shop</a>
-    <a href="#troubleshooting">Troubleshooting</a>
-    <a href="#video">Video walkthrough</a>
+  <nav class="shop-nav" style={`--shop-spruce: url("${spruceTexture}")`} aria-label="Shop guide sections">
+    <a class="button" href="#supplies">What you need</a>
+    <a class="button" href="#create-shop">Build the shop</a>
+    <a class="button" href="#shop-teleporter">List your shop</a>
+    <a class="button" href="#checkout">Buy from a shop</a>
+    <a class="button" href="#troubleshooting">Troubleshooting</a>
+    <a class="button" href="#video">Video walkthrough</a>
   </nav>
 
   <section id="supplies" class="shop-section" aria-labelledby="supplies-title">
@@ -49,7 +50,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
       <h2 id="create-shop-title">Build the Create shop</h2>
     </div>
     <figure class="shop-figure">
-      <img src={href('media/player-shops/stock-setup.webp?style=spruce')} width="850" height="336" loading="lazy" decoding="async" alt="The Stock Link sits above the Packager next to the stock barrel and shares a network with the Stock Ticker. Finished parcels go to pickup." />
+      <img src={href('media/player-shops/stock-setup.webp?style=minecrafter')} width="850" height="336" loading="lazy" decoding="async" alt="The Stock Link sits above the Packager next to the stock barrel and shares a network with the Stock Ticker. Finished parcels go to pickup." />
     </figure>
     <ol class="shop-steps">
       <li><strong>Connect the stock.</strong> Attach a Packager to the side of your stock chest with its output facing out. Put a Stock Link on top of the Packager and fill the chest with the items you want to sell.</li>
@@ -58,7 +59,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
       <li>
         <strong>Set the price.</strong> Right-click the slot on the side of the cloth with the item you want as payment. Hold right-click on that slot to set the amount per purchase. For example, configure a bundle of 16 oak logs and set the price to 2 emeralds.
         <figure class="shop-figure">
-          <img src={href('media/player-shops/offer-and-price.webp?style=spruce')} width="780" height="226" loading="lazy" decoding="async" alt="An example Table Cloth offer bundles 16 oak logs for 2 emeralds." />
+          <img src={href('media/player-shops/offer-and-price.webp?style=minecrafter')} width="780" height="226" loading="lazy" decoding="async" alt="An example Table Cloth offer bundles 16 oak logs for 2 emeralds." />
         </figure>
       </li>
       <li><strong>Check public access.</strong> Open the Stock Keeper screen and use the network lock so visitors check out using a Shopping List. Test a purchase as a customer, including access to the cloth, keeper and package pickup. Right-click the Stock Ticker to collect its stored payments.</li>
@@ -73,7 +74,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     </div>
     <p>The teleporter is named <strong>Trading Hub</strong> in-game. It puts your shop in the public warp directory. Create handles the sales at the counter.</p>
     <figure class="shop-figure">
-      <img src={href('media/player-shops/market-trading-hub.webp?style=spruce')} width="708" height="226" loading="lazy" decoding="async" alt="The Market quest page, marked by a pouch icon, gives you a free Trading Hub." />
+      <img src={href('media/player-shops/market-trading-hub.webp?style=minecrafter')} width="708" height="226" loading="lazy" decoding="async" alt="The Market quest page, marked by a pouch icon, gives you a free Trading Hub." />
     </figure>
     <ol class="shop-steps">
       <li><strong>Claim a free Trading Hub.</strong> Open your quest book, go to the <strong>Market</strong> quest page and claim the <strong>Trading Hub</strong> reward.</li>
@@ -82,7 +83,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
       <li><strong>Visit a listed shop.</strong> Right-click a Trading Hub, open the public <strong>All Warps</strong> panel, and search for the shop. Select the listing and click <strong>Teleport</strong>.</li>
     </ol>
     <figure class="shop-figure">
-      <img src={href('media/player-shops/trading-hub-teleport.webp')} width="840" height="360" loading="lazy" decoding="async" alt="The Trading Hub has All Warps on the left and Your Warps on the right. An example shop listing highlights the Teleport button in the lower-right corner." />
+      <img src={href('media/player-shops/trading-hub-teleport.webp?style=minecrafter')} width="840" height="360" loading="lazy" decoding="async" alt="The purple Trading Hub screen highlights All Warps. On the Trading Hub – Shops screen, the example listing highlights Teleport." />
     </figure>
     <p class="shop-tip">Use the <a href={href('ponder/?scene=workshop_trading_hub')}>Trading Hub item guide</a> for the pack's placement and travel instructions.</p>
   </section>
@@ -93,7 +94,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
       <h2 id="checkout-title">Buy and pick up an order</h2>
     </div>
     <figure class="shop-figure">
-      <img src={href('media/player-shops/checkout-sequence.webp')} width="840" height="226" loading="lazy" decoding="async" alt="Right-click the Table Cloth to start a Shopping List. Right-click the Stock Keeper with the list to pay, then collect the parcel at pickup." />
+      <img src={href('media/player-shops/checkout-sequence.webp?style=minecrafter')} width="840" height="226" loading="lazy" decoding="async" alt="Right-click the Table Cloth to start a Shopping List. Right-click the Stock Keeper with the list to pay, then collect the parcel at pickup." />
     </figure>
     <ol class="shop-steps">
       <li>Check the offer on the Table Cloth. Right-click the cloth with an empty hand to start a <strong>Shopping List</strong>. Keep the list in hand to add more offers from the same shop.</li>
@@ -127,9 +128,30 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     ></iframe>
     <p><a href={`https://www.youtube.com/watch?v=${tutorialVideo}`}>Watch {tutorialTitle} by Shadow on YouTube</a></p>
   </section>
+  <p class="shop-art-credit">Tutorial lettering by <a href="https://www.dafont.com/minecrafter.font">MadPixel</a>.</p>
 </Layout>
 
 <style>
+  .shop-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #665038;
+    border-radius: var(--radius);
+    background: linear-gradient(#21170dc9, #21170dc9), var(--shop-spruce) 0 0 / 48px 48px repeat;
+  }
+  .shop-nav a {
+    min-height: 44px;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .shop-art-credit {
+    margin: 28px 0 0;
+    color: var(--muted);
+    font-size: .875rem;
+  }
   .shop-section {
     padding-top: 24px;
     margin-top: 34px;
@@ -192,6 +214,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     .shop-kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 500px) {
+    .shop-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .shop-kit { grid-template-columns: 1fr; }
   }
 </style>
