@@ -1,7 +1,7 @@
 {
   "title": "Cobblestone generator",
   "keywords": "cobblegen cobble generator stone generator",
-  "description": "Build a renewable source of cobblestone for your workshop. Mine it by hand first, then add a Mechanical Drill or switch the output to Andesite.",
+  "description": "Build a renewable source of cobblestone for your workshop. Mine it by hand first, then automate it with a Mechanical Drill and a Create Chute.",
   "icon": "pickaxe",
   "materials": [
     { "label": "Water Bucket", "count": 1, "item": "minecraft:water_bucket" },
@@ -11,8 +11,8 @@
     { "label": "Mechanical Drill", "count": 1, "item": "create:mechanical_drill", "description": "For automatic mining." },
     { "label": "Shaft", "count": "1+", "item": "create:shaft", "description": "For automation. Run rotation to the back of the drill." },
     { "label": "Water Wheel", "count": 1, "item": "create:water_wheel", "description": "Optional. Use it to power the drill if you have no nearby rotation." },
-    { "label": "Chute", "count": 1, "item": "create:chute", "description": "For automatic pickup or the Andesite upgrade." },
-    { "label": "Chest", "count": 1, "item": "minecraft:chest", "description": "For automatic pickup. Place it beneath the chute." },
+    { "label": "Chute", "count": 1, "item": "create:chute", "description": "Required for the powered build. Place it directly below the generated block." },
+    { "label": "Chest", "count": 1, "item": "minecraft:chest", "description": "Place it below the chute and leave room for the output." },
     { "label": "Andesite", "count": 1, "item": "minecraft:andesite", "description": "Optional catalyst. Place it directly beneath the lava source to generate Andesite." }
   ],
   "steps": [
@@ -28,14 +28,14 @@
         "src": "media/early-builds/cobble-generator-layout.webp",
         "width": 880,
         "height": 416,
-        "alt": "Water falls into a lowered floor beside the mining space while lava flows in from the other side. The powered version puts a chute under the mining space, a catalyst under the lava and a drill facing the generated block.",
-        "caption": "The trench works for plain cobblestone. The illustrated upgrade uses a chute and a Veridium catalyst to generate Veridium. Substitute Andesite to generate Andesite."
+        "alt": "Water falls into a lowered trench beside the generated block, with lava on the other side. The powered build uses a chute directly below the block and a drill facing it from the side. An optional catalyst sits below the lava source.",
+        "caption": "Keep the chute beneath the generated block in the powered build. The diagram shows an optional Veridium catalyst. Use an ordinary floor block for cobblestone or Andesite for andesite."
       },
       "id": "water-and-lava"
     },
     {
-      "title": "Automate the mining",
-      "text": "In Chapter II, aim a Mechanical Drill at the mining space from the side of the channel and connect it to rotational power. Place a regular Create Chute directly beneath the mining space and a chest beneath the chute to collect drops.",
+      "title": "Automate with a drill and chute",
+      "text": "In Chapter II, place a regular Create Chute directly below the mining space and a chest below the chute. Aim a Mechanical Drill at the mining space from the side of the channel and connect it to rotational power. The first cobblestone block forms normally. Create’s optimized drill keeps that block in place and sends the output straight into the chute. This avoids loose item entities and repeated block-breaking and fluid updates.",
       "id": "automate"
     },
     {
@@ -46,13 +46,18 @@
   ],
   "tips": [
     {
+      "title": "Is the drill dropping loose items?",
+      "text": "Stop the drill and check that the chute sits directly under the block it faces. Match the water and lava positions in the diagram and make space in the chest before restarting.",
+      "id": "loose-items"
+    },
+    {
       "title": "Did the lava become obsidian?",
       "text": "Check that the water is falling into the drop and that the lava source is separated from it by the mining space. Restore the lava source once the channel is clear.",
       "id": "lava-became-obsidian"
     },
     {
       "title": "Still getting cobblestone after the upgrade?",
-      "text": "Check that the chute is directly below the generated block and the Andesite is directly below the lava source. The lava source must be beside the generated block at the same height.",
+      "text": "Check that the chute is directly below the generated block and the Andesite is directly below the lava source. The lava source must be beside the generated block at the same height. If the new material keeps breaking and reforming after a catalyst swap, wait for it to form and re-place the drill.",
       "id": "wrong-output"
     }
   ],
@@ -64,6 +69,10 @@
     {
       "label": "Mechanical Drill recipe",
       "path": "recipes/#recipe=tnk%3Amachines%2Ftier_01%2Fcrafting%2Fcreate%2Fmechanical_drill"
+    },
+    {
+      "label": "Create’s cobblestone generator optimization",
+      "path": "https://wiki.createmod.net/users/changelogs/6.0.0#gameplay-changes"
     }
   ]
 }
