@@ -57,6 +57,13 @@ const steps = [
         </table>
       </div>
     </div>
+    <section id="automate-identification" class="appraisal-workshop" aria-labelledby="appraisal-workshop-title">
+      <h2 id="appraisal-workshop-title">Automate appraisal</h2>
+      <p>Feed sealed items into the top or an ordinary side of the <strong>Mechanical Identifier</strong>. Pump a supported XP fluid into its right-hand port and collect the identified equipment from underneath.</p>
+      <figure>
+        <img src={href('media/loot/mechanical-identifier.webp')} width="850" height="338" loading="lazy" decoding="async" alt="The Mechanical Identifier takes a sealed item from above and pumped Liquid XP through its side port. Identified equipment leaves underneath." />
+      </figure>
+    </section>
     <div class="mechanics-reference">
       <div class="reference-heading"><h2>Loot reference</h2><span>{fmt(loot.equipmentEntries)} equipment pool entries</span></div>
       <div class="mechanic-list">{loot.sections.map((section: any) => <MechanicSection section={section} collapsible />)}</div>
@@ -100,6 +107,10 @@ const steps = [
   .appraisal-steps li { display: flex; align-items: flex-start; gap: 12px; }
   .appraisal-steps h2 { margin: 0; font-size: 17px; }
   .appraisal-steps p { margin: 5px 0 0; color: var(--muted); font-size: 14px; }
+  .appraisal-workshop { margin: 32px 0; }
+  .appraisal-workshop p { max-width: 74ch; color: var(--muted); }
+  .appraisal-workshop figure { margin: 14px 0 0; }
+  .appraisal-workshop img { display: block; max-width: 100%; height: auto; }
   .loot-options {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));

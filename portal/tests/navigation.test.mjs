@@ -24,6 +24,7 @@ test('mobile navigation opens, closes on Escape and closes after selecting a lin
  assert.equal(sidebar.inert,true);assert.equal(backdrop.hidden,true);
  button.click();assert.equal(button.getAttribute('aria-expanded'),'true');assert.equal(button.getAttribute('aria-label'),'Close navigation');assert(sidebar.classList.contains('is-open'));
  assert.equal(sidebar.inert,false);assert.equal(backdrop.hidden,false);
+ assert.equal(window.document.activeElement,sidebar.querySelector('a'));
  window.document.dispatchEvent(new window.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
  assert.equal(button.getAttribute('aria-expanded'),'false');assert(!sidebar.classList.contains('is-open'));
  assert.equal(sidebar.inert,true);assert.equal(backdrop.hidden,true);assert.equal(window.document.activeElement,button);
@@ -37,6 +38,11 @@ test('mobile navigation opens, closes on Escape and closes after selecting a lin
  assert.equal(sidebar.inert,false);assert.equal(backdrop.hidden,true);
  window.innerWidth=375;window.dispatchEvent(new window.Event('resize'));button.click();backdrop.click();
  assert.equal(sidebar.inert,true);assert.equal(button.getAttribute('aria-expanded'),'false');assert.equal(window.document.activeElement,button);
+ button.click();button.focus();button.click();
+ assert.equal(button.getAttribute('aria-expanded'),'false');
+ button.click();
+ const themeToggle=window.document.querySelector('#theme-toggle');themeToggle.focus();
+ assert.equal(button.getAttribute('aria-expanded'),'false');assert.equal(window.document.activeElement,themeToggle);
  dom.window.close();
 });
 test('features use actual weapon and profession artwork, and custom mods match the installed manifest',()=>{

@@ -93,7 +93,7 @@ const groups = isTk2 ? tk2Nav : [
       </main>
     </div>
     {!isTk2 && <dialog id="global-search" class="search-dialog" aria-label="Search the handbook">
-      <div class="search-top"><Icon name="search" /><input id="global-search-input" type="search" placeholder="Search weapons, recipes, skills…" aria-label="Search terms" autocomplete="off" spellcheck="false" /><button id="close-search" aria-label="Close search">Esc</button></div>
+      <div class="search-top"><Icon name="search" /><input id="global-search-input" type="search" role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" placeholder="Search weapons, recipes, skills…" aria-label="Search terms" autocomplete="off" spellcheck="false" /><button id="close-search" aria-label="Close search">Esc</button></div>
       <div id="search-results" class="search-results" role="listbox" aria-label="Search results"><p class="search-hint">Find a weapon, ingredient, mod, chapter or skill.</p></div>
       <div class="search-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> Navigate</span><span><kbd>Enter</kbd> Open</span><span><kbd>Esc</kbd> Close</span><span id="search-status" role="status" aria-live="polite"></span></div>
     </dialog>}
