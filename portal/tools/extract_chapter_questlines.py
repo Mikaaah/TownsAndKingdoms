@@ -17,6 +17,12 @@ from import_pack_snapshot import plain, snbt
 ROMANS = 'I II III IV V VI VII VIII IX X'.split()
 CHAPTER_TITLE = re.compile(r'\s*►?\s*Chapter ([IVX]+)\s*\|\s*(.+)')
 ITEM_TRANSLATION = re.compile(r'(?:item|block)\.([^.]+)\.(.+)')
+QUEST_MAP_FIELDS = {
+    'shape': 'shape',
+    'size': 'size',
+    'hide_dependency_lines': 'hideDependencyLines',
+    'hide_dependent_lines': 'hideDependentLines',
+}
 
 
 def text(value):
@@ -39,6 +45,10 @@ def item_name(item_id, names):
     return names.get(item_id) or item_id.rsplit(':', 1)[-1].replace('_', ' ').title()
 
 
+def stack_id(stack):
+    return stack if isinstance(stack, str) else stack['id']
+
+
 def task_record(task, label, names):
     kind = task['type']
     if kind == 'checkmark':
@@ -54,18 +64,57 @@ def task_record(task, label, names):
         raise ValueError(f"Unsupported quest objective `{kind}` in {task['id']}")
 
     stack = task['item']
-    item_id = stack if isinstance(stack, str) else stack['id']
+    item_id = stack_id(stack)
     item_count = 1 if isinstance(stack, str) else stack.get('count', 1)
     components = {} if isinstance(stack, str) else stack.get('components', {})
     potion = components.get('minecraft:potion_contents', {}).get('potion')
     name = item_name(item_id, names)
     if potion:
         name = f'{name} ({item_name(potion, names)})'
-    return {
+    row = {
         'label': label or name,
         'type': kind,
         'item': item_id,
         'count': task.get('count', item_count),
+    }
+    if task.get('icon'):
+        row['icon'] = stack_id(task['icon'])
+    return row
+
+
+def quest_icon(quest):
+    if quest.get('icon'):
+        return stack_id(quest['icon'])
+    # The in-game board cycles task icons. Use the first item candidate for the static map.
+    for task in quest.get('tasks', []):
+        if task.get('icon'):
+            return stack_id(task['icon'])
+        if task['type'] == 'item':
+            return stack_id(task['item'])
+    return None
+
+
+def board_art(archive, overrides, chapter, number):
+    def image_ref(resource):
+        namespace, path = resource.split(':', 1)
+        archive.getinfo(f'{overrides}kubejs/assets/{namespace}/{path}')
+        return resource
+
+    return {
+        'icon': stack_id(chapter['icon']),
+        'titleImage': image_ref(f'tnk_quests:textures/main_quests/chapter_{number:02d}.png'),
+        'images': [
+            {
+                'id': image['id'],
+                'image': image_ref(image['image']),
+                'x': image['x'],
+                'y': image['y'],
+                'width': image['width'],
+                'height': image['height'],
+                'rotation': image['rotation'],
+            }
+            for image in chapter.get('images', [])
+        ],
     }
 
 
@@ -151,7 +200,18 @@ def extract(archive):
     result = []
     for index, chapter in enumerate(campaign):
         cid = chapter['id']
-        quests = []
+        chapter_row = {
+            'id': chapter_slugs[cid],
+            'number': index + 1,
+            'roman': ROMANS[index],
+            'title': chapter_names[cid],
+            'quests': [],
+        }
+        result.append(chapter_row)
+        if chapter_row['roman'] == 'X':
+            # Keep the final board and its art private until release.
+            continue
+        chapter_row.update(board_art(archive, overrides, chapter, chapter_row['number']))
         for quest in ordered_quests(chapter.get('quests', [])):
             qid = quest['id']
             if not quest_titles[qid]:
@@ -179,6 +239,14 @@ def extract(archive):
                 'x': quest['x'],
                 'y': quest['y'],
             }
+            icon = quest_icon(quest)
+            if icon:
+                row['icon'] = icon
+            row.update({
+                json_key: quest[snbt_key]
+                for snbt_key, json_key in QUEST_MAP_FIELDS.items()
+                if snbt_key in quest
+            })
             subtitle = text(language.get(f'quest.{qid}.quest_subtitle', quest.get('subtitle')))
             if subtitle:
                 row['subtitle'] = subtitle
@@ -189,14 +257,7 @@ def extract(archive):
                     task_record(reward, text(language.get(f"reward.{reward['id']}.title", reward.get('title'))), names)
                     for reward in quest['rewards']
                 ]
-            quests.append(row)
-        result.append({
-            'id': chapter_slugs[cid],
-            'number': index + 1,
-            'roman': ROMANS[index],
-            'title': chapter_names[cid],
-            'quests': quests,
-        })
+            chapter_row['quests'].append(row)
     return result
 
 

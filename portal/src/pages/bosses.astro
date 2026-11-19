@@ -9,6 +9,7 @@ interface BossPortrait {
   file: string;
   width: number;
   height: number;
+  cutout?: boolean;
   credit: string;
   source: string;
   license?: { name: string; url: string };
@@ -52,7 +53,7 @@ const credits = eyes.filter((eye: any) => portraits[eye.bossId]);
       <p class="eye-drop-name" title={eye.id}>{eye.name}</p>
      </div>
     </header>
-    {portrait && <figure class="boss-portrait">
+    {portrait && <figure class:list={['boss-portrait', { 'boss-portrait-cutout': portrait.cutout }]}>
      <img src={portraitUrl(portrait)} alt={eye.bossName} width={portrait.width} height={portrait.height} loading="lazy" decoding="async" />
     </figure>}
     <div class="tags"><span class="tag">{eye.dimension}</span>{eye.minimumLevel!==null&&<span class="tag tag-gold">Enemy L{eye.minimumLevel}+ · {eye.classification}</span>}</div>
@@ -84,11 +85,47 @@ const credits = eyes.filter((eye: any) => portraits[eye.bossId]);
 <style>
  .portal-steps{padding-left:24px}.portal-steps li{padding-left:5px;margin:15px 0;line-height:1.8}
  .eye-table td{vertical-align:top}.eye-name{display:flex;align-items:center;gap:10px;font-weight:600;white-space:nowrap}
- .eye-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}.eye-card{padding:26px;scroll-margin-top:95px}.eye-heading{display:flex;align-items:center;gap:14px;margin-bottom:18px}.eye-heading h3{margin:0}.eye-heading h3 .table-button{min-height:0;font-size:1.25rem;line-height:1.35}.eye-heading>div{min-width:0}.eye-drop-name{margin:.25rem 0 0;font-size:.875rem;color:var(--muted)}.eye-card>.tags{margin-bottom:22px}.eye-card h4{font-size:14px;margin:20px 0 9px}.eye-card h4>.table-button{font-size:15px;font-weight:650;text-align:left}.eye-facts{margin:0}.eye-facts>div{margin-top:15px}.eye-facts dt{font-size:13px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin-bottom:5px}.eye-facts dd{margin:0;font-size:16px;line-height:1.8;color:var(--muted)}.eye-rewards p{font-size:16px;line-height:1.8;margin-bottom:0}.eye-pool{margin:8px 0 0!important}.eye-pool button{font-size:14px}.encounter-notes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}.encounter-notes .callout{margin:0}.encounter-notes p{font-size:16px;margin-bottom:0}
- .boss-portrait{display:grid;place-items:center;aspect-ratio:16/10;margin:0 0 16px;overflow:hidden;border:1px solid var(--border-soft);border-radius:5px;background:var(--bg)}
- .boss-portrait img{display:block;width:100%;height:100%;min-height:0;object-fit:contain}
+ .eye-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:16px;margin-top:20px}
+ .eye-card{padding:18px;scroll-margin-top:95px}
+ .eye-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+ .eye-heading h3{margin:0}
+ .eye-heading h3 .table-button{min-height:0;font-size:1.25rem;line-height:1.35}
+ .eye-heading>div{min-width:0}
+ .eye-drop-name{margin:.2rem 0 0;font-size:.875rem;color:var(--muted)}
+ .eye-card>.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+ .eye-card h4{font-size:14px;margin:12px 0 4px}
+ .eye-facts{display:grid;gap:10px;margin:0}
+ .eye-facts dt{font-size:13px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin-bottom:2px}
+ .eye-facts dd,.eye-rewards p{margin:0;font-size:15px;line-height:1.55;color:var(--muted)}
+ .eye-pool{margin:4px 0 0!important}
+ .eye-pool button{font-size:14px}
+ .encounter-notes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:24px 0}
+ .encounter-notes .callout{margin:0}
+ .encounter-notes p{font-size:16px;margin-bottom:0}
+
+ /* Use the dark violet outline from the pack logo and chapter title artwork. */
+ .boss-portrait,:global(.item-art:has(.encounter-thumbnail)){
+  position:relative;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border:3px solid #21182e;
+  border-radius:4px;
+  background:radial-gradient(ellipse at center,#362945,#1b1424 78%);
+  box-shadow:0 2px 0 #171121,inset 0 0 0 1px #554063;
+ }
+ .boss-portrait{margin:0 0 12px}
+ .boss-portrait img,:global(.item-art .encounter-thumbnail){
+  position:absolute;
+  inset:1px;
+  display:block;
+  width:calc(100% - 2px);
+  height:calc(100% - 2px);
+  object-fit:cover;
+ }
+ .boss-portrait-cutout img,:global(.item-art .encounter-thumbnail){object-fit:contain}
  .boss-credits{margin-top:18px;font-size:.875rem;color:var(--muted)}
  .boss-credits ul{margin-bottom:0}
- :global(.item-art img.encounter-thumbnail){image-rendering:auto}
- @media(max-width:760px){.eye-grid,.encounter-notes{grid-template-columns:1fr}.eye-card{padding:22px}.eye-table th,.eye-table td{padding:14px 12px}.eye-name{white-space:normal}}
+ :global(.item-art:has(.encounter-thumbnail)){width:clamp(64px,7vw,96px);height:auto}
+ :global(.item-art .encounter-thumbnail){image-rendering:auto}
+ @media(max-width:760px){.eye-grid,.encounter-notes{grid-template-columns:1fr}.eye-table th,.eye-table td{padding:14px 12px}.eye-name{white-space:normal}}
 </style>
