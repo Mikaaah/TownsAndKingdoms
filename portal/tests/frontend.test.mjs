@@ -87,13 +87,24 @@ test('global search indexes every requested category and opens through Ctrl+K',a
  window.document.querySelector('#close-search').click();assert.equal(window.document.querySelector('#global-search').open,false);
  dom.window.close();
 });
-test('public mechanic and chapter pages contain the current complete reference',()=>{
- const mechanics=browser('mechanics'),chapters=browser('chapters');
- assert.equal(mechanics.window.document.querySelectorAll('.origin-grid article').length,35);
+test('character and loot navigate independently and expose their complete reference',()=>{
+ const character=browser('mechanics'),loot=browser('loot'),chapters=browser('chapters');
+ const characterDoc=character.window.document,lootDoc=loot.window.document;
+ assert.equal(characterDoc.querySelectorAll('.origin-grid article').length,35);
  assert.equal(chapters.window.document.querySelectorAll('.chapter-card').length,10);
- for(const id of ['leveling','origins','titles','loot'])assert(mechanics.window.document.getElementById(id));
- assert(!mechanics.window.document.body.textContent.includes('[object Object]'));
- mechanics.window.close();chapters.window.close();
+ for(const id of ['leveling','origins','titles'])assert(characterDoc.getElementById(id));
+ assert(characterDoc.querySelector('main a[href="/TownsAndKingdoms/loot/"]'));
+ assert.equal(characterDoc.querySelector('[data-loot-calculator]'),null);
+ assert(lootDoc.querySelector('[data-loot-calculator]'));
+ assert.equal(lootDoc.querySelector('[data-level-calculator]'),null);
+ for(const [doc,destination] of [[characterDoc,'mechanics/'],[lootDoc,'loot/']]) {
+  const selected=doc.querySelectorAll('#site-sidebar [aria-current="page"]');
+  assert.equal(selected.length,1);
+  assert.equal(selected[0].getAttribute('href'),'/TownsAndKingdoms/'+destination);
+  assert(!doc.body.textContent.includes('[object Object]'));
+ }
+ assert.equal(json('search').find(entry=>entry._key==='Mechanics:loot')?.url,'/TownsAndKingdoms/loot/');
+ character.window.close();loot.window.close();chapters.window.close();
 });
 test('clearing search discards a result that arrives after the input was emptied',()=>{
  const dom=browser('index');const {window}=dom;let instance;

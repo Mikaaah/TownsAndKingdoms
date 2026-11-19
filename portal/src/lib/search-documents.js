@@ -33,7 +33,8 @@ export function buildSearchDocuments(datasets, base) {
   for(const [route,title,description]of articleEntries)add('Guides',route,title,description,base+route,'Official handbook');
   for(const eye of eyes)add('Bosses',eye.id,eye.name,[eye.bossName,eye.bossId,'End Remastered eye stronghold portal'].join(' '),base+'bosses/#eye-'+eye.id.split(':').pop(),'End Remastered');
   for(const o of mechanics.origins||[])add('Origins',o.id,o.name,[o.description,...(o.perks||[]).map(p=>p.description)].join(' '),base+'mechanics/#origin-'+o.id,o.tier||'Origin');
-  for(const id of ['leveling','origins','titles','loot'])add('Mechanics',id,words(id),clean(mechanics[id]),base+'mechanics/#'+id,'Character systems');
+  for(const id of ['leveling','origins','titles'])add('Mechanics',id,words(id),clean(mechanics[id]),base+'mechanics/#'+id,'Character systems');
+  add('Mechanics','loot','Loot & Appraisal',clean(mechanics.loot),base+'loot/','Unidentified Loot');
   for(const family of families)add('Recipes',family.id,family.name,[(family.rules||[]).join(' '),...(family.schools||[]).map(s=>s.name)].join(' '),base+'recipes/#family-'+family.id,'Spell scroll binding');
   for(const rule of productionRules)add('Recipes',rule.id,rule.name,clean(rule.recipe),base+'recipes/#rule-'+rule.id.replace(':','/'),words(rule.type));
   return docs;

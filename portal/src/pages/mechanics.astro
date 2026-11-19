@@ -4,29 +4,19 @@ import MechanicSection from '../components/MechanicSection.astro';
 import QuestIcon from '../components/QuestIcon.astro';
 import badgeArt from '../data/character-title-badges.json';
 import { data, fmt, href } from '../lib/data';
+import '../styles/mechanics.css';
 
-const { leveling, origins, originGuide, titles, loot } = data('mechanics', {});
+const { leveling, origins, originGuide, titles } = data('mechanics', {});
 const sectionByTitle = (sections: any[], title: string) => sections.find(section => section.title === title);
 const milestones = sectionByTitle(leveling.sections, 'Levels and skill points').rows;
 const sampleLevel = milestones.find((row: any) => row.Level === 25);
 const ceilings = sectionByTitle(leveling.sections, 'Campaign ceilings').rows;
-const costRows = sectionByTitle(loot.sections, 'Identification prices').rows;
-const rarityRows = sectionByTitle(loot.sections, 'Rarity rolls').rows;
-const fluidRows = sectionByTitle(loot.sections, 'Mechanical Identifier').rows;
-const sampleTier = costRows.find((row: any) => row.Tier.startsWith('4 ·'));
-const sampleRarity = 'Rare';
 const titleBadges: Record<string, {width: number, offset: number}> = badgeArt.entries;
 const featuredTitles = ['tnk:apprentice', 'tnk:technician', 'tnk:engineer'].map(id => titles.catalog.find((title: any) => title.id === id)).filter(Boolean);
 const nav = [
   {id:'leveling', label:'Leveling', icon:'skill_point'},
   {id:'origins', label:'Origins', icon:'mirror'},
   {id:'titles', label:'Titles', icon:'scroll'},
-  {id:'loot', label:'Unidentified Loot', icon:'satchel'},
-];
-const steps = [
-  {title:'Find sealed gear', description:'Eligible enemies and chests can reward unidentified equipment. A token shows its source, category and loot tier.', image:'media/character/loot-crate.png'},
-  {title:'Identify with vanilla XP', description:'Take the token to an Identifier to preview its pool and reveal it. The Mechanical Identifier uses fluid XP.', image:'media/ponder/textures/minecraft/item/experience_bottle.png'},
-  {title:'Keep, trade or salvage', description:'Compare the revealed affixes with your build. Salvaging adds fragments you can spend at an Identifier.', image:'media/weapons/minecraft/diamond_sword.png'},
 ];
 const ascensionRecipe = 'recipes/#recipe=' + encodeURIComponent('tnk:endgame/mechanical_crafting/sigil_of_ascension');
 const badgeStyle = (id: string) => {
@@ -34,13 +24,23 @@ const badgeStyle = (id: string) => {
   return `background-image:url(${href('media/character/title-badges.png')});background-size:auto ${badgeArt.height * 2}px;background-position:0 -${art.offset * 2}px;width:${art.width * 2}px`;
 };
 ---
-<Layout title="Character & equipment" description="Plan character levels, compare Origin perks and check equipment identification costs in Towns & Kingdoms 3.">
+<Layout title="Character & Origins" description="Plan your character levels and skill points, compare Origins, and browse titles in Towns & Kingdoms 3.">
   <p class="eyebrow">Handbook / Character systems</p>
-  <h1>Character & equipment</h1>
-  <p class="intro">Check how many skill points a level earns, find an Origin that fits your playstyle, and see what it costs to reveal your loot.</p>
-  <nav class="toc-inline mechanics-nav" aria-label="Character systems">
-    {nav.map(({id, label, icon}) => <a href={'#'+id}><QuestIcon name={icon} size={20} />{label}</a>)}
-  </nav>
+  <h1>Character &amp; Origins</h1>
+  <p class="intro">Check how many skill points a level earns, find an Origin that fits your playstyle, and browse the titles you can earn.</p>
+  <div class="character-navigation">
+    <nav class="toc-inline mechanics-nav" aria-label="Character systems">
+      {nav.map(({id, label, icon}) => <a href={'#'+id}><QuestIcon name={icon} size={20} />{label}</a>)}
+    </nav>
+    <a id="loot" class="button" href={href('loot/')}><QuestIcon name="satchel" size={20} />Go to Loot &amp; Appraisal</a>
+  </div>
+  <script is:inline define:vars={{ lootUrl: href('loot/') }}>
+    function forwardLegacyLootLink() {
+      if (window.location.hash === '#loot') window.location.replace(lootUrl);
+    }
+    forwardLegacyLootLink();
+    window.addEventListener('hashchange', forwardLegacyLootLink);
+  </script>
 
   <section id="leveling" class="mechanics-section" aria-labelledby="leveling-title">
     <header class="mechanics-heading">
@@ -134,58 +134,21 @@ const badgeStyle = (id: string) => {
     </div>
   </section>
 
-  <section id="loot" class="mechanics-section" aria-labelledby="loot-title">
-    <header class="mechanics-heading">
-      <QuestIcon name="satchel" size={34} />
-      <div><h2 id="loot-title">{loot.title}</h2><p>{loot.summary}</p></div>
-    </header>
-    <ol class="appraisal-steps">
-      {steps.map(step => <li><img src={href(step.image)} alt="" width="44" height="44" loading="lazy" /><div><h3>{step.title}</h3><p>{step.description}</p></div></li>)}
-    </ol>
-    <div class="mechanics-panel appraisal-panel">
-      <div class="loot-calculator" data-loot-calculator data-loot-costs={JSON.stringify(costRows)}>
-        <h3>Identification cost</h3>
-        <p>Estimate the price for affix-capable gear and native jewellery, before salvage credit.</p>
-        <div class="loot-options">
-          <div><label for="loot-tier">Loot tier</label><select id="loot-tier" disabled>
-            {costRows.map((row: any, index: number) => <option value={index} selected={row.Tier === sampleTier.Tier}>{row.Tier}</option>)}
-          </select></div>
-          <div><label for="loot-rarity">Rarity</label><select id="loot-rarity" disabled>
-            {loot.rarities.map((rarity: any) => <option value={rarity.name} selected={rarity.name === sampleRarity}>{rarity.name}</option>)}
-          </select></div>
-          <div class="loot-route"><label for="loot-route">Identification route</label><select id="loot-route" disabled>
-            <option value="manual">Identifier · Vanilla XP</option>
-            {fluidRows.map((row: any) => <option value={row['Fluid ID']} data-ratio={row['mB per vanilla XP point']}>Mechanical Identifier · {row['XP fluid'].replace(/^Xp\b/, 'XP')}</option>)}
-          </select></div>
-        </div>
-        <output class="loot-price" for="loot-tier loot-rarity loot-route" data-loot-result><strong data-loot-price>{sampleTier[sampleRarity]}</strong> <span data-loot-unit>vanilla XP points</span></output>
-      </div>
-      <div class="rarity-chart">
-        <h3>Full-range rarity odds</h3>
-        <p>Ordinary odds are renormalized when your level ceiling limits rarity.</p>
-        <table aria-label="Full-range rarity odds by loot source">
-          <thead><tr><th scope="col">Rarity</th><th scope="col">Ordinary</th><th scope="col">Boss</th></tr></thead>
-          <tbody>{rarityRows.map((row: any, index: number) => <tr style={`--rarity-color:${loot.rarities[index].color}`}>
-            <th scope="row"><span class="rarity-dot"></span>{row.Rarity}</th>
-            <td><span class="rarity-bar" style={`--odds:${row['Ordinary roll']}`}>{row['Ordinary roll']}</span></td>
-            <td><span class="rarity-bar" style={`--odds:${row['Boss roll']}`}>{row['Boss roll']}</span></td>
-          </tr>)}</tbody>
-        </table>
-      </div>
-    </div>
-    <div class="mechanics-reference">
-      <div class="reference-heading"><h3>Loot reference</h3><span>{fmt(loot.equipmentEntries)} equipment pool entries</span></div>
-      <div class="mechanic-list">{loot.sections.map((section: any) => <MechanicSection section={section} collapsible />)}</div>
-    </div>
-  </section>
+
 </Layout>
 
 <script src="../scripts/mechanics.js"></script>
 
 <style>
-  .mechanics-nav a {
-    gap: 9px;
+  .character-navigation {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 24px 0 32px;
   }
+  .mechanics-nav { margin: 0; }
+  .mechanics-nav a { gap: 9px; }
   .mechanics-section {
     margin-top: 56px;
     padding-top: 28px;
@@ -197,42 +160,15 @@ const badgeStyle = (id: string) => {
     gap: 15px;
     margin-bottom: 20px;
   }
-  .mechanics-heading h2,
-  .mechanics-heading p,
-  .mechanics-panel h3,
-  .mechanics-reference h3,
-  .appraisal-steps h3 {
-    margin: 0;
-  }
-  .mechanics-heading p,
-  .mechanics-panel p,
-  .appraisal-steps p {
-    color: var(--muted);
-    margin: 5px 0 0;
-  }
-  .mechanics-panel {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  }
-  .mechanics-panel > div {
-    min-width: 0;
-    padding: clamp(16px, 2.4vw, 28px);
-  }
-  .mechanics-panel > div + div {
-    border-left: 1px solid var(--border);
-  }
+  .mechanics-heading h2 { margin: 0; }
+  .mechanics-heading p { margin: 5px 0 0; color: var(--muted); }
   .level-calculator-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
   }
-  .level-calculator-heading label,
-  .mechanics-panel h3,
-  .mechanics-reference h3 {
+  .level-calculator-heading label {
     font-size: 18px;
     font-weight: 600;
   }
@@ -298,23 +234,6 @@ const badgeStyle = (id: string) => {
   .ceiling-list strong {
     font-size: 17px;
   }
-  .mechanics-reference { margin-top: 24px; }
-  .reference-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .reference-heading > span { color: var(--subtle); font-size: 14px; }
-  .mechanic-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
-    gap: 8px;
-    margin-top: 10px;
-  }
-  .mechanic-list > [open] { grid-column: 1 / -1; }
   .mechanics-reference.mechanic-list { margin-top: 12px; }
   .origin-controls {
     display: flex;
@@ -323,16 +242,14 @@ const badgeStyle = (id: string) => {
     gap: 12px;
     margin-bottom: 12px;
   }
-  .origin-controls label,
-  .loot-options label {
+  .origin-controls label {
     display: block;
     color: var(--muted);
     font-size: 14px;
     margin-bottom: 4px;
   }
   .origin-controls input,
-  .origin-controls select,
-  .loot-options select {
+  .origin-controls select {
     min-height: 44px;
     min-width: 0;
     width: 100%;
@@ -378,8 +295,7 @@ const badgeStyle = (id: string) => {
     flex-shrink: 0;
   }
   .origin-entry details[open] summary::after { transform: rotate(225deg); }
-  .origin-entry img,
-  .appraisal-steps img {
+  .origin-entry img {
     flex-shrink: 0;
     image-rendering: pixelated;
     object-fit: contain;
@@ -413,76 +329,13 @@ const badgeStyle = (id: string) => {
   .title-catalogue .table-wrap { border-width: 1px 0 0; border-radius: 0 0 6px 6px; }
   .title-catalogue td:first-child { width: 22%; }
   .title-catalogue .title-badge { max-width: none; }
-  .appraisal-steps {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    list-style: none;
-    margin: 0 0 18px;
-    padding: 0;
-  }
-  .appraisal-steps li { display: flex; align-items: flex-start; gap: 12px; }
-  .appraisal-steps h3 { font-size: 17px; }
-  .appraisal-steps p { font-size: 14px; }
-  .loot-options {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin: 16px 0;
-  }
-  .loot-route { grid-column: 1 / -1; }
-  .loot-price {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    padding: 8px 12px;
-    border-left: 2px solid var(--gold-border);
-    color: var(--gold-text);
-    background: var(--gold-surface);
-  }
-  .loot-price strong { font-size: 25px; font-variant-numeric: tabular-nums; }
-  .rarity-chart table { margin-top: 12px; }
-  .rarity-chart th,
-  .rarity-chart td { padding: 5px 3px; background: transparent; }
-  .rarity-chart [scope="row"] { text-transform: none; letter-spacing: 0; font-size: 14px; }
-  .rarity-chart td { width: 31%; }
-  .rarity-dot {
-    width: 7px;
-    height: 7px;
-    margin-right: 7px;
-    display: inline-block;
-    border-radius: 50%;
-    background: var(--rarity-color);
-    outline: 1px solid var(--control-border);
-  }
-  .rarity-bar {
-    display: block;
-    position: relative;
-    min-width: 48px;
-    z-index: 0;
-    padding: 0 2px;
-    font-variant-numeric: tabular-nums;
-  }
-  .rarity-bar::before {
-    content: '';
-    position: absolute;
-    inset: auto auto 0 0;
-    border-radius: 2px;
-    height: 2px;
-    width: var(--odds);
-    min-width: 1px;
-    background: var(--rarity-color);
-  }
   @media (max-width: 1150px) {
     .origin-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (max-width: 960px) {
-    .appraisal-steps { grid-template-columns: 1fr; }
     .progression-totals dd { overflow-wrap: anywhere; }
   }
   @media (max-width: 690px) {
-    .mechanics-panel, .mechanic-list { grid-template-columns: minmax(0, 1fr); }
-    .mechanics-panel > div + div { border-left: 0; border-top: 1px solid var(--border); }
     .mechanics-section { margin-top: 36px; }
   }
   @media (max-width: 580px) {

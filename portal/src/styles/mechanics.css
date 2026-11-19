@@ -1,0 +1,46 @@
+.mechanics-panel > div > :is(h2, h3),
+.mechanics-reference > h3,
+.reference-heading > :is(h2, h3) {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.mechanics-panel > div > p {
+  margin: 5px 0 0;
+  color: var(--muted);
+}
+.mechanics-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.mechanics-panel > div {
+  min-width: 0;
+  padding: clamp(16px, 2.4vw, 28px);
+}
+.mechanics-panel > div + div {
+  border-left: 1px solid var(--border);
+}
+.mechanics-reference { margin-top: 24px; }
+.reference-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.reference-heading > span { color: var(--subtle); font-size: 14px; }
+.mechanic-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 8px;
+  margin-top: 10px;
+}
+.mechanic-list > [open] { grid-column: 1 / -1; }
+@media (max-width: 690px) {
+  .mechanics-panel, .mechanic-list { grid-template-columns: minmax(0, 1fr); }
+  .mechanics-panel > div + div { border-left: 0; border-top: 1px solid var(--border); }
+}
