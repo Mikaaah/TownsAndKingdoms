@@ -21,6 +21,8 @@ const options = scenes.map(scene => ({
   ...scene,
   label: (titles.get(scene.title) ?? 0) > 1 ? `${scene.title} · ${words(scene.slug)}` : scene.title,
   itemNames: scene.anchors.map(nameFor),
+  searchIds: [...new Set([...scene.anchors, ...scene.items, ...scene.blockIds])],
+  captions: scene.steps.map(step => step.text).join(' '),
 }));
 const localIcons = new Map<string, boolean>();
 function iconPath(icon?: { url?: string, animated?: boolean }) {
@@ -32,11 +34,11 @@ const categoryNames = new Map(categories.map(category => [category.id, category.
 ---
 <section class="ponder-guides" data-ponder-guides aria-label="Ponder item guides">
   <div class="ponder-filters" data-ponder-controls hidden>
-    <label>Find an item or guide<input data-ponder-query type="search" placeholder="Try Rotational Speed Controller" autocomplete="off" /></label>
+    <label>Find an item or guide<input data-ponder-query type="search" placeholder="Try Rotation Mechanism or Deployer" autocomplete="off" /></label>
     <label>Guide<select data-ponder-guide aria-describedby="ponder-results">
       {categories.map(category => <optgroup label={category.title}>
         {options.filter(scene => scene.category === category.id).map(scene =>
-          <option value={scene.slug} data-title={scene.title} data-items={scene.anchors.join(' ')} data-names={scene.itemNames.join(' ')} selected={scene.slug === scenes[0].slug}>{scene.label}</option>
+          <option value={scene.slug} data-title={scene.title} data-items={scene.searchIds.join(' ')} data-names={scene.itemNames.join(' ')} data-captions={scene.captions} selected={scene.slug === scenes[0].slug}>{scene.label}</option>
         )}
       </optgroup>)}
     </select></label>

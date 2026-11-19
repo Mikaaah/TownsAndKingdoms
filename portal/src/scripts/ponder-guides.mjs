@@ -23,11 +23,11 @@ export function guideItems(step) {
   return shown;
 }
 
-export function matchesGuide({ title, items, names }, query) {
+export function matchesGuide({ title, items, names, captions = '' }, query) {
   const entered = query.trim().toLowerCase();
   if (/^[\w.-]+:[\w./-]+$/.test(entered)) return items.split(' ').includes(entered);
   const words = normalize(entered).split(/\s+/).filter(Boolean);
-  const haystack = normalize(`${title} ${items} ${names}`);
+  const haystack = normalize(`${title} ${items} ${names} ${captions}`);
   return words.every(word => haystack.includes(word));
 }
 
