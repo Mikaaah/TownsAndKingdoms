@@ -1,0 +1,28 @@
+---
+import { href } from '../lib/data';
+
+interface Props {
+  name: string;
+  size?: number;
+}
+
+const { name, size = 16 } = Astro.props;
+---
+<img
+  class="quest-icon"
+  src={href(`media/quest-icons/${name}.png`)}
+  alt=""
+  width={size}
+  height={size}
+  decoding="async"
+/>
+
+<style>
+  .quest-icon {
+    display: block;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
+</style>

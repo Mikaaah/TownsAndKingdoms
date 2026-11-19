@@ -156,7 +156,7 @@ async function mount(root) {
     renderer = new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'low-power'});
     renderer.setPixelRatio(Math.min(devicePixelRatio || 1,2));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.setClearColor(0x18151e,1);
+    renderer.setClearColor(0x202020,1);
     canvasRoot.replaceChildren(renderer.domElement);
     scene3d = new THREE.Scene();
     scene3d.add(new THREE.HemisphereLight(0xf2edf8,0x706477,2.2));
@@ -167,8 +167,8 @@ async function mount(root) {
     controls.enableDamping=false;controls.minPolarAngle=.15;controls.maxPolarAngle=Math.PI/2+.12;controls.minZoom=.35;controls.maxZoom=4;controls.screenSpacePanning=true;
     controls.addEventListener('change',requestRender);
     const lineGeometry = new THREE.EdgesGeometry(new THREE.BoxGeometry(1.035,1.035,1.035));
-    hoverBox = new THREE.LineSegments(lineGeometry,new THREE.LineBasicMaterial({color:0xe7ca89,transparent:true,opacity:.9}));hoverBox.visible=false;scene3d.add(hoverBox);
-    focusBox = new THREE.LineSegments(lineGeometry,new THREE.LineBasicMaterial({color:0xc4add8,transparent:true,opacity:.95}));focusBox.visible=false;scene3d.add(focusBox);
+    hoverBox = new THREE.LineSegments(lineGeometry,new THREE.LineBasicMaterial({color:0xf9b50c,transparent:true,opacity:.9}));hoverBox.visible=false;scene3d.add(hoverBox);
+    focusBox = new THREE.LineSegments(lineGeometry,new THREE.LineBasicMaterial({color:0xe0859c,transparent:true,opacity:.95}));focusBox.visible=false;scene3d.add(focusBox);
     const ray = new THREE.Raycaster(), pointer = new THREE.Vector2();
     renderer.domElement.addEventListener('pointermove',event => {
       if (event.buttons) {hover.hidden=true;hoverBox.visible=false;return;}
@@ -216,8 +216,15 @@ async function mount(root) {
     if(!textures.has(key)){
       const canvas=document.createElement('canvas');canvas.width=256;canvas.height=112;
       const ctx=canvas.getContext('2d');
-      ctx.fillStyle='#241e2b';ctx.fillRect(0,0,256,112);ctx.strokeStyle='#9c87b5';ctx.lineWidth=3;ctx.strokeRect(2,2,252,108);
-      ctx.fillStyle='#eee6f4';ctx.font='500 23px system-ui,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';
+      ctx.fillStyle = '#333333';
+      ctx.fillRect(0,0,256,112);
+      ctx.strokeStyle = '#7f3e52';
+      ctx.lineWidth = 3;
+      ctx.strokeRect(2,2,252,108);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '500 23px system-ui,sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
       const words=String(label || id || 'Item').split(' ');let lines=[''];
       for(const word of words){const current=lines.length-1;const trial=(lines[current]+' '+word).trim();if(ctx.measureText(trial).width>230 && lines[current])lines.push(word);else lines[current]=trial;}
       lines=lines.slice(0,3);lines.forEach((line,index)=>ctx.fillText(line,128,56+(index-(lines.length-1)/2)*27,236));

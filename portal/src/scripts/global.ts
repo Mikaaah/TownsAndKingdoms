@@ -81,3 +81,20 @@ sidebar?.addEventListener('click',event=>{
 });
 document.querySelector('#open-search')?.addEventListener('click',()=>setNavigation(false));
 window.addEventListener('resize',()=>setNavigation(window.innerWidth <= 800 && menu?.getAttribute('aria-expanded') === 'true'));
+
+const themeToggle = document.querySelector<HTMLButtonElement>('#theme-toggle');
+const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+const root = document.documentElement;
+themeToggle?.setAttribute('aria-pressed', String(root.dataset.theme === 'light'));
+themeToggle?.addEventListener('click', () => {
+  const theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+  root.dataset.theme = theme;
+  themeToggle.setAttribute('aria-pressed', String(theme === 'light'));
+  if (themeColor) themeColor.content = theme === 'light' ? '#ffffff' : '#202020';
+
+  try {
+    localStorage.setItem('tnk3-theme', theme);
+  } catch {
+    // The theme still applies to the current page without browser storage.
+  }
+});

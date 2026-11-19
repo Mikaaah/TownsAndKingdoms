@@ -1,11 +1,52 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {data,href,pretty,words} from '../lib/data';
-const chapters=data('chapters');
+import { data, href, pretty, words } from '../lib/data';
+
+const chapters = data('chapters');
+// The ten quest headers have a common 112px height and different widths.
+const chapterLogoWidths = [762, 963, 692, 939, 882, 831, 715, 584, 820, 834];
 ---
 <Layout title="Progression chapters" description="The Towns & Kingdoms roadmap, from the first workshop to advanced engineering, magic and the Creation Core.">
  <p class="eyebrow">Handbook / Progression</p><h1>Progression chapters</h1><p class="intro">Follow the ten chapters from basic tools through mechanical production, electrical engineering, magic and the Creation Core.</p>
  <div class="callout"><strong>Production requirements</strong><p>Chapters explain how manufacturing systems connect. Check an individual recipe for its required mechanisms and machines; exploration and character development can continue alongside production.</p></div>
  <nav class="toc-inline" aria-label="Chapter navigation">{chapters.map((c:any)=><a href={'#'+c.id}>{c.roman} · {c.title}</a>)}</nav>
- <div class="chapter-list">{chapters.map((c:any)=><article class="chapter-card" id={c.id}><div class="chapter-number">{c.roman}</div><div><p class="eyebrow" style="margin-bottom:8px">Chapter {c.number}</p><h2>{c.title}</h2><p>{c.summary}</p>{c.mechanism&&<p><span class="tag tag-gold">{words(c.mechanism)}</span></p>}{c.milestones?.length>0&&<ul>{c.milestones.map((m:any)=><li><a href={href('recipes/?q='+encodeURIComponent(m.id||m))}>{pretty(m)||words(m)}</a></li>)}</ul>}<a class="button" href={href('recipes/?q='+encodeURIComponent(c.mechanism||c.title))}>Explore this production stage →</a></div></article>)}</div>
+ <div class="chapter-list">
+  {chapters.map((chapter: any) => {
+    const artWidth = chapterLogoWidths[chapter.number - 1];
+    const chapterNumber = String(chapter.number).padStart(2, '0');
+    return (
+      <article class="chapter-card" id={chapter.id}>
+        {artWidth && <img
+          class="chapter-logo"
+          src={href(`media/chapters/chapter_${chapterNumber}.webp`)}
+          alt=""
+          width={Math.round(artWidth / 2)}
+          height="56"
+          loading="lazy"
+          decoding="async"
+        />}
+        <div>
+          <h2><span class="sr-only">Chapter {chapter.roman} · </span>{chapter.title}</h2>
+          <p>{chapter.summary}</p>
+          {chapter.mechanism && <p><span class="tag tag-gold">{words(chapter.mechanism)}</span></p>}
+          {chapter.milestones?.length > 0 && <ul>{chapter.milestones.map((milestone: any) => <li><a href={href('recipes/?q=' + encodeURIComponent(milestone.id || milestone))}>{pretty(milestone) || words(milestone)}</a></li>)}</ul>}
+          <a class="button" href={href('recipes/?q=' + encodeURIComponent(chapter.mechanism || chapter.title))}>Explore this production stage →</a>
+        </div>
+      </article>
+    );
+  })}
+ </div>
 </Layout>
+
+<style>
+  .chapter-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .chapter-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+</style>

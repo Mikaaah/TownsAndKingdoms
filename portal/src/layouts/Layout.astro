@@ -1,15 +1,16 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import QuestIcon from '../components/QuestIcon.astro';
 import { href } from '../lib/data';
 const { title = 'Handbook', description = 'The official Towns & Kingdoms handbook.', wide = false } = Astro.props;
 const current = Astro.url.pathname.replace(/\/$/, '');
 const groups = [
-  { title: 'Handbook', links: [['Overview', '', 'book'], ['Features', 'features/', 'compass'], ['Getting started', 'guides/', 'book'], ['What changed', 'changes/', 'changes']] },
-  { title: 'Reference', links: [['Weapons', 'weapons/', 'sword'], ['Recipes', 'recipes/', 'grid'], ['Mod index', 'mods/', 'layers'], ['Custom mods', 'custom-mods/', 'grid'], ['Boss encounters', 'bosses/', 'shield']] },
-  { title: 'Progression', links: [['Chapters', 'chapters/', 'list'], ['Character & origins', 'mechanics/#leveling', 'person'], ['Loot & appraisal', 'mechanics/#loot', 'box']] },
-  { title: 'Interactive tools', links: [['Skilltree planner', 'skills/', 'nodes'], ['Ponder scenes', 'ponder/', 'cube']] },
-  { title: 'Community & support', links: [['Servers', 'servers/', 'layers'], ['Set up a server', 'guides/server-setup/', 'grid'], ['Discord', 'discord/', 'person'], ['Support', 'support/', 'shield'], ['Frequently asked questions', 'faq/', 'book']] }
+  { title: 'Handbook', links: [['Overview', '', 'bookred'], ['Features', 'features/', 'map'], ['Getting started', 'guides/', 'bookopen'], ['What changed', 'changes/', 'hourglass']] },
+  { title: 'Reference', links: [['Weapons', 'weapons/', 'hammer'], ['Recipes', 'recipes/', 'paper'], ['Mod index', 'mods/', 'journal'], ['Custom mods', 'custom-mods/', 'pickaxe'], ['Boss encounters', 'bosses/', 'horn']] },
+  { title: 'Progression', links: [['Chapters', 'chapters/', 'scroll'], ['Character & origins', 'mechanics/#leveling', 'mirror'], ['Loot & appraisal', 'mechanics/#loot', 'satchel']] },
+  { title: 'Interactive tools', links: [['Skilltree planner', 'skills/', 'skill_point'], ['Ponder scenes', 'ponder/', 'rotation_mechanism']] },
+  { title: 'Community & support', links: [['Servers', 'servers/', 'lantern'], ['Set up a server', 'guides/server-setup/', 'key'], ['Discord', 'discord/', 'envelope'], ['Support', 'support/', 'bell'], ['Frequently asked questions', 'faq/', 'book']] }
 ];
 ---
 <!doctype html>
@@ -17,7 +18,17 @@ const groups = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#131216" />
+    <meta name="theme-color" content="#202020" />
+    <script is:inline>
+      try {
+        if (localStorage.getItem('tnk3-theme') === 'light') {
+          document.documentElement.dataset.theme = 'light';
+          document.querySelector('meta[name="theme-color"]').content = '#ffffff';
+        }
+      } catch {
+        // Keep the default theme when browser storage is unavailable.
+      }
+    </script>
     <meta name="description" content={description} />
     <title>{title === 'Handbook' ? 'Towns & Kingdoms — Handbook' : `${title} · Towns & Kingdoms`}</title>
     <link rel="icon" href={href('media/favicon.png')} />
@@ -44,6 +55,10 @@ const groups = [
         <a href="https://github.com/Mikaaah/TownsAndKingdoms" target="_blank" rel="noopener">GitHub</a>
         <details class="version-switch"><summary aria-label="Choose handbook edition">TK3</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current="page">Towns & Kingdoms 3</a><a href={href('tk2/')}>Towns & Kingdoms 2</a></nav></details>
       </nav>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light mode" aria-pressed="false" title="Switch color theme">
+        <span class="theme-sun"><Icon name="sun" size={20} /></span>
+        <span class="theme-moon"><Icon name="moon" size={20} /></span>
+      </button>
     </header>
     <button class="nav-backdrop" id="nav-backdrop" aria-label="Close navigation" tabindex="-1" hidden></button>
     <div class="site-grid">
@@ -51,10 +66,10 @@ const groups = [
         {groups.map(group => <nav class="nav-group" aria-label={group.title}>
           <p class="nav-label">{group.title}</p>
           {group.links.map(([name, url, mark]) => <a href={href(url)} aria-current={current === href(url.split('#')[0]).replace(/\/$/, '') ? 'page' : undefined}>
-            <span class="nav-mark"><Icon name={mark} size={15} /></span>{name}
+            <span class="nav-mark"><QuestIcon name={mark} size={20} /></span>{name}
           </a>)}
         </nav>)}
-        <div class="nav-group"><p class="nav-label">Earlier adventures</p><a href={href('tk2/')}><span class="nav-mark"><Icon name="history" size={15} /></span>Towns & Kingdoms 2</a></div>
+        <div class="nav-group"><p class="nav-label">Earlier adventures</p><a href={href('tk2/')}><span class="nav-mark"><QuestIcon name="candle" size={20} /></span>Towns & Kingdoms 2</a></div>
       </aside>
       <main id="main" class:list={['page', { 'page-wide': wide }]}>
         <slot />
@@ -81,5 +96,5 @@ const groups = [
 
 
 <style>
-.version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--gold)}
+.version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold-text)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--gold-text)}
 </style>

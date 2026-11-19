@@ -44,15 +44,20 @@ import skills from '../data/skills.json';
   document.addEventListener('astro:page-load',()=>initSkillPlanners());
 </script>
 <style is:global>
-  .skill-planner{--sp-bg:var(--bg,#131216);--sp-surface:var(--surface,#1b191e);--sp-raised:var(--surface-raised,#242128);--sp-border:var(--border,#3c3542);--sp-text:var(--text,#f3f0eb);--sp-muted:var(--muted,#c0b8c3);--sp-accent:var(--accent,#d6b7e8);--sp-gold:var(--gold,#d5b678);border:1px solid var(--sp-border);border-radius:var(--radius,10px);overflow:hidden;background:var(--sp-surface);color:var(--sp-text)}
+  .skill-planner{
+    --sp-bg:var(--bg);--sp-surface:var(--surface);--sp-raised:var(--surface-raised);
+    --sp-border:var(--border);--sp-text:var(--text);--sp-muted:var(--muted);
+    --sp-accent:var(--accent);--sp-gold:var(--gold-text);
+    border:1px solid var(--sp-border);border-radius:var(--radius);overflow:hidden;background:var(--sp-surface);color:var(--sp-text)
+  }
   .skill-planner button,.skill-planner input{font:inherit}
   .skill-planner button{border:1px solid var(--sp-border);border-radius:6px;background:var(--sp-surface);color:var(--sp-text);min-height:44px;padding:.55rem .75rem;font-size:.875rem;cursor:pointer;line-height:1.4;transition:background-color .12s,border-color .12s}
   .skill-planner button:hover:not(:disabled){border-color:var(--sp-accent);background:var(--sp-raised)}
   .skill-planner button:focus-visible,.skill-planner input:focus-visible,.skill-planner summary:focus-visible{outline:2px solid var(--focus,var(--sp-gold));outline-offset:3px}
   .skill-planner [data-skill-map]:focus-visible{outline:2px solid var(--focus,var(--sp-gold));outline-offset:-4px}
   .skill-planner button:disabled{opacity:.4;cursor:not-allowed}
-  .skill-planner .sp-primary{background:var(--primary,#7f384a);border-color:var(--primary,#7f384a);color:var(--primary-ink,#fff9f4);font-weight:600}
-  .skill-planner .sp-primary:hover:not(:disabled){background:var(--primary-hover,#92475a);border-color:var(--primary-hover,#92475a);color:var(--primary-ink,#fff9f4)}
+  .skill-planner .sp-primary{background:var(--primary);border-color:var(--primary);color:var(--primary-ink);font-weight:600}
+  .skill-planner .sp-primary:hover:not(:disabled){background:var(--primary-hover);border-color:var(--primary-hover);color:var(--primary-ink)}
   .sp-toolbar{display:flex;align-items:center;gap:1.15rem;padding:1rem 1.15rem;border-bottom:1px solid var(--sp-border);flex-wrap:wrap}
   .sp-budget{display:flex;align-items:center;gap:.6rem;font-size:.875rem;color:var(--sp-muted)}
   .skill-planner input{box-sizing:border-box;background:var(--sp-bg);color:var(--sp-text);border:1px solid var(--sp-border);border-radius:6px;padding:.6rem .75rem;min-width:0;min-height:44px;font-size:1rem}
@@ -82,15 +87,15 @@ import skills from '../data/skills.json';
   .sp-canvas svg.is-dragging{cursor:grabbing}
   .sp-connection{stroke:var(--sp-border);stroke-width:1.7;fill:none}
   .sp-connection.is-active{stroke:var(--sp-accent);stroke-width:2.8}
-  .sp-connection.is-open{stroke:var(--subtle,#a69aaf)}
+  .sp-connection.is-open{stroke:var(--subtle)}
   .sp-node{cursor:pointer;outline:none}
   .sp-node circle{fill:var(--sp-surface);stroke:var(--sp-border);stroke-width:2.2}
   .sp-node image{opacity:.52;pointer-events:none;image-rendering:auto}
   .sp-node.is-root circle{stroke:var(--sp-gold);stroke-width:2.8}
   .sp-node.is-ready circle{stroke:var(--sp-muted);fill:var(--sp-raised)}
   .sp-node.is-ready image,.sp-node.is-allocated image{opacity:1}
-  .sp-node.is-allocated circle{stroke:var(--sp-accent);fill:var(--primary,#7f384a);stroke-width:3.4}
-  .sp-node.is-focused circle,.sp-node:focus-visible circle{stroke:var(--sp-gold);stroke-width:4.7}
+  .sp-node.is-allocated circle{stroke:var(--sp-accent);fill:var(--primary);stroke-width:3.4}
+  .sp-node.is-focused circle,.sp-node:focus-visible circle{stroke:var(--focus);stroke-width:4.7}
   .sp-node:hover circle{stroke:var(--sp-text)}
   .sp-map-controls{position:absolute;bottom:1rem;left:1rem;display:flex;gap:.3rem}
   .sp-map-controls button{background:var(--sp-surface);font-size:.875rem;min-width:44px;min-height:44px;box-shadow:0 2px 5px #0002}
