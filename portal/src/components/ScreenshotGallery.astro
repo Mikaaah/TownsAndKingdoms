@@ -1,17 +1,14 @@
 ---
 import { href } from '../lib/data';
+import screenshotRecords from '../data/screenshot-gallery.json';
 
-const screenshots = [
-  {
-    src: href('media/screenshots/frozen-ruins-2026-11-14.webp'),
-    title: 'Frozen ruins under an aurora',
-    alt: 'A snowy Minecraft courtyard lit by cyan lanterns beneath a blue-green aurora.',
-    width: 1920,
-    height: 1080,
-  },
-];
+const screenshots = screenshotRecords.map(({ file, ...details }) => ({
+  ...details,
+  src: href(`media/screenshots/${file}`),
+}));
 const first = screenshots[0];
 const hasMultiple = screenshots.length > 1;
+const initialCount = `1 of ${screenshots.length}`;
 ---
 <section class="gallery" aria-labelledby="screenshots" data-screenshot-gallery={JSON.stringify(screenshots)}>
   <h2 id="screenshots">Screenshots</h2>
@@ -25,6 +22,7 @@ const hasMultiple = screenshots.length > 1;
   {hasMultiple && (
     <div class="gallery-actions gallery-preview-actions" aria-label="Browse screenshots" role="group">
       <button type="button" data-gallery-step="-1">Previous</button>
+      <span class="gallery-count" data-gallery-count aria-live="polite">{initialCount}</span>
       <button type="button" data-gallery-step="1">Next</button>
     </div>
   )}
@@ -38,6 +36,7 @@ const hasMultiple = screenshots.length > 1;
     {hasMultiple && (
       <div class="gallery-actions" aria-label="Browse screenshots" role="group">
         <button type="button" data-gallery-step="-1">Previous</button>
+        <span class="gallery-count" data-gallery-count>{initialCount}</span>
         <button type="button" data-gallery-step="1">Next</button>
       </div>
     )}
@@ -54,6 +53,7 @@ const hasMultiple = screenshots.length > 1;
     const screenshots: Screenshot[] = JSON.parse(gallery.dataset.screenshotGallery ?? '[]');
     const images = gallery.querySelectorAll<HTMLImageElement>('[data-gallery-image]');
     const titles = gallery.querySelectorAll('[data-gallery-title]');
+    const counts = gallery.querySelectorAll('[data-gallery-count]');
     let current = 0;
 
     function step(change: number) {
@@ -67,6 +67,7 @@ const hasMultiple = screenshots.length > 1;
         image.height = screenshot.height;
       });
       titles.forEach(title => { title.textContent = screenshot.title; });
+      counts.forEach(count => { count.textContent = `${current + 1} of ${screenshots.length}`; });
     }
 
     preview.addEventListener('click', event => {
@@ -107,7 +108,7 @@ const hasMultiple = screenshots.length > 1;
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+    object-fit: contain;
   }
   .gallery-brand {
     position: absolute;
@@ -128,7 +129,8 @@ const hasMultiple = screenshots.length > 1;
     color: #fff;
     font-size: 14px;
   }
-  .gallery-actions { display: flex; gap: 8px; }
+  .gallery-actions { display: flex; align-items: center; gap: 8px; }
+  .gallery-count { padding-inline: 4px; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .gallery-preview-actions { margin-top: 8px; }
   .gallery-actions button { font-size: 14px; padding: 6px 10px; }
 
