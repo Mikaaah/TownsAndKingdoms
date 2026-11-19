@@ -1,0 +1,53 @@
+{
+  "title": "Respawn a defeated boss",
+  "description": "Use a Boss Respawn Token to start a rematch at a supported encounter’s respawn cage.",
+  "icon": "horn",
+  "keywords": "respawn tokens boss rematch cage revive repeat farm boss already died",
+  "materials": [
+    {
+      "label": "Boss Respawn Token",
+      "item": "kubejs:boss_respawn_token",
+      "count": 1,
+      "description": "May appear in random quest rewards."
+    }
+  ],
+  "steps": [
+    {
+      "id": "get-a-token",
+      "title": "Collect a Boss Respawn Token",
+      "text": "Check the rewards of completed quests and claim any random rewards. A Boss Respawn Token can turn up among them. Keep a token for the encounter you want to repeat."
+    },
+    {
+      "id": "find-the-cage",
+      "title": "Find the cage in the original arena",
+      "text": "A supported boss leaves a Boss Respawner after it is defeated. Return to the original encounter and look for the cage or its glowing outline nearby. Aim at the cage and read the boss and required item in Jade."
+    },
+    {
+      "id": "start-the-rematch",
+      "title": "Use the token on the cage",
+      "text": "Hold one Boss Respawn Token and right-click the cage. It consumes the token. Stay nearby and give it room. Several Twilight Forest encounters restore their own boss spawner at the arena instead of spawning the boss immediately."
+    }
+  ],
+  "tips": [
+    {
+      "id": "no-cage",
+      "title": "There is no cage in the arena",
+      "text": "Check the original boss spawn location and nearby reward chest. Examples of supported encounters include Sirok, Helvar, Ferrous Wroughtnaut and the Snow Queen. Cataclysm encounters use their own altars, offerings or activation procedures."
+    },
+    {
+      "id": "no-spawn",
+      "title": "The boss hasn’t appeared",
+      "text": "Check that difficulty is above Peaceful and wait close to the respawner. If it restored a Twilight Forest spawner, approach that block to begin the encounter."
+    }
+  ],
+  "links": [
+    {
+      "label": "Boss encounter guide",
+      "path": "bosses/#eye-guide"
+    },
+    {
+      "label": "Unidentified boss drops",
+      "path": "loot/pools/#bosses"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Start Thaumaturge research",
+  "description": "Discover Vis Crystals, make a Thaumonomicon, and set up the workbench and research table used to study the aura.",
+  "icon": "bookred",
+  "keywords": ["thaumaturge", "thaumonomicon", "thaumometer", "salis mundus", "vis", "research", "magic"],
+  "materials": [
+    { "label": "Salis Mundus", "item": "thaumaturge:salis_mundus", "count": 2, "description": "One for the Bookshelf and one for the Crafting Table." },
+    { "label": "Bookshelf", "item": "minecraft:bookshelf", "count": 1 },
+    { "label": "Crafting Table", "item": "minecraft:crafting_table", "count": 1 },
+    { "label": "Thaumometer", "item": "thaumaturge:thaumometer", "count": 1, "description": "Craft this after opening First Steps in your Thaumonomicon." },
+    { "label": "Wood Table", "item": "thaumaturge:table_wood", "count": 2 },
+    { "label": "Scribing Tools", "item": "thaumaturge:scribing_tools", "count": 1 }
+  ],
+  "steps": [
+    {
+      "id": "strange-dreams",
+      "title": "Find Vis Crystals and read Strange Dreams",
+      "text": "Collect a Vis Crystal or break a Vis Crystal cluster. Then sleep and wake to receive the Strange Dreams journal. It opens the first part of Thaumaturge research. Gather crystals from several different aspects for the next step."
+    },
+    {
+      "id": "thaumonomicon",
+      "title": "Make Salis Mundus and the Thaumonomicon",
+      "text": "Craft Salis Mundus in any arrangement from a Bowl, Flint, Redstone Dust, and three Vis Crystals of different aspects. Flint and the Bowl are returned. Use one dose on a placed Bookshelf after the Strange Dreams discovery, then pick up the Thaumonomicon and open Basics → First Steps."
+    },
+    {
+      "id": "arcane-workbench",
+      "title": "Make an Arcane Workbench and Thaumometer",
+      "text": "Use the second dose of Salis Mundus on a placed Crafting Table. After it transforms, return to First Steps and complete the workbench requirement. For the Thaumometer, put a Glass Pane in the middle with a Gold Ingot above, below, left and right. Supply one crystal of each primal aspect in the crystal slots. The recipe needs 20 Vis from the local aura."
+    },
+    {
+      "id": "research-table",
+      "title": "Scan the world and start researching",
+      "text": "Aim the Thaumometer at an unfamiliar block or creature and hold use to scan it. Finish First Steps when you have the required observation. Place two Wood Tables side by side and use Scribing Tools on one to form the Research Table. Read the Research entry in Basics to see how to use aspect points and work on a research note."
+    }
+  ],
+  "tips": [
+    {
+      "id": "salis-mundus-wont-craft",
+      "title": "The Salis Mundus recipe stays blank",
+      "text": "Read the crystals’ aspect names. The three crystals in each batch must be different, even if their icons look similar."
+    },
+    {
+      "id": "no-arcane-result",
+      "title": "The Arcane Workbench shows no result",
+      "text": "Reopen First Steps and check its requirements. Look at the crystal slots and aura Vis readout. Thaumometer crafting needs Aer, Ignis, Terra, Aqua, Ordo, and Perditio."
+    },
+    {
+      "id": "scan-blocked",
+      "title": "An object will not scan yet",
+      "text": "Start with common blocks and creatures to discover more aspects. Some scans need you to know their component aspects first."
+    }
+  ],
+  "links": [
+    { "label": "Thaumaturge mod", "path": "https://www.curseforge.com/minecraft/mc-mods/thaumaturge" },
+    { "label": "Get started with Ars Nouveau", "path": "guides/ars-nouveau/" },
+    { "label": "Set up Witchery", "path": "guides/witchery/" }
+  ]
+}

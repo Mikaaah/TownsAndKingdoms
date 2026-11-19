@@ -3,10 +3,28 @@
   "description": "Surround a shallow pool with flowers and drop in a diamond to enter Twilight Forest from the Overworld.",
   "icon": "herb",
   "materials": [
-    "4 water source blocks",
-    "12 flowers or other supported plants",
-    "Grass or dirt for a 4 × 4 footprint",
-    "1 Diamond"
+    {
+      "label": "Water Source",
+      "item": "minecraft:water_bucket",
+      "count": 4,
+      "description": "Refill a bucket as needed."
+    },
+    {
+      "label": "Flower",
+      "item": "minecraft:poppy",
+      "count": 12
+    },
+    {
+      "label": "Grass Block or Dirt",
+      "item": "minecraft:grass_block",
+      "count": 12,
+      "description": "Use the blocks already surrounding the pool."
+    },
+    {
+      "label": "Diamond",
+      "item": "minecraft:diamond",
+      "count": 1
+    }
   ],
   "steps": [
     {

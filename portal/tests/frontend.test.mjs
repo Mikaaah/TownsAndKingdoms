@@ -193,6 +193,15 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
     line.dataset.dependency,line.dataset.dependent,...['x1','y1','x2','y2'].map(name=>line.getAttribute(name)),
    ]);
    assert.deepEqual(renderedEdges,expectedEdges,chapter.id);
+   const frames=[...stage.querySelectorAll('[data-quest-radius]')].map(node=>({
+    x:Number(node.dataset.questX),y:Number(node.dataset.questY),radius:Number(node.dataset.questRadius),
+   }));
+   for(const [index,frame] of frames.entries()){
+    for(const other of frames.slice(index+1)){
+     const gap=Math.max(Math.abs(frame.x-other.x),Math.abs(frame.y-other.y))-frame.radius-other.radius;
+     assert.ok(gap>=5.99,chapter.id+' has overlapping quest frames');
+    }
+   }
    const info=stage.querySelector('.chapter-info');
    assert.ok(info?.textContent.includes(machineInfo[chapter.id].purpose));
    for(const machine of machineInfo[chapter.id].machines)assert.ok(info.textContent.includes(machine.title),machine.title);
@@ -236,6 +245,11 @@ test('build guides publish their diagrams and direct search destinations',()=>{
   const doc=dom.window.document;
   assert.equal(doc.querySelector('h1').textContent,guide.title);
   assert.equal(doc.querySelectorAll('.build-steps > li').length,guide.steps.length);
+  const checklist=[...doc.querySelectorAll('[data-materials-label]')];
+  assert.equal(checklist.length,guide.materials.length,slug);
+  for(const [index,material] of guide.materials.entries()){
+   if(typeof material.count==='number')assert.match(checklist[index].textContent,new RegExp('^'+material.count+'x '));
+  }
   for(const {figure} of guide.steps.filter(step=>step.figure)){
    const image=doc.querySelector(`img[src="/TownsAndKingdoms/${figure.src}"]`);
    assert.ok(image?.alt);

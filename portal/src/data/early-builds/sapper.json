@@ -3,11 +3,18 @@
   "description": "Tap a living tree for Resin, then pipe it into a heated Compressor for your first Raw Rubber. This setup supplies the rubber you need for Sealed Mechanisms.",
   "icon": "potionblue",
   "materials": [
-    "A grown Oak, Birch or Biomes O' Plenty Maple tree",
-    "Sapper, Mechanical Pump and Compressor",
-    "Fluid Pipes, Cogwheels and Shafts",
-    "Water Wheel or existing Create rotational power",
-    "Campfire, Depot or Belt, and a Smoker"
+    { "label": "Oak Sapling", "count": 1, "item": "minecraft:oak_sapling", "description": "Grow a tree and keep its leaves. A grown Oak, Birch or Biomes O' Plenty Maple also works." },
+    { "label": "Sapper", "count": 1, "item": "rubberworks:sapper" },
+    { "label": "Mechanical Pump", "count": 1, "item": "create:mechanical_pump" },
+    { "label": "Compressor", "count": 1, "item": "rubberworks:compressor" },
+    { "label": "Fluid Pipe", "count": "As needed", "item": "create:fluid_pipe", "description": "Connect the Sapper to the Compressor through the pump." },
+    { "label": "Cogwheel", "count": "As needed", "item": "create:cogwheel", "description": "Drive the Sapper and route rotation to the pump and Compressor." },
+    { "label": "Shaft", "count": "As needed", "item": "create:shaft", "description": "Use enough shafts to connect your machines to rotational power." },
+    { "label": "Water Wheel", "count": 1, "item": "create:water_wheel", "description": "Optional. Use one if you have no nearby rotation." },
+    { "label": "Campfire", "count": 1, "item": "minecraft:campfire", "description": "Light it directly below the Compressor." },
+    { "label": "Depot", "count": 1, "item": "create:depot", "description": "Catch the Raw Rubber. A Create Belt also works." },
+    { "label": "Smoker", "count": 1, "item": "minecraft:smoker", "description": "Cure the Raw Rubber." },
+    { "label": "Andesite Machine", "count": 2, "item": "kubejs:tk3_rotation_machine", "description": "If crafting the Sapper and Compressor, stonecut one for each." }
   ],
   "steps": [
     {

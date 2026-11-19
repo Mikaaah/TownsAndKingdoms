@@ -6,12 +6,12 @@ import { href } from '../../lib/data';
 
 const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(id));
 const kit = [
-  { id: 'container', label: 'Chest or barrel', description: 'Holds stock for the shop.', icon: 'media/clipboard/barrel.png' },
-  { id: 'packager', label: 'Packager', description: 'Boxes completed orders.', icon: 'media/clipboard/packager.png', href: recipeLink('tnk:machines/tier_03/crafting/create/packager') },
-  { id: 'stock-link', label: 'Stock Link', description: 'Connects the Packager to the shop network.', icon: 'media/clipboard/stock-link.png', href: recipeLink('tnk:machines/tier_03/native_upgrade/create/stock_link/0') },
-  { id: 'stock-ticker', label: 'Stock Ticker', description: 'Runs checkout and stores payments.', icon: 'media/clipboard/stock-ticker.png', href: recipeLink('tnk:machines/tier_03/native_upgrade/create/stock_ticker/0') },
-  { id: 'stock-keeper', label: 'Stock Keeper', description: 'Use a mob in a Create Seat or a filled Blaze Burner.', icon: 'media/clipboard/stock-keeper.png' },
-  { id: 'table-cloth', label: 'Table Cloth', description: 'Displays an offer. One wool block in your chosen color and one Andesite Alloy make two cloths.', icon: 'media/clipboard/table-cloth.png' },
+  { id: 'container', label: 'Chest or Barrel', count: 1, item: 'minecraft:barrel', description: 'Holds stock for the shop.', icon: 'media/clipboard/barrel.png' },
+  { id: 'packager', label: 'Packager', count: 1, item: 'create:packager', description: 'Boxes completed orders.', icon: 'media/clipboard/packager.png', href: recipeLink('tnk:machines/tier_03/crafting/create/packager') },
+  { id: 'stock-link', label: 'Stock Link', count: 1, item: 'create:stock_link', description: 'Connects the Packager to the shop network.', icon: 'media/clipboard/stock-link.png', href: recipeLink('tnk:machines/tier_03/native_upgrade/create/stock_link/0') },
+  { id: 'stock-ticker', label: 'Stock Ticker', count: 1, item: 'create:stock_ticker', description: 'Runs checkout and stores payments.', icon: 'media/clipboard/stock-ticker.png', href: recipeLink('tnk:machines/tier_03/native_upgrade/create/stock_ticker/0') },
+  { id: 'stock-keeper', label: 'Stock Keeper', count: 1, item: 'create:red_seat', description: 'Use a mob in a Create Seat or a filled Blaze Burner.', icon: 'media/clipboard/stock-keeper.png' },
+  { id: 'table-cloth', label: 'Table Cloth', count: 1, item: 'create:white_table_cloth', description: 'Displays an offer. One wool block in your chosen color and one Andesite Alloy make two cloths.', icon: 'media/clipboard/table-cloth.png' },
 ];
 const tutorialVideo = 'baWJ_Xg-4gU';
 const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';

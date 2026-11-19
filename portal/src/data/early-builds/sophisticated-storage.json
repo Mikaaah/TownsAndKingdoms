@@ -3,11 +3,40 @@
   "description": "Upgrade a chest or barrel in place, make more room for bulk materials and control what your factory puts in or takes out.",
   "icon": "key",
   "materials": [
-    "A placed vanilla Chest or Barrel",
-    "One Lever and four Sticks for a Basic Tier Upgrade",
-    "For bulk storage, a Stack Upgrade Tier 1",
-    "For automated sorting, a Filter Upgrade and a free upgrade slot",
-    "For the second slot on a single Chest or Barrel, one Lever and eight Iron Ingots"
+    {
+      "label": "Chest or Barrel",
+      "item": "minecraft:barrel",
+      "count": 1
+    },
+    {
+      "label": "Lever",
+      "item": "minecraft:lever",
+      "count": 1,
+      "description": "For the Basic Tier Upgrade. Bring another Lever for the Iron upgrade."
+    },
+    {
+      "label": "Stick",
+      "item": "minecraft:stick",
+      "count": 4
+    },
+    {
+      "label": "Stack Upgrade Tier 1",
+      "item": "sophisticatedstorage:stack_upgrade_tier_1",
+      "count": 1,
+      "description": "Optional. Doubles stack size for bulk storage."
+    },
+    {
+      "label": "Filter Upgrade",
+      "item": "sophisticatedstorage:filter_upgrade",
+      "count": 1,
+      "description": "Optional. Put it in a free slot for automated sorting."
+    },
+    {
+      "label": "Iron Ingot",
+      "item": "minecraft:iron_ingot",
+      "count": 8,
+      "description": "Optional. Combine with a Lever to upgrade a Basic container to Iron."
+    }
   ],
   "steps": [
     {
@@ -49,9 +78,21 @@
     }
   ],
   "links": [
-    { "label": "Upgrade Base recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fsophisticatedstorage%2Fflexible_upgrade_base" },
-    { "label": "Storage Controller recipe", "path": "recipes/#recipe=tnk%3Amachines%2Ftier_04%2Fnative_upgrade%2Fsophisticatedstorage%2Fcontroller%2F0" },
-    { "label": "Factory storage Ponder", "path": "ponder/?scene=storage_controller" },
-    { "label": "Endgame Linked Chests", "path": "guides/linked-chests/" }
+    {
+      "label": "Upgrade Base recipe",
+      "path": "recipes/#recipe=tnk%3Acompat%2Fsophisticatedstorage%2Fflexible_upgrade_base"
+    },
+    {
+      "label": "Storage Controller recipe",
+      "path": "recipes/#recipe=tnk%3Amachines%2Ftier_04%2Fnative_upgrade%2Fsophisticatedstorage%2Fcontroller%2F0"
+    },
+    {
+      "label": "Factory storage Ponder",
+      "path": "ponder/?scene=storage_controller"
+    },
+    {
+      "label": "Endgame Linked Chests",
+      "path": "guides/linked-chests/"
+    }
   ]
 }

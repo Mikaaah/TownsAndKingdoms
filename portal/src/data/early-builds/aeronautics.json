@@ -3,10 +3,14 @@
   "description": "Make a small Aeronautics test platform in Chapter VI. Check glue, lift and propulsion before building a full ship.",
   "icon": "map",
   "materials": [
-    "Physics Assembler and Super Glue or Honey Glue",
-    "A small hull and a clear place to test",
-    "Envelope blocks, an Adjustable Burner and a redstone control",
-    "For forward movement, a powered propeller and a way to control it"
+    { "label": "Physics Assembler", "count": 1, "item": "simulated:physics_assembler", "description": "Mount it beside the hull in a clear area." },
+    { "label": "Super Glue", "count": 1, "item": "create:super_glue", "description": "Honey Glue also works." },
+    { "label": "Hull Blocks", "item": "minecraft:spruce_planks", "description": "Use enough lightweight blocks for a small, connected hull." },
+    { "label": "Envelope Blocks", "item": "aeronautics:white_envelope", "description": "Bring enough to seal the balloon around its hollow interior." },
+    { "label": "Adjustable Burner", "count": 1, "item": "aeronautics:adjustable_burner" },
+    { "label": "Lever", "count": 1, "item": "minecraft:lever", "description": "Use this or another redstone control to power the burner." },
+    { "label": "Propeller Bearing", "count": 1, "item": "aeronautics:propeller_bearing", "description": "Optional for the lift test. Power and control it to move forward." },
+    { "label": "Sail Blocks", "count": "2+", "item": "create:white_sail", "description": "For propulsion, attach at least two valid sail blocks." }
   ],
   "steps": [
     {

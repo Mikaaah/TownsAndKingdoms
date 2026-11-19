@@ -3,13 +3,21 @@
   "description": "Find a mineral vein, assemble the engine and Bucket Wheel, then collect and sort the material it digs up.",
   "icon": "pickaxe",
   "materials": [
-    "Survey Tools, Core Sample Drill and a portable source of 40 FE/t",
-    "Engineer's Hammer and Engineer's Manual",
-    "26 Steel Scaffolding and 16 Steel Sheetmetal",
-    "8 Blocks of Steel and 3 Radiators",
-    "9 Light Engineering Blocks, 3 Heavy Engineering Blocks and 1 Redstone Engineering Block",
-    "2 Towns & Kingdoms Heavy Engineering Machines",
-    "A connection that can supply 4,096 FE/t, plus storage or a conveyor at the output"
+    { "label": "Mineral Survey Tools", "count": 1, "item": "immersiveengineering:survey_tools" },
+    { "label": "Core Sample Drill", "count": 1, "item": "immersiveengineering:sample_drill" },
+    { "label": "LV Accumulator", "count": 1, "item": "immersiveengineering:capacitor_lv", "description": "A charged portable option for the drill's 40 FE/t supply." },
+    { "label": "Engineer's Hammer", "count": 1, "item": "immersiveengineering:hammer" },
+    { "label": "Engineer's Manual", "count": 1, "item": "immersiveengineering:manual" },
+    { "label": "Steel Scaffolding", "count": 26, "item": "immersiveengineering:steel_scaffolding_standard", "description": "Use the Standard variant." },
+    { "label": "Steel Sheetmetal", "count": 16, "item": "immersiveengineering:sheetmetal_steel" },
+    { "label": "Block of Steel", "count": 8, "item": "immersiveengineering:storage_steel" },
+    { "label": "Radiator", "count": 3, "item": "immersiveengineering:radiator" },
+    { "label": "Light Engineering Block", "count": 9, "item": "immersiveengineering:light_engineering" },
+    { "label": "Heavy Engineering Block", "count": 3, "item": "immersiveengineering:heavy_engineering" },
+    { "label": "Redstone Engineering Block", "count": 1, "item": "immersiveengineering:rs_engineering" },
+    { "label": "Heavy Engineering Machine", "count": 2, "item": "kubejs:tk3_heavy_engineering_machine", "description": "One custom Towns & Kingdoms block for each part of the Excavator." },
+    { "label": "HV Wire Connector", "count": "As needed", "item": "immersiveengineering:connector_hv", "description": "One option for a connection that can sustain 4,096 FE/t at the engine." },
+    { "label": "Chest", "count": 1, "item": "minecraft:chest", "description": "Catch material at the rear output, or carry it away on a conveyor." }
   ],
   "steps": [
     {

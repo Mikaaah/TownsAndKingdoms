@@ -1,0 +1,60 @@
+{
+  "title": "Cast your first spells with Iron’s Spells",
+  "description": "Craft a Flimsy Journal, inscribe a found scroll, then use ink and a school focus to make more spells.",
+  "icon": "bookopen",
+  "keywords": ["spellbook", "Flimsy Journal", "Ironbound Tome", "Inscription Table", "Scroll Forge", "Common Ink", "Firebolt", "spell wheel", "mana regeneration"],
+  "materials": [
+    { "label": "Flimsy Journal", "count": 1, "item": "irons_spellbooks:copper_spell_book" },
+    { "label": "Inscription Table", "count": 1, "item": "irons_spellbooks:inscription_table" },
+    { "label": "Spell Scroll", "count": 1, "item": "irons_spellbooks:scroll", "icon": "media/ponder/textures/irons_spellbooks/item/scroll.png", "description": "Start with a found scroll. A second spell can add healing or utility." },
+    { "label": "Scroll Forge", "count": 1, "item": "irons_spellbooks:scroll_forge", "description": "Build this when you are ready to craft scrolls." },
+    { "label": "Paper", "count": 1, "item": "minecraft:paper", "description": "For your first crafted scroll." },
+    { "label": "Common Ink", "count": 1, "item": "irons_spellbooks:common_ink", "description": "Use one bottle for a Common spell such as Firebolt." },
+    { "label": "Blaze Rod", "count": 1, "item": "minecraft:blaze_rod", "description": "The school focus for Fire spells such as Firebolt." }
+  ],
+  "steps": [
+    {
+      "id": "first-spellbook",
+      "title": "Craft a Flimsy Journal and find a scroll",
+      "text": "Craft a Flimsy Journal with two Copper Ingots, six Paper and one String. It holds five spells. Look for scrolls in magical structures and their loot chests. Read the scroll’s school, level and mana cost before deciding what to keep. A low-cost damage spell is a good first pick."
+    },
+    {
+      "id": "inscribe",
+      "title": "Add a spell at the Inscription Table",
+      "text": "Craft an Inscription Table with one Book, three Wooden Slabs and two Wooden Fences. Open the table, place the journal and scroll in the two input slots, select an empty spell slot and click the inscription button. Take the journal back and check its tooltip for the new spell. To recover a removable spell later, select its filled slot and take the scroll from the output."
+    },
+    {
+      "id": "cast",
+      "title": "Equip the journal and cast",
+      "text": "Equip the journal in the Spell Book slot in Curios. Hold R to open the Spell Wheel, point at your spell and release. Press V to cast the selected spell. These are the default bindings. Search Controls for Spell Wheel Hold and Cast Selected Spell if you changed them or another mod shares the key. Start somewhere safe, then add a second spell for movement, recovery or another useful effect."
+    },
+    {
+      "id": "craft-scrolls",
+      "title": "Craft a scroll with ink and a school focus",
+      "text": "Craft the Scroll Forge with three Polished Deepslate and four Crying Obsidian. Put in one Paper, one Ink and one school focus. Try Common Ink and a Blaze Rod, then select Firebolt and take its scroll. The Forge consumes all three inputs. The focus chooses the school and the ink determines the resulting rarity and its lowest available spell level. Look for ink in magical loot and use JEI to check the other schools and ink recipes."
+    }
+  ],
+  "tips": [
+    {
+      "id": "out-of-mana",
+      "title": "The spell costs more mana than you have",
+      "text": "Wait for the mana bar to recover or try a lower-level spell. If the cost exceeds a full bar, equip gear or pick skills that increase Max Mana. Mana Regeneration helps the bar refill between casts. Check the cost and your current mana before raising a spell’s level."
+    },
+    {
+      "id": "cast-fails",
+      "title": "The spell is selected but will not cast",
+      "text": "Check the message above your hotbar. Cooldown sets the wait before another cast, casting time sets how long the cast takes, and some spells need a valid target. A spell marked Unlearned needs its own discovery first. Search the spell in JEI or follow its in-game clue."
+    },
+    {
+      "id": "forge-empty",
+      "title": "The Scroll Forge has no output",
+      "text": "Check that the focus matches the spell’s school and that the ink meets its minimum rarity. Common Ink works for Firebolt. Heal is a Holy spell and starts at Uncommon, so it needs a Divine Pearl and at least Uncommon Ink."
+    }
+  ],
+  "links": [
+    { "label": "Skilltree planner", "path": "skills/" },
+    { "label": "Origins and titles", "path": "mechanics/#origins" },
+    { "label": "Iron’s Spells progression guide", "path": "https://iron.wiki/progression/" },
+    { "label": "Iron’s Spells spellbook reference", "path": "https://iron.wiki/spellbooks/" }
+  ]
+}
