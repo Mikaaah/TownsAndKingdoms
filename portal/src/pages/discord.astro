@@ -12,7 +12,10 @@ const invite = 'https://discord.gg/CRYk3uDPVt';
     <a class="card card-link" href={href('support/')}><h3>Work through a problem</h3><p>A clear description, repeatable steps and the relevant log make a conversation much easier to follow.</p><span class="card-foot">Reporting guide →</span></a>
     <a class="card card-link" href={href('features/')}><h3>Share a project</h3><p>Show the finished build and the idea behind it. A few useful details can help another player try their own approach.</p><span class="card-foot">Explore the pack →</span></a>
   </div></section>
-  <div class="prose section"><h2>A useful first message</h2><p>Read the community’s welcome and rules when you join, then use the channel list shown in Discord to choose where to post. Keep a question in one conversation so the people helping you can see what you have already tried.</p><ul><li><strong>For gameplay:</strong> name the item or mechanic and explain the goal.</li><li><strong>For a recipe:</strong> include the output’s item ID and the process you are using.</li><li><strong>For a build:</strong> share a clear screenshot and describe the part you are pleased with.</li><li><strong>For an error:</strong> include the installed pack file, what happened and the relevant log.</li></ul><h2>Keep useful discoveries</h2><p>Use <a href="https://github.com/Mikaaah/TownsAndKingdoms/issues" target="_blank" rel="noopener">GitHub issues</a> for a reproducible pack bug or a concrete feature request. Discord is a good place to discuss it first; the issue gives the outcome a place to be tracked.</p></div>
+  <section class="prose section">
+    <h2>Keep useful discoveries</h2>
+    <p>Use <a href="https://github.com/Mikaaah/TownsAndKingdoms/issues" target="_blank" rel="noopener">GitHub issues</a> for a reproducible pack bug or a concrete feature request. Discord is a good place to discuss it first; the issue gives the outcome a place to be tracked.</p>
+  </section>
   <script>
     document.getElementById('copy-invite')?.addEventListener('click', async () => {
       const status = document.getElementById('invite-status');

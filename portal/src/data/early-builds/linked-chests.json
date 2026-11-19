@@ -95,10 +95,6 @@
     {
       "label": "Linked Pouch recipe",
       "path": "recipes/#recipe=tnk%3Acompat%2Flinkedchests%2Flinked_pouch_materials"
-    },
-    {
-      "label": "Matching endpoints Ponder",
-      "path": "ponder/?scene=linked_storage_02"
     }
   ]
 }

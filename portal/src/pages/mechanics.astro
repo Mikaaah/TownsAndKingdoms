@@ -88,17 +88,15 @@ const badgeStyle = (id: string) => {
     </div>
     <div class="origin-grid" data-origin-grid>
       {origins.map((origin: any) => <article class="origin-entry" id={'origin-'+origin.id} data-origin-tier={origin.tier}>
-        <details>
-          <summary>
-            {origin.icon && <img src={href(origin.icon)} alt="" width="32" height="32" loading="lazy" />}
-            <span class="origin-summary"><span class="origin-name">{origin.name}</span>{origin.perks?.[0] && <span class="origin-first-perk">{origin.perks[0].description}</span>}</span>
-            {origin.tier === 'Ascended' && <span class="origin-ascended" title="Ascended Origin"><QuestIcon name="potionblue" size={20} /><span class="sr-only">Ascended</span></span>}
-          </summary>
-          <div class="origin-body">
-            <p>{origin.description}</p>
-            {origin.perks?.length > 1 && <ul>{origin.perks.slice(1).map((perk: any) => <li>{perk.description}</li>)}</ul>}
-          </div>
-        </details>
+        <header class="origin-heading">
+          {origin.icon && <img src={href(origin.icon)} alt="" width="32" height="32" loading="lazy" />}
+          <h3>{origin.name}</h3>
+          {origin.tier === 'Ascended' && <span class="origin-ascended" title="Ascended Origin"><QuestIcon name="potionblue" size={20} /><span class="sr-only">Ascended</span></span>}
+        </header>
+        <ul class="origin-perks" aria-label={origin.name + ' perks'}>
+          {origin.perks.map((perk: any) => <li>{perk.description}</li>)}
+        </ul>
+        <p class="origin-description">{origin.description}</p>
       </article>)}
     </div>
     <div class="mechanics-reference">
@@ -264,51 +262,33 @@ const badgeStyle = (id: string) => {
   .origin-count { color: var(--subtle); font-size: 14px; padding: 10px 0 10px 4px; }
   .origin-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    align-items: start;
     gap: 8px;
   }
   .origin-entry {
     min-width: 0;
+    padding: 13px;
     border: 1px solid var(--border);
     border-radius: 6px;
     background: var(--surface);
+    scroll-margin-top: calc(var(--header-height) + 12px);
   }
   .origin-entry:target { border-color: var(--accent); }
-  .origin-entry summary {
+  .origin-heading {
     display: flex;
     align-items: center;
-    min-height: 76px;
     gap: 9px;
-    padding: 11px 12px;
-    cursor: pointer;
-    list-style: none;
   }
-  .origin-entry summary::-webkit-details-marker { display: none; }
-  .origin-entry summary::after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-right: 1px solid var(--subtle);
-    border-bottom: 1px solid var(--subtle);
-    transform: rotate(45deg) translate(-2px, -2px);
-    margin: 0 3px 0 auto;
-    flex-shrink: 0;
-  }
-  .origin-entry details[open] summary::after { transform: rotate(225deg); }
+  .origin-heading h3 { margin: 0; font-size: 16px; }
   .origin-entry img {
     flex-shrink: 0;
     image-rendering: pixelated;
     object-fit: contain;
   }
-  .origin-name,
-  .origin-first-perk { display: block; }
-  .origin-name { font-weight: 600; }
-  .origin-first-perk { color: var(--subtle); font-size: 13px; line-height: 1.4; }
   .origin-ascended { margin-left: auto; }
-  .origin-entry[data-origin-tier="Ascended"] summary::after { margin-left: 0; }
-  .origin-body { border-top: 1px solid var(--border); padding: 10px 12px 12px; }
-  .origin-body p { margin: 0 0 6px; }
-  .origin-body ul { margin: 0; padding-left: 20px; }
+  .origin-perks { margin: 8px 0; padding-inline-start: 20px; font-size: 14px; line-height: 1.45; }
+  .origin-perks li { margin: 3px 0; }
+  .origin-perks li::marker { color: var(--gold-text); }
+  .origin-description { margin: 10px 0 0; color: var(--subtle); font-size: 14px; line-height: 1.45; }
   .title-badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
   .title-badge {
     display: block;

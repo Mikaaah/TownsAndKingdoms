@@ -124,7 +124,8 @@ test('recipe sprites follow exact inputs, alternatives and fluid outputs',async(
 test('global search indexes every requested category and opens through Ctrl+K',async()=>{
  const docs=json('search');const categories=new Set(docs.map(d=>d.category));
  assert(!JSON.stringify(docs).includes('[object Object]'));
- for(const c of ['Weapons','Recipes','Mods','Chapters','Bosses','Skills','Guides','Ponder','Origins'])assert(categories.has(c),c);
+ for(const c of ['Weapons','Recipes','Mods','Chapters','Bosses','Skills','Guides','Origins','Tools'])assert(categories.has(c),c);
+ assert.ok(!docs.some(entry=>entry.url.includes('/ponder/')));
  assert.equal(docs.filter(d=>d.category==='Skills').length,588);
  const engine=new MiniSearch({fields:['name','id','description','mod','style'],storeFields:['category','id','name','url','subtitle'],idField:'_key',searchOptions:{boost:{name:4,id:3},prefix:true,fuzzy:0.15}});engine.addAll(docs);
  const dom=browser('index');const {window}=dom;
@@ -219,7 +220,14 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
 test('character and loot navigate independently and expose their complete reference',()=>{
  const character=browser('mechanics'),loot=browser('loot');
  const characterDoc=character.window.document,lootDoc=loot.window.document;
- assert.equal(characterDoc.querySelectorAll('.origin-grid article').length,35);
+ const origins=json('mechanics').origins;
+ assert.equal(characterDoc.querySelectorAll('.origin-grid article').length,origins.length);
+ for(const origin of origins){
+  const card=characterDoc.getElementById('origin-'+origin.id);
+  assert.ok(card,origin.name);
+  assert.deepEqual([...card.querySelectorAll('.origin-perks li')].map(item=>item.textContent),origin.perks.map(perk=>perk.description));
+  assert.equal(card.querySelector('.origin-perks').closest('details'),null);
+ }
  for(const id of ['leveling','origins','titles'])assert(characterDoc.getElementById(id));
  assert(characterDoc.querySelector('main a[href="/TownsAndKingdoms/loot/"]'));
  assert.equal(characterDoc.querySelector('[data-loot-calculator]'),null);
@@ -263,6 +271,17 @@ test('build guides publish their diagrams and direct search destinations',()=>{
   }
   dom.window.close();
  }
+});
+test('the guide directory is separate and old Ponder URLs redirect to it',()=>{
+ const guides=browser('tutorials'),start=browser('guides'),ponder=browser('ponder'),discord=browser('discord');
+ const directory=guides.window.document.getElementById('workshop-builds');
+ for(const slug of ['nuclear','riftborne','irons-spells','ars-nouveau','witchery','thaumaturge','walking-machines','boss-respawning']){
+  assert.ok(directory.querySelector(`a[href="/TownsAndKingdoms/guides/${slug}/"]`),slug);
+ }
+ assert.equal(start.window.document.querySelector('.build-groups'),null);
+ assert.match(ponder.window.document.querySelector('meta[http-equiv="refresh"]').content,/\/TownsAndKingdoms\/tutorials\/$/);
+ assert.ok(!discord.window.document.querySelector('main').textContent.includes('A useful first message'));
+ for(const page of [guides,start,ponder,discord])page.window.close();
 });
 test('clearing search discards a result that arrives after the input was emptied',()=>{
  const dom=browser('index');const {window}=dom;let instance;

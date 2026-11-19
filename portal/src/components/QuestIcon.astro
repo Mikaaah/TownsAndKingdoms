@@ -4,13 +4,15 @@ import { href } from '../lib/data';
 interface Props {
   name: string;
   size?: number;
+  kind?: 'item' | 'ui';
 }
 
-const { name, size = 16 } = Astro.props;
+const { name, size = 16, kind = 'item' } = Astro.props;
+const directory = kind === 'ui' ? 'quest-ui' : 'quest-icons';
 ---
 <img
   class="quest-icon"
-  src={href(`media/quest-icons/${name}.png`)}
+  src={href(`media/${directory}/${name}.png`)}
   alt=""
   width={size}
   height={size}

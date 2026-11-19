@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuestIcon from '../components/QuestIcon.astro';
+import { data, href } from '../lib/data';
+
+const guideLabels: Record<string, string> = {
+  'walking-machines': 'Let It Walk · Build a walking machine',
+  'boss-respawning': 'Boss respawning · Tokens and rematches',
+};
+
+const buildGroups = [
+  { id: 'early-workshop', title: 'Early workshop', builds: ['cobble-generator', 'tree-farm', 'sapper', 'sophisticated-storage', 'create-troubleshooting'] },
+  { id: 'advanced-machines', title: 'Advanced machines & storage', builds: ['ae2-network', 'aeronautics', 'excavator', 'walking-machines', 'linked-chests', 'nuclear', 'riftborne'] },
+  { id: 'magic', title: 'Magic & rituals', builds: ['irons-spells', 'ars-nouveau', 'witchery', 'thaumaturge'] },
+  { id: 'adventure', title: 'Adventure, portals & bosses', builds: ['aether-portal', 'twilight-portal', 'otherside-portal', 'boss-respawning'] },
+].map(group => ({
+  id: group.id,
+  title: group.title,
+  guides: group.builds.map(id => ({ id, ...data(id === 'walking-machines' ? 'walking-machine-guide' : 'early-builds/' + id) })),
+}));
+---
+<Layout title="Build guides" description="Step-by-step guides for workshop builds, advanced machines, magic, portals and boss rematches.">
+  <p class="eyebrow">Handbook / Guides</p>
+  <h1>Build guides</h1>
+  <p class="intro">Set up a workshop, build reactors and walkers, learn magic or start a boss rematch.</p>
+
+  <div id="workshop-builds" class="build-groups">
+    {buildGroups.map(group => (
+      <section aria-labelledby={group.id}>
+        <h2 id={group.id}>{group.title}</h2>
+        <ul>{group.guides.map(guide => (
+          <li>
+            <a href={href('guides/' + guide.id + '/')}><QuestIcon name={guide.icon} size={19} />{guideLabels[guide.id] ?? guide.title}</a>
+          </li>
+        ))}</ul>
+      </section>
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .build-groups {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 28px 0 38px;
+    scroll-margin-top: calc(var(--header-height) + 15px);
+  }
+  .build-groups section { border-top: 1px solid var(--border); padding-top: 10px; }
+  .build-groups h2 { margin: 0 0 4px; font-size: 18px; }
+  .build-groups ul { list-style: none; padding: 0; margin: 0; }
+  .build-groups li { margin: 0; }
+  .build-groups a { display: flex; align-items: center; gap: 8px; min-height: 40px; font-weight: 550; line-height: 1.4; }
+  @media (max-width: 680px), (min-width: 801px) and (max-width: 1040px) {
+    .build-groups { grid-template-columns: 1fr; }
+  }
+</style>

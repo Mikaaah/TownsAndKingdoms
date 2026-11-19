@@ -11,6 +11,9 @@ const articleEntries = [
   ['guides/walking-machines/','Build a walking machine','Let It Walk, Aeronautics, Chapter VI, Light Engineering, Reinforced Mechanisms and walker controls.'],
   ['features/','Features and world showcase','Exploration, building, combat, magic and factory automation.'],
   ['guides/tutorial/','In-game tutorial','Quest Book, Story progression, quest rewards, JEI recipe lookup, claiming, travel, Lootr, Ultimine, combat, character progression and spells.'],
+  ['tutorials/','Build guides','Tutorials for Cobblestone Generators, tree farms, AE2, Nuclear, Riftborne, Iron’s Spells, Ars Nouveau, Witchery, Thaumaturge, Let It Walk, portals and boss respawning.'],
+  ['dungeons/','Dungeons','Dungeon expeditions, loot and rewards, boss encounters and Spiral Abyss.'],
+  ['dimensions/','Dimensions','Travel to the Aether, Twilight Forest, the Otherside, Nether and End.'],
   ['changes/','From Towns & Kingdoms 2 to 3','Changes to progression, character systems, mods and equipment.'],
   ['custom-mods/','Pack-exclusive mods and mechanics','Progression, Workshop, Unidentified Loot, Resonant Arcana, Flow Control, Wildshape, Combat Punchy, Combat Afloat and Alchemical Lasers.'],
   ['guides/server-setup/','Dedicated server setup','Minecraft 1.21.1, NeoForge, Java 21, server files, installation, memory, BisectHosting and code Mika.'],
@@ -22,7 +25,7 @@ const articleEntries = [
   ['faq/','Frequently asked questions','Getting started, server access, recipes, shops, character progression and troubleshooting.']
 ];
 export function buildSearchDocuments(datasets, base) {
-  const { weapons=[], recipes=[], mods=[], chapters=[], bosses=[], skills={}, ponder={}, mechanics={}, families=[], eyes=[], productionRules=[], buildGuides=[] }=datasets;
+  const { weapons=[], recipes=[], mods=[], chapters=[], bosses=[], skills={}, mechanics={}, families=[], eyes=[], productionRules=[], buildGuides=[] }=datasets;
   const docs=[];
   const add=(category,id,name,description,url,subtitle='',extra={})=>docs.push({_key:category+':'+id,category,id,name:clean(name)||words(id),description:clean(description),url,subtitle:clean(subtitle),...extra});
   for(const w of weapons)add('Weapons',w.id,w.name,[w.styleName,w.archetype,w.grip,w.modName].join(' '),base+'weapons/#item='+encodeURIComponent(w.id),w.modName+' · '+w.styleName,{mod:w.modName,style:w.styleName});
@@ -35,9 +38,9 @@ export function buildSearchDocuments(datasets, base) {
   }
   for(const b of bosses)add('Bosses',b.id,b.name,[b.modName,b.classification,...(b.rewards||[]).map(r=>r.name||r.item||r.id||r)],base+'bosses/#boss='+encodeURIComponent(b.id),b.modName);
   for(const n of skills.nodes||[])add('Skills',n.id,n.title,n.description,base+'skills/#node='+encodeURIComponent(n.id),n.branch+' · '+n.cost+' point'+(n.cost===1?'':'s'));
-  for(const s of ponder.scenes||[])add('Ponder',s.id,s.title,(s.anchors||[]).join(' '),base+'ponder/?scene='+encodeURIComponent(s.slug),'Ponder item guide');
   for(const [id,title,description]of guideEntries)add('Guides',id,title,description,base+'guides/#'+id,'Practical handbook');
   for(const [route,title,description]of articleEntries)add('Guides',route,title,description,base+route,'Official handbook');
+  add('Tools','factory','Factory planner','Plan batches, recipes, intermediate items, feedstocks and raw materials for a factory.',base+'factory/','Production planning');
   for(const guide of buildGuides){
     const route='guides/'+guide.id+'/';
     add('Guides',route,guide.title,[guide.description,guide.keywords,guide.materials],base+route,'Build guide');

@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuestIcon from '../components/QuestIcon.astro';
+import { data, href } from '../lib/data';
+
+const destinations = [
+  { name: 'Overworld', icon: 'map', description: 'Find dungeon structures and encounters before heading farther afield.', path: 'dungeons/', link: 'Browse dungeons' },
+  { name: 'Nether', icon: 'candle', description: 'Explore terrain and structures added by Jaden’s Nether Expansion.', path: 'mods/#mod-jadens_nether_expansion', link: 'Jaden’s Nether Expansion' },
+  { name: 'The End', icon: 'horn', description: 'Find a Stronghold and collect twelve distinct eyes to open the End portal.', path: 'bosses/#end-portal', link: 'End Remastered eye guide' },
+  { name: 'The Aether', icon: 'map', description: data('early-builds/aether-portal').description, path: 'guides/aether-portal/', link: 'Build an Aether portal' },
+  { name: 'The Twilight Forest', icon: 'lantern', description: data('early-builds/twilight-portal').description, path: 'guides/twilight-portal/', link: 'Build a Twilight Forest portal' },
+  { name: 'The Otherside', icon: 'key', description: data('early-builds/otherside-portal').description, path: 'guides/otherside-portal/', link: 'Open the Ancient City gateway' },
+];
+---
+<Layout title="Dimensions" description="Find portal and exploration guides for the Overworld, Nether, End, Aether, Twilight Forest and Otherside.">
+  <p class="eyebrow">Handbook / World</p>
+  <h1>Dimensions</h1>
+  <p class="intro">Choose a destination to find its portal steps or exploration reference.</p>
+
+  <div class="section card-grid">
+    {destinations.map(destination => (
+      <a class="card card-link" href={href(destination.path)}>
+        <QuestIcon name={destination.icon} size={25} />
+        <h2>{destination.name}</h2>
+        <p>{destination.description}</p>
+        <span class="card-foot">{destination.link} →</span>
+      </a>
+    ))}
+  </div>
+
+  <p class="section">Find more terrain and structure additions in the <a href={href('mods/#domain-4')}>world generation mod index</a>.</p>
+</Layout>
+
+<style>
+  .card h2 { margin: 0; font-size: 20px; line-height: 1.3; }
+</style>

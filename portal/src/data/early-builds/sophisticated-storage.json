@@ -87,10 +87,6 @@
       "path": "recipes/#recipe=tnk%3Amachines%2Ftier_04%2Fnative_upgrade%2Fsophisticatedstorage%2Fcontroller%2F0"
     },
     {
-      "label": "Factory storage Ponder",
-      "path": "ponder/?scene=storage_controller"
-    },
-    {
       "label": "Endgame Linked Chests",
       "path": "guides/linked-chests/"
     }

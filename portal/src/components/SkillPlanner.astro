@@ -1,4 +1,5 @@
 ---
+import QuestIcon from './QuestIcon.astro';
 import skills from '../data/skills.json';
 import professionLabels from '../lib/skill-profession-labels.json';
 const {background, connectionColors}=skills.category;
@@ -18,7 +19,11 @@ const mapTheme={
     <details class="sp-budget-options"><summary>Custom budget</summary><label class="sp-budget">Points <input data-skill-budget type="number" min="0" max={skills.category.pointCap} value={skills.category.pointCap} inputmode="numeric" /></label></details>
     <div class="sp-counter"><strong data-skill-spent>0</strong><span>spent</span></div>
     <div class="sp-counter"><strong data-skill-available>{skills.category.pointCap}</strong><span>available</span></div>
-    <div class="sp-actions"><button type="button" data-skill-undo disabled>Undo</button><button type="button" data-skill-reset>Reset</button><button class="sp-primary" type="button" data-skill-share>Share build</button></div>
+    <div class="sp-actions">
+      <button type="button" data-skill-undo disabled><QuestIcon kind="ui" name="back2" />Undo</button>
+      <button type="button" data-skill-reset><QuestIcon kind="ui" name="reset" />Reset</button>
+      <button class="sp-primary" type="button" data-skill-share>Share build</button>
+    </div>
   </div>
   <div class="sp-share" data-skill-share-panel hidden><label>Build link <input data-skill-share-link type="text" readonly /></label></div>
   <div class="sp-layout">
@@ -40,7 +45,12 @@ const mapTheme={
       })}</nav>
       <div class="sp-canvas" data-skill-canvas data-background-position={background.position}>
         <svg data-skill-map tabindex="0" role="group" aria-label="Skill tree. Drag to pan and scroll or pinch to zoom." aria-describedby="skill-map-help"><g data-skill-camera></g></svg>
-        <div class="sp-map-controls" aria-label="Tree view controls"><button type="button" data-skill-zoom="in" aria-label="Zoom in">+</button><button type="button" data-skill-zoom="out" aria-label="Zoom out">−</button><button type="button" data-skill-fit>Fit tree</button><button type="button" data-skill-route-mode aria-pressed="false">Plan route</button></div>
+        <div class="sp-map-controls" aria-label="Tree view controls">
+          <button type="button" data-skill-zoom="in" aria-label="Zoom in"><QuestIcon kind="ui" name="plus" size={24} /></button>
+          <button type="button" data-skill-zoom="out" aria-label="Zoom out"><QuestIcon kind="ui" name="minus" size={24} /></button>
+          <button type="button" data-skill-fit><QuestIcon kind="ui" name="zoom" />Fit tree</button>
+          <button type="button" data-skill-route-mode aria-pressed="false">Plan route</button>
+        </div>
         <div class="sp-tooltip" data-skill-tooltip hidden><strong></strong><span></span></div>
       </div>
       <div class="sp-map-footer"><p id="skill-map-help" data-skill-map-help>Click to allocate. Right-click to refund. Drag to pan.</p><div class="sp-legend"><span class="is-allocated">Allocated</span><span class="is-ready">Available</span><span>Locked</span><span class="is-route" data-skill-route-legend hidden>Planned route</span></div></div>
@@ -57,7 +67,7 @@ const mapTheme={
         <h2 data-skill-route-title>Planned route</h2>
         <p data-skill-route-description role="status"></p>
         <details data-skill-route-steps hidden><summary>Unlock order</summary><ol data-skill-route-list></ol></details>
-        <div class="sp-detail-actions" data-skill-route-actions hidden><button type="button" data-skill-route-fit>Fit route</button><button type="button" class="sp-primary" data-skill-route-apply>Allocate route</button></div>
+        <div class="sp-detail-actions" data-skill-route-actions hidden><button type="button" data-skill-route-fit><QuestIcon kind="ui" name="zoom" />Fit route</button><button type="button" class="sp-primary" data-skill-route-apply>Allocate route</button></div>
       </section>
       <section class="sp-summary"><h2>Build bonuses</h2><p class="sp-empty" data-skill-empty>Allocate a skill to see its bonuses here.</p><dl data-skill-stats></dl><div data-skill-passives></div></section>
     </aside>
@@ -95,6 +105,7 @@ const mapTheme={
   .sp-counter{display:flex;gap:.35rem;align-items:baseline;font-size:.875rem;color:var(--sp-muted)}
   .sp-counter strong{font-size:1.12rem;font-variant-numeric:tabular-nums;font-weight:650;color:var(--sp-text)}
   .sp-actions{display:flex;gap:.5rem;margin-left:auto;font-size:.875rem}
+  .sp-actions button,.sp-map-controls button,[data-skill-route-fit]{display:inline-flex;align-items:center;justify-content:center;gap:.35rem}
   .sp-share{padding:.8rem 1.15rem;border-bottom:1px solid var(--sp-border)}
   .sp-share label{font-size:.875rem;color:var(--sp-muted);display:flex;gap:.7rem;align-items:center}
   .sp-share input{flex:1;width:100%}
@@ -131,7 +142,7 @@ const mapTheme={
   .sp-node.is-route .sp-route-ring{fill:none;stroke:var(--sp-route);stroke-width:2.8;pointer-events:none}
   .sp-node.is-route-target .sp-route-ring{stroke-width:4.6}
   .sp-node:not(.is-route) .sp-route-ring{display:none}
-  .sp-map-controls{position:absolute;bottom:1rem;left:1rem;display:flex;gap:.3rem}
+  .sp-map-controls{position:absolute;bottom:1rem;left:1rem;max-width:calc(100% - 2rem);display:flex;flex-wrap:wrap;gap:.3rem}
   .sp-map-controls button{background:var(--sp-surface);font-size:.875rem;min-width:44px;min-height:44px;box-shadow:0 2px 5px #0002}
   .sp-map-controls button:first-child,.sp-map-controls button:nth-child(2){font-size:1rem;padding:.35rem .5rem}
   .sp-map-controls [aria-pressed="true"]{border-color:var(--sp-route);color:var(--sp-route)}
