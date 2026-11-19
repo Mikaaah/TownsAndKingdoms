@@ -1,18 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
+
 const discord = 'https://discord.gg/CRYk3uDPVt';
 ---
-<Layout title="Official servers" description="Join the Towns & Kingdoms community, find connection details and prepare for multiplayer.">
+<Layout title="Multiplayer servers" description="Join the official TNK3 hub and choose EU or US, browse community servers, and read the official server rules.">
   <p class="eyebrow">Community / Multiplayer</p>
-  <h1>Find a world to call home.</h1>
-  <p class="intro">A shared settlement starts with the right people. The official Discord is the place to arrange server access, find the connection details and choose a server that suits your region.</p>
-  <div class="button-row"><a class="button button-primary" href={discord} target="_blank" rel="noopener">Open the official Discord</a><a class="button" href={href('guides/server-setup/')}>Host your own world →</a></div>
-  <nav class="toc-inline" aria-label="Server guide sections"><a href="#joining">Joining</a><a href="#availability">Availability</a><a href="#shared-worlds">Shared worlds</a><a href="#connection-help">Connection help</a></nav>
+  <h1>Multiplayer servers</h1>
+  <p class="intro">Join the official Towns &amp; Kingdoms 3 network through the hub, or browse public worlds run by other players.</p>
+  <nav class="toc-inline" aria-label="Server guide sections">
+    <a href="#joining">Official network</a>
+    <a href="#public-servers">Public servers</a>
+    <a href="#shared-worlds">Official rules</a>
+    <a href="#connection-help">Connection help</a>
+  </nav>
+
   <div class="prose">
-    <section id="joining"><h2>Before you connect</h2><ol><li><strong>Check the edition.</strong> Install Towns & Kingdoms 3: Beyond the Forge. A Towns & Kingdoms 2 installation has a different Minecraft version and mod list.</li><li><strong>Confirm the server’s pack file.</strong> Match its required content mods, configuration and KubeJS files. Keep a separate instance for another server’s installation.</li><li><strong>Get the address from the community.</strong> Follow the official Discord’s server-access instructions and use the address provided there.</li><li><strong>Read the joining rules.</strong> Check the community’s guidance before choosing a building location or starting a shared project.</li></ol></section>
-    <section id="availability"><h2>Availability and maintenance</h2><p>Check the official Discord for current availability, maintenance notices and access questions. A connection failure can also come from a mismatched installation; read the disconnect message before changing your client.</p><p>Ask which server is appropriate for your region, whether access is open, and which pack file to install. Keep the address and connection instructions together so you can return after an update.</p></section>
-    <section id="shared-worlds"><h2>A good neighbour</h2><p>Make room for other people’s plans. Discuss nearby builds, shared resources and multiplayer fights before turning a small workshop into a large settlement.</p><ul><li>Get permission before changing another player’s build or using their equipment.</li><li>Coordinate large machines and recurring boss fights with the people around you.</li><li>Give production lines a clear stop switch and investigate machinery that causes persistent server lag.</li><li>Use the community’s rules and staff guidance for claims, PvP and shared spaces.</li></ul><p>These habits work alongside the server’s own rules; ask staff when a particular build or activity needs clarification.</p></section>
-    <section id="connection-help"><h2>When joining fails</h2><p>Keep the complete disconnect message and the client’s <code>logs/latest.log</code>. For a mod-list or registry mismatch, check the installed pack file and KubeJS content on both sides. A timeout needs a different investigation from a missing-mod error.</p><div class="button-row"><a class="button" href={href('support/')}>Prepare a useful report →</a><a class="button" href={href('faq/#multiplayer')}>Multiplayer FAQ →</a></div></section>
+    <section id="joining">
+      <h2>Join the official network</h2>
+      <ol>
+        <li>Launch <strong>Towns &amp; Kingdoms 3: Beyond the Forge</strong> using the pack version announced for the official servers.</li>
+        <li>Choose <strong>Official Server</strong> on the Minecraft title screen to reach the <strong>hub</strong>. If this opens Multiplayer first, join the official entry shown there.</li>
+        <li>In the hub, choose <strong>EU</strong> or <strong>US</strong> to enter your regional world.</li>
+      </ol>
+    </section>
+
+    <section id="public-servers">
+      <h2>Browse public servers</h2>
+      <p>Open <strong>Multiplayer</strong> and look for the BisectHosting public server list. Pick a community server from the list and check its required pack version and rules before joining.</p>
+      <p>To start your own world, follow the <a href={href('guides/server-setup/')}>server setup guide</a>. BisectHosting also explains <a href="https://help.bisecthosting.com/hc/en-us/articles/40028209800987-How-to-Add-a-Modpack-Server-to-the-Public-Server-List" target="_blank" rel="noopener">how to list an eligible public server</a>.</p>
+    </section>
+
+    <section id="shared-worlds">
+      <h2>Official server rules</h2>
+      <ul>
+        <li><strong>No griefing or stealing.</strong> Ask before changing someone else’s build, taking items, or using their machines.</li>
+        <li><strong>Be nice.</strong> Treat other players with respect in chat and in-game. Bring disputes to staff if you can’t resolve them together.</li>
+        <li><strong>Work together.</strong> Coordinate with neighbours on shared resources, nearby builds, and large factories. Agree on how shared projects and supplies will be used.</li>
+      </ul>
+    </section>
+
+    <section id="availability">
+      <h2>Server status</h2>
+      <p>Check the official Discord for the current pack version, maintenance notices, and help finding the hub.</p>
+      <div class="button-row">
+        <a class="button" href={discord} target="_blank" rel="noopener">Official Discord</a>
+      </div>
+    </section>
+
+    <section id="connection-help">
+      <h2>When joining fails</h2>
+      <p>Check that your client uses the server’s exact pack build. If you still can’t join, keep the full disconnect message and <code>logs/latest.log</code> so the server staff can see what failed.</p>
+      <div class="button-row">
+        <a class="button" href={href('faq/#multiplayer')}>Multiplayer FAQ</a>
+        <a class="button" href={href('support/#logs')}>Find your logs</a>
+      </div>
+    </section>
   </div>
 </Layout>

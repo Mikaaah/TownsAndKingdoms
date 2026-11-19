@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuestIcon from '../../components/QuestIcon.astro';
+import { href } from '../../lib/data';
+import { tk2Pages } from '../../lib/tk2.mjs';
+
+const guides = tk2Pages.filter(page => !['screenshots', 'original-home'].includes(page.slug));
+---
+<Layout edition="tk2" title="Handbook" description="The Towns & Kingdoms 2 handbook for Minecraft Forge 1.20.1, with original features, mod list, releases and server instructions.">
+  <p class="eyebrow">TK2 handbook / Forge 1.20.1</p>
+  <h1>Towns &amp; Kingdoms 2</h1>
+  <p class="intro">Your handbook for A New World, from its eleven tiers of Create automation to exploration, combat and server setup. Find the original mod list and release notes through 3.05.</p>
+  <div class="button-row">
+    <a class="button button-primary" href={href('tk2/progression/')}>Explore progression</a>
+    <a class="button" href="https://www.curseforge.com/minecraft/modpacks/towns-kingdoms/files">Find TK2 on CurseForge</a>
+  </div>
+
+  <section class="section" aria-labelledby="tk2-guides">
+    <h2 id="tk2-guides">Browse the handbook</h2>
+    <div class="card-grid tk2-guides">
+      {guides.map(page => (
+        <a class="card card-link" href={href(`tk2/${page.slug}/`)}>
+          <span class="card-icon"><QuestIcon name={page.icon} size={22} /></span>
+          <h3>{page.title}</h3>
+          <p>{page.intro}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+  <nav class="toc-inline" aria-label="More TK2 pages">
+    <a href={href('tk2/screenshots/')}>Screenshots</a>
+    <a href={href('tk2/original-home/')}>Original wiki cover</a>
+  </nav>
+</Layout>
+<style>
+  .tk2-guides .card-link { min-height: 0; gap: 10px; }
+</style>

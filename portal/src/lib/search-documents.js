@@ -12,11 +12,12 @@ const articleEntries = [
   ['features/','Features and world showcase','Exploration, building, combat, magic and factory automation.'],
   ['changes/','From Towns & Kingdoms 2 to 3','Changes to progression, character systems, mods and equipment.'],
   ['custom-mods/','Pack-exclusive mods and mechanics','Progression, Workshop, Unidentified Loot, Resonant Arcana, Flow Control, Wildshape, Combat Punchy, Combat Afloat and Alchemical Lasers.'],
-  ['guides/server-setup/','Dedicated server setup','Minecraft 1.21.1, NeoForge, Java 21, server files, installation, memory and multiplayer.'],
-  ['servers/','Official servers','Regions, joining, server rules and connection information.'],
+  ['guides/server-setup/','Dedicated server setup','Minecraft 1.21.1, NeoForge, Java 21, server files, installation, memory, BisectHosting and code Mika.'],
+  ['guides/player-shops/','Player shops','Shop Teleporter, Trading Hub, market, Create shops, Table Cloth, Stock Ticker and selling items.'],
+  ['servers/','Official and public servers','Official Server button, hub, EU and US regions, community rules, and public servers via BisectHosting.'],
   ['discord/','Discord community','Official invite, community, support and announcements.'],
   ['support/','Report a bug or suggest a feature','Issue reports, reproduction steps, crash reports and log submission.'],
-  ['faq/','Frequently asked questions','Memory allocation, shaders, multiplayer, progression and troubleshooting.']
+  ['faq/','Frequently asked questions','Getting started, server access, recipes, shops, character progression and troubleshooting.']
 ];
 export function buildSearchDocuments(datasets, base) {
   const { weapons=[], recipes=[], mods=[], chapters=[], bosses=[], skills={}, ponder={}, mechanics={}, families=[], eyes=[], productionRules=[] }=datasets;

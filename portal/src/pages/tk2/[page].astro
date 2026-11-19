@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { href } from '../../lib/data';
+import { renderTk2Document, tk2ArchivePath, tk2Pages } from '../../lib/tk2.mjs';
+
+export function getStaticPaths() {
+  return tk2Pages.map(article => ({params:{page:article.slug}, props:{article}}));
+}
+
+const { article } = Astro.props;
+const { html, headings } = await renderTk2Document(article, href());
+const isProgression = article.slug === 'progression';
+const isScreenshots = article.slug === 'screenshots';
+const isServerGuide = article.slug === 'server-installation';
+const isModList = article.slug === 'modlist';
+---
+<Layout edition="tk2" title={article.title} description={article.intro}>
+  <p class="eyebrow">TK2 handbook / Forge 1.20.1</p>
+  <h1>{article.title}</h1>
+  <p class="intro">{article.intro}</p>
+
+  {headings.length > 0 && <nav class="toc-inline" aria-label="On this page">
+    {headings.map(heading => <a href={`#${heading.id}`}>{heading.text}</a>)}
+  </nav>}
+
+  {isServerGuide && <p class="callout">Use the Java version and startup script specified in your exact TK2 server download. The hosting offer below records what the original guide advertised.</p>}
+
+  {isProgression ? <div class="prose tk2-source">
+    <h2>Follow the quest book</h2>
+    <p>A New World expanded TK2 to eleven progression tiers and added around 1,400 quests. The quests cover automation, magic and exploration, with separate tabs for adventures alongside the main progression.</p>
+    <h2>Automate your next tier</h2>
+    <p>Start with Create and build up the custom recipe chain as it introduces Thermal Expansion, Applied Energistics 2 and other production mods. Use the quest book to see which materials and machines the next tier needs.</p>
+    <p><a href={href('tk2/features/#automation')}>Read about TK2 automation</a></p>
+  </div> : isScreenshots ? <div class="prose tk2-source">
+    <p>The archived screenshots page was a placeholder. Share TK2 screenshots in the <a href="https://discord.gg/CRYk3uDPVt">Towns &amp; Kingdoms Discord</a>.</p>
+  </div> : <>
+    {isModList && <div class="toolbar tk2-mod-filter" data-tk2-mod-filter hidden>
+      <label>Find a TK2 mod <input type="search" placeholder="Mod name or author" /></label>
+      <span role="status" aria-live="polite"></span>
+    </div>}
+    <article class="prose tk2-source" data-tk2-mod-list={isModList ? '' : undefined} set:html={html} />
+  </>}
+
+  <p class="tk2-source-link"><a href={href(tk2ArchivePath(article.source))}>Original archived Markdown</a></p>
+</Layout>
+<script>
+  const filter = document.querySelector<HTMLElement>('[data-tk2-mod-filter]');
+  const list = document.querySelector<HTMLElement>('[data-tk2-mod-list]');
+  if (filter && list) {
+    const input = filter.querySelector('input')!;
+    const status = filter.querySelector('[role="status"]')!;
+    const mods = [...list.querySelectorAll('li')].map(row => ({row, text:row.textContent!.toLowerCase()}));
+    function update() {
+      const query = input.value.trim().toLowerCase();
+      let count = 0;
+      for (const {row, text} of mods) {
+        row.hidden = !text.includes(query);
+        if (!row.hidden) count++;
+      }
+      status.textContent = `${count} ${count === 1 ? 'mod' : 'mods'}`;
+    }
+    filter.hidden = false;
+    input.addEventListener('input', update);
+    update();
+  }
+</script>
+<style>
+  .tk2-source { margin-top: 25px; overflow-wrap: anywhere; }
+  .tk2-source :global(img) { max-width: 100%; height: auto; }
+  .tk2-source :global(ul), .tk2-source :global(ol) { padding-inline-start: 24px; }
+  .tk2-source :global(h2) { margin-bottom: 10px; }
+  .tk2-mod-filter:not([hidden]) { display: flex; align-items: center; }
+  .tk2-mod-filter label { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .tk2-mod-filter span { color: var(--muted); }
+  .tk2-source-link { margin-top: 36px; }
+</style>

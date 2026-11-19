@@ -1,33 +1,218 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
-const questions = [
-  {id:'installation',q:'Which Minecraft and mod loader do I need?',a:'Towns & Kingdoms 3 uses Minecraft 1.21.1 and NeoForge. Install the pack as its own launcher instance and keep the loader that comes with that installation. Towns & Kingdoms 2 belongs to the legacy handbook and uses a different installation.'},
-  {id:'memory',q:'How much memory should I allocate?',a:'Use your launcher’s Java memory setting. An 8 GB heap is a practical starting point for a client test on a machine with enough memory left for its operating system and other programs. Adjust from measured use. More Java heap does not increase GPU memory or fix a shader bottleneck. On a dedicated server, the Java heap and the host’s total memory allocation are different limits.'},
-  {id:'java',q:'Which Java version should I use?',a:'Use a 64-bit Java 21 runtime for this Minecraft installation. Check the Java selected by your launcher or server panel; a terminal’s java command may point to a different installation.'},
-  {id:'shaders',q:'Can I use shaders?',a:'The client includes Iris and Sodium, with Flywheel compatibility for Create. Use that shader stack. If a visual problem appears, disable the shader pack first and test the same place again. Shader settings and GPU memory matter independently of the Java heap.'},
-  {id:'multiplayer',q:'Why does a server reject my installation?',a:'Read the full disconnect message. Content-mod, registry or recipe mismatches usually require the same pack files and KubeJS content on the client and server. A timeout, connection refusal and missing-mod report are different problems. Keep the relevant logs and confirm the required pack file with the server host.'},
-  {id:'updates',q:'Can I update only part of the pack?',a:'Follow the update’s installation instructions. A targeted patch may replace only two JSON files; another update may require complete folder replacement to remove obsolete files. Back up the affected files and world, keep client/server content in step, and fully restart after an update that changes registrations or native weapon definitions.'},
-  {id:'progression',q:'Are the dimensions and Wither locked behind factory chapters?',a:'The manufacturing chapters describe component and machine progression. They do not impose a general dimension or Wither lock. The End still follows End Remastered’s eye requirements, and individual recipes can require advanced or boss-sourced materials.'},
-  {id:'tiers',q:'Why do the references show different kinds of tier?',a:'A weapon’s style tier describes its moveset family. A production tier describes the mechanisms and machines used to make an item. Equipment appraisal has its own loot tiers and rarity rules. These labels answer different questions; a funny signature moveset does not make a basic recipe an endgame craft.'},
-  {id:'recipes',q:'A recipe looks different from the mod’s normal recipe. Is that intentional?',a:'Many recipes connect to the pack’s manufacturing chain. Look up the output in the recipe registry and check its process, ingredients and mechanism gate. Sequenced assemblies also have intermediate items, operation order and a loop count. Keep retained tools separate from ingredients that are consumed.'},
-  {id:'skills',q:'Why can a connected skill still be unavailable?',a:'Some nodes require points already spent, not only a connected path. Check the node’s requirements in the planner and compare them with the character tree. Refunds must also leave the remaining allocation connected and valid.'},
-  {id:'staffs',q:'Why do casting staffs and battlestaffs behave differently?',a:'Spellcasting focuses use the magic Staff family. Reinforced quarterstaffs and heavy physical slam weapons use melee battlestaff families. A weapon’s name alone does not tell you its assigned moveset; check the item’s entry in the weapon registry.'},
-  {id:'loading',q:'The game or server takes a long time to start. What should I send?',a:'Keep the complete log from that start. Include how long each visible phase took, whether a shader was active and whether the problem happens before the menu, while joining or after the world is running. A timestamped log is more useful than repeatedly changing several settings at once.'}
+
+const topics = [
+  {
+    id: 'getting-started',
+    title: 'Getting started',
+    questions: [
+      {
+        id: 'installation',
+        question: 'Which version do I install?',
+        answer: 'Look for Towns & Kingdoms 3: Beyond the Forge, then import it as a separate launcher instance. It runs on Minecraft 1.21.1 with NeoForge. For multiplayer, use the exact pack release the server asks for.',
+      },
+      {
+        id: 'first-world',
+        question: 'What should I do after spawning?',
+        answer: 'Set up a bed, food and storage, then open the quest book and start Chapter I. If you want a first workshop goal, work toward a Rotation Mechanism and follow its ingredients back from the recipe.',
+        link: { label: 'Your first evening', path: 'guides/#first-steps' },
+      },
+      {
+        id: 'java',
+        question: 'Which Java should my launcher use?',
+        answer: 'Select 64-bit Java 21 in the Minecraft instance settings. For a dedicated server, check the Java selected by your host panel or startup script.',
+        link: { label: 'Dedicated server setup', path: 'guides/server-setup/' },
+      },
+      {
+        id: 'memory',
+        question: 'How much RAM should I give the pack?',
+        answer: 'Start with an 8 GB Java heap for the client if your PC has enough memory left for its operating system and other apps. The setting is usually under Java or Memory in your launcher.',
+      },
+    ],
+  },
+  {
+    id: 'playing-together',
+    title: 'Playing together',
+    questions: [
+      {
+        id: 'official-servers',
+        question: 'How do I join the official server?',
+        answer: 'Select Official Server on the Minecraft main menu. It takes you to the hub, where you can choose the EU or US server.',
+        link: { label: 'Official servers and rules', path: 'servers/#joining' },
+      },
+      {
+        id: 'public-servers',
+        question: 'Where can I find other public worlds?',
+        answer: 'Open Multiplayer and look for the BisectHosting public server list. Check each server’s description and rules before joining.',
+        link: { label: 'Find a public server', path: 'servers/#public-servers' },
+      },
+      {
+        id: 'multiplayer',
+        question: 'Why can’t I join my friend’s server?',
+        answer: 'Compare the full pack version with the host and read the disconnect message. A missing-mod or registry error points to an installation mismatch. If the connection times out, ask the host whether the server is running and check the address and port.',
+        link: { label: 'Server connection help', path: 'servers/#connection-help' },
+      },
+      {
+        id: 'shops',
+        question: 'How do I set up a shop other players can visit?',
+        answer: 'Set up the sale using Create’s shop system. Use the Shop Teleporter, called the Trading Hub in-game, to list a destination that takes other players to your shop.',
+        link: { label: 'Build and list a player shop', path: 'guides/player-shops/' },
+      },
+    ],
+  },
+  {
+    id: 'progression-and-gear',
+    title: 'Progression and gear',
+    questions: [
+      {
+        id: 'progression',
+        question: 'Can I explore before finishing the factory chapters?',
+        answer: 'Yes. The chapters guide your factory upgrades. You can explore dimensions and summon the Wither as soon as you meet their usual entry or summoning requirements. The End uses End Remastered’s eyes.',
+        link: { label: 'Progression chapters', path: 'chapters/' },
+      },
+      {
+        id: 'end-portal',
+        question: 'Which eyes do I need for the End portal?',
+        answer: 'Fill the twelve portal frames with twelve different End Remastered eyes. The eye guide shows which bosses drop which eyes and lists alternate sources where available.',
+        link: { label: 'Compare eye routes', path: 'bosses/#eye-routes' },
+      },
+      {
+        id: 'recipes',
+        question: 'Where do I find the pack’s recipe for an item?',
+        answer: 'Hover over the item in JEI and press R with the default keybind. Check the recipe tabs for the right machine or assembly. In the handbook, search by the item name or registry ID to see the process and inputs.',
+        link: { label: 'Browse recipes', path: 'recipes/' },
+      },
+      {
+        id: 'skills',
+        question: 'Why can’t I unlock this skill yet?',
+        answer: 'Check the node’s point cost, its connection to an unlocked skill and any minimum points already spent. In the web planner, choose Plan route and select a node to see the shortest unlock path and its cost.',
+        link: { label: 'Open the skilltree planner', path: 'skills/' },
+      },
+      {
+        id: 'loot',
+        question: 'What do I do with unidentified gear?',
+        answer: 'Take it to an Identifier to preview its reward pool and reveal the item using vanilla XP. If you use a Mechanical Identifier, supply fluid XP. You can salvage unwanted gear for fragments.',
+        link: { label: 'Check appraisal costs', path: 'loot/' },
+      },
+      {
+        id: 'tiers',
+        question: 'Does higher rarity always mean better gear?',
+        answer: 'Compare the revealed affixes with what your build needs. A boosted stat helps most when it supports the attacks, spells or defenses you actually use.',
+        link: { label: 'Read about loot and rarity', path: 'loot/' },
+      },
+      {
+        id: 'staffs',
+        question: 'How can I tell how a weapon handles in Fight Mode?',
+        answer: 'Find the weapon in the registry and check its style and grip. Try its regular combo and innate skill in a safe area before taking it into a boss fight.',
+        link: { label: 'Browse weapon styles', path: 'weapons/' },
+      },
+    ],
+  },
+  {
+    id: 'troubleshooting',
+    title: 'Troubleshooting',
+    questions: [
+      {
+        id: 'shaders',
+        question: 'What should I try if shaders make the world look wrong?',
+        answer: 'Turn the shader pack off and load the same area again. TNK3 includes Iris, Sodium and Flywheel compatibility. If the issue happens only with shaders enabled, include the shader pack name and preset when you report it.',
+        link: { label: 'Get help with a visual issue', path: 'support/' },
+      },
+      {
+        id: 'updates',
+        question: 'How do I update without risking my world?',
+        answer: 'Back up your world and its configuration before following the release’s update instructions. For multiplayer, update the server and client to the matching release, then test with one player before reopening the server.',
+      },
+      {
+        id: 'loading',
+        question: 'What should I share if startup stalls or the game crashes?',
+        answer: 'Attach the full latest.log and the newest crash report if one exists. Include the pack version and describe when the issue happens, such as before the main menu, while joining or after the world loads.',
+        link: { label: 'Find the right logs', path: 'support/#logs' },
+      },
+    ],
+  },
 ];
 ---
-<Layout title="Frequently asked questions" description="Installation, Java, memory, shaders, multiplayer and progression questions answered.">
-  <p class="eyebrow">Handbook / FAQ</p><h1>A few things worth knowing.</h1><p class="intro">Check the installation first, then narrow the problem to the part of the pack you are actually using.</p>
-  <nav class="toc-inline" aria-label="FAQ topics"><a href="#installation">Installation</a><a href="#memory">Memory</a><a href="#shaders">Shaders</a><a href="#multiplayer">Multiplayer</a><a href="#progression">Progression</a></nav>
-  <div class="faq-list">{questions.map(({id,q,a})=><details id={id}><summary>{q}</summary><p>{a}</p></details>)}</div>
+
+<Layout title="Frequently asked questions" description="Get help with starting Towns & Kingdoms 3, finding a server, building a shop and using the pack’s progression systems.">
+  <p class="eyebrow">Handbook / Help</p>
+  <h1>Frequently asked questions</h1>
+  <nav class="toc-inline" aria-label="FAQ topics">
+    {topics.map(({ id, title }) => <a href={'#' + id}>{title}</a>)}
+  </nav>
+
+  <div class="faq-topics">
+    {topics.map(({ id, title, questions }) => (
+      <section id={id} aria-labelledby={id + '-title'}>
+        <h2 id={id + '-title'}>{title}</h2>
+        <div class="faq-questions">
+          {questions.map(({ id: questionId, question, answer, link }) => (
+            <details id={questionId}>
+              <summary>{question}</summary>
+              <p>{answer}</p>
+              {link && <a class="faq-reference" href={href(link.path)}>{link.label}</a>}
+            </details>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+
   <script>
     function openLinkedQuestion() {
       const target = document.getElementById(window.location.hash.slice(1));
       if (target instanceof HTMLDetailsElement) target.open = true;
     }
+
     openLinkedQuestion();
     window.addEventListener('hashchange', openLinkedQuestion);
   </script>
-  <div class="button-row section"><a class="button" href={href('support/')}>Prepare a bug report →</a><a class="button" href={href('guides/server-setup/')}>Dedicated server guide →</a><a class="button" href={href('recipes/')}>Recipe registry →</a></div>
 </Layout>
-<style>.faq-list{max-width:850px;border-top:1px solid var(--border)}.faq-list details{border-bottom:1px solid var(--border);padding:19px 0;scroll-margin-top:90px}.faq-list summary{font-size:16px;font-weight:550;padding-right:12px;line-height:1.6}.faq-list p{font-size:16px;line-height:1.9;color:var(--muted);margin:14px 20px 0 0;max-width:780px}.faq-list details:target{border-left:2px solid var(--accent);padding-left:14px}.faq-list details:target p{display:block}</style>
+
+<style>
+  .faq-topics {
+    max-width: 54rem;
+    display: grid;
+    gap: 36px;
+  }
+
+  .faq-topics h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+
+  .faq-questions {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .faq-questions details + details { border-top: 1px solid var(--border); }
+  .faq-questions details:target { box-shadow: inset 3px 0 var(--accent); }
+  .faq-questions details[open] { padding-bottom: 16px; }
+
+  .faq-questions summary {
+    min-height: 48px;
+    margin: 0;
+    padding: 13px 18px;
+    color: var(--text);
+    font-weight: 550;
+  }
+
+  .faq-questions summary::marker { color: var(--gold-text); }
+  .faq-questions summary:hover { color: var(--accent); }
+
+  .faq-questions p {
+    max-width: 72ch;
+    margin: 0;
+    padding: 0 20px 0 36px;
+    color: var(--muted);
+  }
+
+  .faq-reference {
+    display: inline-block;
+    margin: 8px 20px 0 36px;
+    font-weight: 550;
+  }
+</style>
