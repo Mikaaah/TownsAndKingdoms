@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 const portal = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const repository = path.resolve(portal, '..');
 const manifest = JSON.parse(await readFile(path.join(portal, 'legacy-manifest.json'), 'utf8'));
-assert.equal(manifest.schema, 1);
+assert.equal(manifest.schema, 2);
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const roots = [path.join(portal, 'public')];
 if (process.argv.includes('--dist')) {
@@ -27,4 +27,11 @@ for (const root of roots) {
     assert(target.startsWith('/TownsAndKingdoms/tk2/'), `TK2 alias leaves project base: ${target}`);
   }
 }
-console.log(`TK2 preservation passed: ${Object.keys(manifest.archived_sources).length} original documents, ${Object.keys(manifest.public_files).length} frozen public files, ${Object.keys(manifest.aliases).length} route aliases.`);
+if (process.argv.includes('--dist')) {
+  for (const route of manifest.tk2_routes) {
+    const html = await readFile(path.join(portal, 'dist', route), 'utf8');
+    assert(html.includes('data-edition="tk2"'), `TK2 uses the wrong edition shell: ${route}`);
+    assert(!html.includes('/assets/wiki.js'), `TK2 uses the old TK3 field guide: ${route}`);
+  }
+}
+console.log(`TK2 preservation passed: ${Object.keys(manifest.archived_sources).length} original documents, ${manifest.tk2_routes.length} handbook routes, ${Object.keys(manifest.aliases).length} route aliases.`);

@@ -43,7 +43,7 @@ document.querySelector('#open-search')?.addEventListener('click',openSearch);
 document.querySelector('#close-search')?.addEventListener('click',()=>dialog?.close());
 dialog?.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
 document.addEventListener('keydown',event=>{
-  if((event.ctrlKey || event.metaKey) && event.key.toLowerCase()==='k'){event.preventDefault();dialog?.open?dialog.close():openSearch();}
+  if(dialog && (event.ctrlKey || event.metaKey) && event.key.toLowerCase()==='k'){event.preventDefault();dialog.open?dialog.close():openSearch();}
 });
 input?.addEventListener('input',search);
 input?.addEventListener('keydown',event=>{

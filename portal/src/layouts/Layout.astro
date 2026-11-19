@@ -3,12 +3,15 @@ import '../styles/global.css';
 import Icon from '../components/Icon.astro';
 import QuestIcon from '../components/QuestIcon.astro';
 import { href } from '../lib/data';
-const { title = 'Handbook', description = 'The official Towns & Kingdoms handbook.', wide = false } = Astro.props;
+import { tk2Nav } from '../lib/tk2.mjs';
+const { title = 'Handbook', description = 'The official Towns & Kingdoms handbook.', wide = false, edition = 'tk3' } = Astro.props;
+const isTk2 = edition === 'tk2';
+const handbookName = isTk2 ? 'Towns & Kingdoms 2' : 'Towns & Kingdoms';
 const current = Astro.url.pathname.replace(/\/$/, '');
-const groups = [
+const groups = isTk2 ? tk2Nav : [
   { title: 'Handbook', links: [['Overview', '', 'bookred'], ['Features', 'features/', 'map'], ['Getting started', 'guides/', 'bookopen'], ['What changed', 'changes/', 'hourglass']] },
   { title: 'Reference', links: [['Weapons', 'weapons/', 'hammer'], ['Recipes', 'recipes/', 'paper'], ['Mod index', 'mods/', 'journal'], ['Custom mods', 'custom-mods/', 'pickaxe'], ['Boss encounters', 'bosses/', 'horn'], ['Ponder item guides', 'ponder/', 'rotation_mechanism']] },
-  { title: 'Progression', links: [['Chapters', 'chapters/', 'scroll'], ['Character & Origins', 'mechanics/', 'mirror'], ['Loot & Appraisal', 'loot/', 'satchel']] },
+  { title: 'Progression', links: [['Chapters', 'chapters/', 'scroll'], ['Character & Origins', 'mechanics/', 'mirror'], ['Loot & Appraisal', 'loot/', 'satchel'], ['Player shops', 'guides/player-shops/', 'satchel']] },
   { title: 'Tools', links: [['Skilltree planner', 'skills/', 'skill_point']] },
   { title: 'Community & support', links: [['Servers', 'servers/', 'lantern'], ['Set up a server', 'guides/server-setup/', 'key'], ['Discord', 'discord/', 'envelope'], ['Support', 'support/', 'bell'], ['Frequently asked questions', 'faq/', 'book']] }
 ];
@@ -30,30 +33,32 @@ const groups = [
       }
     </script>
     <meta name="description" content={description} />
-    <title>{title === 'Handbook' ? 'Towns & Kingdoms — Handbook' : `${title} · Towns & Kingdoms`}</title>
-    <link rel="icon" type="image/png" sizes="64x64" href={href('media/favicon.png')} />
+    <title>{title === 'Handbook' ? `${handbookName} — Handbook` : `${title} · ${handbookName}`}</title>
+    <link rel="icon" type="image/png" sizes="64x64" href={href(isTk2 ? 'assets/brand/favicon.png' : 'media/favicon.png')} />
     <link rel="preload" href={href('media/fonts/Geist.woff2')} as="font" type="font/woff2" crossorigin="anonymous" />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
-    <meta property="og:title" content={`${title} · Towns & Kingdoms`} />
+    <meta property="og:title" content={`${title} · ${handbookName}`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={new URL(href('media/logo.png'), Astro.site)} />
+    {!isTk2 && <meta property="og:image" content={new URL(href('media/logo.png'), Astro.site)} />}
   </head>
-  <body>
+  <body data-edition={edition}>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="header">
       <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-sidebar"><Icon name="menu" /></button>
-      <a class="brand" href={href()} aria-label="Towns & Kingdoms handbook home">
-        <img src={href('media/logo.webp')} alt="Towns & Kingdoms — Beyond the Forge" width="145" height="58" />
-        <span class="brand-label">Handbook</span>
+      <a class="brand" href={href(isTk2 ? 'tk2/' : '')} aria-label={`${handbookName} handbook home`}>
+        {isTk2 ? <span class="brand-tk2">Towns &amp; Kingdoms 2</span> : <>
+          <img src={href('media/logo.webp')} alt="Towns & Kingdoms — Beyond the Forge" width="145" height="58" />
+          <span class="brand-label">Handbook</span>
+        </>}
       </a>
-      <button class="header-search" id="open-search" aria-label="Search the handbook" aria-haspopup="dialog">
+      {!isTk2 && <button class="header-search" id="open-search" aria-label="Search the handbook" aria-haspopup="dialog">
         <Icon name="search" size={18} /><span>Search the handbook…</span><kbd>Ctrl K</kbd>
-      </button>
+      </button>}
       <nav class="header-links" aria-label="Community">
         <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord</a>
         <a href="https://github.com/Mikaaah/TownsAndKingdoms" target="_blank" rel="noopener">GitHub</a>
-        <details class="version-switch"><summary aria-label="Choose handbook edition">TK3</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current="page">Towns & Kingdoms 3</a><a href={href('tk2/')}>Towns & Kingdoms 2</a></nav></details>
+        <details class="version-switch"><summary aria-label="Choose handbook edition">{isTk2 ? 'TK2' : 'TK3'}</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current={!isTk2 ? 'page' : undefined}>Towns & Kingdoms 3</a><a href={href('tk2/')} aria-current={isTk2 ? 'page' : undefined}>Towns & Kingdoms 2</a></nav></details>
       </nav>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light mode" aria-pressed="false" title="Switch color theme">
         <span class="theme-sun"><Icon name="sun" size={20} /></span>
@@ -69,32 +74,35 @@ const groups = [
             <span class="nav-mark"><QuestIcon name={mark} size={20} /></span>{name}
           </a>)}
         </nav>)}
-        <div class="nav-group"><p class="nav-label">Earlier adventures</p><a href={href('tk2/')}><span class="nav-mark"><QuestIcon name="candle" size={20} /></span>Towns & Kingdoms 2</a></div>
+        <div class="nav-group"><p class="nav-label">{isTk2 ? 'Current edition' : 'Earlier adventures'}</p><a href={href(isTk2 ? '' : 'tk2/')}><span class="nav-mark"><QuestIcon name="candle" size={20} /></span>{isTk2 ? 'Towns & Kingdoms 3' : 'Towns & Kingdoms 2'}</a></div>
       </aside>
       <main id="main" class:list={['page', { 'page-wide': wide }]}>
         <slot />
         <footer class="footer">
-          <span>Towns & Kingdoms <span aria-hidden="true">·</span> Beyond the Forge</span>
+          <span>{handbookName} <span aria-hidden="true">·</span> {isTk2 ? 'A New World' : 'Beyond the Forge'}</span>
           <nav class="footer-links" aria-label="Footer">
             <a href="https://www.curseforge.com/minecraft/modpacks/towns-kingdoms" target="_blank" rel="noopener">CurseForge</a>
             <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord</a>
-            <a href={href('support/')}>Support</a>
-            <a href={href('faq/')}>FAQ</a>
-            <a href={href('tk2/')}>TK2 archive</a>
+            {isTk2 ? <a href={href()}>TK3 handbook</a> : <>
+              <a href={href('support/')}>Support</a>
+              <a href={href('faq/')}>FAQ</a>
+              <a href={href('tk2/')}>TK2 archive</a>
+            </>}
           </nav>
         </footer>
       </main>
     </div>
-    <dialog id="global-search" class="search-dialog" aria-label="Search the handbook">
+    {!isTk2 && <dialog id="global-search" class="search-dialog" aria-label="Search the handbook">
       <div class="search-top"><Icon name="search" /><input id="global-search-input" type="search" placeholder="Search weapons, recipes, skills…" aria-label="Search terms" autocomplete="off" spellcheck="false" /><button id="close-search" aria-label="Close search">Esc</button></div>
       <div id="search-results" class="search-results" role="listbox" aria-label="Search results"><p class="search-hint">Find a weapon, ingredient, mod, chapter or skill.</p></div>
       <div class="search-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> Navigate</span><span><kbd>Enter</kbd> Open</span><span><kbd>Esc</kbd> Close</span><span id="search-status" role="status" aria-live="polite"></span></div>
-    </dialog>
+    </dialog>}
     <script>import '../scripts/global';</script>
   </body>
 </html>
 
 
 <style>
+.brand-tk2{color:var(--text);font-weight:650;font-size:clamp(15px,2vw,19px)}
 .version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold-text)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--gold-text)}
 </style>

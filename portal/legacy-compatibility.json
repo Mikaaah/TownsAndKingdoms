@@ -23,7 +23,7 @@
     "storage/": "recipes/?q=ae2",
     "titles/": "mechanics/#titles",
     "titles/reference/": "mechanics/#titles",
-    "trading-hub/": "custom-mods/#workshop",
+    "trading-hub/": "guides/player-shops/",
     "transport/": "features/#moving-machines",
     "workshop/": "custom-mods/#workshop",
     "archive/prior-development/changelog/": "changes/",

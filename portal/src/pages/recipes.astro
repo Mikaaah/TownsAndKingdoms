@@ -1,23 +1,206 @@
 ---
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import Layout from '../layouts/Layout.astro';
 import RegistryDialog from '../components/RegistryDialog.astro';
-import { href, data, pretty, words } from '../lib/data';
-const families=data('recipe-families');
-const rules=data('production-rules');
-const ponderItems = [...new Set<string>(data('ponder', { scenes: [] }).scenes.flatMap((scene: { anchors: string[] }) => scene.anchors))];
-const percent=(value:number)=>new Intl.NumberFormat('en',{style:'percent',maximumFractionDigits:2}).format(value);
+import { href, data, fmt, pretty, words } from '../lib/data';
+import '../styles/recipes.css';
+
+interface Recipe {
+  id: string;
+  name: string;
+  output: string;
+  type: string;
+  chapter: number | null;
+  ingredients: { id?: string }[];
+}
+interface Chapter {
+  number: number;
+  roman: string;
+  title: string;
+  mechanism: string;
+}
+interface PonderStep {
+  input?: string;
+  output?: string;
+  inputIcon?: { url: string; animated?: boolean };
+  outputIcon?: { url: string; animated?: boolean };
+}
+const recipes: Recipe[] = data('recipes');
+const chapters: Chapter[] = data('chapters');
+const families = data('recipe-families');
+const rules = data('production-rules');
+const scenes: { anchors: string[]; steps: PonderStep[] }[] = data('ponder', { scenes: [] }).scenes;
+const ponderItems = [...new Set(scenes.flatMap(scene => scene.anchors))];
+const recipeArt: Record<string, string> = {
+  'kubejs:makeshift_kinetic_mechanism': 'media/recipes/makeshift_kinetic_mechanism.png',
+  'kubejs:reinforced_mechanism': 'media/recipes/reinforced_mechanism.png',
+  'kubejs:creation_core': 'media/recipes/creation_core.png',
+  'kubejs:unstable_creation_core': 'media/recipes/unstable_creative_core.png',
+};
+
+for (const scene of scenes) {
+  for (const step of scene.steps) {
+    for (const [stack, icon] of [[step.input, step.inputIcon], [step.output, step.outputIcon]] as const) {
+      const id = stack?.trim().split(/\s+/).at(-1);
+      if (id && icon?.url && !icon.animated && existsSync(join(process.cwd(), 'public', icon.url))) {
+        recipeArt[id] ??= icon.url;
+      }
+    }
+  }
+}
+
+const recipeItemIds = new Set(recipes.flatMap(recipe => [recipe.output, ...recipe.ingredients.map(input => input.id)]));
+for (const { id, icon } of data('weapons')) {
+  if (recipeItemIds.has(id) && icon && existsSync(join(process.cwd(), 'public', icon))) recipeArt[id] ??= icon;
+}
+
+const chapterOutputs: Record<number, string> = {
+  4: 'create:precision_mechanism',
+  10: 'kubejs:creation_core',
+};
+const milestones = chapters.flatMap(chapter => {
+  const output = chapterOutputs[chapter.number] ?? chapter.mechanism;
+  const recipe = recipes.find(entry => entry.chapter === chapter.number && entry.output === output);
+  return recipe ? [{ chapter, recipe }] : [];
+});
+const processes = new Map<string, number>();
+for (const recipe of recipes) processes.set(recipe.type, (processes.get(recipe.type) ?? 0) + 1);
+const processLinks = [
+  ['create:sequenced_assembly', 'Sequenced assembly'],
+  ['create:mechanical_crafting', 'Mechanical crafting'],
+  ['create:mixing', 'Mixing'],
+  ['create:cutting', 'Cutting'],
+  ['alchemicallaser:laser_processing', 'Laser processing'],
+  ['ars_nouveau:imbuement', 'Imbuement'],
+].filter(([id]) => processes.has(id));
+const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent', maximumFractionDigits: 2 }).format(value);
 ---
-<Layout title="Recipe registry" description="Custom crafting, processing and assembly recipes with their real ingredients and progression requirements." wide>
- <p class="eyebrow">Reference / Production</p><h1>Recipe registry</h1><p class="intro">Follow a material from its first component to its next purpose. Inspect crafting arrangements, assembly sequences and the mechanisms that connect each stage of production.</p>
- <div class="button-row"><a class="button" href={href('ponder/')}>Browse Ponder item guides</a><a class="button" href={href('chapters/')}>Understand the chapters</a></div>
- <div data-registry="recipes" data-ponder-items={JSON.stringify(ponderItems)}><div class="toolbar"><input type="search" data-filter="query" placeholder="Search an output, ingredient or recipe ID…" aria-label="Search recipes"/><select data-filter="type" aria-label="Filter by process"><option value="">All processes</option></select><select data-filter="modName" aria-label="Filter by mod"><option value="">All mods</option></select><select data-filter="productionTier" aria-label="Filter by production tier"><option value="">All tiers</option></select></div><div class="results-meta"><span data-count>Finding recipes…</span><span>Amounts are per recipe</span></div><div class="table-wrap"><table><thead><tr><th>Result</th><th>Process</th><th>Progression</th><th>Yield</th><th><span class="subtle">Details</span></th></tr></thead><tbody data-results></tbody></table></div><div class="pagination"><button data-prev disabled>← Previous</button><span data-page-label>1 / 1</span><button data-next>Next →</button></div></div>
- {families.length>0&&<section class="section"><p class="eyebrow">Connected production</p><h2>Spell scroll binding</h2><p class="muted">The school focus and ink determine how a spell scroll is prepared and bound.</p>{families.map((f:any)=><article class="card section" id={'family-'+f.id}><h3>{f.name}</h3><ol class="sequence-list">{(f.steps||[]).map((s:any)=><li><span><strong>{s.title}</strong><small>{s.text}</small></span></li>)}</ol><details><summary class="muted">Schools, inks & binding rules</summary><div class="detail-grid"><div><h4>Schools</h4><ul>{(f.schools||[]).map((s:any)=><li>{s.name||pretty(s)}</li>)}</ul></div><div><h4>Inks</h4><ul>{(f.inks||[]).map((s:any)=><li>{s.name||pretty(s)}</li>)}</ul></div></div><ul class="muted">{(f.rules||[]).map((rule:string)=><li>{rule}</li>)}</ul></details></article>)}</section>}
- {rules.length>0&&<section class="section" id="production-rules"><p class="eyebrow">Industrial processes</p><h2>Excavator deposits &amp; liquid fuel</h2><p class="muted">Inspect deposit rolls and fuel behavior alongside the item-producing recipes.</p><div class="process-rules">{rules.map((rule:any)=>{const r=rule.recipe;return <details id={'rule-'+rule.id.replace(':','/')} class="process-rule"><summary><span>{rule.name}</span><small>{words(rule.type)}</small></summary><p><code>{rule.id}</code></p>{rule.type==='immersiveengineering:mineral_mix'?<><dl class="detail-grid"><div><dt>Deposit weight</dt><dd>{r.weight}</dd></div><div><dt>Failed extraction roll</dt><dd>{percent(r.fail_chance||0)}</dd></div></dl><div class="table-wrap"><table><thead><tr><th>Ore roll</th><th>Chance</th></tr></thead><tbody>{(r.ores||[]).map((ore:any)=><tr><td>{words(ore.output?.id||ore.output?.item)}</td><td>{percent(ore.chance)}</td></tr>)}</tbody></table></div><p class="detail-note">Spoils: {(r.spoils||[]).map((spoil:any)=>`${words(spoil.output?.id||spoil.output?.item)} (${percent(spoil.chance)})`).join(' · ')}</p><p class="detail-note">Biome tag groups: {(r.biome_predicates||[]).map((group:any)=>group.join(', ')).join(' / ')}</p></>:<><p>{(r.ingredients||[]).map((input:any)=>`${input.amount||1000} mB ${words(input.tag||input.fluid||input.id)}`).join(' + ')}</p><dl class="detail-grid"><div><dt>Burn time</dt><dd>{r.burn_time.toLocaleString()} ticks · {(r.burn_time/20).toLocaleString()} seconds</dd></div><div><dt>Superheating</dt><dd>{r.superheated?'Yes':'No'}</dd></div></dl></>}</details>})}</div></section>}
- <RegistryDialog />
- <script>
-  import '../scripts/registry';
-  function revealRule(){let id='';try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const target=document.getElementById(id);if(target instanceof HTMLDetailsElement&&target.classList.contains('process-rule'))target.open=true;}
-  revealRule();window.addEventListener('hashchange',revealRule);
- </script>
+<Layout title="Recipes" description="Search recipes added or changed by Towns & Kingdoms, from the first mechanism to the Creation Core." wide>
+  <p class="eyebrow">Reference / Production</p>
+  <h1>Recipes</h1>
+  <p class="intro">Find recipes added or changed by the pack. Look up what an item makes, see how a machine assembles it, or follow the mechanisms through the chapters.</p>
+  <div class="button-row recipe-jump-links">
+    <a class="button button-primary" href="#recipe-results">Find a recipe</a>
+    <a class="button" href={href('ponder/')}>Ponder item guides</a>
+    <a class="button" href={href('chapters/')}>Chapter guide</a>
+  </div>
+
+  {milestones.length > 0 && <section class="recipe-landmarks" aria-labelledby="landmark-title">
+    <h2 id="landmark-title">Chapter recipes</h2>
+    <ol class="recipe-landmark-grid">
+      {milestones.map(({ chapter, recipe }) => <li>
+        <a href={'#recipe=' + encodeURIComponent(recipe.id)} class="recipe-landmark">
+          {recipeArt[recipe.output] && <img src={href(recipeArt[recipe.output])} alt="" width="38" height="38" />}
+          <span>
+            <small title={chapter.title}>Chapter {chapter.roman}</small>
+            <strong>{recipe.name}</strong>
+          </span>
+        </a>
+      </li>)}
+    </ol>
+  </section>}
+
+  <section id="recipe-results" aria-labelledby="recipe-finder-title" class="recipe-finder">
+    <header class="recipe-finder-heading">
+      <h2 id="recipe-finder-title">Recipe finder</h2>
+      <p>{fmt(recipes.length)} recipes across {fmt(processes.size)} processes</p>
+    </header>
+    <nav class="recipe-processes" aria-label="Browse by process">
+      {processLinks.map(([id, name]) => <a href={href('recipes/?type=' + encodeURIComponent(id) + '#recipe-results')}>
+        {name} <span>{fmt(processes.get(id) ?? 0)}</span>
+      </a>)}
+    </nav>
+    <div data-registry="recipes" data-ponder-items={JSON.stringify(ponderItems)} data-recipe-art={JSON.stringify(recipeArt)}>
+      <div class="toolbar recipe-toolbar">
+        <div class="recipe-query">
+          <input type="search" data-filter="query" placeholder="Search by item name or ID" aria-label="Search recipes" />
+          <select data-filter="scope" aria-label="Search in recipes">
+            <option value="">Results and ingredients</option>
+            <option value="output">Results only</option>
+            <option value="ingredient">Ingredients only</option>
+          </select>
+        </div>
+        <div class="recipe-filters">
+          <select data-filter="type" aria-label="Filter by process"><option value="">All processes</option></select>
+          <select data-filter="chapter" aria-label="Filter by chapter"><option value="">All chapters</option></select>
+          <select data-filter="productionTier" aria-label="Filter by tier"><option value="">All tiers</option></select>
+          <select data-filter="modName" aria-label="Filter by mod"><option value="">All mods</option></select>
+          <button type="button" data-recipe-clear>Clear filters</button>
+        </div>
+      </div>
+      <div class="results-meta"><span data-count aria-live="polite">Finding recipes…</span><span>Amounts are per recipe</span></div>
+      <div class="table-wrap">
+        <table class="recipe-table">
+          <thead><tr><th scope="col">Result</th><th scope="col" class="recipe-input-column">Ingredients</th><th scope="col">Process</th><th scope="col">Progression</th></tr></thead>
+          <tbody data-results></tbody>
+        </table>
+      </div>
+      <div class="pagination"><button data-prev disabled>Previous</button><span data-page-label>1 / 1</span><button data-next disabled>Next</button></div>
+    </div>
+  </section>
+
+  {families.length > 0 && <section class="section">
+    <p class="eyebrow">Connected production</p>
+    <h2>Spell scroll binding</h2>
+    <p class="muted">The school focus and ink determine how a spell scroll is prepared and bound.</p>
+    {families.map((family: any) => <article class="card section" id={'family-' + family.id}>
+      <h3>{family.name}</h3>
+      <ol class="sequence-list">{(family.steps || []).map((step: any) => <li>
+        <span><strong>{step.title}</strong><small>{step.text}</small></span>
+      </li>)}</ol>
+      <details>
+        <summary class="muted">Schools, inks &amp; binding rules</summary>
+        <div class="detail-grid">
+          <div><h4>Schools</h4><ul>{(family.schools || []).map((school: any) => <li>{school.name || pretty(school)}</li>)}</ul></div>
+          <div><h4>Inks</h4><ul>{(family.inks || []).map((ink: any) => <li>{ink.name || pretty(ink)}</li>)}</ul></div>
+        </div>
+        <ul class="muted">{(family.rules || []).map((rule: string) => <li>{rule}</li>)}</ul>
+      </details>
+    </article>)}
+  </section>}
+
+  {rules.length > 0 && <section class="section" id="production-rules">
+    <p class="eyebrow">Industrial processes</p>
+    <h2>Excavator deposits &amp; liquid fuel</h2>
+    <p class="muted">Check the yield and chance of each ore, or compare how fuels behave in a diesel engine.</p>
+    <div class="process-rules">{rules.map((rule: any) => {
+      const recipe = rule.recipe;
+      return <details id={'rule-' + rule.id.replace(':', '/')} class="process-rule">
+        <summary><span>{rule.name}</span><small>{words(rule.type)}</small></summary>
+        <p><code>{rule.id}</code></p>
+        {rule.type === 'immersiveengineering:mineral_mix' ? <>
+          <dl class="detail-grid">
+            <div><dt>Deposit weight</dt><dd>{recipe.weight}</dd></div>
+            <div><dt>Failed extraction roll</dt><dd>{percent(recipe.fail_chance || 0)}</dd></div>
+          </dl>
+          <div class="table-wrap"><table>
+            <thead><tr><th scope="col">Ore roll</th><th scope="col">Chance</th></tr></thead>
+            <tbody>{(recipe.ores || []).map((ore: any) => <tr><td>{words(ore.output?.id || ore.output?.item)}</td><td>{percent(ore.chance)}</td></tr>)}</tbody>
+          </table></div>
+          <p class="detail-note">Spoils: {(recipe.spoils || []).map((spoil: any) => `${words(spoil.output?.id || spoil.output?.item)} (${percent(spoil.chance)})`).join(' · ')}</p>
+          <p class="detail-note">Biome tag groups: {(recipe.biome_predicates || []).map((group: any) => group.join(', ')).join(' / ')}</p>
+        </> : <dl class="detail-grid">
+          <div><dt>Fuel</dt><dd>{(recipe.ingredients || []).map((input: any) => `${input.amount || 1000} mB ${words(input.tag || input.fluid || input.id)}`).join(' + ')}</dd></div>
+          <div><dt>Burn time</dt><dd>{recipe.burn_time.toLocaleString()} ticks · {(recipe.burn_time / 20).toLocaleString()} seconds</dd></div>
+          <div><dt>Superheating</dt><dd>{recipe.superheated ? 'Yes' : 'No'}</dd></div>
+        </dl>}
+      </details>;
+    })}</div>
+  </section>}
+  <RegistryDialog />
+  <script>
+    import '../scripts/registry';
+
+    function revealRule() {
+      let id: string;
+      try { id = decodeURIComponent(location.hash.slice(1)); }
+      catch { return; }
+      const target = document.getElementById(id);
+      if (target instanceof HTMLDetailsElement && target.classList.contains('process-rule')) target.open = true;
+    }
+
+    revealRule();
+    window.addEventListener('hashchange', revealRule);
+  </script>
 </Layout>
-<style>.process-rules{display:grid;gap:8px}.process-rule{border:1px solid var(--border);border-radius:7px;padding:14px 18px;background:var(--surface);scroll-margin-top:100px}.process-rule summary{display:flex;gap:18px;justify-content:space-between;align-items:center;font-weight:550}.process-rule summary>*{min-width:0;overflow-wrap:anywhere}.process-rule summary small{color:var(--muted);font-size:13px;font-weight:400}.process-rule p{font-size:16px;color:var(--muted)}.process-rule table{font-size:14px;max-width:640px}.process-rule code{font-size:13px}@media(max-width:520px){.process-rule summary{align-items:flex-start;flex-direction:column;gap:2px}}</style>
