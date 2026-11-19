@@ -1,0 +1,12 @@
+{
+  "height": 14,
+  "widths": {
+    "alchemist": 70,
+    "blacksmith": 81,
+    "cook": 39,
+    "enchanter": 80,
+    "hunter": 52,
+    "miner": 40
+  },
+  "path": "media/profession-labels/"
+}
