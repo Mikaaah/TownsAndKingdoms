@@ -7,11 +7,12 @@ import { href } from '../lib/data';
 const handbookLinks = [
   { title: 'Weapons', path: 'weapons/', icon: 'hammer' },
   { title: 'Recipes', path: 'recipes/', icon: 'paper' },
+  { title: 'Factory planner', path: 'factory/', icon: 'rotation_mechanism' },
   { title: 'Progression chapters', path: 'chapters/', icon: 'scroll' },
   { title: 'Skilltree planner', path: 'skills/', icon: 'skill_point' },
   { title: 'Character & Origins', path: 'mechanics/', icon: 'mirror' },
   { title: 'Loot & Appraisal', path: 'loot/', icon: 'satchel' },
-  { title: 'Ponder item guides', path: 'ponder/', icon: 'rotation_mechanism' },
+  { title: 'Build guides', path: 'tutorials/', icon: 'rotation_mechanism' },
   { title: 'Boss encounters', path: 'bosses/', icon: 'horn' },
   { title: 'Mods & integrations', path: 'mods/', icon: 'journal' },
 ];
@@ -50,7 +51,7 @@ const startingGuides = [
   <section class="home-guides" aria-labelledby="home-guides-title">
     <div>
       <h2 id="home-guides-title">A place to begin</h2>
-      <a href={href('guides/')}>Read all guides</a>
+      <a href={href('tutorials/')}>Browse build guides</a>
     </div>
     <div class="home-guide-links">
       {startingGuides.map(({ title, summary, path, icon }) => (

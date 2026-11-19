@@ -1,6 +1,5 @@
 const container = document.querySelector<HTMLElement>('[data-registry]');
 const type = container?.dataset.registry;
-const ponderItems = new Set<string>(JSON.parse(container?.dataset.ponderItems || '[]'));
 const bossPortraits: Record<string, string> = JSON.parse(container?.dataset.bossPortraits || '{}');
 type RecipeTexture = string | [number, number, number];
 let recipeArt: Record<string, RecipeTexture> = {};
@@ -202,8 +201,11 @@ function recipeDetail(record:any) {
   const encodedOutput = encodeURIComponent(record.output);
   const uses = records.some(recipe=>recipeInputs(recipe).some(input=>input.id===record.output));
   const useLink = uses?`<a class="button" href="${base}/recipes/?q=${encodedOutput}&amp;scope=ingredient#recipe-results">Find recipes that use this</a>`:'';
-  const ponderLink = ponderItems.has(record.output)?`<a class="button" href="${base}/ponder/?q=${encodedOutput}">Ponder guides for this item</a>`:'';
-  const pathLinks = useLink||ponderLink?`<div class="detail-section recipe-path-links">${useLink}${ponderLink}</div>`:'';
+  const planItem = record.outputKind === 'fluid' ? 'fluid:' + record.output : record.output;
+  const planLink = record.chapter !== 10 && !chanceOutput(record) && planItem
+    ? `<a class="button" href="${base}/factory/?item=${encodeURIComponent(planItem)}">Plan this output</a>` : '';
+  const pathLinks = planLink||useLink
+    ? `<div class="detail-section recipe-path-links">${planLink}${useLink}</div>` : '';
   const inputs = arr(record.ingredients).map(input=>`<li>${ingredient(input)}${ingredientRecipeLink(record,input)}</li>`).join('');
   const quantity = chanceOutput(record) ? 'Chance output' : outputQuantity(record);
   const outputs = outputList.map(output=>{

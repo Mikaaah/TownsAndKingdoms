@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import QuestBoardTexture from '../components/QuestBoardTexture.astro';
+import QuestIcon from '../components/QuestIcon.astro';
 import { data, href } from '../lib/data';
 
 interface Prerequisite {
@@ -184,9 +185,9 @@ function boardEdges(chapter: Chapter) {
                   </div>
                 </details>}
                 <div class="board-controls" role="group" aria-label="Quest board zoom">
-                  <button type="button" data-quest-action="zoom-out" aria-label="Zoom out">−</button>
-                  <button type="button" data-quest-action="fit" aria-label="Fit all quests">Fit</button>
-                  <button type="button" data-quest-action="zoom-in" aria-label="Zoom in">+</button>
+                  <button type="button" data-quest-action="zoom-out" aria-label="Zoom out"><QuestIcon kind="ui" name="minus" size={24} /></button>
+                  <button type="button" data-quest-action="fit" aria-label="Fit all quests"><QuestIcon kind="ui" name="zoom" />Fit</button>
+                  <button type="button" data-quest-action="zoom-in" aria-label="Zoom in"><QuestIcon kind="ui" name="plus" size={24} /></button>
                 </div>
               </div>
               <svg class="quest-map" data-quest-map viewBox={boardViewBox(chapter, frameSizes)} tabindex="0" aria-label={chapter.title + ' quest board'} aria-describedby={helpId}>
@@ -419,7 +420,7 @@ function boardEdges(chapter: Chapter) {
   }
   .board-toolbar > p { flex: 1; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
   .board-controls { display: flex; align-items: center; gap: 5px; }
-  .board-controls button { min-width: 38px; min-height: 38px; padding: 4px 7px; font-weight: 650; }
+  .board-controls button { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 38px; min-height: 38px; padding: 4px 7px; font-weight: 650; }
   .board-controls button:hover:not(:disabled) { border-color: var(--gold-text); }
   .board-controls button:disabled { opacity: .5; cursor: default; }
 

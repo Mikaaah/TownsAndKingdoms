@@ -84,14 +84,6 @@
   ],
   "links": [
     {
-      "label": "Witchery altar Ponder",
-      "path": "ponder/?scene=witchery_altar"
-    },
-    {
-      "label": "Rite of Daytime Ponder",
-      "path": "ponder/?scene=witchery_circle"
-    },
-    {
       "label": "Just Another Witchery Remake",
       "path": "https://www.curseforge.com/minecraft/mc-mods/just-another-witchery-remake"
     }

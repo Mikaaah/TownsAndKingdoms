@@ -11,6 +11,16 @@ test('navigation exposes the feature, custom-mod and community routes',()=>{
  const dom=new JSDOM(route(''));
  const links=new Set(Array.from(dom.window.document.querySelectorAll('#site-sidebar a')).map(a=>a.getAttribute('href')));
  for(const page of ['features/','custom-mods/','servers/','guides/server-setup/','discord/','support/','faq/'])assert(links.has('/TownsAndKingdoms/'+page),page);
+ const pagesByGroup = {
+  Character: ['weapons','loot','mechanics'],
+  Practical: ['recipes','mods','custom-mods','tutorials','guides/player-shops'],
+  World: ['bosses','dungeons','dimensions'],
+  Tools: ['skills','factory'],
+ };
+ for(const [group,pages] of Object.entries(pagesByGroup)){
+  const nav=dom.window.document.querySelector(`#site-sidebar nav[aria-label="${group}"]`);
+  assert.deepEqual([...nav.querySelectorAll('a')].map(link=>link.getAttribute('href')),pages.map(page=>`/TownsAndKingdoms/${page}/`));
+ }
  dom.window.close();
 });
 test('mobile navigation opens, closes on Escape and closes after selecting a link',()=>{

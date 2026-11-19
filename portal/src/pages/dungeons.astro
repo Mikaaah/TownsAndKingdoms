@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import QuestIcon from '../components/QuestIcon.astro';
+import { data, href } from '../lib/data';
+
+interface ModEntry {
+  id: string;
+  name: string;
+  url: string;
+}
+
+const mods: ModEntry[] = data('mods');
+const dungeonMods = [
+  'integrated_dungeons_arise',
+  'idas',
+  'epic_structures_dungeons',
+].flatMap(id => mods.filter(mod => mod.id === id));
+const spiralAbyss = mods.find(mod => mod.id === 'spiral_abyss');
+---
+<Layout title="Dungeons" description="Find dungeon and structure mods, the Spiral Abyss reference and the handbook’s boss and loot guides.">
+  <p class="eyebrow">Handbook / World</p>
+  <h1>Dungeons</h1>
+  <p class="intro">Look up the pack’s dungeon mods, prepare for a boss encounter and find out what your expedition rewards can reveal.</p>
+
+  <section class="section prose" id="structures">
+    <h2>Dungeon structures</h2>
+    <ul>
+      {dungeonMods.map(mod => <li><a href={href('mods/#mod-' + mod.id)}>{mod.name}</a></li>)}
+    </ul>
+  </section>
+
+  {spiralAbyss && (
+    <section class="section prose" id="spiral-abyss">
+      <h2>Spiral Abyss</h2>
+      <p><a href={href('mods/#mod-' + spiralAbyss.id)}>Find Spiral Abyss in the mod index</a> or read its <a href={spiralAbyss.url}>CurseForge reference</a>.</p>
+    </section>
+  )}
+
+  <section class="section" id="rewards">
+    <div class="section-heading"><h2>Encounters and rewards</h2></div>
+    <div class="card-grid">
+      <a class="card card-link" href={href('bosses/#encounters')}>
+        <QuestIcon name="horn" size={25} />
+        <h3>Boss encounters</h3>
+        <p>Find encounter locations, summoning requirements and rewards.</p>
+      </a>
+      <a class="card card-link" href={href('loot/')}>
+        <QuestIcon name="satchel" size={25} />
+        <h3>Loot &amp; Appraisal</h3>
+        <p>Identify dungeon finds, compare affixes and salvage spare gear.</p>
+      </a>
+      <a class="card card-link" href={href('loot/pools/')}>
+        <QuestIcon name="journal" size={25} />
+        <h3>Unidentified Loot Pools</h3>
+        <p>Look up possible equipment by level group, dimension or boss.</p>
+      </a>
+    </div>
+  </section>
+</Layout>

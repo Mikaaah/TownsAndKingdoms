@@ -91,18 +91,6 @@
   ],
   "links": [
     {
-      "label": "Source supply Ponder",
-      "path": "ponder/?scene=ars_source"
-    },
-    {
-      "label": "Source Gem imbuement Ponder",
-      "path": "ponder/?scene=ars_imbuement"
-    },
-    {
-      "label": "Enchanting Apparatus Ponder",
-      "path": "ponder/?scene=ars_apparatus"
-    },
-    {
       "label": "Ars Nouveau in-game book reference",
       "path": "https://ars.guide/book/"
     }

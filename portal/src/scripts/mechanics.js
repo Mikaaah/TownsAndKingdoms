@@ -69,7 +69,6 @@ if (originControls && originGrid) {
       tier.value = '';
       filterOrigins();
     }
-    target.querySelector('details').open = true;
     target.scrollIntoView({ block: 'start' });
   }
 

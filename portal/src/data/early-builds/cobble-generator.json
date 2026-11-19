@@ -64,10 +64,6 @@
     {
       "label": "Mechanical Drill recipe",
       "path": "recipes/#recipe=tnk%3Amachines%2Ftier_01%2Fcrafting%2Fcreate%2Fmechanical_drill"
-    },
-    {
-      "label": "Stone generator Ponder",
-      "path": "ponder/?scene=chute_generator"
     }
   ]
 }
