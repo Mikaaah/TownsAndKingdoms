@@ -273,13 +273,15 @@ class IconExporter:
         for element in data.get("elements", []):
             x, y, z = element["from"]
             X, Y, Z = element["to"]
+            # Match Minecraft 1.21.1 FaceInfo's corner order. BlockFaceUV
+            # indexes its UV rotation against that same order.
             corners = {
-                "north": [[X, Y, z], [x, Y, z], [x, y, z], [X, y, z]],
-                "south": [[x, Y, Z], [X, Y, Z], [X, y, Z], [x, y, Z]],
-                "east": [[X, Y, Z], [X, Y, z], [X, y, z], [X, y, Z]],
-                "west": [[x, Y, z], [x, Y, Z], [x, y, Z], [x, y, z]],
-                "up": [[x, Y, z], [X, Y, z], [X, Y, Z], [x, Y, Z]],
-                "down": [[x, y, Z], [X, y, Z], [X, y, z], [x, y, z]],
+                "north": [[X, Y, z], [X, y, z], [x, y, z], [x, Y, z]],
+                "south": [[x, Y, Z], [x, y, Z], [X, y, Z], [X, Y, Z]],
+                "east": [[X, Y, Z], [X, y, Z], [X, y, z], [X, Y, z]],
+                "west": [[x, Y, z], [x, y, z], [x, y, Z], [x, Y, Z]],
+                "up": [[x, Y, z], [x, Y, Z], [X, Y, Z], [X, Y, z]],
+                "down": [[x, y, Z], [x, y, z], [X, y, z], [X, y, Z]],
             }
             default_uv = {
                 "north": [16-X, 16-Y, 16-x, 16-y], "south": [x, 16-Y, X, 16-y],
@@ -304,9 +306,7 @@ class IconExporter:
                         matrix = np.diag(resize) @ matrix
                     points = (points - origin) @ matrix.T + origin
                 u, v, U, V = face.get("uv", default_uv[side])
-                uv = np.array([[U, v], [u, v], [u, V], [U, V]], dtype=float) / 16
-                if side in {"up", "down"}:
-                    uv = np.array([[u, v], [U, v], [U, V], [u, V]], dtype=float) / 16
+                uv = np.array([[u, v], [u, V], [U, V], [U, v]], dtype=float) / 16
                 uv = np.roll(uv, -int(face.get("rotation", 0)) // 90, axis=0)
                 result.append((points, uv, image, side))
         return result, resources

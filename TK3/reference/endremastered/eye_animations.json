@@ -1,0 +1,12 @@
+{
+  "magical_eye": {
+    "animation": {
+      "frametime": 2
+    }
+  },
+  "wither_eye": {
+    "animation": {
+      "frametime": 6
+    }
+  }
+}

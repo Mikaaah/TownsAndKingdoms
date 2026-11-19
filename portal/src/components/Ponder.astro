@@ -1,89 +1,120 @@
 ---
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { href, words } from '../lib/data';
 import index from '../data/ponder.json';
-const { initialScene = '' } = Astro.props;
-const base = import.meta.env.BASE_URL;
-const first = index.scenes.find(scene => scene.slug === initialScene || scene.id === initialScene) || index.scenes[0];
-const choices = index.scenes.map(({id,slug,title,anchors,dataUrl,category}) => ({id,slug,title,anchors,dataUrl,category}));
+import { guideItems } from '../scripts/ponder-guides.mjs';
+
+const { scenes, categories } = index;
+const titles = new Map<string, number>();
+const itemNames = new Map<string, string>();
+for (const scene of scenes) {
+  titles.set(scene.title, (titles.get(scene.title) ?? 0) + 1);
+  for (const step of scene.steps) {
+    for (const item of guideItems(step)) {
+      if (item.id && item.name) itemNames.set(item.id, item.name);
+    }
+  }
+}
+const nameFor = (id: string) => itemNames.get(id) || words(id);
+const options = scenes.map(scene => ({
+  ...scene,
+  label: (titles.get(scene.title) ?? 0) > 1 ? `${scene.title} · ${words(scene.slug)}` : scene.title,
+  itemNames: scene.anchors.map(nameFor),
+}));
+const localIcons = new Map<string, boolean>();
+function iconPath(icon?: { url?: string, animated?: boolean }) {
+  if (!icon?.url || icon.animated || !icon.url.includes('/item/')) return '';
+  if (!localIcons.has(icon.url)) localIcons.set(icon.url, existsSync(join(process.cwd(), 'public', icon.url)));
+  return localIcons.get(icon.url) ? href(icon.url) : '';
+}
+const categoryNames = new Map(categories.map(category => [category.id, category.title]));
 ---
-<section class="ponder" data-ponder data-base={base} data-initial={first.slug} data-scenes={JSON.stringify(choices)} aria-label="Interactive Ponder scenes">
-  <div class="ponder-picker">
-    <label>Find a scene<input data-ponder-filter type="search" placeholder="Search an item, process, or machine" autocomplete="off" /></label>
-    <label>Scene<select data-ponder-select aria-label="Choose a Ponder scene">
-      {index.scenes.map(scene => <option value={scene.slug} selected={scene.slug === first.slug}>{scene.title}</option>)}
+<section class="ponder-guides" data-ponder-guides aria-label="Ponder item guides">
+  <div class="ponder-filters" data-ponder-controls hidden>
+    <label>Find an item or guide<input data-ponder-query type="search" placeholder="Try Rotational Speed Controller" autocomplete="off" /></label>
+    <label>Guide<select data-ponder-guide aria-describedby="ponder-results">
+      {categories.map(category => <optgroup label={category.title}>
+        {options.filter(scene => scene.category === category.id).map(scene =>
+          <option value={scene.slug} data-title={scene.title} data-items={scene.anchors.join(' ')} data-names={scene.itemNames.join(' ')} selected={scene.slug === scenes[0].slug}>{scene.label}</option>
+        )}
+      </optgroup>)}
     </select></label>
-    <p class="ponder-filter-status" data-ponder-filter-status role="status" aria-live="polite">{index.scenes.length} scenes</p>
+    <p id="ponder-results" class="ponder-results" role="status">{scenes.length} guides</p>
   </div>
-  <div class="ponder-stage" data-ponder-stage>
-    <div class="ponder-canvas" data-ponder-canvas role="img" tabindex="0" aria-label="Interactive three-dimensional machine and item staging"></div>
-    <div class="ponder-stage-status" data-ponder-status aria-live="polite">Preparing the scene…</div>
-    <div class="ponder-hover" data-ponder-hover hidden></div>
-    <div class="ponder-focus" data-ponder-focus hidden></div>
-    <button class="ponder-camera" data-ponder-camera type="button" title="Reset the camera">Reset view</button>
-    <span class="ponder-controls-hint">Drag to orbit · scroll to zoom · right-drag to pan</span>
+  <p class="ponder-empty" data-ponder-empty hidden>No guides match. Try an item name, item ID, or guide title.</p>
+  <div data-ponder-articles>
+    {scenes.map(scene => <article class="ponder-guide" id={'guide-' + scene.slug} data-guide={scene.slug} aria-labelledby={'title-' + scene.slug}>
+      <header class="ponder-guide-header">
+        <p class="ponder-category">{categoryNames.get(scene.category)}</p>
+        <h2 id={'title-' + scene.slug}>{scene.title}</h2>
+        {scene.anchors.length > 0 && <div class="ponder-key">
+          <p>In Minecraft, hover over {scene.anchors.length === 1 ? 'this item' : 'one of these items'} and hold <kbd>W</kbd> to open Ponder.</p>
+          <ul class="ponder-items" aria-label="Items with this Ponder guide">
+            {scene.anchors.slice(0, 5).map(id => <li title={id}>{nameFor(id)}</li>)}
+          </ul>
+          {scene.anchors.length > 5 && <details class="ponder-more">
+            <summary>Show {scene.anchors.length - 5} more items</summary>
+            <ul class="ponder-items" aria-label="More items with this Ponder guide">{scene.anchors.slice(5).map(id => <li title={id}>{nameFor(id)}</li>)}</ul>
+          </details>}
+        </div>}
+      </header>
+      <ol class="ponder-steps">
+        {scene.steps.map(step => {
+          const items = guideItems(step);
+          return <li>
+          {step.title !== scene.title && <h3>{step.title}</h3>}
+          <p>{step.text}</p>
+          {items.length > 0 && <ul class="ponder-items ponder-step-items" aria-label="Items shown in this step">
+            {items.map(item => {
+              const image = iconPath(item.icon);
+              return <li title={item.id}>
+                {image && <img src={image} width="24" height="24" alt="" loading="lazy" decoding="async" />}
+                {item.role && <span class="ponder-item-role">{item.role}</span>}
+                <span>{item.count}{item.name || words(item.id)}</span>
+              </li>;
+            })}
+          </ul>}
+          </li>;
+        })}
+      </ol>
+    </article>)}
   </div>
-  <div class="ponder-timeline" aria-label="Scene timeline">
-    <div class="ponder-transport">
-      <button data-ponder-prev type="button" aria-label="Previous step">←</button>
-      <button data-ponder-play type="button" aria-label="Play scene">Play</button>
-      <button data-ponder-next type="button" aria-label="Next step">→</button>
-      <span data-ponder-counter>Step 1 of {first.steps.length}</span>
-    </div>
-    <label class="ponder-scrub-label"><span class="sr-only">Scrub through the scene</span><input data-ponder-scrub type="range" min="0" max="1000" value="0" step="1" aria-label="Scene progress" /></label>
-  </div>
-  <div class="ponder-instruction" aria-live="polite" aria-atomic="true">
-    <div class="ponder-step-eyebrow" data-ponder-step-label>Step 1</div>
-    <h3 data-ponder-step-title>{first.steps[0]?.title}</h3>
-    <p data-ponder-step-text>{first.steps[0]?.text}</p>
-    <div class="ponder-item-flow" data-ponder-item-flow></div>
-    <section class="ponder-staged-fallback" data-ponder-staged-fallback hidden aria-label="Staged ingredients">
-      <h4>Staged ingredients</h4>
-      <div class="ponder-item-flow" data-ponder-staged-items></div>
-    </section>
-  </div>
-  <div class="ponder-step-list" data-ponder-step-list aria-label="Choose a scene step">
-    {first.steps.map((step,index) => <button data-step={index} class:list={{active:index === 0}} type="button"><span>{index+1}</span>{step.title}</button>)}
-  </div>
-  <noscript><p>Scene instructions</p><ol>{first.steps.map(step => <li>{step.text}</li>)}</ol></noscript>
 </section>
 <script>
-  import { initPonders } from '../scripts/ponder.js';
-  initPonders();
+  import { initPonderGuides } from '../scripts/ponder-guides.mjs';
+  initPonderGuides();
 </script>
-<style is:global>
-  .ponder{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
-  .ponder-picker{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;padding:20px;border-bottom:1px solid var(--border)}
-  .ponder-picker label{display:grid;gap:7px;min-width:0;color:var(--muted);font-size:.875rem;font-weight:600}
-  .ponder-filter-status{grid-column:1/-1;margin:0;color:var(--muted);font-size:.8125rem}
-  .ponder-picker input,.ponder-picker select{width:100%;min-height:44px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text);padding:10px 12px;font:inherit;font-size:1rem}
-  .ponder-stage{
-    --scene-background:#202020;
-    --scene-muted:#e1e3ee;
-    --scene-focus:#f9b50c;
-    height:480px;position:relative;overflow:hidden;background:var(--scene-background);isolation:isolate
-  }
-  .ponder-canvas,.ponder-canvas canvas{display:block;width:100%;height:100%;touch-action:none}
-  .ponder-stage-status{position:absolute;inset:0;display:grid;place-items:center;color:var(--scene-muted);font-size:1rem;pointer-events:none}
-  .ponder-stage-status[hidden]{display:none}
-  .ponder.ponder-no-3d .ponder-stage{height:auto;min-height:0;padding:18px 24px;background:var(--surface)}
-  .ponder.ponder-no-3d .ponder-stage-status{position:static;display:block;line-height:1.7;font-size:.875rem;color:var(--muted)}
-  .ponder.ponder-no-3d .ponder-canvas,.ponder.ponder-no-3d .ponder-camera,.ponder.ponder-no-3d .ponder-controls-hint,.ponder.ponder-no-3d .ponder-focus,.ponder.ponder-no-3d .ponder-hover{display:none!important}
-  .ponder-camera{position:absolute;right:16px;top:16px;min-height:44px;background:var(--surface);border:1px solid var(--border);border-radius:6px;color:var(--text);padding:9px 12px;font-size:.875rem;cursor:pointer}
-  .ponder-controls-hint{position:absolute;left:16px;bottom:12px;padding:4px 8px;border-radius:4px;background:var(--scene-background);color:var(--scene-muted);font-size:.75rem;pointer-events:none}
-  .ponder-hover{position:absolute;padding:8px 11px;max-width:240px;border:1px solid var(--border);border-radius:6px;background:var(--surface-raised);box-shadow:0 8px 20px #0003;color:var(--text);font-size:.875rem;pointer-events:none;z-index:3}
-  .ponder-hover small{display:block;margin-top:3px;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}
-  .ponder-focus{position:absolute;transform:translate(-50%,-100%);padding:5px 9px;border:1px solid var(--border);border-radius:5px;color:var(--text);background:var(--surface-raised);white-space:nowrap;font-size:.8125rem;pointer-events:none;z-index:2}
-  .ponder-timeline{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:18px;padding:13px 20px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-  .ponder-transport{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.ponder-transport button{min-width:44px;min-height:44px;padding:8px 12px;background:transparent;border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:.875rem;cursor:pointer}.ponder-transport button:disabled{opacity:.4;cursor:default}
-  .ponder-transport span{margin-left:4px;color:var(--muted);font-size:.8125rem;white-space:nowrap}
-  .ponder-scrub-label{display:flex;min-width:0}.ponder-scrub-label input{width:100%;min-height:44px;accent-color:var(--accent);cursor:pointer}
-  .ponder-instruction{padding:24px 26px 21px;min-height:150px}.ponder-step-eyebrow{text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-size:.75rem;font-weight:600}.ponder-instruction h3{margin:8px 0 10px;font-size:1.18rem;letter-spacing:-.02em}.ponder-instruction p{margin:0;max-width:68ch;color:var(--muted);font-size:1rem;line-height:1.7}
-  .ponder-item-flow{display:flex;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}.ponder-item-flow:empty{display:none}.ponder-item-flow .ponder-item{display:flex;align-items:center;gap:7px;border:1px solid var(--border);border-radius:5px;background:var(--bg);padding:6px 9px;color:var(--text);font-size:.875rem}.ponder-item-flow img{width:22px;height:22px;object-fit:contain;image-rendering:pixelated}.ponder-item-flow .flow-arrow{color:var(--muted);font-size:.875rem}
-  .ponder-staged-fallback{margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
-  .ponder-staged-fallback[hidden]{display:none}.ponder-staged-fallback h4{margin:0;font-size:.875rem;font-weight:600;color:var(--muted)}
-  .ponder-step-list{display:flex;flex-wrap:wrap;gap:8px;padding:0 26px 24px}.ponder-step-list button{display:flex;align-items:center;gap:7px;min-height:44px;padding:9px 12px;border:1px solid var(--border);border-radius:5px;background:transparent;color:var(--muted);font:inherit;font-size:.875rem;cursor:pointer}.ponder-step-list button.active{border-color:var(--accent);color:var(--text);background:var(--surface-raised)}.ponder-step-list button span{font-family:ui-monospace,monospace;font-size:.75rem;color:var(--accent)}
-  .ponder button:focus-visible,.ponder input:focus-visible,.ponder select:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
-  .ponder .ponder-camera:focus-visible{outline-color:var(--scene-focus)}
-  .ponder-canvas:focus-visible{outline:2px solid var(--scene-focus);outline-offset:-4px}
-  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  @media(max-width:700px){.ponder-picker{grid-template-columns:1fr;gap:12px;padding:16px}.ponder-stage{height:365px}.ponder-timeline{grid-template-columns:1fr;gap:10px;padding:12px 16px}.ponder-instruction{padding:20px 18px}.ponder-step-list{padding:0 18px 20px}.ponder-controls-hint{font-size:.75rem;left:12px;max-width:75%}.ponder-transport{justify-content:space-between}}
+<style>
+  .ponder-guides{border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);overflow:hidden}
+  .ponder-guides [hidden]{display:none}
+  .ponder-filters{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:12px 18px;padding:20px 24px;border-bottom:1px solid var(--border)}
+  .ponder-filters label{display:grid;gap:7px;min-width:0;color:var(--muted);font-size:.875rem;font-weight:600}
+  .ponder-filters input,.ponder-filters select{width:100%;min-height:44px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text);padding:9px 12px;font:inherit;font-size:1rem}
+  .ponder-filters :is(input,select):focus-visible,.ponder-more summary:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+  .ponder-results{grid-column:1/-1;margin:0;color:var(--muted);font-size:.875rem}
+  .ponder-empty{margin:0;padding:24px;color:var(--muted)}
+  .ponder-guide{padding:24px;scroll-margin-top:90px}
+  .ponder-guide+.ponder-guide{border-top:1px solid var(--border)}
+  .ponder-guide-header h2{margin:4px 0 14px;line-height:1.2}
+  .ponder-category{margin:0;color:var(--accent);font-size:.875rem;font-weight:650}
+  .ponder-key{padding:14px 16px;background:var(--bg);border:1px solid var(--border);border-radius:6px}
+  .ponder-key p{margin:0 0 9px;color:var(--muted);line-height:1.55}
+  .ponder-key kbd{display:inline-block;padding:0 5px;border:1px solid var(--border);border-bottom-width:2px;border-radius:4px;background:var(--surface-raised);color:var(--text);font:inherit;font-size:.9em;font-weight:650;line-height:1.4}
+  .ponder-items{display:flex;gap:6px 8px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+  .ponder-items li{display:inline-flex;align-items:center;gap:6px;max-width:100%;overflow-wrap:anywhere;padding:4px 8px;border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:.875rem}
+  .ponder-more{margin-top:9px}
+  .ponder-more summary{color:var(--muted);font-size:.875rem;cursor:pointer}
+  .ponder-more ul{margin-top:8px}
+  .ponder-steps{margin:22px 0 0;padding-left:24px}
+  .ponder-steps>li{padding:0 0 17px 5px}
+  .ponder-steps>li:last-child{padding-bottom:0}
+  .ponder-steps>li::marker{color:var(--accent);font-weight:700}
+  .ponder-steps h3{margin:0 0 5px;font-size:1.05rem}
+  .ponder-steps p{margin:0;max-width:72ch;color:var(--text);line-height:1.65}
+  .ponder-step-items{margin-top:9px}
+  .ponder-step-items li{background:var(--bg)}
+  .ponder-step-items img{width:24px;height:24px;object-fit:contain;image-rendering:pixelated}
+  .ponder-item-role{color:var(--muted);font-size:.8125rem}
+  @media(max-width:640px){.ponder-filters{grid-template-columns:minmax(0,1fr);padding:16px}.ponder-guide{padding:18px}.ponder-steps{padding-left:20px}}
 </style>

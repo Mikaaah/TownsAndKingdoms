@@ -1,0 +1,868 @@
+{
+  "version": 1,
+  "skills": {
+    "alchemist_class": {
+      "potion_duration": 0.1
+    },
+    "alchemist_crafting_1": {
+      "potion_duration": 0.04
+    },
+    "alchemist_crafting_2": {
+      "potion_duration": 0.04
+    },
+    "alchemist_crafting_3": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_1": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_2": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_3": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_4": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_5": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_6": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_7": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_8": {
+      "evasion": 0.005
+    },
+    "alchemist_defensive_crafting_1": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_2": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_3": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_4": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_5": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_6": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_7": {
+      "potion_duration": 0.04
+    },
+    "alchemist_defensive_crafting_keystone_1": {
+      "potion_duration": 0.1
+    },
+    "alchemist_defensive_keystone_1": {
+      "evasion": 0.015
+    },
+    "alchemist_defensive_notable_1": {
+      "evasion": 0.0075
+    },
+    "alchemist_healing_1": {
+      "leech": 0.085
+    },
+    "alchemist_healing_2": {
+      "leech": 0.085
+    },
+    "alchemist_healing_3": {
+      "leech": 0.085
+    },
+    "alchemist_healing_4": {
+      "leech": 0.085
+    },
+    "alchemist_healing_notable_1": {
+      "leech": 0.135
+    },
+    "alchemist_lesser_1": {
+      "potion_duration": 0.04
+    },
+    "alchemist_lesser_2": {
+      "potion_duration": 0.04
+    },
+    "alchemist_lesser_3": {
+      "potion_duration": 0.04
+    },
+    "alchemist_lesser_4": {
+      "potion_duration": 0.04
+    },
+    "alchemist_lesser_5": {
+      "potion_duration": 0.04
+    },
+    "alchemist_lesser_6": {
+      "potion_duration": 0.04
+    },
+    "alchemist_mastery": {
+      "potion_duration": 0.1
+    },
+    "alchemist_offensive_crafting_1": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_2": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_3": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_4": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_5": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_6": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_7": {
+      "potion_duration": 0.04,
+      "effect_damage": 0.01
+    },
+    "alchemist_offensive_crafting_keystone_1": {
+      "potion_duration": 0.1,
+      "effect_damage": 0.025
+    },
+    "alchemist_subclass_1_crafting_1": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_1_crafting_2": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_1_crafting_3": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_1_crafting_4": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_1_crafting_5": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_1_crafting_notable_1": {
+      "potion_duration": 0.06
+    },
+    "alchemist_subclass_1_defensive_1": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_1_defensive_2": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_1_defensive_3": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_1_defensive_4": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_2_crafting_1": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_2_crafting_2": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_2_crafting_3": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_2_crafting_4": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_2_crafting_5": {
+      "potion_duration": 0.04
+    },
+    "alchemist_subclass_2_crafting_notable_1": {
+      "potion_duration": 0.06
+    },
+    "alchemist_subclass_2_defensive_1": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_2_defensive_2": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_2_defensive_3": {
+      "evasion": 0.005
+    },
+    "alchemist_subclass_2_defensive_4": {
+      "evasion": 0.005
+    },
+    "blacksmith_defensive_keystone_1": {
+      "second_wind": 1
+    },
+    "blacksmith_subclass_1": {
+      "guard": 0.015
+    },
+    "blacksmith_subclass_1_defensive_1": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_defensive_2": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_defensive_3": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_defensive_4": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_mastery": {
+      "guard": 0.0225
+    },
+    "blacksmith_subclass_1_offensive_1": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_offensive_2": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_offensive_3": {
+      "guard": 0.01
+    },
+    "blacksmith_subclass_1_offensive_4": {
+      "guard": 0.01
+    },
+    "cook_class": {
+      "food_recovery": 0.75
+    },
+    "cook_crafting_1": {
+      "food_recovery": 0.3
+    },
+    "cook_crafting_2": {
+      "food_recovery": 0.3
+    },
+    "cook_crafting_3": {
+      "food_recovery": 0.3
+    },
+    "cook_crafting_notable_1": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_1": {
+      "guard": 0.01
+    },
+    "cook_defensive_2": {
+      "guard": 0.01
+    },
+    "cook_defensive_3": {
+      "guard": 0.01
+    },
+    "cook_defensive_4": {
+      "guard": 0.01
+    },
+    "cook_defensive_5": {
+      "guard": 0.01
+    },
+    "cook_defensive_6": {
+      "guard": 0.01
+    },
+    "cook_defensive_7": {
+      "guard": 0.01
+    },
+    "cook_defensive_8": {
+      "guard": 0.01
+    },
+    "cook_defensive_crafting_1": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_2": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_3": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_4": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_5": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_6": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_7": {
+      "food_recovery": 0.3
+    },
+    "cook_defensive_crafting_keystone_1": {
+      "food_recovery": 0.75
+    },
+    "cook_defensive_keystone_1": {
+      "guard": 0.0225
+    },
+    "cook_defensive_notable_1": {
+      "guard": 0.015
+    },
+    "cook_healing_1": {
+      "leech": 0.085
+    },
+    "cook_healing_2": {
+      "leech": 0.085
+    },
+    "cook_healing_3": {
+      "leech": 0.085
+    },
+    "cook_healing_4": {
+      "leech": 0.085
+    },
+    "cook_healing_notable_1": {
+      "leech": 0.135
+    },
+    "cook_lesser_1": {
+      "food_recovery": 0.3
+    },
+    "cook_lesser_2": {
+      "food_recovery": 0.3
+    },
+    "cook_lesser_3": {
+      "food_recovery": 0.3
+    },
+    "cook_lesser_4": {
+      "food_recovery": 0.3
+    },
+    "cook_lesser_5": {
+      "food_recovery": 0.3
+    },
+    "cook_lesser_6": {
+      "food_recovery": 0.3
+    },
+    "cook_mastery": {
+      "food_recovery": 0.75
+    },
+    "cook_offensive_1": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_2": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_3": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_4": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_5": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_6": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_7": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_8": {
+      "well_fed_damage": 0.01
+    },
+    "cook_offensive_crafting_1": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_2": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_3": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_4": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_5": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_6": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_7": {
+      "food_recovery": 0.3
+    },
+    "cook_offensive_crafting_keystone_1": {
+      "food_recovery": 0.75
+    },
+    "cook_offensive_keystone_1": {
+      "well_fed_damage": 0.1
+    },
+    "cook_offensive_notable_1": {
+      "well_fed_damage": 0.02
+    },
+    "cook_subclass_1_defensive_1": {
+      "guard": 0.01
+    },
+    "cook_subclass_1_defensive_2": {
+      "guard": 0.01
+    },
+    "cook_subclass_1_defensive_3": {
+      "guard": 0.01
+    },
+    "cook_subclass_1_defensive_4": {
+      "guard": 0.01
+    },
+    "cook_subclass_1_mastery": {
+      "leech": 0.2
+    },
+    "cook_subclass_2_defensive_1": {
+      "guard": 0.01
+    },
+    "cook_subclass_2_defensive_2": {
+      "guard": 0.01
+    },
+    "cook_subclass_2_defensive_3": {
+      "guard": 0.01
+    },
+    "cook_subclass_2_defensive_4": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_1": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_2": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_3": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_4": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_5": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_6": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_7": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_8": {
+      "guard": 0.01
+    },
+    "enchanter_defensive_keystone_1": {
+      "guard": 0.0225
+    },
+    "enchanter_defensive_notable_1": {
+      "guard": 0.015
+    },
+    "enchanter_healing_1": {
+      "leech": 0.085
+    },
+    "enchanter_healing_2": {
+      "leech": 0.085
+    },
+    "enchanter_healing_3": {
+      "leech": 0.085
+    },
+    "enchanter_healing_4": {
+      "leech": 0.085
+    },
+    "enchanter_healing_notable_1": {
+      "leech": 0.135
+    },
+    "enchanter_subclass_1": {
+      "burning_damage": 0.08,
+      "ignite": 0.08
+    },
+    "enchanter_subclass_1_defensive_1": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "enchanter_subclass_1_defensive_2": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "enchanter_subclass_1_defensive_3": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "enchanter_subclass_1_defensive_4": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "enchanter_subclass_1_mastery": {
+      "ignite": 0.08,
+      "burning_damage": 0.08
+    },
+    "enchanter_subclass_1_offensive_1": {
+      "burning_damage": 0.04
+    },
+    "enchanter_subclass_1_offensive_2": {
+      "burning_damage": 0.04
+    },
+    "enchanter_subclass_1_offensive_3": {
+      "burning_damage": 0.04
+    },
+    "enchanter_subclass_1_offensive_4": {
+      "burning_damage": 0.04
+    },
+    "enchanter_subclass_2_defensive_1": {
+      "guard": 0.01
+    },
+    "enchanter_subclass_2_defensive_2": {
+      "guard": 0.01
+    },
+    "enchanter_subclass_2_defensive_3": {
+      "guard": 0.01
+    },
+    "enchanter_subclass_2_defensive_4": {
+      "guard": 0.01
+    },
+    "hunter_defensive_1": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_2": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_3": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_4": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_5": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_6": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_7": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_8": {
+      "evasion": 0.005
+    },
+    "hunter_defensive_notable_1": {
+      "evasion": 0.0075
+    },
+    "hunter_healing_1": {
+      "leech": 0.085
+    },
+    "hunter_healing_2": {
+      "leech": 0.085
+    },
+    "hunter_healing_3": {
+      "leech": 0.085
+    },
+    "hunter_healing_4": {
+      "leech": 0.085
+    },
+    "hunter_healing_notable_1": {
+      "leech": 0.135
+    },
+    "hunter_offensive_keystone_1": {
+      "longshot": 0.15
+    },
+    "hunter_subclass_1_defensive_1": {
+      "evasion": 0.005
+    },
+    "hunter_subclass_1_defensive_2": {
+      "evasion": 0.005
+    },
+    "hunter_subclass_1_defensive_3": {
+      "evasion": 0.005
+    },
+    "hunter_subclass_1_defensive_4": {
+      "evasion": 0.005
+    },
+    "hunter_subclass_2_defensive_1": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "hunter_subclass_2_defensive_2": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "hunter_subclass_2_defensive_3": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "hunter_subclass_2_defensive_4": {
+      "evasion": 0.005,
+      "guard": 0.01
+    },
+    "miner_subclass_2_defensive_1": {
+      "evasion": 0.005
+    },
+    "miner_subclass_2_defensive_2": {
+      "evasion": 0.005
+    },
+    "miner_subclass_2_defensive_3": {
+      "evasion": 0.005
+    },
+    "miner_subclass_2_defensive_4": {
+      "evasion": 0.005
+    }
+  },
+  "source_bonuses": {
+    "alchemist_offensive_1": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_2": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_3": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_4": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_5": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_6": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_7": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_8": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.02,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_keystone_1": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.05,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "alchemist_offensive_notable_1": [
+      {
+        "type": "skilltree:damage",
+        "amount": 0.03,
+        "damage_condition": {
+          "type": "skilltree:melee"
+        },
+        "target_condition": {
+          "type": "skilltree:has_effect",
+          "effect": "minecraft:poison"
+        }
+      }
+    ],
+    "blacksmith_offensive_1": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_2": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_3": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_4": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_5": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_6": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_7": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_8": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.015,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_keystone_1": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.03,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ],
+    "blacksmith_offensive_notable_1": [
+      {
+        "type": "skilltree:attribute",
+        "attribute": "minecraft:generic.attack_damage",
+        "amount": 0.0225,
+        "operation": 1,
+        "player_condition": {
+          "type": "skilltree:has_item_in_hand",
+          "item_condition": {
+            "equipment_type": "shield"
+          }
+        }
+      }
+    ]
+  }
+}

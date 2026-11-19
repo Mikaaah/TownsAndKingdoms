@@ -28,7 +28,7 @@ export function buildSearchDocuments(datasets, base) {
   for(const c of chapters)add('Chapters',c.id,c.title,[c.summary,c.mechanism,c.milestones],base+'chapters/#'+encodeURIComponent(c.id),'Chapter '+c.roman);
   for(const b of bosses)add('Bosses',b.id,b.name,[b.modName,b.classification,...(b.rewards||[]).map(r=>r.name||r.item||r.id||r)],base+'bosses/#boss='+encodeURIComponent(b.id),b.modName);
   for(const n of skills.nodes||[])add('Skills',n.id,n.title,n.description,base+'skills/#node='+encodeURIComponent(n.id),n.branch+' · '+n.cost+' point'+(n.cost===1?'':'s'));
-  for(const s of ponder.scenes||[])add('Ponder',s.id,s.title,(s.anchors||[]).join(' '),base+'ponder/?scene='+encodeURIComponent(s.slug),'Interactive scene');
+  for(const s of ponder.scenes||[])add('Ponder',s.id,s.title,(s.anchors||[]).join(' '),base+'ponder/?scene='+encodeURIComponent(s.slug),'Ponder item guide');
   for(const [id,title,description]of guideEntries)add('Guides',id,title,description,base+'guides/#'+id,'Practical handbook');
   for(const [route,title,description]of articleEntries)add('Guides',route,title,description,base+route,'Official handbook');
   for(const eye of eyes)add('Bosses',eye.id,eye.name,[eye.bossName,eye.bossId,'End Remastered eye stronghold portal'].join(' '),base+'bosses/#eye-'+eye.id.split(':').pop(),'End Remastered');

@@ -1,0 +1,47 @@
+---
+import { href } from '../lib/data';
+
+interface Props {
+  eye: {icon: string; animation?: {frames: number; durationMs: number}};
+  size: number;
+}
+
+const {eye, size} = Astro.props;
+const animation = eye.animation;
+---
+<span
+  class:list={['eye-icon', {'eye-icon--animated': animation}]}
+  style={{'--eye-size': `${size}px`, '--eye-frames': animation?.frames, '--eye-duration': animation && `${animation.durationMs}ms`}}
+  aria-hidden="true"
+>
+  <img src={href(eye.icon)} width={size} height={size * (animation?.frames ?? 1)} alt="" loading="lazy" />
+</span>
+
+<style>
+  .eye-icon {
+    display: inline-block;
+    flex: none;
+    width: var(--eye-size);
+    height: var(--eye-size);
+    overflow: hidden;
+  }
+
+  .eye-icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+  }
+
+  .eye-icon--animated img {
+    animation: eye-frames var(--eye-duration) steps(var(--eye-frames)) infinite;
+  }
+
+  @keyframes eye-frames {
+    to { transform: translateY(-100%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .eye-icon--animated img { animation: none; }
+  }
+</style>

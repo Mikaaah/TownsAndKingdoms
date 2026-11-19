@@ -1,0 +1,49 @@
+{
+  "title": "Towns & Kingdoms",
+  "description": "588 skills across six connected disciplines. 175 points earned by character level 100.",
+  "icon": {
+    "type": "texture",
+    "data": {
+      "texture": "tnk:textures/skilltree/mcmmo_job_items/golden_chess_king.png"
+    }
+  },
+  "background": {
+    "texture": "tnk:textures/gui/character_slate.png",
+    "width": 32,
+    "height": 32,
+    "position": "tile"
+  },
+  "colors": {
+    "connections": {
+      "locked": {
+        "fill": "#484359",
+        "stroke": "#252235"
+      },
+      "available": {
+        "fill": "#7193a5",
+        "stroke": "#3b5368"
+      },
+      "affordable": {
+        "fill": "#cca6e6",
+        "stroke": "#6e4b83"
+      },
+      "unlocked": {
+        "fill": "#f2cc8d",
+        "stroke": "#8b5549"
+      },
+      "excluded": {
+        "fill": "#71596b",
+        "stroke": "#3e2d3d"
+      }
+    },
+    "points": {
+      "fill": "#f2dbb0",
+      "stroke": "#472d38"
+    }
+  },
+  "unlocked_by_default": true,
+  "starting_points": 0,
+  "exclusive_root": false,
+  "spent_points_limit": 175,
+  "erase_on_death": false
+}
