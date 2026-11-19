@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createSkillModel,spentPoints,allocationState,validateSelection,refundSelection,summarizeSelection,encodeBuild,decodeBuild,pointsForLevel,levelForPoints,PASSIVE_CAPS} from '../src/scripts/skill-planner-core.mjs';
+import {createSkillModel,spentPoints,allocationState,validateSelection,refundSelection,planSkillRoute,summarizeSelection,encodeBuild,decodeBuild,pointsForLevel,levelForPoints,PASSIVE_CAPS} from '../src/scripts/skill-planner-core.mjs';
 const data=JSON.parse(fs.readFileSync(new URL('../src/data/skills.json',import.meta.url)));
 const model=createSkillModel(data);
 function grow(limit=175){const selected=new Set();while(selected.size<limit){const next=data.nodes.find(n=>allocationState(model,selected,n.id,limit).allowed);if(!next)break;selected.add(next.id);}return selected;}
@@ -56,12 +56,46 @@ test('refund removes stranded skills but keeps alternative connected paths',()=>
   assert.deepEqual([...refundSelection(small,all,'left').selection],['root','right','tip']);
   assert.equal(refundSelection(small,new Set(['root','left','tip']),'left').selection.size,1);
 });
+test('route minimizes additional points from roots or allocated skills',()=>{
+  const costs={root:1,expensive:5,short:1,link:1,tip:1,isolated:1};
+  const small=createSkillModel({category:{pointCap:10,exclusiveRoot:false},
+    nodes:Object.entries(costs).map(([id,cost])=>({id,root:id==='root',cost,requiredSkills:1,requiredPoints:0,requiredSpentPoints:0})),
+    edges:[['root','expensive'],['expensive','tip'],['root','short'],['short','link'],['link','tip']]});
+  const fresh=planSkillRoute(small,new Set(),'tip');
+  assert.deepEqual(fresh.path,['root','short','link','tip']);
+  assert.equal(fresh.points,4);
+  const owned=new Set(['root','expensive']);
+  const existing=planSkillRoute(small,owned,'tip');
+  assert.deepEqual(existing.path,['expensive','tip']);
+  assert.deepEqual(existing.steps,['tip']);
+  assert.equal(existing.points,1);
+  assert.equal(planSkillRoute(small,owned,'expensive').points,0);
+  assert.equal(planSkillRoute(small,owned,'isolated'),null);
+});
+test('a mastery route includes prerequisite spending and works in its reported budget',()=>{
+  const target=data.nodes.find(node=>node.requiredSpentPoints===60);
+  const starting=new Set(['alchemist_class']);
+  const route=planSkillRoute(model,starting,target.id);
+  assert.equal(route.points,60);
+  assert.equal(route.minimumBudget,61);
+  assert(route.prerequisitePoints>0);
+  assert.equal(route.path.at(-1),target.id);
+  assert.equal(route.steps.at(-1),target.id);
+  assert.equal(starting.size,1);
+  for(const id of route.steps){
+    assert(allocationState(model,starting,id,route.minimumBudget).allowed,id);
+    starting.add(id);
+  }
+  assert.equal(spentPoints(model,starting),61);
+  assert.equal(validateSelection(model,starting,61).valid,true);
+  assert.equal(validateSelection(model,starting,60).valid,false);
+});
 test('separates flat modifiers, base multipliers and conditional tag effects',()=>{
   const selected=new Set(['alchemist_class','cook_class']);
   const result=summarizeSelection(model,selected);
-  assert.equal(result.passives.potion_duration,.05);assert.equal(result.passives.food_recovery,.3);
-  assert(result.attributes.some(r=>r.attribute==='irons_spellbooks:mana_regen'&&r.operation==='multiply_base'&&r.value===.03));
-  assert(result.attributes.some(r=>r.attribute==='ars_nouveau:ars_nouveau.perk.mana_regen'&&r.operation==='addition'&&r.value===.3));
+  assert.equal(result.passives.potion_duration,.1);assert.equal(result.passives.food_recovery,.75);
+  assert(result.attributes.some(r=>r.attribute==='irons_spellbooks:mana_regen'&&r.operation==='multiply_base'&&r.value===.06));
+  assert(result.attributes.some(r=>r.attribute==='ars_nouveau:ars_nouveau.perk.mana_regen'&&r.operation==='addition'&&r.value===.6));
 });
 test('shared builds round-trip compactly and reject corrupt or incompatible links',()=>{
   const selected=grow(80),encoded=encodeBuild(model,selected,100),decoded=decodeBuild(model,encoded);

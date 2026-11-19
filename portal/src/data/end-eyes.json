@@ -356,7 +356,11 @@
       "Native advancement kill_last_of_deepslate identifies the guardian of Ancient Keep.",
       "LastOfDeepslate.mobInteract/feedEchoCharge consumes EchoChargeItem; requiredEchoCharges = 4.",
       "data/archaion/loot_table/entities/last_of_deepslate.json"
-    ]
+    ],
+    "animation": {
+      "frames": 16,
+      "durationMs": 1600
+    }
   },
   {
     "id": "endrem:lost_eye",
@@ -503,7 +507,11 @@
       "TK3/config/EndRemastered-NeoForge/Eyes/wither_eye.json",
       "Vanilla Wither summoning pattern; TK3 has no added Wither summon gate.",
       "Pack gameplay_drops_191 guarantees the eye; entity modifier removes previous Wither Eye rolls before adding one."
-    ]
+    ],
+    "animation": {
+      "frames": 9,
+      "durationMs": 2700
+    }
   },
   {
     "id": "endrem:guardian_eye",

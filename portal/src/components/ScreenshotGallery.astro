@@ -1,0 +1,166 @@
+---
+import { href } from '../lib/data';
+
+const screenshots = [
+  {
+    src: href('media/screenshots/frozen-ruins-2026-11-14.webp'),
+    title: 'Frozen ruins under an aurora',
+    alt: 'A snowy Minecraft courtyard lit by cyan lanterns beneath a blue-green aurora.',
+    width: 1920,
+    height: 1080,
+  },
+];
+const first = screenshots[0];
+const hasMultiple = screenshots.length > 1;
+---
+<section class="gallery" aria-labelledby="screenshots" data-screenshot-gallery={JSON.stringify(screenshots)}>
+  <h2 id="screenshots">Screenshots</h2>
+  <figure>
+    <a class="gallery-preview" href={first.src} data-gallery-open aria-label="Enlarge screenshot">
+      <img src={first.src} alt={first.alt} width={first.width} height={first.height} decoding="async" data-gallery-image />
+      <span aria-hidden="true">Enlarge</span>
+    </a>
+    <figcaption class="gallery-caption">
+      <span data-gallery-title aria-live="polite">{first.title}</span>
+      {hasMultiple && (
+        <div class="gallery-actions" aria-label="Browse screenshots" role="group">
+          <button type="button" data-gallery-step="-1">Previous</button>
+          <button type="button" data-gallery-step="1">Next</button>
+        </div>
+      )}
+    </figcaption>
+  </figure>
+
+  <dialog class="gallery-dialog" aria-labelledby="screenshot-dialog-title">
+    <div class="gallery-dialog-header">
+      <h2 id="screenshot-dialog-title" data-gallery-title aria-live="polite">{first.title}</h2>
+      <form method="dialog"><button type="submit" autofocus>Close</button></form>
+    </div>
+    <img src={first.src} alt={first.alt} width={first.width} height={first.height} loading="lazy" data-gallery-image />
+    {hasMultiple && (
+      <div class="gallery-actions" aria-label="Browse screenshots" role="group">
+        <button type="button" data-gallery-step="-1">Previous</button>
+        <button type="button" data-gallery-step="1">Next</button>
+      </div>
+    )}
+  </dialog>
+</section>
+
+<script>
+  const gallery = document.querySelector<HTMLElement>('[data-screenshot-gallery]');
+  const preview = gallery?.querySelector<HTMLAnchorElement>('[data-gallery-open]');
+  const dialog = gallery?.querySelector<HTMLDialogElement>('dialog');
+
+  if (gallery && preview && dialog) {
+    type Screenshot = { src: string; title: string; alt: string; width: number; height: number };
+    const screenshots: Screenshot[] = JSON.parse(gallery.dataset.screenshotGallery ?? '[]');
+    const images = gallery.querySelectorAll<HTMLImageElement>('[data-gallery-image]');
+    const captions = gallery.querySelectorAll('[data-gallery-title]');
+    let current = 0;
+
+    function step(change: number) {
+      current = (current + change + screenshots.length) % screenshots.length;
+      const screenshot = screenshots[current];
+      if (preview) preview.href = screenshot.src;
+      images.forEach(image => {
+        image.src = screenshot.src;
+        image.alt = screenshot.alt;
+        image.width = screenshot.width;
+        image.height = screenshot.height;
+      });
+      captions.forEach(caption => { caption.textContent = screenshot.title; });
+    }
+
+    preview.addEventListener('click', event => {
+      if (typeof dialog.showModal !== 'function' || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      dialog.showModal();
+    });
+
+    dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener('close', () => preview.focus({ preventScroll: true }));
+
+    gallery.querySelectorAll<HTMLButtonElement>('[data-gallery-step]').forEach(button => {
+      button.addEventListener('click', () => step(Number(button.dataset.galleryStep)));
+    });
+    if (screenshots.length > 1) {
+      dialog.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft') step(-1);
+        if (event.key === 'ArrowRight') step(1);
+      });
+    }
+  }
+</script>
+
+<style>
+  .gallery { min-width: 0; }
+  .gallery h2 { margin: 0 0 12px; font-size: 21px; }
+  .gallery figure { margin: 0; }
+  .gallery-preview {
+    display: block;
+    position: relative;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .gallery-preview:hover { border-color: var(--accent); text-decoration: none; }
+  .gallery-preview img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .gallery-preview span {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    background: #181320e8;
+    color: #fff;
+    font-size: 14px;
+  }
+  .gallery-caption {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .gallery-actions { display: flex; gap: 8px; }
+  .gallery-actions button { font-size: 14px; padding: 6px 10px; }
+
+  .gallery-dialog {
+    width: min(calc(100% - 24px), 1400px);
+    max-height: calc(100dvh - 24px);
+    margin: auto;
+    padding: 0;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .gallery-dialog::backdrop { background: var(--backdrop); }
+  .gallery-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 12px;
+  }
+  .gallery-dialog-header h2 { margin: 0; font-size: 18px; }
+  .gallery-dialog-header button { padding: 4px 12px; font-size: 14px; }
+  .gallery-dialog > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: calc(100dvh - 136px);
+    object-fit: contain;
+    background: #141116;
+  }
+  .gallery-dialog .gallery-actions { padding: 8px 12px; justify-content: center; }
+</style>

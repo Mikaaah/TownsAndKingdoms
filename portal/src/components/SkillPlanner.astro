@@ -1,7 +1,17 @@
 ---
 import skills from '../data/skills.json';
+const {background, connectionColors}=skills.category;
+const base=import.meta.env.BASE_URL;
+const mapTheme={
+  '--sp-map-image': `url("${base}${background.texture}")`,
+  '--sp-map-tile': `${background.width}px ${background.height}px`,
+  '--sp-line-locked': connectionColors.locked.fill,
+  '--sp-line-available': connectionColors.available.fill,
+  '--sp-line-affordable': connectionColors.affordable.fill,
+  '--sp-line-unlocked': connectionColors.unlocked.fill
+};
 ---
-<section class="skill-planner" data-skill-planner data-base={import.meta.env.BASE_URL} aria-label="Interactive skill tree planner">
+<section class="skill-planner" data-skill-planner data-base={base} style={mapTheme} aria-label="Interactive skill tree planner">
   <div class="sp-toolbar">
     <label class="sp-budget">Character level <input data-skill-level type="number" min="1" max="100" value="100" placeholder="Custom" inputmode="numeric" /></label>
     <details class="sp-budget-options"><summary>Custom budget</summary><label class="sp-budget">Points <input data-skill-budget type="number" min="0" max={skills.category.pointCap} value={skills.category.pointCap} inputmode="numeric" /></label></details>
@@ -17,13 +27,16 @@ import skills from '../data/skills.json';
         <input id="skill-search" data-skill-search type="search" placeholder="Name, effect or discipline…" autocomplete="off" />
         <div class="sp-results" data-skill-results hidden role="list" aria-label="Matching skills"></div>
       </div>
-      <nav class="sp-branches" aria-label="Skill disciplines">{skills.branches.map(branch=><button type="button" data-skill-branch={branch.id}>{branch.title}</button>)}</nav>
-      <div class="sp-canvas" data-skill-canvas>
-        <svg data-skill-map tabindex="0" role="group" aria-label="Skill tree. Drag to pan, scroll or pinch to zoom. Select a node to allocate it; right-click to refund."><g data-skill-camera></g></svg>
-        <div class="sp-map-controls" aria-label="Tree view controls"><button type="button" data-skill-zoom="in" aria-label="Zoom in">+</button><button type="button" data-skill-zoom="out" aria-label="Zoom out">−</button><button type="button" data-skill-fit>Fit tree</button></div>
+      <nav class="sp-branches" aria-label="Skill disciplines">{skills.branches.map(branch=>{
+        const root=skills.nodes.find(node=>node.root&&node.branch===branch.id);
+        return <button type="button" data-skill-branch={branch.id}>{root&&<img src={base+root.icon} width="20" height="20" alt="" />}{branch.title}</button>;
+      })}</nav>
+      <div class="sp-canvas" data-skill-canvas data-background-position={background.position}>
+        <svg data-skill-map tabindex="0" role="group" aria-label="Skill tree. Drag to pan and scroll or pinch to zoom." aria-describedby="skill-map-help"><g data-skill-camera></g></svg>
+        <div class="sp-map-controls" aria-label="Tree view controls"><button type="button" data-skill-zoom="in" aria-label="Zoom in">+</button><button type="button" data-skill-zoom="out" aria-label="Zoom out">−</button><button type="button" data-skill-fit>Fit tree</button><button type="button" data-skill-route-mode aria-pressed="false">Plan route</button></div>
         <div class="sp-tooltip" data-skill-tooltip hidden><strong></strong><span></span></div>
       </div>
-      <div class="sp-map-footer"><p>Click to allocate. Right-click to refund. Drag to pan.</p><div class="sp-legend"><span class="is-allocated">Allocated</span><span class="is-ready">Available</span><span>Locked</span></div></div>
+      <div class="sp-map-footer"><p id="skill-map-help" data-skill-map-help>Click to allocate. Right-click to refund. Drag to pan.</p><div class="sp-legend"><span class="is-allocated">Allocated</span><span class="is-ready">Available</span><span>Locked</span><span class="is-route" data-skill-route-legend hidden>Planned route</span></div></div>
     </div>
     <aside class="sp-sidebar" aria-label="Selected skill and build bonuses">
       <section class="sp-detail" aria-live="polite">
@@ -31,7 +44,13 @@ import skills from '../data/skills.json';
         <h2 data-skill-detail-title>Choose your first skill</h2>
         <p data-skill-detail-description>Start at any discipline’s root, then follow its connected skills. You can combine disciplines within the shared point budget.</p>
         <p class="sp-requirement" data-skill-detail-requirement>All six roots are available.</p>
-        <div class="sp-detail-actions"><button type="button" class="sp-primary" data-skill-allocate disabled>Allocate</button><button type="button" data-skill-refund disabled>Refund</button></div>
+        <div class="sp-detail-actions"><button type="button" class="sp-primary" data-skill-allocate disabled>Allocate</button><button type="button" data-skill-refund disabled>Refund</button><button type="button" data-skill-route-here disabled>Show route</button></div>
+      </section>
+      <section class="sp-route" data-skill-route-panel aria-label="Planned route" hidden>
+        <h2 data-skill-route-title>Planned route</h2>
+        <p data-skill-route-description role="status"></p>
+        <details data-skill-route-steps hidden><summary>Unlock order</summary><ol data-skill-route-list></ol></details>
+        <div class="sp-detail-actions" data-skill-route-actions hidden><button type="button" data-skill-route-fit>Fit route</button><button type="button" class="sp-primary" data-skill-route-apply>Allocate route</button></div>
       </section>
       <section class="sp-summary"><h2>Build bonuses</h2><p class="sp-empty" data-skill-empty>Allocate a skill to see its bonuses here.</p><dl data-skill-stats></dl><div data-skill-passives></div></section>
     </aside>
@@ -47,7 +66,7 @@ import skills from '../data/skills.json';
   .skill-planner{
     --sp-bg:var(--bg);--sp-surface:var(--surface);--sp-raised:var(--surface-raised);
     --sp-border:var(--border);--sp-text:var(--text);--sp-muted:var(--muted);
-    --sp-accent:var(--accent);--sp-gold:var(--gold-text);
+    --sp-accent:var(--accent);--sp-gold:var(--gold-text);--sp-route:#ffd574;
     border:1px solid var(--sp-border);border-radius:var(--radius);overflow:hidden;background:var(--sp-surface);color:var(--sp-text)
   }
   .skill-planner button,.skill-planner input{font:inherit}
@@ -81,42 +100,56 @@ import skills from '../data/skills.json';
   .sp-results button span{font-size:.8125rem;color:var(--sp-muted)}
   .sp-results p{font-size:.875rem;margin:.6rem}
   .sp-branches{display:flex;gap:.3rem;flex-wrap:wrap;padding:0 1rem .85rem;border-bottom:1px solid var(--sp-border)}
-  .sp-branches button{font-size:.8125rem;padding:.5rem .65rem;background:transparent}
-  .sp-canvas{height:600px;min-height:560px;position:relative;overflow:hidden;background:var(--sp-bg)}
+  .sp-branches button{display:inline-flex;align-items:center;gap:.35rem;font-size:.8125rem;padding:.5rem .65rem;background:transparent}
+  .sp-branches img{image-rendering:pixelated}
+  .sp-canvas{height:600px;min-height:560px;position:relative;overflow:hidden;background:#211e2d var(--sp-map-image) center center/cover;color:#f2e3f4;--sp-map-highlight:#fff2bc}
+  .sp-canvas[data-background-position="tile"]{background-size:var(--sp-map-tile)}
   .sp-canvas svg{display:block;width:100%;height:100%;touch-action:none;cursor:grab;user-select:none;outline-offset:-4px}
   .sp-canvas svg.is-dragging{cursor:grabbing}
-  .sp-connection{stroke:var(--sp-border);stroke-width:1.7;fill:none}
-  .sp-connection.is-active{stroke:var(--sp-accent);stroke-width:2.8}
-  .sp-connection.is-open{stroke:var(--subtle)}
+  .sp-connection{stroke:var(--sp-line-locked);stroke-width:2;fill:none}
+  .sp-connection.is-active{stroke:var(--sp-line-unlocked);stroke-width:2.8}
+  .sp-connection.is-open{stroke:var(--sp-line-available)}
+  .sp-connection.is-route{stroke:var(--sp-route);stroke-width:3.5;stroke-linecap:round}
   .sp-node{cursor:pointer;outline:none}
-  .sp-node circle{fill:var(--sp-surface);stroke:var(--sp-border);stroke-width:2.2}
-  .sp-node image{opacity:.52;pointer-events:none;image-rendering:auto}
-  .sp-node.is-root circle{stroke:var(--sp-gold);stroke-width:2.8}
-  .sp-node.is-ready circle{stroke:var(--sp-muted);fill:var(--sp-raised)}
-  .sp-node.is-ready image,.sp-node.is-allocated image{opacity:1}
-  .sp-node.is-allocated circle{stroke:var(--sp-accent);fill:var(--primary);stroke-width:3.4}
-  .sp-node.is-focused circle,.sp-node:focus-visible circle{stroke:var(--focus);stroke-width:4.7}
-  .sp-node:hover circle{stroke:var(--sp-text)}
+  .sp-node circle{fill:transparent;stroke:transparent;stroke-width:2.2}
+  .sp-node image{pointer-events:none;image-rendering:pixelated}
+  .sp-node .sp-node-icon{opacity:.65}
+  .sp-node.is-root .sp-node-icon,.sp-node.is-ready .sp-node-icon,.sp-node.is-allocated .sp-node-icon,.sp-node.is-focused .sp-node-icon{opacity:1}
+  .sp-node text{paint-order:stroke;stroke:#1e1c2a;stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+  .sp-node.is-focused circle,.sp-node:focus-visible circle{stroke:var(--sp-map-highlight);stroke-width:3.2}
+  .sp-node:hover circle{stroke:var(--sp-map-highlight)}
+  .sp-node.is-route .sp-route-ring{fill:none;stroke:var(--sp-route);stroke-width:2.8;pointer-events:none}
+  .sp-node.is-route-target .sp-route-ring{stroke-width:4.6}
+  .sp-node:not(.is-route) .sp-route-ring{display:none}
   .sp-map-controls{position:absolute;bottom:1rem;left:1rem;display:flex;gap:.3rem}
   .sp-map-controls button{background:var(--sp-surface);font-size:.875rem;min-width:44px;min-height:44px;box-shadow:0 2px 5px #0002}
   .sp-map-controls button:first-child,.sp-map-controls button:nth-child(2){font-size:1rem;padding:.35rem .5rem}
+  .sp-map-controls [aria-pressed="true"]{border-color:var(--sp-route);color:var(--sp-route)}
   .sp-tooltip{position:absolute;z-index:5;background:var(--sp-raised);border:1px solid var(--sp-border);padding:.6rem .75rem;border-radius:7px;pointer-events:none;width:max-content;max-width:260px;box-shadow:0 6px 20px #0004}
   .sp-tooltip strong,.sp-tooltip span{display:block;font-size:.875rem}
   .sp-tooltip span{font-size:.8125rem;margin-top:.2rem;color:var(--sp-muted)}
   .sp-map-footer{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;padding:.75rem 1rem;border-top:1px solid var(--sp-border);color:var(--sp-muted);font-size:.75rem}
   .sp-map-footer p{margin:0}
   .sp-legend{display:flex;gap:.7rem}
-  .sp-legend span::before{content:'';display:inline-block;width:6px;height:6px;border:1px solid var(--sp-border);border-radius:50%;margin-right:.3rem}
-  .sp-legend .is-allocated::before{background:var(--sp-accent);border-color:var(--sp-accent)}
-  .sp-legend .is-ready::before{border-color:var(--sp-muted)}
+  .sp-legend span::before{content:'';display:inline-block;width:6px;height:6px;border:1px solid var(--sp-line-locked);border-radius:50%;margin-right:.3rem}
+  .sp-legend .is-allocated::before{background:var(--sp-line-unlocked);border-color:var(--sp-line-unlocked)}
+  .sp-legend .is-ready::before{background:var(--sp-line-affordable);border-color:var(--sp-line-affordable)}
+  .sp-legend .is-route::before{background:var(--sp-route);border-color:var(--sp-route)}
   .sp-sidebar{border-left:1px solid var(--sp-border);min-width:0}
-  .sp-detail,.sp-summary{padding:1.1rem}
-  .sp-detail{border-bottom:1px solid var(--sp-border)}
+  .sp-detail,.sp-summary,.sp-route{padding:1.1rem}
+  .sp-detail,.sp-route{border-bottom:1px solid var(--sp-border)}
   .sp-sidebar h2{font-family:inherit;font-size:1rem;line-height:1.4;margin:0 0 .7rem;font-weight:650}
   .sp-eyebrow{text-transform:uppercase;letter-spacing:.08em;color:var(--sp-accent);font-size:.75rem;margin:0 0 .45rem}
   .sp-detail>[data-skill-detail-description]{font-size:1rem;line-height:1.7;white-space:pre-line;color:var(--sp-muted);margin:.6rem 0}
   .sp-requirement{font-size:.875rem;line-height:1.6;margin:.8rem 0;color:var(--sp-gold)}
-  .sp-detail-actions{display:flex;gap:.5rem;font-size:.875rem}
+  .sp-detail-actions{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.875rem}
+  .sp-route h2{color:var(--sp-route)}
+  .sp-route p,.sp-route summary,.sp-route li{font-size:.875rem;line-height:1.6;color:var(--sp-muted)}
+  .sp-route p{margin:0 0 .65rem}
+  .sp-route summary{cursor:pointer}
+  .sp-route ol{max-height:11rem;margin:.4rem 0 .8rem;padding-left:1.4rem;overflow:auto}
+  .sp-route li[data-prerequisite]{font-size:.8125rem}
+  .sp-route .sp-detail-actions{margin-top:.7rem}
   .sp-summary{max-height:590px;overflow:auto}
   .sp-empty{font-size:.875rem;line-height:1.7;color:var(--sp-muted);margin:0}
   .sp-summary dl{margin:0}
@@ -128,7 +161,7 @@ import skills from '../data/skills.json';
   .sp-passive-note{font-size:.8125rem;line-height:1.6;color:var(--sp-muted);margin:.6rem 0 0}
   .sp-status{margin:0;padding:.75rem 1.1rem;font-size:.8125rem;color:var(--sp-muted);border-top:1px solid var(--sp-border);min-height:1.2em}
   .skill-planner [hidden]{display:none!important}
-  @media(max-width:1000px){.sp-layout{grid-template-columns:minmax(0,1fr) 250px}.sp-sidebar .sp-detail,.sp-sidebar .sp-summary{padding:.9rem}.sp-search{display:block}.sp-search label{display:block;margin-bottom:.4rem}}
-  @media(max-width:760px){.sp-layout{display:block}.sp-sidebar{border-left:0;border-top:1px solid var(--sp-border);display:grid;grid-template-columns:1fr 1fr}.sp-detail{border-bottom:0;border-right:1px solid var(--sp-border)}.sp-summary{max-height:380px}.sp-canvas{height:500px;min-height:480px}.sp-toolbar{gap:.7rem;padding:.8rem}.sp-actions{width:100%;margin-left:0}.sp-actions button{flex:1}.sp-search{display:flex}.sp-search label{margin:0}.sp-map-footer{font-size:.75rem}.sp-legend{gap:.4rem}}
+  @media(max-width:1000px){.sp-layout{grid-template-columns:minmax(0,1fr) 250px}.sp-sidebar .sp-detail,.sp-sidebar .sp-summary,.sp-sidebar .sp-route{padding:.9rem}.sp-search{display:block}.sp-search label{display:block;margin-bottom:.4rem}}
+  @media(max-width:760px){.sp-layout{display:block}.sp-sidebar{border-left:0;border-top:1px solid var(--sp-border);display:grid;grid-template-columns:1fr 1fr}.sp-detail{border-bottom:0;border-right:1px solid var(--sp-border)}.sp-summary{max-height:380px}.sp-route{grid-column:1/-1;border-top:1px solid var(--sp-border);grid-row:2}.sp-canvas{height:500px;min-height:480px}.sp-toolbar{gap:.7rem;padding:.8rem}.sp-actions{width:100%;margin-left:0}.sp-actions button{flex:1}.sp-search{display:flex}.sp-search label{margin:0}.sp-map-footer{font-size:.75rem}.sp-legend{gap:.4rem}}
   @media(max-width:450px){.sp-sidebar{display:block}.sp-detail{border-right:0;border-bottom:1px solid var(--sp-border)}.sp-summary{max-height:300px}.sp-search{display:block}.sp-search label{margin:0 0 .4rem}.sp-counter{font-size:.8125rem}.sp-budget-options>.sp-budget{right:auto;left:0}.sp-actions button{padding-inline:.5rem}}
 </style>

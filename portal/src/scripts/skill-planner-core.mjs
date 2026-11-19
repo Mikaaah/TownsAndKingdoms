@@ -49,6 +49,90 @@ export function refundSelection(model,selection,id,budget=model.pointCap) {
   const valid=validateSelection(model,remaining,budget);
   return {selection:valid.selection,removed:[...selection].filter(i=>!valid.selection.has(i))};
 }
+export function planSkillRoute(model, selection, target) {
+  if (!model.byId.has(target)) return null;
+  const spent = spentPoints(model, selection);
+  if (selection.has(target)) {
+    return { path: [target], steps: [], points: 0, prerequisitePoints: 0, minimumBudget: spent };
+  }
+
+  // A gate can require additional spending anywhere in the build, so route
+  // distance includes the minimum spend needed to cross each gate.
+  const routes = new Map();
+  const frontier = new Set();
+  const rank = (a, b) => a.spent - b.spent || a.pathCost - b.pathCost;
+  function visit(id, previous, totalSpent, pathCost) {
+    const node = model.byId.get(id);
+    const owned = selection.has(id);
+    const spentBefore = owned ? totalSpent : Math.max(totalSpent, node.requiredSpentPoints);
+    const next = {
+      previous,
+      spent: spentBefore + (owned ? 0 : node.cost),
+      pathCost: pathCost + (owned ? 0 : node.cost),
+    };
+    if (next.spent > model.pointCap || (!owned && spentBefore + node.requiredPoints > model.pointCap)) return;
+    if (routes.has(id) && rank(next, routes.get(id)) >= 0) return;
+    routes.set(id, next);
+    frontier.add(id);
+  }
+
+  const canStartRoot = !model.data.category.exclusiveRoot || ![...selection].some(id => model.byId.get(id)?.root);
+  for (const node of model.data.nodes) {
+    if (selection.has(node.id) || (node.root && canStartRoot) || node.requiredSkills === 0) {
+      visit(node.id, null, spent, 0);
+    }
+  }
+  while (frontier.size) {
+    let current;
+    for (const id of frontier) {
+      if (current === undefined || rank(routes.get(id), routes.get(current)) < 0) current = id;
+    }
+    if (current === target) break;
+    frontier.delete(current);
+    const route = routes.get(current);
+    for (const neighbor of model.adjacency.get(current)) {
+      if (selection.has(neighbor)) continue;
+      const connected = [...model.adjacency.get(neighbor)].filter(id => id === current || selection.has(id)).length;
+      if (connected >= model.byId.get(neighbor).requiredSkills) {
+        visit(neighbor, current, route.spent, route.pathCost);
+      }
+    }
+  }
+  if (!routes.has(target)) return null;
+
+  const path = [];
+  for (let id = target; id !== null; id = routes.get(id).previous) path.push(id);
+  path.reverse();
+  const pathNodes = new Set(path);
+  const planned = new Set(selection);
+  const steps = [];
+  let totalSpent = spent;
+  let minimumBudget = spent;
+  let prerequisitePoints = 0;
+  function add(id) {
+    const node = model.byId.get(id);
+    minimumBudget = Math.max(minimumBudget, totalSpent + Math.max(node.cost, node.requiredPoints));
+    totalSpent += node.cost;
+    if (!pathNodes.has(id)) prerequisitePoints += node.cost;
+    planned.add(id);
+    steps.push(id);
+  }
+
+  // Build a legal purchase order as well as the highlighted connection path.
+  for (const id of path) {
+    if (planned.has(id)) continue;
+    while (totalSpent < model.byId.get(id).requiredSpentPoints) {
+      const allowed = candidate => candidate !== target && allocationState(model, planned, candidate).allowed;
+      const filler = model.ids.find(candidate => !pathNodes.has(candidate) && allowed(candidate))
+        ?? model.ids.find(allowed);
+      if (filler === undefined) return null;
+      add(filler);
+    }
+    if (!allocationState(model, planned, id).allowed) return null;
+    add(id);
+  }
+  return { path, steps, points: totalSpent - spent, prerequisitePoints, minimumBudget };
+}
 export function summarizeSelection(model,selection) {
   const attributes=new Map(),passives=new Map();
   for(const id of selection) {

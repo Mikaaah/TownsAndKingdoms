@@ -20,5 +20,22 @@
   "TK3/config/EndRemastered-NeoForge/Eyes/wither_eye.json": "86499d5affe90f36aac3df626303ac797e44fd1f08719d3041f5be4174e458c7",
   "TK3/config/EndRemastered-NeoForge/endrem.json": "f23f3d1007bff9e17578dd04336d3c882360b7dbaa54518fd377c8eab1bd76d2",
   "TK3/reference/endremastered/native_rules.json": "f196abef484ef4e0bc960eab5ce7b086d9a4f2039fb40a4040cd3044f2c0ecbc",
-  "TK3/reference/endremastered/encounters.json": "fce51affb734fb3b6aded2b0fa8ae151e164d1f4d5561cf08d7c88f307d8e52e"
+  "TK3/reference/endremastered/encounters.json": "fce51affb734fb3b6aded2b0fa8ae151e164d1f4d5561cf08d7c88f307d8e52e",
+  "TK3/reference/endremastered/eye_animations.json": "7ae5e9bfab784815c696d38eec77665c26a29a751adcc2bda54ea5cff0b14e65",
+  "portal/public/images/eyes/black_eye.png": "65ab0aaf5f0ed0351a856325bbc3a00aacc9604d2f87f1c928db6e55c41151c4",
+  "portal/public/images/eyes/cold_eye.png": "62f943195d812ced3975f9aa5634d71a9a06d511bee041481586abf5de1820f4",
+  "portal/public/images/eyes/corrupted_eye.png": "1e41bb771367848e77374cef44abdbe8e8450d48c3d4029557429e05f73ec133",
+  "portal/public/images/eyes/cryptic_eye.png": "655d4c24e096839e1b72dc324654683772e8afef3bc43d162544083ca0deda2d",
+  "portal/public/images/eyes/cursed_eye.png": "8dd8aa9e203d7090ed90695a001474162e299977f5e92c588165220e96569b9a",
+  "portal/public/images/eyes/evil_eye.png": "505d039f00126d3ac9203e5009abf8853f908cf6c1a3ecb31bb4f51839571f4f",
+  "portal/public/images/eyes/exotic_eye.png": "26361db0583271ac109efb8897883eedfd930bf0c2dc992eb79f7da18f03c1eb",
+  "portal/public/images/eyes/guardian_eye.png": "612efd4eb10d7967ff7f108418de6b7e3e6e9d10ac9d6704e94c0dbb3f502663",
+  "portal/public/images/eyes/lost_eye.png": "3f87a9cbecc3ac2b2fd3927afecdf4cf9fb86d0216f9640945ba1916c85c5233",
+  "portal/public/images/eyes/magical_eye.png": "fca48e8d310e33086cc9101da588a4d42a530857432d72c7e7881de34903dc30",
+  "portal/public/images/eyes/nether_eye.png": "2fe9c8d57b2db10079d44c4abdbf7efd979bbc4028066b9e2145788d0402ecb5",
+  "portal/public/images/eyes/old_eye.png": "c5726ee27f40b7d97ad865217e1364827204e9fe95b7b1f3d90e92744337a512",
+  "portal/public/images/eyes/rogue_eye.png": "e9350803986f6823abfbbf946f69fb823c9956b6ce1999b656e4a3c2373a14d8",
+  "portal/public/images/eyes/undead_eye.png": "24c43d03b1c50a28bbf0f252034e1adefc5fe9643250cd47ab25a6aa2735dae7",
+  "portal/public/images/eyes/witch_eye.png": "97810c35b8007af19427327b792a72d33d8ff5a5844015a6acd9a4ff70c1be28",
+  "portal/public/images/eyes/wither_eye.png": "3afedf0c7c96a3d8537bef84290e0e33b8ea5e4434ab2e31b0b3da0bd3f53409"
 }

@@ -1,21 +1,493 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import MechanicSection from '../components/MechanicSection.astro';
-import {data,href,pretty,words} from '../lib/data';
-const mechanics=data('mechanics',{});
-const origins=Array.isArray(mechanics.origins)?mechanics.origins:mechanics.origins?.entries||[];
-const titleEntries=mechanics.titles?.entries||mechanics.titles?.titles||[];
+import QuestIcon from '../components/QuestIcon.astro';
+import badgeArt from '../data/character-title-badges.json';
+import { data, fmt, href } from '../lib/data';
+
+const { leveling, origins, originGuide, titles, loot } = data('mechanics', {});
+const sectionByTitle = (sections: any[], title: string) => sections.find(section => section.title === title);
+const milestones = sectionByTitle(leveling.sections, 'Levels and skill points').rows;
+const sampleLevel = milestones.find((row: any) => row.Level === 25);
+const ceilings = sectionByTitle(leveling.sections, 'Campaign ceilings').rows;
+const costRows = sectionByTitle(loot.sections, 'Identification prices').rows;
+const rarityRows = sectionByTitle(loot.sections, 'Rarity rolls').rows;
+const fluidRows = sectionByTitle(loot.sections, 'Mechanical Identifier').rows;
+const sampleTier = costRows.find((row: any) => row.Tier.startsWith('4 ·'));
+const sampleRarity = 'Rare';
+const titleBadges: Record<string, {width: number, offset: number}> = badgeArt.entries;
+const featuredTitles = ['tnk:apprentice', 'tnk:technician', 'tnk:engineer'].map(id => titles.catalog.find((title: any) => title.id === id)).filter(Boolean);
+const nav = [
+  {id:'leveling', label:'Leveling', icon:'skill_point'},
+  {id:'origins', label:'Origins', icon:'mirror'},
+  {id:'titles', label:'Titles', icon:'scroll'},
+  {id:'loot', label:'Unidentified Loot', icon:'satchel'},
+];
+const steps = [
+  {title:'Find sealed gear', description:'Eligible enemies and chests can reward unidentified equipment. A token shows its source, category and loot tier.', image:'media/character/loot-crate.png'},
+  {title:'Identify with vanilla XP', description:'Take the token to an Identifier to preview its pool and reveal it. The Mechanical Identifier uses fluid XP.', image:'media/ponder/textures/minecraft/item/experience_bottle.png'},
+  {title:'Keep, trade or salvage', description:'Compare the revealed affixes with your build. Salvaging adds fragments you can spend at an Identifier.', image:'media/weapons/minecraft/diamond_sword.png'},
+];
+const ascensionRecipe = 'recipes/#recipe=' + encodeURIComponent('tnk:endgame/mechanical_crafting/sigil_of_ascension');
+const badgeStyle = (id: string) => {
+  const art = titleBadges[id];
+  return `background-image:url(${href('media/character/title-badges.png')});background-size:auto ${badgeArt.height * 2}px;background-position:0 -${art.offset * 2}px;width:${art.width * 2}px`;
+};
 ---
-<Layout title="Character & equipment" description="Player leveling, Origins, titles and the equipment identification loop in Towns & Kingdoms.">
- <p class="eyebrow">Handbook / Character systems</p><h1>Character & equipment</h1><p class="intro">Character levels grant skill points and affect encounter scaling. Origins and titles add distinct bonuses, while appraisal reveals the equipment found on your expeditions.</p>
- <nav class="toc-inline" aria-label="Character systems"><a href="#leveling">Leveling</a><a href="#origins">Origins</a><a href="#titles">Titles</a><a href="#loot">Equipment & appraisal</a></nav>
- <div class="prose">
- <section id="leveling" class="section"><p class="eyebrow">Character / Growth</p><h2>{mechanics.leveling?.title||'Leveling & the world around you'}</h2>{mechanics.leveling?.summary&&<p>{mechanics.leveling.summary}</p>}{(mechanics.leveling?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}<p><a href={href('skills/')}>Explore skill choices in the planner →</a></p></section>
- <section id="origins" class="section"><p class="eyebrow">Character / Identity</p><h2>Origins</h2><p>{mechanics.originGuide?.summary||'Your Origin adds a distinct starting identity and set of perks. Advanced Origins extend those possibilities through ascension.'}</p>{(mechanics.originGuide?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}</section>
- </div>
- <div class="origin-grid">{origins.map((o:any)=><article class="card" id={'origin-'+o.id}><div class="card-top">{o.icon&&<img src={href(o.icon)} alt="" width="38" height="38" style="image-rendering:pixelated;object-fit:contain"/>}<h3>{o.name}</h3>{o.tier&&<span class="tag">{o.tier}</span>}</div>{o.description&&<p style="margin-top:12px">{o.description}</p>}{o.perks?.length>0&&<ul>{o.perks.map((p:any)=><li><strong>{p.name}</strong>{p.description&&<> — {p.description}</>}</li>)}</ul>}</article>)}</div>
- <div class="prose">
- <section id="titles" class="section"><p class="eyebrow">Character / Recognition</p><h2>{mechanics.titles?.title||'Titles'}</h2>{mechanics.titles?.summary&&<p>{mechanics.titles.summary}</p>}{(mechanics.titles?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}{titleEntries.length>0&&<div class="table-wrap"><table><thead><tr><th>Title</th><th>Requirement</th><th>Effect</th></tr></thead><tbody>{titleEntries.map((t:any)=><tr><td>{t.name||t.title||words(t.id)}</td><td>{pretty(t.requirement)||pretty(t.requirements)||t.description||''}</td><td>{pretty(t.perk)||pretty(t.effect)||pretty(t.perks)||''}</td></tr>)}</tbody></table></div>}</section>
- <section id="loot" class="section"><p class="eyebrow">Equipment / Discovery</p><h2>{mechanics.loot?.title||'Unidentified equipment & appraisal'}</h2>{mechanics.loot?.summary&&<p>{mechanics.loot.summary}</p>}{(mechanics.loot?.sections||[]).map((s:any)=><MechanicSection section={s}/>)}</section>
- </div>
+<Layout title="Character & equipment" description="Plan character levels, compare Origin perks and check equipment identification costs in Towns & Kingdoms 3.">
+  <p class="eyebrow">Handbook / Character systems</p>
+  <h1>Character & equipment</h1>
+  <p class="intro">Check how many skill points a level earns, find an Origin that fits your playstyle, and see what it costs to reveal your loot.</p>
+  <nav class="toc-inline mechanics-nav" aria-label="Character systems">
+    {nav.map(({id, label, icon}) => <a href={'#'+id}><QuestIcon name={icon} size={20} />{label}</a>)}
+  </nav>
+
+  <section id="leveling" class="mechanics-section" aria-labelledby="leveling-title">
+    <header class="mechanics-heading">
+      <QuestIcon name="skill_point" size={34} />
+      <div><h2 id="leveling-title">{leveling.title}</h2><p>{leveling.summary}</p></div>
+    </header>
+    <div class="mechanics-panel progression-panel">
+      <div class="level-calculator" data-level-calculator data-level-base={leveling.levelCost.base} data-level-factor={leveling.levelCost.factor} data-level-exponent={leveling.levelCost.exponent}>
+        <div class="level-calculator-heading">
+          <label for="character-level">Character level</label>
+          <output id="character-level-selected" for="character-level" data-level-selected>{sampleLevel.Level}</output>
+        </div>
+        <input type="range" min="1" max={leveling.maximumLevel} value={sampleLevel.Level} id="character-level" disabled data-level-control />
+        <div class="level-extremes" aria-hidden="true"><span>1</span><span>{leveling.maximumLevel}</span></div>
+        <dl class="progression-totals">
+          <div><dt>Skill points</dt><dd><output for="character-level" data-level-points>{sampleLevel['Earned skill points']}</output></dd></div>
+          <div><dt>Total character XP</dt><dd><output for="character-level" data-level-total>{sampleLevel['Total character XP']}</output></dd></div>
+          <div><dt>XP to next level</dt><dd><output for="character-level" data-level-next>{sampleLevel['XP to next level']}</output></dd></div>
+        </dl>
+        <a class="button button-primary" href={href('skills/')}>Open skill planner</a>
+      </div>
+      <div class="level-ceilings">
+        <h3>Campaign ceilings</h3>
+        <p>Campaign unlocks raise your level ceiling and determine your highest ordinary loot rarity.</p>
+        <ol class="ceiling-list">
+          {ceilings.map((row: any) => <li><span>Level <strong>{row['Character ceiling']}</strong></span><span>{row['Highest ordinary rarity']}</span></li>)}
+        </ol>
+      </div>
+    </div>
+    <div class="mechanics-reference" aria-label="Leveling reference">
+      <h3>XP sources and enemy scaling</h3>
+      <div class="mechanic-list">{leveling.sections.map((section: any) => <MechanicSection section={section} collapsible />)}</div>
+    </div>
+  </section>
+
+  <section id="origins" class="mechanics-section" aria-labelledby="origins-title">
+    <header class="mechanics-heading">
+      <QuestIcon name="mirror" size={34} />
+      <div><h2 id="origins-title">Origins</h2><p>{originGuide.summary}</p></div>
+    </header>
+    <div class="origin-controls" data-origin-controls hidden>
+      <div><label for="origin-search">Find an Origin or perk</label><input id="origin-search" type="search" placeholder="e.g. mining or mana" autocomplete="off" /></div>
+      <div><label for="origin-tier">Origin type</label><select id="origin-tier"><option value="">All Origins</option><option value="Origin">Starting Origins</option><option value="Ascended">Ascended Origins</option></select></div>
+      <span class="origin-count" role="status" data-origin-count>{origins.length} Origins</span>
+    </div>
+    <div class="origin-grid" data-origin-grid>
+      {origins.map((origin: any) => <article class="origin-entry" id={'origin-'+origin.id} data-origin-tier={origin.tier}>
+        <details>
+          <summary>
+            {origin.icon && <img src={href(origin.icon)} alt="" width="32" height="32" loading="lazy" />}
+            <span class="origin-summary"><span class="origin-name">{origin.name}</span>{origin.perks?.[0] && <span class="origin-first-perk">{origin.perks[0].description}</span>}</span>
+            {origin.tier === 'Ascended' && <span class="origin-ascended" title="Ascended Origin"><QuestIcon name="potionblue" size={20} /><span class="sr-only">Ascended</span></span>}
+          </summary>
+          <div class="origin-body">
+            <p>{origin.description}</p>
+            {origin.perks?.length > 1 && <ul>{origin.perks.slice(1).map((perk: any) => <li>{perk.description}</li>)}</ul>}
+          </div>
+        </details>
+      </article>)}
+    </div>
+    <div class="mechanics-reference">
+      <div class="reference-heading"><h3>Choosing or changing your Origin</h3><a class="button" href={href(ascensionRecipe)}>Sigil of Ascension recipe</a></div>
+      <div class="mechanic-list">{originGuide.sections.map((section: any) => <MechanicSection section={section} collapsible />)}</div>
+    </div>
+  </section>
+
+  <section id="titles" class="mechanics-section" aria-labelledby="titles-title">
+    <header class="mechanics-heading">
+      <QuestIcon name="scroll" size={34} />
+      <div><h2 id="titles-title">{titles.title}</h2><p>{titles.summary}</p></div>
+    </header>
+    <div class="mechanics-panel title-preview">
+      <div><h3>Cosmetic title</h3><p>Choose the title shown beside your character.</p><div class="title-badge-row">
+        {featuredTitles.map((title: any) => titleBadges[title.id] && <span class="title-badge" style={badgeStyle(title.id)} role="img" aria-label={title.name}></span>)}
+      </div></div>
+      <div><h3>Passive title</h3><p>Activate one unlocked title for its gameplay bonuses. You can use a different title in each slot.</p></div>
+    </div>
+    <div class="mechanics-reference mechanic-list">
+      {titles.sections.filter((section: any) => section.title !== 'Title catalogue').map((section: any) => <MechanicSection section={section} collapsible />)}
+      <details class="title-catalogue">
+        <summary>Title catalogue <span>· {fmt(titles.catalog.length)} titles</span></summary>
+        <div class="table-wrap"><table>
+          <thead><tr><th scope="col">Title</th><th scope="col">How to earn it</th><th scope="col">Passive bonuses</th></tr></thead>
+          <tbody>{titles.catalog.map((title: any) => <tr>
+            <td>{titleBadges[title.id] ? <span class="title-badge" style={badgeStyle(title.id)} role="img" aria-label={title.name}></span> : title.name}</td>
+            <td>{title.description}</td>
+            <td>{title.perks.length ? title.perks.map((perk: any) => perk.description).join(' · ') : 'Cosmetic only'}</td>
+          </tr>)}</tbody>
+        </table></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="loot" class="mechanics-section" aria-labelledby="loot-title">
+    <header class="mechanics-heading">
+      <QuestIcon name="satchel" size={34} />
+      <div><h2 id="loot-title">{loot.title}</h2><p>{loot.summary}</p></div>
+    </header>
+    <ol class="appraisal-steps">
+      {steps.map(step => <li><img src={href(step.image)} alt="" width="44" height="44" loading="lazy" /><div><h3>{step.title}</h3><p>{step.description}</p></div></li>)}
+    </ol>
+    <div class="mechanics-panel appraisal-panel">
+      <div class="loot-calculator" data-loot-calculator data-loot-costs={JSON.stringify(costRows)}>
+        <h3>Identification cost</h3>
+        <p>Estimate the price for affix-capable gear and native jewellery, before salvage credit.</p>
+        <div class="loot-options">
+          <div><label for="loot-tier">Loot tier</label><select id="loot-tier" disabled>
+            {costRows.map((row: any, index: number) => <option value={index} selected={row.Tier === sampleTier.Tier}>{row.Tier}</option>)}
+          </select></div>
+          <div><label for="loot-rarity">Rarity</label><select id="loot-rarity" disabled>
+            {loot.rarities.map((rarity: any) => <option value={rarity.name} selected={rarity.name === sampleRarity}>{rarity.name}</option>)}
+          </select></div>
+          <div class="loot-route"><label for="loot-route">Identification route</label><select id="loot-route" disabled>
+            <option value="manual">Identifier · Vanilla XP</option>
+            {fluidRows.map((row: any) => <option value={row['Fluid ID']} data-ratio={row['mB per vanilla XP point']}>Mechanical Identifier · {row['XP fluid'].replace(/^Xp\b/, 'XP')}</option>)}
+          </select></div>
+        </div>
+        <output class="loot-price" for="loot-tier loot-rarity loot-route" data-loot-result><strong data-loot-price>{sampleTier[sampleRarity]}</strong> <span data-loot-unit>vanilla XP points</span></output>
+      </div>
+      <div class="rarity-chart">
+        <h3>Full-range rarity odds</h3>
+        <p>Ordinary odds are renormalized when your level ceiling limits rarity.</p>
+        <table aria-label="Full-range rarity odds by loot source">
+          <thead><tr><th scope="col">Rarity</th><th scope="col">Ordinary</th><th scope="col">Boss</th></tr></thead>
+          <tbody>{rarityRows.map((row: any, index: number) => <tr style={`--rarity-color:${loot.rarities[index].color}`}>
+            <th scope="row"><span class="rarity-dot"></span>{row.Rarity}</th>
+            <td><span class="rarity-bar" style={`--odds:${row['Ordinary roll']}`}>{row['Ordinary roll']}</span></td>
+            <td><span class="rarity-bar" style={`--odds:${row['Boss roll']}`}>{row['Boss roll']}</span></td>
+          </tr>)}</tbody>
+        </table>
+      </div>
+    </div>
+    <div class="mechanics-reference">
+      <div class="reference-heading"><h3>Loot reference</h3><span>{fmt(loot.equipmentEntries)} equipment pool entries</span></div>
+      <div class="mechanic-list">{loot.sections.map((section: any) => <MechanicSection section={section} collapsible />)}</div>
+    </div>
+  </section>
 </Layout>
+
+<script src="../scripts/mechanics.js"></script>
+
+<style>
+  .mechanics-nav a {
+    gap: 9px;
+  }
+  .mechanics-section {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+  .mechanics-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .mechanics-heading h2,
+  .mechanics-heading p,
+  .mechanics-panel h3,
+  .mechanics-reference h3,
+  .appraisal-steps h3 {
+    margin: 0;
+  }
+  .mechanics-heading p,
+  .mechanics-panel p,
+  .appraisal-steps p {
+    color: var(--muted);
+    margin: 5px 0 0;
+  }
+  .mechanics-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .mechanics-panel > div {
+    min-width: 0;
+    padding: clamp(16px, 2.4vw, 28px);
+  }
+  .mechanics-panel > div + div {
+    border-left: 1px solid var(--border);
+  }
+  .level-calculator-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .level-calculator-heading label,
+  .mechanics-panel h3,
+  .mechanics-reference h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .level-calculator-heading output {
+    padding: 3px 12px;
+    background: var(--gold-surface);
+    border: 1px solid var(--gold-border);
+    border-radius: 5px;
+    color: var(--gold-text);
+    font-size: 20px;
+    font-variant-numeric: tabular-nums;
+  }
+  .level-calculator input[type="range"] {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    accent-color: var(--accent);
+  }
+  .level-extremes {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--subtle);
+  }
+  .progression-totals {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 18px 0;
+  }
+  .progression-totals dt {
+    color: var(--subtle);
+    font-size: 13px;
+  }
+  .progression-totals dd {
+    margin: 2px 0 0;
+    font-size: clamp(16px, 1.6vw, 24px);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+  }
+  .ceiling-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(76px, 1fr));
+    gap: 10px 6px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .ceiling-list li {
+    border-top: 2px solid var(--gold-border);
+    padding: 6px 0;
+    line-height: 1.4;
+  }
+  .ceiling-list li span {
+    display: block;
+    font-size: 13px;
+    color: var(--subtle);
+  }
+  .ceiling-list li span:first-child {
+    color: var(--text);
+  }
+  .ceiling-list strong {
+    font-size: 17px;
+  }
+  .mechanics-reference { margin-top: 24px; }
+  .reference-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .reference-heading > span { color: var(--subtle); font-size: 14px; }
+  .mechanic-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .mechanic-list > [open] { grid-column: 1 / -1; }
+  .mechanics-reference.mechanic-list { margin-top: 12px; }
+  .origin-controls {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .origin-controls label,
+  .loot-options label {
+    display: block;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .origin-controls input,
+  .origin-controls select,
+  .loot-options select {
+    min-height: 44px;
+    min-width: 0;
+    width: 100%;
+    padding: 7px 10px;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--control-border);
+    border-radius: 6px;
+  }
+  .origin-controls > div:first-child { flex: 1 1 220px; }
+  .origin-controls > div:nth-child(2) { flex: 0 1 190px; }
+  .origin-count { color: var(--subtle); font-size: 14px; padding: 10px 0 10px 4px; }
+  .origin-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 8px;
+  }
+  .origin-entry {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+  .origin-entry:target { border-color: var(--accent); }
+  .origin-entry summary {
+    display: flex;
+    align-items: center;
+    min-height: 76px;
+    gap: 9px;
+    padding: 11px 12px;
+    cursor: pointer;
+    list-style: none;
+  }
+  .origin-entry summary::-webkit-details-marker { display: none; }
+  .origin-entry summary::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid var(--subtle);
+    border-bottom: 1px solid var(--subtle);
+    transform: rotate(45deg) translate(-2px, -2px);
+    margin: 0 3px 0 auto;
+    flex-shrink: 0;
+  }
+  .origin-entry details[open] summary::after { transform: rotate(225deg); }
+  .origin-entry img,
+  .appraisal-steps img {
+    flex-shrink: 0;
+    image-rendering: pixelated;
+    object-fit: contain;
+  }
+  .origin-name,
+  .origin-first-perk { display: block; }
+  .origin-name { font-weight: 600; }
+  .origin-first-perk { color: var(--subtle); font-size: 13px; line-height: 1.4; }
+  .origin-ascended { margin-left: auto; }
+  .origin-entry[data-origin-tier="Ascended"] summary::after { margin-left: 0; }
+  .origin-body { border-top: 1px solid var(--border); padding: 10px 12px 12px; }
+  .origin-body p { margin: 0 0 6px; }
+  .origin-body ul { margin: 0; padding-left: 20px; }
+  .title-badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .title-badge {
+    display: block;
+    max-width: 100%;
+    height: 24px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+  }
+  .title-catalogue {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--bg);
+  }
+  .title-catalogue summary { cursor: pointer; padding: 13px 16px; font-weight: 550; }
+  .title-catalogue summary::marker { color: var(--gold-text); }
+  .title-catalogue summary span { color: var(--subtle); font-weight: 400; }
+  .title-catalogue .table-wrap { border-width: 1px 0 0; border-radius: 0 0 6px 6px; }
+  .title-catalogue td:first-child { width: 22%; }
+  .title-catalogue .title-badge { max-width: none; }
+  .appraisal-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    list-style: none;
+    margin: 0 0 18px;
+    padding: 0;
+  }
+  .appraisal-steps li { display: flex; align-items: flex-start; gap: 12px; }
+  .appraisal-steps h3 { font-size: 17px; }
+  .appraisal-steps p { font-size: 14px; }
+  .loot-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 16px 0;
+  }
+  .loot-route { grid-column: 1 / -1; }
+  .loot-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 8px 12px;
+    border-left: 2px solid var(--gold-border);
+    color: var(--gold-text);
+    background: var(--gold-surface);
+  }
+  .loot-price strong { font-size: 25px; font-variant-numeric: tabular-nums; }
+  .rarity-chart table { margin-top: 12px; }
+  .rarity-chart th,
+  .rarity-chart td { padding: 5px 3px; background: transparent; }
+  .rarity-chart [scope="row"] { text-transform: none; letter-spacing: 0; font-size: 14px; }
+  .rarity-chart td { width: 31%; }
+  .rarity-dot {
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--rarity-color);
+    outline: 1px solid var(--control-border);
+  }
+  .rarity-bar {
+    display: block;
+    position: relative;
+    min-width: 48px;
+    z-index: 0;
+    padding: 0 2px;
+    font-variant-numeric: tabular-nums;
+  }
+  .rarity-bar::before {
+    content: '';
+    position: absolute;
+    inset: auto auto 0 0;
+    border-radius: 2px;
+    height: 2px;
+    width: var(--odds);
+    min-width: 1px;
+    background: var(--rarity-color);
+  }
+  @media (max-width: 1150px) {
+    .origin-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 960px) {
+    .appraisal-steps { grid-template-columns: 1fr; }
+    .progression-totals dd { overflow-wrap: anywhere; }
+  }
+  @media (max-width: 690px) {
+    .mechanics-panel, .mechanic-list { grid-template-columns: minmax(0, 1fr); }
+    .mechanics-panel > div + div { border-left: 0; border-top: 1px solid var(--border); }
+    .mechanics-section { margin-top: 36px; }
+  }
+  @media (max-width: 580px) {
+    .origin-grid { grid-template-columns: minmax(0, 1fr); }
+    .origin-controls > div:first-child { flex-basis: 100%; }
+    .origin-controls > div:nth-child(2) { flex: 1; }
+  }
+</style>
