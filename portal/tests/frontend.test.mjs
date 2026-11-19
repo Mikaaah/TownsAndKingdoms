@@ -153,7 +153,9 @@ test('character and loot navigate independently and expose their complete refere
  const character=browser('mechanics'),loot=browser('loot'),chapters=browser('chapters');
  const characterDoc=character.window.document,lootDoc=loot.window.document;
  assert.equal(characterDoc.querySelectorAll('.origin-grid article').length,35);
- assert.equal(chapters.window.document.querySelectorAll('.chapter-card').length,10);
+ const chapterIds=[...chapters.window.document.querySelectorAll('.chapter-stage')].map(stage=>stage.id);
+ assert.deepEqual(chapterIds,json('chapters').map(chapter=>chapter.id));
+ assert.equal(chapters.window.document.querySelectorAll('.chapter-key-sprite').length,10);
  for(const id of ['leveling','origins','titles'])assert(characterDoc.getElementById(id));
  assert(characterDoc.querySelector('main a[href="/TownsAndKingdoms/loot/"]'));
  assert.equal(characterDoc.querySelector('[data-loot-calculator]'),null);
