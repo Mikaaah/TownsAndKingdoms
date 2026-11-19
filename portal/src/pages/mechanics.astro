@@ -32,7 +32,7 @@ const badgeStyle = (id: string) => {
     <nav class="toc-inline mechanics-nav" aria-label="Character systems">
       {nav.map(({id, label, icon}) => <a href={'#'+id}><QuestIcon name={icon} size={20} />{label}</a>)}
     </nav>
-    <a id="loot" class="button" href={href('loot/')}><QuestIcon name="satchel" size={20} />Go to Loot &amp; Appraisal</a>
+    <a id="loot" class="button" href={href('loot/')}>Go to Loot &amp; Appraisal<QuestIcon name="back" kind="ui" /></a>
   </div>
   <script is:inline define:vars={{ lootUrl: href('loot/') }}>
     function forwardLegacyLootLink() {

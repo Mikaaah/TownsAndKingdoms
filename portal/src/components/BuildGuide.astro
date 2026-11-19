@@ -32,7 +32,7 @@ const { id, guide } = Astro.props;
 const guideHref = (path: string) => path.startsWith('https://') ? path : href(path);
 ---
 <Layout title={guide.title} description={guide.description}>
-  <p class="eyebrow"><a href={href('tutorials/')}>Build guides</a></p>
+  <p class="eyebrow"><a class="build-guide-parent" href={href('tutorials/')}><QuestIcon name="back2" kind="ui" />Build guides</a></p>
   <header class="build-title">
     <QuestIcon name={guide.icon} size={38} />
     <h1>{guide.title}</h1>
@@ -69,6 +69,7 @@ const guideHref = (path: string) => path.startsWith('https://') ? path : href(pa
 </Layout>
 
 <style>
+  .build-guide-parent { display: inline-flex; align-items: center; gap: 6px; }
   .build-title { display: flex; align-items: center; gap: 14px; margin: 0 0 10px; }
   .build-title h1 { margin: 0; }
   .build-steps { display: grid; gap: 12px; margin: 0; padding-inline-start: 32px; }
