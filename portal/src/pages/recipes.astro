@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import QuestIcon from '../components/QuestIcon.astro';
 import RegistryDialog from '../components/RegistryDialog.astro';
 import { href, data, fmt, pretty, words } from '../lib/data';
 import '../styles/recipes.css';
@@ -60,7 +59,6 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
   <p class="intro">Search the pack’s recipes by result or ingredient. Open a recipe to see its materials, crafting pattern or machine steps.</p>
   <div class="button-row recipe-jump-links">
     <a class="button button-primary" href="#recipe-results">Find a recipe</a>
-    <a class="button" href={href('factory/')}>Open factory planner</a>
     <a class="button" href={href('tutorials/')}>Build guides</a>
     <a class="button" href={href('chapters/')}>Chapter guide</a>
   </div>
@@ -122,11 +120,7 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
           <tbody data-results></tbody>
         </table>
       </div>
-      <div class="pagination">
-        <button type="button" data-prev disabled><QuestIcon kind="ui" name="previous" />Previous</button>
-        <span data-page-label>1 / 1</span>
-        <button type="button" data-next disabled>Next<QuestIcon kind="ui" name="next" /></button>
-      </div>
+      <div class="pagination"><button data-prev disabled>Previous</button><span data-page-label>1 / 1</span><button data-next disabled>Next</button></div>
     </div>
   </section>
 
@@ -194,7 +188,3 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
     window.addEventListener('hashchange', revealRule);
   </script>
 </Layout>
-
-<style>
-  .pagination button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
-</style>

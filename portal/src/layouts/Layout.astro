@@ -8,14 +8,13 @@ const { title = 'Handbook', description = 'The official Towns & Kingdoms handboo
 const isTk2 = edition === 'tk2';
 const handbookName = isTk2 ? 'Towns & Kingdoms 2' : 'Towns & Kingdoms';
 const current = Astro.url.pathname.replace(/\/$/, '');
-const woodenMarks = new Set(['home', 'settings']);
 const groups = isTk2 ? tk2Nav : [
-  { title: 'Handbook', links: [['Overview', '', 'home'], ['Getting started', 'guides/', 'bookopen'], ['Chapters', 'chapters/', 'scroll'], ['Features', 'features/', 'map'], ['What changed', 'changes/', 'hourglass']] },
+  { title: 'Handbook', links: [['Overview', '', 'bookred'], ['Getting started', 'guides/', 'bookopen'], ['Chapters', 'chapters/', 'scroll'], ['Features', 'features/', 'map'], ['What changed', 'changes/', 'hourglass']] },
   { title: 'Character', links: [['Weapons', 'weapons/', 'hammer'], ['Loot & Appraisal', 'loot/', 'satchel'], ['Levels & Origins', 'mechanics/', 'mirror']] },
   { title: 'Practical', links: [['Recipes', 'recipes/', 'paper'], ['Mod index', 'mods/', 'journal'], ['Custom mods', 'custom-mods/', 'pickaxe'], ['Build guides', 'tutorials/', 'rotation_mechanism'], ['Player shops', 'guides/player-shops/', 'market']] },
   { title: 'World', links: [['Boss encounters', 'bosses/', 'horn'], ['Dungeons', 'dungeons/', 'key'], ['Dimensions', 'dimensions/', 'map']] },
-  { title: 'Tools', links: [['Skilltree planner', 'skills/', 'skill_point'], ['Factory planner', 'factory/', 'rotation_mechanism']] },
-  { title: 'Community & support', links: [['Servers', 'servers/', 'lantern'], ['Set up a server', 'guides/server-setup/', 'settings'], ['Discord', 'discord/', 'envelope'], ['Support', 'support/', 'bell'], ['Frequently asked questions', 'faq/', 'book']] }
+  { title: 'Tools', links: [['Skilltree planner', 'skills/', 'skill_point']] },
+  { title: 'Community & support', links: [['Servers', 'servers/', 'lantern'], ['Set up a server', 'guides/server-setup/', 'key'], ['Discord', 'discord/', 'envelope'], ['Support', 'support/', 'bell'], ['Frequently asked questions', 'faq/', 'book']] }
 ];
 ---
 <!doctype html>
@@ -50,6 +49,7 @@ const groups = isTk2 ? tk2Nav : [
       <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-sidebar"><Icon name="menu" /></button>
       <a class="brand" href={href(isTk2 ? 'tk2/' : '')} aria-label={`${handbookName} handbook home`}>
         {isTk2 ? <span class="brand-tk2">Towns &amp; Kingdoms 2</span> : <>
+          <span class="brand-home"><QuestIcon name="home" kind="ui" size={20} /></span>
           <img src={href('media/logo.webp')} alt="Towns & Kingdoms — Beyond the Forge" width="145" height="58" />
           <span class="brand-label">Handbook</span>
         </>}
@@ -60,11 +60,13 @@ const groups = isTk2 ? tk2Nav : [
       <nav class="header-links" aria-label="Community">
         <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord</a>
         <a href="https://github.com/Mikaaah/TownsAndKingdoms" target="_blank" rel="noopener">GitHub</a>
-        <details class="version-switch"><summary class:list={{ 'wooden-edition': !isTk2 }} aria-label="Choose handbook edition">{isTk2 ? 'TK2' : 'TK3'}{!isTk2 && <QuestIcon name="down" kind="ui" size={16} />}</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current={!isTk2 ? 'page' : undefined}>Towns & Kingdoms 3</a><a href={href('tk2/')} aria-current={isTk2 ? 'page' : undefined}>Towns & Kingdoms 2</a></nav></details>
+        <details class="version-switch"><summary aria-label="Choose handbook edition">{isTk2 ? 'TK2' : 'TK3'}</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current={!isTk2 ? 'page' : undefined}>Towns & Kingdoms 3</a><a href={href('tk2/')} aria-current={isTk2 ? 'page' : undefined}>Towns & Kingdoms 2</a></nav></details>
       </nav>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light mode" aria-pressed="false" title="Switch color theme">
-        <span class="theme-sun"><Icon name="sun" size={20} /></span>
-        <span class="theme-moon"><Icon name="moon" size={20} /></span>
+        {isTk2 ? <>
+          <span class="theme-sun"><Icon name="sun" size={20} /></span>
+          <span class="theme-moon"><Icon name="moon" size={20} /></span>
+        </> : <QuestIcon name="settings" kind="ui" size={20} />}
       </button>
     </header>
     <button class="nav-backdrop" id="nav-backdrop" aria-label="Close navigation" tabindex="-1" hidden></button>
@@ -73,7 +75,7 @@ const groups = isTk2 ? tk2Nav : [
         {groups.map(group => <nav class="nav-group" aria-label={group.title}>
           <p class="nav-label">{group.title}</p>
           {group.links.map(([name, url, mark]) => <a href={href(url)} aria-current={current === href(url.split('#')[0]).replace(/\/$/, '') ? 'page' : undefined}>
-            <span class="nav-mark"><QuestIcon name={mark} size={20} kind={!isTk2 && woodenMarks.has(mark) ? 'ui' : 'item'} /></span>{name}
+            <span class="nav-mark"><QuestIcon name={mark} size={20} /></span>{name}
           </a>)}
         </nav>)}
         <div class="nav-group"><p class="nav-label">{isTk2 ? 'Current edition' : 'Earlier adventures'}</p><a href={href(isTk2 ? '' : 'tk2/')}><span class="nav-mark"><QuestIcon name="candle" size={20} /></span>{isTk2 ? 'Towns & Kingdoms 3' : 'Towns & Kingdoms 2'}</a></div>
@@ -106,6 +108,9 @@ const groups = isTk2 ? tk2Nav : [
 
 <style>
 .brand-tk2{color:var(--text);font-weight:650;font-size:clamp(15px,2vw,19px)}
-.version-switch .wooden-edition{gap:8px}.version-switch .wooden-edition::after{content:none}
+.brand-home{display:grid;place-items:center;flex:none;width:32px;height:32px;border:1px solid var(--border);border-radius:5px}
+.brand:hover .brand-home{background:var(--surface-raised);border-color:var(--control-border)}
+.brand > img{min-width:0}
+@media(max-width:800px){.brand{gap:8px}}
 .version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold-text)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--gold-text)}
 </style>

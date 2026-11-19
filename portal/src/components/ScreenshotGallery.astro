@@ -1,5 +1,4 @@
 ---
-import QuestIcon from './QuestIcon.astro';
 import { href } from '../lib/data';
 
 const screenshots = [
@@ -20,26 +19,26 @@ const hasMultiple = screenshots.length > 1;
     <a class="gallery-preview" href={first.src} data-gallery-open aria-label="Enlarge screenshot">
       <img src={first.src} alt={first.alt} width={first.width} height={first.height} decoding="async" data-gallery-image />
       <img class="gallery-brand" src={href('media/screenshots/tnk3-brand.png')} alt="" width="216" height="87" decoding="async" />
-      <span aria-hidden="true"><QuestIcon kind="ui" name="zoom" />Enlarge</span>
+      <span aria-hidden="true">Enlarge</span>
     </a>
   </figure>
   {hasMultiple && (
     <div class="gallery-actions gallery-preview-actions" aria-label="Browse screenshots" role="group">
-      <button type="button" data-gallery-step="-1"><QuestIcon kind="ui" name="previous" />Previous</button>
-      <button type="button" data-gallery-step="1">Next<QuestIcon kind="ui" name="next" /></button>
+      <button type="button" data-gallery-step="-1">Previous</button>
+      <button type="button" data-gallery-step="1">Next</button>
     </div>
   )}
 
   <dialog class="gallery-dialog" aria-labelledby="screenshot-dialog-title">
     <div class="gallery-dialog-header">
       <h2 id="screenshot-dialog-title" data-gallery-title aria-live="polite">{first.title}</h2>
-      <form method="dialog"><button type="submit" autofocus><QuestIcon kind="ui" name="cross" />Close</button></form>
+      <form method="dialog"><button type="submit" autofocus>Close</button></form>
     </div>
     <img src={first.src} alt={first.alt} width={first.width} height={first.height} loading="lazy" data-gallery-image />
     {hasMultiple && (
       <div class="gallery-actions" aria-label="Browse screenshots" role="group">
-        <button type="button" data-gallery-step="-1"><QuestIcon kind="ui" name="previous" />Previous</button>
-        <button type="button" data-gallery-step="1">Next<QuestIcon kind="ui" name="next" /></button>
+        <button type="button" data-gallery-step="-1">Previous</button>
+        <button type="button" data-gallery-step="1">Next</button>
       </div>
     )}
   </dialog>
@@ -120,9 +119,6 @@ const hasMultiple = screenshots.length > 1;
     filter: drop-shadow(0 1px 3px #141116d9);
   }
   .gallery-preview span {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -133,7 +129,6 @@ const hasMultiple = screenshots.length > 1;
     font-size: 14px;
   }
   .gallery-actions { display: flex; gap: 8px; }
-  .gallery-actions button, .gallery-dialog-header button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
   .gallery-preview-actions { margin-top: 8px; }
   .gallery-actions button { font-size: 14px; padding: 6px 10px; }
 

@@ -40,7 +40,6 @@ export function buildSearchDocuments(datasets, base) {
   for(const n of skills.nodes||[])add('Skills',n.id,n.title,n.description,base+'skills/#node='+encodeURIComponent(n.id),n.branch+' · '+n.cost+' point'+(n.cost===1?'':'s'));
   for(const [id,title,description]of guideEntries)add('Guides',id,title,description,base+'guides/#'+id,'Practical handbook');
   for(const [route,title,description]of articleEntries)add('Guides',route,title,description,base+route,'Official handbook');
-  add('Tools','factory','Factory planner','Plan batches, recipes, intermediate items, feedstocks and raw materials for a factory.',base+'factory/','Production planning');
   for(const guide of buildGuides){
     const route='guides/'+guide.id+'/';
     add('Guides',route,guide.title,[guide.description,guide.keywords,guide.materials],base+route,'Build guide');

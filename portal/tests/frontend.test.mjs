@@ -124,8 +124,8 @@ test('recipe sprites follow exact inputs, alternatives and fluid outputs',async(
 test('global search indexes every requested category and opens through Ctrl+K',async()=>{
  const docs=json('search');const categories=new Set(docs.map(d=>d.category));
  assert(!JSON.stringify(docs).includes('[object Object]'));
- for(const c of ['Weapons','Recipes','Mods','Chapters','Bosses','Skills','Guides','Origins','Tools'])assert(categories.has(c),c);
- assert.ok(!docs.some(entry=>entry.url.includes('/ponder/')));
+ for(const c of ['Weapons','Recipes','Mods','Chapters','Bosses','Skills','Guides','Origins'])assert(categories.has(c),c);
+ assert.ok(!docs.some(entry=>entry.url.includes('/ponder/') || entry.url.includes('/factory/')));
  assert.equal(docs.filter(d=>d.category==='Skills').length,588);
  const engine=new MiniSearch({fields:['name','id','description','mod','style'],storeFields:['category','id','name','url','subtitle'],idField:'_key',searchOptions:{boost:{name:4,id:3},prefix:true,fuzzy:0.15}});engine.addAll(docs);
  const dom=browser('index');const {window}=dom;
@@ -282,6 +282,13 @@ test('the guide directory is separate and old Ponder URLs redirect to it',()=>{
  assert.match(ponder.window.document.querySelector('meta[http-equiv="refresh"]').content,/\/TownsAndKingdoms\/tutorials\/$/);
  assert.ok(!discord.window.document.querySelector('main').textContent.includes('A useful first message'));
  for(const page of [guides,start,ponder,discord])page.window.close();
+});
+test('the paused factory route redirects without rendering the planner',()=>{
+ const factory=browser('factory');
+ const doc=factory.window.document;
+ assert.match(doc.querySelector('meta[http-equiv="refresh"]').content,/\/TownsAndKingdoms\/recipes\/$/);
+ assert.equal(doc.querySelector('[data-factory]'),null);
+ factory.window.close();
 });
 test('clearing search discards a result that arrives after the input was emptied',()=>{
  const dom=browser('index');const {window}=dom;let instance;

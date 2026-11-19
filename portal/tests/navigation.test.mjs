@@ -15,12 +15,16 @@ test('navigation exposes the feature, custom-mod and community routes',()=>{
   Character: ['weapons','loot','mechanics'],
   Practical: ['recipes','mods','custom-mods','tutorials','guides/player-shops'],
   World: ['bosses','dungeons','dimensions'],
-  Tools: ['skills','factory'],
+  Tools: ['skills'],
  };
  for(const [group,pages] of Object.entries(pagesByGroup)){
   const nav=dom.window.document.querySelector(`#site-sidebar nav[aria-label="${group}"]`);
   assert.deepEqual([...nav.querySelectorAll('a')].map(link=>link.getAttribute('href')),pages.map(page=>`/TownsAndKingdoms/${page}/`));
  }
+ const doc=dom.window.document;
+ assert.ok(doc.querySelector('.brand img[src$="/quest-ui/home.png"]'));
+ assert.ok(doc.querySelector('#theme-toggle img[src$="/quest-ui/settings.png"]'));
+ assert.equal(doc.querySelector('#site-sidebar img[src*="/quest-ui/"], .version-switch img[src*="/quest-ui/"]'),null);
  dom.window.close();
 });
 test('mobile navigation opens, closes on Escape and closes after selecting a link',()=>{
