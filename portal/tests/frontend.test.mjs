@@ -31,6 +31,101 @@ function query(dom,text) {
  const field=dom.window.document.querySelector('[data-filter="query"]');
  field.value=text;field.dispatchEvent(new dom.window.Event('input',{bubbles:true}));
 }
+test('home screenshots rotate when idle and retain icon-only gallery controls', t => {
+ const dom = browser('index');
+ const {window} = dom;
+ const {document} = window;
+ t.after(() => window.close());
+
+ let hidden = false;
+ let reducedMotion = false;
+ Object.defineProperty(document, 'hidden', {get: () => hidden});
+ Object.defineProperty(document, 'visibilityState', {get: () => hidden ? 'hidden' : 'visible'});
+ const motion = new window.EventTarget();
+ Object.defineProperty(motion, 'matches', {get: () => reducedMotion});
+ window.matchMedia = query => query.includes('prefers-reduced-motion')
+  ? motion
+  : Object.assign(new window.EventTarget(), {matches: false});
+ const intervals = new Map();
+ let nextInterval = 0;
+ window.setInterval = callback => {
+  intervals.set(++nextInterval, callback);
+  return nextInterval;
+ };
+ window.clearInterval = id => intervals.delete(id);
+ const advance = () => [...intervals.values()].forEach(callback => callback());
+
+ const gallery = document.querySelector('[data-screenshot-gallery]');
+ const screenshots = JSON.parse(gallery.dataset.screenshotGallery);
+ const preview = gallery.querySelector('.gallery-preview');
+ const enlarge = preview.querySelector('[data-gallery-open]');
+ const dialog = gallery.querySelector('dialog');
+ const control = (scope, step) => scope.querySelector(`[data-gallery-step="${step}"]`);
+ assert.ok(screenshots.length > 1);
+ assert.equal(gallery.querySelector('[data-gallery-count], .gallery-preview-actions'), null);
+ assert.equal(enlarge.getAttribute('aria-label'), 'Enlarge screenshot');
+ assert.ok(enlarge.querySelector('svg'));
+ assert.equal(enlarge.textContent.trim(), '');
+ const dialogFrame = dialog.querySelector('[data-gallery-image]').parentElement;
+ for (const view of [preview, dialogFrame]) {
+  for (const [step, label] of [[-1, 'Previous screenshot'], [1, 'Next screenshot']]) {
+   const button = control(view, step);
+   assert.equal(button.getAttribute('aria-label'), label);
+   assert.equal(button.textContent.trim(), '');
+  }
+ }
+
+ const component = readFileSync(resolve(root, 'src/components/ScreenshotGallery.astro'), 'utf8');
+ const [, script] = component.match(/<script>([\s\S]*?)<\/script>/);
+ window.eval(stripTypeScriptTypes(script, {mode: 'strip'}));
+ const shown = index => {
+  const screenshot = screenshots[index];
+  const image = preview.querySelector('[data-gallery-image]');
+  assert.equal(image.getAttribute('src'), screenshot.src);
+  assert.equal(image.alt, screenshot.alt);
+  assert.equal(enlarge.getAttribute('href'), screenshot.src);
+ };
+
+ shown(0);
+ advance();
+ shown(1);
+ hidden = true;
+ document.dispatchEvent(new window.Event('visibilitychange'));
+ advance();
+ shown(1);
+ hidden = false;
+ document.dispatchEvent(new window.Event('visibilitychange'));
+ reducedMotion = true;
+ motion.dispatchEvent(new window.Event('change'));
+ advance();
+ shown(1);
+ reducedMotion = false;
+ motion.dispatchEvent(new window.Event('change'));
+ const next = control(preview, 1);
+ next.focus();
+ advance();
+ shown(1);
+ next.blur();
+
+ control(preview, -1).click();
+ shown(0);
+ control(preview, -1).click();
+ shown(screenshots.length - 1);
+ next.click();
+ shown(0);
+
+ enlarge.click();
+ assert.equal(dialog.open, true);
+ advance();
+ shown(0);
+ control(dialog, 1).click();
+ assert.equal(dialog.querySelector('[data-gallery-image]').getAttribute('src'), screenshots[1].src);
+ assert.equal(dialog.querySelector('[data-gallery-title]').textContent, screenshots[1].title);
+ dialog.dispatchEvent(new window.KeyboardEvent('keydown', {key: 'ArrowLeft', bubbles: true}));
+ shown(0);
+ dialog.close();
+ assert.equal(document.activeElement, enlarge);
+});
 test('each End eye encounter has a credited portrait and a matching registry thumbnail',async()=>{
  const dom=browser('bosses');const doc=dom.window.document;
  const eyes=json('end-eyes');
