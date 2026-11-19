@@ -5,10 +5,10 @@ const guideEntries = [
   ['combat','Learn your weapon','Weapon identity, movesets, grips, combat and special attacks.'],
   ['factory','Build a production line','Mechanisms, manufacturing, automated crafting and chapters.'],
   ['appraisal','Identify dungeon gear','Unidentified drops, rarities, appraisal, salvage and equipment.'],
-  ['walking-machines','Build a walking machine','Let It Walk, Aeronautics, Reinforced mechanisms and controls.'],
   ['skills','Plan your character','Skill points, branches, prerequisites and shared builds.']
 ];
 const articleEntries = [
+  ['guides/walking-machines/','Build a walking machine','Let It Walk, Aeronautics, Chapter VI, Light Engineering, Reinforced Mechanisms and walker controls.'],
   ['features/','Features and world showcase','Exploration, building, combat, magic and factory automation.'],
   ['guides/tutorial/','In-game tutorial','Quest Book, Story progression, quest rewards, JEI recipe lookup, claiming, travel, Lootr, Ultimine, combat, character progression and spells.'],
   ['changes/','From Towns & Kingdoms 2 to 3','Changes to progression, character systems, mods and equipment.'],

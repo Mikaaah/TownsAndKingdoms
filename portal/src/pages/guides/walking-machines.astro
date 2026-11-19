@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { href } from '../../lib/data';
+---
+<Layout title="Build a walking machine" description="Assemble a Let It Walk walker using Chapter VI Light Engineering parts.">
+  <p class="eyebrow"><a href={href('features/#moving-machines')}>Moving machines</a> / Light Engineering</p>
+  <h1>Build a walking machine</h1>
+  <p class="intro">Let It Walk uses parts from <a href={href('chapters/#chapter-06')}>Chapter VI Light Engineering</a>. Prepare Reinforced Mechanisms and a Light Engineering Machine before you start.</p>
+
+  <div class="prose">
+    <ol>
+      <li><strong>Manufacture the control core.</strong> The <a href={href('recipes/?q=let_it_walk:walker_core')}>Walker Core</a> uses a Light Engineering Machine. Start its Stabilization Module with a Reinforced Mechanism.</li>
+      <li><strong>Produce articulation units.</strong> Add a Reinforced Mechanism during assembly before pressing. Use the units for the hinge and swivel recipes, which each yield two parts.</li>
+      <li><strong>Fit the controls.</strong> Pilot Controls and the Remote Pilot Controller each use a Reinforced Mechanism alongside their control components.</li>
+      <li><strong>Add a powered foot where needed.</strong> The Jet Nozzle assembly uses a Reinforced Mechanism, iron sheet, fluid pipe and 250 mB of lava before pressing.</li>
+      <li><strong>Complete the structure and pose.</strong> Use the Positioner and Let It Walk’s assembly controls to set up the limbs.</li>
+    </ol>
+    <p><a href={href('recipes/?q=let_it_walk')}>All walking-machine recipes</a> · <a href={href('recipes/?q=aeronautics')}>Aeronautics recipes</a></p>
+  </div>
+</Layout>
