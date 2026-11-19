@@ -1,0 +1,47 @@
+{
+  "title": "Build a Sapper and make rubber",
+  "description": "Tap a living tree for Resin, then pipe it into a heated Compressor for your first Raw Rubber. This setup supplies the rubber you need for Sealed Mechanisms.",
+  "icon": "potionblue",
+  "materials": [
+    "A grown Oak, Birch or Biomes O' Plenty Maple tree",
+    "Sapper, Mechanical Pump and Compressor",
+    "Fluid Pipes, Cogwheels and Shafts",
+    "Water Wheel or existing Create rotational power",
+    "Campfire, Depot or Belt, and a Smoker"
+  ],
+  "steps": [
+    {
+      "title": "Leave a gap in front of the Sapper",
+      "text": "Stonecut an Andesite Machine into a Sapper. Place it two blocks from the lowest trunk block, with its working face toward the trunk and one empty block between them for the head to extend. Keep the matching leaves on the grown tree. Run a Cogwheel into the side of the Sapper to power it."
+    },
+    {
+      "title": "Pump Resin out the back",
+      "text": "Connect a Fluid Pipe to the side opposite the tree. Add a powered Mechanical Pump with its arrow pointing away from the Sapper and run the line into the back of a Compressor. Stonecut another Andesite Machine to get the Compressor. Feeding it directly lets you make rubber before you have the Sealed Mechanism needed for a Fluid Tank.",
+      "figure": {
+        "src": "media/early-builds/sapper.webp",
+        "width": 880,
+        "height": 376,
+        "alt": "A grown tree stands one air block in front of the Sapper. The rear pipe feeds a powered pump, which pushes Resin into a Compressor above a Campfire to make Raw Rubber."
+      }
+    },
+    {
+      "title": "Make and cure the rubber",
+      "text": "Place a lit Campfire immediately below the Compressor. Drive its side shaft so it turns clockwise when viewed from the Compressor's right side. Put a Depot or Belt one block in front of the Compressor and one block lower to catch the output. The Compressor turns 500 mB of Resin into one Raw Rubber. Cure it in a Smoker to get one Cured Rubber."
+    }
+  ],
+  "tips": [
+    {
+      "title": "Pick a supported tree",
+      "text": "Oak gives 25 mB of Resin per cycle and Birch gives 40 mB. Red, orange and yellow Biomes O' Plenty Maples each give 150 mB. Use one Sapper per tree for a full yield since Sappers sharing a trunk split each cycle's Resin."
+    },
+    {
+      "title": "If Resin stops moving",
+      "text": "Check that the Sapper has a clear gap and living leaves, then check that the pump is powered and points toward the Compressor. If the Compressor has Resin but sits idle, check its rotation and the Campfire beneath it."
+    }
+  ],
+  "links": [
+    { "label": "Sap Happens! quest", "path": "chapters/#quest-15AD3F1C4FEF6F5B" },
+    { "label": "Sapper recipe", "path": "recipes/#recipe=tnk%3Amachines%2Ftier_01%2Fnative_upgrade%2Frubberworks%2Fsapper%2F0" },
+    { "label": "Raw Rubber recipe", "path": "recipes/#recipe=tnk%3Achapter_03%2Fcompressing%2Fraw_rubber_from_resin" }
+  ]
+}

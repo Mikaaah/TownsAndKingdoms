@@ -1,0 +1,74 @@
+{
+  "title": "Set up and troubleshoot an AE2 network",
+  "description": "Build a basic ME system in Chapter V, then diagnose offline devices, missing channels and stuck autocrafting.",
+  "icon": "rotation_mechanism",
+  "materials": [
+    "A powered Energy Acceptor or ME Controller supplied with FE",
+    "ME Glass Cable and an ME Terminal",
+    "ME Drive with a compatible item storage cell",
+    "ME Smart Cable to read channel usage"
+  ],
+  "steps": [
+    {
+      "id": "first-network",
+      "title": "Build the smallest working network",
+      "text": "Feed FE into an Energy Acceptor. Connect the ME Drive and the cable that holds your ME Terminal to that same network. Insert an item storage cell into the drive. Open the terminal, deposit one item, then take it back out.",
+      "figure": {
+        "src": "media/early-builds/ae2-network.webp",
+        "width": 880,
+        "height": 360,
+        "alt": "A Forge Energy supply powers the Energy Acceptor, and one ME cable connects both the Terminal and ME Drive with a storage cell."
+      }
+    },
+    {
+      "id": "missing-channels",
+      "title": "Count channels before expanding",
+      "text": "With no controller, the whole network supports eight channel-using devices. A drive and a terminal use one each. For a larger network, add an ME Controller. Use dense cables for the trunk, up to 32 channels, and standard cables for branches, up to eight. Leave room for each new device."
+    },
+    {
+      "id": "cable-routing",
+      "title": "Trace the cable path that is actually used",
+      "text": "Replace a piece of cable near an offline device with the matching ME Smart Cable. Check channel usage toward the ME Controller. Channels generally route by the shortest suitable path. Remove loops and use cable anchors or differently colored cables to keep branches separate. Colored cables affect connections."
+    },
+    {
+      "id": "autocrafting",
+      "title": "Test autocrafting with a one-item pattern",
+      "text": "Add a Crafting CPU with Crafting Storage. For a regular crafting pattern, give an ME Pattern Provider a Molecular Assembler and put the pattern in the provider. For a Processing Pattern, point the provider at the machine’s input. Route its finished output back into the ME network. Request a single craft first."
+    }
+  ],
+  "tips": [
+    {
+      "id": "device-offline",
+      "title": "The terminal shows Device Offline",
+      "text": "Verify the FE supply first, especially after adding machines. Check the terminal is attached to the powered cable, then check that the drive and terminal each have a channel. Test them on a short isolated network if the main route is hard to follow."
+    },
+    {
+      "id": "cell-full",
+      "title": "The terminal refuses an item",
+      "text": "Open the drive and inspect both stored types and used bytes. An item cell can hit its type limit while it still has room for items of types it already stores. Check any cell partitions and storage bus filters too."
+    },
+    {
+      "id": "craft-stuck",
+      "title": "The processing job sits on a missing output",
+      "text": "Check that the production machine received the requested ingredients and that the output returns to the same ME network. Use an Import Bus at the correct output or send the product into an ME Interface. Match the actual output and quantity in the encoded pattern."
+    }
+  ],
+  "links": [
+    {
+      "label": "Chapter V · Logic & Energetics",
+      "path": "chapters/#chapter-05"
+    },
+    {
+      "label": "Energy Acceptor recipe",
+      "path": "recipes/#recipe=tnk%3Amachines%2Ftier_04%2Fnative_upgrade%2Fae2%2Fenergy_acceptor%2F0"
+    },
+    {
+      "label": "ME Controller recipe",
+      "path": "recipes/#recipe=tnk%3Achapter_05%2Fstonecutting%2Fcontroller"
+    },
+    {
+      "label": "AE2’s channel reference",
+      "path": "https://guide.appliedenergistics.org/1.21.1/ae2-mechanics/channels"
+    }
+  ]
+}

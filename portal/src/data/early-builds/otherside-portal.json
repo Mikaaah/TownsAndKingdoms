@@ -1,0 +1,47 @@
+{
+  "title": "Open the Otherside portal",
+  "keywords": "deeper darker portal deep dark ancient city Warden",
+  "description": "Use a Warden’s Heart of the Deep to activate the Ancient City gateway in Deeper and Darker.",
+  "icon": "key",
+  "materials": [
+    "1 Heart of the Deep from a Warden",
+    "The Reinforced Deepslate portal frame at the center of an Ancient City",
+    "Food, light, and blocks for a return route"
+  ],
+  "steps": [
+    {
+      "id": "city",
+      "title": "Find the Ancient City’s central frame",
+      "text": "Look for the large Reinforced Deepslate gateway above the center of the city. Mark the return route before you explore the surrounding sculk."
+    },
+    {
+      "id": "heart",
+      "title": "Get a Heart of the Deep",
+      "text": "Defeat a Warden and pick up its Heart of the Deep. Keep the heart in your inventory when you return to the city frame."
+    },
+    {
+      "id": "activate",
+      "title": "Use the heart on the frame",
+      "text": "Hold the heart and right-click the Reinforced Deepslate at the base of the opening. Once the portal fills, step through to the Otherside. Mark the far-side gateway before leaving it.",
+      "figure": {
+        "src": "media/early-builds/otherside-portal.webp",
+        "width": 880,
+        "height": 352,
+        "alt": "Front view of the natural Reinforced Deepslate frame in the Ancient City. Use the Heart of the Deep on a frame block."
+      }
+    }
+  ],
+  "tips": [
+    {
+      "id": "portal-wont-light",
+      "title": "The frame still won’t open",
+      "text": "Use the Heart of the Deep on the central city frame. Check that the frame is intact and remove sculk veins or other blocks obstructing the opening."
+    }
+  ],
+  "links": [
+    {
+      "label": "Deeper and Darker’s starting guide",
+      "path": "https://github.com/KyaniteMods/DeeperAndDarker/wiki/starting-guide"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Linked Chests",
+  "description": "Use this endgame storage upgrade to access one inventory from your base, a farm or a distant outpost. The pack recipe uses a Light Engineering Block from Chapter VI.",
+  "icon": "satchel",
+  "materials": [
+    "For each Linked Chest, 4 Eyes of Ender, 2 Steel Plates and 1 Light Engineering Block",
+    "For each Linked Chest, 1 Wool and 1 Chest or Barrel",
+    "Dye if you want to mix the lid colors",
+    "One test item, such as an Iron Ingot"
+  ],
+  "steps": [
+    {
+      "title": "Craft two Linked Chests",
+      "text": "Gather enough materials for both ends of the link. Use the same color of Wool for both recipes to give the chests matching channels from the start.",
+      "id": "craft"
+    },
+    {
+      "title": "Match the three lid colors",
+      "text": "Place both chests. Facing the latch, compare the left, middle and right color pads on the lids. Right-click a pad with dye to change it. Use the same colors in the same order at both ends.",
+      "id": "match-channel"
+    },
+    {
+      "title": "Test the link before moving a chest",
+      "text": "Put an Iron Ingot into the first chest, then open the second and take it out. Check the first chest again to see that the ingot was removed there too. Once the test works, put each chest where you want access to the shared inventory.",
+      "figure": {
+        "src": "media/early-builds/linked-chests-routing.webp",
+        "width": 880,
+        "height": 344,
+        "alt": "Two Linked Chests use the same white, red and white lid colors. An ingot placed in the first chest can be taken out of the second through their shared inventory.",
+        "caption": "Both chests open the same inventory. Removing an item at either end removes it for the whole channel."
+      },
+      "id": "test"
+    },
+    {
+      "title": "Hook up a farm or add portable access",
+      "text": "Point a hopper into one Linked Chest to feed it, or place a hopper beneath an endpoint to pull from the channel. For portable access, hold a Linked Pouch and sneak-right-click a chest to copy its channel. Right-click the pouch in the air to open that inventory.",
+      "id": "automation"
+    }
+  ],
+  "tips": [
+    {
+      "title": "Check the channel if a chest looks empty",
+      "text": "Compare all three pad positions. Every chest on a matching standard channel uses the same 27 slots, so check whether another endpoint or hopper has already taken the items.",
+      "id": "wrong-channel"
+    },
+    {
+      "title": "Set up a personal channel",
+      "text": "Use a Diamond on the chest's front latch to switch it to your player-specific channel with 54 slots. Use the same account to configure every chest you want on that channel. If you link a pouch, copy the channel again after switching.",
+      "id": "personal-channel"
+    }
+  ],
+  "links": [
+    {
+      "label": "Chapter VI · Light Engineering",
+      "path": "chapters/#chapter-06"
+    },
+    {
+      "label": "Linked Chest recipe",
+      "path": "recipes/#recipe=tnk%3Acompat%2Flinkedchests%2Flinked_chest_materials"
+    },
+    {
+      "label": "Linked Pouch recipe",
+      "path": "recipes/#recipe=tnk%3Acompat%2Flinkedchests%2Flinked_pouch_materials"
+    },
+    {
+      "label": "Matching endpoints Ponder",
+      "path": "ponder/?scene=linked_storage_02"
+    }
+  ]
+}

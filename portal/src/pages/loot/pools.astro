@@ -1,0 +1,355 @@
+---
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { data, fmt, href } from '../../lib/data';
+
+interface Equipment {
+  id: string;
+  name: string;
+  category: string;
+}
+
+interface TierEquipment extends Equipment {
+  minTier: number;
+  maxTier: number;
+  dimensions: string[];
+}
+
+interface BossPool {
+  id: string;
+  name: string;
+  tier: number;
+  chance: number;
+  additionalIfNoEquipment: boolean;
+  items: (Equipment & { weight: number })[];
+}
+
+interface LootCatalog {
+  tiers: { rank: number; id: string; name: string }[];
+  levelGroups: { id: string; min: number; max: number; tiers: { rank: number; chance: number }[] }[];
+  dimensions: { id: string; name: string; includeGlobal: boolean }[];
+  equipment: TierEquipment[];
+  bossPools: BossPool[];
+  bossRequiresPlayerKill: boolean;
+}
+
+interface SearchItem extends Equipment {
+  ordinary?: TierEquipment;
+  bosses: { pool: BossPool; weight: number }[];
+}
+
+const catalog: LootCatalog = data('loot-pools');
+const poolItems = new Map<string, SearchItem>();
+for (const item of catalog.equipment) poolItems.set(item.id, { ...item, ordinary: item, bosses: [] });
+for (const pool of catalog.bossPools) {
+  for (const { weight, ...item } of pool.items) {
+    if (!poolItems.has(item.id)) poolItems.set(item.id, { ...item, bosses: [] });
+    poolItems.get(item.id)!.bosses.push({ pool, weight });
+  }
+}
+
+const items = [...poolItems.values()].sort((a, b) => a.name.localeCompare(b.name) || a.id.localeCompare(b.id));
+const tiers = new Map(catalog.tiers.map(tier => [tier.rank, tier]));
+const dimensions = new Map(catalog.dimensions.map(dimension => [dimension.id, dimension.name]));
+const categories: Record<string, string> = {
+  weapon: 'Weapon', bow: 'Bow', tool: 'Tool', helmet: 'Helmet', chestplate: 'Chestplate',
+  leggings: 'Leggings', boots: 'Boots', accessory: 'Accessory',
+};
+const range = (group: { min: number; max: number }) => `${group.min}–${group.max}`;
+const tierHash = (rank: number) => '#tier-' + tiers.get(rank)!.id;
+const itemHash = (id: string) => '#item=' + encodeURIComponent(id);
+const bossHash = (id: string) => '#boss=' + encodeURIComponent(id);
+const firstGroup = catalog.levelGroups[0];
+const levelGroupsFor = (item: TierEquipment) => catalog.levelGroups.filter(
+  group => group.tiers.some(({ rank }) => item.minTier <= rank && rank <= item.maxTier)
+);
+
+type RecipeTexture = string | [number, number, number];
+const recipeArt: Record<string, RecipeTexture> = data('recipe-textures', {});
+const weaponArt = new Map<string, string>(
+  data('weapons').map((weapon: { id: string; icon: string }) => [weapon.id, weapon.icon])
+);
+const usableArt = (path: string | undefined) => path && existsSync(join(process.cwd(), 'public', path));
+const iconFor = (item: SearchItem) => {
+  const recipe = recipeArt[item.id];
+  if (Array.isArray(recipe) || (typeof recipe === 'string' && usableArt(recipe))) return recipe;
+  const weapon = weaponArt.get(item.id);
+  if (usableArt(weapon)) return weapon;
+  return `media/loot/tokens/unidentified_${item.category}.png`;
+};
+const pageSize = 24;
+const initialItems = items.filter(item => item.ordinary && levelGroupsFor(item.ordinary).includes(firstGroup));
+const initialCount = initialItems.length;
+const initialVisible = new Set(initialItems.slice(0, pageSize).map(item => item.id));
+---
+
+<Layout title="Unidentified Loot Pools" description="Find every configured unidentified loot option by encounter level, token tier, dimension, item or boss." wide>
+  <p class="eyebrow"><a href={href('loot/')}>Loot &amp; Appraisal</a> / Pool catalog</p>
+  <h1>Unidentified Loot Pools</h1>
+  <p class="intro">Look up what an unidentified token can reveal. Browse ordinary pools by encounter level or token tier, or see the equipment in a boss’s dedicated pool.</p>
+
+  <section class="loot-catalog" data-loot-catalog data-page-size={pageSize} data-mode="levels" aria-label="Unidentified loot catalog">
+    <nav class="pool-modes" aria-label="Browse loot by source">
+      <a href={'#' + firstGroup.id} data-pool-mode="levels" aria-current="location"><Icon name="layers" /> Level pools</a>
+      <a href="#bosses" data-pool-mode="bosses"><Icon name="sword" /> Boss drops</a>
+      <a href="#items" data-pool-mode="items"><Icon name="search" /> Find an item</a>
+    </nav>
+
+    <div class="pool-filters">
+      <div class="pool-filter" data-pool-controls="levels">
+        <label for="loot-pool-level">Level group or token tier</label>
+        <select id="loot-pool-level" data-pool-scope aria-controls="loot-pool-results">
+          <optgroup label="Effective encounter level">
+            {catalog.levelGroups.map(group => <option value={'#' + group.id} data-ranks={group.tiers.map(tier => tier.rank).join(' ')}>
+              Levels {range(group)}
+            </option>)}
+          </optgroup>
+          <optgroup label="Exact token tier">
+            {catalog.tiers.map(tier => <option value={tierHash(tier.rank)} data-ranks={tier.rank} data-tier-name={tier.name}>Tier {tier.rank} · {tier.name}</option>)}
+          </optgroup>
+        </select>
+      </div>
+      <div class="pool-filter" data-pool-controls="levels">
+        <label for="loot-pool-dimension">Origin dimension</label>
+        <select id="loot-pool-dimension" data-pool-dimension aria-controls="loot-pool-results">
+          <option value="">All dimensions</option>
+          <option value="minecraft:overworld" data-global="true">Overworld</option>
+          {catalog.dimensions.map(dimension => <option value={dimension.id} data-global={String(dimension.includeGlobal)}>{dimension.name}</option>)}
+        </select>
+      </div>
+      <div class="pool-filter" data-pool-controls="bosses" hidden>
+        <label for="loot-pool-boss">Boss</label>
+        <select id="loot-pool-boss" data-pool-boss aria-controls="loot-pool-results">
+          <option value="#bosses">All {catalog.bossPools.length} encounters</option>
+          {catalog.bossPools.map(pool => <option value={bossHash(pool.id)} data-entity={pool.id}>{pool.name}</option>)}
+        </select>
+      </div>
+      <div class="pool-filter pool-search">
+        <label for="loot-pool-search">Item name or ID</label>
+        <input id="loot-pool-search" type="search" autocomplete="off" placeholder="Search loot" data-pool-search aria-controls="loot-pool-results" />
+      </div>
+      <div class="pool-filter">
+        <label for="loot-pool-category">Category</label>
+        <select id="loot-pool-category" data-pool-category aria-controls="loot-pool-results">
+          <option value="">All categories</option>
+          {Object.entries(categories).map(([id, name]) => <option value={id}>{name}</option>)}
+        </select>
+      </div>
+    </div>
+
+    <div class="pool-explanation" data-pool-controls="levels">
+      <p>Effective encounter level is capped by your unlocked character ceiling. A token’s tier, category and origin dimension determine which items it can reveal.</p>
+      {catalog.levelGroups.map(group => <ul class="tier-rolls" aria-label={`Tier rolls at levels ${range(group)}`}
+        data-pool-info={'#' + group.id} hidden={group.id !== firstGroup.id}>
+        {group.tiers.map(tier => <li>
+          <a href={tierHash(tier.rank)} data-pool-route><strong>{tier.chance}%</strong> {tiers.get(tier.rank)!.name}</a>
+        </li>)}
+      </ul>)}
+    </div>
+    <div class="pool-explanation" data-pool-controls="bosses" hidden>
+      <p>{catalog.bossRequiresPlayerKill ? 'Boss tokens require player participation in the kill. ' : ''}Each token appraises into one item from its encounter’s pool.</p>
+      {catalog.bossPools.map(pool => <p class="boss-roll" data-pool-info={bossHash(pool.id)} hidden>
+        <strong>Tier {pool.tier} · {tiers.get(pool.tier)!.name}</strong>
+        <span>{pool.additionalIfNoEquipment
+          ? `Eligible kills can replace matching equipment. If none drops, the boss has a ${fmt(pool.chance * 100)}% fallback token roll.`
+          : 'The token replaces matching equipment when that equipment drops.'}</span>
+      </p>)}
+    </div>
+
+    <div class="pool-results-header" id="loot-pool-results" tabindex="-1">
+      <h2 data-pool-title>Levels {range(firstGroup)}</h2>
+      <p data-pool-count aria-live="polite">Showing 1–{Math.min(pageSize, initialCount)} of {fmt(initialCount)} items</p>
+    </div>
+
+    <div class="table-wrap pool-table-wrap" data-pool-table>
+      <table class="pool-table">
+        <caption class="sr-only">Configured unidentified loot equipment and sources</caption>
+        <thead><tr><th scope="col">Item</th><th scope="col" class="pool-category">Category</th><th scope="col">Where to find it</th></tr></thead>
+        <tbody>
+          {items.map(item => {
+            const ordinary = item.ordinary;
+            const levelGroups = ordinary ? levelGroupsFor(ordinary) : [];
+            const icon = iconFor(item);
+            const initialRanks = ordinary ? firstGroup.tiers.map(tier => tier.rank).filter(
+              rank => ordinary.minTier <= rank && rank <= ordinary.maxTier
+            ) : [];
+            const firstTier = initialRanks.at(0) ?? ordinary?.minTier ?? 0;
+            const lastTier = initialRanks.at(-1) ?? ordinary?.maxTier ?? 0;
+            return <tr data-pool-row data-item={item.id} data-name={item.name} data-category={item.category}
+              data-min-tier={ordinary?.minTier} data-max-tier={ordinary?.maxTier}
+              data-dimensions={ordinary?.dimensions.join(' ')} data-bosses={item.bosses.map(({ pool }) => pool.id).join(' ')}
+              hidden={!initialVisible.has(item.id)}>
+              <th scope="row">
+                <div class="pool-item">
+                  {Array.isArray(icon) ? <span class="pool-icon pool-atlas" aria-hidden="true" style={{
+                    backgroundImage: `url("${href(`media/recipe-textures/items-${icon[0]}.webp`)}")`,
+                    backgroundPosition: `${icon[1] * 100 / 15}% ${icon[2] * 100 / 15}%`,
+                  }}></span> : <img src={href(icon!)} class="pool-icon" width="28" height="28" alt="" loading="lazy" />}
+                  <span>
+                    <a href={itemHash(item.id)} data-pool-route>{item.name}</a>
+                    <code>{item.id}</code>
+                    <small class="pool-category-mobile">{categories[item.category] ?? item.category}</small>
+                  </span>
+                </div>
+              </th>
+              <td class="pool-category">{categories[item.category] ?? item.category}</td>
+              <td class="pool-sources">
+                {ordinary && <div class="pool-level-source">
+                  <span class="pool-tier-range">
+                    <a href={tierHash(firstTier)} data-pool-route data-pool-tier-first>{tiers.get(firstTier)!.name}</a>
+                    <span data-pool-tier-divider hidden={firstTier === lastTier}>–</span>
+                    <a href={tierHash(lastTier)} data-pool-route data-pool-tier-last hidden={firstTier === lastTier}>{tiers.get(lastTier)!.name}</a>
+                  </span>
+                  <span class="source-detail">{ordinary.dimensions.map(id => dimensions.get(id)).join(', ') || 'Global equipment'}</span>
+                  <div class="pool-level-links" aria-label="Available at these effective encounter levels">
+                    {levelGroups.map(group => <a href={'#' + group.id} data-pool-route aria-label={`Levels ${range(group)}`}>{range(group)}</a>)}
+                  </div>
+                </div>}
+                {item.bosses.length > 0 && <div class="pool-boss-source">
+                  {item.bosses.map(({ pool, weight }) => <div class="pool-boss-link" data-pool-encounter={pool.id}>
+                    <a href={bossHash(pool.id)} data-pool-route>{pool.name}</a>
+                    <span class="source-detail">Tier {pool.tier} · Weight {weight}</span>
+                  </div>)}
+                </div>}
+              </td>
+            </tr>;
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <p class="pool-empty" data-pool-empty hidden>No equipment matches those filters.</p>
+    <div class="pool-pagination" aria-label="Catalog pages" data-pool-pagination hidden>
+      <button type="button" data-pool-previous>Previous</button>
+      <span data-pool-page></span>
+      <button type="button" data-pool-next>Next</button>
+    </div>
+    <p class="pool-note" data-pool-controls="bosses" hidden>Weight is relative to the other items in the same boss pool.</p>
+  </section>
+</Layout>
+
+<script>
+  import '../../scripts/loot-pools.js';
+</script>
+
+<style>
+  .pool-modes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 22px 0 12px;
+  }
+  .pool-modes a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+    padding: 7px 13px;
+    color: var(--text);
+    font-weight: 550;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+  .pool-modes a:hover, .pool-modes a[aria-current] {
+    border-color: var(--gold-border);
+    color: var(--gold-text);
+    background: var(--gold-surface);
+    text-decoration: none;
+  }
+  .pool-filters {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+  .pool-filter { flex: 1 1 160px; min-width: 0; }
+  .pool-search { flex: 2 1 170px; }
+  .pool-filter label { display: block; margin-bottom: 4px; color: var(--text); font-size: 13px; font-weight: 550; }
+  .pool-filter :is(input, select) { width: 100%; min-height: 44px; min-width: 0; }
+  .pool-explanation { margin: 12px 0 0; }
+  .pool-explanation p { max-width: 80ch; margin: 0; color: var(--muted); font-size: 14px; }
+  .tier-rolls { display: flex; flex-wrap: wrap; gap: 6px; margin: 7px 0 0; padding: 0; list-style: none; }
+  .tier-rolls li { margin: 0; }
+  .tier-rolls a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 36px;
+    padding: 4px 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    font-size: 13px;
+  }
+  .tier-rolls strong { color: var(--gold-text); }
+  .pool-explanation .boss-roll { margin-top: 9px; }
+  .boss-roll strong { display: block; color: var(--gold-text); }
+  .pool-results-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px 15px;
+    margin: 23px 0 9px;
+    scroll-margin-top: calc(var(--header-height) + 12px);
+  }
+  .pool-results-header h2 { margin: 0; font-size: 23px; }
+  .pool-results-header p { margin: 0; color: var(--muted); font-size: 13px; }
+  .pool-table th, .pool-table td { padding: 9px 12px; vertical-align: middle; }
+  .pool-table thead th { white-space: normal; }
+  .pool-table th[scope='row'] { text-transform: none; letter-spacing: normal; background: transparent; }
+  .pool-table tbody tr:nth-child(even) { background: var(--surface); }
+  .pool-table tbody tr:hover { background: var(--surface-raised); }
+  .pool-table tbody td { background: transparent; }
+  .pool-item { display: flex; align-items: center; gap: 9px; }
+  .pool-item > span:not(.pool-icon) { display: block; min-width: 0; }
+  .pool-item a { color: var(--text); font-size: 15px; font-weight: 600; }
+  .pool-icon { display: block; flex: none; width: 28px; height: 28px; object-fit: contain; image-rendering: pixelated; }
+  .pool-atlas { background-size: 1600% 1600%; background-repeat: no-repeat; }
+  .pool-item code { display: block; margin-top: 3px; color: var(--subtle); font-size: 11px; font-weight: 400; }
+  .pool-category-mobile { display: none; }
+  .pool-category { white-space: nowrap; }
+  .pool-tier-range { color: var(--subtle); }
+  .source-detail { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; line-height: 1.3; }
+  .pool-level-links { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+  .pool-level-links a {
+    padding: 2px 5px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .pool-boss-link + .pool-boss-link { margin-top: 5px; }
+  .pool-level-source + .pool-boss-source { margin-top: 6px; }
+  .loot-catalog:not([data-mode='items']) .pool-level-links,
+  .loot-catalog[data-mode='levels'] .pool-boss-source,
+  .loot-catalog[data-mode='bosses'] .pool-level-source { display: none; }
+  .pool-pagination { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 16px 0 0; color: var(--muted); }
+  .pool-pagination button:disabled { opacity: .6; cursor: default; }
+  .pool-note { margin: 13px 0 0; font-size: 13px; color: var(--muted); }
+  .pool-empty { padding: 20px; border: 1px dashed var(--border); border-radius: var(--radius); color: var(--muted); }
+  @media (max-width: 630px) {
+    .pool-modes { gap: 5px; }
+    .pool-modes a { gap: 5px; min-height: 40px; padding: 5px 8px; font-size: 13px; }
+    .pool-modes svg { width: 15px; height: 15px; }
+    .pool-filter { flex: 1 1 min(128px, 100%); }
+    .pool-search { order: -1; flex-basis: 100%; }
+    .pool-category { display: none; }
+    .pool-category-mobile { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+    .pool-table th, .pool-table td { padding: 8px; }
+    .pool-table th[scope='row'] { width: 57%; }
+    .pool-item { gap: 5px; }
+    .pool-item a { font-size: 14px; }
+    .pool-icon { width: 22px; height: 22px; }
+    .pool-sources { overflow-wrap: anywhere; }
+  }
+</style>

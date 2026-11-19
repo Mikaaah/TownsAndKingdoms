@@ -1,0 +1,51 @@
+{
+  "title": "Build a starter tree farm",
+  "description": "Use a Water Wheel to swing a Mechanical Saw through your trees and collect the drops in a moving chest. Start with one oak and replant by hand.",
+  "icon": "herb",
+  "materials": [
+    "Water Wheel, flowing water and Shafts",
+    "Vertical Gearbox or Cogwheels to turn the drive upward",
+    "Mechanical Bearing and Mechanical Saw",
+    "Solid blocks for the arm, Super Glue and a Chest",
+    "Dirt and Oak Saplings"
+  ],
+  "steps": [
+    {
+      "title": "Power the bearing from below",
+      "text": "Stonecut two Andesite Machines into a Mechanical Bearing and a Mechanical Saw. Set the bearing with its moving face pointing up. Run the Water Wheel's rotation to the shaft underneath the bearing. Keep the drive and its supports out of the space where the arm will sweep."
+    },
+    {
+      "title": "Build the arm at trunk height",
+      "text": "Build a short horizontal arm on top of the bearing's moving face. Set the Saw on the arm with its blade facing forward in the direction the arm will turn. The blade needs to be level with the lowest log, one block above your planting dirt. Glue the arm, Saw and Chest together so they all move with the bearing. Keep the glue off your stationary supports.",
+      "figure": {
+        "src": "media/early-builds/tree-farm.webp",
+        "width": 880,
+        "height": 476,
+        "alt": "Side view of a Water Wheel driving an upward Mechanical Bearing and a glued arm with a chest and saw. A top-down view shows the blade sweeping forward through the planting ring."
+      }
+    },
+    {
+      "title": "Test one tree and replant",
+      "text": "With the bearing parked, place a dirt plot one block in front of the blade and plant an Oak Sapling. Leave the area above the plot open so the tree can grow. Once it has grown, use the powered bearing to assemble the arm. Let the blade sweep through the lowest log, stop the arm at a clear position, and collect the drops from the attached Chest. Replant the plot and add more plots along the same sweep once the first one works."
+    }
+  ],
+  "tips": [
+    {
+      "title": "If the saw passes without cutting",
+      "text": "Check the blade faces forward as the arm moves and lines up with the first log above dirt. A saw mounted on this moving arm works as a contraption actor, powered through the bearing."
+    },
+    {
+      "title": "Add replanting later",
+      "text": "Glue a downward-facing Deployer to the moving arm so it passes over each plot after the Saw. Mount it two blocks above the sapling space, leave it in Use mode and set its filter to Oak Sapling. Keep saplings in the attached Chest so the Deployer can pick them up."
+    },
+    {
+      "title": "Keep a separate resin tree",
+      "text": "Leave any tree feeding a Sapper outside the saw's sweep so its trunk and canopy stay intact."
+    }
+  ],
+  "links": [
+    { "label": "Rotations & Andesite quest board", "path": "chapters/#chapter-02" },
+    { "label": "Mechanical Saw recipe", "path": "recipes/#recipe=tnk%3Amachines%2Ftier_01%2Fcrafting%2Fcreate%2Fmechanical_saw" },
+    { "label": "Mechanical Bearing recipe", "path": "recipes/#recipe=tnk%3Amachines%2Ftier_01%2Fstonecutting%2Fcreate%2Fmechanical_bearing" }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Sophisticated Storage",
+  "description": "Upgrade a chest or barrel in place, make more room for bulk materials and control what your factory puts in or takes out.",
+  "icon": "key",
+  "materials": [
+    "A placed vanilla Chest or Barrel",
+    "One Lever and four Sticks for a Basic Tier Upgrade",
+    "For bulk storage, a Stack Upgrade Tier 1",
+    "For automated sorting, a Filter Upgrade and a free upgrade slot",
+    "For the second slot on a single Chest or Barrel, one Lever and eight Iron Ingots"
+  ],
+  "steps": [
+    {
+      "title": "Upgrade the container where it stands",
+      "text": "Craft a Basic Tier Upgrade with a Lever surrounded by four Sticks in a cross. Close the container, hold the upgrade and right-click a placed vanilla chest or barrel. It keeps its contents and gains one upgrade slot. A double chest uses two tier upgrades."
+    },
+    {
+      "title": "Make bulk materials fit",
+      "text": "Craft a Stack Upgrade Tier 1 with eight logs around an Upgrade Base, then put it in the container's upgrade slot. A cobblestone stack can now hold 128 items per slot. Shift-click to take one normal stack. Ctrl + Shift + left-click takes as much from that slot as your inventory can hold.",
+      "figure": {
+        "src": "media/early-builds/sophisticated-storage-upgrades.webp",
+        "width": 880,
+        "height": 344,
+        "alt": "A Basic Tier Upgrade turns a vanilla barrel into a wood barrel with one upgrade slot. The iron tier has 54 inventory slots and two upgrade slots. A Stack Upgrade doubles the cobblestone limit per slot from 64 to 128.",
+        "caption": "Tier upgrades add container slots. A Stack Upgrade lets each slot hold more of the same item."
+      }
+    },
+    {
+      "title": "Filter a hopper or pipe",
+      "text": "Use a Basic to Iron Tier Upgrade on the placed container to get a second upgrade slot for the Filter Upgrade. In its filter tab, choose Input and set it to allow a sample item such as Cobblestone. Test the filter with one Cobblestone and one item that should be rejected. Choose Output if you need to filter what a hopper or pipe pulls out."
+    },
+    {
+      "title": "Build a shared drop-off point in Chapter V",
+      "text": "Craft a Storage Controller with a Calculation Machine and place it against a bank of Sophisticated Storage containers. Right-click the controller with a stack that already has a match in the bank to deposit it. Open the relevant container to take items by hand, or connect a hopper or pipe to a Storage Output for automated extraction."
+    }
+  ],
+  "tips": [
+    {
+      "title": "Check the tier and upgrade slots",
+      "text": "Wood and Copper chests and barrels have one upgrade slot. Iron has two. If a tier upgrade does not apply, check that it starts from the container's current tier and that the container is closed."
+    },
+    {
+      "title": "Clear oversized stacks before removing an upgrade",
+      "text": "Take out or split oversized stacks before removing a Stack Upgrade. The remaining items need to fit within the lower slot limit."
+    },
+    {
+      "title": "Pack a container before you move it",
+      "text": "Right-click a filled Sophisticated Storage chest or barrel with Packing Tape. Once it is visibly packed, break it and place it again to move its contents with it."
+    }
+  ],
+  "links": [
+    { "label": "Upgrade Base recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fsophisticatedstorage%2Fflexible_upgrade_base" },
+    { "label": "Storage Controller recipe", "path": "recipes/#recipe=tnk%3Amachines%2Ftier_04%2Fnative_upgrade%2Fsophisticatedstorage%2Fcontroller%2F0" },
+    { "label": "Factory storage Ponder", "path": "ponder/?scene=storage_controller" },
+    { "label": "Endgame Linked Chests", "path": "guides/linked-chests/" }
+  ]
+}

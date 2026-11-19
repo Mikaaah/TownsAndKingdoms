@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { JSDOM } from 'jsdom';
 import { stripTypeScriptTypes } from 'node:module';
@@ -224,6 +224,31 @@ test('character and loot navigate independently and expose their complete refere
  }
  assert.equal(json('search').find(entry=>entry._key==='Mechanics:loot')?.url,'/TownsAndKingdoms/loot/');
  character.window.close();loot.window.close();
+});
+test('build guides publish their diagrams and direct search destinations',()=>{
+ const directory=resolve(root,'src/data/early-builds');
+ const search=json('search');
+ for(const name of readdirSync(directory).filter(file=>file.endsWith('.json'))){
+  const slug=name.slice(0,-5);
+  const guide=JSON.parse(readFileSync(resolve(directory,name),'utf8'));
+  const route='guides/'+slug+'/';
+  const dom=browser('guides/'+slug);
+  const doc=dom.window.document;
+  assert.equal(doc.querySelector('h1').textContent,guide.title);
+  assert.equal(doc.querySelectorAll('.build-steps > li').length,guide.steps.length);
+  for(const {figure} of guide.steps.filter(step=>step.figure)){
+   const image=doc.querySelector(`img[src="/TownsAndKingdoms/${figure.src}"]`);
+   assert.ok(image?.alt);
+   assert.ok(readFileSync(resolve(root,'dist',figure.src)).length);
+  }
+  const urls=search.filter(result=>result.url.startsWith('/TownsAndKingdoms/'+route)).map(result=>result.url);
+  assert.ok(urls.includes('/TownsAndKingdoms/'+route));
+  for(const url of urls){
+   const fragment=new URL(url,'https://mikaaah.github.io').hash.slice(1);
+   if(fragment)assert.ok(doc.getElementById(fragment),url);
+  }
+  dom.window.close();
+ }
 });
 test('clearing search discards a result that arrives after the input was emptied',()=>{
  const dom=browser('index');const {window}=dom;let instance;
