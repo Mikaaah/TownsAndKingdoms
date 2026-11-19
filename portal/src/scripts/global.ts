@@ -57,10 +57,27 @@ input?.addEventListener('keydown',event=>{
   if(event.key==='Enter' && links.length){event.preventDefault();window.location.href=links[selected<0?0:selected].href;dialog?.close();}
 });
 const menu = document.querySelector<HTMLButtonElement>('#menu-toggle');
-const sidebar = document.querySelector('#site-sidebar');
-menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');sidebar?.classList.toggle('is-open',open);});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){sidebar?.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open navigation');}});
-
-sidebar?.addEventListener('click',event=>{if((event.target as HTMLElement).closest('a')){sidebar.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open navigation');}});
-
-window.addEventListener('resize',()=>{if(window.innerWidth>800){sidebar?.classList.remove('is-open');menu?.setAttribute('aria-expanded','false');menu?.setAttribute('aria-label','Open navigation');}});
+const sidebar = document.querySelector<HTMLElement>('#site-sidebar');
+const backdrop = document.querySelector<HTMLButtonElement>('#nav-backdrop');
+function setNavigation(open: boolean, restoreFocus = false) {
+  const mobile = window.innerWidth <= 800;
+  const expanded = mobile && open;
+  menu?.setAttribute('aria-expanded', String(expanded));
+  menu?.setAttribute('aria-label', expanded ? 'Close navigation' : 'Open navigation');
+  sidebar?.classList.toggle('is-open', expanded);
+  if(sidebar) sidebar.inert = mobile && !expanded;
+  if(backdrop) backdrop.hidden = !expanded;
+  document.body.classList.toggle('navigation-open', expanded);
+  if(restoreFocus) menu?.focus();
+}
+setNavigation(false);
+menu?.addEventListener('click',()=>setNavigation(menu.getAttribute('aria-expanded') !== 'true'));
+backdrop?.addEventListener('click',()=>setNavigation(false, true));
+document.addEventListener('keydown',event=>{
+  if(event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') setNavigation(false, true);
+});
+sidebar?.addEventListener('click',event=>{
+  if((event.target as HTMLElement).closest('a')) setNavigation(false);
+});
+document.querySelector('#open-search')?.addEventListener('click',()=>setNavigation(false));
+window.addEventListener('resize',()=>setNavigation(window.innerWidth <= 800 && menu?.getAttribute('aria-expanded') === 'true'));

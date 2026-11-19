@@ -20,9 +20,13 @@ test('mobile navigation opens, closes on Escape and closes after selecting a lin
  const source=readFileSync(resolve(root,'src/scripts/global.ts'),'utf8').replaceAll('import.meta.env.BASE_URL',JSON.stringify('/TownsAndKingdoms/')).replaceAll('import.meta.url',JSON.stringify('https://mikaaah.github.io/TownsAndKingdoms/global.js'));
  window.eval(stripTypeScriptTypes(source,{mode:'strip'}).replace(/export\s*\{\s*\};?/g,''));
  const button=window.document.querySelector('#menu-toggle'),sidebar=window.document.querySelector('#site-sidebar');
+ const backdrop=window.document.querySelector('#nav-backdrop');
+ assert.equal(sidebar.inert,true);assert.equal(backdrop.hidden,true);
  button.click();assert.equal(button.getAttribute('aria-expanded'),'true');assert.equal(button.getAttribute('aria-label'),'Close navigation');assert(sidebar.classList.contains('is-open'));
+ assert.equal(sidebar.inert,false);assert.equal(backdrop.hidden,false);
  window.document.dispatchEvent(new window.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
  assert.equal(button.getAttribute('aria-expanded'),'false');assert(!sidebar.classList.contains('is-open'));
+ assert.equal(sidebar.inert,true);assert.equal(backdrop.hidden,true);assert.equal(window.document.activeElement,button);
  button.click();
  const event=new window.MouseEvent('click',{bubbles:true,cancelable:true});sidebar.querySelector('a').addEventListener('click',e=>e.preventDefault(),{once:true});sidebar.querySelector('a').dispatchEvent(event);
  assert(!sidebar.classList.contains('is-open'));assert.equal(button.getAttribute('aria-label'),'Open navigation');
@@ -30,6 +34,9 @@ test('mobile navigation opens, closes on Escape and closes after selecting a lin
  assert.match(css,/\.sidebar\.is-open\{[^}]*transform:translateX\(0\)/);
  assert(!css.includes('.sidebar.open{'));
  button.click();assert(sidebar.classList.contains('is-open'));window.innerWidth=1200;window.dispatchEvent(new window.Event('resize'));assert.equal(button.getAttribute('aria-expanded'),'false');assert(!sidebar.classList.contains('is-open'));
+ assert.equal(sidebar.inert,false);assert.equal(backdrop.hidden,true);
+ window.innerWidth=375;window.dispatchEvent(new window.Event('resize'));button.click();backdrop.click();
+ assert.equal(sidebar.inert,true);assert.equal(button.getAttribute('aria-expanded'),'false');assert.equal(window.document.activeElement,button);
  dom.window.close();
 });
 test('features use actual weapon and profession artwork, and custom mods match the installed manifest',()=>{
