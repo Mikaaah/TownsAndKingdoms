@@ -1,0 +1,118 @@
+{
+  "block_factorys_bosses:sandworm": {
+    "file": "sandworm.webp",
+    "width": 499,
+    "height": 312,
+    "credit": "CraftyMania · Bosses’Rise showcase",
+    "source": "https://craftymania.net/bossesrise-mod/"
+  },
+  "cataclysm:ignis": {
+    "file": "ignis.webp",
+    "width": 800,
+    "height": 424,
+    "credit": "L_Ender’s Cataclysm gallery",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/gallery"
+  },
+  "twilightforest:snow_queen": {
+    "file": "snow-queen.webp",
+    "width": 720,
+    "height": 500,
+    "credit": "FTB Wiki · Aurora Palace screenshot",
+    "source": "https://ftb.fandom.com/wiki/File:TF-IceQueen.jpg"
+  },
+  "legendary_monsters:overgrown_colossus": {
+    "file": "overgrown-colossus.webp",
+    "width": 800,
+    "height": 500,
+    "credit": "miauczel · Legendary Monsters gallery",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/legendary-monsters/gallery"
+  },
+  "cataclysm:the_harbinger": {
+    "file": "the-harbinger.webp",
+    "width": 800,
+    "height": 424,
+    "credit": "L_Ender’s Cataclysm gallery",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/gallery"
+  },
+  "archaion:last_of_deepslate": {
+    "file": "last-of-deepslate.webp",
+    "width": 344,
+    "height": 215,
+    "credit": "RatRod and aquextheseal · Archaion",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/archaion#description"
+  },
+  "alexscaves:luxtructosaurus": {
+    "file": "luxtructosaurus.webp",
+    "width": 760,
+    "height": 371,
+    "credit": "Alex’s Caves · Fictional Indexing Wiki",
+    "source": "https://fictional-indexing.fandom.com/wiki/Luxtructosaurus_%28Alex%27s_Caves_Mod%29/AyOgUyS"
+  },
+  "mowziesmobs:ferrous_wroughtnaut": {
+    "file": "ferrous-wroughtnaut.webp",
+    "width": 686,
+    "height": 500,
+    "credit": "Mowzie’s Mobs on CurseForge",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs",
+    "license": {
+      "name": "Mowzie’s Mobs asset license",
+      "url": "https://github.com/BobMowzie/MowziesMobs-Public/blob/main/License.txt"
+    }
+  },
+  "minecraft:wither": {
+    "file": "wither.webp",
+    "width": 800,
+    "height": 342,
+    "credit": "Mojang Studios",
+    "source": "https://www.minecraft.net/en-us/article/meet-wither"
+  },
+  "aether:valkyrie_queen": {
+    "file": "valkyrie-queen.webp",
+    "width": 360,
+    "height": 260,
+    "credit": "The Aether Team · Silver Dungeon screenshot",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/aether/gallery"
+  },
+  "ars_nouveau:wilden_boss": {
+    "file": "wilden-chimera.webp",
+    "width": 512,
+    "height": 512,
+    "credit": "Jarva · Ars.Guide",
+    "source": "https://ars.guide/book/field_guide/wilden/"
+  },
+  "cataclysm:maledictus": {
+    "file": "maledictus.webp",
+    "width": 768,
+    "height": 432,
+    "credit": "L_Ender’s Cataclysm model and textures",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/files/8931182"
+  },
+  "cataclysm:the_leviathan": {
+    "file": "the-leviathan.webp",
+    "width": 768,
+    "height": 432,
+    "credit": "L_Ender’s Cataclysm model and textures",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/files/8931182"
+  },
+  "cataclysm:ancient_remnant": {
+    "file": "ancient-remnant.webp",
+    "width": 768,
+    "height": 432,
+    "credit": "L_Ender’s Cataclysm model and textures",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/files/8931182"
+  },
+  "block_factorys_bosses:underworld_knight": {
+    "file": "underworld-knight.webp",
+    "width": 800,
+    "height": 500,
+    "credit": "Block Factory · Bosses’Rise gallery",
+    "source": "https://modrinth.com/mod/bossesrise/gallery"
+  },
+  "legendary_monsters:posessed_paladin": {
+    "file": "possessed-paladin.webp",
+    "width": 800,
+    "height": 500,
+    "credit": "miauczel · Legendary Monsters gallery",
+    "source": "https://www.curseforge.com/minecraft/mc-mods/legendary-monsters/gallery"
+  }
+}

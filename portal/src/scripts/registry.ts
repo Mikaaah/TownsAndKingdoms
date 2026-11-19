@@ -1,6 +1,7 @@
 const container = document.querySelector<HTMLElement>('[data-registry]');
 const type = container?.dataset.registry;
 const ponderItems = new Set<string>(JSON.parse(container?.dataset.ponderItems || '[]'));
+const bossPortraits: Record<string, string> = JSON.parse(container?.dataset.bossPortraits || '{}');
 type RecipeTexture = string | [number, number, number];
 let recipeArt: Record<string, RecipeTexture> = {};
 const base = import.meta.env.BASE_URL.replace(/\/$/,'');
@@ -135,13 +136,20 @@ function recipeRow(recipe:any) {
  const progressBadge = progress ? `<span class="tag tag-gold">${escape(progress)}</span>` : '';
  return `<tr><td><div class="recipe-result"><span class="recipe-result-art" aria-hidden="true">${art}</span><div><button class="table-button" data-detail="${escape(recipe.id)}">${escape(name)}</button><div class="table-detail"><span class="recipe-quantity">${escape(quantity)}</span> · ${escape(recipe.modName||words(recipe.mod))}</div>${progressBadge?`<div class="recipe-result-progress">${progressBadge}</div>`:''}</div></div></td><td class="recipe-input-column"><ul class="recipe-preview-inputs">${summary}${extra}</ul></td><td class="recipe-process-cell"><span class="tag">${escape(recipe.processName||words(recipe.type))}</span></td><td class="recipe-progression-column">${progressBadge}</td></tr>`;
 }
+function encounterImage(record: { id: string; name: string }) {
+ const portrait = Object.hasOwn(bossPortraits, record.id) ? bossPortraits[record.id] : '';
+ const initials = escape((record.name || record.id).slice(0, 2).toUpperCase());
+ return `<span class="item-art" aria-hidden="true">${portrait
+  ? `<img class="encounter-thumbnail" src="${escape(portrait)}" alt="" loading="lazy" decoding="async" />`
+  : ''}<span class="item-fallback"${portrait ? ' hidden' : ''}>${initials}</span></span>`;
+}
 function render() {
   if(!grid)return;
   const shown=filtered.slice((page-1)*pageSize,page*pageSize);
   if(count)count.textContent=`${filtered.length.toLocaleString()} ${type==='bosses'?'encounters':type} ${filtered.length===records.length?'':'matched'}`;
   if(type==='weapons')grid.innerHTML=shown.map(r=>`<button class="weapon-card" data-detail="${escape(r.id)}" aria-label="View ${escape(r.name)}">${image(r)}<span class="weapon-content"><h3>${escape(r.name)}</h3><span class="mod">${escape(r.modName || r.mod)}</span><span class="tags">${itemTags(r)}</span></span></button>`).join('');
   if(type==='recipes')grid.innerHTML=shown.map(recipeRow).join('');
-  if(type==='bosses')grid.innerHTML=shown.map(r=>`<button class="weapon-card" data-detail="${escape(r.id)}"><span class="item-art"><span class="item-fallback">${escape((r.name||r.id).slice(0,2).toUpperCase())}</span></span><span class="weapon-content"><h3>${escape(r.name)}</h3><span class="mod">${escape(r.modName||words(r.mod))}</span><span class="tags">${r.minimumLevel?`<span class="tag tag-gold">Boss L${escape(r.minimumLevel)}+</span>`:''}<span class="tag">${escape(r.classification||'Boss encounter')}</span></span></span></button>`).join('');
+  if(type==='bosses')grid.innerHTML=shown.map(r=>`<button class="weapon-card" data-detail="${escape(r.id)}">${encounterImage(r)}<span class="weapon-content"><h3>${escape(r.name)}</h3><span class="mod">${escape(r.modName||words(r.mod))}</span><span class="tags">${r.minimumLevel?`<span class="tag tag-gold">Boss L${escape(r.minimumLevel)}+</span>`:''}<span class="tag">${escape(r.classification||'Boss encounter')}</span></span></span></button>`).join('');
   if(!shown.length)grid.innerHTML=type==='recipes'?'<tr><td colspan="4" class="empty-state">No recipes match these filters.</td></tr>':'<div class="empty-state">No entries match these filters. Try a different name, item ID or category.</div>';
   const pages=Math.max(1,Math.ceil(filtered.length/pageSize));
   const pageLabel=container?.querySelector('[data-page-label]');if(pageLabel)pageLabel.textContent=`${page} / ${pages}`;
@@ -223,7 +231,7 @@ function openDetail(id:string,updateHash=true) {
   if(type==='weapons')content=`<dl class="detail-grid"><div><dt>Weapon style</dt><dd>${escape(r.styleName||'Native handling')}</dd></div><div><dt>Moveset provider</dt><dd>${escape(r.provider||'Native')}</dd></div><div><dt>Archetype</dt><dd>${escape(r.archetype||'—')}</dd></div><div><dt>Grip</dt><dd>${escape(r.grip||'—')}</dd></div>${r.styleTier?`<div><dt>Style tier</dt><dd>${escape(r.styleTier)}</dd></div>`:''}${hasTier(r)?`<div><dt>Crafting progression</dt><dd>${escape(tierName(r))}</dd></div>`:''}${r.lootTier!==null&&r.lootTier!==undefined?`<div><dt>Loot tier</dt><dd>${escape(r.lootTier)}</dd></div>`:''}</dl>${r.styleId?`<p class="detail-note">Style ID <code>${escape(r.styleId)}</code></p>`:''}${statRows(r)}<div class="detail-section"><a href="${base}/recipes/?q=${encodeURIComponent(r.id)}" class="button">Find crafting recipes →</a></div>`;
   else if(type==='recipes')content=recipeDetail(r);
   else content=`<dl class="detail-grid"><div><dt>Origin</dt><dd>${escape(r.modName||words(r.mod))}</dd></div>${r.minimumLevel?`<div><dt>Boss level floor</dt><dd>${escape(r.minimumLevel)}</dd></div>`:''}${r.lootTier!==null&&r.lootTier!==undefined?`<div><dt>Loot tier</dt><dd>${escape(r.lootTier)}</dd></div>`:''}</dl><h3>Reward pool</h3><ul class="ingredient-list">${arr(r.rewards).map(i=>`<li>${escape(label(i))||escape(words(i))}</li>`).join('')}</ul><div class="detail-section"><a class="button" href="${base}/loot/">How unidentified rewards work →</a></div>`;
-  const art = type==='weapons'?image(r):type==='recipes'?recipeArtImage(r.output,r.outputKind==='fluid'):'';
+  const art = type==='weapons'?image(r):type==='recipes'?recipeArtImage(r.output,r.outputKind==='fluid'):bossPortraits[r.id]?encounterImage(r):'';
   if(type==='recipes') dialog.classList.add('recipe-dialog');
   body.innerHTML=`<div class="dialog-header">${art}<div class="dialog-title"><p class="eyebrow">${escape(type==='weapons'?(r.modName||r.mod):type==='recipes'?'Recipe':r.modName||'Encounter')}</p><h2 id="record-title">${escape(r.name||words(r.output))}</h2><code>${escape(r.id)}</code></div><button class="icon-button" data-close-detail aria-label="Close details">×</button></div><div class="dialog-body">${content}<div class="detail-section"><button data-copy-id="${escape(r.id)}">Copy ${type==='recipes'?'recipe':'item'} ID</button><span data-copy-status class="subtle" role="status" style="font-size:11px;margin-left:12px"></span></div></div>`;
   if(!dialog.open)dialog.showModal();
