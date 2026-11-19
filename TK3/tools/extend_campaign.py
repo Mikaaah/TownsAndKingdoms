@@ -276,12 +276,7 @@ fluid_recipe=native['aeronautics']['data/aeronautics/recipe/mixing/levitite_blen
 lift=add(9,'native','aeronautics:levitite_blend',['4x aeronautics:end_stone_powder','2x create:zinc_nugget',{'fluid':'minecraft:water','amount':500}],system='addons',section='Advanced lift',name='levitite_blend',json=fluid_recipe,serializer='create:mixing',fluid_output={'fluid':'aeronautics:levitite_blend','amount':500},heated=True)
 m['processing_whitelist'].append({'type':'create:mixing','input':'aeronautics:end_stone_powder','ids':[lift['id']]})
 
-# Explicit retained boss imprinting: repeated production never consumes a boss core.
-for t,base,core,result in [(6,K('network_mechanism'),K('verdant_sigil'),'endrem:magical_eye'),
-                          (7,K('expedition_mechanism'),K('storm_core'),'endrem:cryptic_eye'),
-                          (8,K('containment_mechanism'),K('ember_core'),'endrem:nether_eye'),
-                          (9,K('singularity_mechanism'),K('void_core'),'endrem:corrupted_eye')]:
-    add(t,'deploying',result,[base,core],keep=True,name=result.split(':')[1],section='Reusable boss imprints')
+# The Sovereign recipe retains its boss catalysts.
 add(10,'sequence',K('sovereign_keystone'),[frame_ids[10],K('verdant_sigil'),K('storm_core'),K('ember_core'),K('void_core'),'ars_nouveau:enchanters_sword'],
     name='sovereign_keystone',transition=K('incomplete_sovereign_keystone'),steps=['catalyst']*4+['tool'],keep_steps=[0,1,2,3],tool='ars_nouveau:enchanters_sword',section='The Sovereign project')
 new_items['incomplete_sovereign_keystone']='Incomplete Sovereign Keystone'
@@ -411,7 +406,7 @@ specs={
    ('storage','One warehouse, many items','ae2:cell_component_16k',1,'Larger cells and a Matter Condenser are now available. A singularity still needs the native condenser energy/material requirement.'),
    ('miner','A planned worksite','mekanism:digital_miner',1,'Use deliberate filters and a defined work area. The miner improves mining capacity; it does not replace required boss defeats.'),
    ('shutdown','Prove the shutdown',None,1,'Confirm coolant, waste, redstone shutdown and inventory overflow control all work. Start at a low burn rate and increase only with stable cooling.')],
-9:[('end','The End is earned',None,1,'Chapter VIII and the Ignis trial unlock End entry. End Remastered still requires its native unique-eye portal puzzle; reusable boss imprint recipes provide four deliberate eye routes.'),
+9:[('end','The End is earned',None,1,'Open the End portal by filling its twelve frames with different eyes from the assigned boss encounters.'),
    ('dragon','A kingdom beyond the portal',None,1,'Defeat the Ender Dragon. Gather dragon breath and explore BetterEnd using the native environment.',False,'minecraft:ender_dragon'),
    ('singularity','A controlled singularity','ae2:singularity',1,'Produce this in the native Matter Condenser. Choose overflow resources deliberately instead of deleting scarce production components.'),
    ('mechanism','Singularity Mechanism',K('singularity_mechanism'),4,'Containment Mechanism → Polonium Pellet → AE2 Singularity → Enchanter’s Sword. Use the apparatus-backed sword from the earlier magic workshop.'),

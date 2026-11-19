@@ -1990,7 +1990,7 @@ Follow this chapter’s material and machine path. The previous milestone unlock
 
 **◆ GOAL:** Complete the detected item or boss goal below.
 
-The four authored eye deployments use Inductive Mechanisms with Source Gem, pearl, Blaze Rod or crying obsidian. Other unique eyes keep native exploration sources. End Remastered still needs twelve different valid eyes.
+Defeat the Last of Deepslate to obtain the Magical Eye for this quest. Collect twelve different eyes from the assigned boss encounters to open the End portal.
 
 **✦ TIP:** Keep a list of distinct portal eyes and reserve the first Dragon Core for reusable production.
 
@@ -3739,7 +3739,7 @@ Chapter V · unique eyes, the Dragon and renewable End materials · **6 QUESTS**
 
 **◆ GOAL:** Understand this part of your adventure.
 
-The End opens after Chapter IV. End Remastered still requires twelve different valid eyes. Four eyes have authored Inductive Mechanism deployment routes; other unique eyes retain their native discovery sources.
+The End portal opens when you place twelve different End Remastered eyes in its frames. Each of the sixteen assigned boss encounters drops its own eye.
 
 **✦ TIP:** Keep a list of distinct eye types instead of collecting twelve copies of the same one.
 
@@ -3749,7 +3749,7 @@ The End opens after Chapter IV. End Remastered still requires twelve different v
 
 **◆ GOAL:** Complete the project described below.
 
-Inspect the four managed eye deployments in Chapter V and gather the remaining valid types through exploration. Check the portal’s native acceptance rules before committing your collection.
+Choose twelve of the sixteen boss encounters and collect their eyes. Bring one of each eye type to the Stronghold and place them in its portal frames.
 
 **✦ TIP:** Build several exploration goals around eye types you are still missing.
 

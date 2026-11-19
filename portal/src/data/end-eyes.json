@@ -13,25 +13,6 @@
     "activation": "Sirok is present at the nest and begins the encounter when it acquires a player target.",
     "preparation": "Prepare for a mobile encounter with poison attacks and room to recover between charges.",
     "summonItems": [],
-    "alternatives": [
-      {
-        "name": "Desert Pyramid chests",
-        "kind": "Treasure",
-        "detail": "15% chance per loot roll.",
-        "chance": 0.15,
-        "lootTable": "minecraft:chests/desert_pyramid",
-        "injectedTable": "endrem:minecraft/chests/desert_pyramid"
-      },
-      {
-        "name": "Monster Room chests",
-        "kind": "Treasure",
-        "detail": "about 2.02% chance per loot roll.",
-        "chance": 0.020202020202020204,
-        "lootTable": "minecraft:chests/simple_dungeon",
-        "injectedTable": "endrem:minecraft/chests/simple_dungeon"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "block_factorys_bosses:sandworm_gauntlet",
@@ -70,17 +51,6 @@
     "summonItems": [
       "cataclysm:burning_ashes"
     ],
-    "alternatives": [
-      {
-        "name": "Nether Fortress chests",
-        "kind": "Treasure",
-        "detail": "30% chance per loot roll.",
-        "chance": 0.3,
-        "lootTable": "minecraft:chests/nether_bridge",
-        "injectedTable": "endrem:minecraft/chests/nether_bridge"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "cataclysm:ignitium_ingot",
@@ -142,17 +112,6 @@
     "activation": "Find the Snow Queen inside the palace. Use the Twilight Forest progression and Magic Map to plan the expedition.",
     "preparation": "Prepare for the palace journey as well as the boss encounter; the eye is awarded on the Snow Queen’s defeat.",
     "summonItems": [],
-    "alternatives": [
-      {
-        "name": "Igloo basement chests",
-        "kind": "Treasure",
-        "detail": "70% chance per loot roll.",
-        "chance": 0.7,
-        "lootTable": "minecraft:chests/igloo_chest",
-        "injectedTable": "endrem:minecraft/chests/igloo_chest"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "twilightforest:triple_bow",
@@ -216,17 +175,6 @@
     "activation": "Find the Colossus in the generated ruins rather than crafting a summoning offering.",
     "preparation": "Explore the temple with your combat equipment ready; this encounter also rewards a Nature Crystal.",
     "summonItems": [],
-    "alternatives": [
-      {
-        "name": "Jungle Temple chests",
-        "kind": "Treasure",
-        "detail": "40% chance per loot roll.",
-        "chance": 0.4,
-        "lootTable": "minecraft:chests/jungle_temple",
-        "injectedTable": "endrem:minecraft/chests/jungle_temple"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "legendary_monsters:nature_crystal",
@@ -264,25 +212,6 @@
     "summonItems": [
       "minecraft:nether_star"
     ],
-    "alternatives": [
-      {
-        "name": "Buried Treasure chests",
-        "kind": "Treasure",
-        "detail": "30% chance per loot roll.",
-        "chance": 0.3,
-        "lootTable": "minecraft:chests/buried_treasure",
-        "injectedTable": "endrem:minecraft/chests/buried_treasure"
-      },
-      {
-        "name": "Shipwreck treasure chests",
-        "kind": "Treasure",
-        "detail": "5% chance per loot roll.",
-        "chance": 0.05,
-        "lootTable": "minecraft:chests/shipwreck_treasure",
-        "injectedTable": "endrem:minecraft/chests/shipwreck_treasure"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "cataclysm:witherite_block",
@@ -321,17 +250,6 @@
     "summonItems": [
       "archaion:echo_charge"
     ],
-    "alternatives": [
-      {
-        "name": "Evokers",
-        "kind": "Mob drop",
-        "detail": "5% chance per loot roll.",
-        "chance": 0.05,
-        "lootTable": "minecraft:entities/evoker",
-        "injectedTable": "endrem:minecraft/entities/evoker"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "archaion:echo_mace_upgrade_smithing_template",
@@ -378,25 +296,6 @@
     "summonItems": [
       "alexscaves:ominous_catalyst"
     ],
-    "alternatives": [
-      {
-        "name": "Abandoned Mineshaft chests",
-        "kind": "Treasure",
-        "detail": "20% chance per loot roll.",
-        "chance": 0.2,
-        "lootTable": "minecraft:chests/abandoned_mineshaft",
-        "injectedTable": "endrem:minecraft/chests/abandoned_mineshaft"
-      },
-      {
-        "name": "Monster Room chests",
-        "kind": "Treasure",
-        "detail": "about 2.02% chance per loot roll.",
-        "chance": 0.020202020202020204,
-        "lootTable": "minecraft:chests/simple_dungeon",
-        "injectedTable": "endrem:minecraft/chests/simple_dungeon"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "alexscaves:tectonic_shard",
@@ -433,17 +332,6 @@
     "activation": "Find the Ferrous Wroughtnaut in its chamber.",
     "preparation": "Prepare before approaching the armored guardian; its native player-kill rewards include the Axe of a Thousand Metals and Wrought Helm.",
     "summonItems": [],
-    "alternatives": [
-      {
-        "name": "Pillager Outpost chests",
-        "kind": "Treasure",
-        "detail": "30% chance per loot roll.",
-        "chance": 0.3,
-        "lootTable": "minecraft:chests/pillager_outpost",
-        "injectedTable": "endrem:minecraft/chests/pillager_outpost"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "mowziesmobs:wrought_helmet",
@@ -492,8 +380,6 @@
       "minecraft:wither_skeleton_skull",
       "minecraft:soul_sand"
     ],
-    "alternatives": [],
-    "notes": [],
     "notableRewards": [
       {
         "id": "minecraft:nether_star",
@@ -529,17 +415,6 @@
     "summonItems": [
       "aether:victory_medal"
     ],
-    "alternatives": [
-      {
-        "name": "Elder Guardians",
-        "kind": "Mob drop",
-        "detail": "35% chance per loot roll.",
-        "chance": 0.35,
-        "lootTable": "minecraft:entities/elder_guardian",
-        "injectedTable": "endrem:minecraft/entities/elder_guardian"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "aether:silver_dungeon_key",
@@ -641,10 +516,6 @@
       "ars_nouveau:wilden_wing",
       "ars_nouveau:wilden_spike"
     ],
-    "alternatives": [],
-    "notes": [
-      "The original crafting recipe is unavailable; use the boss route."
-    ],
     "notableRewards": [
       {
         "id": "ars_nouveau:wilden_tribute",
@@ -675,17 +546,6 @@
     "activation": "Interact with a ready Cursed Tombstone. Its powered state allows activation; an unready tombstone must finish its cooldown.",
     "preparation": "The tombstone summons Maledictus after activation and is destroyed by the successful summon.",
     "summonItems": [],
-    "alternatives": [
-      {
-        "name": "Bastion treasure-room chests",
-        "kind": "Treasure",
-        "detail": "70% chance per loot roll.",
-        "chance": 0.7,
-        "lootTable": "minecraft:chests/bastion_treasure",
-        "injectedTable": "endrem:minecraft/chests/bastion_treasure"
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "cataclysm:cursium_ingot",
@@ -754,43 +614,6 @@
     "summonItems": [
       "cataclysm:abyssal_sacrifice"
     ],
-    "alternatives": [
-      {
-        "name": "Exotic Eye crafting",
-        "kind": "Crafting",
-        "detail": "Craft with one Eye of Ender, two Conduits, two Glow Ink Sacs, and one each of Bubble, Fire, Horn and Tube Coral. Use live coral items.",
-        "recipeId": "endrem:exotic_eye",
-        "pattern": [
-          "BCF",
-          "GEG",
-          "HCT"
-        ],
-        "key": {
-          "F": {
-            "item": "minecraft:fire_coral"
-          },
-          "T": {
-            "item": "minecraft:tube_coral"
-          },
-          "H": {
-            "item": "minecraft:horn_coral"
-          },
-          "B": {
-            "item": "minecraft:bubble_coral"
-          },
-          "E": {
-            "item": "minecraft:ender_eye"
-          },
-          "G": {
-            "item": "minecraft:glow_ink_sac"
-          },
-          "C": {
-            "item": "minecraft:conduit"
-          }
-        }
-      }
-    ],
-    "notes": [],
     "notableRewards": [
       {
         "id": "cataclysm:tidal_claws",
@@ -839,10 +662,6 @@
     "summonItems": [
       "minecraft:brush",
       "cataclysm:necklace_of_the_desert"
-    ],
-    "alternatives": [],
-    "notes": [
-      "Clerics do not sell this eye."
     ],
     "notableRewards": [
       {
@@ -905,10 +724,6 @@
     "summonItems": [
       "block_factorys_bosses:underworld_arena_key"
     ],
-    "alternatives": [],
-    "notes": [
-      "The original crafting recipe is unavailable; use the boss route."
-    ],
     "notableRewards": [
       {
         "id": "block_factorys_bosses:knight_sword",
@@ -966,10 +781,6 @@
     "activation": "Interact with the sleeping Possessed Paladin in the Collapsed Kingdom to begin its awakening.",
     "preparation": "Prepare for the named arena encounter before approaching the Paladin. Its native rewards include a Corrupted Soul and Soul Greatsword.",
     "summonItems": [],
-    "alternatives": [],
-    "notes": [
-      "Enchanting does not award this eye."
-    ],
     "notableRewards": [
       {
         "id": "legendary_monsters:corrupted_soul",
