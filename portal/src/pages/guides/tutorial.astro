@@ -1,0 +1,216 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import QuestIcon from '../../components/QuestIcon.astro';
+import { href } from '../../lib/data';
+
+const topics = [
+  { id: 'questbook', title: 'Quest book' },
+  { id: 'recipes', title: 'Recipes & workshop' },
+  { id: 'character', title: 'Character & skills' },
+  { id: 'combat', title: 'Combat & movement' },
+  { id: 'appraisal', title: 'Loot & appraisal' },
+  { id: 'claiming', title: 'Claims & travel' },
+  { id: 'adventure', title: 'Adventure & magic' },
+];
+const spruce = href('media/textures/spruce-planks.png');
+---
+<Layout title="In-game tutorial" description="Use the quest book, find pack recipes, build your character and learn the tools you will use in Towns & Kingdoms.">
+  <p class="eyebrow"><a href={href('guides/')}>Practical guides</a> / Getting started</p>
+  <h1>In-game tutorial</h1>
+  <p class="intro">Find your first quest, learn how the pack handles recipes and equipment, and set up a base you can return to.</p>
+
+  <nav class="tutorial-jumps" aria-label="Tutorial topics">
+    {topics.map(topic => <a href={'#' + topic.id}>{topic.title}</a>)}
+  </nav>
+
+  <div class="tutorial-topics" style={{ '--tutorial-spruce': `url("${spruce}")` }}>
+    <section class="tutorial-topic" id="questbook" aria-labelledby="questbook-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="bookopen" size={28} />
+        <h2 id="questbook-title">Find your way around the quest book</h2>
+      </header>
+      <div class="tutorial-body">
+        <ol>
+          <li><strong>Open the Quest Book.</strong> Open your inventory and select the Quest Book icon in the upper-left corner. Search for <strong>FTB Quests</strong> in <strong>Options → Controls → Key Binds</strong> to set a shortcut.</li>
+          <li><strong>Start The Story.</strong> In <strong>Town Square</strong>, open <strong>The Story</strong> and complete <strong>A New Beginning</strong>. Then open Chapter I under <strong>Forging Ahead</strong>.</li>
+          <li><strong>Read the objective and claim the reward.</strong> Item goals usually check what you have in your inventory. A checkmark goal asks you to confirm a step yourself. Open finished quests and claim their rewards manually.</li>
+          <li><strong>Return to The Story between chapters.</strong> Finish <strong>Chapter Completed</strong> at the end of a chapter, then complete its milestone in <strong>The Story</strong> and claim the reward. Open the next chapter from <strong>Forging Ahead</strong>.</li>
+        </ol>
+        <figure class="tutorial-figure">
+          <img src={href('media/tutorial/quest-book-orientation.webp')} width="840" height="226" loading="lazy" decoding="async" alt="Open the Quest Book and choose Story for milestones, Chapters for the workshop, or Market for trading." />
+        </figure>
+        <dl class="tutorial-boards">
+          <div><dt>The Story</dt><dd>Start here and claim your chapter milestones.</dd></div>
+          <div><dt>Forging Ahead</dt><dd>Follow the workshop quests and their prerequisites. <a href={href('chapters/')}>Open the chapter questlines</a>.</dd></div>
+          <div><dt>Market</dt><dd>Claim a free Trading Hub to list a shop. <a href={href('guides/player-shops/#shop-teleporter')}>Set up a player shop</a>.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="tutorial-topic" id="recipes" aria-labelledby="recipes-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="hammer" size={28} />
+        <h2 id="recipes-title">Look up recipes and build your first workshop</h2>
+      </header>
+      <div class="tutorial-body">
+        <p>Search for an item in JEI and hover over it. With the default bindings, press <kbd>R</kbd> to see how to make it or <kbd>U</kbd> to see what it goes into. You can change <strong>Show Recipes</strong> and <strong>Show Uses</strong> under <strong>Just Enough Items</strong> in Key Binds.</p>
+        <figure class="tutorial-figure">
+          <img src={href('media/tutorial/jei-item-lookup.webp')} width="840" height="226" loading="lazy" decoding="async" alt="With the default JEI controls, hover over Andesite Alloy and press R to see recipes or U to see uses." />
+        </figure>
+        <ol>
+          <li><strong>Start with Chapter I.</strong> Gather clay, andesite, wood and iron. Follow the opening quests to craft your first Makeshift Mechanism and Andesite Machine by hand.</li>
+          <li><strong>Work backward from the output.</strong> Open each ingredient’s recipe, and check the process and machine before gathering parts. For sequenced assembly, follow the operations and loop count in order.</li>
+          <li><strong>See the equipment in action.</strong> Hover over a Create item and hold its Ponder key to open the in-game demonstration. Find the same steps in the <a href={href('ponder/')}>Ponder item guides</a> or browse the <a href={href('recipes/')}>recipe reference</a>.</li>
+        </ol>
+        <p><strong>Mine a batch with Ultimine.</strong> Hold the bound FTB Ultimine key while mining. Check the highlighted blocks first, then break the target to harvest a batch. The pack caps each batch at 64 eligible blocks, and using Ultimine drains hunger.</p>
+      </div>
+    </section>
+
+    <section class="tutorial-topic" id="character" aria-labelledby="character-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="skill_point" size={28} />
+        <h2 id="character-title">Build your character</h2>
+      </header>
+      <div class="tutorial-body">
+        <p>Open the <strong>Character</strong> screen from your inventory or press <kbd>I</kbd> by default. Look for <strong>Open Character</strong> in Key Binds to change the shortcut. The screen brings together your level, Origin and skills.</p>
+        <ul>
+          <li><strong>Gain character experience.</strong> Fighting, gathering, exploring and quest rewards all support character progression. Read a quest’s reward list before counting on it for experience.</li>
+          <li><strong>Choose an Origin.</strong> Read each Origin’s starting bonuses before you confirm your choice. The <a href={href('mechanics/#origins')}>Origins reference</a> shows the full options.</li>
+          <li><strong>Spend skill points.</strong> Start at a root and follow connected nodes. You can build across the six professions. Some advanced skills require a minimum point investment before you can buy them.</li>
+        </ul>
+        <p>Try a route in the <a href={href('skills/')}>skilltree planner</a> and check <a href={href('mechanics/#titles')}>titles</a> for other challenges and benefits.</p>
+      </div>
+    </section>
+
+    <section class="tutorial-topic" id="combat" aria-labelledby="combat-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="pickaxe" size={28} />
+        <h2 id="combat-title">Learn your attacks and movement</h2>
+      </header>
+      <div class="tutorial-body">
+        <ol>
+          <li><strong>Check your weapon style.</strong> Open the <a href={href('weapons/')}>weapon registry</a> to see its grip and moveset. Try the regular, sprinting and aerial attacks to learn their reach.</li>
+          <li><strong>Practice your movement.</strong> Keep enough room to reposition between attacks. Check your Epic Fight bindings for its combat and dodge actions. If you equip a dodge skill, try it on safe terrain first.</li>
+          <li><strong>Get familiar with automatic switching.</strong> Combat Punchy can switch you into Epic Fight when you land an eligible melee attack or take a hit. Switching to a tool can return you to normal movement and mining. The default combat timeout is seven seconds.</li>
+        </ol>
+        <p>Equip combat techniques in Epic Fight’s <strong>Skill Editor</strong>. Spend profession points in the <a href="#character">TNK character tree</a>.</p>
+      </div>
+    </section>
+
+    <section class="tutorial-topic" id="appraisal" aria-labelledby="appraisal-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="satchel" size={28} />
+        <h2 id="appraisal-title">Open loot and identify equipment</h2>
+      </header>
+      <div class="tutorial-body">
+        <ul>
+          <li><strong>Check your own loot.</strong> Lootr containers give each player their own drops. Everyone in a party should open the Lootr container themselves.</li>
+          <li><strong>Appraise unidentified gear.</strong> Bring unidentified equipment to the Identifier and check the experience cost. Later, use the Mechanical Identifier and supported XP fluid for automation.</li>
+          <li><strong>Compare the result.</strong> Check the item’s stats, rarity and affixes against your build. Salvage gear you are done with to earn fragments you can spend at an Identifier.</li>
+        </ul>
+        <figure class="tutorial-figure">
+          <img src={href('media/loot/mechanical-identifier.webp?style=minecraft')} width="850" height="338" loading="lazy" decoding="async" alt="The Mechanical Identifier takes unidentified items from above and liquid experience from the side, then outputs equipment below." />
+          <figcaption>See the <a href={href('loot/#automate-identification')}>Mechanical Identifier setup</a> and the full appraisal rules.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="tutorial-topic" id="claiming" aria-labelledby="claiming-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="map" size={28} />
+        <h2 id="claiming-title">Claim a base and make a return route</h2>
+      </header>
+      <div class="tutorial-body">
+        <ol>
+          <li><strong>Open the FTB Chunks map.</strong> Use the blue map icon in your inventory. Click a chunk to claim it or right-click one of your claims to unclaim it.</li>
+          <li><strong>Check team access.</strong> If you build with friends, check your team and its access settings before sharing machines or storage. The pack excludes the End and Twilight Forest from land claims and disables force-loading.</li>
+          <li><strong>Activate useful Waystones.</strong> Interact with a Waystone to add it as a destination. Visit another Waystone to return to a saved stop. The pack disables the XP cost by default.</li>
+        </ol>
+        <p>The <a href={href('servers/#shared-worlds')}>shared worlds guide</a> covers teams, claims and server travel.</p>
+      </div>
+    </section>
+
+    <section class="tutorial-topic" id="adventure" aria-labelledby="adventure-title">
+      <header class="tutorial-heading">
+        <QuestIcon name="potionblue" size={28} />
+        <h2 id="adventure-title">Go exploring and learn magic</h2>
+      </header>
+      <div class="tutorial-body">
+        <p>Take on adventure quests alongside workshop progression. Pack dimensions use their own entry rules. Check <a href={href('bosses/')}>Boss Encounters</a> for summoning conditions and which bosses drop the eyes you need for the End.</p>
+        <ul>
+          <li><strong>Ars Nouveau.</strong> Learn glyphs in a spellbook and combine them to make spells. Build Source storage when you start powering Ars machines or rituals.</li>
+          <li><strong>Iron’s Spells ’n Spellbooks.</strong> Find or craft a spellbook, loot a spell scroll and use the Inscription Table to add it to your book. Craft more scrolls at the Scroll Forge. Check a spell’s mana cost and casting requirements before bringing it into a fight.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .tutorial-jumps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+    margin: 0 0 24px;
+  }
+
+  .tutorial-jumps a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 15px;
+    font-weight: 550;
+  }
+
+  .tutorial-topics { display: grid; gap: 20px; }
+
+  .tutorial-topic {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .tutorial-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 60px;
+    padding: 12px 18px;
+    background: linear-gradient(#211813c9, #211813df), var(--tutorial-spruce) 0 0 / 48px 48px repeat;
+    color: #fff4e8;
+  }
+
+  .tutorial-heading h2 { margin: 0; font-size: clamp(18px, 2.1vw, 23px); line-height: 1.2; text-wrap: initial; }
+  .tutorial-body { padding: 18px; color: var(--muted); }
+  .tutorial-body > *:last-child { margin-bottom: 0; }
+  .tutorial-body strong { color: var(--text); font-weight: 620; }
+  .tutorial-body ol, .tutorial-body ul { margin: 0 0 16px; }
+  .tutorial-body li { padding-inline-start: 3px; }
+
+  .tutorial-boards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 18px 0 0;
+  }
+
+  .tutorial-boards > div {
+    padding: 12px;
+    border: 1px solid var(--border-soft);
+    border-radius: 5px;
+    background: var(--bg);
+  }
+
+  .tutorial-boards dt { color: var(--text); font-weight: 650; }
+  .tutorial-boards dd { margin: 3px 0 0; font-size: 14px; line-height: 1.5; }
+
+  .tutorial-figure { margin: 16px 0; }
+  .tutorial-figure img { display: block; max-width: 100%; height: auto; border-radius: 5px; }
+  .tutorial-figure figcaption { margin-top: 6px; color: var(--subtle); font-size: 14px; }
+
+  @media (max-width: 635px) {
+    .tutorial-boards { grid-template-columns: 1fr; }
+    .tutorial-body, .tutorial-heading { padding-inline: 14px; }
+  }
+</style>
