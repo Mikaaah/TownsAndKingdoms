@@ -3,9 +3,17 @@
   "description": "Open a gateway to the Aether from the Overworld with a glowstone frame and a bucket of water.",
   "icon": "candle",
   "materials": [
-    "10 Glowstone blocks for a frame with open corners, or 14 for a filled outline",
-    "1 Water Bucket",
-    "A flat, accessible spot in the Overworld"
+    {
+      "label": "Glowstone",
+      "item": "minecraft:glowstone",
+      "count": 10,
+      "description": "Add 4 more blocks to fill the optional corners."
+    },
+    {
+      "label": "Water Bucket",
+      "item": "minecraft:water_bucket",
+      "count": 1
+    }
   ],
   "steps": [
     {

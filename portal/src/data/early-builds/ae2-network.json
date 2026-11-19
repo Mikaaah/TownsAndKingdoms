@@ -3,10 +3,12 @@
   "description": "Build a basic ME system in Chapter V, then diagnose offline devices, missing channels and stuck autocrafting.",
   "icon": "rotation_mechanism",
   "materials": [
-    "A powered Energy Acceptor or ME Controller supplied with FE",
-    "ME Glass Cable and an ME Terminal",
-    "ME Drive with a compatible item storage cell",
-    "ME Smart Cable to read channel usage"
+    { "label": "Energy Acceptor", "count": 1, "item": "ae2:energy_acceptor", "description": "Supply Forge Energy here. A powered ME Controller can also power the network." },
+    { "label": "ME Glass Cable", "count": "1+", "item": "ae2:fluix_glass_cable", "description": "Use enough cable to join the Acceptor, Drive and Terminal." },
+    { "label": "ME Terminal", "count": 1, "item": "ae2:terminal" },
+    { "label": "ME Drive", "count": 1, "item": "ae2:drive" },
+    { "label": "1k ME Item Storage Cell", "count": 1, "item": "ae2:item_storage_cell_1k", "description": "Any compatible item storage cell works." },
+    { "label": "ME Smart Cable", "count": 1, "item": "ae2:fluix_smart_cable", "description": "Optional. Swap in one matching segment to read channel usage." }
   ],
   "steps": [
     {

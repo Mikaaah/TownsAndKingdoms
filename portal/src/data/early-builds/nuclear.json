@@ -1,0 +1,39 @@
+{
+  "title": "Build a Create Nuclear reactor",
+  "description": "Build and start the smallest Create Nuclear reactor. Use a layer plan, connect coolant and rods, and bring the generated rotation into your workshop.",
+  "icon": "rotation_mechanism",
+  "keywords": "create nuclear reactor t1 5x5 blueprint fuel coolant graphite uranium radiation meltdown rotation stress units",
+  "materials": [
+    { "label": "Reactor Casing", "item": "createnuclear:reactor_casing", "count": 106, "description": "The plan has 110 casing positions before the four required ports replace casing blocks. Craft extra casing for the component recipes." },
+    { "label": "Reactor Frame", "item": "createnuclear:reactor_frame", "count": 19 },
+    { "label": "Reactor Cooler", "item": "createnuclear:reactor_cooler", "count": 40 },
+    { "label": "Reactor Core", "item": "createnuclear:reactor_core", "count": 5 },
+    { "label": "Reactor Controller", "item": "createnuclear:reactor_controller", "count": 1 },
+    { "label": "Reactor Rod Input", "item": "createnuclear:reactor_rod_input", "count": 2, "description": "Use one port for fuel rods and one for Graphite Rods." },
+    { "label": "Reactor Fluid Input", "item": "createnuclear:reactor_fluid_input", "count": 1 },
+    { "label": "Reactor Output", "item": "createnuclear:reactor_output", "count": 1 },
+    { "label": "Reactor Blueprint", "item": "createnuclear:reactor_blueprint_item", "count": 1 },
+    { "label": "Uranium Rods", "item": "createnuclear:uranium_rod", "description": "Supply the fuel slots you assign in the Blueprint." },
+    { "label": "Graphite Rods", "item": "createnuclear:graphite_rod", "description": "Supply the cooling slots you assign in the Blueprint." },
+    { "label": "Water supply", "item": "minecraft:water_bucket", "description": "Connect a steady supply with Create Fluid Pipes and a powered Mechanical Pump." },
+    { "label": "Reactor Alarm", "item": "createnuclear:reactor_alarm", "description": "Optional. Install it in an additional non-edge casing position to hear an instability warning." }
+  ],
+  "steps": [
+    { "id": "gather-parts", "title": "Prepare the reactor components", "text": "Make the shell, ports and rods with the Industrial-tier recipes. The Reactor Core and Reactor Controller use the later Chapter IX recipes. Check JEI for this pack's Mechanical Crafter patterns. The Reactor Output supplies Create rotation and the Alex’s Caves Nuclear Furnace is a separate machine." },
+    { "id": "reactor-floor-plan", "title": "Build the 5 × 5 shell seven blocks high", "text": "Lay solid Casing on floors 1 and 7. On floors 2 through 6, put a Core in the center, surround it with eight Coolers and put a Frame at the middle of each wall. Fill the remaining wall cells with Casing. On floor 4, replace the middle Frame on your chosen front wall with the Reactor Controller, facing out.", "figure": { "src": "media/early-builds/nuclear-reactor-floors.webp", "width": 880, "height": 374, "alt": "Three five-by-five top-down reactor grids show solid Casing floors 1 and 7, the repeating Core and Cooler layout on floors 2, 3, 5 and 6, and a Controller in the middle of the front wall on floor 4.", "caption": "Tier 1 layout from Create Nuclear’s Ponder. The bottom edge of each grid is the front. Install the ports in place of non-edge exterior Casing." } },
+    { "id": "reactor-ports", "title": "Add two rod inputs, coolant and rotation output", "text": "Replace four non-edge exterior Casing blocks with two Reactor Rod Inputs, one Reactor Fluid Input and one Reactor Output. The inside squares of the roof are easy to reach. Feed Uranium Rods and Graphite Rods through separate inputs, pump water into the fluid input and connect a Shaft to the output." },
+    { "id": "reactor-blueprint", "title": "Load a balanced Blueprint and start", "text": "Right-click with the Reactor Blueprint to edit the rod layout. Start with a modest number of fuel positions and assign Graphite Rods for cooling. With coolant flowing and the required rods available, right-click the assembled Controller with the completed Blueprint. Check heat at the Controller and test the output under a light load before connecting more machinery." }
+  ],
+  "tips": [
+    { "id": "nuclear-not-assembled", "title": "The Controller won’t assemble", "text": "Check the five inner layers one at a time. The Controller replaces the center Frame on floor 4, and ports replace only exterior Casing away from edges. Hover a Reactor Controller in JEI and hold W for Reactor T1 and the I/O placement scene." },
+    { "id": "nuclear-no-output", "title": "The reactor assembles but gives no rotation", "text": "Verify the Blueprint is installed, both kinds of rod are available and coolant reaches the Reactor Fluid Input. Check rotation directly off a Reactor Output before adding the rest of your network." },
+    { "id": "nuclear-heat-rising", "title": "Heat is climbing or the alarm sounds", "text": "Check the coolant flow and Graphite supply immediately. Reduce fuel positions in the Blueprint before another run. Neighboring Uranium Rods increase heat. Anti Radiation armor is available through the pack’s Industrial-tier recipes." }
+  ],
+  "links": [
+    { "label": "Chapter IX · Radiant & Shadow", "path": "chapters/#chapter-09" },
+    { "label": "Reactor Controller recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fcreatenuclear%2Freactor_controller" },
+    { "label": "Reactor Core recipe", "path": "recipes/#recipe=tnk%3Amachines%2Ftier_08%2Fnative_upgrade%2Fcreatenuclear%2Freactor_core%2F0" },
+    { "label": "Graphite Rod recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fcreatenuclear%2Felectrode_control_rod" },
+    { "label": "Create Nuclear’s reactor reference", "path": "https://wiki.createnuclear.net/wiki/reactor" }
+  ]
+}

@@ -4,10 +4,16 @@
   "description": "Build a renewable source of cobblestone for your workshop. Mine it by hand first, then add a Mechanical Drill or switch the output to Andesite.",
   "icon": "pickaxe",
   "materials": [
-    "One Water Bucket and one Lava Bucket",
-    "Nonflammable building blocks and a pickaxe",
-    "For automation, a Mechanical Drill, rotational power, a Create Chute and a chest",
-    "For Andesite, one Andesite block to use as the catalyst"
+    { "label": "Water Bucket", "count": 1, "item": "minecraft:water_bucket" },
+    { "label": "Lava Bucket", "count": 1, "item": "minecraft:lava_bucket" },
+    { "label": "Stone", "count": "As needed", "item": "minecraft:stone", "description": "Use nonflammable blocks for the channel floor and walls." },
+    { "label": "Pickaxe", "count": 1, "item": "minecraft:iron_pickaxe", "description": "Any pickaxe works for mining cobblestone by hand." },
+    { "label": "Mechanical Drill", "count": 1, "item": "create:mechanical_drill", "description": "For automatic mining." },
+    { "label": "Shaft", "count": "1+", "item": "create:shaft", "description": "For automation. Run rotation to the back of the drill." },
+    { "label": "Water Wheel", "count": 1, "item": "create:water_wheel", "description": "Optional. Use it to power the drill if you have no nearby rotation." },
+    { "label": "Chute", "count": 1, "item": "create:chute", "description": "For automatic pickup or the Andesite upgrade." },
+    { "label": "Chest", "count": 1, "item": "minecraft:chest", "description": "For automatic pickup. Place it beneath the chute." },
+    { "label": "Andesite", "count": 1, "item": "minecraft:andesite", "description": "Optional catalyst. Place it directly beneath the lava source to generate Andesite." }
   ],
   "steps": [
     {

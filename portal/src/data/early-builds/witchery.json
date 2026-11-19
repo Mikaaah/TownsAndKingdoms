@@ -1,0 +1,99 @@
+{
+  "title": "Set up a Witchery altar and circle",
+  "description": "Build a living Witchery altar, lay a chalk circle, and perform the Rite of Daytime in Just Another Witchery Remake.",
+  "icon": "herb",
+  "keywords": [
+    "witchery",
+    "ritual",
+    "deepslate altar",
+    "golden chalk",
+    "daytime",
+    "magic"
+  ],
+  "materials": [
+    {
+      "label": "Witchery Guidebook",
+      "item": "witchery:guidebook",
+      "count": 1
+    },
+    {
+      "label": "Deepslate Altar Block",
+      "item": "witchery:deepslate_altar_block",
+      "count": 6
+    },
+    {
+      "label": "Ritual Chalk",
+      "item": "witchery:ritual_chalk",
+      "description": "Draws the 16 marks around the outside of the circle."
+    },
+    {
+      "label": "Golden Ritual Chalk",
+      "item": "witchery:golden_ritual_chalk",
+      "count": 1
+    },
+    {
+      "label": "Clock",
+      "item": "minecraft:clock",
+      "count": 1
+    },
+    {
+      "label": "Glowstone Dust",
+      "item": "minecraft:glowstone_dust",
+      "count": 1
+    }
+  ],
+  "steps": [
+    {
+      "id": "guidebook",
+      "title": "Open the native Guidebook",
+      "text": "Gather a Belladonna Flower. Use a Book at the center of the crafting grid, the flower above it, coal or charcoal below it, an Ink Sac left of it, and a Feather right of it. Follow the book’s fume and chalk entries to make the reagents you see in JEI."
+    },
+    {
+      "id": "altar",
+      "title": "Build and charge the altar",
+      "text": "Lay six Deepslate Altar Blocks in a flat three-by-two rectangle. Each craft makes three blocks. For the required fumes, run Birch or Cherry Saplings through a Witch’s Oven with empty Witchery Jars for Breath of the Goddess, and Oak or Dark Oak Saplings for Exhale of the Horned One. Surround the finished altar with different living plants and use the power upgrades in the Guidebook. Read the altar’s available power and wait until it reaches 3,000 for the rite."
+    },
+    {
+      "id": "circle",
+      "title": "Mark out a seven-by-seven circle",
+      "text": "Pick a level patch near the altar. Draw three centered white Ritual Chalk marks on each outer edge. Mark the four diagonal corners of the inner five-by-five square with the same chalk. Put one Golden Ritual Chalk mark at the center. Leave the space inside the circle clear for offerings.",
+      "figure": {
+        "src": "media/early-builds/witchery-daytime.webp",
+        "width": 880,
+        "height": 424,
+        "alt": "Top-down Witchery setup. Six Deepslate Altar Blocks form a three-by-two rectangle next to the seven-by-seven ring. Sixteen regular chalk marks form the ring, with a golden mark alone at its center."
+      }
+    },
+    {
+      "id": "daytime",
+      "title": "Perform the Rite of Daytime",
+      "text": "Drop one Clock and one Glowstone Dust inside the circle. With at least 3,000 altar power available, use the Golden Ritual Chalk mark at the center. The rite consumes the two offerings and moves the world to the next day."
+    }
+  ],
+  "tips": [
+    {
+      "id": "golden-chalk",
+      "title": "Make the golden center",
+      "text": "Golden Ritual Chalk uses the Witchery Cauldron and 500 nearby altar power. Add Mandrake Root, a Gold Nugget, then Ritual Chalk in that order. Use the cauldron entry in the Guidebook to prepare the workstation."
+    },
+    {
+      "id": "circle-will-not-start",
+      "title": "The circle does not start",
+      "text": "Check that the 16 white marks and golden center share the same floor level. Check the altar’s available power and put both offerings down as items inside the ring."
+    }
+  ],
+  "links": [
+    {
+      "label": "Witchery altar Ponder",
+      "path": "ponder/?scene=witchery_altar"
+    },
+    {
+      "label": "Rite of Daytime Ponder",
+      "path": "ponder/?scene=witchery_circle"
+    },
+    {
+      "label": "Just Another Witchery Remake",
+      "path": "https://www.curseforge.com/minecraft/mc-mods/just-another-witchery-remake"
+    }
+  ]
+}

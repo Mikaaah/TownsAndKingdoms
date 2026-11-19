@@ -3,11 +3,19 @@
   "description": "Use a Water Wheel to swing a Mechanical Saw through your trees and collect the drops in a moving chest. Start with one oak and replant by hand.",
   "icon": "herb",
   "materials": [
-    "Water Wheel, flowing water and Shafts",
-    "Vertical Gearbox or Cogwheels to turn the drive upward",
-    "Mechanical Bearing and Mechanical Saw",
-    "Solid blocks for the arm, Super Glue and a Chest",
-    "Dirt and Oak Saplings"
+    { "label": "Water Wheel", "count": 1, "item": "create:water_wheel" },
+    { "label": "Water Bucket", "count": 1, "item": "minecraft:water_bucket", "description": "For the flow that drives the wheel." },
+    { "label": "Shaft", "count": "As needed", "item": "create:shaft" },
+    { "label": "Vertical Gearbox", "count": 1, "item": "create:vertical_gearbox", "description": "Turn the drive upward. A cogwheel setup also works." },
+    { "label": "Mechanical Bearing", "count": 1, "item": "create:mechanical_bearing" },
+    { "label": "Mechanical Saw", "count": 1, "item": "create:mechanical_saw" },
+    { "label": "Solid arm blocks", "count": "As needed", "item": "minecraft:spruce_planks", "description": "Spruce Planks work for the moving arm." },
+    { "label": "Super Glue", "count": 1, "item": "create:super_glue" },
+    { "label": "Chest", "count": 1, "item": "minecraft:chest" },
+    { "label": "Dirt", "count": "1 per plot", "item": "minecraft:dirt", "description": "Start with one planting plot." },
+    { "label": "Oak Sapling", "count": "1 per plot", "item": "minecraft:oak_sapling" },
+    { "label": "Andesite Machine", "count": 2, "item": "kubejs:tk3_rotation_machine", "description": "If crafting the bearing and saw, stonecut one for each." },
+    { "label": "Deployer", "count": 1, "item": "create:deployer", "description": "Optional later upgrade for automatic replanting." }
   ],
   "steps": [
     {

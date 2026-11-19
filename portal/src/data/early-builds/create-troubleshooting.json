@@ -3,10 +3,14 @@
   "description": "Get a stopped workshop turning again and find out why a spinning machine still refuses to process an item.",
   "icon": "hammer",
   "materials": [
-    "A running source of rotation, such as a Water Wheel",
-    "Shafts and cogwheels for a short test line",
-    "Engineer’s Goggles to inspect stress and a Speedometer to read RPM",
-    "One known recipe from JEI to test the machine"
+    { "label": "Water Wheel", "count": 1, "item": "create:water_wheel", "description": "Use flowing water or tap an existing source of rotation." },
+    { "label": "Shaft", "count": "1+", "item": "create:shaft", "description": "Use enough to reach the machine on a short test line." },
+    { "label": "Cogwheel", "count": 2, "item": "create:cogwheel", "description": "For the mixer example, use one small cogwheel per speed increase." },
+    { "label": "Large Cogwheel", "count": 2, "item": "create:large_cogwheel", "description": "Pair each large cogwheel with a small one to reach 32 RPM." },
+    { "label": "Engineer’s Goggles", "count": 1, "item": "create:goggles", "description": "Wear them to see stress capacity and impact." },
+    { "label": "Speedometer", "count": 1, "item": "create:speedometer", "description": "Use one to read the speed of the test line." },
+    { "label": "Mechanical Mixer", "count": 1, "item": "create:mechanical_mixer", "description": "For the pictured test. Pick one valid recipe in JEI to check the machine." },
+    { "label": "Basin", "count": 1, "item": "create:basin", "description": "Place it two blocks below the mixer." }
   ],
   "steps": [
     {

@@ -3,10 +3,44 @@
   "description": "Use this endgame storage upgrade to access one inventory from your base, a farm or a distant outpost. The pack recipe uses a Light Engineering Block from Chapter VI.",
   "icon": "satchel",
   "materials": [
-    "For each Linked Chest, 4 Eyes of Ender, 2 Steel Plates and 1 Light Engineering Block",
-    "For each Linked Chest, 1 Wool and 1 Chest or Barrel",
-    "Dye if you want to mix the lid colors",
-    "One test item, such as an Iron Ingot"
+    {
+      "label": "Eye of Ender",
+      "item": "minecraft:ender_eye",
+      "count": 8,
+      "description": "Materials for two Linked Chests."
+    },
+    {
+      "label": "Steel Plate",
+      "item": "immersiveengineering:plate_steel",
+      "count": 4
+    },
+    {
+      "label": "Light Engineering Block",
+      "item": "immersiveengineering:light_engineering",
+      "count": 2
+    },
+    {
+      "label": "Wool",
+      "item": "minecraft:white_wool",
+      "count": 2,
+      "description": "Use matching colors for both chests."
+    },
+    {
+      "label": "Chest or Barrel",
+      "item": "minecraft:chest",
+      "count": 2
+    },
+    {
+      "label": "Dye",
+      "item": "minecraft:red_dye",
+      "description": "Optional. Use dye to change the color pads."
+    },
+    {
+      "label": "Iron Ingot",
+      "item": "minecraft:iron_ingot",
+      "count": 1,
+      "description": "Use any item to test the link."
+    }
   ],
   "steps": [
     {

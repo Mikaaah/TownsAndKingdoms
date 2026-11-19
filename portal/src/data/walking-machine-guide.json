@@ -1,0 +1,104 @@
+{
+  "title": "Build a walking machine",
+  "description": "Build a four-legged Let It Walk test rig with Chapter VI Light Engineering parts, then power, pose and pilot it.",
+  "icon": "map",
+  "materials": [
+    {
+      "label": "Walker Core",
+      "item": "let_it_walk:walker_core",
+      "count": 1,
+      "description": "Craft it with a Light Engineering Machine."
+    },
+    {
+      "label": "Leg Hinge",
+      "item": "let_it_walk:leg_hinge",
+      "count": 4,
+      "description": "One joint under each corner. Leg Swivels can also start a leg."
+    },
+    {
+      "label": "Leg Foot",
+      "item": "let_it_walk:leg_foot",
+      "count": 4
+    },
+    {
+      "label": "Pilot Controls",
+      "item": "let_it_walk:pilot_controls",
+      "count": 1
+    },
+    {
+      "label": "Positioner",
+      "item": "let_it_walk:leg_positioner",
+      "count": 1
+    },
+    {
+      "label": "Building Blocks",
+      "item": "minecraft:spruce_planks",
+      "count": "As needed",
+      "description": "Build a light 3 × 3 hull and four matching legs."
+    },
+    {
+      "label": "Shaft",
+      "item": "create:shaft",
+      "count": "As needed",
+      "description": "Bring a source of Create rotation to power the front face of the core."
+    }
+  ],
+  "steps": [
+    {
+      "id": "build-the-legs",
+      "title": "Build a small hull and four matching legs",
+      "text": "Place the Walker Core in the hull and the Pilot Controls directly behind it. Hang a Leg Hinge or Leg Swivel under each corner, facing the next segment. Extend each leg with blocks and finish it with a Leg Foot. Keep the four feet level and leave room for the legs to move.",
+      "figure": {
+        "src": "media/early-builds/walker-layout.webp",
+        "width": 880,
+        "height": 456,
+        "alt": "Top view shows the front shaft, the Walker Core, the Pilot Controls and four corner mounts. Front view shows two mirrored legs, each with a downward-facing Leg Hinge, a segment and a Leg Foot."
+      }
+    },
+    {
+      "id": "assemble",
+      "title": "Power the front, then assemble",
+      "text": "Connect a turning shaft to the front of the Walker Core. Right-click the core with an empty hand to assemble the walker. Confirm that it detects all four legs before trying to drive. Right-click an assembled core to park it."
+    },
+    {
+      "id": "pose",
+      "title": "Adjust the resting pose",
+      "text": "Hold the Positioner and look at a hinge or swivel. Scroll to change its rest angle by 5 degrees per notch. Hold Ctrl while scrolling to adjust by 1 degree. Set matching angles on the left and right before testing."
+    },
+    {
+      "id": "pilot",
+      "title": "Drive on flat ground first",
+      "text": "Right-click the Pilot Controls. Use W and S to drive, A and D to turn, and the mouse wheel to shift gears. Shift exits the controls. The pinned version allows the first two gears at 16 RPM, the third at 32, the fourth at 64, and the fifth at 128."
+    }
+  ],
+  "tips": [
+    {
+      "id": "walker-wont-move",
+      "title": "The walker stands but won’t move",
+      "text": "Check that the shaft feeds the front face, the network has spare stress capacity, and the core is unparked. A joint set to Arm will keep a pose but won’t take steps."
+    },
+    {
+      "id": "walker-wont-fly",
+      "title": "Jet Feet won’t lift the hull",
+      "text": "Fit Jet Feet on at least half the legs. Supply lava with a pipe or a lava tank against the back of the core. Check the flight key in Let It Walk’s controls."
+    }
+  ],
+  "links": [
+    {
+      "label": "Chapter VI · Light Engineering",
+      "path": "chapters/#chapter-06"
+    },
+    {
+      "label": "Walker Core recipe",
+      "path": "recipes/#recipe=tnk%3Amachines%2Ftier_05%2Fnative_upgrade%2Flet_it_walk%2Fwalker_core%2F0"
+    },
+    {
+      "label": "All Let It Walk recipes",
+      "path": "recipes/?q=let_it_walk"
+    },
+    {
+      "label": "Build an airship",
+      "path": "guides/aeronautics/"
+    }
+  ]
+}

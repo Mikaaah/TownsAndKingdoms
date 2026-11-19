@@ -5,11 +5,12 @@ import {data, href} from '../lib/data';
 
 const buildGroups = [
   { title: 'Early workshop', builds: ['cobble-generator', 'tree-farm', 'sapper', 'sophisticated-storage', 'create-troubleshooting'] },
-  { title: 'Advanced machines & storage', builds: ['ae2-network', 'aeronautics', 'excavator', 'linked-chests'] },
-  { title: 'Portals', builds: ['aether-portal', 'twilight-portal', 'otherside-portal'] },
+  { title: 'Advanced machines & storage', builds: ['ae2-network', 'aeronautics', 'excavator', 'walking-machines', 'linked-chests', 'nuclear', 'riftborne'] },
+  { title: 'Magic', builds: ['irons-spells', 'ars-nouveau', 'witchery', 'thaumaturge'] },
+  { title: 'Adventure & portals', builds: ['aether-portal', 'twilight-portal', 'otherside-portal', 'boss-respawning'] },
 ].map(group => ({
   title: group.title,
-  guides: group.builds.map(id => ({ id, ...data('early-builds/' + id) })),
+  guides: group.builds.map(id => ({ id, ...data(id === 'walking-machines' ? 'walking-machine-guide' : 'early-builds/' + id) })),
 }));
 ---
 <Layout title="Practical guides" description="A starting point for your workshop, character and equipment.">
@@ -47,7 +48,7 @@ const buildGroups = [
 
 <style>
  .build-directory { margin: 28px 0 38px; scroll-margin-top: calc(var(--header-height) + 15px); }
- .build-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+ .build-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
  .build-groups > div { border-top: 1px solid var(--border); padding-top: 10px; }
  .build-groups h3 { margin: 0 0 4px; font-size: 16px; }
  .build-groups ul { list-style: none; padding: 0; margin: 0; }

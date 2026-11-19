@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import MaterialsChecklist from './MaterialsChecklist.astro';
 import QuestIcon from './QuestIcon.astro';
+import type { ComponentProps } from 'astro/types';
 import { href } from '../lib/data';
 
 interface Figure {
@@ -16,7 +17,7 @@ interface Guide {
   title: string;
   description: string;
   icon: string;
-  materials: string[];
+  materials: ComponentProps<typeof MaterialsChecklist>['items'];
   steps: { id?: string; title: string; text: string; figure?: Figure }[];
   tips?: { id?: string; title: string; text: string }[];
   links?: { label: string; path: string }[];

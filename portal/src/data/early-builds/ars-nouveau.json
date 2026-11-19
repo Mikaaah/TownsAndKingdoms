@@ -1,0 +1,110 @@
+{
+  "title": "Get started with Ars Nouveau",
+  "description": "Write your first spell, make Source Gems, and supply an Imbuement Chamber with Source from a crop patch.",
+  "icon": "bookopen",
+  "keywords": [
+    "ars nouveau",
+    "magic",
+    "glyphs",
+    "source",
+    "spell book",
+    "imbuement"
+  ],
+  "materials": [
+    {
+      "label": "Tattered Tome",
+      "item": "ars_nouveau:worn_notebook",
+      "count": 1,
+      "description": "Craft with a Book and Lapis Lazuli."
+    },
+    {
+      "label": "Novice Spell Book",
+      "item": "ars_nouveau:novice_spell_book",
+      "count": 1
+    },
+    {
+      "label": "Scribe’s Table",
+      "item": "ars_nouveau:scribes_table",
+      "count": 1
+    },
+    {
+      "label": "Imbuement Chamber",
+      "item": "ars_nouveau:imbuement_chamber",
+      "count": 1
+    },
+    {
+      "label": "Lapis Lazuli",
+      "item": "minecraft:lapis_lazuli",
+      "count": 2,
+      "description": "For the first two Source Gems. Amethyst Shards also work."
+    },
+    {
+      "label": "Agronomic Sourcelink",
+      "item": "ars_nouveau:agronomic_sourcelink",
+      "count": 1
+    },
+    {
+      "label": "Source Jar",
+      "item": "ars_nouveau:source_jar",
+      "count": 1
+    }
+  ],
+  "steps": [
+    {
+      "id": "spell-book",
+      "title": "Craft your first spell book",
+      "text": "Make a Tattered Tome for the in-game guide. Craft a Novice Spell Book by combining a Book, Iron Shovel, Iron Pickaxe, Iron Axe, and Iron Sword in any arrangement. Open its spellcrafting screen with the configured Ars Nouveau keybind."
+    },
+    {
+      "id": "first-glyph",
+      "title": "Write a spell and learn more glyphs",
+      "text": "Start a spell with a Form such as Projectile, then add an Effect such as Harm. Name and save the spell, select it, then use the book to cast it. To learn another glyph, use the spell book on a Scribe’s Table, select the glyph, and supply the displayed ingredients. Use the finished Glyph to learn it."
+    },
+    {
+      "id": "source-gems",
+      "title": "Imbue your first Source Gems",
+      "text": "Place an Imbuement Chamber and use one Lapis Lazuli or Amethyst Shard on it. The chamber gradually builds enough Source for this recipe. Collect the finished Source Gem, then repeat for a second gem. Those two gems go into the Agronomic Sourcelink."
+    },
+    {
+      "id": "source-farm",
+      "title": "Collect Source from crop growth",
+      "text": "Plant a crop patch, put the Agronomic Sourcelink alongside it, and place a Source Jar next to the Sourcelink. Put the Imbuement Chamber on the other side of the jar. Growing crops feed the Sourcelink, the jar stores its output, and the nearby chamber draws from the jar. Use an Amethyst Block in the chamber when you want a Source Gem Block, which crafts back into four gems.",
+      "figure": {
+        "src": "media/early-builds/ars-source.webp",
+        "width": 880,
+        "height": 302,
+        "alt": "Natural crop growth feeds an Agronomic Sourcelink. The Sourcelink fills a neighboring Source Jar, which supplies the Imbuement Chamber next to it."
+      }
+    }
+  ],
+  "tips": [
+    {
+      "id": "jar-stays-empty",
+      "title": "The Source Jar stays empty",
+      "text": "Keep the patch in a loaded area and wait for natural growth. Freshly planted crops will take time to feed the Sourcelink. Bone meal does not produce Source from the extra growth it causes."
+    },
+    {
+      "id": "glyph-locked",
+      "title": "A glyph is still locked",
+      "text": "Check the tier in the Tattered Tome. The Novice Spell Book supports Tier 1 glyphs. Higher tiers require upgrading your spell book."
+    }
+  ],
+  "links": [
+    {
+      "label": "Source supply Ponder",
+      "path": "ponder/?scene=ars_source"
+    },
+    {
+      "label": "Source Gem imbuement Ponder",
+      "path": "ponder/?scene=ars_imbuement"
+    },
+    {
+      "label": "Enchanting Apparatus Ponder",
+      "path": "ponder/?scene=ars_apparatus"
+    },
+    {
+      "label": "Ars Nouveau in-game book reference",
+      "path": "https://ars.guide/book/"
+    }
+  ]
+}

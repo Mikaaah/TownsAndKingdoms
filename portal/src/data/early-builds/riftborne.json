@@ -1,0 +1,36 @@
+{
+  "title": "Create Riftborne Slipgates and ship jumps",
+  "description": "Process Noctite, send a test stack through a pair of Slipgates and set up a first same-dimension Rift Engine jump.",
+  "icon": "hourglass",
+  "keywords": "create riftborne rift engine rift heart slipgate stabilized phase fluid noctite teleport items fluids anchor 64 rpm 256 rpm",
+  "materials": [
+    { "label": "Item Slipgate", "item": "create_riftborne:item_slipgate", "count": 2, "description": "One sender and one receiver. For transferring fluids, build two Fluid Slipgates instead." },
+    { "label": "Stabilized Phase Fluid", "item": "create_riftborne:stabilized_phase_fluid_bucket", "description": "Fuel for the sender and for a Rift Engine’s Phase Fluid Tank." },
+    { "label": "Wrench", "item": "create:wrench", "count": 1, "description": "Use it to set a Slipgate to receive. Sneak-right-click also works." },
+    { "label": "Rift Engine Base", "item": "create_riftborne:rift_engine_base", "count": 1, "description": "For ship jumps. Place it first to preview the full engine." },
+    { "label": "Rift Engine Core", "item": "create_riftborne:rift_engine_core", "count": 1 },
+    { "label": "Rift Engine Stabilizer", "item": "create_riftborne:rift_engine_stabilizer", "count": 1 },
+    { "label": "Rift Engine Console", "item": "create_riftborne:rift_engine_console", "count": 1 },
+    { "label": "Phase Fluid Tank", "item": "create_riftborne:phase_fluid_tank", "count": 1, "description": "The base preview shows where to put the tank and the Noctite Casings." },
+    { "label": "Rift Anchor", "item": "create_riftborne:rift_anchor", "count": 1, "description": "Power the destination anchor at 32 RPM or faster." }
+  ],
+  "steps": [
+    { "id": "riftborne-fuel", "title": "Mine Noctite and make stable fuel", "text": "Mine Noctite Ore in the End for Raw Noctite. Haunt the Raw Noctite with an Encased Fan blowing through Soul Fire. Mix one Unstable Noctite Ingot, one Chorus Fruit and 250 mB Lava to make 250 mB Unstable Phase Slurry. Heat the slurry with an Ender Pearl in a Mixer to make the same amount of Stabilized Phase Fluid. For hardware, combine an Unstable Noctite Ingot and a Sturdy Sheet in the Deployer recipe to make a Noctite Ingot." },
+    { "id": "slipgate-pair", "title": "Link and power two Slipgates", "text": "Place two Item Slipgates in the same dimension for your first test. Drive each from below at 64 RPM or faster. Put the same two frequency items in the same order on both fronts. Use a Wrench, or sneak-right-click, to set exactly one gate to receive. Supply Stabilized Phase Fluid to the sender and put a test stack on its depot.", "figure": { "src": "media/early-builds/riftborne-slipgates.webp", "width": 880, "height": 352, "alt": "An Item Slipgate sender with Stabilized Phase Fluid links to a receiver with the same two frequency items. A shaft powers each gate from below at 64 RPM or faster." } },
+    { "id": "slipgate-fluids", "title": "Send fluids with a Fluid Slipgate pair", "text": "Match the pair as you would for items. Pump cargo into the top of the sender and pump it out of the top of the receiver. Supply Stabilized Phase Fluid to the sender through another side. The usual transfer is 250 mB, so leave room for a full batch on the receiving end." },
+    { "id": "rift-engine-assembly", "title": "Assemble a Rift Engine on your ship", "text": "Build the Rift Heart in Mechanical Crafters using the pack’s Eclipse recipe. Place the Rift Engine Base on the ship and use its placement preview for the casing, core, stabilizer, console and tank. The 5 × 5 engine assembles when every block matches. Hover the Base in JEI and hold W for its full assembly Ponder." },
+    { "id": "first-rift-jump", "title": "Charge the engine and make a test jump", "text": "Fill the Phase Fluid Tank with Stabilized Phase Fluid. Feed rotation into the engine’s middle column from above or below at 256 RPM to charge the Stabilizer. Power a Rift Anchor in the same dimension at 32 RPM or more. Select your anchor in the Console, wait for the Base lamp to turn white, then send redstone power to the Console. Let the Core cool after the jump before breaking it." }
+  ],
+  "tips": [
+    { "id": "slipgate-stuck", "title": "Nothing reaches the receiver", "text": "Confirm the frequency slots match in order, the receiver has room and both shafts reach at least 64 RPM. The slower gate sets the pace. At the minimum speed, a transfer takes about five seconds. Keep the sender fueled with Stabilized Phase Fluid. Unstable Phase Slurry can destroy what you send." },
+    { "id": "slipgate-cross-dimension", "title": "The Slipgate receiver is in another dimension", "text": "Right-click the sender with a Corrupted Shard to add 100 cross-dimension transfers. These transfers cost more fuel. Look up Harvesting Corrupted Shards on the shard in Ponder for the End Stone and Diurnal End Stone setup." },
+    { "id": "rift-engine-wont-jump", "title": "The engine won’t jump", "text": "An orange Base lamp means charging or cooling is still in progress. A red lamp means a condition blocks the jump. Check the Console destination, tank fuel and the destination anchor. Charge at 256 RPM. Between 128 and 255 RPM the Stabilizer holds its current charge, and below 128 RPM it drains." }
+  ],
+  "links": [
+    { "label": "Chapter IX · Radiant & Shadow", "path": "chapters/#chapter-09" },
+    { "label": "Item Slipgate recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fcreate_riftborne%2Fitem_slipgate" },
+    { "label": "Fluid Slipgate recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fcreate_riftborne%2Ffluid_slipgate" },
+    { "label": "Rift Heart recipe", "path": "recipes/#recipe=tnk%3Acompat%2Fcreate_riftborne%2Frift_heart" },
+    { "label": "Create rotation troubleshooting", "path": "guides/create-troubleshooting/" }
+  ]
+}

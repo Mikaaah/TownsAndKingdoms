@@ -89,17 +89,24 @@ const objectiveLabel = (objective: QuestObjective) =>
 const objectiveIcon = (objective: QuestObjective) => assets.icons[objective.icon ?? objective.item ?? ''];
 
 const unit = 32;
+const frameScale = 0.75;
+const frameGap = 6;
 const coordinates = ({ x, y }: {x: number; y: number}) => [x * unit, y * unit];
-const side = (quest: Quest) => (quest.size ?? 1) * unit;
+function frameSide(quest: Quest, quests: Quest[]) {
+  const nearest = Math.min(...quests.filter(other => other !== quest).map(other =>
+    Math.max(Math.abs(quest.x - other.x), Math.abs(quest.y - other.y)) * unit
+  ));
+  return Math.max(12, Math.min((quest.size ?? 1) * unit * frameScale, nearest - frameGap));
+}
 const hexagon = (radius: number) => Array.from({ length: 6 }, (_, index) => {
   const angle = index * Math.PI / 3;
   return `${Math.cos(angle) * radius},${Math.sin(angle) * radius}`;
 }).join(' ');
 
-function boardViewBox(chapter: Chapter) {
+function boardViewBox(chapter: Chapter, frameSizes: Map<string, number>) {
   const boxes = chapter.quests.map(quest => {
     const [x, y] = coordinates(quest);
-    const radius = side(quest) / 2;
+    const radius = frameSizes.get(quest.id)! / 2;
     return [x - radius, y - radius, x + radius, y + radius];
   });
   for (const image of chapter.images ?? []) {
@@ -150,6 +157,7 @@ function boardEdges(chapter: Chapter) {
       const secret = isSecret(chapter);
       const info = secret ? undefined : chapterInfo[chapter.id];
       const title = secret ? undefined : assets.titles[chapter.id];
+      const frameSizes = new Map(chapter.quests.map(quest => [quest.id, frameSide(quest, chapter.quests)]));
       const titleOnBoard = title && chapter.images?.some(image => image.image === chapter.titleImage);
       const headingId = chapter.id + '-title';
       const helpId = chapter.id + '-map-help';
@@ -181,7 +189,7 @@ function boardEdges(chapter: Chapter) {
                   <button type="button" data-quest-action="zoom-in" aria-label="Zoom in">+</button>
                 </div>
               </div>
-              <svg class="quest-map" data-quest-map viewBox={boardViewBox(chapter)} tabindex="0" aria-label={chapter.title + ' quest board'} aria-describedby={helpId}>
+              <svg class="quest-map" data-quest-map viewBox={boardViewBox(chapter, frameSizes)} tabindex="0" aria-label={chapter.title + ' quest board'} aria-describedby={helpId}>
                 <g aria-hidden="true" class="board-art">
                   {(chapter.images ?? []).map(image => {
                     const art = image.image === chapter.titleImage ? title : undefined;
@@ -202,9 +210,10 @@ function boardEdges(chapter: Chapter) {
                 </g>
                 {chapter.quests.map((quest, questIndex) => {
                   const [x, y] = coordinates(quest);
-                  const radius = side(quest) / 2;
+                  const width = frameSizes.get(quest.id)!;
+                  const radius = width / 2;
                   const icon = assets.icons[quest.icon ?? ''];
-                  const iconSide = side(quest) * 0.65;
+                  const iconSide = width * 0.7;
                   const label = assets.labels?.[quest.id];
                   const labelWidth = label ? label.width / 2 + 10 : 0;
                   const labelHeight = label ? label.height / 2 + 8 : 0;
@@ -215,7 +224,7 @@ function boardEdges(chapter: Chapter) {
                     <title>{quest.title}</title>
                     {quest.shape === 'hexagon' ? <polygon class="quest-node-frame" points={hexagon(radius)} />
                       : quest.shape === 'circle' ? <circle class="quest-node-frame" r={radius} />
-                      : <rect class="quest-node-frame" x={-radius} y={-radius} width={side(quest)} height={side(quest)}
+                      : <rect class="quest-node-frame" x={-radius} y={-radius} {width} height={width}
                         rx={quest.shape === 'rsquare' ? radius * .37 : radius * .1} />}
                     {icon ? <QuestBoardTexture texture={icon} x={-iconSide / 2} y={-iconSide / 2} width={iconSide} height={iconSide} />
                       : <circle class="quest-node-marker" aria-hidden="true" r={radius * .2} />}
@@ -427,22 +436,22 @@ function boardEdges(chapter: Chapter) {
   .quest-map:focus-visible { outline-offset: -3px; }
   .board-art, .board-edges { pointer-events: none; }
   .board-art { image-rendering: pixelated; }
-  .board-edges line { stroke: #a586c4; stroke-width: 2; stroke-linecap: round; }
-  .board-edges [data-connected] { stroke: #e4c681; stroke-width: 2.8; }
+  .board-edges line { stroke: #a586c4; stroke-width: 1.5; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+  .board-edges [data-connected] { stroke: #e4c681; stroke-width: 2.25; }
   .quest-node { cursor: pointer; }
   .quest-node:focus { outline: none; }
-  .quest-node-frame { fill: #3e3029; stroke: #b5a0d2; stroke-width: 1.7; }
+  .quest-node-frame { fill: #3e3029; stroke: #b5a0d2; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
   .quest-node-marker { fill: #ddc4a9; pointer-events: none; }
   .quest-node:hover .quest-node-frame, .quest-node:focus-visible .quest-node-frame {
     fill: #644835;
     stroke: #fff0d7;
-    stroke-width: 2.5;
+    stroke-width: 2.15;
   }
   .quest-node[data-selected]:not([data-selected="false"]) .quest-node-frame,
   .quest-node[aria-current]:not([aria-current="false"]) .quest-node-frame {
     fill: #6e491e;
     stroke: #ffcb72;
-    stroke-width: 3;
+    stroke-width: 2.5;
   }
   .quest-node-label { visibility: hidden; pointer-events: none; }
   .quest-node:hover .quest-node-label, .quest-node:focus-visible .quest-node-label { visibility: visible; }

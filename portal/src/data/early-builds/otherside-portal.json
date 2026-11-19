@@ -4,9 +4,22 @@
   "description": "Use a Warden’s Heart of the Deep to activate the Ancient City gateway in Deeper and Darker.",
   "icon": "key",
   "materials": [
-    "1 Heart of the Deep from a Warden",
-    "The Reinforced Deepslate portal frame at the center of an Ancient City",
-    "Food, light, and blocks for a return route"
+    {
+      "label": "Heart of the Deep",
+      "item": "deeperdarker:heart_of_the_deep",
+      "count": 1
+    },
+    {
+      "label": "Ancient City Portal Frame",
+      "item": "minecraft:reinforced_deepslate",
+      "count": 1,
+      "description": "Use the existing Reinforced Deepslate frame in the city."
+    },
+    {
+      "label": "Torch",
+      "item": "minecraft:torch",
+      "description": "Bring light and blocks to mark your return route."
+    }
   ],
   "steps": [
     {

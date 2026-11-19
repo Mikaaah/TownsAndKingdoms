@@ -1,9 +1,12 @@
 ---
-import { href as siteHref } from '../lib/data';
+import QuestBoardTexture from './QuestBoardTexture.astro';
+import { data, href as siteHref } from '../lib/data';
 
 interface Item {
   id?: string;
   label: string;
+  count?: number | string;
+  item?: string;
   description?: string;
   icon?: string;
   href?: string;
@@ -20,6 +23,38 @@ interface Props {
 const { id, items, title = 'What you need', description } = Astro.props;
 const rows = items.map((item): Item => typeof item === 'string' ? { label: item } : item);
 const board = siteHref('media/clipboard/board.png');
+type BoardTexture = { src: string; x: number; y: number; width: number; height: number; atlasWidth: number; atlasHeight: number };
+const recipeTextures: Record<string, string | [number, number, number]> = data('recipe-textures', {});
+const questTextures: Record<string, BoardTexture> = data('quest-board-assets', { icons: {} }).icons;
+const clipboardTextures: Record<string, string> = data('clipboard-items', {});
+
+function iconFor({ item, icon }: Item): string | BoardTexture {
+  if (icon) return icon;
+  if (item) {
+    const recipe = recipeTextures[item];
+    if (typeof recipe === 'string') return recipe;
+    if (recipe) {
+      const [atlas, column, row] = recipe;
+      const tileSize = 32;
+      const atlasSize = 16 * tileSize;
+      return { src: `media/recipe-textures/items-${atlas}.webp`, x: column * tileSize, y: row * tileSize,
+        width: tileSize, height: tileSize, atlasWidth: atlasSize, atlasHeight: atlasSize };
+    }
+    if (questTextures[item]) return questTextures[item];
+    if (clipboardTextures[item]) return clipboardTextures[item];
+  }
+  return 'media/quest-icons/paper.png';
+}
+
+function labelFor({ label, count }: Item): string {
+  if (count == null) return label;
+  const quantity = String(count).trim();
+  if (!quantity) return label;
+  const fixed = /^(\d+(?:[-–]\d+)?)(?: (per .+))?$/.exec(quantity);
+  if (fixed) return `${fixed[1]}x ${label}${fixed[2] ? ` ${fixed[2]}` : ''}`;
+  if (/^\d+\+$/.test(quantity)) return `${quantity} ${label}`;
+  return `${label} · ${quantity}`;
+}
 ---
 
 <section class="clipboard" aria-labelledby={`${id}-title`} data-materials-checklist={id} style={{ '--clipboard-board': `url("${board}")` }}>
@@ -32,12 +67,17 @@ const board = siteHref('media/clipboard/board.png');
   <ul>
     {rows.map((item, index) => {
       const detail = item.description ? `${id}-description-${index}` : undefined;
+      const icon = iconFor(item);
+      const rowLabel = labelFor(item);
       return <li>
         <label>
-          <input type="checkbox" value={item.id ?? item.label} aria-describedby={detail} aria-label={item.label} />
-          {item.icon && <img class="item-icon" src={siteHref(item.icon)} width="32" height="32" alt="" />}
+          <input type="checkbox" value={item.id ?? item.label} aria-describedby={detail} aria-label={rowLabel} />
+          <span class="item-icon" aria-hidden="true">
+            {typeof icon === 'string' ? <img src={siteHref(icon)} width="32" height="32" alt="" />
+              : <QuestBoardTexture texture={icon} width={32} height={32} />}
+          </span>
           <span class="item-copy">
-            <span class="item-name" data-materials-label>{item.label}</span>
+            <span class="item-name" data-materials-label>{rowLabel}</span>
             {item.description && <span class="item-description" id={detail} data-materials-description>{item.description}</span>}
           </span>
         </label>
@@ -203,9 +243,16 @@ const board = siteHref('media/clipboard/board.png');
     border-width: 0 2px 2px 0;
     content: '';
   }
-  .item-icon { flex: none; width: 29px; height: 29px; object-fit: contain; image-rendering: pixelated; }
+  .item-icon { display: block; flex: none; width: 32px; height: 32px; }
+  .item-icon > img, .item-icon > :global(svg) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated;
+  }
   .item-copy { min-width: 0; overflow-wrap: anywhere; line-height: 1.42; }
-  .item-name { display: block; font-size: .94rem; font-weight: 700; }
+  .item-name { display: block; font: 400 1.0625rem / 1.35 'Minecraft Checklist', Geist, sans-serif; }
   .item-description { display: block; color: #463123; font-size: .83rem; }
   input:checked ~ .item-copy .item-name { text-decoration: line-through; }
   .recipe {
@@ -246,7 +293,7 @@ const board = siteHref('media/clipboard/board.png');
     .clipboard { padding-inline: 18px; }
     li { gap: 0 9px; }
     label { gap: 7px; }
-    .item-icon { width: 23px; height: 23px; }
+    .item-icon { width: 26px; height: 26px; }
   }
   @media (forced-colors: active) {
     input[type='checkbox'] { appearance: auto; }
