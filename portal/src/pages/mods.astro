@@ -1,21 +1,167 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {data,fmt} from '../lib/data';
-const mods=data('mods');
-const preferred=['Combat & Epic Fight Ecosystem','Magic, Spellbooks & Witchery','Create, Aeronautics & Mechanical Addons','Applied Energistics 2 (AE2) & Logistics','Culinary, Agriculture & Homesteading','World Generation, Dimensions & Structures','Boss Encounters, Mobs & Progression','Custom TK3 Mods & Core Performance'];
-const categories=[...new Set([...preferred,...mods.map((m:any)=>m.category)])].filter(c=>mods.some((m:any)=>m.category===c));
+
+interface ModEntry {
+  id: string;
+  name: string;
+  slug: string;
+  category: string;
+  summary: string;
+  url: string;
+  supporting: boolean;
+}
+
+const mods: ModEntry[] = data('mods');
+const categories = [
+  ['Combat & Epic Fight Ecosystem', 'Combat & Epic Fight'],
+  ['Magic, Spellbooks & Witchery', 'Magic, spellbooks & witchery'],
+  ['Create, Aeronautics & Mechanical Addons', 'Create & mechanical addons'],
+  ['Culinary, Agriculture & Homesteading', 'Cooking, farming & homesteading'],
+  ['World Generation, Dimensions & Structures', 'World generation, dimensions & structures'],
+  ['Boss Encounters, Mobs & Progression', 'Bosses, mobs & progression'],
+  ['Custom TK3 Mods & Core Performance', 'Utilities, performance & other mods'],
+  ['Applied Energistics 2 & Logistics', 'Applied Energistics 2 & logistics'],
+  ['Resource packs & shaders', 'Resource packs & shaders'],
+];
+const sections = categories.map(([key, title], index) => ({
+  id: `domain-${index}`,
+  title,
+  entries: mods.filter(mod => {
+    const isMod = new URL(mod.url).pathname.startsWith('/minecraft/mc-mods/');
+    return isMod ? mod.category === key : key === 'Resource packs & shaders';
+  }).sort((a, b) => a.name.localeCompare(b.name, 'en')),
+})).filter(section => section.entries.length);
+const searchText = (mod: ModEntry) => `${mod.name} ${mod.slug} ${mod.id} ${mod.summary}`.toLowerCase();
 ---
-<Layout title="Mod index" description="The mods behind Towns & Kingdoms, grouped by their place in industry, exploration, combat and everyday life.">
- <p class="eyebrow">Reference / The modpack</p><h1>Mod index</h1><p class="intro">Browse the installed mods by combat, magic, engineering, exploration and homesteading. Supporting libraries and integrations are grouped separately within each category.</p>
- <div class="toolbar"><input type="search" id="mod-search" placeholder="Find a mod…" aria-label="Search mods"/><span class="subtle" id="mod-count" style="font-size:13px">{fmt(mods.length)} mods</span></div>
- <nav class="toc-inline" aria-label="Mod categories">{categories.map((category:any,i)=><a href={`#domain-${i}`}>{category}</a>)}</nav>
- {categories.map((category:any,i)=>{const entries=mods.filter((m:any)=>m.category===category);const main=entries.filter((m:any)=>!m.supporting);const support=entries.filter((m:any)=>m.supporting);return <section class="mod-domain" id={`domain-${i}`} data-mod-domain><div class="mod-domain-title"><h2>{category}</h2><span class="tag">{entries.length}</span></div><div class="mod-grid">{main.map((m:any)=><article class="mod-card" data-mod-name={`${m.name} ${m.id} ${m.summary}`.toLowerCase()} id={`mod-${m.id}`}><h3><a href={m.url} target="_blank" rel="noopener">{m.name}</a></h3>{m.summary&&<p>{m.summary}</p>}</article>)}</div>{support.length>0&&<details class="section" style="margin-top:20px"><summary class="muted">Supporting libraries & integrations <span class="tag">{support.length}</span></summary><div class="support-list">{support.map((m:any)=><a data-mod-name={`${m.name} ${m.id}`.toLowerCase()} id={`mod-${m.id}`} href={m.url} target="_blank" rel="noopener">{m.name}</a>)}</div></details>}</section>;})}
- <div id="mod-empty" class="empty-state" hidden>No mods match that search.</div>
+<Layout title="Mod index" description="Browse the installed mods, resource packs and shaders, with their CurseForge project pages.">
+  <p class="eyebrow">Reference / The modpack</p>
+  <h1>Mod index</h1>
+  <p class="intro">Look up an installed mod, resource pack or shader. Each entry links to its CurseForge project.</p>
+
+  <div class="toolbar">
+    <input type="search" id="mod-search" placeholder="Search by mod name…" aria-label="Search the mod index"/>
+    <output class="muted" id="mod-count" for="mod-search" aria-live="polite">{fmt(mods.length)} entries</output>
+  </div>
+
+  <nav class="toc-inline" aria-label="Mod categories">
+    {sections.map(section => <a href={'#' + section.id} data-mod-category={section.id}>{section.title}</a>)}
+  </nav>
+
+  {sections.map(({id, title, entries}) => {
+    const main = entries.filter(mod => !mod.supporting);
+    const support = entries.filter(mod => mod.supporting);
+    return (
+      <section class="mod-domain" id={id} data-mod-domain>
+        <div class="mod-domain-title">
+          <h2>{title}</h2>
+          <span class="tag" data-domain-count>{entries.length}</span>
+        </div>
+        {main.length > 0 && <div class="mod-grid" data-mod-group>
+          {main.map(mod => <article class="mod-card mod-entry" data-mod-name={searchText(mod)} id={'mod-' + mod.id}>
+            <div>
+              <h3>{mod.name}</h3>
+              {mod.summary && <p>{mod.summary}</p>}
+            </div>
+            <a class="mod-source" href={mod.url} aria-label={`${mod.name} on CurseForge`} target="_blank" rel="noopener">CurseForge</a>
+          </article>)}
+        </div>}
+        {support.length > 0 && <details class="mod-support" data-mod-group>
+          <summary>Supporting libraries & integrations <span class="tag" data-support-count>{support.length}</span></summary>
+          <ul class="mod-grid mod-support-list">
+            {support.map(mod => <li class="mod-entry" data-mod-name={searchText(mod)} id={'mod-' + mod.id}>
+              <span>{mod.name}</span>
+              <a class="mod-source" href={mod.url} aria-label={`${mod.name} on CurseForge`} target="_blank" rel="noopener">CurseForge</a>
+            </li>)}
+          </ul>
+        </details>}
+      </section>
+    );
+  })}
+
+  <div id="mod-empty" class="empty-state" hidden>No entries match that search.</div>
 </Layout>
+
+<style>
+  #mod-count{font-size:.875rem}
+  .mod-domain{scroll-margin-top:calc(var(--header-height) + 16px)}
+  .mod-domain-title{align-items:baseline}
+  .mod-domain-title .tag{flex-shrink:0}
+  .mod-entry{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-width:0}
+  .mod-entry h3{margin:0;overflow-wrap:anywhere}
+  .mod-entry p{margin-top:6px;line-height:1.55}
+  .mod-entry:focus{outline:2px solid var(--accent);outline-offset:2px}
+  .mod-source{display:inline-flex;align-items:center;flex-shrink:0;min-height:36px;padding:4px 10px;border:1px solid var(--border);border-radius:5px;color:var(--text);font-size:.875rem;white-space:nowrap;text-decoration:none}
+  .mod-source:hover,.mod-source:focus-visible{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  .mod-support{margin-top:16px}
+  .mod-support summary{cursor:pointer}
+  .mod-support summary .tag{margin-left:6px}
+  .mod-support-list{padding:0;margin:12px 0 0;list-style:none}
+  .mod-support-list .mod-entry{align-items:center;padding:8px 12px;border:1px solid var(--border);border-radius:5px;font-size:.9375rem;color:var(--muted);overflow-wrap:anywhere}
+  @media(max-width:600px){.mod-entry{padding:12px}.mod-source{min-height:44px}}
+</style>
+
 <script>
-const field=document.querySelector<HTMLInputElement>('#mod-search');
-function filterMods(){let visible=0;const q=(field?.value||'').trim().toLowerCase();document.querySelectorAll<HTMLElement>('[data-mod-name]').forEach(el=>{const show=!q||q.split(/\s+/).every(term=>el.dataset.modName?.includes(term));el.hidden=!show;if(show)visible++;});document.querySelectorAll<HTMLElement>('[data-mod-domain]').forEach(section=>{section.hidden=!Array.from(section.querySelectorAll<HTMLElement>('[data-mod-name]')).some(el=>!el.hidden);if(q)section.querySelectorAll('details').forEach(d=>d.open=true);});const counter=document.querySelector('#mod-count');if(counter)counter.textContent=`${visible} mods`;const empty=document.querySelector<HTMLElement>('#mod-empty');if(empty)empty.hidden=visible>0;}
-field?.addEventListener('input',filterMods);
-function focusMod(){const id=new URLSearchParams(location.hash.slice(1)).get('mod');if(!id)return;const el=document.getElementById('mod-'+id);if(el){el.closest('details')?.setAttribute('open','');el.scrollIntoView({block:'center'});el.style.borderColor='var(--accent)';}}
-window.addEventListener('hashchange',focusMod);focusMod();
+  const field = document.querySelector<HTMLInputElement>('#mod-search');
+  const counter = document.querySelector<HTMLOutputElement>('#mod-count');
+  const empty = document.querySelector<HTMLElement>('#mod-empty');
+  const domains = [...document.querySelectorAll<HTMLElement>('[data-mod-domain]')];
+  const panels = [...document.querySelectorAll<HTMLDetailsElement>('.mod-support')];
+  const categories = new Map([...document.querySelectorAll<HTMLAnchorElement>('[data-mod-category]')]
+    .map(link => [link.dataset.modCategory, link]));
+  const previousPanelState = new Map<HTMLDetailsElement, boolean>();
+
+  function filterMods() {
+    const terms = (field?.value.trim().toLowerCase() || '').split(/\s+/).filter(Boolean);
+    if (terms.length && !previousPanelState.size) {
+      panels.forEach(panel => previousPanelState.set(panel, panel.open));
+    }
+    let total = 0;
+    for (const domain of domains) {
+      let visible = 0;
+      for (const group of domain.querySelectorAll<HTMLElement>('[data-mod-group]')) {
+        let count = 0;
+        for (const entry of group.querySelectorAll<HTMLElement>('[data-mod-name]')) {
+          const matches = terms.every(term => entry.dataset.modName?.includes(term));
+          entry.hidden = !matches;
+          if (matches) count++;
+        }
+        group.hidden = count === 0;
+        if (group instanceof HTMLDetailsElement) {
+          const countLabel = group.querySelector('[data-support-count]');
+          if (countLabel) countLabel.textContent = String(count);
+          if (terms.length) group.open = count > 0;
+          else if (previousPanelState.has(group)) group.open = previousPanelState.get(group) === true;
+        }
+        visible += count;
+      }
+      const countLabel = domain.querySelector('[data-domain-count]');
+      if (countLabel) countLabel.textContent = String(visible);
+      domain.hidden = visible === 0;
+      const category = categories.get(domain.id);
+      if (category) category.hidden = domain.hidden;
+      total += visible;
+    }
+    if (!terms.length) previousPanelState.clear();
+    if (counter) counter.value = `${total.toLocaleString('en-US')} ${total === 1 ? 'entry' : 'entries'}`;
+    if (empty) empty.hidden = total !== 0;
+  }
+
+  function focusMod() {
+    const id = new URLSearchParams(location.hash.slice(1)).get('mod');
+    const entry = id && document.getElementById('mod-' + id);
+    if (!entry) return;
+    if (entry.hidden && field) {
+      field.value = '';
+      filterMods();
+    }
+    entry.closest('details')?.setAttribute('open', '');
+    entry.tabIndex = -1;
+    entry.focus({preventScroll: true});
+    entry.scrollIntoView({block: 'center'});
+  }
+
+  field?.addEventListener('input', filterMods);
+  window.addEventListener('hashchange', focusMod);
+  focusMod();
 </script>

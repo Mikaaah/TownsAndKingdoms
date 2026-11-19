@@ -50,6 +50,9 @@ test('weapon filters, detail links and copied IDs use the actual weapon registry
 });
 test('recipe details preserve shaped layouts, assembly stages and retained boss catalysts',async()=>{
  const dom=browser('recipes');evaluate(dom,'registry.ts');await tick();const doc=dom.window.document;
+ query(dom,'tnk:chapter_01/crafting/andesite_alloy_from_andesite_and_clay');
+ assert.match(doc.querySelector('[data-results] tr').textContent,/ · Create/);
+ assert.doesNotMatch(doc.querySelector('[data-results] tr').textContent,/Thaumaturgy/);
  query(dom,'let_it_walk:walker_core');doc.querySelector('[data-detail]').click();
  assert.match(doc.querySelector('#record-title').textContent,/Walker Core/);
  assert.equal(doc.querySelectorAll('.recipe-slot').length,9);
@@ -64,6 +67,34 @@ test('recipe details preserve shaped layouts, assembly stages and retained boss 
  query(dom,'tnk:synergy/boss_tooling/ice_crystal_quartz_fiber/finish');doc.querySelector('[data-detail]').click();
  assert.match(doc.querySelector('.dialog-body').textContent,/Retained catalyst/);
  assert.match(doc.querySelector('.dialog-body').textContent,/Ice Crystal/);
+ dom.window.close();
+});
+test('recipe sprites follow exact inputs, alternatives and fluid outputs',async()=>{
+ const dom=browser('recipes');evaluate(dom,'registry.ts');await tick();const doc=dom.window.document;
+ const openRecipe=id=>{
+  if(doc.querySelector('#record-dialog').open)doc.querySelector('[data-close-detail]').click();
+  query(dom,id);
+  const result=Array.from(doc.querySelectorAll('[data-detail]')).find(button=>button.dataset.detail===id);
+  assert.ok(result,id);
+  result.click();
+  return result.closest('tr');
+ };
+ const row=openRecipe('tnk:compat/apotheosis/gem_cutting_tools');
+ assert.ok(row.querySelector('.recipe-result-art .recipe-item-atlas'));
+ const options=doc.querySelector('.recipe-slot[title="Shears or Iron Knife"]');
+ assert.equal(options.querySelectorAll('.recipe-item-art').length,2);
+ assert.match(options.querySelector('img').getAttribute('src'),/iron_knife\.png$/);
+ assert.equal(doc.querySelector('.recipe-slot[title="Planks"] .recipe-item-art'),null);
+ const texture=()=>doc.querySelector('.dialog-header .recipe-item-atlas').getAttribute('style');
+ openRecipe('tnk:ie_compat/mixing/immersiveengineering/mixer/concrete');
+ const fluidArt=texture();
+ assert.match(doc.querySelector('.recipe-facts').textContent,/\d+ mB/);
+ openRecipe('tnk:synergy/waste/flux_bound_concrete');
+ assert.notEqual(texture(),fluidArt);
+ assert.match(doc.querySelector('.recipe-facts').textContent,/× Concrete/);
+ openRecipe('tnk:chapter_02/splashing/clay_from_sand');
+ assert.match(doc.querySelector('.recipe-facts').textContent,/Chance output/);
+ assert.equal(doc.querySelectorAll('.dialog-body .ingredient-list li .tag').length,3);
  dom.window.close();
 });
 test('global search indexes every requested category and opens through Ctrl+K',async()=>{
@@ -82,8 +113,15 @@ test('global search indexes every requested category and opens through Ctrl+K',a
  const input=window.document.querySelector('#global-search-input');input.value='whisperwind';input.dispatchEvent(new window.Event('input',{bubbles:true}));await tick();
  const links=window.document.querySelectorAll('.search-result');assert(links.length>0);
  assert(Array.from(links).some(a=>a.href.includes('weapons/#item=simplyswords%3Awhisperwind')));
+ input.value='sword';input.dispatchEvent(new window.Event('input',{bubbles:true}));await tick();
+ const weaponResults=Array.from(window.document.querySelectorAll('.search-result'));assert(weaponResults.length>1);
+ assert.equal(input.getAttribute('aria-expanded'),'true');
+ input.dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowUp',bubbles:true,cancelable:true}));
+ assert.equal(input.getAttribute('aria-activedescendant'),weaponResults.at(-1).id);
  input.dispatchEvent(new window.KeyboardEvent('keydown',{key:'ArrowDown',bubbles:true,cancelable:true}));
+ assert.equal(input.getAttribute('aria-activedescendant'),weaponResults[0].id);
  assert.equal(window.document.querySelectorAll('.search-result[aria-selected="true"]').length,1);
+ assert.equal(window.document.querySelector('#search-status').textContent,weaponResults.length+' results shown');
  window.document.querySelector('#close-search').click();assert.equal(window.document.querySelector('#global-search').open,false);
  dom.window.close();
 });
@@ -122,5 +160,7 @@ test('clearing search discards a result that arrives after the input was emptied
  instance.onmessage({data:{type:'results',id:request.id,items:[{category:'Weapons',name:'Whisperwind',url:'/weapons/'}]}});
  assert.equal(window.document.querySelectorAll('.search-result').length,0);
  assert.match(window.document.querySelector('#search-results').textContent,/Find a weapon/);
+ assert.equal(input.hasAttribute('aria-activedescendant'),false);
+ assert.equal(input.getAttribute('aria-expanded'),'false');
  dom.window.close();
 });

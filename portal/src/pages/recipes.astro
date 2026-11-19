@@ -1,6 +1,4 @@
 ---
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
 import Layout from '../layouts/Layout.astro';
 import RegistryDialog from '../components/RegistryDialog.astro';
 import { href, data, fmt, pretty, words } from '../lib/data';
@@ -10,9 +8,9 @@ interface Recipe {
   id: string;
   name: string;
   output: string;
+  mod: string;
   type: string;
   chapter: number | null;
-  ingredients: { id?: string }[];
 }
 interface Chapter {
   number: number;
@@ -20,41 +18,22 @@ interface Chapter {
   title: string;
   mechanism: string;
 }
-interface PonderStep {
-  input?: string;
-  output?: string;
-  inputIcon?: { url: string; animated?: boolean };
-  outputIcon?: { url: string; animated?: boolean };
-}
+type RecipeTexture = string | [number, number, number];
+
 const recipes: Recipe[] = data('recipes');
+const outputNamespaces = new Set(recipes.map(recipe => recipe.mod));
+const installedMods: { id: string; name: string }[] = data('mods');
+// An exact namespace match takes priority over the captured display name.
+// KubeJS output belongs to the pack's own category.
+const recipeModNames = Object.fromEntries(installedMods
+  .filter(mod => mod.id !== 'kubejs' && outputNamespaces.has(mod.id))
+  .map(mod => [mod.id, mod.name]));
 const chapters: Chapter[] = data('chapters');
 const families = data('recipe-families');
 const rules = data('production-rules');
-const scenes: { anchors: string[]; steps: PonderStep[] }[] = data('ponder', { scenes: [] }).scenes;
+const scenes: { anchors: string[] }[] = data('ponder', { scenes: [] }).scenes;
 const ponderItems = [...new Set(scenes.flatMap(scene => scene.anchors))];
-const recipeArt: Record<string, string> = {
-  'kubejs:makeshift_kinetic_mechanism': 'media/recipes/makeshift_kinetic_mechanism.png',
-  'kubejs:reinforced_mechanism': 'media/recipes/reinforced_mechanism.png',
-  'kubejs:creation_core': 'media/recipes/creation_core.png',
-  'kubejs:unstable_creation_core': 'media/recipes/unstable_creative_core.png',
-};
-
-for (const scene of scenes) {
-  for (const step of scene.steps) {
-    for (const [stack, icon] of [[step.input, step.inputIcon], [step.output, step.outputIcon]] as const) {
-      const id = stack?.trim().split(/\s+/).at(-1);
-      if (id && icon?.url && !icon.animated && existsSync(join(process.cwd(), 'public', icon.url))) {
-        recipeArt[id] ??= icon.url;
-      }
-    }
-  }
-}
-
-const recipeItemIds = new Set(recipes.flatMap(recipe => [recipe.output, ...recipe.ingredients.map(input => input.id)]));
-for (const { id, icon } of data('weapons')) {
-  if (recipeItemIds.has(id) && icon && existsSync(join(process.cwd(), 'public', icon))) recipeArt[id] ??= icon;
-}
-
+const recipeArt: Record<string, RecipeTexture> = data('recipe-textures', {});
 const chapterOutputs: Record<number, string> = {
   4: 'create:precision_mechanism',
   10: 'kubejs:creation_core',
@@ -79,7 +58,7 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
 <Layout title="Recipes" description="Search recipes added or changed by Towns & Kingdoms, from the first mechanism to the Creation Core." wide>
   <p class="eyebrow">Reference / Production</p>
   <h1>Recipes</h1>
-  <p class="intro">Find recipes added or changed by the pack. Look up what an item makes, see how a machine assembles it, or follow the mechanisms through the chapters.</p>
+  <p class="intro">Search the pack’s recipes by result or ingredient. Open a recipe to see its materials, crafting pattern or machine steps.</p>
   <div class="button-row recipe-jump-links">
     <a class="button button-primary" href="#recipe-results">Find a recipe</a>
     <a class="button" href={href('ponder/')}>Ponder item guides</a>
@@ -89,15 +68,22 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
   {milestones.length > 0 && <section class="recipe-landmarks" aria-labelledby="landmark-title">
     <h2 id="landmark-title">Chapter recipes</h2>
     <ol class="recipe-landmark-grid">
-      {milestones.map(({ chapter, recipe }) => <li>
-        <a href={'#recipe=' + encodeURIComponent(recipe.id)} class="recipe-landmark">
-          {recipeArt[recipe.output] && <img src={href(recipeArt[recipe.output])} alt="" width="38" height="38" />}
-          <span>
-            <small title={chapter.title}>Chapter {chapter.roman}</small>
-            <strong>{recipe.name}</strong>
-          </span>
-        </a>
-      </li>)}
+      {milestones.map(({ chapter, recipe }) => {
+        const art = recipeArt[recipe.output];
+        return <li>
+          <a href={'#recipe=' + encodeURIComponent(recipe.id)} class="recipe-landmark">
+            {typeof art === 'string' && <img class="recipe-item-art" src={href(art)} alt="" width="34" height="34" />}
+            {Array.isArray(art) && <span class="recipe-item-art recipe-item-atlas" aria-hidden="true" style={{
+              backgroundImage: `url("${href(`media/recipe-textures/items-${art[0]}.webp`)}")`,
+              backgroundPosition: `${art[1] * 100 / 15}% ${art[2] * 100 / 15}%`,
+            }}></span>}
+            <span>
+              <small title={chapter.title}>Chapter {chapter.roman}</small>
+              <strong>{recipe.name}</strong>
+            </span>
+          </a>
+        </li>;
+      })}
     </ol>
   </section>}
 
@@ -106,12 +92,12 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
       <h2 id="recipe-finder-title">Recipe finder</h2>
       <p>{fmt(recipes.length)} recipes across {fmt(processes.size)} processes</p>
     </header>
-    <nav class="recipe-processes" aria-label="Browse by process">
+    <nav class="recipe-processes" aria-label="Common processes">
       {processLinks.map(([id, name]) => <a href={href('recipes/?type=' + encodeURIComponent(id) + '#recipe-results')}>
         {name} <span>{fmt(processes.get(id) ?? 0)}</span>
       </a>)}
     </nav>
-    <div data-registry="recipes" data-ponder-items={JSON.stringify(ponderItems)} data-recipe-art={JSON.stringify(recipeArt)}>
+    <div data-registry="recipes" data-ponder-items={JSON.stringify(ponderItems)} data-recipe-mod-names={JSON.stringify(recipeModNames)}>
       <div class="toolbar recipe-toolbar">
         <div class="recipe-query">
           <input type="search" data-filter="query" placeholder="Search by item name or ID" aria-label="Search recipes" />
@@ -129,10 +115,10 @@ const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent
           <button type="button" data-recipe-clear>Clear filters</button>
         </div>
       </div>
-      <div class="results-meta"><span data-count aria-live="polite">Finding recipes…</span><span>Amounts are per recipe</span></div>
-      <div class="table-wrap">
+      <div class="results-meta"><span data-count aria-live="polite">Finding recipes…</span><span>Select a result for the full recipe</span></div>
+      <div class="table-wrap recipe-results-wrap">
         <table class="recipe-table">
-          <thead><tr><th scope="col">Result</th><th scope="col" class="recipe-input-column">Ingredients</th><th scope="col">Process</th><th scope="col">Progression</th></tr></thead>
+          <thead><tr><th scope="col">Result</th><th scope="col" class="recipe-input-column">Ingredients</th><th scope="col">Process</th><th scope="col" class="recipe-progression-column">Progression</th></tr></thead>
           <tbody data-results></tbody>
         </table>
       </div>
