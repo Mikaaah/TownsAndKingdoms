@@ -12,6 +12,8 @@ const kit = [
   { name: 'Table Cloth', use: 'Displays an offer. One wool block in your chosen color and one Andesite Alloy make two cloths.' },
 ];
 const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(id));
+const tutorialVideo = 'baWJ_Xg-4gU';
+const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
 ---
 <Layout title="Player shops" description="Set up Create's player shops, set prices, and share your shop through the Workshop Trading Hub.">
   <p class="eyebrow">Guides / Multiplayer</p>
@@ -24,6 +26,7 @@ const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(
     <a href="#shop-teleporter">List your shop</a>
     <a href="#checkout">Buy from a shop</a>
     <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#video">Video walkthrough</a>
   </nav>
 
   <section id="supplies" class="shop-section" aria-labelledby="supplies-title">
@@ -45,11 +48,19 @@ const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(
       <QuestIcon name="rotation_mechanism" size={28} />
       <h2 id="create-shop-title">Build the Create shop</h2>
     </div>
+    <figure class="shop-figure">
+      <img src={href('media/player-shops/stock-setup.webp')} width="850" height="336" loading="lazy" decoding="async" alt="The Stock Link sits above the Packager next to the stock barrel and shares a network with the Stock Ticker. Finished parcels go to pickup." />
+    </figure>
     <ol class="shop-steps">
       <li><strong>Connect the stock.</strong> Attach a Packager to the side of your stock chest with its output facing out. Put a Stock Link on top of the Packager and fill the chest with the items you want to sell.</li>
       <li><strong>Set up the counter.</strong> Hold a Stock Ticker and right-click the Stock Link to bind it before placing the Ticker. Put a seated mob or a filled Blaze Burner in front of the Ticker as its Stock Keeper. Mark a place for customers to collect the Packager's output.</li>
       <li><strong>Prepare an offer.</strong> Right-click the Stock Keeper while holding an unplaced Table Cloth. Click a stocked item to add it and scroll over it to adjust the amount. Click <strong>Configure</strong>, then place the cloth in the shop. Each cloth represents one offer, which can contain several items.</li>
-      <li><strong>Set the price.</strong> Right-click the slot on the side of the cloth with the item you want as payment. Hold right-click on that slot to set the amount per purchase. For example, configure a bundle of 16 oak logs and set the price to 2 emeralds.</li>
+      <li>
+        <strong>Set the price.</strong> Right-click the slot on the side of the cloth with the item you want as payment. Hold right-click on that slot to set the amount per purchase. For example, configure a bundle of 16 oak logs and set the price to 2 emeralds.
+        <figure class="shop-figure">
+          <img src={href('media/player-shops/offer-and-price.webp')} width="780" height="226" loading="lazy" decoding="async" alt="An example Table Cloth offer bundles 16 oak logs for 2 emeralds." />
+        </figure>
+      </li>
       <li><strong>Check public access.</strong> Open the Stock Keeper screen and use the network lock so visitors check out using a Shopping List. Test a purchase as a customer, including access to the cloth, keeper and package pickup. Right-click the Stock Ticker to collect its stored payments.</li>
     </ol>
     <p class="shop-tip">For an in-game demonstration, hover over a <strong>Table Cloth</strong> and hold <kbd>W</kbd> to open Create's Ponder.</p>
@@ -61,8 +72,11 @@ const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(
       <h2 id="shop-teleporter-title">List your shop with the Shop Teleporter</h2>
     </div>
     <p>The teleporter is named <strong>Trading Hub</strong> in-game. It puts your shop in the public warp directory. Create handles the sales at the counter.</p>
+    <figure class="shop-figure">
+      <img src={href('media/player-shops/market-trading-hub.webp')} width="708" height="226" loading="lazy" decoding="async" alt="The Market quest page, marked by a pouch icon, gives you a free Trading Hub." />
+    </figure>
     <ol class="shop-steps">
-      <li><strong>Get a Trading Hub.</strong> CB-1.1.3 has no crafting recipe for this block. Ask your server staff how to obtain a Trading Hub if you do not already have one.</li>
+      <li><strong>Claim a free Trading Hub.</strong> Open your quest book, go to the <strong>Market</strong> quest page and claim the <strong>Trading Hub</strong> reward.</li>
       <li><strong>Place it near the entrance.</strong> Leave a clear spot on solid ground next to the block for arriving visitors. Placing the Hub opens the listing editor.</li>
       <li><strong>Publish the listing.</strong> Enter a recognizable name and a description of what you sell. Choose an icon, then click <strong>Save</strong>. To edit later, sneak and right-click your Hub, or find it under <strong>Your Warps</strong>.</li>
       <li><strong>Visit a listed shop.</strong> Right-click a Trading Hub, open the public <strong>All Warps</strong> panel, and search for the shop. Select the listing and click <strong>Teleport</strong>.</li>
@@ -89,6 +103,23 @@ const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(
       <div><dt>Visitors cannot order</dt><dd>Confirm the Stock Keeper is in position, the offer has a price, and the chest has enough items for a full purchase. Test access to the counter and pickup point from a visitor's account if the land is claimed.</dd></div>
       <div><dt>The Trading Hub cannot teleport</dt><dd>Clear space for visitors to stand next to the destination. Save the listing again if you moved or replaced its Trading Hub.</dd></div>
     </dl>
+  </section>
+
+  <section id="video" class="shop-section" aria-labelledby="video-title">
+    <h2 id="video-title">Video walkthrough</h2>
+    <p>Shadow builds a working store with Create and shows how its parts fit together.</p>
+    <iframe
+      class="shop-video"
+      src={`https://www.youtube-nocookie.com/embed/${tutorialVideo}`}
+      title={tutorialTitle}
+      width="960"
+      height="540"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="encrypted-media; picture-in-picture; fullscreen"
+      allowfullscreen
+    ></iframe>
+    <p><a href={`https://www.youtube.com/watch?v=${tutorialVideo}`}>Watch {tutorialTitle} by Shadow on YouTube</a></p>
   </section>
 </Layout>
 
@@ -135,6 +166,22 @@ const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(
     background: var(--surface);
   }
   .shop-issues > div { margin-top: 16px; }
+  .shop-figure { margin: 14px 0; }
+  .shop-figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .shop-video {
+    display: block;
+    width: min(100%, 780px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 16px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
   @media (max-width: 900px) {
     .shop-kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
