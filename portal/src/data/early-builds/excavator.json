@@ -1,0 +1,75 @@
+{
+  "title": "Build an Immersive Engineering Excavator",
+  "description": "Find a mineral vein, assemble the engine and Bucket Wheel, then collect and sort the material it digs up.",
+  "icon": "pickaxe",
+  "materials": [
+    "Survey Tools, Core Sample Drill and a portable source of 40 FE/t",
+    "Engineer's Hammer and Engineer's Manual",
+    "26 Steel Scaffolding and 16 Steel Sheetmetal",
+    "8 Blocks of Steel and 3 Radiators",
+    "9 Light Engineering Blocks, 3 Heavy Engineering Blocks and 1 Redstone Engineering Block",
+    "2 Towns & Kingdoms Heavy Engineering Machines",
+    "A connection that can supply 4,096 FE/t, plus storage or a conveyor at the output"
+  ],
+  "steps": [
+    {
+      "title": "Follow the mineral readings",
+      "text": "Hold use with Survey Tools on natural rock or soil. Move at least four blocks between readings and follow the direction and distance hints. F3+G can help you map your readings. Veins span areas and can overlap.",
+      "id": "survey"
+    },
+    {
+      "title": "Sample the wheel's digging position",
+      "text": "Power the Core Sample Drill with 40 FE/t and right-click to start. After it finishes, right-click again to collect the Core Sample. Compare two or three nearby readings and pick a spot with the mineral mix and saturation you want. Plan for the bottom of the Bucket Wheel to sit above that spot.",
+      "id": "sample"
+    },
+    {
+      "title": "Build the engine and Bucket Wheel by layer",
+      "text": "Check the engine and Bucket Wheel separately in the Engineer's Manual and build from the bottom up. The wheel fits between the engine braces. Place one custom Heavy Engineering Machine in the engine's middle layer at the wheel-side end of its three-block Heavy Engineering row. Place the second one at the bottom of the wheel.",
+      "figure": {
+        "src": "media/early-builds/excavator-assembly.webp",
+        "width": 880,
+        "height": 620,
+        "alt": "Three overhead layers of the Excavator engine and a side view of the seven-block-wide Bucket Wheel. Blue squares mark the custom Heavy Engineering Machines. Gold squares mark the engine's rear-center Heavy Engineering Block and the steel block at the center of the wheel.",
+        "caption": "The engine and wheel use two custom machine blocks. Hammer the gold-marked blocks to form the structure."
+      },
+      "id": "build"
+    },
+    {
+      "title": "Form both parts with the hammer",
+      "text": "Right-click the engine's rear-center Heavy Engineering Block with the Engineer's Hammer. A correctly aligned Bucket Wheel forms with the engine. To form the wheel separately, hammer the Block of Steel at the center of the wheel.",
+      "id": "form"
+    },
+    {
+      "title": "Power the engine and sort its output",
+      "text": "Connect a sustained 4,096 FE/t supply to the engine's side power connections. Catch material at the rear output with storage or route it onto a conveyor. Use the deposit list to plan separate output paths for metal-bearing stone, ores and spoils.",
+      "id": "power"
+    }
+  ],
+  "tips": [
+    {
+      "title": "The structure will not form",
+      "text": "Check both custom machine positions, the wheel alignment and which block you are hammering. Match the Standard variant of Steel Scaffolding in the previews.",
+      "id": "structure-wont-form"
+    },
+    {
+      "title": "The wheel will not turn",
+      "text": "Confirm the wheel is formed, the power connection can sustain 4,096 FE/t at the engine, and the rear redstone control allows the machine to run.",
+      "id": "wheel-wont-turn"
+    },
+    {
+      "title": "The wheel brings up mostly stone",
+      "text": "Sample directly under the bottom of the wheel. Low saturation and distance from the vein center increase spoils, and deposits deplete with use. For example, survey for Copper Schist if you want Veridium and Copper Ore, or a Certus Quartz Pocket if you are feeding an AE2 line.",
+      "id": "mostly-stone"
+    }
+  ],
+  "links": [
+    {
+      "label": "Excavator deposits and output chances",
+      "path": "recipes/#production-rules"
+    },
+    {
+      "label": "Chapter VII quest board",
+      "path": "chapters/#chapter-07"
+    }
+  ]
+}

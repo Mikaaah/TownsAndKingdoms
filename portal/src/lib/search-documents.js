@@ -15,13 +15,14 @@ const articleEntries = [
   ['custom-mods/','Pack-exclusive mods and mechanics','Progression, Workshop, Unidentified Loot, Resonant Arcana, Flow Control, Wildshape, Combat Punchy, Combat Afloat and Alchemical Lasers.'],
   ['guides/server-setup/','Dedicated server setup','Minecraft 1.21.1, NeoForge, Java 21, server files, installation, memory, BisectHosting and code Mika.'],
   ['guides/player-shops/','Player shops','Shop Teleporter, Trading Hub, market, Create shops, Table Cloth, Stock Ticker and selling items.'],
+  ['loot/pools/','Unidentified Loot pool catalog','Loot per item, tier, enemy level group, dimension and boss drops.'],
   ['servers/','Official and public servers','Official Server button, hub, EU and US regions, community rules, and public servers via BisectHosting.'],
   ['discord/','Discord community','Official invite, community, support and announcements.'],
   ['support/','Report a bug or suggest a feature','Issue reports, reproduction steps, crash reports and log submission.'],
   ['faq/','Frequently asked questions','Getting started, server access, recipes, shops, character progression and troubleshooting.']
 ];
 export function buildSearchDocuments(datasets, base) {
-  const { weapons=[], recipes=[], mods=[], chapters=[], bosses=[], skills={}, ponder={}, mechanics={}, families=[], eyes=[], productionRules=[] }=datasets;
+  const { weapons=[], recipes=[], mods=[], chapters=[], bosses=[], skills={}, ponder={}, mechanics={}, families=[], eyes=[], productionRules=[], buildGuides=[] }=datasets;
   const docs=[];
   const add=(category,id,name,description,url,subtitle='',extra={})=>docs.push({_key:category+':'+id,category,id,name:clean(name)||words(id),description:clean(description),url,subtitle:clean(subtitle),...extra});
   for(const w of weapons)add('Weapons',w.id,w.name,[w.styleName,w.archetype,w.grip,w.modName].join(' '),base+'weapons/#item='+encodeURIComponent(w.id),w.modName+' · '+w.styleName,{mod:w.modName,style:w.styleName});
@@ -37,6 +38,13 @@ export function buildSearchDocuments(datasets, base) {
   for(const s of ponder.scenes||[])add('Ponder',s.id,s.title,(s.anchors||[]).join(' '),base+'ponder/?scene='+encodeURIComponent(s.slug),'Ponder item guide');
   for(const [id,title,description]of guideEntries)add('Guides',id,title,description,base+'guides/#'+id,'Practical handbook');
   for(const [route,title,description]of articleEntries)add('Guides',route,title,description,base+route,'Official handbook');
+  for(const guide of buildGuides){
+    const route='guides/'+guide.id+'/';
+    add('Guides',route,guide.title,[guide.description,guide.keywords,guide.materials],base+route,'Build guide');
+    for(const step of [...guide.steps,...(guide.tips||[])]){
+      if(step.id)add('Guides',route+'#'+step.id,step.title,step.text,base+route+'#'+step.id,guide.title);
+    }
+  }
   for(const eye of eyes)add('Bosses',eye.id,eye.name,[eye.bossName,eye.bossId,'End Remastered eye stronghold portal'].join(' '),base+'bosses/#eye-'+eye.id.split(':').pop(),'End Remastered');
   for(const o of mechanics.origins||[])add('Origins',o.id,o.name,[o.description,...(o.perks||[]).map(p=>p.description)].join(' '),base+'mechanics/#origin-'+o.id,o.tier||'Origin');
   for(const id of ['leveling','origins','titles'])add('Mechanics',id,words(id),clean(mechanics[id]),base+'mechanics/#'+id,'Character systems');

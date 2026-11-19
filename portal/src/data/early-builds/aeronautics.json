@@ -1,0 +1,69 @@
+{
+  "title": "Assemble and lift your first airship",
+  "description": "Make a small Aeronautics test platform in Chapter VI. Check glue, lift and propulsion before building a full ship.",
+  "icon": "map",
+  "materials": [
+    "Physics Assembler and Super Glue or Honey Glue",
+    "A small hull and a clear place to test",
+    "Envelope blocks, an Adjustable Burner and a redstone control",
+    "For forward movement, a powered propeller and a way to control it"
+  ],
+  "steps": [
+    {
+      "id": "assemble",
+      "title": "Glue the parts you want to move",
+      "text": "Join the hull, burner and balloon to the blocks in front of the Physics Assembler. Avoid including the dock or scaffolding in the glue area. Hold right-click and pull the Assembler’s on-screen lever to assemble the contraption."
+    },
+    {
+      "id": "lift",
+      "title": "Fill a sealed balloon above the burner",
+      "text": "Build an airtight Envelope shell with empty space inside and the Adjustable Burner open to that space from below. Give the burner a redstone signal. It fills the balloon from the top down. Set its maximum output on the burner and use the input signal to vary it.",
+      "figure": {
+        "src": "media/early-builds/aeronautics-lift.webp",
+        "width": 880,
+        "height": 448,
+        "alt": "An airtight Envelope shell surrounds a hollow balloon. An Adjustable Burner and redstone control feed hot air from below the hull."
+      }
+    },
+    {
+      "id": "first-thrust",
+      "title": "Add thrust after the lift test",
+      "text": "Attach a powered Propeller Bearing and a propeller with at least two valid sail blocks. Use Engineer’s Goggles to inspect thrust. Test low over a clear landing area. Reverse its rotation or use a Wrench to change thrust direction if it moves backward."
+    },
+    {
+      "id": "land",
+      "title": "Bring it down before disassembly",
+      "text": "Lower the burner output and let the hull settle near the ground. Stop its motion before disassembling. A fast or poorly aligned contraption can fail the disassembly check."
+    }
+  ],
+  "tips": [
+    {
+      "id": "balloon-wont-lift",
+      "title": "The burner is running but it won’t lift",
+      "text": "Inspect the shell for leaks and keep the balloon interior open. More balloon volume can hold more hot air. Reduce the weight of the hull if the balloon is full and still cannot lift it. Lift and propeller thrust weaken with altitude."
+    },
+    {
+      "id": "ship-falls-apart",
+      "title": "Parts stay behind or fall off",
+      "text": "Inspect the glue boundaries with the glue item. Make sure every part is connected to the hull and that the Assembler faces the glued structure. Test a small section before attaching the entire ship."
+    }
+  ],
+  "links": [
+    {
+      "label": "Chapter VI · Light Engineering",
+      "path": "chapters/#chapter-06"
+    },
+    {
+      "label": "Physics Assembler recipe",
+      "path": "recipes/#recipe=tnk%3Amachines%2Ftier_05%2Fnative_upgrade%2Fsimulated%2Fphysics_assembler%2F0"
+    },
+    {
+      "label": "Adjustable Burner recipe",
+      "path": "recipes/#recipe=tnk%3Amachines%2Ftier_05%2Fnative_upgrade%2Faeronautics%2Fadjustable_burner%2F0"
+    },
+    {
+      "label": "Build a walking machine",
+      "path": "guides/walking-machines/"
+    }
+  ]
+}

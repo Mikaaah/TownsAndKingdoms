@@ -1,11 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MaterialsChecklist from '../../components/MaterialsChecklist.astro';
 import { href } from '../../lib/data';
 ---
 <Layout title="Build a walking machine" description="Assemble a Let It Walk walker using Chapter VI Light Engineering parts.">
   <p class="eyebrow"><a href={href('features/#moving-machines')}>Moving machines</a> / Light Engineering</p>
   <h1>Build a walking machine</h1>
   <p class="intro">Let It Walk uses parts from <a href={href('chapters/#chapter-06')}>Chapter VI Light Engineering</a>. Prepare Reinforced Mechanisms and a Light Engineering Machine before you start.</p>
+
+  <MaterialsChecklist id="walking-machines" items={[
+    'Reinforced Mechanisms and a Light Engineering Machine',
+    { label: 'Walker Core', href: href('recipes/?q=let_it_walk:walker_core'), linkLabel: 'Recipe' },
+    'Articulation Units and matching hinge or swivel parts',
+    'Pilot Controls or a Remote Pilot Controller',
+    'Positioner and building blocks for the body and limbs',
+    { label: 'Optional Jet Nozzle', href: href('recipes/?q=let_it_walk:jet_nozzle'), linkLabel: 'Recipe' },
+  ]} />
 
   <div class="prose">
     <ol>

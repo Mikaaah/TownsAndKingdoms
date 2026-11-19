@@ -1,0 +1,41 @@
+{
+  "title": "Build an Aether portal",
+  "description": "Open a gateway to the Aether from the Overworld with a glowstone frame and a bucket of water.",
+  "icon": "candle",
+  "materials": [
+    "10 Glowstone blocks for a frame with open corners, or 14 for a filled outline",
+    "1 Water Bucket",
+    "A flat, accessible spot in the Overworld"
+  ],
+  "steps": [
+    {
+      "id": "frame",
+      "title": "Stand up a glowstone frame",
+      "text": "Make a vertical rectangle four blocks wide and five blocks tall, with a two-by-three opening inside. The four corner blocks are optional.",
+      "figure": {
+        "src": "media/early-builds/aether-portal.webp",
+        "width": 880,
+        "height": 376,
+        "alt": "Front view of the ten Glowstone frame blocks with optional corners. Pour the Water Bucket into the two-by-three opening."
+      }
+    },
+    {
+      "id": "activate",
+      "title": "Pour water into the opening",
+      "text": "Use the Water Bucket inside the frame against the lower glowstone. When the opening fills with the portal, walk through. Use the portal on the other side to return."
+    }
+  ],
+  "tips": [
+    {
+      "id": "portal-wont-light",
+      "title": "The water flows out",
+      "text": "Confirm you used full Glowstone blocks, the inner opening is clear, and the frame stands upright in the Overworld. Recheck the bottom and top rows and both side columns."
+    }
+  ],
+  "links": [
+    {
+      "label": "Aether portal reference",
+      "path": "https://aether.wiki.gg/wiki/The_Aether/The_Aether"
+    }
+  ]
+}

@@ -17,4 +17,10 @@ datasets.chapters=JSON.parse(await readFile(resolve(source,'chapter-questlines.j
 try { datasets.families=JSON.parse(await readFile(resolve(source,'recipe-families.json'),'utf8')); } catch {datasets.families=[];}
 try { datasets.eyes=JSON.parse(await readFile(resolve(source,'end-eyes.json'),'utf8')); } catch {datasets.eyes=[];}
 try { datasets.productionRules=JSON.parse(await readFile(resolve(source,'production-rules.json'),'utf8')); } catch {datasets.productionRules=[];}
+datasets.buildGuides = await Promise.all(
+  (await readdir(resolve(source, 'early-builds'))).filter(name => name.endsWith('.json')).sort().map(async name => ({
+    ...JSON.parse(await readFile(resolve(source, 'early-builds', name), 'utf8')),
+    id: name.slice(0, -5),
+  })),
+);
 await writeFile(resolve(destination,'search.json'),JSON.stringify(buildSearchDocuments(datasets,'/TownsAndKingdoms/')));

@@ -1,0 +1,255 @@
+---
+import { href as siteHref } from '../lib/data';
+
+interface Item {
+  id?: string;
+  label: string;
+  description?: string;
+  icon?: string;
+  href?: string;
+  linkLabel?: string;
+}
+
+interface Props {
+  id: string;
+  items: (string | Item)[];
+  title?: string;
+  description?: string;
+}
+
+const { id, items, title = 'What you need', description } = Astro.props;
+const rows = items.map((item): Item => typeof item === 'string' ? { label: item } : item);
+const board = siteHref('media/clipboard/board.png');
+---
+
+<section class="clipboard" aria-labelledby={`${id}-title`} data-materials-checklist={id} style={{ '--clipboard-board': `url("${board}")` }}>
+  <img class="clasp" src={siteHref('media/clipboard/clasp.png')} width="108" height="38" alt="" />
+  <header class="clipboard-heading">
+    <h2 id={`${id}-title`} data-materials-title>{title}</h2>
+    <span class="count" data-materials-count hidden></span>
+  </header>
+  {description && <p class="clipboard-description">{description}</p>}
+  <ul>
+    {rows.map((item, index) => {
+      const detail = item.description ? `${id}-description-${index}` : undefined;
+      return <li>
+        <label>
+          <input type="checkbox" value={item.id ?? item.label} aria-describedby={detail} aria-label={item.label} />
+          {item.icon && <img class="item-icon" src={siteHref(item.icon)} width="32" height="32" alt="" />}
+          <span class="item-copy">
+            <span class="item-name" data-materials-label>{item.label}</span>
+            {item.description && <span class="item-description" id={detail} data-materials-description>{item.description}</span>}
+          </span>
+        </label>
+        {item.href && <a class="recipe" href={item.href} aria-label={item.linkLabel ?? `${item.label} recipe`}>{item.linkLabel ?? 'Recipe'}</a>}
+      </li>;
+    })}
+  </ul>
+  <div class="clipboard-actions" data-materials-actions hidden>
+    <p data-materials-status role="status"></p>
+    <button type="button" data-materials-copy>Copy checklist</button>
+  </div>
+  <textarea data-materials-text aria-label="Checklist text" rows="5" readonly hidden></textarea>
+</section>
+
+<script>
+  for (const board of document.querySelectorAll<HTMLElement>('[data-materials-checklist]')) {
+    const key = `tnk3-checklist.${board.dataset.materialsChecklist}`;
+    const boxes = Array.from(board.querySelectorAll<HTMLInputElement>('input[type="checkbox"]'));
+    const count = board.querySelector<HTMLElement>('[data-materials-count]')!;
+    const status = board.querySelector<HTMLElement>('[data-materials-status]')!;
+    const field = board.querySelector<HTMLTextAreaElement>('[data-materials-text]')!;
+    const copy = board.querySelector<HTMLButtonElement>('[data-materials-copy]')!;
+    const actions = board.querySelector<HTMLElement>('[data-materials-actions]')!;
+
+    try {
+      const saved = JSON.parse(localStorage.getItem(key) ?? '[]');
+      if (Array.isArray(saved)) {
+        for (const box of boxes) box.checked = saved.includes(box.value);
+      }
+    } catch {
+      // The checkboxes still work when storage is unavailable.
+    }
+
+    function updateCount() {
+      const checked = boxes.filter(box => box.checked).map(box => box.value);
+      count.textContent = `${checked.length} of ${boxes.length} collected`;
+      return checked;
+    }
+
+    updateCount();
+    count.hidden = false;
+    actions.hidden = false;
+    board.addEventListener('change', () => {
+      const checked = updateCount();
+      field.hidden = true;
+      status.textContent = '';
+      try { localStorage.setItem(key, JSON.stringify(checked)); } catch { /* Browser storage can be disabled. */ }
+    });
+
+    copy.addEventListener('click', async () => {
+      const pageTitle = board.closest('main')?.querySelector('h1')?.textContent?.trim();
+      const title = board.querySelector('[data-materials-title]')!.textContent?.trim();
+      const rows = boxes.map(box => {
+        const label = box.closest('label')!;
+        const item = label.querySelector('[data-materials-label]')!.textContent?.trim();
+        const detail = label.querySelector('[data-materials-description]')?.textContent?.trim();
+        return `- [${box.checked ? 'x' : ' '}] ${item}${detail ? ` — ${detail}` : ''}`;
+      });
+      const text = [pageTitle || title, '', ...rows].join('\n');
+      try {
+        await navigator.clipboard.writeText(text);
+        field.hidden = true;
+        status.textContent = 'Checklist copied.';
+      } catch {
+        field.value = text;
+        field.hidden = false;
+        field.focus();
+        field.select();
+        status.textContent = 'Select and copy the checklist text.';
+      }
+    });
+  }
+</script>
+
+<style>
+  @font-face {
+    font-family: 'Minecraft Checklist';
+    src: url('../assets/MinecraftChecklist.woff') format('woff');
+    font-display: swap;
+  }
+  .clipboard {
+    position: relative;
+    isolation: isolate;
+    width: min(100%, 680px);
+    margin: 31px 0 26px;
+    padding: 27px 30px 20px;
+    color: #251910;
+    color-scheme: light;
+  }
+  .clipboard::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    border: 22px solid transparent;
+    border-image: var(--clipboard-board) 24 fill stretch;
+    image-rendering: pixelated;
+    content: '';
+  }
+  .clasp {
+    position: absolute;
+    top: -19px;
+    left: 50%;
+    width: 108px;
+    height: auto;
+    transform: translateX(-50%);
+    image-rendering: pixelated;
+    pointer-events: none;
+  }
+  .clipboard-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 4px 12px;
+    padding: 0 0 8px;
+  }
+  .clipboard-heading h2 {
+    margin: 0;
+    font: 400 clamp(17px, 3vw, 22px) / 1.3 'Minecraft Checklist', Geist, sans-serif;
+    letter-spacing: 0;
+  }
+  .count { color: #463123; font-size: .82rem; font-weight: 600; }
+  .clipboard-description { margin: 0 0 10px; color: #463123; font-size: .88rem; line-height: 1.45; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 4px 14px;
+    margin: 0;
+    border-top: 1px solid #51352047;
+  }
+  label {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 0;
+    min-height: 44px;
+    gap: 10px;
+    padding: 6px 0;
+    cursor: pointer;
+  }
+  input[type='checkbox'] {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 19px;
+    height: 19px;
+    min-height: 0;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #573822;
+    border-radius: 0;
+    background: #e0c6a5;
+    cursor: pointer;
+  }
+  input:checked { border-color: #3e462e; background: #3e462e; }
+  input:checked::after {
+    width: 5px;
+    height: 9px;
+    transform: translateY(-1px) rotate(43deg);
+    border: solid #fff2d7;
+    border-width: 0 2px 2px 0;
+    content: '';
+  }
+  .item-icon { flex: none; width: 29px; height: 29px; object-fit: contain; image-rendering: pixelated; }
+  .item-copy { min-width: 0; overflow-wrap: anywhere; line-height: 1.42; }
+  .item-name { display: block; font-size: .94rem; font-weight: 700; }
+  .item-description { display: block; color: #463123; font-size: .83rem; }
+  input:checked ~ .item-copy .item-name { text-decoration: line-through; }
+  .recipe {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: #4f231b;
+    font-size: .83rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .clipboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px 12px;
+    padding-top: 8px;
+    border-top: 1px solid #51352047;
+  }
+  .clipboard-actions[hidden] { display: none; }
+  .clipboard-actions p { margin: 0; color: #463123; font-size: .82rem; }
+  .clipboard-actions button {
+    padding: 6px 11px;
+    border: 1px solid #613e25;
+    border-radius: 3px;
+    background: #d1b28b;
+    color: #2a1a0e;
+    font-size: .83rem;
+    font-weight: 700;
+  }
+  .clipboard-actions button:hover:not(:disabled) { border-color: #3e2819; background: #dfc39f; }
+  textarea { width: 100%; margin-top: 8px; border-color: #613e25; background: #ecd6b8; color: #251910; }
+  :is(button, a, input, textarea):focus-visible { outline: 2px solid #572d20; outline-offset: 3px; }
+
+  @media (max-width: 460px) {
+    .clipboard { padding-inline: 18px; }
+    li { gap: 0 9px; }
+    label { gap: 7px; }
+    .item-icon { width: 23px; height: 23px; }
+  }
+  @media (forced-colors: active) {
+    input[type='checkbox'] { appearance: auto; }
+    input:checked::after { content: none; }
+  }
+</style>

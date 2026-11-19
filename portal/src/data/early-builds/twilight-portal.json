@@ -1,0 +1,47 @@
+{
+  "title": "Make a Twilight Forest portal",
+  "description": "Surround a shallow pool with flowers and drop in a diamond to enter Twilight Forest from the Overworld.",
+  "icon": "herb",
+  "materials": [
+    "4 water source blocks",
+    "12 flowers or other supported plants",
+    "Grass or dirt for a 4 × 4 footprint",
+    "1 Diamond"
+  ],
+  "steps": [
+    {
+      "id": "pool",
+      "title": "Fill a two-by-two pool",
+      "text": "Dig a square two blocks wide and one block deep in the Overworld. Fill all four spaces with still water. Keep a solid floor under the pool."
+    },
+    {
+      "id": "flowers",
+      "title": "Plant a complete border",
+      "text": "Place a flower on each block in the ring around the water. Include the four corners. Use grass or dirt that can hold the flowers.",
+      "figure": {
+        "src": "media/early-builds/twilight-portal.webp",
+        "width": 880,
+        "height": 352,
+        "alt": "Top view of the four water source blocks surrounded by twelve flowers. Toss a Diamond into the water."
+      }
+    },
+    {
+      "id": "activate",
+      "title": "Toss one diamond into the water",
+      "text": "Drop the diamond as an item into the pool and step back before the lightning strike. The water turns into the portal. Step into it once it is active."
+    }
+  ],
+  "tips": [
+    {
+      "id": "portal-wont-light",
+      "title": "The diamond just sits in the water",
+      "text": "Check all four source blocks, the floor below them and the whole planted ring. Make sure you dropped the diamond as an item in the Overworld. If the structure is correct, the portal may need a safer destination and you can try a new site."
+    }
+  ],
+  "links": [
+    {
+      "label": "Twilight Forest portal reference",
+      "path": "https://ftb.fandom.com/wiki/Getting_Started_(The_Twilight_Forest)/en"
+    }
+  ]
+}

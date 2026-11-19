@@ -3,6 +3,7 @@
 from __future__ import annotations
 import json,math,re
 from pathlib import Path
+from extract_loot_pools import catalog as loot_pool_catalog
 
 PORTAL=Path(__file__).resolve().parents[1]
 REPO=PORTAL.parent
@@ -189,14 +190,13 @@ cost_matrix=[]
 for t in tiers:
     b=base_costs.get(str(t['rank']),loot_config['identification_costs']['default'])
     cost_matrix.append({'Tier':f'{t["rank"]} · {t["name"]}',**{q['name']:math.ceil(b*q['cost_multiplier']*loot_xp['identification_xp_multiplier'])for q in rarities['qualities']}})
+pool_catalog=loot_pool_catalog(REPO/'TK3',PORTAL/'scripts/registry_metadata.json',loot_config,boss_rewards,dimensions)
+tier_names={tier['rank']:tier['name'] for tier in tiers}
 loot_band_rows=[
- {'Effective source level':'1–10','Tier roll':'75% Novice · 25% Apprentice'},
- {'Effective source level':'11–30','Tier roll':'50% Novice · 35% Apprentice · 15% Adventurer'},
- {'Effective source level':'31–50','Tier roll':'50% Apprentice · 35% Adventurer · 15% Explorer'},
- {'Effective source level':'51–70','Tier roll':'50% Adventurer · 35% Explorer · 15% Veteran'},
- {'Effective source level':'71–80','Tier roll':'50% Explorer · 35% Veteran · 15% Champion'},
- {'Effective source level':'81–94','Tier roll':'50% Veteran · 35% Champion · 15% Hero'},
- {'Effective source level':'95–100','Tier roll':'60% Champion · 35% Hero · 5% Legendary'}]
+ {'Effective source level':f'{group["min"]}–{group["max"]}',
+  'Tier roll':' · '.join(f'{roll["chance"]}% {tier_names[roll["rank"]]}' for roll in group['tiers'])}
+ for group in pool_catalog['levelGroups']
+]
 fluid_rows=[{'XP fluid':label(k),'Fluid ID':k,'mB per vanilla XP point':number(v)}for k,v in machine['millibucketsPerXp'].items()]
 boss_rows=[{'Encounter':p['name'],'Loot tier':p['tier'],'Pool entries':len(p['items'])}for p in boss_rewards['pools']if p.get('enabled',True)]
 dimension_rows=[{'Dimension':label(d['dimension']),'Local equipment families':', '.join(label(ns)for ns in d['item_namespaces']),
@@ -273,5 +273,6 @@ loot={
 result={'leveling':leveling,'originGuide':origin_guide,'origins':origins,'titles':titles,'loot':loot}
 destination=PORTAL/'src/data/mechanics.json';destination.parent.mkdir(parents=True,exist_ok=True)
 destination.write_text(json.dumps(result,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
+(destination.parent/'loot-pools.json').write_text(json.dumps(pool_catalog,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
 print(json.dumps({'mechanics':str(destination.relative_to(REPO)),'origins':len(origins),'titles':len(title_catalog),
                   'loot_entries':len(loot_config['weapons']),'loot_tiers':len(tiers),'boss_pools':len(boss_rows)}))

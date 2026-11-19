@@ -1,17 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MaterialsChecklist from '../../components/MaterialsChecklist.astro';
 import QuestIcon from '../../components/QuestIcon.astro';
 import { href } from '../../lib/data';
 
-const kit = [
-  { name: 'Chest or barrel', use: 'Holds stock for the shop.' },
-  { name: 'Packager', use: 'Boxes completed orders.', recipe: 'tnk:machines/tier_03/crafting/create/packager' },
-  { name: 'Stock Link', use: 'Connects the Packager to the shop network.', recipe: 'tnk:machines/tier_03/native_upgrade/create/stock_link/0' },
-  { name: 'Stock Ticker', use: 'Runs checkout and stores payments.', recipe: 'tnk:machines/tier_03/native_upgrade/create/stock_ticker/0' },
-  { name: 'Stock Keeper', use: 'Use a mob in a Create Seat or a filled Blaze Burner.' },
-  { name: 'Table Cloth', use: 'Displays an offer. One wool block in your chosen color and one Andesite Alloy make two cloths.' },
-];
 const recipeLink = (id: string) => href('recipes/#recipe=' + encodeURIComponent(id));
+const kit = [
+  { id: 'container', label: 'Chest or barrel', description: 'Holds stock for the shop.', icon: 'media/clipboard/barrel.png' },
+  { id: 'packager', label: 'Packager', description: 'Boxes completed orders.', icon: 'media/clipboard/packager.png', href: recipeLink('tnk:machines/tier_03/crafting/create/packager') },
+  { id: 'stock-link', label: 'Stock Link', description: 'Connects the Packager to the shop network.', icon: 'media/clipboard/stock-link.png', href: recipeLink('tnk:machines/tier_03/native_upgrade/create/stock_link/0') },
+  { id: 'stock-ticker', label: 'Stock Ticker', description: 'Runs checkout and stores payments.', icon: 'media/clipboard/stock-ticker.png', href: recipeLink('tnk:machines/tier_03/native_upgrade/create/stock_ticker/0') },
+  { id: 'stock-keeper', label: 'Stock Keeper', description: 'Use a mob in a Create Seat or a filled Blaze Burner.', icon: 'media/clipboard/stock-keeper.png' },
+  { id: 'table-cloth', label: 'Table Cloth', description: 'Displays an offer. One wool block in your chosen color and one Andesite Alloy make two cloths.', icon: 'media/clipboard/table-cloth.png' },
+];
 const tutorialVideo = 'baWJ_Xg-4gU';
 const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
 ---
@@ -20,19 +21,13 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
   <h1>Build a player shop</h1>
   <p class="intro">Sell items from a Create counter and use Workshop's Trading Hub to let other players find and visit it.</p>
 
-  <section id="supplies" class="shop-section" aria-labelledby="supplies-title">
-    <div class="shop-heading">
-      <QuestIcon name="market" size={28} />
-      <h2 id="supplies-title">What you need</h2>
-    </div>
-    <p>The shop logistics use Chapter IV Brass recipes. Start with one stocked container, one trade and a place to collect packages.</p>
-    <dl class="shop-kit">
-      {kit.map(({ name, use, recipe }) => <div>
-        <dt>{recipe ? <a href={recipeLink(recipe)}>{name} recipe</a> : name}</dt>
-        <dd>{use}</dd>
-      </div>)}
-    </dl>
-  </section>
+  <div id="supplies" class="shop-supplies">
+    <MaterialsChecklist
+      id="player-shops-materials"
+      items={kit}
+      description="The shop logistics use Chapter IV Brass recipes. Start with one stocked container, one trade and a place to collect packages."
+    />
+  </div>
 
   <section id="create-shop" class="shop-section" aria-labelledby="create-shop-title">
     <div class="shop-heading">
@@ -144,18 +139,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     margin-bottom: 12px;
   }
   .shop-heading h2 { margin: 0; }
-  .shop-kit {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-    margin: 20px 0 0;
-  }
-  .shop-kit > div {
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
+  .shop-supplies { margin-top: 44px; }
   dt { color: var(--text); font-weight: 650; }
   dd { margin: 4px 0 0; color: var(--muted); }
   .shop-steps { padding-left: 24px; }
@@ -184,11 +168,5 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     border: 1px solid var(--border);
     border-radius: var(--radius);
     background: var(--surface);
-  }
-  @media (max-width: 900px) {
-    .shop-kit { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 500px) {
-    .shop-kit { grid-template-columns: 1fr; }
   }
 </style>

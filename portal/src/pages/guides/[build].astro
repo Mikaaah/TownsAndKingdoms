@@ -1,0 +1,15 @@
+---
+import BuildGuide from '../../components/BuildGuide.astro';
+
+export function getStaticPaths() {
+  const records = import.meta.glob('../../data/early-builds/*.json', { eager: true, import: 'default' });
+  return Object.entries(records).map(([path, guide]) => ({
+    params: { build: path.split('/').pop()!.replace(/\.json$/, '') },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const build = Astro.params.build!;
+---
+<BuildGuide id={build} guide={guide} />

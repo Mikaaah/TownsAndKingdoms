@@ -1,0 +1,74 @@
+{
+  "title": "Create power and machine troubleshooting",
+  "description": "Get a stopped workshop turning again and find out why a spinning machine still refuses to process an item.",
+  "icon": "hammer",
+  "materials": [
+    "A running source of rotation, such as a Water Wheel",
+    "Shafts and cogwheels for a short test line",
+    "Engineer’s Goggles to inspect stress and a Speedometer to read RPM",
+    "One known recipe from JEI to test the machine"
+  ],
+  "steps": [
+    {
+      "id": "check-rotation",
+      "title": "Find where rotation stops",
+      "text": "Check that water flows past the paddles of the Water Wheel. Disconnect the machine, then follow the shaft line from the water wheel outward. Check the axle direction of each shaft. Use a Gearbox to turn a corner and make sure cogwheels mesh."
+    },
+    {
+      "id": "overstressed",
+      "title": "Fix an overstressed network",
+      "text": "Wear Engineer’s Goggles and look at a Stressometer or a kinetic block to inspect the network. If demand exceeds the available stress capacity, remove a load or connect more power at compatible speed and direction. Speeding up a loaded branch generally increases the stress it uses."
+    },
+    {
+      "id": "check-the-recipe",
+      "title": "Check the machine and process",
+      "text": "In JEI, hover the output and press R to check the exact recipe. A Mechanical Press needs an item under it on a Depot or belt, or in a Basin for compacting. For a Mechanical Mixer, mesh a vertical Cogwheel beside the mixer’s upper cog. Place the Basin two blocks below the mixer with an air block between them. In this pack the mixer needs at least 30 RPM. Aim for 32 RPM by stepping up an 8 RPM Water Wheel twice with large-to-small cog pairs. Put a lit Blaze Burner below the Basin if the recipe calls for heat.",
+      "figure": {
+        "src": "media/early-builds/create-rotation.webp",
+        "width": 880,
+        "height": 400,
+        "alt": "An 8 RPM Water Wheel drives two size-changing cogwheel pairs for 32 RPM. A vertical cog meshes with the mixer’s upper cog from the side. The Basin sits two blocks below the mixer."
+      }
+    },
+    {
+      "id": "sequenced-assembly",
+      "title": "Return incomplete items to the start",
+      "text": "Read every operation and the loop count in JEI. Feed the base item through the listed stages in order. Route the incomplete item back through the line for the remaining loops. Filter the completed item out so it goes into storage."
+    }
+  ],
+  "tips": [
+    {
+      "id": "wrong-direction",
+      "title": "Two spinning lines won’t join",
+      "text": "Check both speed and direction before connecting them. An incompatible kinetic connection can break a block. Prove the direction on a short shaft before you reconnect the machines."
+    },
+    {
+      "id": "belt-connection",
+      "title": "The belt won’t attach",
+      "text": "Use the Belt Connector on two parallel shafts. Check alignment and clear the path between them. The pack offers a dried-kelp recipe and a rubber recipe for connectors."
+    },
+    {
+      "id": "stalled-output",
+      "title": "The machine runs once and stops",
+      "text": "Check for a full destination or a blocked output funnel. Prove the item transfers with one input and storage with a free slot before running a batch."
+    }
+  ],
+  "links": [
+    {
+      "label": "Chapter II · Rotations & Andesite",
+      "path": "chapters/#chapter-02"
+    },
+    {
+      "label": "Mechanical Mixer recipe",
+      "path": "recipes/#recipe=tnk%3Amachines%2Ftier_01%2Fcrafting%2Fcreate%2Fmechanical_mixer"
+    },
+    {
+      "label": "Belt Connector recipe",
+      "path": "recipes/#recipe=tnk%3Alogistics%2Fcrafting%2Fbelt_from_dried_kelp"
+    },
+    {
+      "label": "Sapper and Rubber",
+      "path": "guides/sapper/"
+    }
+  ]
+}
