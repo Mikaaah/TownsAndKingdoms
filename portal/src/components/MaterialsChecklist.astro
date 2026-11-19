@@ -159,13 +159,18 @@ function labelFor({ label, count }: Item): string {
     font-display: swap;
   }
   .clipboard {
+    --item-gap: 10px;
+    --item-icon-size: 32px;
     position: relative;
     isolation: isolate;
-    width: min(100%, 680px);
+    inline-size: 100%;
+    max-inline-size: 680px;
+    min-inline-size: 0;
     margin: 31px 0 26px;
     padding: 27px 30px 20px;
     color: #251910;
     color-scheme: light;
+    overflow-wrap: anywhere;
   }
   .clipboard::before {
     position: absolute;
@@ -203,26 +208,25 @@ function labelFor({ label, count }: Item): string {
   .clipboard-description { margin: 0 0 10px; color: #463123; font-size: .88rem; line-height: 1.45; }
   ul { margin: 0; padding: 0; list-style: none; }
   li {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
     gap: 4px 14px;
     margin: 0;
     border-top: 1px solid #51352047;
   }
   label {
-    display: flex;
-    flex: 1;
+    display: grid;
+    grid-template-columns: 19px var(--item-icon-size) minmax(0, 1fr);
     align-items: center;
-    min-width: 0;
     min-height: 44px;
-    gap: 10px;
+    gap: var(--item-gap);
     padding: 6px 0;
     cursor: pointer;
   }
   input[type='checkbox'] {
     display: grid;
     place-items: center;
-    flex: none;
     width: 19px;
     height: 19px;
     min-height: 0;
@@ -243,7 +247,7 @@ function labelFor({ label, count }: Item): string {
     border-width: 0 2px 2px 0;
     content: '';
   }
-  .item-icon { display: block; flex: none; width: 32px; height: 32px; }
+  .item-icon { display: block; width: var(--item-icon-size); height: var(--item-icon-size); }
   .item-icon > img, .item-icon > :global(svg) {
     display: block;
     width: 100%;
@@ -251,7 +255,7 @@ function labelFor({ label, count }: Item): string {
     object-fit: contain;
     image-rendering: pixelated;
   }
-  .item-copy { min-width: 0; overflow-wrap: anywhere; line-height: 1.42; }
+  .item-copy { line-height: 1.42; }
   .item-name { display: block; font: 400 1.0625rem / 1.35 'Minecraft Checklist', Geist, sans-serif; }
   .item-description { display: block; color: #463123; font-size: .83rem; }
   input:checked ~ .item-copy .item-name { text-decoration: line-through; }
@@ -290,10 +294,18 @@ function labelFor({ label, count }: Item): string {
   :is(button, a, input, textarea):focus-visible { outline: 2px solid #572d20; outline-offset: 3px; }
 
   @media (max-width: 460px) {
-    .clipboard { padding-inline: 18px; }
-    li { gap: 0 9px; }
-    label { gap: 7px; }
-    .item-icon { width: 26px; height: 26px; }
+    .clipboard {
+      --item-gap: 7px;
+      --item-icon-size: 26px;
+      padding-inline: 16px;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    li { grid-template-columns: minmax(0, 1fr); gap: 0; }
+    .recipe {
+      justify-self: start;
+      margin-inline-start: calc(19px + var(--item-icon-size) + var(--item-gap) + var(--item-gap));
+    }
   }
   @media (forced-colors: active) {
     input[type='checkbox'] { appearance: auto; }
