@@ -1,0 +1,29 @@
+---
+import { href } from '../lib/data';
+
+interface Props {
+  texture: {
+    src: string;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    atlasWidth: number;
+    atlasHeight: number;
+  };
+  x?: number;
+  y?: number;
+  width: number;
+  height: number;
+}
+
+const { texture, x = 0, y = 0, width, height } = Astro.props;
+---
+<svg {x} {y} {width} {height} viewBox={`${texture.x} ${texture.y} ${texture.width} ${texture.height}`}
+  overflow="hidden" aria-hidden="true" focusable="false" class="quest-board-texture">
+  <image href={href(texture.src)} width={texture.atlasWidth} height={texture.atlasHeight} />
+</svg>
+
+<style>
+  .quest-board-texture { image-rendering: pixelated; pointer-events: none; }
+</style>

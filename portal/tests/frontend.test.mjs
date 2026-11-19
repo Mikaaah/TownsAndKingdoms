@@ -154,6 +154,8 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
  const doc=dom.window.document;
  const questlines=json('chapter-questlines');
  const machineInfo=json('chapter-machines');
+ const assets=JSON.parse(readFileSync(resolve(root,'src/data/quest-board-assets.json'),'utf8'));
+ const toBoard=value=>value*32;
  const chapters=[...doc.querySelectorAll('[data-quest-chapter]')];
  assert.equal(chapters.length,10);
  assert.deepEqual(chapters.map(chapter=>chapter.id),questlines.map(chapter=>chapter.id));
@@ -162,6 +164,35 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
   const rendered=[...stage.querySelectorAll('[data-quest-id]')].map(quest=>quest.dataset.questId);
   assert.deepEqual(rendered.sort(),chapter.quests.map(quest=>quest.id).sort(),chapter.id);
   if(chapter.quests.length){
+   const title=assets.titles[chapter.id];
+   const titleArt=chapter.images.length
+    ? stage.querySelector('.board-art image').getAttribute('href')
+    : stage.querySelector('h2 img').getAttribute('src');
+   assert.equal(titleArt,'/TownsAndKingdoms/'+title.src);
+   assert.ok(readFileSync(resolve(root,'dist',title.src)).length);
+   const byId=new Map(chapter.quests.map(quest=>[quest.id,quest]));
+   const expectedEdges=[];
+   for(const quest of chapter.quests){
+    const node=stage.querySelector(`[data-quest-id="${quest.id}"]`);
+    assert.equal(node.getAttribute('transform'),`translate(${toBoard(quest.x)} ${toBoard(quest.y)})`);
+    assert.equal(node.getAttribute('aria-label'),quest.title);
+    const detail=doc.getElementById('quest-'+quest.id);
+    assert.equal(detail.querySelector('h3').textContent.trim(),quest.title);
+    assert.deepEqual([...detail.querySelectorAll('.quest-description p')].map(p=>p.textContent),quest.description);
+    assert.ok(detail.querySelector('.detail-title-art'),quest.title);
+    if(quest.hideDependencyLines)continue;
+    for(const id of quest.dependencies){
+     const dependency=byId.get(id);
+     if(dependency&&!dependency.hideDependentLines){
+      const positions=[dependency.x,dependency.y,quest.x,quest.y].map(value=>String(toBoard(value)));
+      expectedEdges.push([id,quest.id,...positions]);
+     }
+    }
+   }
+   const renderedEdges=[...stage.querySelectorAll('line[data-dependency]')].map(line=>[
+    line.dataset.dependency,line.dataset.dependent,...['x1','y1','x2','y2'].map(name=>line.getAttribute(name)),
+   ]);
+   assert.deepEqual(renderedEdges,expectedEdges,chapter.id);
    const info=stage.querySelector('.chapter-info');
    assert.ok(info?.textContent.includes(machineInfo[chapter.id].purpose));
    for(const machine of machineInfo[chapter.id].machines)assert.ok(info.textContent.includes(machine.title),machine.title);

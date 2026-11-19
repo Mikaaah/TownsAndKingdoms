@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import QuestBoardTexture from '../components/QuestBoardTexture.astro';
 import { data, href } from '../lib/data';
 
 interface Prerequisite {
@@ -13,6 +14,8 @@ interface QuestObjective {
   label: string;
   type: string;
   count?: number;
+  item?: string;
+  icon?: string;
 }
 
 interface Quest {
@@ -20,10 +23,28 @@ interface Quest {
   title: string;
   subtitle?: string;
   description: string[];
+  dependencies: string[];
   dependencyRequirement?: 'one_completed';
   prerequisites: Prerequisite[];
   tasks: QuestObjective[];
   rewards?: QuestObjective[];
+  icon?: string;
+  x: number;
+  y: number;
+  size?: number;
+  shape?: 'hexagon' | 'rsquare' | 'circle';
+  hideDependencyLines?: boolean;
+  hideDependentLines?: boolean;
+}
+
+interface BoardImage {
+  id: string;
+  image: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  rotation: number;
 }
 
 interface Chapter {
@@ -31,6 +52,8 @@ interface Chapter {
   number: number;
   roman: string;
   title: string;
+  titleImage?: string;
+  images?: BoardImage[];
   quests: Quest[];
 }
 
@@ -40,270 +63,446 @@ interface ChapterInfo {
   machines: { id: string; title: string }[];
 }
 
+interface Texture {
+  src: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  atlasWidth: number;
+  atlasHeight: number;
+}
+
+interface BoardAssets {
+  titles: Record<string, { src: string; width: number; height: number }>;
+  icons: Record<string, Texture>;
+  labels?: Record<string, Texture>;
+}
+
 const chapters: Chapter[] = data('chapter-questlines');
 const chapterInfo: Record<string, ChapterInfo> = data('chapter-machines', {});
+const assets: BoardAssets = data('quest-board-assets', { titles: {}, icons: {} });
 const spruce = href('media/textures/spruce-planks.png');
 const isSecret = (chapter: Chapter) => chapter.number === 10 && chapter.quests.length === 0;
 const objectiveLabel = (objective: QuestObjective) =>
   (objective.count ?? 1) > 1 ? `${objective.count} × ${objective.label}` : objective.label;
+const objectiveIcon = (objective: QuestObjective) => assets.icons[objective.icon ?? objective.item ?? ''];
+
+const unit = 32;
+const coordinates = ({ x, y }: {x: number; y: number}) => [x * unit, y * unit];
+const side = (quest: Quest) => (quest.size ?? 1) * unit;
+const hexagon = (radius: number) => Array.from({ length: 6 }, (_, index) => {
+  const angle = index * Math.PI / 3;
+  return `${Math.cos(angle) * radius},${Math.sin(angle) * radius}`;
+}).join(' ');
+
+function boardViewBox(chapter: Chapter) {
+  const boxes = chapter.quests.map(quest => {
+    const [x, y] = coordinates(quest);
+    const radius = side(quest) / 2;
+    return [x - radius, y - radius, x + radius, y + radius];
+  });
+  for (const image of chapter.images ?? []) {
+    const [x, y] = coordinates(image);
+    const angle = image.rotation * Math.PI / 180;
+    const halfWidth = (Math.abs(Math.cos(angle)) * image.width + Math.abs(Math.sin(angle)) * image.height) * unit / 2;
+    const halfHeight = (Math.abs(Math.sin(angle)) * image.width + Math.abs(Math.cos(angle)) * image.height) * unit / 2;
+    boxes.push([x - halfWidth, y - halfHeight, x + halfWidth, y + halfHeight]);
+  }
+  if (boxes.length === 0) return '0 0 32 32';
+  const padding = unit;
+  const minX = Math.min(...boxes.map(box => box[0])) - padding;
+  const minY = Math.min(...boxes.map(box => box[1])) - padding;
+  const maxX = Math.max(...boxes.map(box => box[2])) + padding;
+  const maxY = Math.max(...boxes.map(box => box[3])) + padding;
+  return `${minX} ${minY} ${maxX - minX} ${maxY - minY}`;
+}
+
+function boardEdges(chapter: Chapter) {
+  const questsById = new Map(chapter.quests.map(quest => [quest.id, quest]));
+  return chapter.quests.flatMap(quest => {
+    if (quest.hideDependencyLines) return [];
+    return quest.dependencies.flatMap(id => {
+      const dependency = questsById.get(id);
+      if (!dependency || dependency.hideDependentLines) return [];
+      return [{ dependency, quest }];
+    });
+  });
+}
 ---
-<Layout title="Chapter questlines" description="Follow the Towns & Kingdoms chapter questlines from the in-game quest book.">
+<Layout title="Chapter questlines" description="Explore the Towns & Kingdoms quest boards and their prerequisites." wide={true}>
   <p class="eyebrow">Handbook / Progression</p>
   <h1>Chapter questlines</h1>
-  <p class="intro">Pick a chapter, then open a quest to see its objectives. Prerequisite links take you to the quests it depends on.</p>
 
-  <nav class="chapter-roadmap" aria-label="Jump to a chapter">
-    <ol class="chapter-jumps">
-      {chapters.map(chapter => <li>
-        <a class="chapter-jump" href={'#' + chapter.id}>
-          <span class="chapter-jump-number"><span class="sr-only">Chapter </span>{chapter.roman}</span>
-          <span>{isSecret(chapter) ? 'Secret' : chapter.title}</span>
-        </a>
-      </li>)}
-    </ol>
-  </nav>
+  <div data-quest-chapters style={{ '--quest-planks': `url("${spruce}")` }}>
+    <nav aria-label="Chapters">
+      <ol class="chapter-picker">
+        {chapters.map((chapter, index) => <li>
+          <a class="chapter-jump" href={'#' + chapter.id} data-chapter-link aria-current={index === 0 ? 'true' : undefined}>
+            <span class="chapter-number"><span class="sr-only">Chapter </span>{chapter.roman}</span>
+            <span>{isSecret(chapter) ? 'Secret' : chapter.title}</span>
+          </a>
+        </li>)}
+      </ol>
+    </nav>
 
-  <div class="chapter-stages" style={{ '--chapter-spruce': `url("${spruce}")` }}>
-    {chapters.map(chapter => {
+    {chapters.map((chapter, index) => {
       const secret = isSecret(chapter);
       const info = secret ? undefined : chapterInfo[chapter.id];
-      return (
-        <article class="chapter-stage" id={chapter.id} data-quest-chapter={chapter.id} aria-labelledby={chapter.id + '-title'}>
-          <details class="chapter-disclosure" open={chapter.number === 1 || secret}>
-            <summary class="chapter-heading">
-              <h2 id={chapter.id + '-title'}>
-                <span class="chapter-roman"><span class="sr-only">Chapter </span>{chapter.roman}</span>
-                <span>{chapter.title}</span>
-                {!secret && <span class="chapter-count">{chapter.quests.length} quests</span>}
-              </h2>
-            </summary>
-            {secret ? <div class="chapter-secret"><p>Secret until release</p></div> : <>
-              {info && <div class="chapter-info">
-                <p>{info.purpose}</p>
-                {info.machines.length > 0 && <p class="chapter-machines">
-                  <strong>{info.machineSource ? `Machines using ${info.machineSource} include` : 'Machines include'}</strong>
-                  <span>{info.machines.map(machine => machine.title).join(' · ')}</span>
-                </p>}
-              </div>}
-              {chapter.quests.length > 0 && <ol class="questline" aria-label={chapter.title + ' quests'}>
-                {chapter.quests.map(quest => {
-                  const objective = quest.tasks.find(task => task.type !== 'checkmark');
-                  const preview = objective && objectiveLabel(objective);
-                  return (
-                    <li class="quest-entry" id={'quest-' + quest.id} data-quest-id={quest.id}>
-                      <details class="quest-detail">
-                        <summary>
-                          <span>{quest.title}</span>
-                          {preview && preview !== quest.title && <span class="quest-preview">{preview}</span>}
-                        </summary>
-                        <div class="quest-body">
-                          {quest.subtitle && quest.subtitle !== chapter.title && <p class="quest-subtitle">{quest.subtitle}</p>}
-                          {quest.description.map(paragraph => <p>{paragraph}</p>)}
-                          {quest.tasks.length > 0 && <>
-                            <p class="quest-section-label">Objectives</p>
-                            <ul aria-label="Objectives">
-                              {quest.tasks.map(task => <li>{objectiveLabel(task)}</li>)}
-                            </ul>
-                          </>}
-                          {quest.rewards && quest.rewards.length > 0 && <>
-                            <p class="quest-section-label">Rewards</p>
-                            <ul aria-label="Rewards">
-                              {quest.rewards.map(reward => <li>{objectiveLabel(reward)}</li>)}
-                            </ul>
-                          </>}
-                        </div>
-                      </details>
-                      {quest.prerequisites.length > 0 && <p class="quest-prerequisites">
-                        <strong>{quest.dependencyRequirement === 'one_completed' ? 'Requires one of' : 'Requires'}</strong>
-                        {' '}
-                        {quest.prerequisites.map((prerequisite, index) => <>
-                          {index > 0 && ' · '}
-                          {prerequisite.chapterId ? <a href={'#quest-' + prerequisite.id}>{prerequisite.title}</a> :
-                            <span>{prerequisite.title}{prerequisite.chapterTitle && ` (${prerequisite.chapterTitle})`}</span>}
-                        </>)}
-                      </p>}
-                    </li>
-                  );
+      const title = secret ? undefined : assets.titles[chapter.id];
+      const titleOnBoard = title && chapter.images?.some(image => image.image === chapter.titleImage);
+      const headingId = chapter.id + '-title';
+      const helpId = chapter.id + '-map-help';
+      return <article class="chapter-stage" id={chapter.id} aria-labelledby={headingId} data-quest-chapter={chapter.id} hidden={index !== 0}>
+        {titleOnBoard ? <h2 id={headingId} class="sr-only">{chapter.title}</h2> : <header class="chapter-header">
+          <h2 id={headingId}>
+            {title ? <img src={href(title.src)} width={title.width} height={title.height} alt={chapter.title} loading="lazy" /> : chapter.title}
+          </h2>
+        </header>}
+
+        {secret ? <div class="chapter-secret"><p>Secret until release</p></div> : (
+          <div class="chapter-content">
+            <div class="quest-board" data-quest-board>
+              <div class="board-toolbar">
+                <p id={helpId}>Drag to move. Select a quest for details.<span class="sr-only"> Use the arrow keys to pan, plus and minus to zoom, or Tab to move between quests.</span></p>
+                {info && <details class="chapter-info">
+                  <summary>What you’ll build</summary>
+                  <div class="chapter-info-body">
+                    <p>{info.purpose}</p>
+                    {info.machines.length > 0 && <p class="chapter-machines">
+                      <strong>{info.machineSource ? `Machines using ${info.machineSource}` : 'Machines'}</strong>
+                      {info.machines.map(machine => machine.title).join(' · ')}
+                    </p>}
+                  </div>
+                </details>}
+                <div class="board-controls" role="group" aria-label="Quest board zoom">
+                  <button type="button" data-quest-action="zoom-out" aria-label="Zoom out">−</button>
+                  <button type="button" data-quest-action="fit" aria-label="Fit all quests">Fit</button>
+                  <button type="button" data-quest-action="zoom-in" aria-label="Zoom in">+</button>
+                </div>
+              </div>
+              <svg class="quest-map" data-quest-map viewBox={boardViewBox(chapter)} tabindex="0" aria-label={chapter.title + ' quest board'} aria-describedby={helpId}>
+                <g aria-hidden="true" class="board-art">
+                  {(chapter.images ?? []).map(image => {
+                    const art = image.image === chapter.titleImage ? title : undefined;
+                    if (!art) return null;
+                    const [x, y] = coordinates(image);
+                    const width = image.width * unit;
+                    const height = image.height * unit;
+                    return <image href={href(art.src)} x={x - width / 2} y={y - height / 2} {width} {height}
+                      transform={`rotate(${image.rotation} ${x} ${y})`} />;
+                  })}
+                </g>
+                <g aria-hidden="true" class="board-edges">
+                  {boardEdges(chapter).map(({ dependency, quest }) => {
+                    const [x1, y1] = coordinates(dependency);
+                    const [x2, y2] = coordinates(quest);
+                    return <line {x1} {y1} {x2} {y2} data-dependency={dependency.id} data-dependent={quest.id} />;
+                  })}
+                </g>
+                {chapter.quests.map((quest, questIndex) => {
+                  const [x, y] = coordinates(quest);
+                  const radius = side(quest) / 2;
+                  const icon = assets.icons[quest.icon ?? ''];
+                  const iconSide = side(quest) * 0.65;
+                  const label = assets.labels?.[quest.id];
+                  const labelWidth = label ? label.width / 2 + 10 : 0;
+                  const labelHeight = label ? label.height / 2 + 8 : 0;
+                  return <a class="quest-node" href={'#quest-' + quest.id} data-quest-node data-quest-id={quest.id}
+                    data-quest-x={x} data-quest-y={y} data-quest-radius={radius}
+                    data-selected={questIndex === 0 ? '' : undefined} aria-label={quest.title} aria-controls={'quest-' + quest.id}
+                    transform={`translate(${x} ${y})`}>
+                    <title>{quest.title}</title>
+                    {quest.shape === 'hexagon' ? <polygon class="quest-node-frame" points={hexagon(radius)} />
+                      : quest.shape === 'circle' ? <circle class="quest-node-frame" r={radius} />
+                      : <rect class="quest-node-frame" x={-radius} y={-radius} width={side(quest)} height={side(quest)}
+                        rx={quest.shape === 'rsquare' ? radius * .37 : radius * .1} />}
+                    {icon ? <QuestBoardTexture texture={icon} x={-iconSide / 2} y={-iconSide / 2} width={iconSide} height={iconSide} />
+                      : <circle class="quest-node-marker" aria-hidden="true" r={radius * .2} />}
+                    <g class="quest-node-label" aria-hidden="true">
+                      {label ? <>
+                        <rect class="quest-label-backdrop" x={-labelWidth / 2} y={radius + 4} width={labelWidth} height={labelHeight} rx="3" />
+                        <QuestBoardTexture texture={label} x={-label.width / 4} y={radius + 8} width={label.width / 2} height={label.height / 2} />
+                      </> : <text x="0" y={radius + 16}>{quest.title}</text>}
+                    </g>
+                  </a>;
                 })}
-              </ol>}
-            </>}
-          </details>
-        </article>
-      );
+              </svg>
+            </div>
+
+            <aside class="quest-panel" aria-label="Quest details" data-quest-panel>
+              <p class="quest-empty" data-quest-empty hidden={chapter.quests.length > 0}>Select a quest on the board.</p>
+              {chapter.quests.map((quest, questIndex) => {
+                const icon = assets.icons[quest.icon ?? ''];
+                const titleTexture = assets.labels?.[quest.id];
+                return <section class="quest-detail" id={'quest-' + quest.id} data-quest-detail={quest.id}
+                  aria-labelledby={'quest-title-' + quest.id} hidden={questIndex !== 0}>
+                  <div class="quest-detail-heading">
+                    {icon && <svg class="detail-icon" viewBox="0 0 38 38" width="38" height="38" aria-hidden="true">
+                      <QuestBoardTexture texture={icon} x={4} y={4} width={30} height={30} />
+                    </svg>}
+                    <div>
+                      <h3 id={'quest-title-' + quest.id}>
+                        {titleTexture ? <>
+                          <span class="sr-only">{quest.title}</span>
+                          <svg class="detail-title-art" aria-hidden="true" width={titleTexture.width} height={titleTexture.height}
+                            viewBox={`0 0 ${titleTexture.width} ${titleTexture.height}`}>
+                            <QuestBoardTexture texture={titleTexture} width={titleTexture.width} height={titleTexture.height} />
+                          </svg>
+                        </> : quest.title}
+                      </h3>
+                      {quest.subtitle && <p class="quest-subtitle">{quest.subtitle}</p>}
+                    </div>
+                  </div>
+                  {quest.description.length > 0 && <div class="quest-description">
+                    {quest.description.map(paragraph => <p>{paragraph}</p>)}
+                  </div>}
+                  {[
+                    { title: 'Objectives', objectives: quest.tasks },
+                    { title: 'Rewards', objectives: quest.rewards ?? [] },
+                  ].map(({ title, objectives }) => objectives.length > 0 && <div class="quest-detail-group">
+                    <h4>{title}</h4>
+                    <ul>
+                      {objectives.map(objective => {
+                        const texture = objectiveIcon(objective);
+                        return <li>
+                          {texture && <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                            <QuestBoardTexture texture={texture} width={18} height={18} />
+                          </svg>}
+                          <span>{objectiveLabel(objective)}</span>
+                        </li>;
+                      })}
+                    </ul>
+                  </div>)}
+                  {quest.prerequisites.length > 0 && <div class="quest-detail-group">
+                    <h4>{quest.dependencyRequirement === 'one_completed' ? 'Requires one of' : 'Requires'}</h4>
+                    <ul class="quest-prerequisites">
+                      {quest.prerequisites.map(prerequisite => <li>
+                        {prerequisite.chapterId
+                          ? <a href={'#quest-' + prerequisite.id}>{prerequisite.title}</a>
+                          : <span>{prerequisite.title}</span>}
+                        {prerequisite.chapterId !== chapter.id && prerequisite.chapterTitle &&
+                          <small>{prerequisite.chapterTitle}</small>}
+                      </li>)}
+                    </ul>
+                  </div>}
+                </section>;
+              })}
+            </aside>
+          </div>
+        )}
+      </article>;
     })}
   </div>
 </Layout>
 
 <script>
-  function revealChapter(hash: string) {
-    const target = document.getElementById(hash.slice(1));
-    const panel = target?.closest('[data-quest-chapter]')?.querySelector<HTMLDetailsElement>('.chapter-disclosure');
-    if (!panel || panel.open) return;
-    panel.open = true;
-    return target;
-  }
-
-  for (const link of document.querySelectorAll<HTMLAnchorElement>('.chapter-jump, .quest-prerequisites a')) {
-    link.addEventListener('click', () => revealChapter(link.hash));
-  }
-
-  function revealHash() {
-    const target = revealChapter(location.hash);
-    target?.scrollIntoView();
-  }
-
-  window.addEventListener('hashchange', revealHash);
-  revealHash();
+  import '../scripts/quest-board.js';
 </script>
 
 <style>
-  .chapter-roadmap { margin: 24px 0 30px; }
-
-  .chapter-jumps {
+  .chapter-picker {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     grid-auto-rows: 1fr;
     gap: 8px;
+    margin: 0 0 24px;
     padding: 0;
-    margin: 0;
     list-style: none;
   }
 
-  .chapter-jumps li { display: flex; min-width: 0; margin: 0; }
+  .chapter-picker li {
+    display: flex;
+    min-width: 0;
+    margin: 0;
+  }
 
   .chapter-jump {
     display: grid;
-    grid-template-columns: 2em minmax(0, 1fr);
+    grid-template-columns: 24px minmax(0, 1fr);
     align-items: center;
     gap: 8px;
     width: 100%;
-    min-height: 54px;
+    min-height: 52px;
     padding: 8px 10px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 6px;
     color: var(--text);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 550;
-    line-height: 1.3;
-    overflow-wrap: anywhere;
+    line-height: 1.35;
   }
 
-  .chapter-jump:hover {
+  .chapter-jump:hover, .chapter-jump[aria-current] {
     background: var(--surface-raised);
-    border-color: var(--control-border);
+    border-color: var(--gold-text);
+    color: var(--text);
     text-decoration: none;
   }
-  .chapter-jump-number { color: var(--gold-text); font-weight: 650; text-align: center; }
 
-  .chapter-stages { display: grid; gap: 12px; }
+  .chapter-jump[aria-current] { box-shadow: inset 0 -2px var(--gold-text); }
+  .chapter-number { color: var(--gold-text); font-weight: 650; text-align: center; }
+  .chapter-stage { min-width: 0; scroll-margin-top: calc(var(--header-height) + 14px); }
 
-  .chapter-stage {
+  .chapter-header {
+    margin: 0 0 12px;
+    padding: 12px 15px;
+    background: linear-gradient(#211813ad, #211813c7), var(--quest-planks) 0 0 / 48px 48px repeat;
+    border: 1px solid #68503b;
+    border-radius: var(--radius);
+    color: #fff4e8;
+    image-rendering: pixelated;
+  }
+
+  .chapter-header h2 { min-width: 0; margin: 0; color: inherit; font-size: 21px; }
+  .chapter-header img { display: block; width: auto; max-width: 100%; height: clamp(26px, 3vw, 36px); object-fit: contain; object-position: left; }
+  .chapter-info { position: relative; flex: none; font-size: 13px; }
+  .chapter-info summary {
+    padding: 7px 9px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    font-weight: 550;
+  }
+  .chapter-info summary:hover { background: var(--surface-raised); border-color: var(--gold-text); }
+  .chapter-info-body {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 2;
+    width: min(310px, calc(100vw - 64px));
+    padding: 14px;
+    background: var(--surface-raised);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    box-shadow: 0 5px 20px #0005;
+  }
+  .chapter-info-body p { margin: 0; }
+  .chapter-info-body .chapter-machines { margin-top: 8px; color: var(--muted); }
+  .chapter-machines strong { display: block; margin-bottom: 2px; color: var(--text); }
+
+  .chapter-content {
+    --board-height: clamp(380px, 65vh, 660px);
+    display: grid;
+    grid-template-columns: minmax(0, 2.35fr) minmax(250px, 1fr);
+    align-items: start;
+    gap: 12px;
+  }
+
+  .quest-board, .quest-panel {
     min-width: 0;
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    background: var(--surface);
   }
 
-  .chapter-stage:target { border-color: var(--gold-text); }
-
-  .chapter-heading {
-    position: relative;
+  .quest-board { overflow: hidden; }
+  .board-toolbar {
     display: flex;
     align-items: center;
-    min-height: 62px;
-    padding: 10px 50px 10px 16px;
-    border-radius: calc(var(--radius) - 1px);
-    background: linear-gradient(#211813c9, #211813df), var(--chapter-spruce) 0 0 / 48px 48px repeat;
-    color: #fff4e8;
-    list-style: none;
-  }
-
-  .chapter-disclosure[open] > .chapter-heading {
-    margin: 0;
-    border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
-  }
-  .chapter-heading::-webkit-details-marker,
-  .quest-detail > summary::-webkit-details-marker { display: none; }
-
-  .chapter-heading::after, .quest-detail > summary::after {
-    position: absolute;
-    inset-inline-end: 22px;
-    width: 8px;
-    height: 8px;
-    border-bottom: 2px solid currentColor;
-    border-right: 2px solid currentColor;
-    transform: translateY(-2px) rotate(45deg);
-    content: '';
-  }
-
-  .chapter-disclosure[open] > .chapter-heading::after,
-  .quest-detail[open] > summary::after { transform: translateY(2px) rotate(225deg); }
-
-  .chapter-heading h2 {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 4px 12px;
-    margin: 0;
-    font-size: clamp(17px, 2.25vw, 22px);
-    line-height: 1.25;
-    text-wrap: initial;
-  }
-
-  .chapter-roman { min-width: 2em; color: #ffda9e; font-size: .82em; text-align: center; }
-  .chapter-count { margin-inline-start: auto; color: #eadacd; font-size: 13px; font-weight: 500; }
-
-  .chapter-info {
-    display: grid;
-    gap: 6px;
-    padding: 16px 18px;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 10px 8px 14px;
     border-bottom: 1px solid var(--border);
-    color: var(--muted);
   }
-  .chapter-info p { margin: 0; }
-  .chapter-machines { color: var(--subtle); font-size: 14px; overflow-wrap: anywhere; }
-  .chapter-machines strong { margin-inline-end: 8px; color: var(--text); font-weight: 600; }
+  .board-toolbar > p { flex: 1; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
+  .board-controls { display: flex; align-items: center; gap: 5px; }
+  .board-controls button { min-width: 38px; min-height: 38px; padding: 4px 7px; font-weight: 650; }
+  .board-controls button:hover:not(:disabled) { border-color: var(--gold-text); }
+  .board-controls button:disabled { opacity: .5; cursor: default; }
 
-  .questline { margin: 0; padding: 0 0 5px; list-style: none; }
-  .quest-entry { margin: 0; padding: 0 18px; }
-  .quest-entry + .quest-entry { border-top: 1px solid var(--border-soft); }
-  .quest-entry:target { background: var(--accent-dark); }
-  .quest-detail > summary {
-    position: relative;
+  .quest-map {
+    display: block;
+    width: 100%;
+    height: var(--board-height);
+    background: linear-gradient(#1d1714dd, #1d1714dd), var(--quest-planks) 0 0 / 64px 64px repeat;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+  }
+  .quest-map[data-panning], .quest-map[data-panning] .quest-node { cursor: grabbing; }
+  .quest-map:focus-visible { outline-offset: -3px; }
+  .board-art, .board-edges { pointer-events: none; }
+  .board-art { image-rendering: pixelated; }
+  .board-edges line { stroke: #a586c4; stroke-width: 2; stroke-linecap: round; }
+  .board-edges [data-connected] { stroke: #e4c681; stroke-width: 2.8; }
+  .quest-node { cursor: pointer; }
+  .quest-node:focus { outline: none; }
+  .quest-node-frame { fill: #3e3029; stroke: #b5a0d2; stroke-width: 1.7; }
+  .quest-node-marker { fill: #ddc4a9; pointer-events: none; }
+  .quest-node:hover .quest-node-frame, .quest-node:focus-visible .quest-node-frame {
+    fill: #644835;
+    stroke: #fff0d7;
+    stroke-width: 2.5;
+  }
+  .quest-node[data-selected]:not([data-selected="false"]) .quest-node-frame,
+  .quest-node[aria-current]:not([aria-current="false"]) .quest-node-frame {
+    fill: #6e491e;
+    stroke: #ffcb72;
+    stroke-width: 3;
+  }
+  .quest-node-label { visibility: hidden; pointer-events: none; }
+  .quest-node:hover .quest-node-label, .quest-node:focus-visible .quest-node-label { visibility: visible; }
+  .quest-label-backdrop { fill: #251a15; stroke: #ad8768; stroke-width: 1; }
+  .quest-node-label text {
+    fill: #fff3e5;
+    stroke: #251a15;
+    stroke-width: 5;
+    stroke-linejoin: round;
+    paint-order: stroke;
+    font-size: 12px;
+    font-weight: 650;
+    text-anchor: middle;
+  }
+
+  .quest-panel { max-height: calc(var(--board-height) + 55px); overflow: auto; }
+  .quest-detail, .quest-empty { padding: 16px; }
+  .quest-empty { margin: 0; color: var(--muted); }
+  .quest-detail-heading { display: flex; align-items: flex-start; gap: 9px; }
+  .quest-detail-heading > div { min-width: 0; flex: 1; }
+  .detail-icon {
+    flex: none;
+    background: #3e3029;
+    border: 1px solid #987c61;
+    border-radius: 5px;
+  }
+  .quest-detail h3 { margin: 0; font-size: 19px; line-height: 1.3; overflow-wrap: anywhere; }
+  .detail-title-art { display: block; width: auto; max-width: 100%; height: auto; max-height: 24px; }
+  :global(:root[data-theme='light']) .detail-title-art { filter: brightness(.24); }
+  .quest-subtitle { margin: 4px 0 0; color: var(--subtle); font-size: 13px; line-height: 1.45; }
+  .quest-description { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+  .quest-description p { margin: 0 0 8px; white-space: pre-line; }
+  .quest-detail-group { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border-soft); }
+  .quest-detail-group h4 { margin: 0 0 5px; color: var(--text); font-size: 14px; font-weight: 650; }
+  .quest-detail-group ul { margin: 0; padding: 0; list-style: none; }
+  .quest-detail-group li {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    column-gap: 12px;
-    min-height: 44px;
-    padding: 7px 28px 7px 0;
-    list-style: none;
-    font-size: 16px;
-    font-weight: 600;
+    gap: 7px;
+    min-height: 23px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.45;
   }
-  .quest-detail > summary:hover { color: var(--accent); }
-  .quest-detail[open] > summary { margin: 0; }
-  .quest-detail > summary::after { inset-inline-end: 4px; width: 6px; height: 6px; color: var(--subtle); }
-  .quest-preview { color: var(--subtle); font-size: 13px; font-weight: 450; }
-  .quest-body { margin: 0 0 12px; color: var(--muted); }
-  .quest-body p, .quest-body ul { margin: 0 0 6px; }
-  .quest-body p { white-space: pre-line; }
-  .quest-body li + li { margin-top: 2px; }
-  .quest-subtitle { color: var(--subtle); font-size: 14px; }
-  .quest-section-label { color: var(--text); font-size: 14px; font-weight: 600; }
-  .quest-prerequisites { margin: -3px 23px 9px 0; color: var(--subtle); font-size: 13px; }
-  .quest-prerequisites strong { color: var(--muted); font-weight: 560; }
+  .quest-detail-group li + li { margin-top: 4px; }
+  .quest-detail-group li svg { flex: none; }
+  .quest-detail-group .quest-prerequisites li { flex-wrap: wrap; gap: 0 5px; }
+  .quest-prerequisites small { color: var(--subtle); font-size: 12px; }
 
   .chapter-secret {
     position: relative;
     isolation: isolate;
     display: grid;
-    min-height: 130px;
+    min-height: 180px;
     place-items: center;
     overflow: hidden;
     background: #261b1c;
-    border-radius: 0 0 calc(var(--radius) - 1px) calc(var(--radius) - 1px);
+    border: 1px solid #693135;
+    border-radius: var(--radius);
   }
 
   .chapter-secret::before, .chapter-secret::after {
@@ -330,15 +529,21 @@ const objectiveLabel = (objective: QuestObjective) =>
     text-align: center;
   }
 
-  @media (min-width: 801px) and (max-width: 1210px), (max-width: 730px) {
-    .chapter-jumps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  @media (min-width: 801px) and (max-width: 1110px), (max-width: 720px) {
+    .chapter-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
-  @media (max-width: 440px) {
-    .chapter-jump { min-height: 48px; padding: 7px 8px; gap: 5px; }
-    .chapter-heading { min-height: 54px; padding-inline: 10px 34px; }
-    .chapter-heading::after { inset-inline-end: 15px; }
-    .chapter-count { margin-inline-start: 0; }
-    .chapter-info, .quest-entry { padding-inline: 12px; }
+  @media (min-width: 801px) and (max-width: 1020px), (max-width: 730px) {
+    .chapter-content { --board-height: clamp(310px, 55vh, 480px); grid-template-columns: minmax(0, 1fr); }
+    .quest-panel { max-height: none; scroll-margin-top: calc(var(--header-height) + 12px); }
+  }
+
+  @media (max-width: 520px) {
+    .chapter-header { padding: 9px 11px; }
+    .chapter-info-body { left: 0; right: auto; }
+    .chapter-jump { min-height: 44px; padding: 6px 7px; gap: 4px; }
+    .board-toolbar { padding: 7px 8px 7px 10px; }
+    .board-toolbar > p { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .quest-detail { padding: 14px; }
   }
 </style>

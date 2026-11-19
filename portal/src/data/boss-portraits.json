@@ -45,6 +45,7 @@
     "file": "luxtructosaurus.webp",
     "width": 760,
     "height": 371,
+    "cutout": true,
     "credit": "Alex’s Caves · Fictional Indexing Wiki",
     "source": "https://fictional-indexing.fandom.com/wiki/Luxtructosaurus_%28Alex%27s_Caves_Mod%29/AyOgUyS"
   },
@@ -77,6 +78,7 @@
     "file": "wilden-chimera.webp",
     "width": 512,
     "height": 512,
+    "cutout": true,
     "credit": "Jarva · Ars.Guide",
     "source": "https://ars.guide/book/field_guide/wilden/"
   },
@@ -84,6 +86,7 @@
     "file": "maledictus.webp",
     "width": 768,
     "height": 432,
+    "cutout": true,
     "credit": "L_Ender’s Cataclysm model and textures",
     "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/files/8931182"
   },
@@ -91,6 +94,7 @@
     "file": "the-leviathan.webp",
     "width": 768,
     "height": 432,
+    "cutout": true,
     "credit": "L_Ender’s Cataclysm model and textures",
     "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/files/8931182"
   },
@@ -98,6 +102,7 @@
     "file": "ancient-remnant.webp",
     "width": 768,
     "height": 432,
+    "cutout": true,
     "credit": "L_Ender’s Cataclysm model and textures",
     "source": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm/files/8931182"
   },
