@@ -3,10 +3,12 @@ import Layout from '../layouts/Layout.astro';
 import QuestIcon from '../components/QuestIcon.astro';
 import { data, href } from '../lib/data';
 
+const bossLink = (id: string) => href('bosses/#boss=' + encodeURIComponent(id));
+
 const destinations = [
   { name: 'Overworld', icon: 'map', description: 'Find dungeon structures and encounters before heading farther afield.', path: 'dungeons/', link: 'Browse dungeons' },
-  { name: 'Nether', icon: 'candle', description: 'Explore terrain and structures added by Jaden’s Nether Expansion.', path: 'mods/#mod-jadens_nether_expansion', link: 'Jaden’s Nether Expansion' },
-  { name: 'The End', icon: 'horn', description: 'Find a Stronghold and collect twelve distinct eyes to open the End portal.', path: 'bosses/#end-portal', link: 'End Remastered eye guide' },
+  { name: 'Nether', icon: 'candle', description: 'Explore Soul Sand Valley sanctums, rebuilt fortresses and boss arenas.', path: '#nether', link: 'Explore the Nether' },
+  { name: 'The End', icon: 'horn', description: 'From the dragon’s island to outer biomes, Bonfires and the Ruined Citadel.', path: '#end', link: 'Explore the End' },
   { name: 'The Aether', icon: 'map', description: data('early-builds/aether-portal').description, path: 'guides/aether-portal/', link: 'Build an Aether portal' },
   { name: 'The Twilight Forest', icon: 'lantern', description: data('early-builds/twilight-portal').description, path: 'guides/twilight-portal/', link: 'Build a Twilight Forest portal' },
   { name: 'The Otherside', icon: 'key', description: data('early-builds/otherside-portal').description, path: 'guides/otherside-portal/', link: 'Open the Ancient City gateway' },
@@ -19,7 +21,7 @@ const destinations = [
 
   <div class="section card-grid">
     {destinations.map(destination => (
-      <a class="card card-link" href={href(destination.path)}>
+      <a class="card card-link" href={destination.path.startsWith('#') ? destination.path : href(destination.path)}>
         <QuestIcon name={destination.icon} size={25} />
         <h2>{destination.name}</h2>
         <p>{destination.description}</p>
@@ -28,9 +30,58 @@ const destinations = [
     ))}
   </div>
 
+  <section id="nether" class="section dimension-detail" aria-labelledby="nether-title">
+    <h2 id="nether-title">Nether</h2>
+    <p class="dimension-intro">Light an obsidian portal to reach the Nether. Bring a brush if you plan to explore the Soul Sand Valley and fire resistance if you are heading for a fortress.</p>
+    <div class="card-grid dimension-facts">
+      <article class="card">
+        <h3>Terrain and mobs</h3>
+        <p>Amplified Nether makes room for taller terrain. Jaden’s Nether Expansion adds Black Ice Glaciers and creatures such as Apparitions, Banshees and Wisps. Brush Ecto Soul Sand for a chance to uncover a Wisp.</p>
+        <p class="dimension-links"><a href={href('mods/#mod-amplified_nether')}>Amplified Nether</a> · <a href={href('mods/#mod-jadens_nether_expansion')}>Jaden’s Nether Expansion</a> · <a href={href('mods/#mod-scorching_nether')}>Scorching Nether</a></p>
+      </article>
+      <article class="card">
+        <h3>Dungeons and structures</h3>
+        <p>Look for Sanctums in the Soul Sand Valley. Inside, a Cierge of Treachery starts combat waves and a Treacherous Flame opens a Brazier Chest. The Sanctum Locator Compass can help you find a Sanctum. For blaze rods, look for a fortress rebuilt by YUNG’s Better Nether Fortresses.</p>
+        <p class="dimension-links"><a href={href('mods/#mod-yungs_better_nether_fortresses_neoforge')}>YUNG’s Better Nether Fortresses</a> · <a href={href('dungeons/#structures')}>Dungeon structures</a></p>
+      </article>
+      <article class="card">
+        <h3>Boss encounters</h3>
+        <p>Find <a href={bossLink('cataclysm:ignis')}>Ignis</a> in the Burning Arena and the <a href={bossLink('cataclysm:netherite_monstrosity')}>Netherite Monstrosity</a> in the Soul Black Smith. <a href={bossLink('block_factorys_bosses:underworld_knight')}>Helvar, the Underworld Knight</a>, has a separate Underworld Arena in Nether Wastes or Soul Sand Valley.</p>
+        <p class="dimension-links"><a href={href('bosses/#encounters')}>All encounters</a> · <a href={href('loot/pools/#bosses')}>Boss loot pools</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section id="end" class="section dimension-detail" aria-labelledby="end-title">
+    <h2 id="end-title">The End</h2>
+    <p class="dimension-intro">Enter through a Stronghold after collecting twelve different eyes. On the main island, approach the central bell tower from <a href={href('mods/#mod-yungs_better_end_island_neoforge')}>YUNG’s Better End Island</a> to start the first <a href={bossLink('minecraft:ender_dragon')}>Ender Dragon</a> fight. Explore the outer islands for new biomes, structures and mobs.</p>
+    <div class="card-grid dimension-facts">
+      <article class="card">
+        <h3>The Beyond</h3>
+        <p>Explore Fumarole Uplands, Chestral Hollows and Lustrous Echoes, and look for Aberrant Remains. Enadrakes and Enderglops are among the creatures you can find. Interact with a Bonfire to see a particle pointing toward the next one. Bonfire rituals can yield a Totem of Respite.</p>
+        <p class="dimension-links"><a href={href('mods/#mod-the_beyond')}>The Beyond</a> · <a href={href('mods/#mod-isleweaver')}>Isleweaver compatibility</a></p>
+      </article>
+      <article class="card">
+        <h3>Enderscape</h3>
+        <p>Explore the Corrupt Barrens and Celestial Grove, look for Mirestone Ruins and watch for Rubblemites. Enderscape adds Nebulite-powered tools, including a Mirror for returning to a bound spot. Isleweaver helps these biomes generate alongside The Beyond’s terrain.</p>
+        <p class="dimension-links"><a href={href('mods/#mod-enderscape')}>Enderscape</a></p>
+      </article>
+      <article class="card">
+        <h3>Dungeons and bosses</h3>
+        <p>End Cities are home to Shulkers. Look for ships when hunting for an elytra. In Cataclysm’s Ruined Citadel, expect <a href={bossLink('cataclysm:ender_golem')}>Ender Golems</a> and the <a href={bossLink('cataclysm:ender_guardian')}>Ender Guardian</a>.</p>
+        <p class="dimension-links"><a href={href('bosses/#end-portal')}>How to open the End portal</a> · <a href={href('loot/pools/#bosses')}>Boss loot pools</a></p>
+      </article>
+    </div>
+  </section>
+
   <p class="section">Find more terrain and structure additions in the <a href={href('mods/#domain-4')}>world generation mod index</a>.</p>
 </Layout>
 
 <style>
   .card h2 { margin: 0; font-size: 20px; line-height: 1.3; }
+  .dimension-detail h2 { margin-bottom: 8px; }
+  .dimension-intro { max-width: 74ch; color: var(--muted); margin: 0 0 20px; }
+  .dimension-facts .card { display: flex; flex-direction: column; gap: 8px; }
+  .dimension-facts h3 { margin: 0; }
+  .dimension-facts .dimension-links { margin-top: auto; padding-top: 4px; }
 </style>

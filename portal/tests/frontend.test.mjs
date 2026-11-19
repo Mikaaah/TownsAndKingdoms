@@ -160,6 +160,23 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
  const chapters=[...doc.querySelectorAll('[data-quest-chapter]')];
  assert.equal(chapters.length,10);
  assert.deepEqual(chapters.map(chapter=>chapter.id),questlines.map(chapter=>chapter.id));
+ const picker = doc.querySelector('.chapter-picker');
+ assert.match(picker.getAttribute('style'), /\/media\/chapters\/chapter-backboard\.png/);
+ const chapterLinks = [...picker.querySelectorAll('[data-chapter-link]')];
+ assert.deepEqual(chapterLinks.map(link => link.getAttribute('href')), questlines.map(chapter => '#' + chapter.id));
+ for (const [index, link] of chapterLinks.entries()) {
+  const chapter = questlines[index];
+  const sprite = link.querySelector('svg');
+  if (chapter.quests.length) {
+   const icon = assets.icons[chapter.icon];
+   assert.equal(sprite?.querySelector('image')?.getAttribute('href'), '/TownsAndKingdoms/' + icon.src, chapter.id);
+   assert.equal(sprite?.getAttribute('viewBox'), [icon.x, icon.y, icon.width, icon.height].join(' '), chapter.id);
+   assert.ok(link.textContent.includes(chapter.title), chapter.id);
+  } else {
+   assert.equal(sprite, null);
+   assert.match(link.textContent, /Secret/);
+  }
+ }
  for(const chapter of questlines){
   const stage=doc.getElementById(chapter.id);
   const rendered=[...stage.querySelectorAll('[data-quest-id]')].map(quest=>quest.dataset.questId);

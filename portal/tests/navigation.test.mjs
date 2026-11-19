@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { stripTypeScriptTypes } from 'node:module';
@@ -25,6 +26,16 @@ test('navigation exposes the feature, custom-mod and community routes',()=>{
  assert.ok(doc.querySelector('.brand img[src$="/quest-ui/home.png"]'));
  assert.ok(doc.querySelector('#theme-toggle img[src$="/quest-ui/settings.png"]'));
  assert.equal(doc.querySelector('#site-sidebar img[src*="/quest-ui/"], .version-switch img[src*="/quest-ui/"]'),null);
+ const iconHashes = [...doc.querySelectorAll('#site-sidebar a')].map(link => {
+  const icons = link.querySelectorAll('img');
+  assert.equal(icons.length, 1, link.textContent.trim());
+  const src = icons[0].getAttribute('src');
+  assert.match(src, /^\/TownsAndKingdoms\/media\/quest-icons\//);
+  assert.doesNotMatch(src, /mechanism/);
+  const art = readFileSync(resolve(root, 'dist', src.replace('/TownsAndKingdoms/', '')));
+  return createHash('sha256').update(art).digest('hex');
+ });
+ assert.equal(new Set(iconHashes).size, iconHashes.length, 'Each sidebar entry has distinct artwork');
  dom.window.close();
 });
 test('mobile navigation opens, closes on Escape and closes after selecting a link',()=>{
@@ -69,4 +80,29 @@ test('features use actual weapon and profession artwork, and custom mods match t
  const official=new Set(installed.map(mod=>mod.url));
  for(const entry of entries){const link=Array.from(entry.querySelectorAll('a')).find(a=>a.href.includes('curseforge.com'));assert(link);assert(official.has(link.href));}
  features.window.close();custom.window.close();
+});
+test('Nether and End cards open their own exploration sections', () => {
+ const dom = new JSDOM(route('dimensions'), { url: 'https://mikaaah.github.io/TownsAndKingdoms/dimensions/' });
+ const doc = dom.window.document;
+ const search = JSON.parse(readFileSync(resolve(root, 'dist/data/search.json'), 'utf8'));
+ const bosses = JSON.parse(readFileSync(resolve(root, 'dist/data/bosses.json'), 'utf8'));
+ const bossIds = new Set(bosses.map(boss => boss.id));
+ for (const [id, names] of [
+  ['nether', ['Jaden', 'Ignis']],
+  ['end', ['Enderscape', 'The Beyond', 'Ender Dragon']],
+ ]) {
+  const card = doc.querySelector(`.card-link[href="#${id}"]`);
+  assert.ok(card, id);
+  const section = doc.getElementById(id);
+  assert.ok(section?.matches('section'), id);
+  for (const name of names) assert.ok(section.textContent.includes(name), name);
+  const encounters = [...section.querySelectorAll('a[href*="/bosses/#boss="]')];
+  assert.ok(encounters.length >= 3, id);
+  for (const link of encounters) {
+   const encounter = new URLSearchParams(link.hash.slice(1)).get('boss');
+   assert.ok(bossIds.has(encounter), encounter);
+  }
+  assert.ok(search.some(entry => entry.url === `/TownsAndKingdoms/dimensions/#${id}`), id);
+ }
+ dom.window.close();
 });
