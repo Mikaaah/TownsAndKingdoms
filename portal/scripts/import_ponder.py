@@ -233,6 +233,7 @@ def main():
             title={'crusher_build_04':'Crusher','excavator_build_04':'Excavator','arc_furnace_build_04':'Arc Furnace'}[slug]+': service connections'
         item={'id':source_scene['id'],'slug':slug,'title':title,'description':steps[0]['text']if steps else '',
               'category':category,'anchors':anchors,'items':source_scene.get('items',[]),'steps':steps,
+              'blockIds':sorted({block['state'].split('|',1)[0] for block in blocks}),
               'dataUrl':f'data/ponder/{slug}.json'}
         scenes.append(item)
         staged=[]

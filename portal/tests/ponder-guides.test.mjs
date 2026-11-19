@@ -20,12 +20,17 @@ test('Ponder guides retain item counts and distinguish references from recipe in
   ]);
 });
 
-test('Ponder guides find item names and exact IDs registered for in-game Ponder', () => {
+test('Ponder guides find item names, exact IDs and caption text', () => {
   const guide = { title: 'Iron crushing', items: 'minecraft:raw_iron minecraft:raw_iron_block', names: 'Raw Iron Raw Iron Block' };
   assert(matchesGuide(guide, 'raw iron'));
   assert(matchesGuide(guide, 'minecraft:raw_iron'));
   assert(!matchesGuide(guide, 'othermod:raw_iron'));
   assert(!matchesGuide(guide, 'minecraft:iron'));
+  const deploying = scene('rubber_curing_02');
+  assert(!deploying.anchors.includes('create:deployer'));
+  const machine = { title: deploying.title, items: deploying.blockIds.join(' '), names: '', captions: deploying.steps[0].text };
+  assert(matchesGuide(machine, 'create:deployer'));
+  assert(matchesGuide(machine, 'rubber is consumed'));
 });
 
 test('guide filters, selected guide URLs, and each numbered step work without a renderer', () => {
