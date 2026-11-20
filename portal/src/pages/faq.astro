@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
+import manifest from '../../../TK3/manifest.json';
 
 const topics = [
   {
@@ -10,18 +11,18 @@ const topics = [
       {
         id: 'installation',
         question: 'Which version do I install?',
-        answer: 'Look for Towns & Kingdoms 3: Beyond the Forge, then import it as a separate launcher instance. It runs on Minecraft 1.21.1 with NeoForge. For multiplayer, use the exact pack release the server asks for.',
+        answer: 'Import the Towns & Kingdoms 3: Beyond the Forge ZIP for your release as a new launcher instance. Use the exact pack build announced by your server. The Towns & Kingdoms CurseForge project also hosts TK2 files, so check the edition before importing.',
       },
       {
         id: 'first-world',
         question: 'What should I do after spawning?',
-        answer: 'Set up a bed, food and storage, then open the quest book and start Chapter I. If you want a first workshop goal, work toward a Rotation Mechanism and follow its ingredients back from the recipe.',
-        link: { label: 'Your first evening', path: 'guides/#first-steps' },
+        answer: 'Open the Quest Book, start The Story and claim the A New Beginning reward. Follow Chapter I to the Makeshift Mechanism, then continue with the workshop quests in Chapter II.',
+        link: { label: 'Follow your first quests', path: 'guides/#questbook' },
       },
       {
         id: 'java',
         question: 'Which Java should my launcher use?',
-        answer: 'Select 64-bit Java 21 in the Minecraft instance settings. For a dedicated server, check the Java selected by your host panel or startup script.',
+        answer: `Start with the runtime your launcher selects for the imported instance. The ${manifest.version} client export lists Java ${manifest.minecraft.javaVersion}. For a dedicated server, use the runtime specified by its server package.`,
         link: { label: 'Dedicated server setup', path: 'guides/server-setup/' },
       },
       {
@@ -38,7 +39,7 @@ const topics = [
       {
         id: 'official-servers',
         question: 'How do I join the official server?',
-        answer: 'Select Official Server on the Minecraft main menu. It takes you to the hub, where you can choose the EU or US server.',
+        answer: 'Select Official Server on the Minecraft main menu to open Multiplayer. Join the official hub entry from the list, then choose EU or US. Check Discord for the address and required pack build if the entry is missing.',
         link: { label: 'Official servers and rules', path: 'servers/#joining' },
       },
       {
@@ -92,14 +93,14 @@ const topics = [
       {
         id: 'loot',
         question: 'What do I do with unidentified gear?',
-        answer: 'Take it to an Identifier to preview its reward pool and reveal the item using vanilla XP. If you use a Mechanical Identifier, supply fluid XP. You can salvage unwanted gear for fragments.',
-        link: { label: 'Check appraisal costs', path: 'loot/' },
+        answer: 'Take it to an Identifier to preview its reward pool and reveal the item using vanilla XP. The Mechanical Identifier uses liquid experience. Salvaging eligible gear earns credit for future identifications.',
+        link: { label: 'Check appraisal costs', path: 'loot/#appraisal-cost' },
       },
       {
         id: 'tiers',
         question: 'Does higher rarity always mean better gear?',
         answer: 'Compare the revealed affixes with what your build needs. A boosted stat helps most when it supports the attacks, spells or defenses you actually use.',
-        link: { label: 'Read about loot and rarity', path: 'loot/' },
+        link: { label: 'See the rarity odds', path: 'loot/#rarity' },
       },
       {
         id: 'staffs',

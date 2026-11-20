@@ -32,7 +32,9 @@ const spiralAbyss = mods.find(mod => mod.id === 'spiral_abyss');
   {spiralAbyss && (
     <section class="section prose" id="spiral-abyss">
       <h2>Spiral Abyss</h2>
-      <p><a href={href('mods/#mod-' + spiralAbyss.id)}>Find Spiral Abyss in the mod index</a> or read its <a href={spiralAbyss.url}>CurseForge reference</a>.</p>
+      <p>With Abyssal Rejection enabled in CB-1.1.3, your damage against a floor 5 or 6 boss is reduced by 60% until you defeat that species outside the Abyss.</p>
+      <p>The supplied configuration resets the Abyss every 20 real-world days, including server downtime. Check your server’s reset schedule before planning a run.</p>
+      <p>See the <a href={href('mechanics/#leveling')}>floor level baselines</a> and the <a href={spiralAbyss.url}>Spiral Abyss mod reference</a>.</p>
     </section>
   )}
 

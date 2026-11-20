@@ -12,9 +12,9 @@ const fluidRows = sectionByTitle(loot.sections, 'Mechanical Identifier').rows;
 const sampleTier = costRows.find((row: any) => row.Tier.startsWith('4 ·'));
 const sampleRarity = 'Rare';
 const steps = [
-  {title:'Find sealed gear', description:'Eligible enemies and chests can reward unidentified equipment. A token shows its source, category and loot tier.', image:'media/loot/tokens/unidentified_weapon.png'},
-  {title:'Identify with vanilla XP', description:'Take the token to an Identifier to preview its pool and reveal it. The Mechanical Identifier uses fluid XP.', image:'media/ponder/textures/minecraft/item/experience_bottle.png'},
-  {title:'Keep, trade or salvage', description:'Compare the revealed affixes with your build. Salvaging adds fragments you can spend at an Identifier.', image:'media/weapons/minecraft/diamond_sword.png'},
+  {id:'find-sealed-gear', title:'Find sealed gear', description:'Eligible enemies and chests can reward unidentified equipment. A token shows its source, category and loot tier.', image:'media/loot/tokens/unidentified_weapon.png'},
+  {id:'identify', title:'Identify with vanilla XP', description:'Right-click an Identifier, place up to seven tokens in the tray, check the vanilla XP cost, then confirm and collect the results.', image:'media/ponder/textures/minecraft/item/experience_bottle.png'},
+  {id:'salvage', title:'Keep, trade or salvage', description:'Open Salvage at an Identifier and add unwanted identified gear. Choose Review to check the XP fee and credit return. Confirm Salvage to destroy the gear and add stored credit toward future manual identification.', image:'media/weapons/minecraft/diamond_sword.png'},
 ];
 ---
 <Layout title="Loot & Appraisal" description="Learn how to identify and salvage equipment, compare rarity odds, and estimate appraisal costs.">
@@ -25,10 +25,10 @@ const steps = [
 
   <section class="loot-guide" aria-label="Loot and appraisal guide">
     <ol class="appraisal-steps">
-      {steps.map(step => <li><img src={href(step.image)} alt="" width="44" height="44" loading="lazy" /><div><h2>{step.title}</h2><p>{step.description}</p></div></li>)}
+      {steps.map(step => <li id={step.id}><img src={href(step.image)} alt="" width="44" height="44" loading="lazy" decoding="async" /><div><h2>{step.title}</h2><p>{step.description}</p></div></li>)}
     </ol>
     <div class="mechanics-panel appraisal-panel">
-      <div class="loot-calculator" data-loot-calculator data-loot-costs={JSON.stringify(costRows)}>
+      <div id="appraisal-cost" class="loot-calculator" data-loot-calculator data-loot-costs={JSON.stringify(costRows)}>
         <h2>Identification cost</h2>
         <p>Estimate the price for affix-capable gear and native jewellery, before salvage credit.</p>
         <div class="loot-options">
@@ -45,9 +45,9 @@ const steps = [
         </div>
         <output class="loot-price" for="loot-tier loot-rarity loot-route" data-loot-result><strong data-loot-price>{sampleTier[sampleRarity]}</strong> <span data-loot-unit>vanilla XP points</span></output>
       </div>
-      <div class="rarity-chart">
+      <div class="rarity-chart" id="rarity">
         <h2>Full-range rarity odds</h2>
-        <p>Ordinary odds are renormalized when your level ceiling limits rarity.</p>
+        <p>Your unlocked rarity ceiling limits progression-aware drops. Ordinary loot and boss rewards use separate weights.</p>
         <table aria-label="Full-range rarity odds by loot source">
           <thead><tr><th scope="col">Rarity</th><th scope="col">Ordinary</th><th scope="col">Boss</th></tr></thead>
           <tbody>{rarityRows.map((row: any, index: number) => <tr style={`--rarity-color:${loot.rarities[index].color}`}>
@@ -60,7 +60,7 @@ const steps = [
     </div>
     <section id="automate-identification" class="appraisal-workshop" aria-labelledby="appraisal-workshop-title">
       <h2 id="appraisal-workshop-title">Automate appraisal</h2>
-      <p>Feed sealed items into the top or an ordinary side of the <strong>Mechanical Identifier</strong>. Pump a supported XP fluid into its right-hand port and collect the identified equipment from underneath.</p>
+      <p>Feed sealed items into the top or any side except the XP port of the <strong>Mechanical Identifier</strong>. Pump a supported XP fluid into the right-hand port relative to the machine’s front. Extract the identified equipment underneath. The machine runs without rotational power and uses fluid XP even if you have salvage credit.</p>
       <figure>
         <img src={href('media/loot/mechanical-identifier.webp?style=minecraft')} width="850" height="338" loading="lazy" decoding="async" alt="The Mechanical Identifier takes a sealed item from above and pumped Liquid XP through its side port. Identified equipment leaves underneath." />
         <figcaption class="subtle">Tutorial lettering by CraftronGaming.</figcaption>
