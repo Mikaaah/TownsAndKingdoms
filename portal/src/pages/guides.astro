@@ -1,5 +1,7 @@
 ---
+import LevelScalingDiagram from '../components/LevelScalingDiagram.astro';
 import QuestIcon from '../components/QuestIcon.astro';
+import WoodcraftDiagram from '../components/WoodcraftDiagram.astro';
 import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
 
@@ -61,10 +63,8 @@ const earlyMaterials = [
       </header>
       <div class="guide-body">
         <p>Hold left click on a tree trunk to break your first logs by hand. Turn some into planks, sticks and a crafting table. Make a wooden pickaxe, mine cobblestone for a stone axe, and gather food before heading farther out.</p>
-        <figure class="guide-figure">
-          <img src={href('media/tutorial/chopping-wood.webp')} width="1600" height="804" loading="lazy" decoding="async" alt="A stone axe strikes an oak log, with cracks spreading across the bark." />
-          <figcaption>Keep a few whole logs. Right-click one with an axe to strip it, then apply Andesite Alloy to make a Create Andesite Casing.</figcaption>
-        </figure>
+        <WoodcraftDiagram />
+        <p>Keep a few whole logs. Right-click one with an axe to strip it, then apply Andesite Alloy to make a Create Andesite Casing.</p>
       </div>
     </section>
 
@@ -114,15 +114,12 @@ const earlyMaterials = [
         <h2 id="skills-title">Read levels and spend skill points</h2>
       </header>
       <div class="guide-body">
-        <figure class="guide-figure">
-          <img src={href('media/tutorial/character-level.webp')} width="1440" height="810" loading="lazy" decoding="async" alt="A level 4 badge next to the name above Mikaaah’s Minecraft character." />
-          <figcaption>Illustration of Mikaaah’s player nameplate at character level 4.</figcaption>
-        </figure>
+        <LevelScalingDiagram />
         <ul>
           <li><strong>Character XP</strong> comes from activities such as fighting, mining natural blocks, farming, fishing and exploring. Level up to earn skill points. You start with a level cap of 10.</li>
           <li><strong>Vanilla XP</strong> is the green experience bar. You spend it at the Identifier and on enchanting.</li>
           <li><strong>Open Character</strong> with <kbd>I</kbd> by default or click your portrait in the survival inventory. Check your progress, choose an Origin and spend points in the skill tree.</li>
-          <li><strong>Enemy levels</strong> appear above scaled mobs. Higher levels can mean more health and harder hits. Check the badge before you get into melee range.</li>
+          <li><strong>Enemy level badges</strong> appear above scaled mobs. Enemies keep the level they spawn with.</li>
         </ul>
         <p>See <a href={href('mechanics/#leveling')}>Levels &amp; Origins</a> for XP and level caps, or try a route in the <a href={href('skills/')}>skilltree planner</a>.</p>
       </div>

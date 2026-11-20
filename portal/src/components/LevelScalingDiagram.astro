@@ -1,0 +1,120 @@
+---
+import GuideDiagram from './GuideDiagram.astro';
+import { href } from '../lib/data';
+
+const asset = (file: string) => href(`media/tutorial/levels/${file}.png`);
+---
+
+<GuideDiagram label="How character and enemy levels compare">
+  <div class="level-comparison">
+    <div class="level-panels">
+      <div class="player-panel" data-guide-panel>
+        <p class="panel-title">Your level</p>
+        <div class="nameplate">
+          <img class="badge" src={asset('level-4')} width="36" height="24" alt="Level 4" />
+          <span>Mikaaah</span>
+        </div>
+        <div class="sprite-stage">
+          <img class="sprite" src={asset('mikaaah')} width="48" height="96" alt="" />
+        </div>
+        <p class="level-note">Earn character XP to level up.</p>
+      </div>
+
+      <span class="guide-arrow" aria-hidden="true"><span></span></span>
+
+      <div class="enemy-panel" data-guide-panel>
+        <p class="panel-title">Enemy levels</p>
+        <div class="enemy-examples">
+          <div class="enemy">
+            <div class="nameplate">
+              <img class="badge" src={asset('level-6')} width="36" height="24" alt="Level 6" />
+              <span>Zombie</span>
+            </div>
+            <div class="sprite-stage">
+              <img class="sprite" src={asset('zombie')} width="48" height="96" alt="" />
+            </div>
+            <p class="level-note">Regular mobs spawn within 4 levels of the nearest player.</p>
+          </div>
+
+          <div class="enemy">
+            <div class="nameplate">
+              <img class="badge" src={asset('level-45')} width="50" height="24" alt="Level 45" />
+              <span>Wither</span>
+            </div>
+            <div class="sprite-stage">
+              <img class="sprite" src={asset('wither')} width="88" height="72" alt="" />
+            </div>
+            <p class="level-note">Bosses use their minimum level or the nearest player’s level +10, whichever is higher.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="level-summary">Higher-level enemies have more health and hit harder.</p>
+  </div>
+</GuideDiagram>
+
+<style>
+  .level-panels {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 28px minmax(0, 2.4fr);
+    align-items: stretch;
+    gap: 3px;
+  }
+  .player-panel, .enemy-panel { padding: 9px 8px 11px; text-align: center; }
+  :where(.level-comparison) p { margin: 0; }
+  .panel-title {
+    margin-bottom: 5px;
+    color: var(--diagram-gold);
+    font-size: 17px;
+    line-height: 1.2;
+  }
+  .guide-arrow { display: grid; place-items: center; color: var(--diagram-gold); }
+  .guide-arrow span {
+    width: 22px;
+    height: 12px;
+    background: currentColor;
+    clip-path: polygon(0 33%, 60% 33%, 60% 0, 100% 50%, 60% 100%, 60% 67%, 0 67%);
+    filter: drop-shadow(1px 1px #321e0f);
+  }
+  .enemy-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .enemy { padding-inline: 7px; }
+  .enemy + .enemy { border-inline-start: 1px solid #e9bb7838; }
+  .nameplate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 24px;
+    color: #fff3e3;
+    font-size: clamp(13px, 2.65cqi, 20px);
+    line-height: 1;
+  }
+  .badge, .sprite { display: block; image-rendering: pixelated; object-fit: contain; }
+  .sprite-stage { display: grid; min-height: 106px; place-items: center; }
+  .sprite { filter: drop-shadow(2px 3px #100c08b3); }
+  .level-note {
+    max-inline-size: 27ch;
+    margin-inline: auto;
+    color: var(--diagram-muted);
+    font-size: 13px;
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+  .level-summary {
+    padding: 9px 6px 0;
+    color: var(--diagram-gold);
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  @container (max-width: 550px) {
+    .level-panels { grid-template-columns: minmax(0, 1fr); }
+    .guide-arrow { min-height: 18px; }
+    .guide-arrow span { transform: rotate(90deg) scale(.75); }
+  }
+  @container (max-width: 330px) {
+    .enemy { padding-inline: 4px; }
+    .level-note, .level-summary { font-size: 12px; }
+    .nameplate { gap: 3px; }
+  }
+</style>

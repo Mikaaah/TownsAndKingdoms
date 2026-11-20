@@ -1,0 +1,66 @@
+---
+import GuideDiagram from './GuideDiagram.astro';
+import { href } from '../lib/data';
+
+const steps = [
+  { sprite: 'oak-log', label: 'Punch a log' },
+  { sprite: 'oak-planks', label: 'Make planks' },
+  { sprite: 'crafting-table', label: 'Craft a table' },
+];
+---
+
+<GuideDiagram label="Craft your first table">
+  <ol class="woodcraft-steps" role="list">
+    {steps.map(({ sprite, label }) => (
+      <li class="woodcraft-step" data-guide-panel>
+        <img src={href(`media/tutorial/woodcraft/${sprite}.png`)} alt="" width="36" height="42" loading="lazy" decoding="async" />
+        <span>{label}</span>
+      </li>
+    ))}
+  </ol>
+</GuideDiagram>
+
+<style>
+  ol.woodcraft-steps {
+    --step-gap: clamp(16px, 5cqi, 38px);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--step-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .woodcraft-step {
+    position: relative;
+    display: grid;
+    min-block-size: clamp(102px, 23cqi, 186px);
+    place-content: center;
+    justify-items: center;
+    gap: clamp(5px, 1.25cqi, 10px);
+    margin: 0;
+    padding: 8px 3px;
+    font-size: clamp(12px, 2.2cqi, 18px);
+    line-height: 1.26;
+    text-align: center;
+  }
+
+  .woodcraft-step img {
+    display: block;
+    inline-size: clamp(40px, 8.8cqi, 72px);
+    block-size: auto;
+    filter: drop-shadow(2px 3px #1b1109);
+  }
+
+  .woodcraft-step:not(:last-child)::after {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: calc(100% + var(--step-gap) / 2);
+    inline-size: clamp(10px, 2.9cqi, 22px);
+    block-size: clamp(8px, 1.7cqi, 12px);
+    translate: -50% -50%;
+    clip-path: polygon(0 33%, 58% 33%, 58% 0, 100% 50%, 58% 100%, 58% 67%, 0 67%);
+    background: var(--diagram-gold);
+    content: '';
+  }
+</style>
