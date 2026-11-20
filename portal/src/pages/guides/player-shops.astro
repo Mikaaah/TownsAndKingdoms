@@ -1,4 +1,5 @@
 ---
+import '../../styles/handbook-guide.css';
 import Layout from '../../layouts/Layout.astro';
 import MaterialsChecklist from '../../components/MaterialsChecklist.astro';
 import QuestIcon from '../../components/QuestIcon.astro';
@@ -29,65 +30,65 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     />
   </div>
 
-  <section id="create-shop" class="shop-section" aria-labelledby="create-shop-title">
-    <div class="shop-heading">
+  <section id="create-shop" class="guide-section" aria-labelledby="create-shop-title">
+    <div class="guide-heading">
       <QuestIcon name="rotation_mechanism" size={28} />
       <h2 id="create-shop-title">Build the Create shop</h2>
     </div>
-    <figure class="shop-figure">
+    <figure class="guide-figure">
       <img src={href('media/player-shops/stock-setup.webp?style=minecraft')} width="850" height="336" loading="lazy" decoding="async" alt="The Stock Link sits above the Packager next to the stock barrel and shares a network with the Stock Ticker. Finished parcels go to pickup." />
     </figure>
-    <ol class="shop-steps">
+    <ol class="guide-steps">
       <li><strong>Connect the stock.</strong> Attach a Packager to the side of your stock chest with its output facing out. Put a Stock Link on top of the Packager and fill the chest with the items you want to sell.</li>
       <li><strong>Set up the counter.</strong> Hold a Stock Ticker and right-click the Stock Link to bind it before placing the Ticker. Put a seated mob or a filled Blaze Burner in front of the Ticker as its Stock Keeper. Mark a place for customers to collect the Packager's output.</li>
       <li><strong>Prepare an offer.</strong> Right-click the Stock Keeper while holding an unplaced Table Cloth. Click a stocked item to add it and scroll over it to adjust the amount. Click <strong>Configure</strong>, then place the cloth in the shop. Each cloth represents one offer, which can contain several items.</li>
       <li>
         <strong>Set the price.</strong> Right-click the slot on the side of the cloth with the item you want as payment. Hold right-click on that slot to set the amount per purchase. For example, configure a bundle of 16 oak logs and set the price to 2 emeralds.
-        <figure class="shop-figure">
+        <figure class="guide-figure">
           <img src={href('media/player-shops/offer-and-price.webp?style=minecraft')} width="780" height="226" loading="lazy" decoding="async" alt="An example Table Cloth offer bundles 16 oak logs for 2 emeralds." />
         </figure>
       </li>
       <li><strong>Check public access.</strong> Open the Stock Keeper screen and use the network lock so visitors check out using a Shopping List. Test a purchase as a customer, including access to the cloth, keeper and package pickup. Right-click the Stock Ticker to collect its stored payments.</li>
     </ol>
-    <p class="shop-tip">For an in-game demonstration, hover over a <strong>Table Cloth</strong> and hold <kbd>W</kbd> to open Create's Ponder.</p>
+    <p class="guide-tip">For an in-game demonstration, hover over a <strong>Table Cloth</strong> and hold <kbd>W</kbd> to open Create's Ponder.</p>
   </section>
 
-  <section id="shop-teleporter" class="shop-section" aria-labelledby="shop-teleporter-title">
-    <div class="shop-heading">
+  <section id="shop-teleporter" class="guide-section" aria-labelledby="shop-teleporter-title">
+    <div class="guide-heading">
       <QuestIcon name="map" size={28} />
       <h2 id="shop-teleporter-title">List your shop with the Shop Teleporter</h2>
     </div>
     <p>The teleporter is named <strong>Trading Hub</strong> in-game. It puts your shop in the public warp directory. Create handles the sales at the counter.</p>
-    <figure class="shop-figure">
+    <figure class="guide-figure">
       <img src={href('media/player-shops/market-trading-hub.webp?style=minecraft')} width="708" height="226" loading="lazy" decoding="async" alt="The Market quest page, marked by a pouch icon, gives you a free Trading Hub." />
     </figure>
-    <ol class="shop-steps">
+    <ol class="guide-steps">
       <li><strong>Claim a free Trading Hub.</strong> Open your quest book, go to the <strong>Market</strong> quest page and claim the <strong>Trading Hub</strong> reward.</li>
       <li><strong>Place it near the entrance.</strong> Leave a clear spot on solid ground next to the block for arriving visitors. Placing the Hub opens the listing editor.</li>
       <li><strong>Publish the listing.</strong> Enter a recognizable name and a description of what you sell. Choose an icon, then click <strong>Save</strong>. To edit later, sneak and right-click your Hub, or find it under <strong>Your Warps</strong>.</li>
       <li><strong>Visit a listed shop.</strong> Right-click a Trading Hub, open the public <strong>All Warps</strong> panel, and search for the shop. Select the listing and click <strong>Teleport</strong>.</li>
     </ol>
-    <figure class="shop-figure">
+    <figure class="guide-figure">
       <img src={href('media/player-shops/trading-hub-teleport.webp?style=minecraft')} width="840" height="360" loading="lazy" decoding="async" alt="The purple Trading Hub screen highlights All Warps. On the Trading Hub – Shops screen, the example listing highlights Teleport." />
     </figure>
   </section>
 
-  <section id="checkout" class="shop-section" aria-labelledby="checkout-title">
-    <div class="shop-heading">
+  <section id="checkout" class="guide-section" aria-labelledby="checkout-title">
+    <div class="guide-heading">
       <QuestIcon name="paper" size={28} />
       <h2 id="checkout-title">Buy and pick up an order</h2>
     </div>
-    <figure class="shop-figure">
+    <figure class="guide-figure">
       <img src={href('media/player-shops/checkout-sequence.webp?style=minecraft')} width="840" height="226" loading="lazy" decoding="async" alt="Right-click the Table Cloth to start a Shopping List. Right-click the Stock Keeper with the list to pay, then collect the parcel at pickup." />
     </figure>
-    <ol class="shop-steps">
+    <ol class="guide-steps">
       <li>Check the offer on the Table Cloth. Right-click the cloth with an empty hand to start a <strong>Shopping List</strong>. Keep the list in hand to add more offers from the same shop.</li>
       <li>Bring the payment items in your inventory. Right-click that shop's Stock Keeper with the Shopping List to pay and send the order.</li>
       <li>Collect the package at the shop's pickup point. The Packager at the stock chest creates it. Some shops route packages to a separate counter.</li>
     </ol>
   </section>
 
-  <section id="troubleshooting" class="shop-section" aria-labelledby="troubleshooting-title">
+  <section id="troubleshooting" class="guide-section" aria-labelledby="troubleshooting-title">
     <h2 id="troubleshooting-title">Troubleshooting</h2>
     <dl class="shop-issues">
       <div><dt>The Stock Keeper shows no stock</dt><dd>Check that the Packager can pull from the chest, the Stock Link is on top of it, and the Stock Ticker is bound to that Link.</dd></div>
@@ -96,7 +97,7 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     </dl>
   </section>
 
-  <section id="video" class="shop-section" aria-labelledby="video-title">
+  <section id="video" class="guide-section" aria-labelledby="video-title">
     <h2 id="video-title">Video walkthrough</h2>
     <p>Shadow builds a working store with Create and shows how its parts fit together.</p>
     <iframe
@@ -121,43 +122,11 @@ const tutorialTitle = 'How to Build a Store in Minecraft with Create Mod';
     color: var(--muted);
     font-size: .875rem;
   }
-  .shop-section {
-    padding-top: 24px;
-    margin-top: 34px;
-    border-top: 1px solid var(--border);
-  }
-  .shop-section > p,
-  .shop-steps,
-  .shop-issues {
-    max-width: 74ch;
-  }
-  .shop-heading {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-  .shop-heading h2 { margin: 0; }
+  .shop-issues { max-width: 74ch; }
   .shop-supplies { margin-top: 44px; }
   dt { color: var(--text); font-weight: 650; }
   dd { margin: 4px 0 0; color: var(--muted); }
-  .shop-steps { padding-left: 24px; }
-  .shop-steps li { padding: 0 0 12px 6px; color: var(--muted); }
-  .shop-steps li:last-child { padding-bottom: 0; }
-  .shop-steps strong { color: var(--text); }
-  .shop-steps li::marker { color: var(--gold-text); font-weight: 650; }
-  .shop-tip {
-    padding: 10px 14px;
-    border-left: 2px solid var(--gold-border);
-    background: var(--surface);
-  }
   .shop-issues > div { margin-top: 16px; }
-  .shop-figure { margin: 14px 0; }
-  .shop-figure img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
   .shop-video {
     display: block;
     width: min(100%, 780px);

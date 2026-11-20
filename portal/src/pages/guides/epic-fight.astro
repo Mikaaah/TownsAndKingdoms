@@ -1,0 +1,102 @@
+---
+import '../../styles/handbook-guide.css';
+import GuideDiagram from '../../components/GuideDiagram.astro';
+import QuestIcon from '../../components/QuestIcon.astro';
+import Layout from '../../layouts/Layout.astro';
+import { href } from '../../lib/data';
+
+const attacks = [
+  { name: 'Light', input: 'Tap left click' },
+  { name: 'Heavy / Innate', input: 'Hold left click' },
+  { name: 'Sprint', input: 'Sprint, then tap left click' },
+  { name: 'Jump', input: 'Jump, then tap left click' },
+];
+---
+
+<Layout title="Epic Fight combat" description="Learn Epic Fight controls, attacks, weapon types, skill books, parrying and Combat Punchy in Towns & Kingdoms 3.">
+  <p class="eyebrow">Handbook / Combat</p>
+  <h1>Fight with Epic Fight</h1>
+  <p class="intro">Learn your weapon’s moveset, then use Skill Books to add dodges, guards and mobility skills to your loadout.</p>
+
+  <nav class="guide-jumps" aria-label="Epic Fight sections">
+    <a href="#combat-mode">Combat mode</a>
+    <a href="#attacks">Attacks</a>
+    <a href="#skill-books">Skill Books</a>
+    <a href="#defense">Defense &amp; movement</a>
+    <a href={href('weapons/')}>Weapon registry</a>
+  </nav>
+
+  <section class="guide-section" id="combat-mode" aria-labelledby="combat-mode-title">
+    <header class="guide-heading">
+      <QuestIcon name="steel_sword" size={28} />
+      <h2 id="combat-mode-title">Enter and exit combat mode</h2>
+    </header>
+    <ol class="guide-steps">
+      <li><strong>Switch manually.</strong> Equip a melee weapon and press <kbd>R</kbd> to toggle Epic Fight mode. Press it again to go back to vanilla controls.</li>
+      <li><strong>Let Combat Punchy switch for you.</strong> Swing an eligible melee weapon at a mob or into the air to enter combat automatically. An entity hitting you, including with a projectile, also switches you into combat. Swing at a block while in vanilla mode to keep mining normally.</li>
+      <li><strong>Return to mining.</strong> Select a tool, a non-melee item or an empty hand. Combat Punchy also switches back after seven seconds without combat activity.</li>
+    </ol>
+    <p class="guide-tip">Change the defaults in <strong>Options → Controls → Key Binds</strong> under <strong>Epic Fight Combat</strong> and <strong>Epic Fight GUI</strong>.</p>
+  </section>
+
+  <section class="guide-section" id="attacks" aria-labelledby="attacks-title">
+    <header class="guide-heading">
+      <QuestIcon name="hammer" size={28} />
+      <h2 id="attacks-title">Use light, heavy, sprint and jump attacks</h2>
+    </header>
+    <GuideDiagram label="Default attack inputs">
+      <dl class="attack-inputs">
+        {attacks.map(({ name, input }) => (
+          <div data-guide-panel>
+            <dt>{name}</dt>
+            <dd>{input}</dd>
+          </div>
+        ))}
+      </dl>
+    </GuideDiagram>
+    <ol class="guide-steps">
+      <li><strong>Chain light attacks.</strong> Tap again as the previous swing finishes to advance through your grounded combo. Each swing has its own reach and recovery.</li>
+      <li><strong>Use the weapon’s innate skill.</strong> Land hits until the skill icon fills, then hold <kbd>Left Click</kbd> with the default shared bind. If you assigned a separate <strong>Weapon Innate Skill</strong> bind, press that key. In your inventory, hover over the weapon and hold <kbd>Left Shift</kbd> to read its skill and check for weapon-specific charge or release inputs.</li>
+      <li><strong>Close the gap with a sprint attack.</strong> Get up to a sprint before tapping attack. The weapon uses its dash move as you approach the enemy.</li>
+      <li><strong>Jump and attack early.</strong> Tap while you’re still rising to use the aerial move. Try it on flat ground to get a feel for its timing and reach.</li>
+    </ol>
+    <p class="guide-tip"><strong>Weapon type sets the moveset.</strong> Try an Iron Dagger for quick close-range swings, an Iron Spear for thrusts at a distance, or a two-handed Iron Greatsword for wide swings with higher Impact. Changing grip can also change the combo or innate skill. Look up a weapon’s type and grip in the <a href={href('weapons/')}>weapon registry</a>.</p>
+  </section>
+
+  <section class="guide-section" id="skill-books" aria-labelledby="skill-books-title">
+    <header class="guide-heading">
+      <QuestIcon name="bookred" size={28} />
+      <h2 id="skill-books-title">Learn skills from books</h2>
+    </header>
+    <ol class="guide-steps">
+      <li><strong>Find a Skill Book.</strong> Look in dungeon chests and check mob drops. Hover over the book to see the skill it teaches.</li>
+      <li><strong>Learn the skill.</strong> Use the book with <kbd>Right Click</kbd> and select <strong>Learn</strong>. Pick a slot if the book asks.</li>
+      <li><strong>Equip or swap learned skills.</strong> Press <kbd>K</kbd> to open the <strong>Skill Editor</strong>. Select a slot to see the compatible skills you know. The weapon’s innate skill is supplied by the weapon and its current grip.</li>
+    </ol>
+  </section>
+
+  <section class="guide-section" id="defense" aria-labelledby="defense-title">
+    <header class="guide-heading">
+      <QuestIcon name="skill_point" size={28} />
+      <h2 id="defense-title">Dodge, parry and reposition</h2>
+    </header>
+    <ol class="guide-steps">
+      <li><strong>Dodge just before impact.</strong> Equip <strong>Roll</strong> or <strong>Step</strong>. Hold a movement direction and press <kbd>Left Alt</kbd> as the attack comes in. Dodging uses stamina.</li>
+      <li><strong>Block or time a parry.</strong> Equip <strong>Guard</strong>, face the enemy and hold <kbd>Right Click</kbd> with a compatible weapon. Guard must be equipped to learn <strong>Parrying</strong>. Once Parrying is equipped, press <kbd>Right Click</kbd> just before the hit connects for a lower stamina cost. Check the skill’s available weapon types in the Skill Editor.</li>
+      <li><strong>Launch with Demolition Leap.</strong> Equip it in the <strong>Mobility</strong> slot. Stand on the ground in combat mode, aim, then hold <kbd>Space</kbd> to spend stamina charging. Release to leap in that direction.</li>
+    </ol>
+    <p class="guide-tip"><strong>Stagger interrupts attacks.</strong> More weapon <strong>Impact</strong> can extend the opening after a hit. Armor with more <strong>Stun Armor</strong> helps resist stagger. When you’re staggered, wait for control to return, then dodge or guard before restarting your combo.</p>
+  </section>
+</Layout>
+
+<style>
+  .attack-inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0;
+  }
+  .attack-inputs > div { padding: 9px; text-align: center; }
+  .attack-inputs dt { color: var(--diagram-gold); font-size: clamp(13px, 2.5cqi, 17px); }
+  .attack-inputs dd { margin: 3px 0 0; color: var(--diagram-muted); font-size: clamp(12px, 2.1cqi, 15px); }
+</style>
