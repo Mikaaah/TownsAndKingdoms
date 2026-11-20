@@ -1,11 +1,12 @@
 const clean = value => Array.isArray(value) ? value.map(clean).join(' ') : value && typeof value === 'object' ? Object.values(value).map(clean).join(' ') : String(value ?? '').replace(/<[^>]+>/g,' ').replace(/§./g,'');
 const words = value => String(value || '').split(':').pop().replace(/[_/]/g,' ').replace(/\b\w/g,c=>c.toUpperCase());
 const guideEntries = [
-  ['first-steps','Your first evening','Shelter, food, Create power and the first production line.'],
+  ['questbook','Open the quest book','Inventory icon, FTB Quests shortcut, The Story, A New Beginning and Chapter I.'],
+  ['first-steps','Chop wood and set up camp','Logs, planks, tools, shelter, food and your first Create casing.'],
   ['combat','Learn your weapon','Weapon identity, movesets, grips, combat and special attacks.'],
-  ['factory','Build a production line','Mechanisms, manufacturing, automated crafting and chapters.'],
-  ['appraisal','Identify dungeon gear','Unidentified drops, rarities, appraisal, salvage and equipment.'],
-  ['skills','Plan your character','Skill points, branches, prerequisites and shared builds.']
+  ['factory','Gather andesite and clay','Where to mine Andesite and Clay, Andesite Alloy recipe, mechanisms, workshop and JEI.'],
+  ['appraisal','Build your first Identifier','Identification table recipe, unidentified dungeon gear, vanilla XP, appraisal and salvage.'],
+  ['skills','Read levels and spend skill points','Character XP, enemy levels, origins, skill points and the skill tree.']
 ];
 const articleEntries = [
   ['guides/walking-machines/','Build a walking machine','Let It Walk, Aeronautics, Chapter VI, Light Engineering, Reinforced Mechanisms and walker controls.'],
