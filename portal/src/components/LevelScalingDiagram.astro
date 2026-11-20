@@ -15,7 +15,14 @@ const asset = (file: string) => href(`media/tutorial/levels/${file}.png`);
           <span>Mikaaah</span>
         </div>
         <div class="sprite-stage">
-          <img class="sprite" src={asset('mikaaah')} width="162" height="212" alt="" />
+          <picture>
+            <source
+              media="(prefers-reduced-motion: no-preference)"
+              type="image/webp"
+              srcset={href('media/tutorial/levels/mikaaah-idle.webp')}
+            />
+            <img class="sprite" src={asset('mikaaah-idle')} width="106" height="222" alt="" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <p class="level-note">Earn character XP to level up.</p>
       </div>
