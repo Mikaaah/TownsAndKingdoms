@@ -17,10 +17,10 @@ const { station, rows, result } = Astro.props;
 ---
 
 <GuideDiagram label={'Craft ' + result.name}>
-  <div class="crafting-recipe" data-guide-panel>
-    <div class="crafting-input">
+  <div class="crafting-recipe">
+    <div class="crafting-panel crafting-input" data-guide-panel>
       <span>{station}</span>
-      <table class="crafting-grid" aria-label={rows.length + ' by ' + rows[0].length + ' crafting grid'}>
+      <table class="crafting-pattern" aria-label={rows.length + ' by ' + rows[0].length + ' ingredient pattern'}>
         <tbody>
           {rows.map(row => (
             <tr>
@@ -34,53 +34,57 @@ const { station, rows, result } = Astro.props;
         </tbody>
       </table>
     </div>
-    <span class="crafting-arrow" aria-hidden="true"></span>
-    <div class="crafting-result">
+    <div class="crafting-panel crafting-result" data-guide-panel>
+      <img src={href(result.image)} alt="" width="104" height="104" loading="lazy" decoding="async" />
       <span>1 {result.name}</span>
-      <div class="result-slot">
-        <img src={href(result.image)} alt="" width="48" height="48" loading="lazy" decoding="async" />
-      </div>
     </div>
   </div>
 </GuideDiagram>
 
 <style>
   .crafting-recipe {
-    --slot-size: clamp(28px, 8.6cqi, 46px);
+    --panel-gap: clamp(16px, 5cqi, 38px);
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    align-items: center;
-    gap: clamp(5px, 2.5cqi, 18px);
-    padding: clamp(8px, 2.3cqi, 18px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--panel-gap);
+  }
+  .crafting-panel {
+    display: grid;
+    min-block-size: clamp(102px, 23cqi, 186px);
+    place-content: center;
+    justify-items: center;
+    gap: clamp(5px, 1.25cqi, 10px);
+    padding: 8px 3px;
+    font-size: clamp(12px, 2.2cqi, 18px);
+    line-height: 1.26;
     text-align: center;
   }
-  .crafting-input, .crafting-result {
-    display: grid;
-    justify-items: center;
-    gap: 7px;
-    font-size: clamp(12px, 2.45cqi, 17px);
-    line-height: 1.3;
-  }
-  .crafting-input { color: var(--diagram-muted); }
-  .crafting-result { color: var(--diagram-gold); }
-  .crafting-grid { width: auto; margin: 0; border-collapse: separate; border-spacing: 2px; }
-  .crafting-grid td, .result-slot {
-    box-sizing: border-box;
-    inline-size: var(--slot-size);
-    block-size: var(--slot-size);
-    padding: 1px;
-    border: 2px solid #6a5a4a;
-    border-right-color: #ceb795;
-    border-bottom-color: #ceb795;
-    background: #9e8d77;
-  }
-  .crafting-grid img, .result-slot img { display: block; width: 100%; height: auto; object-fit: contain; }
-  .result-slot { inline-size: calc(var(--slot-size) * 1.35); block-size: calc(var(--slot-size) * 1.35); }
-  .crafting-arrow {
-    inline-size: clamp(14px, 4cqi, 27px);
-    block-size: clamp(9px, 2.25cqi, 14px);
-    margin-top: 19px;
+  .crafting-input { position: relative; color: var(--diagram-muted); }
+  .crafting-input::after {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: calc(100% + var(--panel-gap) / 2);
+    inline-size: clamp(10px, 2.9cqi, 22px);
+    block-size: clamp(8px, 1.7cqi, 12px);
+    translate: -50% -50%;
+    clip-path: polygon(0 33%, 58% 33%, 58% 0, 100% 50%, 58% 100%, 58% 67%, 0 67%);
     background: var(--diagram-gold);
-    clip-path: polygon(0 32%, 59% 32%, 59% 0, 100% 50%, 59% 100%, 59% 68%, 0 68%);
+    content: '';
   }
+  .crafting-pattern {
+    inline-size: auto;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: clamp(4px, 1.2cqi, 9px);
+  }
+  .crafting-pattern td { padding: 0; border: 0; }
+  .crafting-pattern tr:hover { background: transparent; }
+  .crafting-panel img {
+    display: block;
+    block-size: auto;
+    filter: drop-shadow(2px 3px #1b1109);
+  }
+  .crafting-pattern img { inline-size: clamp(20px, 8cqi, 46px); }
+  .crafting-result { color: var(--diagram-gold); }
+  .crafting-result img { inline-size: clamp(50px, 14cqi, 104px); }
 </style>
