@@ -1,8 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { href } from '../../lib/data';
-import manifest from '../../../../TK3/manifest.json';
-const loader = manifest.minecraft.modLoaders.find((entry) => entry.primary)?.id.replace('neoforge-', '') || manifest.minecraft.modLoaders[0].id.replace('neoforge-', '');
+import pack from '../../data/pack-version.json';
+const loader = pack.neoForgeVersion;
 const installer = `java -jar neoforge-${loader}-installer.jar --installServer`;
 const heap = '-Xms4G\n-Xmx8G';
 const hostingCode = 'Mika';

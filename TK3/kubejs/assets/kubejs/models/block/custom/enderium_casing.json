@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "kubejs:block/enderium_casing_top",
-    "side": "kubejs:block/enderium_casing"
-  }
-}

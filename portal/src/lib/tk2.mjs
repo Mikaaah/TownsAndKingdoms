@@ -32,7 +32,7 @@ export const tk2Nav = [
 ];
 
 export async function renderTk2Document(page, projectBase) {
-  const source = readFileSync(resolve(process.cwd(), '../TK3/wiki-archive/2026-10-02', page.source), 'utf8');
+  const source = readFileSync(resolve(process.cwd(), 'public', archive, page.source), 'utf8');
   const { html: markup } = await markdownToHtml(source, { features: { gfm: true } });
   const links = markup.replace(/href="https:\/\/github\.com\/Mikaaah\/TownsAndKingdoms\/wiki\/([^#"]+)(#[^"]*)?"/g, (original, path, hash = '') => {
     const slug = wikiLinks.get(decodeURIComponent(path));

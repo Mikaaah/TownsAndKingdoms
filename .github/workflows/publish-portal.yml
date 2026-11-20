@@ -5,24 +5,10 @@ on:
     branches: [main]
     paths:
       - 'portal/**'
-      - 'TK3/kubejs/**'
-      - 'TK3/config/**'
-      - 'TK3/registry/**'
-      - 'TK3/manifest.json'
-      - 'TK3/modlist.html'
-      - 'TK3/tools/registry_items.json'
-      - 'TK3/wiki-archive/**'
       - '.github/workflows/publish-portal.yml'
   pull_request:
     paths:
       - 'portal/**'
-      - 'TK3/kubejs/**'
-      - 'TK3/config/**'
-      - 'TK3/registry/**'
-      - 'TK3/manifest.json'
-      - 'TK3/modlist.html'
-      - 'TK3/tools/registry_items.json'
-      - 'TK3/wiki-archive/**'
       - '.github/workflows/publish-portal.yml'
   workflow_dispatch:
 
