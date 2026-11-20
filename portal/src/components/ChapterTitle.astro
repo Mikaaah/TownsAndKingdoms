@@ -1,0 +1,29 @@
+---
+interface Props {
+  roman: string;
+  title: string;
+}
+
+const { roman, title } = Astro.props;
+---
+
+<span class="chapter-title"><span class="chapter-prefix">Chapter <span class="chapter-numeral">{roman}</span> |</span> {title}</span>
+
+<style>
+  @font-face {
+    font-family: 'Minecraft Checklist';
+    src: url('../assets/MinecraftChecklist.woff') format('woff');
+    font-display: swap;
+  }
+
+  .chapter-title {
+    color: var(--chapter-text-color, #eee);
+    font-family: 'Minecraft Checklist', monospace;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-shadow: 1px 2px #1a100c;
+  }
+
+  .chapter-prefix { white-space: nowrap; }
+  .chapter-numeral { color: var(--chapter-numeral-color, #f0c075); }
+</style>

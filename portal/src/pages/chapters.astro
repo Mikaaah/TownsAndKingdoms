@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ChapterTitle from '../components/ChapterTitle.astro';
 import QuestBoardTexture from '../components/QuestBoardTexture.astro';
 import { data, href } from '../lib/data';
 
@@ -52,6 +53,7 @@ interface Chapter {
   number: number;
   roman: string;
   title: string;
+  titleColors?: { text?: string; numeral?: string };
   icon?: string;
   titleImage?: string;
   images?: BoardImage[];
@@ -86,6 +88,10 @@ const assets: BoardAssets = data('quest-board-assets', { titles: {}, icons: {} }
 const spruce = href('media/textures/spruce-planks.png');
 const chapterBackboard = href('media/chapters/chapter-backboard.png');
 const isSecret = (chapter: Chapter) => chapter.number === 10 && chapter.quests.length === 0;
+const titleStyle = (chapter: Chapter) => ({
+  '--chapter-text-color': chapter.titleColors?.text,
+  '--chapter-numeral-color': chapter.titleColors?.numeral,
+});
 const objectiveLabel = (objective: QuestObjective) =>
   (objective.count ?? 1) > 1 ? `${objective.count} × ${objective.label}` : objective.label;
 const objectiveIcon = (objective: QuestObjective) => assets.icons[objective.icon ?? objective.item ?? ''];
@@ -150,12 +156,10 @@ function boardEdges(chapter: Chapter) {
           const secret = isSecret(chapter);
           const icon = secret ? undefined : assets.icons[chapter.icon ?? ''];
           return <li>
-            <a class="chapter-jump" href={'#' + chapter.id} data-chapter-link aria-current={index === 0 ? 'true' : undefined}>
-              <span class="chapter-mark">
-                {icon && <QuestBoardTexture texture={icon} width={24} height={24} />}
-                <span class="chapter-number"><span class="sr-only">Chapter </span>{chapter.roman}</span>
-              </span>
-              <span>{secret ? 'Secret' : chapter.title}</span>
+            <a class:list={['chapter-jump', { 'has-icon': icon }]} href={'#' + chapter.id} data-chapter-link
+              style={titleStyle(chapter)} aria-current={index === 0 ? 'true' : undefined}>
+              {icon && <QuestBoardTexture texture={icon} width={24} height={24} />}
+              <ChapterTitle roman={chapter.roman} title={secret ? 'Secret' : chapter.title} />
             </a>
           </li>;
         })}
@@ -170,16 +174,19 @@ function boardEdges(chapter: Chapter) {
       const titleOnBoard = title && chapter.images?.some(image => image.image === chapter.titleImage);
       const headingId = chapter.id + '-title';
       const helpId = chapter.id + '-map-help';
-      return <article class="chapter-stage" id={chapter.id} aria-labelledby={headingId} data-quest-chapter={chapter.id} hidden={index !== 0}>
-        {titleOnBoard ? <h2 id={headingId} class="sr-only">{chapter.title}</h2> : <header class="chapter-header">
-          <h2 id={headingId}>
-            {title ? <img src={href(title.src)} width={title.width} height={title.height} alt={chapter.title} loading="lazy" /> : chapter.title}
-          </h2>
-        </header>}
+      return <article class="chapter-stage" id={chapter.id} aria-labelledby={headingId}
+        style={titleStyle(chapter)} data-quest-chapter={chapter.id} hidden={index !== 0}>
+        {title && !titleOnBoard && <div class="chapter-header">
+          <img src={href(title.src)} width={title.width} height={title.height} alt="" loading="lazy" />
+        </div>}
 
-        {secret ? <div class="chapter-secret"><p>Secret until release</p></div> : (
+        {secret ? <>
+          <header class="chapter-header"><h2 id={headingId}><ChapterTitle roman={chapter.roman} title="Secret" /></h2></header>
+          <div class="chapter-secret"><p>Secret until release</p></div>
+        </> : (
           <div class="chapter-content">
             <div class="quest-board" data-quest-board>
+              <header class="board-heading"><h2 id={headingId}><ChapterTitle roman={chapter.roman} title={chapter.title} /></h2></header>
               <div class="board-toolbar">
                 <p id={helpId}>Drag to move. Select a quest for details.<span class="sr-only"> Use the arrow keys to pan, plus and minus to zoom, or Tab to move between quests.</span></p>
                 {info && <details class="chapter-info">
@@ -337,7 +344,7 @@ function boardEdges(chapter: Chapter) {
 
   .chapter-jump {
     display: grid;
-    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     align-items: center;
     gap: 8px;
     width: 100%;
@@ -347,37 +354,36 @@ function boardEdges(chapter: Chapter) {
     border: 1px solid #85654a;
     border-radius: 6px;
     box-shadow: inset 0 1px #ffdb9b28, inset 0 -2px #100a06a3;
-    color: #fff4e8;
-    font-size: 13px;
-    font-weight: 550;
+    font-size: 14px;
     image-rendering: pixelated;
     line-height: 1.35;
   }
 
+  .chapter-jump.has-icon { grid-template-columns: 24px minmax(0, 1fr); }
+
   .chapter-jump:hover, .chapter-jump[aria-current] {
     background-color: #62442b;
     background-blend-mode: screen;
-    border-color: #f0c075;
-    color: #fff4e8;
+    border-color: var(--chapter-numeral-color, #f0c075);
     text-decoration: none;
   }
 
-  .chapter-jump[aria-current] { box-shadow: inset 0 -2px #f0c075; }
-  .chapter-mark { display: grid; justify-items: center; gap: 1px; }
-  .chapter-number { color: #f6d39e; font-size: 11px; font-weight: 650; line-height: 1.2; }
+  .chapter-jump[aria-current] { box-shadow: inset 0 -2px var(--chapter-numeral-color, #f0c075); }
   .chapter-stage { min-width: 0; scroll-margin-top: calc(var(--header-height) + 14px); }
 
   .chapter-header {
     margin: 0 0 12px;
     padding: 12px 15px;
-    background: linear-gradient(#211813ad, #211813c7), var(--quest-planks) 0 0 / 48px 48px repeat;
     border: 1px solid #68503b;
     border-radius: var(--radius);
-    color: #fff4e8;
     image-rendering: pixelated;
   }
 
-  .chapter-header h2 { min-width: 0; margin: 0; color: inherit; font-size: 21px; }
+  .chapter-header, .board-heading {
+    background: linear-gradient(#211813ad, #211813c7), var(--quest-planks) 0 0 / 48px 48px repeat;
+  }
+
+  .chapter-header h2, .board-heading h2 { min-width: 0; margin: 0; font-size: clamp(17px, 2vw, 21px); line-height: 1.3; }
   .chapter-header img { display: block; width: auto; max-width: 100%; height: clamp(26px, 3vw, 36px); object-fit: contain; object-position: left; }
   .chapter-info { position: relative; flex: none; font-size: 13px; }
   .chapter-info summary {
@@ -422,6 +428,10 @@ function boardEdges(chapter: Chapter) {
   }
 
   .quest-board { overflow: hidden; }
+  .board-heading {
+    padding: 9px 14px;
+    border-bottom: 1px solid #68503b;
+  }
   .board-toolbar {
     display: flex;
     align-items: center;
@@ -563,7 +573,7 @@ function boardEdges(chapter: Chapter) {
   @media (max-width: 520px) {
     .chapter-header { padding: 9px 11px; }
     .chapter-info-body { left: 0; right: auto; }
-    .chapter-jump { min-height: 50px; padding: 6px 7px; gap: 6px; }
+    .chapter-jump { min-height: 50px; padding: 6px 7px; gap: 6px; font-size: 13px; }
     .board-toolbar { padding: 7px 8px 7px 10px; }
     .board-toolbar > p { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
     .quest-detail { padding: 14px; }
