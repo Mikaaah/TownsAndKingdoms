@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
-import manifest from '../../../TK3/manifest.json';
+import pack from '../data/pack-version.json';
 
 const topics = [
   {
@@ -22,7 +22,7 @@ const topics = [
       {
         id: 'java',
         question: 'Which Java should my launcher use?',
-        answer: `Start with the runtime your launcher selects for the pack profile. The ${manifest.version} client export lists Java ${manifest.minecraft.javaVersion}. For a dedicated server, use the runtime specified by its server package.`,
+        answer: `Start with the runtime your launcher selects for the pack profile. The ${pack.version} client export lists Java ${pack.javaVersion}. For a dedicated server, use the runtime specified by its server package.`,
         link: { label: 'Dedicated server setup', path: 'guides/server-setup/' },
       },
       {

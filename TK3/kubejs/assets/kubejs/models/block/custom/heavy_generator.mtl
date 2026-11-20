@@ -1,9 +1,0 @@
-newmtl steel
-Kd 1 1 1
-map_Kd immersiveengineering:block/metal/sheetmetal_steel
-newmtl frame
-Kd 1 1 1
-map_Kd create:block/industrial_iron_block
-newmtl copper
-Kd 1 1 1
-map_Kd immersiveengineering:block/metal_decoration/coil_lv_side

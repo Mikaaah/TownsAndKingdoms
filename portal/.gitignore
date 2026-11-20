@@ -3,5 +3,6 @@ dist/
 .astro/
 playwright-report/
 test-results/
-public/data/
-public/media/skills/
+public/data/*
+!public/data/ponder/
+/sources/

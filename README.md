@@ -11,3 +11,15 @@ Towns & Kingdoms: Beyond the Forge is a Minecraft modpack combining Create autom
 <p align="center">
   <a href="https://discord.gg/CRYk3uDPVt">Discord</a> · <a href="https://www.curseforge.com/minecraft/modpacks/towns-kingdoms">CurseForge</a>
 </p>
+
+This repository hosts the handbook and issue tracker. Use [GitHub Issues](https://github.com/Mikaaah/TownsAndKingdoms/issues) to report bugs or suggest changes.
+
+The handbook builds from the documentation data in `portal/` with Node.js 24.
+
+```sh
+npm --prefix portal ci
+npm --prefix portal run build
+npm --prefix portal test
+```
+
+To refresh the reference data locally, provide the external pack source snapshot as `TK3/` and any skill tree overlay under `portal/sources/`, then run `npm --prefix portal run data:import`. Commit the generated handbook data and media.

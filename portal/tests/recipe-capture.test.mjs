@@ -70,8 +70,7 @@ test('Creation Core and each installed Let It Walk upgrade retain their source r
  const core=byId.get('tnk:chapter_10/sequenced_assembly/creation_core');
  assert.equal(core.output,'kubejs:creation_core');
  assert.equal(core.ingredients.find(row=>row.id==='create:precision_mechanism').count,2);
- const plans=read('TK3/kubejs/pack_data/compat_recipes.json').plans;
- const expected=plans.flatMap(plan=>plan.recipes).filter(row=>row.recipe_id.includes('/let_it_walk/'));
+ const expected=read('portal/tests/fixtures/let-it-walk-recipes.json');
  assert.equal(expected.length,6);
  for(const source of expected){
   const row=byId.get(source.recipe_id);assert(row,source.recipe_id);

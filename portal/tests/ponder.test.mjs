@@ -9,13 +9,13 @@ import { assetUrl, isReferenceStep, matchesScene, fitCameraSpan, multiblockPoint
 const portal=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const index=read(path.join(portal,'src/data/ponder.json'));
-const source=read(path.join(portal,'../TK3/kubejs/pack_data/ponder.json'));
+const authoredScenes=read(path.join(portal,'tests/fixtures/ponder-staging.json'));
 const models=read(path.join(portal,'public/data/ponder/models.json'));
 
 test('every authored Ponder scene has a unique indexed, loadable 3D scene',()=>{
-  assert.equal(index.scenes.length,source.scenes.length);
+  assert.equal(index.scenes.length,authoredScenes.length);
   assert.equal(new Set(index.scenes.map(s=>s.id)).size,index.scenes.length);
-  assert.deepEqual(index.scenes.map(s=>s.id).sort(),source.scenes.map(s=>s.id).sort());
+  assert.deepEqual(index.scenes.map(s=>s.id).sort(),authoredScenes.map(s=>s.id).sort());
   for(const entry of index.scenes){
     const scene=read(path.join(portal,'public',entry.dataUrl));
     assert.equal(scene.id,entry.id);
@@ -62,10 +62,10 @@ test('native OBJ machinery retains complete triangle and UV buffers',()=>{
 
 test('authored camera headings and crafting/depot ingredient placement survive import',()=>{
   let staged=0;
-  for(const authored of source.scenes){
+  for(const authored of authoredScenes){
     const scene=read(path.join(portal,'public/data/ponder',authored.id.split(':')[1]+'.json'));
-    assert.equal(scene.yaw,authored.yaw ?? 145);
-    const items=[...(authored.crafterItems||[]),...(authored.depotItems||[])];
+    assert.equal(scene.yaw,authored.yaw);
+    const items=authored.stagedItems;
     assert.equal(scene.stagedItems.length,items.length,authored.id);
     items.forEach((item,index)=>{
       assert.deepEqual(scene.stagedItems[index].pos,item.pos);
@@ -77,11 +77,11 @@ test('authored camera headings and crafting/depot ingredient placement survive i
 });
 
 test('ritual references are not represented as item-to-item transformations',()=>{
-  const ritual=source.scenes.find(s=>s.id==='tnk:witchery_circle_02');
+  const ritual=index.scenes.find(s=>s.id==='tnk:witchery_circle_02');
   assert.equal(ritual.steps[0].input,'minecraft:clock');
   assert.equal(ritual.steps[0].output,'minecraft:glowstone_dust');
   assert(isReferenceStep(ritual.steps[0]));
-  assert(!isReferenceStep(source.scenes.find(s=>s.id==='tnk:certus_dust').steps[0]));
+  assert(!isReferenceStep(index.scenes.find(s=>s.id==='tnk:certus_dust').steps[0]));
 });
 
 test('camera fits every source structure on narrow and wide screens',()=>{

@@ -1,7 +1,0 @@
-{
-  "selector": "copycats:copycat_board",
-  "properties": {
-    "sable:mass": 0.25,
-    "sable:volume": 0.25
-  }
-}

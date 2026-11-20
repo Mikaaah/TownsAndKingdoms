@@ -1,8 +1,0 @@
-{
-  "tankCapacity": 4000,
-  "processingTicks": 40,
-  "millibucketsPerXp": {
-    "create_enchantment_industry:experience": 1.0,
-    "sophisticatedcore:xp_still": 20.0
-  }
-}
