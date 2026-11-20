@@ -80,3 +80,33 @@ jobs:
       - name: Publish documentation
         id: deployment
         uses: actions/deploy-pages@v4
+
+  sync-wiki:
+    if: github.event_name != 'pull_request'
+    needs: deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Publish handbook links to the GitHub Wiki
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GIT_CONFIG_COUNT: 1
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: '!f() { if [ "$1" = get ]; then printf "username=x-access-token\npassword=%s\n" "$GH_TOKEN"; fi; }; f'
+        run: |
+          git clone --depth 1 "https://github.com/${GITHUB_REPOSITORY}.wiki.git" github-wiki
+          cp portal/wiki/Home.md portal/wiki/_Sidebar.md github-wiki/
+          cd github-wiki
+          git rm --ignore-unmatch -- _Footer.md
+          git add -- Home.md _Sidebar.md
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" \
+            -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Point the GitHub Wiki to the handbook"
+          git push origin HEAD
