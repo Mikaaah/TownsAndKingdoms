@@ -3,7 +3,6 @@ const words = value => String(value || '').split(':').pop().replace(/[_/]/g,' ')
 const guideEntries = [
   ['questbook','Open the quest book','Inventory icon, FTB Quests shortcut, The Story, A New Beginning and Chapter I.'],
   ['first-steps','Chop wood and set up camp','Logs, planks, tools, shelter, food and your first Create casing.'],
-  ['combat','Learn your weapon','Weapon identity, movesets, grips, combat and special attacks.'],
   ['factory','Gather andesite and clay','Where to mine Andesite and Clay, Andesite Alloy recipe, mechanisms, workshop and JEI.'],
   ['appraisal','Build your first Identifier','Identification table recipe, unidentified dungeon gear, vanilla XP, appraisal and salvage.'],
   ['skills','Read levels and spend skill points','Character XP, enemy levels, origins, skill points and the skill tree.']
@@ -11,6 +10,7 @@ const guideEntries = [
 const articleEntries = [
   ['guides/walking-machines/','Build a walking machine','Let It Walk, Aeronautics, Chapter VI, Light Engineering, Reinforced Mechanisms and walker controls.'],
   ['features/','Features and world showcase','Exploration, building, combat, magic and factory automation.'],
+  ['guides/epic-fight/','Epic Fight combat','Light, heavy, sprint and jump attacks, weapon innate skills, skill books, Skill Editor, dodge, parry, Demolition Leap, stagger and Combat Punchy automatic switching.'],
   ['guides/tutorial/','In-game tutorial','Quest Book, Story progression, quest rewards, JEI recipe lookup, claiming, travel, Lootr, Ultimine, combat, character progression and spells.'],
   ['tutorials/','Build guides','Tutorials for Cobblestone Generators, tree farms, AE2, Nuclear, Riftborne, Iron’s Spells, Ars Nouveau, Witchery, Thaumaturge, Let It Walk, portals and boss respawning.'],
   ['dungeons/','Dungeons','Dungeon expeditions, loot and rewards, boss encounters and Spiral Abyss.'],

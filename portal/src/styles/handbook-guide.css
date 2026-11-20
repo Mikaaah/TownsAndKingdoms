@@ -1,0 +1,39 @@
+.guide-section {
+  padding-top: 24px;
+  margin-top: 34px;
+  border-top: 1px solid var(--border);
+}
+.guide-section > p, .guide-steps { max-width: 74ch; }
+.guide-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.guide-heading h2 { margin: 0; }
+.guide-steps { padding-left: 24px; }
+.guide-steps li { padding: 0 0 12px 6px; color: var(--muted); }
+.guide-steps li:last-child { padding-bottom: 0; }
+.guide-steps strong { color: var(--text); }
+.guide-steps li::marker { color: var(--gold-text); font-weight: 650; }
+.guide-tip {
+  padding: 10px 14px;
+  border-left: 2px solid var(--gold-border);
+  background: var(--surface);
+}
+.guide-figure { margin: 14px 0; }
+.guide-figure img { display: block; max-width: 100%; height: auto; }
+.guide-figure figcaption { margin-top: 6px; color: var(--subtle); font-size: 14px; }
+.guide-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  margin: 0 0 24px;
+}
+.guide-jumps a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 15px;
+  font-weight: 550;
+}

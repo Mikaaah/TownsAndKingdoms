@@ -15,7 +15,7 @@ const asset = (file: string) => href(`media/tutorial/levels/${file}.png`);
           <span>Mikaaah</span>
         </div>
         <div class="sprite-stage">
-          <img class="sprite" src={asset('mikaaah')} width="48" height="96" alt="" />
+          <img class="sprite" src={asset('mikaaah')} width="162" height="212" alt="" />
         </div>
         <p class="level-note">Earn character XP to level up.</p>
       </div>
@@ -31,7 +31,7 @@ const asset = (file: string) => href(`media/tutorial/levels/${file}.png`);
               <span>Zombie</span>
             </div>
             <div class="sprite-stage">
-              <img class="sprite" src={asset('zombie')} width="48" height="96" alt="" />
+              <img class="sprite" src={asset('zombie')} width="135" height="209" alt="" />
             </div>
             <p class="level-note">Regular mobs spawn within 4 levels of the nearest player.</p>
           </div>
@@ -42,7 +42,7 @@ const asset = (file: string) => href(`media/tutorial/levels/${file}.png`);
               <span>Wither</span>
             </div>
             <div class="sprite-stage">
-              <img class="sprite" src={asset('wither')} width="88" height="72" alt="" />
+              <img class="sprite wither" src={asset('wither')} width="190" height="201" alt="" />
             </div>
             <p class="level-note">Bosses use their minimum level or the nearest player’s level +10, whichever is higher.</p>
           </div>
@@ -89,9 +89,16 @@ const asset = (file: string) => href(`media/tutorial/levels/${file}.png`);
     font-size: clamp(13px, 2.65cqi, 20px);
     line-height: 1;
   }
-  .badge, .sprite { display: block; image-rendering: pixelated; object-fit: contain; }
-  .sprite-stage { display: grid; min-height: 106px; place-items: center; }
-  .sprite { filter: drop-shadow(2px 3px #100c08b3); }
+  .badge, .sprite { display: block; object-fit: contain; }
+  .badge { image-rendering: pixelated; }
+  .sprite-stage {
+    --sprite-height: clamp(108px, 19cqi, 146px);
+    display: grid;
+    min-height: calc(var(--sprite-height) + 12px);
+    place-items: center;
+  }
+  .sprite { width: auto; height: var(--sprite-height); filter: drop-shadow(2px 3px #100c08b3); }
+  .sprite.wither { height: calc(var(--sprite-height) * .87); }
   .level-note {
     max-inline-size: 27ch;
     margin-inline: auto;

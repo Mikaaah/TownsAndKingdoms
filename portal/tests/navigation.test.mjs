@@ -13,7 +13,7 @@ test('navigation exposes the feature, custom-mod and community routes',()=>{
  const links=new Set(Array.from(dom.window.document.querySelectorAll('#site-sidebar a')).map(a=>a.getAttribute('href')));
  for(const page of ['features/','custom-mods/','servers/','guides/server-setup/','discord/','support/','faq/'])assert(links.has('/TownsAndKingdoms/'+page),page);
  const pagesByGroup = {
-  Character: ['weapons','loot','mechanics'],
+  Character: ['guides/epic-fight','weapons','loot','mechanics'],
   Practical: ['recipes','mods','custom-mods','tutorials','guides/player-shops'],
   World: ['bosses','dungeons','dimensions'],
   Tools: ['skills'],

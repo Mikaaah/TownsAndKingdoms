@@ -1,4 +1,6 @@
 ---
+import '../styles/handbook-guide.css';
+import CraftingDiagram from '../components/CraftingDiagram.astro';
 import LevelScalingDiagram from '../components/LevelScalingDiagram.astro';
 import QuestIcon from '../components/QuestIcon.astro';
 import WoodcraftDiagram from '../components/WoodcraftDiagram.astro';
@@ -11,21 +13,15 @@ const topics = [
   { id: 'factory', title: 'Andesite & clay' },
   { id: 'appraisal', title: 'Identify gear' },
   { id: 'skills', title: 'Levels & skills' },
-  { id: 'combat', title: 'Combat' },
+  { id: 'combat', title: 'Epic Fight', url: href('guides/epic-fight/') },
 ];
-const spruce = href('media/textures/spruce-planks.png');
-const earlyMaterials = [
-  {
-    name: 'Andesite',
-    image: 'media/ponder/textures/minecraft/block/andesite.png',
-    description: 'Mine the speckled gray patches in exposed stone. Check hillsides and shallow caves, and bring a pickaxe.',
-  },
-  {
-    name: 'Clay',
-    image: 'media/ponder/textures/minecraft/block/clay.png',
-    description: 'Look for smooth blue-gray blocks on riverbeds and in shallow water. Dig them with a shovel and keep the clay balls loose.',
-  },
-];
+const andesite = { name: 'Andesite', image: 'media/tutorial/andesite.png' };
+const clayBall = { name: 'Clay Ball', image: 'media/ponder/textures/minecraft/item/clay_ball.png' };
+const andesiteAlloy = { name: 'Andesite Alloy', image: 'media/ponder/textures/create/item/andesite_alloy.png' };
+const emerald = { name: 'Emerald', image: 'media/ponder/textures/minecraft/item/emerald.png' };
+const ironIngot = { name: 'Iron Ingot', image: 'media/ponder/textures/minecraft/item/iron_ingot.png' };
+const book = { name: 'Book', image: 'media/quest-icons/book.png' };
+const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifier.png' };
 ---
 
 <Layout title="Getting started" description="Open the quest book, gather wood, andesite and clay, identify your first piece of gear and learn how character levels work.">
@@ -34,108 +30,88 @@ const earlyMaterials = [
   <p class="intro">Follow your first quests, gather what you need for Create, and turn dungeon finds into gear you can use.</p>
 
   <nav class="guide-jumps" aria-label="Getting started sections">
-    {topics.map(({ id, title }) => <a href={'#' + id}>{title}</a>)}
+    {topics.map(({ id, title, url }) => <a href={url ?? '#' + id}>{title}</a>)}
   </nav>
 
-  <div class="guide-topics" style={{ '--guide-spruce': `url("${spruce}")` }}>
-    <section class="guide-topic" id="questbook" aria-labelledby="questbook-title">
-      <header class="guide-heading">
-        <QuestIcon name="bookopen" size={28} />
-        <h2 id="questbook-title">Open the quest book</h2>
-      </header>
-      <div class="guide-body">
-        <ol>
-          <li>Open your inventory with <kbd>E</kbd> by default. Click the <strong>Quest Book</strong> icon in the upper-left corner.</li>
-          <li>Open <strong>Town Square → The Story</strong> and complete <strong>A New Beginning</strong>. Then look under <strong>Forging Ahead</strong> for <strong>Chapter I | Getting Started</strong>.</li>
-          <li>Open completed quests to claim their rewards. To set a shortcut, find <strong>Open Quests</strong> under <strong>FTB Quests</strong> in <strong>Options → Controls → Key Binds</strong>.</li>
-        </ol>
-        <figure class="guide-figure">
-          <img src={href('media/tutorial/quest-book-orientation.webp')} width="840" height="226" decoding="async" alt="The purple Quest Book icon and the Story, Chapters and Market sections." />
-        </figure>
-        <p><a href={href('guides/tutorial/')}>Open the full in-game tutorial</a> for chapter milestones, claims and travel.</p>
-      </div>
-    </section>
+  <section class="guide-section" id="questbook" aria-labelledby="questbook-title">
+    <header class="guide-heading">
+      <QuestIcon name="bookopen" size={28} />
+      <h2 id="questbook-title">Open the quest book</h2>
+    </header>
+    <ol class="guide-steps">
+      <li>Open your inventory with <kbd>E</kbd> by default. Click the <strong>Quest Book</strong> icon in the upper-left corner.</li>
+      <li>Open <strong>Town Square → The Story</strong> and complete <strong>A New Beginning</strong>. Then look under <strong>Forging Ahead</strong> for <strong>Chapter I | Getting Started</strong>.</li>
+      <li>Open completed quests to claim their rewards. To set a shortcut, find <strong>Open Quests</strong> under <strong>FTB Quests</strong> in <strong>Options → Controls → Key Binds</strong>.</li>
+    </ol>
+    <figure class="guide-figure">
+      <img src={href('media/tutorial/quest-book-orientation.webp')} width="840" height="226" decoding="async" alt="The purple Quest Book icon and the Story, Chapters and Market sections." />
+    </figure>
+    <p><a href={href('guides/tutorial/')}>Open the full in-game tutorial</a> for chapter milestones, claims and travel.</p>
+  </section>
 
-    <section class="guide-topic" id="first-steps" aria-labelledby="first-steps-title">
-      <header class="guide-heading">
-        <QuestIcon name="lantern" size={28} />
-        <h2 id="first-steps-title">Chop wood and set up camp</h2>
-      </header>
-      <div class="guide-body">
-        <p>Hold left click on a tree trunk to break your first logs by hand. Turn some into planks, sticks and a crafting table. Make a wooden pickaxe, mine cobblestone for a stone axe, and gather food before heading farther out.</p>
-        <WoodcraftDiagram />
-        <p>Keep a few whole logs. Right-click one with an axe to strip it, then apply Andesite Alloy to make a Create Andesite Casing.</p>
-      </div>
-    </section>
+  <section class="guide-section" id="first-steps" aria-labelledby="first-steps-title">
+    <header class="guide-heading">
+      <QuestIcon name="lantern" size={28} />
+      <h2 id="first-steps-title">Chop wood and set up camp</h2>
+    </header>
+    <p>Hold left click on a tree trunk to break your first logs by hand. Turn some into planks, sticks and a crafting table. Make a wooden pickaxe, mine cobblestone for a stone axe, and gather food before heading farther out.</p>
+    <WoodcraftDiagram />
+    <p>Keep a few whole logs. Right-click one with an axe to strip it, then apply Andesite Alloy to make a Create Andesite Casing.</p>
+  </section>
 
-    <section class="guide-topic" id="factory" aria-labelledby="factory-title">
-      <header class="guide-heading">
-        <QuestIcon name="pickaxe" size={28} />
-        <h2 id="factory-title">Gather andesite and clay</h2>
-      </header>
-      <div class="guide-body">
-        <div class="material-grid">
-          {earlyMaterials.map(({ name, image, description }) => (
-            <div class="material">
-              <img src={href(image)} alt="" width="48" height="48" loading="lazy" decoding="async" />
-              <div><h3>{name}</h3><p>{description}</p></div>
-            </div>
-          ))}
-        </div>
-        <p>Arrange <strong>2 Andesite</strong> and <strong>2 Clay Balls</strong> in a 2 × 2 checkerboard to craft <strong>1 Andesite Alloy</strong>. Stock up on both for your first Makeshift Mechanisms and Andesite Machine.</p>
-        <p>Hover over an item in JEI and press <kbd>R</kbd> for its recipes or <kbd>U</kbd> for its uses. Follow <a href={href('chapters/')}>Chapters I and II</a> for the first machines, or browse the <a id="workshop-builds" href={href('tutorials/')}>workshop build guides</a>.</p>
-      </div>
-    </section>
+  <section class="guide-section" id="factory" aria-labelledby="factory-title">
+    <header class="guide-heading">
+      <QuestIcon name="pickaxe" size={28} />
+      <h2 id="factory-title">Gather andesite and clay</h2>
+    </header>
+    <ol class="guide-steps">
+      <li><strong>Mine andesite.</strong> Look for speckled gray patches in exposed stone, especially on hillsides and in shallow caves. Bring a pickaxe.</li>
+      <li><strong>Dig for clay balls.</strong> Look for smooth blue-gray clay on riverbeds and in shallow water. Break it with a shovel.</li>
+      <li>
+        <strong>Craft Andesite Alloy.</strong> Use the 2 × 2 inventory grid. Stock up for your first Makeshift Mechanisms and Andesite Machine.
+        <CraftingDiagram station="Inventory crafting" rows={[[andesite, clayBall], [clayBall, andesite]]} result={andesiteAlloy} />
+      </li>
+    </ol>
+    <p class="guide-tip">Hover over an item in JEI and press <kbd>R</kbd> for its recipes or <kbd>U</kbd> for its uses. Follow <a href={href('chapters/')}>Chapters I and II</a> or browse the <a id="workshop-builds" href={href('tutorials/')}>workshop build guides</a>.</p>
+  </section>
 
-    <section class="guide-topic" id="appraisal" aria-labelledby="appraisal-title">
-      <header class="guide-heading">
-        <QuestIcon name="satchel" size={28} />
-        <h2 id="appraisal-title">Build your first Identifier</h2>
-      </header>
-      <div class="guide-body">
-        <div class="identifier-layout">
-          <div>
-            <p>Make an <strong>Identifier</strong> early so you can use the gear you find while exploring. At a crafting table, put <strong>2 emeralds</strong> in the top corners and <strong>1 book</strong> in the center. Fill the six other slots with <strong>iron ingots</strong>.</p>
-            <ol>
-              <li>Place the Identifier, right-click it and put an <strong>unidentified equipment token</strong> in the tray.</li>
-              <li>Check the <strong>vanilla XP</strong> cost, confirm and collect the revealed gear.</li>
-              <li>Compare the stats and affixes before equipping or salvaging it.</li>
-            </ol>
-            <p>See <a href={href('loot/')}>Loot &amp; Appraisal</a> for loot sources, salvage and the Mechanical Identifier.</p>
-          </div>
-          <img src={href('media/tutorial/manual-identifier.png')} width="144" height="144" loading="lazy" decoding="async" alt="The manual Identifier block, with a gold-trimmed crafting grid on top." />
-        </div>
-      </div>
-    </section>
+  <section class="guide-section" id="appraisal" aria-labelledby="appraisal-title">
+    <header class="guide-heading">
+      <QuestIcon name="satchel" size={28} />
+      <h2 id="appraisal-title">Build your first Identifier</h2>
+    </header>
+    <CraftingDiagram station="Crafting table" rows={[[emerald, ironIngot, emerald], [ironIngot, book, ironIngot], [ironIngot, ironIngot, ironIngot]]} result={identifier} />
+    <ol class="guide-steps">
+      <li>Place the Identifier, right-click it and put an <strong>unidentified equipment token</strong> in the tray.</li>
+      <li>Check the <strong>vanilla XP</strong> cost, confirm and collect the revealed gear.</li>
+      <li>Compare the stats and affixes before equipping or salvaging it.</li>
+    </ol>
+    <p>See <a href={href('loot/')}>Loot &amp; Appraisal</a> for loot sources, salvage and the Mechanical Identifier.</p>
+  </section>
 
-    <section class="guide-topic" id="skills" aria-labelledby="skills-title">
-      <header class="guide-heading">
-        <QuestIcon name="skill_point" size={28} />
-        <h2 id="skills-title">Read levels and spend skill points</h2>
-      </header>
-      <div class="guide-body">
-        <LevelScalingDiagram />
-        <ul>
-          <li><strong>Character XP</strong> comes from activities such as fighting, mining natural blocks, farming, fishing and exploring. Level up to earn skill points. You start with a level cap of 10.</li>
-          <li><strong>Vanilla XP</strong> is the green experience bar. You spend it at the Identifier and on enchanting.</li>
-          <li><strong>Open Character</strong> with <kbd>I</kbd> by default or click your portrait in the survival inventory. Check your progress, choose an Origin and spend points in the skill tree.</li>
-          <li><strong>Enemy level badges</strong> appear above scaled mobs. Enemies keep the level they spawn with.</li>
-        </ul>
-        <p>See <a href={href('mechanics/#leveling')}>Levels &amp; Origins</a> for XP and level caps, or try a route in the <a href={href('skills/')}>skilltree planner</a>.</p>
-      </div>
-    </section>
+  <section class="guide-section" id="skills" aria-labelledby="skills-title">
+    <header class="guide-heading">
+      <QuestIcon name="skill_point" size={28} />
+      <h2 id="skills-title">Read levels and spend skill points</h2>
+    </header>
+    <LevelScalingDiagram />
+    <ul>
+      <li><strong>Character XP</strong> comes from activities such as fighting, mining natural blocks, farming, fishing and exploring. Level up to earn skill points. You start with a level cap of 10.</li>
+      <li><strong>Vanilla XP</strong> is the green experience bar. You spend it at the Identifier and on enchanting.</li>
+      <li><strong>Open Character</strong> with <kbd>I</kbd> by default or click your portrait in the survival inventory. Check your progress, choose an Origin and spend points in the skill tree.</li>
+      <li><strong>Enemy level badges</strong> appear above scaled mobs. Enemies keep the level they spawn with.</li>
+    </ul>
+    <p>See <a href={href('mechanics/#leveling')}>Levels &amp; Origins</a> for XP and level caps, or try a route in the <a href={href('skills/')}>skilltree planner</a>.</p>
+  </section>
 
-    <section class="guide-topic" id="combat" aria-labelledby="combat-title">
-      <header class="guide-heading">
-        <QuestIcon name="steel_sword" size={28} />
-        <h2 id="combat-title">Practice with your first weapon</h2>
-      </header>
-      <div class="guide-body">
-        <p>Check your weapon’s grip and moveset in the <a href={href('weapons/')}>weapon registry</a>. Try regular, sprinting and aerial attacks on safe terrain so you know their reach before taking on a dungeon.</p>
-        <p>The <a href={href('guides/tutorial/#combat')}>combat tutorial</a> covers Epic Fight movement, dodging and automatic combat switching.</p>
-      </div>
-    </section>
-  </div>
+  <section class="guide-section" id="combat" aria-labelledby="combat-title">
+    <header class="guide-heading">
+      <QuestIcon name="steel_sword" size={28} />
+      <h2 id="combat-title">Practice with your first weapon</h2>
+    </header>
+    <p>Check your weapon’s grip and moveset in the <a href={href('weapons/')}>weapon registry</a>. Try regular, sprinting and aerial attacks on safe terrain so you know their reach before taking on a dungeon.</p>
+    <p>Learn Epic Fight attacks, weapon skills, parrying and automatic combat switching in the <a href={href('guides/epic-fight/')}>combat tutorial</a>.</p>
+  </section>
 </Layout>
 
 <script>
@@ -152,68 +128,3 @@ const earlyMaterials = [
   window.addEventListener('hashchange', followMovedGuide);
   followMovedGuide();
 </script>
-
-<style>
-  .guide-jumps {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 20px;
-    margin: 0 0 24px;
-  }
-  .guide-jumps a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    font-size: 15px;
-    font-weight: 550;
-  }
-  .guide-topics { display: grid; gap: 20px; }
-  .guide-topic {
-    overflow: hidden;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface);
-  }
-  .guide-heading {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-height: 60px;
-    padding: 12px 18px;
-    background: linear-gradient(#211813c9, #211813df), var(--guide-spruce) 0 0 / 48px 48px repeat;
-    color: #fff4e8;
-  }
-  .guide-heading h2 { margin: 0; font-size: clamp(18px, 2.1vw, 23px); line-height: 1.2; }
-  .guide-body { padding: 18px; color: var(--muted); }
-  .guide-body > *:last-child { margin-bottom: 0; }
-  .guide-body strong { color: var(--text); font-weight: 620; }
-  .guide-body ol, .guide-body ul { margin: 0 0 16px; }
-  .guide-body li { padding-inline-start: 3px; }
-  .guide-figure { margin: 16px 0; }
-  .guide-figure:first-child { margin-top: 0; }
-  .guide-figure img { display: block; max-width: 100%; height: auto; border-radius: 5px; }
-  .guide-figure figcaption { margin-top: 6px; color: var(--subtle); font-size: 14px; }
-  .material-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
-  .material {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px;
-    border: 1px solid var(--border-soft);
-    border-radius: 5px;
-    background: var(--bg);
-  }
-  .material img { flex-shrink: 0; border-radius: 2px; image-rendering: pixelated; }
-  .material h3 { margin: 0; color: var(--text); font-size: 16px; }
-  .material p { margin: 3px 0 0; font-size: 14px; line-height: 1.5; }
-  .identifier-layout { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 16px; }
-  .identifier-layout > div > :last-child { margin-bottom: 0; }
-  .identifier-layout img { display: block; width: 144px; height: auto; }
-
-  @media (max-width: 635px) {
-    .guide-body, .guide-heading { padding-inline: 14px; }
-    .material-grid { grid-template-columns: 1fr; }
-    .identifier-layout { grid-template-columns: 1fr; gap: 6px; }
-    .identifier-layout img { grid-row: 1; width: 112px; }
-  }
-</style>
