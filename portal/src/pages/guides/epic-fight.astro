@@ -7,7 +7,7 @@ import { href } from '../../lib/data';
 
 const attacks = [
   { name: 'Light', input: 'Tap left click' },
-  { name: 'Heavy / Innate', input: 'Hold left click' },
+  { name: 'Heavy input / Innate skill', input: 'Hold left click with the default shared binding' },
   { name: 'Sprint', input: 'Sprint, then tap left click' },
   { name: 'Jump', input: 'Jump, then tap left click' },
 ];
@@ -23,7 +23,6 @@ const attacks = [
     <a href="#attacks">Attacks</a>
     <a href="#skill-books">Skill Books</a>
     <a href="#defense">Defense &amp; movement</a>
-    <a href={href('weapons/')}>Weapon registry</a>
   </nav>
 
   <section class="guide-section" id="combat-mode" aria-labelledby="combat-mode-title">
@@ -42,7 +41,7 @@ const attacks = [
   <section class="guide-section" id="attacks" aria-labelledby="attacks-title">
     <header class="guide-heading">
       <QuestIcon name="hammer" size={28} />
-      <h2 id="attacks-title">Use light, heavy, sprint and jump attacks</h2>
+      <h2 id="attacks-title">Use light, heavy, sprint and jump inputs</h2>
     </header>
     <GuideDiagram label="Default attack inputs">
       <dl class="attack-inputs">
@@ -56,9 +55,9 @@ const attacks = [
     </GuideDiagram>
     <ol class="guide-steps">
       <li><strong>Chain light attacks.</strong> Tap again as the previous swing finishes to advance through your grounded combo. Each swing has its own reach and recovery.</li>
-      <li><strong>Use the weapon’s innate skill.</strong> Land hits until the skill icon fills, then hold <kbd>Left Click</kbd> with the default shared bind. If you assigned a separate <strong>Weapon Innate Skill</strong> bind, press that key. In your inventory, hover over the weapon and hold <kbd>Left Shift</kbd> to read its skill and check for weapon-specific charge or release inputs.</li>
-      <li><strong>Close the gap with a sprint attack.</strong> Get up to a sprint before tapping attack. The weapon uses its dash move as you approach the enemy.</li>
-      <li><strong>Jump and attack early.</strong> Tap while you’re still rising to use the aerial move. Try it on flat ground to get a feel for its timing and reach.</li>
+      <li><strong>Use the weapon’s innate skill.</strong> With the default shared binding, holding <kbd>Left Click</kbd> attempts the weapon’s innate skill. Land hits to fill the skill icon where the weapon uses a charge meter. If you assigned a separate <strong>Weapon Innate Skill</strong> binding, use that key. Hover over the weapon and hold <kbd>Left Shift</kbd> to check its skill, including any charge or release inputs.</li>
+      <li><strong>Close the gap with a sprint attack.</strong> Sprint for at least eight game ticks, about 0.4 seconds at 20 TPS, then tap attack. A dash attack ends the sprint. Start sprinting again before trying another.</li>
+      <li><strong>Jump and attack early.</strong> Tap near the start or top of your jump to use the aerial move. A tap during a fast fall can trigger a different attack.</li>
     </ol>
     <p class="guide-tip"><strong>Weapon type sets the moveset.</strong> Try an Iron Dagger for quick close-range swings, an Iron Spear for thrusts at a distance, or a two-handed Iron Greatsword for wide swings with higher Impact. Changing grip can also change the combo or innate skill. Look up a weapon’s type and grip in the <a href={href('weapons/')}>weapon registry</a>.</p>
   </section>
@@ -82,7 +81,7 @@ const attacks = [
     </header>
     <ol class="guide-steps">
       <li><strong>Dodge just before impact.</strong> Equip <strong>Roll</strong> or <strong>Step</strong>. Hold a movement direction and press <kbd>Left Alt</kbd> as the attack comes in. Dodging uses stamina.</li>
-      <li><strong>Block or time a parry.</strong> Equip <strong>Guard</strong>, face the enemy and hold <kbd>Right Click</kbd> with a compatible weapon. Guard must be equipped to learn <strong>Parrying</strong>. Once Parrying is equipped, press <kbd>Right Click</kbd> just before the hit connects for a lower stamina cost. Check the skill’s available weapon types in the Skill Editor.</li>
+      <li><strong>Block or time a parry.</strong> Equip <strong>Guard</strong>, put away any shield and face the enemy. Hold <kbd>Right Click</kbd> with a compatible weapon. Guard must be equipped to learn <strong>Parrying</strong>. Once Parrying is equipped, press <kbd>Right Click</kbd> just before the hit connects for a lower stamina cost. Check compatible weapon types in the Skill Editor.</li>
       <li><strong>Launch with Demolition Leap.</strong> Equip it in the <strong>Mobility</strong> slot. Stand on the ground in combat mode, aim, then hold <kbd>Space</kbd> to spend stamina charging. Release to leap in that direction.</li>
     </ol>
     <p class="guide-tip"><strong>Stagger interrupts attacks.</strong> More weapon <strong>Impact</strong> can extend the opening after a hit. Armor with more <strong>Stun Armor</strong> helps resist stagger. When you’re staggered, wait for control to return, then dodge or guard before restarting your combo.</p>

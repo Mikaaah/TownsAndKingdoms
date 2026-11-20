@@ -8,12 +8,13 @@ import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
 
 const topics = [
+  { id: 'setup', title: 'Set up the pack' },
   { id: 'questbook', title: 'Quest book' },
   { id: 'first-steps', title: 'Wood & shelter' },
   { id: 'factory', title: 'Andesite & clay' },
   { id: 'appraisal', title: 'Identify gear' },
   { id: 'skills', title: 'Levels & skills' },
-  { id: 'combat', title: 'Epic Fight', url: href('guides/epic-fight/') },
+  { id: 'combat', title: 'Combat' },
 ];
 const andesite = { name: 'Andesite', image: 'media/tutorial/andesite.png' };
 const clayBall = { name: 'Clay Ball', image: 'media/ponder/textures/minecraft/item/clay_ball.png' };
@@ -24,14 +25,25 @@ const book = { name: 'Book', image: 'media/ponder/textures/minecraft/item/book.p
 const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifier.png' };
 ---
 
-<Layout title="Getting started" description="Open the quest book, gather wood, andesite and clay, identify your first piece of gear and learn how character levels work.">
+<Layout title="Getting started" description="Import Towns & Kingdoms 3, start your first quests and build a basic Create workshop.">
   <p class="eyebrow">Handbook / Basics</p>
   <h1>Getting started</h1>
-  <p class="intro">Follow your first quests, gather what you need for Create, and turn dungeon finds into gear you can use.</p>
+  <p class="intro">Set up the pack, follow The Story to your first Makeshift Mechanism, and start building a Create workshop.</p>
 
   <nav class="guide-jumps" aria-label="Getting started sections">
-    {topics.map(({ id, title, url }) => <a href={url ?? '#' + id}>{title}</a>)}
+    {topics.map(({ id, title }) => <a href={'#' + id}>{title}</a>)}
   </nav>
+
+  <section class="guide-section" id="setup" aria-labelledby="setup-title">
+    <header class="guide-heading">
+      <QuestIcon name="rope" size={28} />
+      <h2 id="setup-title">Install the pack and start a world</h2>
+    </header>
+    <ol class="guide-steps">
+      <li><strong>Import the ZIP as a new instance.</strong> Use the Towns &amp; Kingdoms 3 pack file for your release. The launcher imports its Minecraft and NeoForge versions. Check the <a href={href('faq/#java')}>Java FAQ</a> if the launcher asks you to pick a runtime.</li>
+      <li><strong>Launch the imported instance.</strong> Create a singleplayer world, or match the server’s pack build before <a href={href('servers/#joining')}>joining multiplayer</a>.</li>
+    </ol>
+  </section>
 
   <section class="guide-section" id="questbook" aria-labelledby="questbook-title">
     <header class="guide-heading">
@@ -39,8 +51,8 @@ const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifie
       <h2 id="questbook-title">Open the quest book</h2>
     </header>
     <ol class="guide-steps">
-      <li>Open your inventory with <kbd>E</kbd> by default. Click the <strong>Quest Book</strong> icon in the upper-left corner.</li>
-      <li>Open <strong>Town Square → The Story</strong> and complete <strong>A New Beginning</strong>. Then look under <strong>Forging Ahead</strong> for <strong>Chapter I | Getting Started</strong>.</li>
+      <li>Open your inventory with <kbd>E</kbd> by default. Click <strong>Quests</strong> in the lower-left FTB sidebar.</li>
+      <li>Open <strong>Town Square → The Story</strong> and check off <strong>A New Beginning</strong>. Claim its eight hamburgers, then look under <strong>Forging Ahead</strong> for <strong>Chapter I | Getting Started</strong>.</li>
       <li>Open completed quests to claim their rewards. To set a shortcut, find <strong>Open Quests</strong> under <strong>FTB Quests</strong> in <strong>Options → Controls → Key Binds</strong>.</li>
     </ol>
     <figure class="guide-figure">
@@ -54,9 +66,13 @@ const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifie
       <QuestIcon name="lantern" size={28} />
       <h2 id="first-steps-title">Chop wood and set up camp</h2>
     </header>
-    <p>Hold left click on a tree trunk to break your first logs by hand. Turn some into planks, sticks and a crafting table. Make a wooden pickaxe, mine cobblestone for a stone axe, and gather food before heading farther out.</p>
+    <ol class="guide-steps">
+      <li><strong>Make a crafting table.</strong> Break your first logs by hand. Turn some into planks, sticks and a crafting table.</li>
+      <li><strong>Make stone tools.</strong> Craft a wooden pickaxe and mine cobblestone. Use it to make a stone pickaxe, axe and shovel for your first material run.</li>
+      <li><strong>Set up camp.</strong> Put down a chest and, once you have wool, a bed. Keep some food and a few whole logs for Chapter II.</li>
+    </ol>
     <WoodcraftDiagram />
-    <p>Keep a few whole logs. Right-click one with an axe to strip it, then apply Andesite Alloy to make a Create Andesite Casing.</p>
+    <p>For an Andesite Casing, right-click a placed log with an axe to strip it, then apply Andesite Alloy.</p>
   </section>
 
   <section class="guide-section" id="factory" aria-labelledby="factory-title">
@@ -68,11 +84,13 @@ const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifie
       <li><strong>Mine andesite.</strong> Look for speckled gray patches in exposed stone, especially on hillsides and in shallow caves. Bring a pickaxe.</li>
       <li><strong>Dig for clay balls.</strong> Look for smooth blue-gray clay on riverbeds and in shallow water. Break it with a shovel.</li>
       <li>
-        <strong>Craft Andesite Alloy.</strong> Use the 2 × 2 inventory grid. Stock up for your first Makeshift Mechanisms and Andesite Machine.
+        <strong>Craft Andesite Alloy.</strong> Use the 2 × 2 inventory grid. Each Makeshift Mechanism takes four Andesite Alloy.
         <CraftingDiagram station="Inventory crafting" rows={[[andesite, clayBall], [clayBall, andesite]]} result={andesiteAlloy} />
       </li>
+      <li><strong>Finish Chapter I.</strong> Craft your Makeshift Mechanism by hand at a crafting table with four Andesite Alloy, four wooden slabs and one iron ingot. Check <a href={href('chapters/#quest-38E9BF8529447A83')}>Making Do</a> for the objective, then return to The Story for the chapter milestone.</li>
+      <li><strong>Start your Create workshop in Chapter II.</strong> For <a href={href('chapters/#quest-349CB7D23E94A567')}>Welcome to the Machine!</a>, surround one Andesite Casing with eight Makeshift Mechanisms at a crafting table. Check JEI for the recipes in your installed build.</li>
     </ol>
-    <p class="guide-tip">Hover over an item in JEI and press <kbd>R</kbd> for its recipes or <kbd>U</kbd> for its uses. Follow <a href={href('chapters/')}>Chapters I and II</a> or browse the <a id="workshop-builds" href={href('tutorials/')}>workshop build guides</a>.</p>
+    <p class="guide-tip">Hover over an item in JEI and press <kbd>R</kbd> for recipes or <kbd>U</kbd> for uses. Use the <a id="workshop-builds" href={href('tutorials/')}>workshop build guides</a> when you’re ready to put your machines to work.</p>
   </section>
 
   <section class="guide-section" id="appraisal" aria-labelledby="appraisal-title">
@@ -82,8 +100,8 @@ const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifie
     </header>
     <CraftingDiagram station="Crafting table" rows={[[emerald, ironIngot, emerald], [ironIngot, book, ironIngot], [ironIngot, ironIngot, ironIngot]]} result={identifier} />
     <ol class="guide-steps">
-      <li>Place the Identifier, right-click it and put an <strong>unidentified equipment token</strong> in the tray.</li>
-      <li>Check the <strong>vanilla XP</strong> cost, confirm and collect the revealed gear.</li>
+      <li>Place the Identifier, right-click it and put up to seven <strong>unidentified equipment tokens</strong> in the input slots.</li>
+      <li>Check the cost in <strong>vanilla XP points</strong>, confirm and collect the revealed gear from those slots.</li>
       <li>Compare the stats and affixes before equipping or salvaging it.</li>
     </ol>
     <p>See <a href={href('loot/')}>Loot &amp; Appraisal</a> for loot sources, salvage and the Mechanical Identifier.</p>
@@ -96,7 +114,7 @@ const identifier = { name: 'Identifier', image: 'media/tutorial/manual-identifie
     </header>
     <LevelScalingDiagram />
     <ul>
-      <li><strong>Character XP</strong> comes from activities such as fighting, mining natural blocks, farming, fishing and exploring. Level up to earn skill points. You start with a level cap of 10.</li>
+      <li><strong>Character XP</strong> comes from activities such as fighting, mining natural blocks, farming, fishing and exploring. Level up to earn skill points. Your starting level cap is 10, and XP pauses at the cap until you raise it through the campaign.</li>
       <li><strong>Vanilla XP</strong> is the green experience bar. You spend it at the Identifier and on enchanting.</li>
       <li><strong>Open Character</strong> with <kbd>I</kbd> by default or click your portrait in the survival inventory. Check your progress, choose an Origin and spend points in the skill tree.</li>
       <li><strong>Enemy level badges</strong> appear above scaled mobs. Enemies keep the level they spawn with.</li>

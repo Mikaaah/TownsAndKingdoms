@@ -10,7 +10,6 @@ const handbookLinks = [
   { title: 'Progression chapters', path: 'chapters/', icon: 'scroll' },
   { title: 'Skilltree planner', path: 'skills/', icon: 'root' },
   { title: 'Character & Origins', path: 'mechanics/', icon: 'mirror' },
-  { title: 'Loot & Appraisal', path: 'loot/', icon: 'satchel' },
   { title: 'Build guides', path: 'tutorials/', icon: 'bookopen' },
   { title: 'Boss encounters', path: 'bosses/', icon: 'horn' },
   { title: 'Mods & integrations', path: 'mods/', icon: 'journal' },
@@ -50,7 +49,6 @@ const startingGuides = [
   <section class="home-guides" aria-labelledby="home-guides-title">
     <div>
       <h2 id="home-guides-title">A place to begin</h2>
-      <a href={href('tutorials/')}>Browse build guides</a>
     </div>
     <div class="home-guide-links">
       {startingGuides.map(({ title, summary, path, icon }) => (

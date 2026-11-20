@@ -20,7 +20,7 @@ const discord = 'https://discord.gg/CRYk3uDPVt';
       <h2>Join the official network</h2>
       <ol>
         <li>Launch <strong>Towns &amp; Kingdoms 3: Beyond the Forge</strong> using the pack version announced for the official servers.</li>
-        <li>Choose <strong>Official Server</strong> on the Minecraft title screen to reach the <strong>hub</strong>. If this opens Multiplayer first, join the official entry shown there.</li>
+        <li>Choose <strong>Official Server</strong> on the Minecraft title screen to open <strong>Multiplayer</strong>, then join the official hub entry. If it is missing, check the official Discord for the current address.</li>
         <li>In the hub, choose <strong>EU</strong> or <strong>US</strong> to enter your regional world.</li>
       </ol>
     </section>
@@ -42,19 +42,12 @@ const discord = 'https://discord.gg/CRYk3uDPVt';
 
     <section id="availability">
       <h2>Server status</h2>
-      <p>Check the official Discord for the current pack version, maintenance notices, and help finding the hub.</p>
-      <div class="button-row">
-        <a class="button" href={discord} target="_blank" rel="noopener">Official Discord</a>
-      </div>
+      <p>Check the <a href={discord} target="_blank" rel="noopener">official Discord</a> for the current pack version, maintenance notices and help finding the hub.</p>
     </section>
 
     <section id="connection-help">
       <h2>When joining fails</h2>
-      <p>Check that your client uses the server’s exact pack build. If you still can’t join, keep the full disconnect message and <code>logs/latest.log</code> so the server staff can see what failed.</p>
-      <div class="button-row">
-        <a class="button" href={href('faq/#multiplayer')}>Multiplayer FAQ</a>
-        <a class="button" href={href('support/#logs')}>Find your logs</a>
-      </div>
+      <p>Check that your client uses the server’s exact pack build. If you still can’t join, keep the full disconnect message and <code>logs/latest.log</code> for the server staff. The <a href={href('support/#logs')}>troubleshooting guide</a> shows where to find the log.</p>
     </section>
   </div>
 </Layout>

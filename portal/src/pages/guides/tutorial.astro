@@ -8,7 +8,7 @@ const topics = [
   { id: 'questbook', title: 'Quest book' },
   { id: 'recipes', title: 'Recipes & workshop' },
   { id: 'character', title: 'Character & skills' },
-  { id: 'combat', title: 'Epic Fight combat', url: href('guides/epic-fight/') },
+  { id: 'combat-title', title: 'Epic Fight combat' },
   { id: 'appraisal', title: 'Loot & appraisal' },
   { id: 'claiming', title: 'Claims & travel' },
   { id: 'adventure', title: 'Adventure & magic' },
@@ -20,7 +20,7 @@ const topics = [
   <p class="intro">Find your first quest, learn how the pack handles recipes and equipment, and set up a base you can return to.</p>
 
   <nav class="guide-jumps" aria-label="Tutorial topics">
-    {topics.map(topic => <a href={topic.url ?? '#' + topic.id}>{topic.title}</a>)}
+    {topics.map(topic => <a href={'#' + topic.id}>{topic.title}</a>)}
   </nav>
 
   <section class="guide-section" id="questbook" aria-labelledby="questbook-title">
@@ -29,16 +29,16 @@ const topics = [
       <h2 id="questbook-title">Find your way around the quest book</h2>
     </header>
     <ol class="guide-steps">
-      <li><strong>Open the Quest Book.</strong> Open your inventory and select the Quest Book icon in the upper-left corner. Search for <strong>FTB Quests</strong> in <strong>Options → Controls → Key Binds</strong> to set a shortcut.</li>
-      <li><strong>Start The Story.</strong> In <strong>Town Square</strong>, open <strong>The Story</strong> and complete <strong>A New Beginning</strong>. Then open Chapter I under <strong>Forging Ahead</strong>.</li>
+      <li><strong>Open the Quest Book.</strong> Click <strong>Quests</strong> in the lower-left FTB sidebar of your inventory. To set a shortcut, find <strong>Open Quests</strong> in <strong>Options → Controls → Key Binds</strong>.</li>
+      <li><strong>Start The Story.</strong> In <strong>Town Square</strong>, open <strong>The Story</strong> and check off <strong>A New Beginning</strong>. Claim its eight hamburgers, then open <strong>Chapter I | Getting Started</strong> under <strong>Forging Ahead</strong>.</li>
       <li><strong>Read the objective and claim the reward.</strong> Item goals usually check what you have in your inventory. A checkmark goal asks you to confirm a step yourself. Open finished quests and claim their rewards manually.</li>
-      <li><strong>Return to The Story between chapters.</strong> Finish <strong>Chapter Completed</strong> at the end of a chapter, then complete its milestone in <strong>The Story</strong> and claim the reward. Open the next chapter from <strong>Forging Ahead</strong>.</li>
+      <li><strong>Return to The Story between chapters.</strong> Check off <strong>Chapter Completed</strong> on the chapter board, then check off its milestone in <strong>The Story</strong>, such as <strong>Chapter I | Completed</strong>. Claim any visible rewards and open the next chapter from <strong>Forging Ahead</strong>.</li>
     </ol>
     <figure class="guide-figure">
       <img src={href('media/tutorial/quest-book-orientation.webp')} width="840" height="226" loading="lazy" decoding="async" alt="Open the Quest Book and choose Story for milestones, Chapters for the workshop, or Market for trading." />
     </figure>
     <dl class="tutorial-boards">
-      <div><dt>The Story</dt><dd>Start here and claim your chapter milestones.</dd></div>
+      <div><dt>The Story</dt><dd>Start here and check off your chapter milestones.</dd></div>
       <div><dt>Forging Ahead</dt><dd>Follow the workshop quests and their prerequisites. <a href={href('chapters/')}>Open the chapter questlines</a>.</dd></div>
       <div><dt>Market</dt><dd>Claim a free Trading Hub to list a shop. <a href={href('guides/player-shops/#shop-teleporter')}>Set up a player shop</a>.</dd></div>
     </dl>
@@ -54,7 +54,8 @@ const topics = [
       <img src={href('media/tutorial/jei-item-lookup.webp')} width="840" height="226" loading="lazy" decoding="async" alt="With the default JEI controls, hover over Andesite Alloy and press R to see recipes or U to see uses." />
     </figure>
     <ol class="guide-steps">
-      <li><strong>Start with Chapter I.</strong> Gather clay, andesite, wood and iron. Follow the opening quests to craft your first Makeshift Mechanism and Andesite Machine by hand.</li>
+      <li><strong>Start with Chapter I.</strong> Use a crafting table to make a Makeshift Mechanism with four Andesite Alloy, four wooden slabs and one Iron Ingot.</li>
+      <li><strong>Build your first Andesite Machine in Chapter II.</strong> Follow <strong>Welcome to the Machine!</strong> and surround one Andesite Casing with eight Makeshift Mechanisms in a crafting table.</li>
       <li><strong>Work backward from the output.</strong> Open each ingredient’s recipe, and check the process and machine before gathering parts. For sequenced assembly, follow the operations and loop count in order.</li>
       <li><strong>See the equipment in action.</strong> Hover over a Create item and hold its Ponder key for the in-game demonstration. Follow the handbook’s <a href={href('tutorials/')}>build guides</a> for complete setups or open the <a href={href('recipes/')}>recipe reference</a>.</li>
     </ol>
@@ -92,7 +93,7 @@ const topics = [
     <ul>
       <li><strong>Check your own loot.</strong> Lootr containers give each player their own drops. Everyone in a party should open the Lootr container themselves.</li>
       <li><strong>Appraise unidentified gear.</strong> Bring unidentified equipment to the Identifier and check the experience cost. Later, use the Mechanical Identifier and supported XP fluid for automation.</li>
-      <li><strong>Compare the result.</strong> Check the item’s stats, rarity and affixes against your build. Salvage gear you are done with to earn fragments you can spend at an Identifier.</li>
+      <li><strong>Compare the result.</strong> Check the item’s stats, rarity and affixes against your build. Salvaging unwanted gear costs vanilla XP and earns credit toward a later identification.</li>
     </ul>
     <figure class="guide-figure">
       <img src={href('media/loot/mechanical-identifier.webp?style=minecraft')} width="850" height="338" loading="lazy" decoding="async" alt="The Mechanical Identifier takes unidentified items from above and liquid experience from the side, then outputs equipment below." />
@@ -106,7 +107,7 @@ const topics = [
       <h2 id="claiming-title">Claim a base and make a return route</h2>
     </header>
     <ol class="guide-steps">
-      <li><strong>Open the FTB Chunks map.</strong> Use the blue map icon in your inventory. Click a chunk to claim it or right-click one of your claims to unclaim it.</li>
+      <li><strong>Open the Claim Manager.</strong> Select <strong>FTB Chunks: Claim Manager</strong> in the inventory’s FTB sidebar. Left-click a chunk to claim it or right-click one of your claims to unclaim it.</li>
       <li><strong>Check team access.</strong> If you build with friends, check your team and its access settings before sharing machines or storage. The pack excludes the End and Twilight Forest from land claims and disables force-loading.</li>
       <li><strong>Activate useful Waystones.</strong> Interact with a Waystone to add it as a destination. Visit another Waystone to return to a saved stop. The pack disables the XP cost by default.</li>
     </ol>

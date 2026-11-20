@@ -2445,7 +2445,7 @@
         "body": [
           "Find unidentified equipment in exploration loot or from eligible enemies. Its token carries the equipment category, loot tier, source and sealed roll information.",
           "Bring it to an Identifier station to inspect the pool and reveal the result. Handheld identification is disabled; the station and Mechanical Identifier provide the reveal routes.",
-          "Identification spends vanilla XP points. Salvage fragments can reduce the station’s bill. Character XP is never spent on appraisal.",
+          "Identification at the manual station spends vanilla XP points after applying any available salvage credit.",
           "Keep a useful find, trade it, or salvage unwanted identified gear. Discoveries fill your personal collection and pool previews help you plan future expeditions."
         ]
       },
@@ -2554,8 +2554,8 @@
       {
         "title": "Rarity rolls",
         "body": [
-          "These are the full-range ordinary and boss rarity chances. Your character’s rarity cap removes grades above its current bracket and the remaining eligible weights are renormalized.",
-          "Boss rewards use their boss rarity weights. Ordinary equipment uses the ordinary column; the two rolls have different distributions."
+          "The table shows the full-range chances. Ordinary equipment rolls among the grades allowed by your unlocked rarity ceiling.",
+          "Progression-aware boss rewards roll with boss weights. A roll above the recipient’s rarity ceiling is rolled again among the eligible grades using those weights."
         ],
         "rows": [
           {
@@ -2640,7 +2640,7 @@
         "title": "Identification prices",
         "body": [
           "For affix-capable equipment and native jewellery, identification cost is the loot-tier base price multiplied by the rarity multiplier, rounded up to a whole vanilla XP point. Other compatibility items retain their base price.",
-          "At the manual station, available salvage fragments reduce the total bill before vanilla XP is charged. The table shows the full price before fragments.",
+          "At the manual station, stored salvage credit reduces the bill before vanilla XP is charged. The table shows the full price before credit.",
           "A Rare Veteran item costs 12 vanilla XP points: tier 4 base 8 × Rare multiplier 1.5."
         ],
         "rows": [
@@ -2723,7 +2723,7 @@
         "body": [
           "The Mechanical Identifier automates appraisal with an internal 4,000 mB tank and 40 ticks of processing per item (2 seconds at 20 ticks per second).",
           "Insert one unidentified token per input slot, supply a supported XP fluid and leave room for identified output. Seven input slots are available.",
-          "Fluid cost is ceil(full identification XP cost × the fluid’s mB-per-XP ratio). The mechanical route uses fluid directly and does not spend the player’s salvage fragments.",
+          "Multiply the full identification XP cost by the fluid’s mB-per-XP ratio and round up. The mechanical route pays the full cost in fluid.",
           "The machine waits when fluid is insufficient or output is blocked. It consumes the token and fluid when the prepared result completes. Rotational power is not a processing requirement."
         ],
         "rows": [
@@ -2743,15 +2743,14 @@
         "title": "Salvaging",
         "body": [
           "Salvaging identified equipment costs 1 + 1 × loot tier + 1 × rarity index vanilla XP points. Common has index 0 and Mythic index 5.",
-          "The starting fragment value is the rarity’s salvage base × (loot tier + 1). Its cap is 40% of the identification price, rounded down, with a minimum cap of one fragment for eligible positive-price gear.",
-          "You receive the lower of that starting value and cap. Review the batch before confirming; the stored fragment balance can hold up to 1,000,000.",
-          "Fragments are personal credit for future station identification. They are not character XP and do not reroll already revealed gear."
+          "Base credit equals the rarity’s salvage base × (loot tier + 1). Credit is capped at 40% of the identification price, rounded down. The cap is at least one credit for eligible gear with a positive identification price.",
+          "You receive the lower of the base credit and cap. Review your selected gear and the vanilla XP fee before confirming. Your character can store up to 1,000,000 credit toward future manual identification."
         ]
       },
       {
         "title": "Boss equipment and signature effects",
         "body": [
-          "50 encounters have dedicated reward pools. Eligible player kills use those encounter-specific equipment choices rather than treating every material toolset as a unique boss artifact.",
+          "50 encounters have dedicated equipment pools. A player must deal the final blow or have hit the boss recently for its equipment pool to apply.",
           "Pool entries are weighted choices, not a guarantee that every listed item drops together. Some encounters add equipment when no matching equipment would otherwise be awarded.",
           "Boss signature affixes are enabled. Their shared effect cooldown is 8 seconds and their configured effect duration is 3 seconds."
         ],

@@ -57,10 +57,15 @@ const groups = isTk2 ? tk2Nav : [
       {!isTk2 && <button class="header-search" id="open-search" aria-label="Search the handbook" aria-haspopup="dialog">
         <Icon name="search" size={18} /><span>Search the handbook…</span><kbd>Ctrl K</kbd>
       </button>}
-      <nav class="header-links" aria-label="Community">
-        <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord</a>
+      <nav class="header-links" aria-label="Project links">
         <a href="https://github.com/Mikaaah/TownsAndKingdoms" target="_blank" rel="noopener">GitHub</a>
-        <details class="version-switch"><summary aria-label="Choose handbook edition">{isTk2 ? 'TK2' : 'TK3'}</summary><nav class="version-menu" aria-label="Choose a handbook"><a href={href()} aria-current={!isTk2 ? 'page' : undefined}>Towns & Kingdoms 3</a><a href={href('tk2/')} aria-current={isTk2 ? 'page' : undefined}>Towns & Kingdoms 2</a></nav></details>
+        <details class="version-switch">
+          <summary aria-label="Choose handbook edition">{isTk2 ? 'TK2' : 'TK3'}</summary>
+          <nav class="version-menu" aria-label="Choose a handbook">
+            {isTk2 ? <a href={href()}>Towns & Kingdoms 3</a> : <span aria-current="true">Towns & Kingdoms 3</span>}
+            {isTk2 ? <span aria-current="true">Towns & Kingdoms 2</span> : <a href={href('tk2/')}>Towns & Kingdoms 2</a>}
+          </nav>
+        </details>
       </nav>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Light mode" aria-pressed="false" title="Switch color theme">
         {isTk2 ? <>
@@ -87,11 +92,6 @@ const groups = isTk2 ? tk2Nav : [
           <nav class="footer-links" aria-label="Footer">
             <a href="https://www.curseforge.com/minecraft/modpacks/towns-kingdoms" target="_blank" rel="noopener">CurseForge</a>
             <a href="https://discord.gg/CRYk3uDPVt" target="_blank" rel="noopener">Discord</a>
-            {isTk2 ? <a href={href()}>TK3 handbook</a> : <>
-              <a href={href('support/')}>Support</a>
-              <a href={href('faq/')}>FAQ</a>
-              <a href={href('tk2/')}>TK2 archive</a>
-            </>}
           </nav>
         </footer>
       </main>
@@ -112,5 +112,5 @@ const groups = isTk2 ? tk2Nav : [
 .brand:hover .brand-home{background:var(--surface-raised);border-color:var(--control-border)}
 .brand > img{min-width:0}
 @media(max-width:800px){.brand{gap:8px}}
-.version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold-text)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu a[aria-current]{color:var(--gold-text)}
+.version-switch{position:relative;font-size:14px}.version-switch summary{display:flex;align-items:center;list-style:none;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-height:44px;color:var(--muted)}.version-switch summary::-webkit-details-marker{display:none}.version-switch summary:after{content:"⌄";padding-left:12px;color:var(--gold-text)}.version-switch[open]>summary{margin:0}.version-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:240px;padding:8px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 30px #0005}.version-menu :is(a,span){display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:4px;white-space:nowrap}.version-menu a:hover{background:var(--surface-raised);text-decoration:none}.version-menu [aria-current]{color:var(--gold-text)}
 </style>

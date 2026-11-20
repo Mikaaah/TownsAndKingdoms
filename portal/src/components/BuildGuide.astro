@@ -1,4 +1,5 @@
 ---
+import '../styles/handbook-guide.css';
 import Layout from '../layouts/Layout.astro';
 import MaterialsChecklist from './MaterialsChecklist.astro';
 import QuestIcon from './QuestIcon.astro';
@@ -47,7 +48,7 @@ const guideHref = (path: string) => path.startsWith('https://') ? path : href(pa
       {guide.steps.map(step => <li id={step.id}>
         <h3>{step.title}</h3>
         <p>{step.text}</p>
-        {step.figure && <figure>
+        {step.figure && <figure class="guide-figure">
           <img src={href(step.figure.src)} width={step.figure.width} height={step.figure.height}
             alt={step.figure.alt} loading="lazy" decoding="async" />
           {step.figure.caption && <figcaption>{step.figure.caption}</figcaption>}
@@ -77,9 +78,8 @@ const guideHref = (path: string) => path.startsWith('https://') ? path : href(pa
   .build-steps > li::marker { color: var(--gold-text); font-weight: 700; }
   .build-steps h3 { margin: 0; font-size: 18px; }
   .build-steps p { margin: 5px 0 0; color: var(--muted); }
-  .build-steps figure { margin: 12px 0 0; }
-  .build-steps img { display: block; width: 100%; height: auto; border: 1px solid var(--border-soft); border-radius: 5px; }
-  .build-steps figcaption { margin-top: 5px; color: var(--subtle); font-size: 14px; }
+  .build-steps .guide-figure { margin: 12px 0 0; }
+  .build-steps img { width: 100%; border: 1px solid var(--border-soft); border-radius: 5px; }
   .build-tips { margin-top: 25px; }
   .build-tips dl { display: grid; gap: 9px; margin: 0; }
   .build-tips dt { font-weight: 650; }
