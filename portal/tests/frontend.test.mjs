@@ -262,11 +262,18 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
  for (const [index, link] of chapterLinks.entries()) {
   const chapter = questlines[index];
   const sprite = link.querySelector('svg');
+  const expectedTitle = `Chapter ${chapter.roman} | ${chapter.quests.length ? chapter.title : 'Secret'}`;
+  const heading = doc.getElementById(chapter.id + '-title');
+  assert.equal(link.querySelector('.chapter-title').textContent, expectedTitle);
+  assert.equal(heading.textContent, expectedTitle);
+  for (const element of [link, heading.closest('article')]) {
+   assert.equal(element.style.getPropertyValue('--chapter-text-color'), chapter.titleColors.text);
+   assert.equal(element.style.getPropertyValue('--chapter-numeral-color'), chapter.titleColors.numeral);
+  }
   if (chapter.quests.length) {
    const icon = assets.icons[chapter.icon];
    assert.equal(sprite?.querySelector('image')?.getAttribute('href'), '/TownsAndKingdoms/' + icon.src, chapter.id);
    assert.equal(sprite?.getAttribute('viewBox'), [icon.x, icon.y, icon.width, icon.height].join(' '), chapter.id);
-   assert.ok(link.textContent.includes(chapter.title), chapter.id);
   } else {
    assert.equal(sprite, null);
    assert.match(link.textContent, /Secret/);
@@ -280,7 +287,7 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
    const title=assets.titles[chapter.id];
    const titleArt=chapter.images.length
     ? stage.querySelector('.board-art image').getAttribute('href')
-    : stage.querySelector('h2 img').getAttribute('src');
+    : stage.querySelector('.chapter-header img').getAttribute('src');
    assert.equal(titleArt,'/TownsAndKingdoms/'+title.src);
    assert.ok(readFileSync(resolve(root,'dist',title.src)).length);
    const byId=new Map(chapter.quests.map(quest=>[quest.id,quest]));

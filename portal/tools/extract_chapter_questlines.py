@@ -17,6 +17,7 @@ from import_pack_snapshot import plain, snbt
 ROMANS = 'I II III IV V VI VII VIII IX X'.split()
 CHAPTER_TITLE = re.compile(r'\s*►?\s*Chapter ([IVX]+)\s*\|\s*(.+)')
 ITEM_TRANSLATION = re.compile(r'(?:item|block)\.([^.]+)\.(.+)')
+HEX_COLOR = re.compile(r'#[0-9a-fA-F]{6}')
 QUEST_MAP_FIELDS = {
     'shape': 'shape',
     'size': 'size',
@@ -27,6 +28,18 @@ QUEST_MAP_FIELDS = {
 
 def text(value):
     return plain(value).strip() if value is not None else ''
+
+
+def chapter_title_colors(value, roman):
+    if isinstance(value, str) and value.lstrip().startswith('{'):
+        value = json.loads(value)
+    if not isinstance(value, dict):
+        return {}
+    numeral = next((part for part in value.get('extra', [])
+                    if isinstance(part, dict) and part.get('text') == roman), {})
+    colors = {'text': value.get('color'), 'numeral': numeral.get('color')}
+    return {part: color for part, color in colors.items()
+            if isinstance(color, str) and HEX_COLOR.fullmatch(color)}
 
 
 def description(value):
@@ -205,6 +218,8 @@ def extract(archive):
             'number': index + 1,
             'roman': ROMANS[index],
             'title': chapter_names[cid],
+            'titleColors': chapter_title_colors(
+                language.get(f'chapter.{cid}.title', chapter.get('title')), ROMANS[index]),
             'quests': [],
         }
         result.append(chapter_row)
