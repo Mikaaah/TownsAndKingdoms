@@ -13,6 +13,8 @@ const baseScale = 28;
 const minScale = 2;
 const maxScale = 160;
 const gridSize = 0.25;
+const backgroundScale = 3;
+const questIconScale = 2 / 3;
 const flags = { snap: true, labels: true, links: true, repeats: false };
 const colorPattern = /^#[0-9a-f]{6}$/i;
 const groupDetails = new Map();
@@ -131,7 +133,10 @@ function resize() {
 function grid() {
   if (!backgroundPattern && theme?.background?.src) {
     const tile = loadImage(theme.background.src);
-    if (tile.complete && tile.naturalWidth) backgroundPattern = context.createPattern(tile, "repeat");
+    if (tile.complete && tile.naturalWidth) {
+      backgroundPattern = context.createPattern(tile, "repeat");
+      backgroundPattern.setTransform(new DOMMatrix().scale(backgroundScale));
+    }
   }
   if (backgroundPattern) {
     context.fillStyle = backgroundPattern;
@@ -141,7 +146,10 @@ function grid() {
     gradient.addColorStop(1, "#15111e");
     context.fillStyle = gradient;
   }
+  context.save();
+  context.imageSmoothingEnabled = false;
   context.fillRect(0, 0, width, height);
+  context.restore();
   const step = camera.scale > 8 ? camera.scale : camera.scale * 5;
   context.strokeStyle = "#c7a3f116";
   context.lineWidth = 1;
@@ -315,7 +323,7 @@ function paintNode(quest, screen, isSelected) {
     context.lineWidth = 1.7;
     context.stroke();
   }
-  const hasIcon = paintItem(quest.icon, screen.x, screen.y, Math.max(7, radius * 1.65));
+  const hasIcon = paintItem(quest.icon, screen.x, screen.y, radius * 2 * questIconScale);
   if (!hasIcon && radius > 7 && (quest.shape !== "none" || isSelected)) {
     context.beginPath();
     const centerSize = Math.max(1, radius * .26);
