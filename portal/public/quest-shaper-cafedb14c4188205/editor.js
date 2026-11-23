@@ -64,7 +64,24 @@ function frameBounds() {
 
 function fitChapter() {
   if (!chapter) return;
-  camera = fitBounds(frameBounds(), { width, height }, Math.min(width, height) < 420 ? 44 : 68, minScale, 60);
+  const bounds = frameBounds();
+  const padding = Math.min(width, height) < 420 ? 44 : 68;
+  camera = fitBounds(bounds, { width, height }, padding, minScale, 60);
+  const overview = byId("minimap-box");
+  if (overview.offsetParent) {
+    const { top, left } = overview.getBoundingClientRect();
+    const area = canvas.getBoundingClientRect();
+    const cornerX = left - area.left;
+    const cornerY = top - area.top;
+    const covered = chapter.quests.some((quest) => {
+      const screen = worldToScreen(camera, position(quest));
+      const radius = nodeRadius(quest);
+      return screen.x + radius >= cornerX && screen.y + radius >= cornerY;
+    });
+    if (covered) {
+      camera = fitBounds(bounds, { width, height: Math.max(1, cornerY + padding - 10) }, padding, minScale, 60);
+    }
+  }
   queueDraw();
 }
 
@@ -799,7 +816,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=quest-groups", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=quest-groups-fit", { cache: "no-cache" }),
       fetch("./item-icons.json?v=quest-groups")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
@@ -820,7 +837,7 @@ async function start() {
     }
     const current = dataset.chapters.filter((entry) => !entry.legacy);
     const linkedChapter = new URLSearchParams(window.location.search).get("chapter");
-    const original = current.find((entry) => entry.id === linkedChapter)
+    const original = dataset.chapters.find((entry) => entry.id === linkedChapter)
       ?? current.find((entry) => /get.*create.?ive/i.test(entry.title)) ?? current[0] ?? dataset.chapters[0];
     byId("chapter-count").textContent = current.length;
     byId("pack-version").textContent = dataset.pack;
