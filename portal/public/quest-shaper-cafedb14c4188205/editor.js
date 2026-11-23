@@ -21,6 +21,9 @@ const iconCell = 32;
 const iconAtlasSize = 512;
 let iconIndex = {};
 let iconCounts = new Map();
+let theme;
+let themedQuestIds;
+let backgroundPattern;
 const chapterOrigins = new Map();
 const chapterButtons = new Map();
 const selected = new Set();
@@ -126,12 +129,18 @@ function resize() {
 }
 
 function grid() {
-  context.fillStyle = "#161222";
-  context.fillRect(0, 0, width, height);
-  const gradient = context.createRadialGradient(width * .58, height * .42, 0, width * .58, height * .42, Math.max(width, height) * .74);
-  gradient.addColorStop(0, "#251a35");
-  gradient.addColorStop(1, "#15111e");
-  context.fillStyle = gradient;
+  if (!backgroundPattern && theme?.background?.src) {
+    const tile = loadImage(theme.background.src);
+    if (tile.complete && tile.naturalWidth) backgroundPattern = context.createPattern(tile, "repeat");
+  }
+  if (backgroundPattern) {
+    context.fillStyle = backgroundPattern;
+  } else {
+    const gradient = context.createRadialGradient(width * .58, height * .42, 0, width * .58, height * .42, Math.max(width, height) * .74);
+    gradient.addColorStop(0, "#251a35");
+    gradient.addColorStop(1, "#15111e");
+    context.fillStyle = gradient;
+  }
   context.fillRect(0, 0, width, height);
   const step = camera.scale > 8 ? camera.scale : camera.scale * 5;
   context.strokeStyle = "#c7a3f116";
@@ -275,10 +284,24 @@ function paintLink(from, to, highlight) {
 function paintNode(quest, screen, isSelected) {
   const radius = nodeRadius(quest);
   if (screen.x < -radius || screen.x > width + radius || screen.y < -radius || screen.y > height + radius) return;
-  if (quest.shape !== "none" || isSelected) {
-    nodePath(context, quest.shape, screen.x, screen.y, radius);
-    context.fillStyle = isSelected ? "#764d9c" : "#312240";
-    context.fill();
+  const variant = themedQuestIds.has(quest.id) ? theme.shapeVariants[quest.shape] : undefined;
+  const source = variant && theme.atlas?.offsets[quest.shape];
+  const sprite = source && loadImage(theme.atlas.src);
+  const hasSprite = sprite && sprite.complete && sprite.naturalWidth;
+  if (hasSprite) {
+    const [left, top] = source;
+    const cell = theme.atlas.cell;
+    context.save();
+    context.imageSmoothingEnabled = false;
+    context.drawImage(sprite, left, top, cell, cell, screen.x - radius, screen.y - radius, radius * 2, radius * 2);
+    context.restore();
+  }
+  if ((!hasSprite && quest.shape !== "none") || isSelected) {
+    nodePath(context, variant ?? quest.shape, screen.x, screen.y, radius);
+    if (!hasSprite) {
+      context.fillStyle = isSelected ? "#764d9c" : "#312240";
+      context.fill();
+    }
     context.strokeStyle = isSelected ? "#f5e6ff" : tint();
     context.globalAlpha = isSelected ? 1 : .81;
     context.lineWidth = isSelected ? 2.2 : radius > 9 ? 1.5 : 1.05;
@@ -287,7 +310,7 @@ function paintNode(quest, screen, isSelected) {
   }
   const repeated = flags.repeats && (iconCounts.get(quest.icon) ?? 0) > 1;
   if (repeated) {
-    nodePath(context, quest.shape, screen.x, screen.y, radius + 2);
+    nodePath(context, variant ?? quest.shape, screen.x, screen.y, radius + 2);
     context.strokeStyle = "#ffd287";
     context.lineWidth = 1.7;
     context.stroke();
@@ -757,6 +780,10 @@ function renderInspector() {
   }
   if (quest.subtitle) section.append(el("p", quest.subtitle, "node-subtitle"));
   section.append(el("div", quest.id, "node-id"));
+  if (theme) {
+    const role = theme.milestoneRoles[quest.id];
+    section.append(el("div", role ? `${quest.shape} · ${role}` : quest.shape, "node-id quest-shape"));
+  }
   if (quest.description) section.append(el("p", quest.description, "node-description"));
   section.append(el("h4", "Position"));
   const coords = el("div", undefined, "position-fields");
@@ -1056,7 +1083,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=starcatcher-draft-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=quest-theme-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=starcatcher-spine-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
@@ -1065,6 +1092,8 @@ async function start() {
     if (!response.ok) throw new Error("Quest data could not be loaded.");
     const decompressed = response.body.pipeThrough(new DecompressionStream("gzip"));
     dataset = await new Response(decompressed).json();
+    theme = dataset.theme;
+    themedQuestIds = new Set(theme?.assignedQuestIds);
     model = new LayoutModel(dataset);
     storageKey = "tnk3-quest-shaper:" + dataset.sourceId;
     draftRevisions = Object.fromEntries(dataset.chapters.filter((entry) => entry.layoutRevision)
