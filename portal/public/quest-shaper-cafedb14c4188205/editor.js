@@ -1091,7 +1091,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=quest-theme-v4", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=quest-theme-v5", { cache: "no-cache" }),
       fetch("./item-icons.json?v=starcatcher-spine-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
