@@ -13,10 +13,14 @@ const baseScale = 28;
 const minScale = 2;
 const maxScale = 160;
 const gridSize = 0.25;
-const flags = { snap: true, labels: true, links: true };
+const flags = { snap: true, labels: true, links: true, repeats: false };
 const colorPattern = /^#[0-9a-f]{6}$/i;
 const groupDetails = new Map();
 const images = new Map();
+const iconCell = 32;
+const iconAtlasSize = 512;
+let iconIndex = {};
+let iconCounts = new Map();
 const chapterOrigins = new Map();
 const chapterButtons = new Map();
 const selected = new Set();
@@ -54,7 +58,7 @@ function position(quest) {
 function frameBounds() {
   return boundsFor([
     ...chapter.quests.map((quest) => ({ ...position(quest), size: quest.size })),
-    ...(chapter.images ?? []).filter((image) => image.src || image.textOnImage),
+    ...(chapter.images ?? []).filter((image) => image.src || image.textOnImage || image.item),
   ]);
 }
 
@@ -109,6 +113,32 @@ function grid() {
   context.stroke();
 }
 
+function loadImage(src) {
+  if (!images.has(src)) {
+    const resource = new Image();
+    resource.onload = queueDraw;
+    resource.src = src;
+    images.set(src, resource);
+  }
+  return images.get(src);
+}
+
+function atlasPath(index) {
+  return `./item-icons-${index}.webp?v=quest-groups`;
+}
+
+function paintItem(id, x, y, size) {
+  const entry = iconIndex[id];
+  if (!entry) return false;
+  const [atlas, left, top] = entry;
+  const sprite = loadImage(atlasPath(atlas));
+  if (!sprite.complete || !sprite.naturalWidth) return false;
+  context.imageSmoothingEnabled = false;
+  context.drawImage(sprite, left, top, iconCell, iconCell, x - size / 2, y - size / 2, size, size);
+  context.imageSmoothingEnabled = true;
+  return true;
+}
+
 function paintImages() {
   for (const image of chapter.images ?? []) {
     const center = worldToScreen(camera, image);
@@ -116,13 +146,7 @@ function paintImages() {
     const h = image.height * camera.scale;
     if (center.x + w / 2 < 0 || center.y + h / 2 < 0 || center.x - w / 2 > width || center.y - h / 2 > height) continue;
     if (image.src) {
-      if (!images.has(image.src)) {
-        const resource = new Image();
-        resource.onload = queueDraw;
-        resource.src = image.src;
-        images.set(image.src, resource);
-      }
-      const loaded = images.get(image.src);
+      const loaded = loadImage(image.src);
       if (loaded.complete && loaded.naturalWidth) {
         context.save();
         context.translate(center.x, center.y);
@@ -132,6 +156,8 @@ function paintImages() {
         else context.drawImage(loaded, -w / 2, -h / 2, w, h);
         context.restore();
       }
+    } else if (image.item) {
+      paintItem(image.item, center.x, center.y, Math.min(w, h));
     } else if (image.title && (image.labelsOnImage || image.textOnImage) && flags.labels) {
       context.fillStyle = tint();
       context.font = `650 ${Math.max(9, Math.min(15, h * .78))}px system-ui`;
@@ -192,7 +218,15 @@ function paintNode(quest, screen, isSelected) {
   context.lineWidth = isSelected ? 2.2 : radius > 9 ? 1.5 : 1.05;
   context.stroke();
   context.globalAlpha = 1;
-  if (radius > 7) {
+  const repeated = flags.repeats && (iconCounts.get(quest.icon) ?? 0) > 1;
+  if (repeated) {
+    nodePath(context, quest.shape, screen.x, screen.y, radius + 2);
+    context.strokeStyle = "#ffd287";
+    context.lineWidth = 1.7;
+    context.stroke();
+  }
+  const hasIcon = paintItem(quest.icon, screen.x, screen.y, Math.max(7, radius * 1.65));
+  if (!hasIcon && radius > 7) {
     context.beginPath();
     const centerSize = Math.max(1, radius * .26);
     context.moveTo(screen.x, screen.y - centerSize);
@@ -364,6 +398,10 @@ function selectChapter(entry) {
   pending = undefined;
   action = undefined;
   questLookup = new Map(entry.quests.map((quest) => [quest.id, quest]));
+  iconCounts = new Map();
+  for (const quest of entry.quests) {
+    if (quest.icon) iconCounts.set(quest.icon, (iconCounts.get(quest.icon) ?? 0) + 1);
+  }
   byId("quest-search").value = "";
   renderQuestResults();
   byId("chapter-title").textContent = shortTitle(entry.title);
@@ -469,7 +507,25 @@ function renderInspector() {
     return;
   }
   const quest = questLookup.get(selected.values().next().value);
-  section.append(el("h3", quest.title));
+  const heading = el("div", undefined, "quest-title-row");
+  const icon = iconIndex[quest.icon];
+  if (icon) {
+    const [atlas, left, top] = icon;
+    const picture = el("span", undefined, "quest-item-icon");
+    const ratio = 24 / iconCell;
+    picture.style.backgroundImage = `url("${atlasPath(atlas)}")`;
+    picture.style.backgroundSize = `${iconAtlasSize * ratio}px ${iconAtlasSize * ratio}px`;
+    picture.style.backgroundPosition = `${-left * ratio}px ${-top * ratio}px`;
+    picture.setAttribute("aria-hidden", "true");
+    heading.append(picture);
+  }
+  heading.append(el("h3", quest.title));
+  section.append(heading);
+  if (quest.icon) {
+    const uses = iconCounts.get(quest.icon) ?? 0;
+    const shared = uses > 1 ? ` · Used by ${uses} quests here` : "";
+    section.append(el("div", quest.icon + shared, "icon-reference"));
+  }
   if (quest.subtitle) section.append(el("p", quest.subtitle, "node-subtitle"));
   section.append(el("div", quest.id, "node-id"));
   if (quest.description) section.append(el("p", quest.description, "node-description"));
@@ -742,7 +798,13 @@ function bindEditor() {
 
 async function start() {
   try {
-    const response = await fetch("./quest_data.json.gz?v=winter-tree", { cache: "no-cache" });
+    const [response, icons] = await Promise.all([
+      fetch("./quest_data.json.gz?v=quest-groups", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=quest-groups")
+        .then((r) => r.ok ? r.json() : {})
+        .catch(() => ({})),
+    ]);
+    iconIndex = icons;
     if (!response.ok) throw new Error("Quest data could not be loaded.");
     const decompressed = response.body.pipeThrough(new DecompressionStream("gzip"));
     dataset = await new Response(decompressed).json();

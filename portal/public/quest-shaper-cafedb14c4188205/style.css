@@ -141,3 +141,22 @@ dialog p { color: var(--muted); line-height: 1.55; }
   .status #save-status { text-align: right; }
   .zoom-tools { margin-left: auto; }
 }
+.quest-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.quest-title-row h3 { margin-block: 0; }
+.quest-item-icon {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+.icon-reference {
+  overflow-wrap: anywhere;
+  margin-top: 6px;
+  font: .72rem ui-monospace, monospace;
+  color: var(--muted);
+}
