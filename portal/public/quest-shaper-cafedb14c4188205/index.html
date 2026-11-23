@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#141020">
+  <title>Quest Shaper · Towns &amp; Kingdoms 3</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./editor.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <button class="icon-button mobile-only" id="toggle-chapters" title="Chapters" aria-label="Show chapters" aria-expanded="false">☰</button>
+    <div class="brand" aria-hidden="true"><span></span></div>
+    <div class="identity"><span>Towns &amp; Kingdoms 3</span><h1>Quest Shaper</h1></div>
+    <span id="pack-version" class="version">CB-1.1.3</span>
+    <div class="header-actions">
+      <button id="import" type="button">Import <span class="responsive-word">layout</span></button>
+      <button id="export" class="primary" type="button" disabled>Export <span class="responsive-word">layout</span><span aria-hidden="true" class="export-arrow">↓</span></button>
+      <input id="import-file" type="file" accept=".json,application/json" hidden>
+    </div>
+  </header>
+  <main class="workspace">
+    <aside class="sidebar" id="sidebar" aria-label="Chapter list">
+      <div class="sidebar-header"><h2>Chapters</h2><span id="chapter-count"></span></div>
+      <label class="search"><span class="search-icon" aria-hidden="true"></span><input id="chapter-search" placeholder="Find a chapter" autocomplete="off" aria-label="Find a chapter"></label>
+      <nav class="chapter-list" id="chapters"></nav>
+      <div class="sidebar-bottom" id="dataset-info">Loading quests…</div>
+    </aside>
+    <section id="workspace-map" class="map" aria-label="Quest layout">
+      <div class="view-title"><span id="chapter-group"></span><h2 id="chapter-title">Loading quest trees</h2><p id="chapter-caption"></p></div>
+      <div class="canvas-pane" id="canvas-pane">
+        <canvas id="map-canvas" tabindex="0" role="application" aria-label="Quest canvas. Drag a quest to move it. Hold Space and drag to pan. Use Shift and drag on empty space to select quests."></canvas>
+        <div class="error" id="load-error" hidden></div>
+        <div class="toolbar" role="toolbar" aria-label="Layout tools">
+          <div class="toolbar-group"><button id="undo" class="icon-button" title="Undo (Ctrl+Z)" aria-label="Undo" disabled>↶</button><button id="redo" class="icon-button" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" disabled>↷</button></div>
+          <div class="toolbar-group"><button id="snap" type="button" title="Snap to a quarter-grid step" aria-pressed="true"><span class="tiny-grid" aria-hidden="true"></span>Snap</button><button id="labels" type="button" title="Toggle quest labels" aria-pressed="true">Labels</button><button id="links" type="button" title="Toggle quest links" aria-pressed="true">Links</button></div>
+          <button id="toggle-inspector" class="tablet-only" type="button" aria-pressed="false">Details</button>
+        </div>
+        <div class="map-bottom">
+          <div class="map-tip" id="map-tip">Drag a quest to move it <b>·</b> Shift-drag to select <b>·</b> Space-drag to pan</div>
+          <div class="zoom-tools" role="toolbar" aria-label="Map zoom">
+            <button id="zoom-out" class="icon-button" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+            <span id="zoom-value" aria-live="off">100%</span>
+            <button id="zoom-in" class="icon-button" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+            <button id="fit" type="button" title="Fit chapter to view (F)">Fit</button>
+          </div>
+        </div>
+        <div id="minimap-box" class="minimap-box"><canvas id="minimap" aria-label="Chapter overview"></canvas></div>
+      </div>
+      <footer class="status"><span id="selection-status">No quests selected</span><span id="save-status" role="status" aria-live="polite">Layout saved in this browser</span><span id="cursor-coords"></span></footer>
+    </section>
+    <aside class="inspector" id="inspector" aria-label="Quest inspector">
+      <div class="sidebar-header"><h2>Quest details</h2><span id="selection-count"></span></div>
+      <div class="inspector-body">
+        <label class="search quest-search"><span class="search-icon" aria-hidden="true"></span><input id="quest-search" placeholder="Find a quest in this chapter" aria-label="Find a quest in this chapter" autocomplete="off"></label>
+        <div id="quest-results" class="quest-results" hidden></div>
+        <section id="quest-detail" aria-live="polite"></section>
+      </div>
+      <div class="inspector-bottom"><button id="reset" type="button" disabled title="Reset this chapter’s positions">Reset chapter layout</button></div>
+    </aside>
+  </main>
+  <dialog id="reset-dialog">
+    <form method="dialog">
+      <h2>Reset chapter layout?</h2>
+      <p>This restores the original positions for this chapter. You can undo the reset.</p>
+      <div class="dialog-actions"><button value="cancel" autofocus>Cancel</button><button class="primary" value="reset">Reset chapter</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
