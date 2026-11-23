@@ -25,6 +25,9 @@ const chapterOrigins = new Map();
 const chapterButtons = new Map();
 const selected = new Set();
 let dataset, model, storageKey, chapter, questLookup, camera, miniCamera, pending, action;
+let draftRevisions = {};
+let storageReady = true;
+const archivedDrafts = new Map();
 let decorationMode = false;
 let selectedDecoration;
 let decorations = [];
@@ -401,6 +404,7 @@ function updateButtons() {
   byId("redo").title = model.redoLabel ? "Redo: " + model.redoLabel : "Redo (Ctrl+Shift+Z)";
   byId("export").disabled = !model.changedCount();
   byId("reset").disabled = !model.changedCount(chapter.id);
+  byId("export-previous").hidden = !archivedDrafts.has(chapter.id);
   for (const [id, button] of chapterButtons) {
     const edited = model.changedCount(id);
     button.dataset.edited = edited > 0;
@@ -411,9 +415,38 @@ function updateButtons() {
   }
 }
 
+function persistDraft() {
+  localStorage.setItem(storageKey, JSON.stringify({ ...model.export(), layoutRevisions: draftRevisions }));
+}
+
+function restoreDraft() {
+  const saved = localStorage.getItem(storageKey);
+  const draft = saved ? JSON.parse(saved) : null;
+  const retained = [];
+  const stale = new Map();
+  if (draft) {
+    for (const patch of draft.chapters) {
+      const revision = Object.hasOwn(draftRevisions, patch.id) ? draftRevisions[patch.id] : undefined;
+      if (revision && draft.layoutRevisions?.[patch.id] !== revision) stale.set(patch.id, patch);
+      else retained.push(patch);
+    }
+    model.import({ ...draft, chapters: retained }, { replace: true, recordHistory: false });
+  }
+  for (const [id, revision] of Object.entries(draftRevisions)) {
+    const key = `${storageKey}:previous:${id}:${revision}`;
+    const patch = stale.get(id);
+    if (patch) localStorage.setItem(key, JSON.stringify({ ...draft, chapters: [patch] }));
+    const archived = localStorage.getItem(key);
+    if (archived) archivedDrafts.set(id, archived);
+  }
+  if (stale.size) persistDraft();
+  return stale.size > 0;
+}
+
 function storeChanges(message) {
   try {
-    localStorage.setItem(storageKey, JSON.stringify(model.export()));
+    if (!storageReady) throw new Error("Saved edits could not be backed up");
+    persistDraft();
     saveLabel(message ?? "Saved in this browser");
   } catch {
     saveLabel("Browser storage unavailable. Export to keep your changes.");
@@ -421,6 +454,18 @@ function storeChanges(message) {
   updateButtons();
   renderInspector();
   queueDraw();
+}
+
+function downloadLayout(contents, filename) {
+  const blob = new Blob([contents], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const anchor = el("a");
+  anchor.href = url;
+  anchor.download = filename;
+  document.body.append(anchor);
+  anchor.click();
+  anchor.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
 function groupLabel(name) {
@@ -944,16 +989,14 @@ function bindEditor() {
     if (dialog.returnValue === "reset" && model.reset(chapter.id)) storeChanges("Original layout restored");
   });
   byId("export").addEventListener("click", () => {
-    const blob = new Blob([JSON.stringify(model.export(), null, 2) + "\n"], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const anchor = el("a");
-    anchor.href = url;
-    anchor.download = "TNK3_Quest_Layout.json";
-    document.body.append(anchor);
-    anchor.click();
-    anchor.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    downloadLayout(JSON.stringify(model.export(), null, 2) + "\n", "TNK3_Quest_Layout.json");
     saveLabel("Layout exported");
+  });
+  byId("export-previous").addEventListener("click", () => {
+    const archived = archivedDrafts.get(chapter.id);
+    if (!archived) return;
+    downloadLayout(archived, "TNK3_Previous_Quest_Layout.json");
+    saveLabel("Previous layout exported");
   });
   const file = byId("import-file");
   byId("import").addEventListener("click", () => file.click());
@@ -1013,7 +1056,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=starcatcher-spine-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=starcatcher-draft-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=starcatcher-spine-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
@@ -1024,10 +1067,14 @@ async function start() {
     dataset = await new Response(decompressed).json();
     model = new LayoutModel(dataset);
     storageKey = "tnk3-quest-shaper:" + dataset.sourceId;
+    draftRevisions = Object.fromEntries(dataset.chapters.filter((entry) => entry.layoutRevision)
+      .map((entry) => [entry.id, entry.layoutRevision]));
     try {
-      const saved = localStorage.getItem(storageKey);
-      if (saved) model.import(saved, { replace: true, recordHistory: false });
-    } catch { saveLabel("Saved layout could not be loaded"); }
+      if (restoreDraft()) saveLabel("Updated chapter layout loaded. Previous edits backed up.");
+    } catch {
+      storageReady = false;
+      saveLabel("Saved layout could not be loaded");
+    }
     const ordered = [...dataset.chapters].sort((a, b) => Number(Boolean(a.legacy)) - Number(Boolean(b.legacy)));
     for (const entry of ordered) {
       for (const quest of entry.quests) if (!chapterOrigins.has(quest.id)) chapterOrigins.set(quest.id, { quest, chapter: entry });

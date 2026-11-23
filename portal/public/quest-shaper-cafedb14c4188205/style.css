@@ -109,6 +109,7 @@ button.icon-button { display: inline-grid; place-items: center; padding: 0; widt
 .result-button, .dependency-button { display: block; width: 100%; text-align: left; color: #eee3fa; white-space: normal; font-size: .8rem; padding: 5px 7px; border-color: transparent; background: #221933; overflow-wrap: anywhere; margin-bottom: 2px; }
 .quest-results { padding: 0 14px 7px; }
 .inspector-bottom button { text-align: center; width: 100%; font-size: .8rem; }
+#export-previous { margin-top: 6px; }
 .error { position: absolute; inset: 32% 20% auto; background: #2d2038; border: 1px solid #8f648b; color: #f4d6e7; padding: 14px; border-radius: 7px; }
 dialog { max-width: min(380px,92vw); background: #20172e; color: var(--text); border: 1px solid #664887; border-radius: 11px; padding: 20px; }
 dialog::backdrop { background: #120b1bad; }
