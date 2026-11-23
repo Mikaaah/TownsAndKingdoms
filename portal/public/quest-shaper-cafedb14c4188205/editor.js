@@ -1014,7 +1014,7 @@ async function start() {
   try {
     const [response, icons] = await Promise.all([
       fetch("./quest_data.json.gz?v=exploration-layout", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=exploration-layout")
+      fetch("./item-icons.json?v=exploration-story")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
