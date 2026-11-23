@@ -158,6 +158,7 @@ function paintItem(id, x, y, size) {
 
 function paintImages() {
   for (const image of chapter.images ?? []) {
+    if (image.labelArt && !flags.labels) continue;
     const center = worldToScreen(camera, image);
     const w = image.width * camera.scale;
     const h = image.height * camera.scale;
@@ -169,7 +170,7 @@ function paintImages() {
         context.translate(center.x, center.y);
         context.rotate((image.rotation ?? 0) * Math.PI / 180);
         context.globalAlpha = .91;
-        if (image.src.startsWith("./scenery/")) context.imageSmoothingEnabled = false;
+        if (image.src.startsWith("./scenery/")) context.imageSmoothingEnabled = Boolean(image.labelArt);
         if (image.sprite) context.drawImage(loaded, ...image.sprite, -w / 2, -h / 2, w, h);
         else context.drawImage(loaded, -w / 2, -h / 2, w, h);
         context.restore();
@@ -817,7 +818,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=quest-scenery", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=quest-section-labels", { cache: "no-cache" }),
       fetch("./item-icons.json?v=quest-groups")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
