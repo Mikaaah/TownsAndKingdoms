@@ -18,11 +18,11 @@
 html, body { margin: 0; height: 100%; }
 body { display: flex; flex-direction: column; background: var(--page); color: var(--text); overflow: hidden; }
 [hidden] { display: none !important; }
-button, input { font: inherit; }
+button, input, select { font: inherit; }
 button { color: var(--text); border: 1px solid var(--line); border-radius: 7px; background: #221b32; padding: .57rem .84rem; font-weight: 600; white-space: nowrap; cursor: pointer; }
 button:hover:not(:disabled) { border-color: #72558f; background: #332648; }
 button:disabled { color: #80748c; opacity: .57; cursor: default; }
-button:focus-visible, input:focus-visible, canvas:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button:focus-visible, input:focus-visible, select:focus-visible, canvas:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 button.primary { background: #c6a8fb; color: #241737; border-color: #c6a8fb; }
 button.primary:hover:not(:disabled) { background: #e1c8ff; border-color: #e1c8ff; }
 button.icon-button { display: inline-grid; place-items: center; padding: 0; width: 2.55rem; min-height: 2.55rem; font-size: 1.38rem; line-height: 1; }
@@ -70,7 +70,7 @@ button.icon-button { display: inline-grid; place-items: center; padding: 0; widt
 #map-canvas[data-cursor="dragging"] { cursor: grabbing; }
 #map-canvas[data-cursor="marquee"] { cursor: crosshair; }
 .toolbar, .zoom-tools { display: flex; gap: 5px; padding: 4px; border-radius: 9px; border: 1px solid #49375e; background: #1c152adf; box-shadow: 0 5px 15px #0a07132b; }
-.toolbar { position: absolute; top: 11px; left: 13px; }
+.toolbar { position: absolute; top: 11px; left: 13px; flex-wrap: wrap; max-width: calc(100% - 26px); }
 .toolbar-group { display: flex; gap: 3px; }
 .toolbar-group + .toolbar-group { border-left: 1px solid var(--line); padding-left: 5px; }
 .toolbar button, .zoom-tools button { border-color: transparent; background: transparent; min-height: 29px; }
@@ -102,6 +102,9 @@ button.icon-button { display: inline-grid; place-items: center; padding: 0; widt
 .position-fields, .align-tools { display: flex; gap: 5px; flex-wrap: wrap; margin: 7px 0; }
 .position-fields label { flex: 1; min-width: 74px; display: flex; align-items: center; gap: 5px; color: var(--muted); font: .78rem ui-monospace, monospace; }
 .position-fields input { width: 100%; min-width: 0; color: var(--text); border: 1px solid var(--line); background: var(--field); border-radius: 5px; padding: 5px; }
+.decoration-picker { display: grid; gap: 6px; margin-bottom: 10px; color: var(--muted); font-size: .82rem; }
+.decoration-picker select { width: 100%; min-width: 0; color: var(--text); border: 1px solid var(--line); background: var(--field); border-radius: 5px; padding: 6px; }
+.decoration-fields label:last-child { flex-basis: 100%; }
 .align-tools button { font-size: .76rem; padding: .38rem .48rem; }
 .result-button, .dependency-button { display: block; width: 100%; text-align: left; color: #eee3fa; white-space: normal; font-size: .8rem; padding: 5px 7px; border-color: transparent; background: #221933; overflow-wrap: anywhere; margin-bottom: 2px; }
 .quest-results { padding: 0 14px 7px; }
@@ -123,6 +126,7 @@ dialog p { color: var(--muted); line-height: 1.55; }
   .tablet-only { display: inline-block; }
   .workspace[data-inspector="open"] .inspector { display: flex; position: absolute; z-index: 6; right: 0; bottom: 0; width: min(245px,50%); height: min(410px,48%); border-top: 1px solid var(--line); }
   .toolbar, .map-bottom { left: 7px; }
+  .toolbar { max-width: calc(100% - 14px); }
 }
 @media (max-width: 600px) {
   .workspace { display: flex; position: relative; }

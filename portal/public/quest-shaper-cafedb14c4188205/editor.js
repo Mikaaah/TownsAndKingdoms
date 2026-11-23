@@ -1,7 +1,7 @@
 import {
-  LayoutModel, boundsFor, fitBounds, marqueeRect, marqueeSelection,
+  LayoutModel, boundsFor, fitBounds, isEditableDecoration, marqueeRect, marqueeSelection,
   round, screenToWorld, snap, worldToScreen, zoomAt,
-} from "./editor_model.js?v=winter-tree";
+} from "./editor_model.js?v=decorations-editor";
 
 const byId = (id) => document.getElementById(id);
 const canvas = byId("map-canvas");
@@ -25,6 +25,9 @@ const chapterOrigins = new Map();
 const chapterButtons = new Map();
 const selected = new Set();
 let dataset, model, storageKey, chapter, questLookup, camera, miniCamera, pending, action;
+let decorationMode = false;
+let selectedDecoration;
+let decorations = [];
 let width = 1;
 let height = 1;
 let dpr = 1;
@@ -55,10 +58,22 @@ function position(quest) {
   return pending?.get(quest.id) ?? model.position(chapter.id, quest.id);
 }
 
+function decorationPosition(image) {
+  return pending?.get(image.id) ?? model.decorationPosition(chapter.id, image.id);
+}
+
+function artworkFrame(image) {
+  const at = isEditableDecoration(image) ? decorationPosition(image) : image;
+  const angle = (at.rotation ?? 0) * Math.PI / 180;
+  const sin = Math.abs(Math.sin(angle));
+  const cos = Math.abs(Math.cos(angle));
+  return { ...at, angle, width: image.width * cos + image.height * sin, height: image.width * sin + image.height * cos };
+}
+
 function frameBounds() {
   return boundsFor([
     ...chapter.quests.map((quest) => ({ ...position(quest), size: quest.size })),
-    ...(chapter.images ?? []).filter((image) => image.src || image.textOnImage || image.item),
+    ...(chapter.images ?? []).filter((image) => image.src || image.textOnImage || image.labelsOnImage || image.item).map(artworkFrame),
   ]);
 }
 
@@ -158,17 +173,22 @@ function paintItem(id, x, y, size) {
 
 function paintImages() {
   for (const image of chapter.images ?? []) {
-    if (image.labelArt && !flags.labels) continue;
-    const center = worldToScreen(camera, image);
+    const editable = isEditableDecoration(image);
+    const showLabel = flags.labels || (decorationMode && editable);
+    if (image.labelArt && !showLabel) continue;
+    const frame = artworkFrame(image);
+    const center = worldToScreen(camera, frame);
     const w = image.width * camera.scale;
     const h = image.height * camera.scale;
-    if (center.x + w / 2 < 0 || center.y + h / 2 < 0 || center.x - w / 2 > width || center.y - h / 2 > height) continue;
+    const halfWidth = frame.width * camera.scale / 2;
+    const halfHeight = frame.height * camera.scale / 2;
+    if (center.x + halfWidth < 0 || center.y + halfHeight < 0 || center.x - halfWidth > width || center.y - halfHeight > height) continue;
     if (image.src) {
-      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=items-catalogue` : image.src);
+      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=decorations-editor` : image.src);
       if (loaded.complete && loaded.naturalWidth) {
         context.save();
         context.translate(center.x, center.y);
-        context.rotate((image.rotation ?? 0) * Math.PI / 180);
+        context.rotate(frame.angle);
         context.globalAlpha = .91;
         if (image.src.startsWith("./scenery/")) context.imageSmoothingEnabled = Boolean(image.labelArt);
         if (image.sprite) context.drawImage(loaded, ...image.sprite, -w / 2, -h / 2, w, h);
@@ -177,13 +197,36 @@ function paintImages() {
       }
     } else if (image.item) {
       paintItem(image.item, center.x, center.y, Math.min(w, h));
-    } else if (image.title && (image.labelsOnImage || image.textOnImage) && flags.labels) {
+    } else if (image.title && (image.labelsOnImage || image.textOnImage) && showLabel) {
+      context.save();
+      context.translate(center.x, center.y);
+      context.rotate(frame.angle);
       context.fillStyle = tint();
       context.font = `650 ${Math.max(9, Math.min(15, h * .78))}px system-ui`;
       context.textAlign = "center";
       context.textBaseline = "middle";
-      context.fillText(image.title, center.x, center.y, Math.max(w, 20));
+      context.fillText(image.title, 0, 0, Math.max(w, 20));
+      context.restore();
     }
+  }
+}
+
+function paintDecorationOutlines() {
+  if (!decorationMode) return;
+  for (const image of decorations) {
+    const at = artworkFrame(image);
+    const center = worldToScreen(camera, at);
+    const halfWidth = Math.max(12, image.width * camera.scale / 2) + 4;
+    const halfHeight = Math.max(7, image.height * camera.scale / 2) + 3;
+    const active = image.id === selectedDecoration;
+    context.save();
+    context.translate(center.x, center.y);
+    context.rotate(at.angle);
+    context.strokeStyle = active ? "#f5e6ff" : `${tint()}80`;
+    context.lineWidth = active ? 1.6 : 1;
+    if (!active) context.setLineDash([3, 3]);
+    context.strokeRect(-halfWidth, -halfHeight, halfWidth * 2, halfHeight * 2);
+    context.restore();
   }
 }
 
@@ -229,14 +272,16 @@ function paintLink(from, to, highlight) {
 function paintNode(quest, screen, isSelected) {
   const radius = nodeRadius(quest);
   if (screen.x < -radius || screen.x > width + radius || screen.y < -radius || screen.y > height + radius) return;
-  nodePath(context, quest.shape, screen.x, screen.y, radius);
-  context.fillStyle = isSelected ? "#764d9c" : "#312240";
-  context.fill();
-  context.strokeStyle = isSelected ? "#f5e6ff" : tint();
-  context.globalAlpha = isSelected ? 1 : .81;
-  context.lineWidth = isSelected ? 2.2 : radius > 9 ? 1.5 : 1.05;
-  context.stroke();
-  context.globalAlpha = 1;
+  if (quest.shape !== "none" || isSelected) {
+    nodePath(context, quest.shape, screen.x, screen.y, radius);
+    context.fillStyle = isSelected ? "#764d9c" : "#312240";
+    context.fill();
+    context.strokeStyle = isSelected ? "#f5e6ff" : tint();
+    context.globalAlpha = isSelected ? 1 : .81;
+    context.lineWidth = isSelected ? 2.2 : radius > 9 ? 1.5 : 1.05;
+    context.stroke();
+    context.globalAlpha = 1;
+  }
   const repeated = flags.repeats && (iconCounts.get(quest.icon) ?? 0) > 1;
   if (repeated) {
     nodePath(context, quest.shape, screen.x, screen.y, radius + 2);
@@ -245,7 +290,7 @@ function paintNode(quest, screen, isSelected) {
     context.stroke();
   }
   const hasIcon = paintItem(quest.icon, screen.x, screen.y, Math.max(7, radius * 1.65));
-  if (!hasIcon && radius > 7) {
+  if (!hasIcon && radius > 7 && (quest.shape !== "none" || isSelected)) {
     context.beginPath();
     const centerSize = Math.max(1, radius * .26);
     context.moveTo(screen.x, screen.y - centerSize);
@@ -256,7 +301,8 @@ function paintNode(quest, screen, isSelected) {
     context.fillStyle = isSelected ? "#f3ddff" : tint();
     context.fill();
   }
-  if (flags.labels && (camera.scale >= 21 || isSelected || (chapter.quests.length < 80 && camera.scale >= 9))) {
+  if (flags.labels && (quest.shape !== "none" || isSelected) &&
+      (camera.scale >= 21 || isSelected || (chapter.quests.length < 80 && camera.scale >= 9))) {
     const label = quest.title;
     const fontSize = Math.max(8.5, Math.min(13, camera.scale * .54));
     context.font = `${isSelected ? 740 : 570} ${fontSize}px system-ui`;
@@ -328,6 +374,7 @@ function draw() {
     if (!selected.has(quest.id)) paintNode(quest, screens.get(quest.id), false);
   }
   for (const id of selected) paintNode(questLookup.get(id), screens.get(id), true);
+  paintDecorationOutlines();
   if (action?.type === "marquee" && action.end) {
     const rect = marqueeRect(action.start, action.end);
     context.fillStyle = "#bd9df92b";
@@ -414,8 +461,11 @@ function renderChapters() {
 function selectChapter(entry) {
   chapter = entry;
   selected.clear();
+  selectedDecoration = undefined;
   pending = undefined;
   action = undefined;
+  decorations = (entry.images ?? []).filter(isEditableDecoration);
+  decorationMode &&= decorations.length > 0;
   questLookup = new Map(entry.quests.map((quest) => [quest.id, quest]));
   iconCounts = new Map();
   for (const quest of entry.quests) {
@@ -445,8 +495,35 @@ function showInspector(open) {
   byId("toggle-inspector").setAttribute("aria-pressed", open);
 }
 
+function updateDecorationMode() {
+  const toggle = byId("decorations");
+  toggle.disabled = !decorations.length;
+  toggle.setAttribute("aria-pressed", decorationMode);
+  toggle.title = decorations.length ? "Move or rotate chapter decorations" : "This chapter has no editable decorations";
+  byId("inspector-title").textContent = decorationMode ? "Decorations" : "Quest details";
+  byId("inspector").setAttribute("aria-label", decorationMode ? "Decoration inspector" : "Quest inspector");
+  byId("quest-search-box").hidden = decorationMode;
+  byId("quest-results").hidden = decorationMode || !byId("quest-search").value.trim();
+  byId("quest-map-tip").hidden = decorationMode;
+  byId("decoration-map-tip").hidden = !decorationMode;
+  canvas.setAttribute("aria-label", decorationMode
+    ? "Decoration canvas. Drag a decoration to move it. Use the inspector to rotate it. Hold Space and drag to pan."
+    : "Quest canvas. Drag a quest to move it. Hold Space and drag to pan. Use Shift and drag on empty space to select quests.");
+}
+
+function toggleDecorations() {
+  if (action || !decorations.length) return;
+  decorationMode = !decorationMode;
+  selected.clear();
+  selectedDecoration = undefined;
+  renderInspector();
+  queueDraw();
+}
+
 function centerNode(id, entry = chapter) {
   if (entry.id !== chapter.id) selectChapter(entry);
+  decorationMode = false;
+  selectedDecoration = undefined;
   const point = model.position(chapter.id, id);
   const scale = Math.max(24, camera.scale);
   camera = { x: width / 2 - point.x * scale, y: height / 2 - point.y * scale, scale };
@@ -481,6 +558,89 @@ function changePositions(updates, label) {
   if (model.move(chapter.id, updates, label)) storeChanges();
 }
 
+function changeDecorations(updates, label) {
+  if (updates.length && model.moveDecorations(chapter.id, updates, label)) storeChanges();
+}
+
+function centerDecoration(image) {
+  selectedDecoration = image.id;
+  const point = model.decorationPosition(chapter.id, image.id);
+  const screen = worldToScreen(camera, point);
+  const visible = screen.x > 28 && screen.x < width - 28 && screen.y > 54 && screen.y < height - 30;
+  if (!visible) {
+    camera.x = width / 2 - point.x * camera.scale;
+    camera.y = height / 2 - point.y * camera.scale;
+  }
+  showInspector(true);
+  renderInspector();
+  byId("decoration-choice").focus();
+  queueDraw();
+}
+
+function renderDecorationInspector(section) {
+  const image = decorations.find((entry) => entry.id === selectedDecoration);
+  byId("selection-count").textContent = image ? "1" : "";
+  byId("selection-status").textContent = image ? "Decoration selected" : "No decoration selected";
+  const picker = el("label", "Decoration", "decoration-picker");
+  const choice = el("select");
+  choice.id = "decoration-choice";
+  choice.setAttribute("aria-label", "Decoration");
+  const placeholder = el("option", "Choose a decoration");
+  placeholder.value = "";
+  placeholder.disabled = true;
+  choice.append(placeholder);
+  for (const decoration of decorations) {
+    const option = el("option", decoration.title || "Decoration " + decoration.id);
+    option.value = decoration.id;
+    choice.append(option);
+  }
+  choice.value = image?.id ?? "";
+  choice.addEventListener("change", () => centerDecoration(decorations.find((entry) => entry.id === choice.value)));
+  picker.append(choice);
+  section.append(picker);
+  if (!image) {
+    section.append(el("p", "Drag a decoration on the map, or choose one here to edit its position and angle.", "empty"));
+    return;
+  }
+  const at = model.decorationPosition(chapter.id, image.id);
+  const fields = el("div", undefined, "position-fields decoration-fields");
+  for (const [axis, labelText, step] of [["x", "X", "any"], ["y", "Y", "any"], ["rotation", "Rotation", "1"]]) {
+    const label = el("label", labelText);
+    const input = el("input");
+    input.type = "number";
+    input.step = step;
+    input.value = round(at[axis], 5);
+    input.setAttribute("aria-label", "Decoration " + labelText);
+    input.addEventListener("change", () => {
+      const value = input.valueAsNumber;
+      if (!Number.isFinite(value)) { input.value = at[axis]; return; }
+      const current = model.decorationPosition(chapter.id, image.id);
+      changeDecorations([{ id: image.id, ...current, [axis]: value }], axis === "rotation" ? "Rotate decoration" : "Edit decoration coordinates");
+    });
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") input.blur();
+    });
+    label.append(input);
+    if (axis === "rotation") label.append("°");
+    fields.append(label);
+  }
+  section.append(fields);
+  const actions = el("div", undefined, "align-tools");
+  for (const [turn, label] of [[-5, "−5°"], [5, "+5°"]]) {
+    const button = el("button", label);
+    button.type = "button";
+    button.setAttribute("aria-label", turn < 0 ? "Rotate counterclockwise five degrees" : "Rotate clockwise five degrees");
+    button.addEventListener("click", () => {
+      const current = model.decorationPosition(chapter.id, image.id);
+      changeDecorations([{ id: image.id, ...current, rotation: current.rotation + turn }], "Rotate decoration");
+      const replacement = section.querySelector(`[aria-label="${button.getAttribute("aria-label")}"]`);
+      replacement?.focus();
+    });
+    actions.append(button);
+  }
+  section.append(actions);
+}
+
 function alignSelected(axis, distribute) {
   const points = [...selected].map((id) => ({ id, ...model.position(chapter.id, id) }));
   if (distribute) {
@@ -513,6 +673,11 @@ function toolsForSelection(section) {
 function renderInspector() {
   const section = byId("quest-detail");
   section.replaceChildren();
+  updateDecorationMode();
+  if (decorationMode) {
+    renderDecorationInspector(section);
+    return;
+  }
   const count = selected.size;
   byId("selection-count").textContent = count ? String(count) : "";
   byId("selection-status").textContent = count ? count + (count === 1 ? " quest selected" : " quests selected") : "No quests selected";
@@ -608,14 +773,35 @@ function pick(at) {
   return best;
 }
 
+function pickDecoration(at) {
+  for (let index = decorations.length - 1; index >= 0; index--) {
+    const image = decorations[index];
+    const frame = artworkFrame(image);
+    const point = worldToScreen(camera, frame);
+    const dx = at.x - point.x;
+    const dy = at.y - point.y;
+    const cos = Math.cos(frame.angle);
+    const sin = Math.sin(frame.angle);
+    if (Math.abs(dx * cos + dy * sin) <= Math.max(12, image.width * camera.scale / 2) + 4 &&
+        Math.abs(-dx * sin + dy * cos) <= Math.max(7, image.height * camera.scale / 2) + 3) return image;
+  }
+}
+
 function pointerStart(event) {
   if (!chapter || action || !event.isPrimary || event.button > 2) return;
   canvas.focus({ preventScroll: true });
   const start = location(event);
-  const hit = !space && event.button === 0 ? pick(start) : null;
+  const hit = !space && event.button === 0 ? (decorationMode ? pickDecoration(start) : pick(start)) : null;
   const multi = event.shiftKey || event.ctrlKey || event.metaKey;
   const record = { start, pointer: event.pointerId, moved: false, camera: { ...camera } };
-  if (hit) {
+  if (hit && decorationMode) {
+    selectedDecoration = hit.id;
+    action = {
+      ...record, type: "move-decoration", anchor: hit.id,
+      positions: new Map([[hit.id, model.decorationPosition(chapter.id, hit.id)]]),
+    };
+    showInspector(true);
+  } else if (hit) {
     if (multi) {
       if (selected.has(hit.id)) selected.delete(hit.id);
       else selected.add(hit.id);
@@ -628,7 +814,7 @@ function pointerStart(event) {
       positions: new Map([...selected].map((id) => [id, model.position(chapter.id, id)])),
     };
     showInspector(true);
-  } else if (multi && event.button === 0 && !space) {
+  } else if (!decorationMode && multi && event.button === 0 && !space) {
     action = { ...record, type: "marquee", append: event.ctrlKey || event.metaKey, original: [...selected] };
     canvas.dataset.cursor = "marquee";
   } else {
@@ -647,7 +833,7 @@ function pointerMove(event) {
   const p = screenToWorld(camera, at);
   byId("cursor-coords").textContent = `X ${round(p.x, 2)}  Y ${round(p.y, 2)}`;
   if (!action || action.pointer !== event.pointerId) {
-    canvas.dataset.cursor = !space && pick(at) ? "node" : "";
+    canvas.dataset.cursor = !space && (decorationMode ? pickDecoration(at) : pick(at)) ? "node" : "";
     return;
   }
   const deltaX = at.x - action.start.x;
@@ -657,7 +843,7 @@ function pointerMove(event) {
   if (action.type === "pan") {
     camera.x = action.camera.x + deltaX;
     camera.y = action.camera.y + deltaY;
-  } else if (action.type === "move") {
+  } else if (action.type === "move" || action.type === "move-decoration") {
     const anchor = action.positions.get(action.anchor);
     let dx = deltaX / camera.scale;
     let dy = deltaY / camera.scale;
@@ -665,7 +851,7 @@ function pointerMove(event) {
       dx = snap(anchor.x + dx, gridSize) - anchor.x;
       dy = snap(anchor.y + dy, gridSize) - anchor.y;
     }
-    pending = new Map([...action.positions].map(([id, base]) => [id, { x: round(base.x + dx, 6), y: round(base.y + dy, 6) }]));
+    pending = new Map([...action.positions].map(([id, base]) => [id, { ...base, x: round(base.x + dx, 6), y: round(base.y + dy, 6) }]));
     canvas.dataset.cursor = "dragging";
   } else if (action.type === "marquee") {
     action.end = at;
@@ -688,8 +874,10 @@ function pointerFinish(event, canceled = false) {
   canvas.dataset.cursor = "";
   if (!canceled) {
     if (current.type === "move") changePositions(updates, "Drag quest layout");
+    if (current.type === "move-decoration") changeDecorations(updates, "Move decoration");
     if (current.type === "pan" && !current.moved && !current.preserve) {
       selected.clear();
+      selectedDecoration = undefined;
       showInspector(false);
     }
   }
@@ -739,6 +927,7 @@ function bindEditor() {
     });
   }
   byId("fit").addEventListener("click", fitChapter);
+  byId("decorations").addEventListener("click", toggleDecorations);
   byId("undo").addEventListener("click", () => undoRedo(false));
   byId("redo").addEventListener("click", () => undoRedo(true));
   byId("chapter-search").addEventListener("input", renderChapters);
@@ -752,7 +941,7 @@ function bindEditor() {
   const dialog = byId("reset-dialog");
   byId("reset").addEventListener("click", () => { dialog.returnValue = ""; dialog.showModal(); });
   dialog.addEventListener("close", () => {
-    if (dialog.returnValue === "reset" && model.reset(chapter.id)) storeChanges("Original positions restored");
+    if (dialog.returnValue === "reset" && model.reset(chapter.id)) storeChanges("Original layout restored");
   });
   byId("export").addEventListener("click", () => {
     const blob = new Blob([JSON.stringify(model.export(), null, 2) + "\n"], { type: "application/json" });
@@ -783,7 +972,7 @@ function bindEditor() {
     }
   });
   window.addEventListener("keydown", (event) => {
-    if (!chapter || dialog.open || ["INPUT", "TEXTAREA", "BUTTON", "SUMMARY"].includes(event.target.tagName)) return;
+    if (!chapter || dialog.open || ["INPUT", "TEXTAREA", "BUTTON", "SUMMARY", "SELECT"].includes(event.target.tagName)) return;
     const accel = event.ctrlKey || event.metaKey;
     if (accel && ["z", "y"].includes(event.key.toLowerCase())) {
       event.preventDefault();
@@ -794,20 +983,26 @@ function bindEditor() {
       if (!action) canvas.dataset.cursor = "";
     } else if (event.key === "Escape") {
       selected.clear();
+      selectedDecoration = undefined;
       showInspector(false);
       renderInspector();
       queueDraw();
     } else if (event.key.toLowerCase() === "f") {
       fitChapter();
-    } else if (event.key.startsWith("Arrow") && selected.size && !action) {
+    } else if (event.key.startsWith("Arrow") && (selected.size || selectedDecoration) && !action) {
       event.preventDefault();
       const step = event.shiftKey ? 1 : gridSize;
       const dx = event.key === "ArrowLeft" ? -step : event.key === "ArrowRight" ? step : 0;
       const dy = event.key === "ArrowUp" ? -step : event.key === "ArrowDown" ? step : 0;
-      changePositions([...selected].map((id) => {
-        const current = model.position(chapter.id, id);
-        return { id, x: round(current.x + dx, 6), y: round(current.y + dy, 6) };
-      }), "Nudge quest layout");
+      if (selectedDecoration) {
+        const point = model.decorationPosition(chapter.id, selectedDecoration);
+        changeDecorations([{ ...point, id: selectedDecoration, x: round(point.x + dx, 6), y: round(point.y + dy, 6) }], "Nudge decoration");
+      } else {
+        changePositions([...selected].map((id) => {
+          const point = model.position(chapter.id, id);
+          return { id, x: round(point.x + dx, 6), y: round(point.y + dy, 6) };
+        }), "Nudge quest layout");
+      }
     }
   });
   window.addEventListener("keyup", (event) => { if (event.code === "Space") space = false; });
@@ -818,7 +1013,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=items-catalogue", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=decorations-editor", { cache: "no-cache" }),
       fetch("./item-icons.json?v=items-catalogue")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),

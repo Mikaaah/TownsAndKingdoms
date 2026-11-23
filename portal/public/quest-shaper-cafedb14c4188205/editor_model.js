@@ -88,20 +88,54 @@ export function round(value, digits = 4) {
 const LAYOUT_FORMAT = "tnk3-quest-layout";
 const LAYOUT_VERSION = 1;
 
-function samePosition(left, right) {
-  return left.x === right.x && left.y === right.y;
+export function isEditableDecoration(image) {
+  return !image.sprite && Boolean(image.labelArt || image.textOnImage || image.labelsOnImage);
 }
 
-function readPosition(quest) {
-  if (!Number.isFinite(quest.x) || !Number.isFinite(quest.y)) {
-    throw new Error(`Quest ${quest.id} needs finite x and y coordinates.`);
+function samePosition(left, right) {
+  return left.x === right.x && left.y === right.y && left.rotation === right.rotation;
+}
+
+function readPosition(record, kind, fallbackRotation = 0) {
+  if (!Number.isFinite(record.x) || !Number.isFinite(record.y)) {
+    throw new Error(`${kind} ${record.id} needs finite x and y coordinates.`);
   }
-  return { x: quest.x, y: quest.y };
+  const point = { x: record.x, y: record.y };
+  if (kind === "Decoration") {
+    const rotation = record.rotation === undefined ? fallbackRotation : record.rotation;
+    if (!Number.isFinite(rotation)) {
+      throw new Error(`Decoration ${record.id} needs a finite rotation.`);
+    }
+    const angle = rotation % 360;
+    point.rotation = angle >= 180 ? angle - 360 : angle < -180 ? angle + 360 : angle || 0;
+  }
+  return point;
+}
+
+function makeGroup(records, kind, file, retired = []) {
+  const originals = new Map();
+  for (const record of records) {
+    if (originals.has(record.id)) {
+      throw new Error(`Duplicate ${kind.toLowerCase()} ${record.id} in chapter ${file}.`);
+    }
+    originals.set(record.id, readPosition(record, kind));
+  }
+  return { file, kind, originals, overrides: new Map(), retired: new Set(retired) };
+}
+
+function exportChanges(group) {
+  const records = [];
+  for (const id of group.originals.keys()) {
+    const point = group.overrides.get(id);
+    if (point) records.push({ id, ...point });
+  }
+  return records;
 }
 
 export class LayoutModel {
   #pack;
   #sourceId;
+  #retiredChapters;
   #chapters = new Map();
   #past = [];
   #future = [];
@@ -109,22 +143,15 @@ export class LayoutModel {
   constructor(dataset) {
     this.#pack = dataset.pack;
     this.#sourceId = dataset.sourceId;
+    this.#retiredChapters = new Set(dataset.retiredChapterIds ?? []);
     for (const chapter of dataset.chapters) {
       if (this.#chapters.has(chapter.id)) {
         throw new Error(`Duplicate chapter ${chapter.id}.`);
       }
-      const originals = new Map();
-      for (const quest of chapter.quests) {
-        if (originals.has(quest.id)) {
-          throw new Error(`Duplicate quest ${quest.id} in chapter ${chapter.id}.`);
-        }
-        originals.set(quest.id, readPosition(quest));
-      }
       this.#chapters.set(chapter.id, {
         file: chapter.file,
-        originals,
-        overrides: new Map(),
-        retired: new Set(chapter.retiredQuestIds ?? []),
+        quests: makeGroup(chapter.quests, "Quest", chapter.file, chapter.retiredQuestIds),
+        decorations: makeGroup((chapter.images ?? []).filter(isEditableDecoration), "Decoration", chapter.file),
       });
     }
   }
@@ -146,13 +173,19 @@ export class LayoutModel {
   }
 
   position(chapterId, questId) {
-    const chapter = this.#chapter(chapterId);
-    return { ...this.#position(chapter, questId) };
+    return { ...this.#position(this.#chapter(chapterId).quests, questId) };
   }
 
   move(chapterId, updates, label = "Move quests") {
-    const chapter = this.#chapter(chapterId);
-    return this.#commit(this.#readUpdates(chapter, updates), label);
+    return this.#commit(this.#readUpdates(this.#chapter(chapterId).quests, updates), label);
+  }
+
+  decorationPosition(chapterId, decorationId) {
+    return { ...this.#position(this.#chapter(chapterId).decorations, decorationId) };
+  }
+
+  moveDecorations(chapterId, updates, label = "Move decorations") {
+    return this.#commit(this.#readUpdates(this.#chapter(chapterId).decorations, updates), label);
   }
 
   undo() {
@@ -177,30 +210,30 @@ export class LayoutModel {
       : [this.#chapter(chapterId)];
     const changes = [];
     for (const chapter of chapters) {
-      for (const [id, before] of chapter.overrides) {
-        changes.push({ chapter, id, before, after: chapter.originals.get(id) });
-      }
+      this.#resetGroup(chapter.quests, changes);
+      this.#resetGroup(chapter.decorations, changes);
     }
     return this.#commit(changes, "Reset layout");
   }
 
   changedCount(chapterId) {
-    if (chapterId !== undefined) return this.#chapter(chapterId).overrides.size;
+    const chapters = chapterId === undefined
+      ? this.#chapters.values()
+      : [this.#chapter(chapterId)];
     let count = 0;
-    for (const chapter of this.#chapters.values()) count += chapter.overrides.size;
+    for (const chapter of chapters) {
+      count += chapter.quests.overrides.size + chapter.decorations.overrides.size;
+    }
     return count;
   }
 
   export() {
     const chapters = [];
     for (const [id, chapter] of this.#chapters) {
-      if (!chapter.overrides.size) continue;
-      const quests = [];
-      for (const questId of chapter.originals.keys()) {
-        const point = chapter.overrides.get(questId);
-        if (point) quests.push({ id: questId, ...point });
-      }
-      chapters.push({ id, file: chapter.file, quests });
+      if (!chapter.quests.overrides.size && !chapter.decorations.overrides.size) continue;
+      const patch = { id, file: chapter.file, quests: exportChanges(chapter.quests) };
+      if (chapter.decorations.overrides.size) patch.decorations = exportChanges(chapter.decorations);
+      chapters.push(patch);
     }
     return {
       format: LAYOUT_FORMAT,
@@ -230,25 +263,29 @@ export class LayoutModel {
       if (!patch || typeof patch.id !== "string") {
         throw new Error("Each layout chapter needs an ID.");
       }
-      const chapter = this.#chapter(patch.id);
       if (seenChapters.has(patch.id)) {
         throw new Error(`Layout chapter ${patch.id} appears more than once.`);
       }
       seenChapters.add(patch.id);
+      if (!this.#chapters.has(patch.id) && this.#retiredChapters.has(patch.id)) continue;
+      const chapter = this.#chapter(patch.id);
       if (patch.file !== chapter.file) {
         throw new Error(`The layout filename does not match chapter ${patch.id}.`);
       }
       const seenQuests = new Set();
-      changes.push(...this.#readUpdates(chapter, patch.quests, seenQuests, true));
-      if (replace) specified.set(chapter, seenQuests);
+      const seenDecorations = new Set();
+      changes.push(...this.#readUpdates(chapter.quests, patch.quests, seenQuests, true));
+      const decorations = patch.decorations === undefined ? [] : patch.decorations;
+      changes.push(...this.#readUpdates(chapter.decorations, decorations, seenDecorations, true));
+      if (replace) {
+        specified.set(chapter.quests, seenQuests);
+        specified.set(chapter.decorations, seenDecorations);
+      }
     }
     if (replace) {
       for (const chapter of this.#chapters.values()) {
-        for (const [id, before] of chapter.overrides) {
-          if (!specified.get(chapter)?.has(id)) {
-            changes.push({ chapter, id, before, after: chapter.originals.get(id) });
-          }
-        }
+        this.#resetGroup(chapter.quests, changes, specified.get(chapter.quests));
+        this.#resetGroup(chapter.decorations, changes, specified.get(chapter.decorations));
       }
     }
     return this.#commit(changes, "Import layout", recordHistory);
@@ -260,41 +297,50 @@ export class LayoutModel {
     return chapter;
   }
 
-  #position(chapter, id) {
-    const point = chapter.overrides.get(id) ?? chapter.originals.get(id);
-    if (!point) throw new Error(`Unknown quest ${id} in chapter ${chapter.file}.`);
+  #position(group, id) {
+    const point = group.overrides.get(id) ?? group.originals.get(id);
+    if (!point) throw new Error(`Unknown ${group.kind.toLowerCase()} ${id} in chapter ${group.file}.`);
     return point;
   }
 
-  #readUpdates(chapter, updates, seen = new Set(), importing = false) {
+  #readUpdates(group, updates, seen = new Set(), importing = false) {
     if (!Array.isArray(updates)) {
-      throw new Error(`Chapter ${chapter.file} needs a quests array.`);
+      throw new Error(`Chapter ${group.file} needs a ${group.kind.toLowerCase()}s array.`);
     }
     const changes = [];
     for (const update of updates) {
       if (!update || typeof update.id !== "string") {
-        throw new Error(`Each quest in chapter ${chapter.file} needs an ID.`);
+        throw new Error(`Each ${group.kind.toLowerCase()} in chapter ${group.file} needs an ID.`);
       }
       if (seen.has(update.id)) {
-        throw new Error(`Quest ${update.id} appears more than once in chapter ${chapter.file}.`);
+        throw new Error(`${group.kind} ${update.id} appears more than once in chapter ${group.file}.`);
       }
       seen.add(update.id);
-      if (importing && !chapter.originals.has(update.id) && chapter.retired.has(update.id)) continue;
-      const before = this.#position(chapter, update.id);
-      const after = readPosition(update);
+      if (importing && !group.originals.has(update.id) && group.retired.has(update.id)) continue;
+      const before = this.#position(group, update.id);
+      const fallbackRotation = importing ? group.originals.get(update.id).rotation : before.rotation;
+      const after = readPosition(update, group.kind, fallbackRotation);
       if (!samePosition(before, after)) {
-        changes.push({ chapter, id: update.id, before, after });
+        changes.push({ group, id: update.id, before, after });
       }
     }
     return changes;
   }
 
+  #resetGroup(group, changes, keep) {
+    for (const [id, before] of group.overrides) {
+      if (!keep?.has(id)) {
+        changes.push({ group, id, before, after: group.originals.get(id) });
+      }
+    }
+  }
+
   #apply(changes, direction) {
-    for (const { chapter, id, [direction]: point } of changes) {
-      if (samePosition(point, chapter.originals.get(id))) {
-        chapter.overrides.delete(id);
+    for (const { group, id, [direction]: point } of changes) {
+      if (samePosition(point, group.originals.get(id))) {
+        group.overrides.delete(id);
       } else {
-        chapter.overrides.set(id, point);
+        group.overrides.set(id, point);
       }
     }
   }
