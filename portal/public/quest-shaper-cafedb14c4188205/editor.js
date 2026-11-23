@@ -184,7 +184,7 @@ function paintImages() {
     const halfHeight = frame.height * camera.scale / 2;
     if (center.x + halfWidth < 0 || center.y + halfHeight < 0 || center.x - halfWidth > width || center.y - halfHeight > height) continue;
     if (image.src) {
-      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=decorations-editor` : image.src);
+      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=exploration-layout` : image.src);
       if (loaded.complete && loaded.naturalWidth) {
         context.save();
         context.translate(center.x, center.y);
@@ -1013,8 +1013,8 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=decorations-editor", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=items-catalogue")
+      fetch("./quest_data.json.gz?v=exploration-layout", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=exploration-layout")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
