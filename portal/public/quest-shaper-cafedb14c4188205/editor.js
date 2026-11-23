@@ -742,7 +742,7 @@ function bindEditor() {
 
 async function start() {
   try {
-    const response = await fetch("./quest_data.json.gz");
+    const response = await fetch("./quest_data.json.gz?v=branch-layout", { cache: "no-cache" });
     if (!response.ok) throw new Error("Quest data could not be loaded.");
     const decompressed = response.body.pipeThrough(new DecompressionStream("gzip"));
     dataset = await new Response(decompressed).json();
