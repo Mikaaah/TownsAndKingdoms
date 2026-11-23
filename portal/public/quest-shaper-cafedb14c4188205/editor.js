@@ -1,7 +1,7 @@
 import {
   LayoutModel, boundsFor, fitBounds, isEditableDecoration, marqueeRect, marqueeSelection,
   round, screenToWorld, snap, worldToScreen, zoomAt,
-} from "./editor_model.js?v=heading-fit-v1";
+} from "./editor_model.js?v=exploration-gap-v1";
 
 const byId = (id) => document.getElementById(id);
 const canvas = byId("map-canvas");
@@ -184,7 +184,7 @@ function paintImages() {
     const halfHeight = frame.height * camera.scale / 2;
     if (center.x + halfWidth < 0 || center.y + halfHeight < 0 || center.x - halfWidth > width || center.y - halfHeight > height) continue;
     if (image.src) {
-      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=heading-fit-v1` : image.src);
+      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=exploration-gap-v1` : image.src);
       if (loaded.complete && loaded.naturalWidth) {
         context.save();
         context.translate(center.x, center.y);
@@ -1013,8 +1013,8 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=heading-fit-v1", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=heading-fit-v1")
+      fetch("./quest_data.json.gz?v=exploration-gap-v1", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=exploration-gap-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
