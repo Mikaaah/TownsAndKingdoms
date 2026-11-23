@@ -151,7 +151,7 @@ export class LayoutModel {
       this.#chapters.set(chapter.id, {
         file: chapter.file,
         quests: makeGroup(chapter.quests, "Quest", chapter.file, chapter.retiredQuestIds),
-        decorations: makeGroup((chapter.images ?? []).filter(isEditableDecoration), "Decoration", chapter.file),
+        decorations: makeGroup((chapter.images ?? []).filter(isEditableDecoration), "Decoration", chapter.file, chapter.retiredDecorationIds),
       });
     }
   }
