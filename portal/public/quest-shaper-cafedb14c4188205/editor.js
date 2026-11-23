@@ -742,7 +742,7 @@ function bindEditor() {
 
 async function start() {
   try {
-    const response = await fetch("./quest_data.json.gz?v=branch-layout", { cache: "no-cache" });
+    const response = await fetch("./quest_data.json.gz?v=winter-expedition", { cache: "no-cache" });
     if (!response.ok) throw new Error("Quest data could not be loaded.");
     const decompressed = response.body.pipeThrough(new DecompressionStream("gzip"));
     dataset = await new Response(decompressed).json();
@@ -757,7 +757,9 @@ async function start() {
       for (const quest of entry.quests) if (!chapterOrigins.has(quest.id)) chapterOrigins.set(quest.id, { quest, chapter: entry });
     }
     const current = dataset.chapters.filter((entry) => !entry.legacy);
-    const original = current.find((entry) => /get.*create.?ive/i.test(entry.title)) ?? current[0] ?? dataset.chapters[0];
+    const linkedChapter = new URLSearchParams(window.location.search).get("chapter");
+    const original = current.find((entry) => entry.id === linkedChapter)
+      ?? current.find((entry) => /get.*create.?ive/i.test(entry.title)) ?? current[0] ?? dataset.chapters[0];
     byId("chapter-count").textContent = current.length;
     byId("pack-version").textContent = dataset.pack;
     byId("dataset-info").textContent = current.reduce((total, entry) => total + entry.quests.length, 0).toLocaleString("en-US") + " current quests";
