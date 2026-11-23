@@ -1,7 +1,7 @@
 import {
   LayoutModel, boundsFor, fitBounds, marqueeRect, marqueeSelection,
   round, screenToWorld, snap, worldToScreen, zoomAt,
-} from "./editor_model.js";
+} from "./editor_model.js?v=winter-tree";
 
 const byId = (id) => document.getElementById(id);
 const canvas = byId("map-canvas");
@@ -742,7 +742,7 @@ function bindEditor() {
 
 async function start() {
   try {
-    const response = await fetch("./quest_data.json.gz?v=winter-expedition", { cache: "no-cache" });
+    const response = await fetch("./quest_data.json.gz?v=winter-tree", { cache: "no-cache" });
     if (!response.ok) throw new Error("Quest data could not be loaded.");
     const decompressed = response.body.pipeThrough(new DecompressionStream("gzip"));
     dataset = await new Response(decompressed).json();

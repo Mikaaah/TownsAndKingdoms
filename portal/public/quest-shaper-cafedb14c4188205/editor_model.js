@@ -120,7 +120,12 @@ export class LayoutModel {
         }
         originals.set(quest.id, readPosition(quest));
       }
-      this.#chapters.set(chapter.id, { file: chapter.file, originals, overrides: new Map() });
+      this.#chapters.set(chapter.id, {
+        file: chapter.file,
+        originals,
+        overrides: new Map(),
+        retired: new Set(chapter.retiredQuestIds ?? []),
+      });
     }
   }
 
@@ -234,7 +239,7 @@ export class LayoutModel {
         throw new Error(`The layout filename does not match chapter ${patch.id}.`);
       }
       const seenQuests = new Set();
-      changes.push(...this.#readUpdates(chapter, patch.quests, seenQuests));
+      changes.push(...this.#readUpdates(chapter, patch.quests, seenQuests, true));
       if (replace) specified.set(chapter, seenQuests);
     }
     if (replace) {
@@ -261,7 +266,7 @@ export class LayoutModel {
     return point;
   }
 
-  #readUpdates(chapter, updates, seen = new Set()) {
+  #readUpdates(chapter, updates, seen = new Set(), importing = false) {
     if (!Array.isArray(updates)) {
       throw new Error(`Chapter ${chapter.file} needs a quests array.`);
     }
@@ -274,6 +279,7 @@ export class LayoutModel {
         throw new Error(`Quest ${update.id} appears more than once in chapter ${chapter.file}.`);
       }
       seen.add(update.id);
+      if (importing && !chapter.originals.has(update.id) && chapter.retired.has(update.id)) continue;
       const before = this.#position(chapter, update.id);
       const after = readPosition(update);
       if (!samePosition(before, after)) {
