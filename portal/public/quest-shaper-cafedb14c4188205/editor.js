@@ -164,7 +164,7 @@ function paintImages() {
     const h = image.height * camera.scale;
     if (center.x + w / 2 < 0 || center.y + h / 2 < 0 || center.x - w / 2 > width || center.y - h / 2 > height) continue;
     if (image.src) {
-      const loaded = loadImage(image.src);
+      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=items-catalogue` : image.src);
       if (loaded.complete && loaded.naturalWidth) {
         context.save();
         context.translate(center.x, center.y);
@@ -818,8 +818,8 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=quest-section-labels", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=quest-groups")
+      fetch("./quest_data.json.gz?v=items-catalogue", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=items-catalogue")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
