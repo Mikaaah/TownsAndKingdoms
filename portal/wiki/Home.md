@@ -3,3 +3,5 @@
 The handbook has the current guides, progression chapters, and references for Towns & Kingdoms.
 
 [**Open the handbook →**](https://mikaaah.github.io/TownsAndKingdoms/)
+
+[Chapter questlines](https://mikaaah.github.io/TownsAndKingdoms/chapters/)

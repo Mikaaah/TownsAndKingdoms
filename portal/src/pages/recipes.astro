@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import RegistryDialog from '../components/RegistryDialog.astro';
 import { href, data, fmt, pretty, words } from '../lib/data';
+import { visibleChapters, visibleRecipes } from '../lib/handbook-visibility.js';
 import '../styles/recipes.css';
 
 interface Recipe {
@@ -20,7 +21,7 @@ interface Chapter {
 }
 type RecipeTexture = string | [number, number, number];
 
-const recipes: Recipe[] = data('recipes');
+const recipes: Recipe[] = visibleRecipes(data('recipes'));
 const outputNamespaces = new Set(recipes.map(recipe => recipe.mod));
 const installedMods: { id: string; name: string }[] = data('mods');
 // An exact namespace match takes priority over the captured display name.
@@ -28,13 +29,12 @@ const installedMods: { id: string; name: string }[] = data('mods');
 const recipeModNames = Object.fromEntries(installedMods
   .filter(mod => mod.id !== 'kubejs' && outputNamespaces.has(mod.id))
   .map(mod => [mod.id, mod.name]));
-const chapters: Chapter[] = data('chapters');
+const chapters: Chapter[] = visibleChapters(data('chapters'));
 const families = data('recipe-families');
 const rules = data('production-rules');
 const recipeArt: Record<string, RecipeTexture> = data('recipe-textures', {});
 const chapterOutputs: Record<number, string> = {
   4: 'create:precision_mechanism',
-  10: 'kubejs:creation_core',
 };
 const milestones = chapters.flatMap(chapter => {
   const output = chapterOutputs[chapter.number] ?? chapter.mechanism;
@@ -53,7 +53,7 @@ const processLinks = [
 ].filter(([id]) => processes.has(id));
 const percent = (value: number) => new Intl.NumberFormat('en', { style: 'percent', maximumFractionDigits: 2 }).format(value);
 ---
-<Layout title="Recipes" description="Search recipes added or changed by Towns & Kingdoms, from the first mechanism to the Creation Core." wide>
+<Layout title="Recipes" description="Search recipes added or changed by Towns & Kingdoms, including mechanisms, crafting patterns and machine processes." wide>
   <p class="eyebrow">Reference / Production</p>
   <h1>Recipes</h1>
   <p class="intro">Search the pack’s recipes by result or ingredient. Open a recipe to see its materials, crafting pattern or machine steps.</p>

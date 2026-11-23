@@ -33,7 +33,7 @@ interface Quest {
   x: number;
   y: number;
   size?: number;
-  shape?: 'hexagon' | 'rsquare' | 'circle';
+  shape?: string;
   hideDependencyLines?: boolean;
   hideDependentLines?: boolean;
 }
@@ -79,6 +79,7 @@ interface Texture {
 interface BoardAssets {
   titles: Record<string, { src: string; width: number; height: number }>;
   icons: Record<string, Texture>;
+  shapes?: Record<string, Texture>;
   labels?: Record<string, Texture>;
 }
 
@@ -87,7 +88,8 @@ const chapterInfo: Record<string, ChapterInfo> = data('chapter-machines', {});
 const assets: BoardAssets = data('quest-board-assets', { titles: {}, icons: {} });
 const spruce = href('media/textures/spruce-planks.png');
 const chapterBackboard = href('media/chapters/chapter-backboard.png');
-const isSecret = (chapter: Chapter) => chapter.number === 10 && chapter.quests.length === 0;
+const questBackground = href('media/chapters/quest-background.png');
+const isSecret = (chapter: Chapter) => chapter.number === 10;
 const titleStyle = (chapter: Chapter) => ({
   '--chapter-text-color': chapter.titleColors?.text,
   '--chapter-numeral-color': chapter.titleColors?.numeral,
@@ -149,7 +151,10 @@ function boardEdges(chapter: Chapter) {
   <p class="eyebrow">Handbook / Progression</p>
   <h1>Chapter questlines</h1>
 
-  <div data-quest-chapters style={{ '--quest-planks': `url("${spruce}")` }}>
+  <div data-quest-chapters style={{
+    '--quest-planks': `url("${spruce}")`,
+    '--quest-background': `url("${questBackground}")`,
+  }}>
     <nav aria-label="Chapters">
       <ol class="chapter-picker" style={{ '--chapter-backboard': `url("${chapterBackboard}")` }}>
         {chapters.map((chapter, index) => {
@@ -229,7 +234,8 @@ function boardEdges(chapter: Chapter) {
                   const width = frameSizes.get(quest.id)!;
                   const radius = width / 2;
                   const icon = assets.icons[quest.icon ?? ''];
-                  const iconSide = width * 0.7;
+                  const frame = assets.shapes?.[quest.shape ?? ''];
+                  const iconSide = width * (2 / 3);
                   const label = assets.labels?.[quest.id];
                   const labelWidth = label ? label.width / 2 + 10 : 0;
                   const labelHeight = label ? label.height / 2 + 8 : 0;
@@ -238,7 +244,12 @@ function boardEdges(chapter: Chapter) {
                     data-selected={questIndex === 0 ? '' : undefined} aria-label={quest.title} aria-controls={'quest-' + quest.id}
                     transform={`translate(${x} ${y})`}>
                     <title>{quest.title}</title>
-                    {quest.shape === 'hexagon' ? <polygon class="quest-node-frame" points={hexagon(radius)} />
+                    {frame ? <>
+                      <rect class="quest-node-hitbox" x={-radius} y={-radius} {width} height={width} />
+                      <g class="quest-node-shape" data-quest-shape={quest.shape}>
+                        <QuestBoardTexture texture={frame} x={-radius} y={-radius} {width} height={width} />
+                      </g>
+                    </> : quest.shape === 'hexagon' ? <polygon class="quest-node-frame" points={hexagon(radius)} />
                       : quest.shape === 'circle' ? <circle class="quest-node-frame" r={radius} />
                       : <rect class="quest-node-frame" x={-radius} y={-radius} {width} height={width}
                         rx={quest.shape === 'rsquare' ? radius * .37 : radius * .1} />}
@@ -450,7 +461,8 @@ function boardEdges(chapter: Chapter) {
     display: block;
     width: 100%;
     height: var(--board-height);
-    background: linear-gradient(#1d1714dd, #1d1714dd), var(--quest-planks) 0 0 / 64px 64px repeat;
+    background: #39283e var(--quest-background) 0 0 / 384px 384px repeat;
+    image-rendering: pixelated;
     cursor: grab;
     touch-action: none;
     user-select: none;
@@ -463,6 +475,15 @@ function boardEdges(chapter: Chapter) {
   .board-edges [data-connected] { stroke: #e4c681; stroke-width: 2.25; }
   .quest-node { cursor: pointer; }
   .quest-node:focus { outline: none; }
+  .quest-node-hitbox { fill: transparent; pointer-events: all; }
+  .quest-node-shape { pointer-events: none; }
+  .quest-node:hover .quest-node-shape, .quest-node:focus-visible .quest-node-shape {
+    filter: drop-shadow(0 0 1.5px #fff0d7);
+  }
+  .quest-node[data-selected]:not([data-selected="false"]) .quest-node-shape,
+  .quest-node[aria-current]:not([aria-current="false"]) .quest-node-shape {
+    filter: drop-shadow(0 0 1.5px #ffcb72);
+  }
   .quest-node-frame { fill: #3e3029; stroke: #b5a0d2; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
   .quest-node-marker { fill: #ddc4a9; pointer-events: none; }
   .quest-node:hover .quest-node-frame, .quest-node:focus-visible .quest-node-frame {

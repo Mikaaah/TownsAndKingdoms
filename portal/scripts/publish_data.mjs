@@ -1,17 +1,31 @@
 import { buildSearchDocuments } from '../src/lib/search-documents.js';
+import { visibleChapters, visibleRecipes } from '../src/lib/handbook-visibility.js';
 import { mkdir, readdir, copyFile, readFile, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 const source = resolve('src/data');
 const destination = resolve('public/data');
+const publicTransforms = new Map([
+  ['chapters.json', visibleChapters],
+  ['recipes.json', visibleRecipes],
+]);
 await mkdir(source, { recursive: true });
 await mkdir(destination, { recursive: true });
 for (const name of await readdir(source)) {
-  if (name.endsWith('.json')) await copyFile(resolve(source, name), resolve(destination, name));
+  if (!name.endsWith('.json')) continue;
+  const origin = resolve(source, name);
+  const target = resolve(destination, name);
+  const transform = publicTransforms.get(name);
+  if (transform) {
+    const records = JSON.parse(await readFile(origin, 'utf8'));
+    await writeFile(target, JSON.stringify(transform(records)));
+  } else {
+    await copyFile(origin, target);
+  }
 }
 
 const datasets = {};
 for(const key of ['weapons','recipes','mods','bosses','skills','ponder','mechanics']) {
- try { datasets[key] = JSON.parse(await readFile(resolve(source,key+'.json'),'utf8')); } catch { datasets[key] = ['skills','ponder','mechanics'].includes(key)?{}:[]; }
+ try { datasets[key] = JSON.parse(await readFile(resolve(destination,key+'.json'),'utf8')); } catch { datasets[key] = ['skills','ponder','mechanics'].includes(key)?{}:[]; }
 }
 datasets.chapters=JSON.parse(await readFile(resolve(source,'chapter-questlines.json'),'utf8'));
 try { datasets.families=JSON.parse(await readFile(resolve(source,'recipe-families.json'),'utf8')); } catch {datasets.families=[];}

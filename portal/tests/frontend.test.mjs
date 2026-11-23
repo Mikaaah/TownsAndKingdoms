@@ -254,6 +254,8 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
  const toBoard=value=>value*32;
  const chapters=[...doc.querySelectorAll('[data-quest-chapter]')];
  assert.equal(chapters.length,10);
+ assert.match(doc.querySelector('[data-quest-chapters]').getAttribute('style'), /\/media\/chapters\/quest-background\.png/);
+ assert.ok(readFileSync(resolve(root,'dist/media/chapters/quest-background.png')).length);
  assert.deepEqual(chapters.map(chapter=>chapter.id),questlines.map(chapter=>chapter.id));
  const picker = doc.querySelector('.chapter-picker');
  assert.match(picker.getAttribute('style'), /\/media\/chapters\/chapter-backboard\.png/);
@@ -296,6 +298,17 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
     const node=stage.querySelector(`[data-quest-id="${quest.id}"]`);
     assert.equal(node.getAttribute('transform'),`translate(${toBoard(quest.x)} ${toBoard(quest.y)})`);
     assert.equal(node.getAttribute('aria-label'),quest.title);
+    const shape = assets.shapes[quest.shape];
+    const frame = node.querySelector('[data-quest-shape]');
+    assert.equal(frame.dataset.questShape, quest.shape);
+    assert.equal(frame.querySelector('image').getAttribute('href'), '/TownsAndKingdoms/' + shape.src);
+    const icon = assets.icons[quest.icon];
+    if (icon) {
+     const sprite = node.querySelector(':scope > svg');
+     assert.equal(sprite.querySelector('image').getAttribute('href'), '/TownsAndKingdoms/' + icon.src);
+     const frameWidth = Number(frame.querySelector('svg').getAttribute('width'));
+     assert.ok(Math.abs(Number(sprite.getAttribute('width')) / frameWidth - 2 / 3) < 1e-6);
+    }
     const detail=doc.getElementById('quest-'+quest.id);
     assert.equal(detail.querySelector('h3').textContent.trim(),quest.title);
     assert.deepEqual([...detail.querySelectorAll('.quest-description p')].map(p=>p.textContent),quest.description);
@@ -328,12 +341,24 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
   }
  }
  const final=doc.getElementById('chapter-10');
+ assert.equal(questlines.at(-1).title,'Secret');
+ assert.equal(questlines.at(-1).icon,undefined);
+ assert.equal(questlines.at(-1).titleImage,undefined);
+ assert.equal(doc.querySelectorAll('[data-quest-shape="tnk_milestone_hexagon"]').length,18);
+ assert.doesNotMatch(doc.body.textContent,/The Final Chapter|Creative Core|Creation Core/i);
  assert.match(final.textContent,/Secret until release/i);
  assert.equal(final.querySelector('[data-quest-id]'),null);
  assert.equal(final.querySelector('.chapter-info'),null);
  const search=json('search');
  assert.equal(search.find(entry=>entry._key==='Chapters:chapter-10')?.name,'Secret until release');
  assert.equal(search.find(entry=>entry._key==='Chapters:chapter-01')?.name,questlines[0].title);
+ assert.deepEqual(json('chapters').map(chapter=>chapter.number),[1,2,3,4,5,6,7,8,9]);
+ assert.ok(json('recipes').every(recipe=>recipe.chapter!==10 && recipe.output!=='kubejs:creation_core'));
+ assert.ok(!search.some(entry=>entry._key.startsWith('Recipes:tnk:chapter_10/')));
+ const recipesPage=browser('recipes');
+ assert.ok(![...recipesPage.window.document.querySelectorAll('.recipe-landmark small')]
+  .some(label=>label.textContent==='Chapter X'));
+ recipesPage.window.close();
  dom.window.close();
 });
 test('character and loot navigate independently and expose their complete reference',()=>{

@@ -1406,7 +1406,7 @@
       {
         "id": "tnk:monarch",
         "name": "Monarch",
-        "description": "complete Chapter X | Creative Core.",
+        "description": "Complete the final story chapter.",
         "requirements": [],
         "colour": "#F3EADA",
         "perks": [
@@ -2148,7 +2148,7 @@
           },
           {
             "Title": "Monarch",
-            "How to earn it": "complete Chapter X | Creative Core.",
+            "How to earn it": "Complete the final story chapter.",
             "Passive bonuses": "+5.7% block breaking speed; +2 maximum health"
           },
           {
