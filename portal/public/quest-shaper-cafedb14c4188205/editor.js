@@ -104,13 +104,25 @@ function fitChapter() {
     const area = canvas.getBoundingClientRect();
     const cornerX = left - area.left;
     const cornerY = top - area.top;
-    const covered = chapter.quests.some((quest) => {
+    const coveredQuest = chapter.quests.some((quest) => {
       const screen = worldToScreen(camera, position(quest));
       const radius = nodeRadius(quest);
       return screen.x + radius >= cornerX && screen.y + radius >= cornerY;
     });
-    if (covered) {
+    let shift = 0;
+    for (const image of decorations) {
+      if (!image.aboveLinks) continue;
+      const frame = artworkBounds(artworkFrame(image));
+      const center = worldToScreen(camera, frame);
+      if (center.y + frame.height * camera.scale / 2 >= cornerY) {
+        shift = Math.max(shift, center.x + frame.width * camera.scale / 2 - cornerX + 6);
+      }
+    }
+    const leftSpace = camera.x + bounds.minX * camera.scale - 6;
+    if (coveredQuest || shift > Math.max(0, leftSpace)) {
       camera = fitBounds(bounds, { width, height: Math.max(1, cornerY + padding - 10) }, padding, minScale, 60);
+    } else {
+      camera.x -= shift;
     }
   }
   queueDraw();
@@ -200,8 +212,9 @@ function paintItem(id, x, y, size) {
   return true;
 }
 
-function paintImages() {
+function paintImages(aboveLinks = false) {
   for (const image of chapter.images ?? []) {
+    if (Boolean(image.aboveLinks) !== aboveLinks) continue;
     const frame = artworkFrame(image);
     const center = worldToScreen(camera, frame);
     const w = frame.width * camera.scale;
@@ -216,7 +229,7 @@ function paintImages() {
         context.save();
         context.translate(center.x, center.y);
         context.rotate(frame.angle);
-        context.globalAlpha = .91;
+        context.globalAlpha = aboveLinks ? 1 : .91;
         if (image.src.startsWith("./scenery/")) context.imageSmoothingEnabled = Boolean(image.labelArt);
         if (image.sprite) context.drawImage(loaded, ...image.sprite, -w / 2, -h / 2, w, h);
         else context.drawImage(loaded, -w / 2, -h / 2, w, h);
@@ -427,6 +440,7 @@ function draw() {
       }
     }
   }
+  paintImages(true);
   for (const quest of chapter.quests) {
     if (!selected.has(quest.id)) paintNode(quest, screens.get(quest.id), false);
   }
@@ -1216,7 +1230,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=trophy-board-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=trophy-plaques-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=golden-collection-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
