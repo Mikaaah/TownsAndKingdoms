@@ -920,11 +920,15 @@ function renderInspector() {
   if (quest.rewards?.length) {
     section.append(el("h4", "Rewards"));
     const list = el("ul", undefined, "detail-list");
-    for (const reward of quest.rewards) list.append(el("li", `${reward.count} × ${reward.label}`));
+    for (const reward of quest.rewards) {
+      const prefix = { title: "Title · ", cape: "Cape · " }[reward.kind] ?? "";
+      const label = reward.count == null ? prefix + reward.label : `${reward.count} × ${reward.label}`;
+      list.append(el("li", label));
+    }
     section.append(list);
   }
   if (quest.dependencies.length) {
-    section.append(el("h4", "Prerequisites"));
+    section.append(el("h4", quest.minimumDependencies ? `Any ${quest.minimumDependencies} prerequisite(s)` : "Prerequisites"));
     for (const id of quest.dependencies) {
       const match = findNode(id);
       if (!match) { section.append(el("p", id, "node-id")); continue; }
@@ -1231,7 +1235,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=tutorial-original-trophy-names-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=tnk-title-rewards-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=golden-collection-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
