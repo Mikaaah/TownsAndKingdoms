@@ -896,6 +896,12 @@ function renderInspector() {
     for (const task of quest.tasks) list.append(el("li", task.label || prettyId(task.type)));
     section.append(list);
   }
+  if (quest.rewards?.length) {
+    section.append(el("h4", "Rewards"));
+    const list = el("ul", undefined, "detail-list");
+    for (const reward of quest.rewards) list.append(el("li", `${reward.count} × ${reward.label}`));
+    section.append(list);
+  }
   if (quest.dependencies.length) {
     section.append(el("h4", "Prerequisites"));
     for (const id of quest.dependencies) {
@@ -1204,8 +1210,8 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=production-contracts-v1", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=production-contracts-v1")
+      fetch("./quest_data.json.gz?v=golden-collection-v1", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=golden-collection-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
