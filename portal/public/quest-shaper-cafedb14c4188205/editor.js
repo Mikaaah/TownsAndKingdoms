@@ -1204,8 +1204,8 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=bulletin-orders-v1", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=quest-update-v1")
+      fetch("./quest_data.json.gz?v=production-contracts-v1", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=production-contracts-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
