@@ -202,9 +202,6 @@ function paintItem(id, x, y, size) {
 
 function paintImages() {
   for (const image of chapter.images ?? []) {
-    const editable = isEditableDecoration(image);
-    const showLabel = flags.labels || (decorationMode && editable);
-    if (image.labelArt && !showLabel) continue;
     const frame = artworkFrame(image);
     const center = worldToScreen(camera, frame);
     const w = frame.width * camera.scale;
@@ -231,7 +228,7 @@ function paintImages() {
       context.rotate(frame.angle);
       paintItem(image.item, 0, 0, Math.min(w, h));
       context.restore();
-    } else if (image.title && (image.labelsOnImage || image.textOnImage) && showLabel) {
+    } else if (image.title && (image.labelsOnImage || image.textOnImage)) {
       context.save();
       context.translate(center.x, center.y);
       context.rotate(frame.angle);
@@ -1207,7 +1204,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=quest-update-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=bulletin-orders-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=quest-update-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
