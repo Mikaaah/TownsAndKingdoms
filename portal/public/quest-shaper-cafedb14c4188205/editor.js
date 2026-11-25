@@ -215,6 +215,7 @@ function paintItem(id, x, y, size) {
 function paintImages(aboveLinks = false) {
   for (const image of chapter.images ?? []) {
     if (Boolean(image.aboveLinks) !== aboveLinks) continue;
+    if (image.questLabel && !flags.labels && !decorationMode) continue;
     const frame = artworkFrame(image);
     const center = worldToScreen(camera, frame);
     const w = frame.width * camera.scale;
@@ -370,7 +371,7 @@ function paintNode(quest, screen, isSelected) {
     context.fillStyle = isSelected ? "#f3ddff" : tint();
     context.fill();
   }
-  if (flags.labels && (quest.shape !== "none" || isSelected) &&
+  if (flags.labels && !quest.artworkLabel && (quest.shape !== "none" || isSelected) &&
       (camera.scale >= 21 || isSelected || (chapter.quests.length < 80 && camera.scale >= 9))) {
     const label = quest.title;
     const fontSize = Math.max(8.5, Math.min(13, camera.scale * .54));
@@ -1230,7 +1231,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=trophy-plaques-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=trophy-quest-labels-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=golden-collection-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
