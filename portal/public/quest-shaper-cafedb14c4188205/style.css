@@ -68,6 +68,7 @@ button.icon-button { display: inline-grid; place-items: center; padding: 0; widt
 #map-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; outline-offset: -2px; touch-action: none; cursor: grab; }
 #map-canvas[data-cursor="node"] { cursor: move; }
 #map-canvas[data-cursor="dragging"] { cursor: grabbing; }
+#map-canvas[data-cursor="resize-decoration"] { cursor: nwse-resize; }
 #map-canvas[data-cursor="marquee"] { cursor: crosshair; }
 .toolbar, .zoom-tools { display: flex; gap: 5px; padding: 4px; border-radius: 9px; border: 1px solid #49375e; background: #1c152adf; box-shadow: 0 5px 15px #0a07132b; }
 .toolbar { position: absolute; top: 11px; left: 13px; flex-wrap: wrap; max-width: calc(100% - 26px); }
@@ -105,6 +106,9 @@ button.icon-button { display: inline-grid; place-items: center; padding: 0; widt
 .decoration-picker { display: grid; gap: 6px; margin-bottom: 10px; color: var(--muted); font-size: .82rem; }
 .decoration-picker select { width: 100%; min-width: 0; color: var(--text); border: 1px solid var(--line); background: var(--field); border-radius: 5px; padding: 6px; }
 .decoration-fields label:last-child { flex-basis: 100%; }
+.decoration-size-fields { margin-top: 14px; }
+.decoration-aspect { display: flex; align-items: center; gap: 5px; color: var(--muted); font-size: .79rem; }
+.decoration-aspect input { accent-color: #b993df; }
 .align-tools button { font-size: .76rem; padding: .38rem .48rem; }
 .result-button, .dependency-button { display: block; width: 100%; text-align: left; color: #eee3fa; white-space: normal; font-size: .8rem; padding: 5px 7px; border-color: transparent; background: #221933; overflow-wrap: anywhere; margin-bottom: 2px; }
 .quest-results { padding: 0 14px 7px; }

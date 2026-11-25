@@ -7,8 +7,8 @@
   <meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#141020">
   <title>Quest Shaper · Towns &amp; Kingdoms 3</title>
-  <link rel="stylesheet" href="./style.css?v=starcatcher-draft-v1">
-  <script type="module" src="./editor.js?v=quest-theme-v5"></script>
+  <link rel="stylesheet" href="./style.css?v=quest-update-v1">
+  <script type="module" src="./editor.js?v=quest-update-v1"></script>
 </head>
 <body>
   <header class="masthead">
@@ -37,11 +37,11 @@
         <div class="toolbar" role="toolbar" aria-label="Layout tools">
           <div class="toolbar-group"><button id="undo" class="icon-button" title="Undo (Ctrl+Z)" aria-label="Undo" disabled>↶</button><button id="redo" class="icon-button" title="Redo (Ctrl+Shift+Z)" aria-label="Redo" disabled>↷</button></div>
           <div class="toolbar-group"><button id="snap" type="button" title="Snap to a quarter-grid step" aria-pressed="true"><span class="tiny-grid" aria-hidden="true"></span>Snap</button><button id="labels" type="button" title="Toggle quest labels" aria-pressed="true">Labels</button><button id="links" type="button" title="Toggle quest links" aria-pressed="true">Links</button><button id="repeats" type="button" title="Highlight repeated quest icons in this chapter" aria-pressed="false">Repeats</button></div>
-          <div class="toolbar-group"><button id="decorations" type="button" title="Move or rotate chapter decorations" aria-pressed="false" disabled>Decorations</button></div>
+          <div class="toolbar-group"><button id="decorations" type="button" title="Move, rotate or resize chapter artwork" aria-pressed="false" disabled>Decorations</button></div>
           <button id="toggle-inspector" class="tablet-only" type="button" aria-pressed="false">Details</button>
         </div>
         <div class="map-bottom">
-          <div class="map-tip" id="map-tip"><span id="quest-map-tip">Drag a quest to move it <b>·</b> Shift-drag to select <b>·</b> Space-drag to pan</span><span id="decoration-map-tip" hidden>Drag a decoration to move it <b>·</b> Rotate in the inspector</span></div>
+          <div class="map-tip" id="map-tip"><span id="quest-map-tip">Drag a quest to move it <b>·</b> Shift-drag to select <b>·</b> Space-drag to pan</span><span id="decoration-map-tip" hidden>Drag a decoration to move it <b>·</b> Drag its handle to resize it</span></div>
           <div class="zoom-tools" role="toolbar" aria-label="Map zoom">
             <button id="zoom-out" class="icon-button" type="button" title="Zoom out" aria-label="Zoom out">−</button>
             <span id="zoom-value" aria-live="off">100%</span>
@@ -66,7 +66,7 @@
   <dialog id="reset-dialog">
     <form method="dialog">
       <h2>Reset chapter layout?</h2>
-      <p>This restores the original positions and angles for this chapter. You can undo the reset.</p>
+      <p>This restores the original positions, angles, and decoration sizes for this chapter. You can undo the reset.</p>
       <div class="dialog-actions"><button value="cancel" autofocus>Cancel</button><button class="primary" value="reset">Reset chapter</button></div>
     </form>
   </dialog>

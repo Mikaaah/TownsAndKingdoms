@@ -87,27 +87,36 @@ export function round(value, digits = 4) {
 
 const LAYOUT_FORMAT = "tnk3-quest-layout";
 const LAYOUT_VERSION = 1;
+const DECORATION_DIMENSIONS = ["width", "height"];
 
 export function isEditableDecoration(image) {
-  return !image.sprite && Boolean(image.labelArt || image.textOnImage || image.labelsOnImage);
+  return Boolean(image.src || image.item || (image.title && (image.textOnImage || image.labelsOnImage)));
 }
 
 function samePosition(left, right) {
-  return left.x === right.x && left.y === right.y && left.rotation === right.rotation;
+  return left.x === right.x && left.y === right.y && left.rotation === right.rotation
+    && left.width === right.width && left.height === right.height;
 }
 
-function readPosition(record, kind, fallbackRotation = 0) {
+function readPosition(record, kind, fallback = {}) {
   if (!Number.isFinite(record.x) || !Number.isFinite(record.y)) {
     throw new Error(`${kind} ${record.id} needs finite x and y coordinates.`);
   }
   const point = { x: record.x, y: record.y };
   if (kind === "Decoration") {
-    const rotation = record.rotation === undefined ? fallbackRotation : record.rotation;
+    const rotation = record.rotation === undefined ? (fallback.rotation ?? 0) : record.rotation;
     if (!Number.isFinite(rotation)) {
       throw new Error(`Decoration ${record.id} needs a finite rotation.`);
     }
     const angle = rotation % 360;
     point.rotation = angle >= 180 ? angle - 360 : angle < -180 ? angle + 360 : angle || 0;
+    for (const axis of DECORATION_DIMENSIONS) {
+      const value = record[axis] === undefined ? fallback[axis] : record[axis];
+      if (!Number.isFinite(value) || value <= 0) {
+        throw new Error(`Decoration ${record.id} needs a positive finite ${axis}.`);
+      }
+      point[axis] = value;
+    }
   }
   return point;
 }
@@ -125,9 +134,14 @@ function makeGroup(records, kind, file, retired = []) {
 
 function exportChanges(group) {
   const records = [];
-  for (const id of group.originals.keys()) {
+  for (const [id, original] of group.originals) {
     const point = group.overrides.get(id);
-    if (point) records.push({ id, ...point });
+    if (!point) continue;
+    const record = { id, ...point };
+    for (const axis of DECORATION_DIMENSIONS) {
+      if (record[axis] === original[axis]) delete record[axis];
+    }
+    records.push(record);
   }
   return records;
 }
@@ -274,9 +288,9 @@ export class LayoutModel {
       }
       const seenQuests = new Set();
       const seenDecorations = new Set();
-      changes.push(...this.#readUpdates(chapter.quests, patch.quests, seenQuests, true));
+      changes.push(...this.#readUpdates(chapter.quests, patch.quests, seenQuests, { importing: true, replace }));
       const decorations = patch.decorations === undefined ? [] : patch.decorations;
-      changes.push(...this.#readUpdates(chapter.decorations, decorations, seenDecorations, true));
+      changes.push(...this.#readUpdates(chapter.decorations, decorations, seenDecorations, { importing: true, replace }));
       if (replace) {
         specified.set(chapter.quests, seenQuests);
         specified.set(chapter.decorations, seenDecorations);
@@ -303,7 +317,7 @@ export class LayoutModel {
     return point;
   }
 
-  #readUpdates(group, updates, seen = new Set(), importing = false) {
+  #readUpdates(group, updates, seen = new Set(), { importing = false, replace = false } = {}) {
     if (!Array.isArray(updates)) {
       throw new Error(`Chapter ${group.file} needs a ${group.kind.toLowerCase()}s array.`);
     }
@@ -318,8 +332,9 @@ export class LayoutModel {
       seen.add(update.id);
       if (importing && !group.originals.has(update.id) && group.retired.has(update.id)) continue;
       const before = this.#position(group, update.id);
-      const fallbackRotation = importing ? group.originals.get(update.id).rotation : before.rotation;
-      const after = readPosition(update, group.kind, fallbackRotation);
+      const original = group.originals.get(update.id);
+      const fallback = { ...(replace ? original : before), rotation: importing ? original.rotation : before.rotation };
+      const after = readPosition(update, group.kind, fallback);
       if (!samePosition(before, after)) {
         changes.push({ group, id: update.id, before, after });
       }

@@ -1,7 +1,7 @@
 import {
   LayoutModel, boundsFor, fitBounds, isEditableDecoration, marqueeRect, marqueeSelection,
   round, screenToWorld, snap, worldToScreen, zoomAt,
-} from "./editor_model.js?v=starcatcher-spine-v1";
+} from "./editor_model.js?v=quest-update-v1";
 
 const byId = (id) => document.getElementById(id);
 const canvas = byId("map-canvas");
@@ -36,6 +36,7 @@ const archivedDrafts = new Map();
 let decorationMode = false;
 let selectedDecoration;
 let decorations = [];
+let lockDecorationAspect = true;
 let width = 1;
 let height = 1;
 let dpr = 1;
@@ -72,16 +73,23 @@ function decorationPosition(image) {
 
 function artworkFrame(image) {
   const at = isEditableDecoration(image) ? decorationPosition(image) : image;
-  const angle = (at.rotation ?? 0) * Math.PI / 180;
-  const sin = Math.abs(Math.sin(angle));
-  const cos = Math.abs(Math.cos(angle));
-  return { ...at, angle, width: image.width * cos + image.height * sin, height: image.width * sin + image.height * cos };
+  return { ...at, angle: (at.rotation ?? 0) * Math.PI / 180 };
+}
+
+function artworkBounds(frame) {
+  const sin = Math.abs(Math.sin(frame.angle));
+  const cos = Math.abs(Math.cos(frame.angle));
+  return {
+    ...frame,
+    width: frame.width * cos + frame.height * sin,
+    height: frame.width * sin + frame.height * cos,
+  };
 }
 
 function frameBounds() {
   return boundsFor([
     ...chapter.quests.map((quest) => ({ ...position(quest), size: quest.size })),
-    ...(chapter.images ?? []).filter((image) => image.src || image.textOnImage || image.labelsOnImage || image.item).map(artworkFrame),
+    ...decorations.map((image) => artworkBounds(artworkFrame(image))),
   ]);
 }
 
@@ -138,18 +146,19 @@ function grid() {
       backgroundPattern.setTransform(new DOMMatrix().scale(backgroundScale));
     }
   }
-  if (backgroundPattern) {
-    context.fillStyle = backgroundPattern;
-  } else {
-    const gradient = context.createRadialGradient(width * .58, height * .42, 0, width * .58, height * .42, Math.max(width, height) * .74);
-    gradient.addColorStop(0, "#251a35");
-    gradient.addColorStop(1, "#15111e");
-    context.fillStyle = gradient;
-  }
-  context.save();
-  context.imageSmoothingEnabled = false;
+  const gradient = context.createRadialGradient(width * .58, height * .42, 0, width * .58, height * .42, Math.max(width, height) * .74);
+  gradient.addColorStop(0, "#251a35");
+  gradient.addColorStop(1, "#15111e");
+  context.fillStyle = gradient;
   context.fillRect(0, 0, width, height);
-  context.restore();
+  if (backgroundPattern) {
+    context.save();
+    context.imageSmoothingEnabled = false;
+    context.globalAlpha = theme.background.opacity ?? 1;
+    context.fillStyle = backgroundPattern;
+    context.fillRect(0, 0, width, height);
+    context.restore();
+  }
   const step = camera.scale > 8 ? camera.scale : camera.scale * 5;
   context.strokeStyle = "#c7a3f116";
   context.lineWidth = 1;
@@ -198,13 +207,14 @@ function paintImages() {
     if (image.labelArt && !showLabel) continue;
     const frame = artworkFrame(image);
     const center = worldToScreen(camera, frame);
-    const w = image.width * camera.scale;
-    const h = image.height * camera.scale;
-    const halfWidth = frame.width * camera.scale / 2;
-    const halfHeight = frame.height * camera.scale / 2;
+    const w = frame.width * camera.scale;
+    const h = frame.height * camera.scale;
+    const bounds = artworkBounds(frame);
+    const halfWidth = bounds.width * camera.scale / 2;
+    const halfHeight = bounds.height * camera.scale / 2;
     if (center.x + halfWidth < 0 || center.y + halfHeight < 0 || center.x - halfWidth > width || center.y - halfHeight > height) continue;
     if (image.src) {
-      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=starcatcher-spine-v1` : image.src);
+      const loaded = loadImage(image.src.startsWith("./scenery/") ? `${image.src}?v=quest-update-v1` : image.src);
       if (loaded.complete && loaded.naturalWidth) {
         context.save();
         context.translate(center.x, center.y);
@@ -216,7 +226,11 @@ function paintImages() {
         context.restore();
       }
     } else if (image.item) {
-      paintItem(image.item, center.x, center.y, Math.min(w, h));
+      context.save();
+      context.translate(center.x, center.y);
+      context.rotate(frame.angle);
+      paintItem(image.item, 0, 0, Math.min(w, h));
+      context.restore();
     } else if (image.title && (image.labelsOnImage || image.textOnImage) && showLabel) {
       context.save();
       context.translate(center.x, center.y);
@@ -231,21 +245,32 @@ function paintImages() {
   }
 }
 
+function decorationOutline(image) {
+  const at = artworkFrame(image);
+  return {
+    angle: at.angle,
+    center: worldToScreen(camera, at),
+    halfWidth: Math.max(12, at.width * camera.scale / 2) + 4,
+    halfHeight: Math.max(7, at.height * camera.scale / 2) + 3,
+  };
+}
+
 function paintDecorationOutlines() {
   if (!decorationMode) return;
   for (const image of decorations) {
-    const at = artworkFrame(image);
-    const center = worldToScreen(camera, at);
-    const halfWidth = Math.max(12, image.width * camera.scale / 2) + 4;
-    const halfHeight = Math.max(7, image.height * camera.scale / 2) + 3;
+    const { angle, center, halfWidth, halfHeight } = decorationOutline(image);
     const active = image.id === selectedDecoration;
     context.save();
     context.translate(center.x, center.y);
-    context.rotate(at.angle);
+    context.rotate(angle);
     context.strokeStyle = active ? "#f5e6ff" : `${tint()}80`;
     context.lineWidth = active ? 1.6 : 1;
     if (!active) context.setLineDash([3, 3]);
     context.strokeRect(-halfWidth, -halfHeight, halfWidth * 2, halfHeight * 2);
+    if (active) {
+      context.fillStyle = "#f5e6ff";
+      context.fillRect(halfWidth - 4, halfHeight - 4, 8, 8);
+    }
     context.restore();
   }
 }
@@ -323,7 +348,7 @@ function paintNode(quest, screen, isSelected) {
     context.lineWidth = 1.7;
     context.stroke();
   }
-  const hasIcon = paintItem(quest.icon, screen.x, screen.y, radius * 2 * questIconScale);
+  const hasIcon = paintItem(quest.icon, screen.x, screen.y, radius * 2 * questIconScale * (quest.iconScale ?? 1));
   if (!hasIcon && radius > 7 && (quest.shape !== "none" || isSelected)) {
     context.beginPath();
     const centerSize = Math.max(1, radius * .26);
@@ -397,8 +422,9 @@ function draw() {
   }
   if (flags.links) {
     for (const quest of chapter.quests) {
-      if (quest.hideLines) continue;
       for (const dependency of quest.dependencies) {
+        const lineVisible = quest.lineVisibility?.[dependency] ?? !quest.hideLines;
+        if (!lineVisible) continue;
         if (!screens.has(dependency) || questLookup.get(dependency)?.hideOutgoingLines) continue;
         paintLink(screens.get(dependency), screens.get(quest.id), selected.has(quest.id) || selected.has(dependency));
       }
@@ -575,7 +601,7 @@ function updateDecorationMode() {
   const toggle = byId("decorations");
   toggle.disabled = !decorations.length;
   toggle.setAttribute("aria-pressed", decorationMode);
-  toggle.title = decorations.length ? "Move or rotate chapter decorations" : "This chapter has no editable decorations";
+  toggle.title = decorations.length ? "Move, rotate or resize chapter decorations" : "This chapter has no editable decorations";
   byId("inspector-title").textContent = decorationMode ? "Decorations" : "Quest details";
   byId("inspector").setAttribute("aria-label", decorationMode ? "Decoration inspector" : "Quest inspector");
   byId("quest-search-box").hidden = decorationMode;
@@ -583,7 +609,7 @@ function updateDecorationMode() {
   byId("quest-map-tip").hidden = decorationMode;
   byId("decoration-map-tip").hidden = !decorationMode;
   canvas.setAttribute("aria-label", decorationMode
-    ? "Decoration canvas. Drag a decoration to move it. Use the inspector to rotate it. Hold Space and drag to pan."
+    ? "Decoration canvas. Drag a decoration to move it. Drag its selected corner to resize it. Use the inspector to rotate it or enter dimensions. Hold Space and drag to pan."
     : "Quest canvas. Drag a quest to move it. Hold Space and drag to pan. Use Shift and drag on empty space to select quests.");
 }
 
@@ -638,6 +664,20 @@ function changeDecorations(updates, label) {
   if (updates.length && model.moveDecorations(chapter.id, updates, label)) storeChanges();
 }
 
+function scaleDecoration(base, scale) {
+  return { ...base, width: base.width * scale, height: base.height * scale };
+}
+
+function decorationName(image) {
+  if (image.title) return image.title;
+  if (image.sprite || image.src?.startsWith("./chapter-cards/") || image.src?.startsWith("./book-cards/tnk_quests-")) {
+    return "Chapter title card";
+  }
+  if (image.item) return prettyId(image.item);
+  const file = image.src?.split("/").at(-1)?.split("?")[0];
+  return file ? file.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ") : "Decoration " + image.id;
+}
+
 function centerDecoration(image) {
   selectedDecoration = image.id;
   const point = model.decorationPosition(chapter.id, image.id);
@@ -666,7 +706,7 @@ function renderDecorationInspector(section) {
   placeholder.disabled = true;
   choice.append(placeholder);
   for (const decoration of decorations) {
-    const option = el("option", decoration.title || "Decoration " + decoration.id);
+    const option = el("option", decorationName(decoration));
     option.value = decoration.id;
     choice.append(option);
   }
@@ -675,7 +715,7 @@ function renderDecorationInspector(section) {
   picker.append(choice);
   section.append(picker);
   if (!image) {
-    section.append(el("p", "Drag a decoration on the map, or choose one here to edit its position and angle.", "empty"));
+    section.append(el("p", "Select a decoration on the map or choose one here to edit its position, angle, and size.", "empty"));
     return;
   }
   const at = model.decorationPosition(chapter.id, image.id);
@@ -715,6 +755,44 @@ function renderDecorationInspector(section) {
     actions.append(button);
   }
   section.append(actions);
+
+  const sizes = el("div", undefined, "position-fields decoration-size-fields");
+  for (const [axis, labelText] of [["width", "Width"], ["height", "Height"]]) {
+    const label = el("label", labelText);
+    const input = el("input");
+    input.type = "number";
+    input.step = "any";
+    input.min = "0";
+    input.value = at[axis];
+    input.setAttribute("aria-label", "Decoration " + labelText);
+    input.addEventListener("change", () => {
+      const current = model.decorationPosition(chapter.id, image.id);
+      const value = input.valueAsNumber;
+      if (!Number.isFinite(value) || value <= 0) {
+        input.value = current[axis];
+        return;
+      }
+      const next = lockDecorationAspect ? scaleDecoration(current, value / current[axis]) : { ...current };
+      next[axis] = value;
+      if (!Number.isFinite(next.width) || !Number.isFinite(next.height) || next.width <= 0 || next.height <= 0) {
+        input.value = current[axis];
+        return;
+      }
+      changeDecorations([{ id: image.id, ...next }], "Resize decoration");
+    });
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") input.blur();
+    });
+    label.append(input);
+    sizes.append(label);
+  }
+  const aspect = el("label", undefined, "decoration-aspect");
+  const checkbox = el("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = lockDecorationAspect;
+  checkbox.addEventListener("change", () => { lockDecorationAspect = checkbox.checked; });
+  aspect.append(checkbox, "Lock aspect ratio");
+  section.append(sizes, aspect);
 }
 
 function alignSelected(axis, distribute) {
@@ -853,17 +931,28 @@ function pick(at) {
   return best;
 }
 
+function decorationOffset(at, outline) {
+  const dx = at.x - outline.center.x;
+  const dy = at.y - outline.center.y;
+  const cos = Math.cos(outline.angle);
+  const sin = Math.sin(outline.angle);
+  return { x: dx * cos + dy * sin, y: -dx * sin + dy * cos };
+}
+
+function pickResizeHandle(at) {
+  const image = decorations.find((entry) => entry.id === selectedDecoration);
+  if (!image) return;
+  const outline = decorationOutline(image);
+  const { x, y } = decorationOffset(at, outline);
+  if (Math.abs(x - outline.halfWidth) <= 8 && Math.abs(y - outline.halfHeight) <= 8) return image;
+}
+
 function pickDecoration(at) {
   for (let index = decorations.length - 1; index >= 0; index--) {
     const image = decorations[index];
-    const frame = artworkFrame(image);
-    const point = worldToScreen(camera, frame);
-    const dx = at.x - point.x;
-    const dy = at.y - point.y;
-    const cos = Math.cos(frame.angle);
-    const sin = Math.sin(frame.angle);
-    if (Math.abs(dx * cos + dy * sin) <= Math.max(12, image.width * camera.scale / 2) + 4 &&
-        Math.abs(-dx * sin + dy * cos) <= Math.max(7, image.height * camera.scale / 2) + 3) return image;
+    const outline = decorationOutline(image);
+    const { x, y } = decorationOffset(at, outline);
+    if (Math.abs(x) <= outline.halfWidth && Math.abs(y) <= outline.halfHeight) return image;
   }
 }
 
@@ -871,10 +960,18 @@ function pointerStart(event) {
   if (!chapter || action || !event.isPrimary || event.button > 2) return;
   canvas.focus({ preventScroll: true });
   const start = location(event);
+  const handle = !space && event.button === 0 && decorationMode ? pickResizeHandle(start) : null;
   const hit = !space && event.button === 0 ? (decorationMode ? pickDecoration(start) : pick(start)) : null;
   const multi = event.shiftKey || event.ctrlKey || event.metaKey;
   const record = { start, pointer: event.pointerId, moved: false, camera: { ...camera } };
-  if (hit && decorationMode) {
+  if (handle) {
+    const outline = decorationOutline(handle);
+    action = {
+      ...record, type: "resize-decoration", anchor: handle.id, outline,
+      initialOffset: decorationOffset(start, outline), base: model.decorationPosition(chapter.id, handle.id),
+    };
+    canvas.dataset.cursor = "resize-decoration";
+  } else if (hit && decorationMode) {
     selectedDecoration = hit.id;
     action = {
       ...record, type: "move-decoration", anchor: hit.id,
@@ -913,7 +1010,9 @@ function pointerMove(event) {
   const p = screenToWorld(camera, at);
   byId("cursor-coords").textContent = `X ${round(p.x, 2)}  Y ${round(p.y, 2)}`;
   if (!action || action.pointer !== event.pointerId) {
-    canvas.dataset.cursor = !space && (decorationMode ? pickDecoration(at) : pick(at)) ? "node" : "";
+    canvas.dataset.cursor = "";
+    if (!space && decorationMode && pickResizeHandle(at)) canvas.dataset.cursor = "resize-decoration";
+    else if (!space && (decorationMode ? pickDecoration(at) : pick(at))) canvas.dataset.cursor = "node";
     return;
   }
   const deltaX = at.x - action.start.x;
@@ -923,6 +1022,22 @@ function pointerMove(event) {
   if (action.type === "pan") {
     camera.x = action.camera.x + deltaX;
     camera.y = action.camera.y + deltaY;
+  } else if (action.type === "resize-decoration") {
+    const { anchor, base, outline, initialOffset } = action;
+    const offset = decorationOffset(at, outline);
+    const dw = (offset.x - initialOffset.x) * 2 / action.camera.scale;
+    const dh = (offset.y - initialOffset.y) * 2 / action.camera.scale;
+    const minimumWidth = Math.min(base.width, .01);
+    const minimumHeight = Math.min(base.height, .01);
+    let next;
+    if (lockDecorationAspect) {
+      const diagonal = Math.hypot(base.width, base.height);
+      const change = (dw * (base.width / diagonal) + dh * (base.height / diagonal)) / diagonal;
+      next = scaleDecoration(base, Math.max(minimumWidth / base.width, minimumHeight / base.height, 1 + change));
+    } else {
+      next = { ...base, width: Math.max(minimumWidth, base.width + dw), height: Math.max(minimumHeight, base.height + dh) };
+    }
+    if (Number.isFinite(next.width) && Number.isFinite(next.height)) pending = new Map([[anchor, next]]);
   } else if (action.type === "move" || action.type === "move-decoration") {
     const anchor = action.positions.get(action.anchor);
     let dx = deltaX / camera.scale;
@@ -955,6 +1070,7 @@ function pointerFinish(event, canceled = false) {
   if (!canceled) {
     if (current.type === "move") changePositions(updates, "Drag quest layout");
     if (current.type === "move-decoration") changeDecorations(updates, "Move decoration");
+    if (current.type === "resize-decoration") changeDecorations(updates, "Resize decoration");
     if (current.type === "pan" && !current.moved && !current.preserve) {
       selected.clear();
       selectedDecoration = undefined;
@@ -1091,8 +1207,8 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=quest-theme-v5", { cache: "no-cache" }),
-      fetch("./item-icons.json?v=starcatcher-spine-v1")
+      fetch("./quest_data.json.gz?v=quest-update-v1", { cache: "no-cache" }),
+      fetch("./item-icons.json?v=quest-update-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
     ]);
