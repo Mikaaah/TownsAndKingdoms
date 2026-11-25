@@ -98,6 +98,12 @@ button.icon-button { display: inline-grid; place-items: center; padding: 0; widt
 .node-subtitle { color: #ccb4db; margin: 3px 0 7px; font-size: .82rem; }
 .node-id { color: #a89ab6; font: .7rem ui-monospace, monospace; word-break: break-all; }
 .node-description { color: #d2c5df; line-height: 1.5; font-size: .84rem; white-space: pre-line; overflow-wrap: anywhere; margin: 13px 0; }
+.quest-copy { border-block: 1px solid var(--copy-accent, #c2a1ff); padding-block: .65rem; color: #eee; }
+.quest-copy p { margin: 0; }
+.quest-copy p + p { margin-top: .6rem; }
+.quest-copy-request { font-style: italic; }
+.quest-copy-accent, .quest-copy-subtitle { color: var(--copy-accent, #c2a1ff); }
+.quest-copy-subtitle { font-style: italic; text-decoration: underline; }
 .inspector h4 { font-size: .76rem; letter-spacing: .07em; color: #d0b6e8; text-transform: uppercase; margin: 17px 0 6px; }
 .detail-list { font-size: .82rem; line-height: 1.4; color: #cabbd7; list-style: none; padding: 0; margin: 0; }
 .detail-list li { border-top: 1px solid #342944; padding: 6px 0; overflow-wrap: anywhere; }

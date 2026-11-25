@@ -842,6 +842,20 @@ function toolsForSelection(section) {
   section.append(tools);
 }
 
+function questCopy(quest) {
+  const copy = el("div", undefined, "node-description quest-copy");
+  if (colorPattern.test(quest.copyAccent)) copy.style.setProperty("--copy-accent", quest.copyAccent);
+  for (const { label, parts } of quest.descriptionSections) {
+    const paragraph = el("p", undefined, label ? "quest-copy-section" : "quest-copy-request");
+    if (label) paragraph.append(el("strong", `${label}: `, "quest-copy-accent"));
+    for (const part of parts) {
+      paragraph.append(part.accent ? el("span", part.text, "quest-copy-accent") : document.createTextNode(part.text));
+    }
+    copy.append(paragraph);
+  }
+  return copy;
+}
+
 function renderInspector() {
   const section = byId("quest-detail");
   section.replaceChildren();
@@ -882,13 +896,21 @@ function renderInspector() {
     const shared = uses > 1 ? ` · Used by ${uses} quests here` : "";
     section.append(el("div", quest.icon + shared, "icon-reference"));
   }
-  if (quest.subtitle) section.append(el("p", quest.subtitle, "node-subtitle"));
+  if (quest.subtitle) {
+    const subtitle = el("p", quest.subtitle, "node-subtitle");
+    if (quest.descriptionSections && colorPattern.test(quest.copyAccent)) {
+      subtitle.classList.add("quest-copy-subtitle");
+      subtitle.style.setProperty("--copy-accent", quest.copyAccent);
+    }
+    section.append(subtitle);
+  }
   section.append(el("div", quest.id, "node-id"));
   if (theme) {
     const role = theme.milestoneRoles[quest.id];
     section.append(el("div", role ? `${quest.shape} · ${role}` : quest.shape, "node-id quest-shape"));
   }
-  if (quest.description) section.append(el("p", quest.description, "node-description"));
+  if (quest.descriptionSections) section.append(questCopy(quest));
+  else if (quest.description) section.append(el("p", quest.description, "node-description"));
   section.append(el("h4", "Position"));
   const coords = el("div", undefined, "position-fields");
   const at = model.position(chapter.id, quest.id);
@@ -1235,7 +1257,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=tnk-chapter-announcements-v2", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=tnk-quest-copy-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=golden-collection-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
