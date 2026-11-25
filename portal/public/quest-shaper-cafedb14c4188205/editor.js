@@ -546,7 +546,13 @@ function renderChapters() {
       const button = el("button", undefined, "chapter-button");
       button.type = "button";
       button.style.setProperty("--chapter-accent", tint(entry));
-      button.append(el("span", undefined, "chapter-marker"), el("span", shortTitle(entry.title)), el("small", entry.quests.length));
+      const marker = entry.iconSrc ? loadImage(entry.iconSrc).cloneNode() : el("span", undefined, "chapter-marker");
+      if (entry.iconSrc) {
+        marker.className = "chapter-tab-icon";
+        marker.alt = "";
+        button.classList.add("has-tab-icon");
+      }
+      button.append(marker, el("span", shortTitle(entry.title)), el("small", entry.quests.length));
       button.addEventListener("click", () => selectChapter(entry));
       chapterButtons.set(entry.id, button);
       box.append(button);
@@ -1210,7 +1216,7 @@ function bindEditor() {
 async function start() {
   try {
     const [response, icons] = await Promise.all([
-      fetch("./quest_data.json.gz?v=trophy-mounts-v1", { cache: "no-cache" }),
+      fetch("./quest_data.json.gz?v=trophy-board-v1", { cache: "no-cache" }),
       fetch("./item-icons.json?v=golden-collection-v1")
         .then((r) => r.ok ? r.json() : {})
         .catch(() => ({})),
