@@ -1281,7 +1281,7 @@
         "name": "Apprentice",
         "description": "complete Chapter I | Getting Started.",
         "requirements": [],
-        "colour": "#DADADA",
+        "colour": "#006497",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1302,7 +1302,7 @@
         "name": "Technician",
         "description": "complete Chapter II | Andesite (Kinetic).",
         "requirements": [],
-        "colour": "#DD873A",
+        "colour": "#A6432A",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1323,7 +1323,7 @@
         "name": "Engineer",
         "description": "complete Chapter III | Copper (Sealed).",
         "requirements": [],
-        "colour": "#EDC74B",
+        "colour": "#9E4D07",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1344,7 +1344,7 @@
         "name": "Specialist",
         "description": "complete Chapter IV | Brass (Precision).",
         "requirements": [],
-        "colour": "#51D975",
+        "colour": "#08793D",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1365,7 +1365,7 @@
         "name": "Expert",
         "description": "complete Chapter V | AE2 (Calculation).",
         "requirements": [],
-        "colour": "#50C5BE",
+        "colour": "#007783",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1386,7 +1386,7 @@
         "name": "Master",
         "description": "complete Chapter VI | Light Engineering (Steel).",
         "requirements": [],
-        "colour": "#4BD6ED",
+        "colour": "#006497",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1407,7 +1407,7 @@
         "name": "Grandmaster",
         "description": "complete Chapter VII | Heavy Engineering (Aluminium & Oil).",
         "requirements": [],
-        "colour": "#6489FF",
+        "colour": "#174CC4",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1428,7 +1428,7 @@
         "name": "Champion",
         "description": "complete Chapter VIII | Magic & Mana.",
         "requirements": [],
-        "colour": "#C58BF5",
+        "colour": "#8732B5",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1449,7 +1449,7 @@
         "name": "Legend",
         "description": "complete Chapter IX | Radiant & Shadow.",
         "requirements": [],
-        "colour": "#EF5D8C",
+        "colour": "#B31539",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1470,7 +1470,7 @@
         "name": "Monarch",
         "description": "Complete Beyond the Forge after Chapter X.",
         "requirements": [],
-        "colour": "#F3EADA",
+        "colour": "#6524AD",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1493,7 +1493,7 @@
         "requirements": [
           "Spend 10 skill points"
         ],
-        "colour": "#DADADA",
+        "colour": "#00765F",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1516,7 +1516,7 @@
         "requirements": [
           "Spend 25 skill points"
         ],
-        "colour": "#DD873A",
+        "colour": "#A6432A",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1539,7 +1539,7 @@
         "requirements": [
           "Spend 50 skill points"
         ],
-        "colour": "#C58BF5",
+        "colour": "#760E7E",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1562,7 +1562,7 @@
         "requirements": [
           "Spend 100 skill points"
         ],
-        "colour": "#F3EADA",
+        "colour": "#AD167D",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1585,7 +1585,7 @@
         "requirements": [
           "Hunter Subclass 1 Mastery"
         ],
-        "colour": "#4BD6ED",
+        "colour": "#086BC2",
         "perks": [
           {
             "attribute": "minecraft:generic.movement_speed",
@@ -1608,7 +1608,7 @@
         "requirements": [
           "Miner Mastery"
         ],
-        "colour": "#DD873A",
+        "colour": "#A6432A",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1625,7 +1625,7 @@
         "requirements": [
           "Cook Mastery"
         ],
-        "colour": "#51D975",
+        "colour": "#487719",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1648,7 +1648,7 @@
         "requirements": [
           "Blacksmith Mastery"
         ],
-        "colour": "#EDC74B",
+        "colour": "#B74600",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1671,7 +1671,7 @@
         "requirements": [
           "Blacksmith Defensive Keystone 1"
         ],
-        "colour": "#F3EADA",
+        "colour": "#2F236F",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1694,7 +1694,7 @@
         "requirements": [
           "Hunter Mastery"
         ],
-        "colour": "#EF5D8C",
+        "colour": "#B62F16",
         "perks": [
           {
             "attribute": "minecraft:generic.attack_damage",
@@ -1715,7 +1715,7 @@
         "name": "Recruit",
         "description": "complete the Adventure milestone for your first project-board assignment.",
         "requirements": [],
-        "colour": "#DADADA",
+        "colour": "#667200",
         "perks": [
           {
             "attribute": "minecraft:generic.movement_speed",
@@ -1736,7 +1736,7 @@
         "name": "Citizen",
         "description": "complete the Adventure milestone for three project-board assignments.",
         "requirements": [],
-        "colour": "#51D975",
+        "colour": "#08793D",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1757,7 +1757,7 @@
         "name": "Taskmaster",
         "description": "complete the Adventure milestone for all seven project-board assignments.",
         "requirements": [],
-        "colour": "#EDC74B",
+        "colour": "#9E4D07",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1778,7 +1778,7 @@
         "name": "Survivor",
         "description": "complete the Adventure preparation quest for a Backpack, Hopper Upgrade and Pickup Upgrade.",
         "requirements": [],
-        "colour": "#DD873A",
+        "colour": "#A6432A",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1799,7 +1799,7 @@
         "name": "Planner",
         "description": "complete the Adventure storage and transport milestone.",
         "requirements": [],
-        "colour": "#50C5BE",
+        "colour": "#007783",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1820,7 +1820,7 @@
         "name": "Architect",
         "description": "complete the Adventure building milestone.",
         "requirements": [],
-        "colour": "#EDC74B",
+        "colour": "#B74600",
         "perks": [
           {
             "attribute": "minecraft:player.block_break_speed",
@@ -1835,7 +1835,7 @@
         "name": "Arcane",
         "description": "complete the Iron's Spells questline in Magic & Mana.",
         "requirements": [],
-        "colour": "#C58BF5",
+        "colour": "#A524A3",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1856,7 +1856,7 @@
         "name": "Mystic",
         "description": "complete the Ars Nouveau questline in Magic & Mana.",
         "requirements": [],
-        "colour": "#50C5BE",
+        "colour": "#00765F",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1877,7 +1877,7 @@
         "name": "Oracle",
         "description": "complete the Witchery questline in Magic & Mana.",
         "requirements": [],
-        "colour": "#AA8DDD",
+        "colour": "#760E7E",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -1898,7 +1898,7 @@
         "name": "Slayer",
         "description": "complete Adventure > Defeat Ender Dragon.",
         "requirements": [],
-        "colour": "#C17AFF",
+        "colour": "#6524AD",
         "perks": [
           {
             "attribute": "minecraft:generic.attack_damage",
@@ -1919,7 +1919,7 @@
         "name": "Vanquisher",
         "description": "complete Adventure > Defeat Wither.",
         "requirements": [],
-        "colour": "#F3EADA",
+        "colour": "#4736B4",
         "perks": [
           {
             "attribute": "minecraft:generic.attack_damage",
@@ -1940,7 +1940,7 @@
         "name": "Inferno",
         "description": "complete Adventure > Defeat Ignis.",
         "requirements": [],
-        "colour": "#EF5D8C",
+        "colour": "#B62F16",
         "perks": [
           {
             "attribute": "minecraft:generic.armor",
@@ -1961,7 +1961,7 @@
         "name": "Conqueror",
         "description": "complete Adventure > Defeat Harbinger.",
         "requirements": [],
-        "colour": "#EF5D8C",
+        "colour": "#B31539",
         "perks": [
           {
             "attribute": "minecraft:generic.attack_damage",
@@ -1982,7 +1982,7 @@
         "name": "Tidal",
         "description": "complete Adventure > Defeat Leviathan.",
         "requirements": [],
-        "colour": "#50C5BE",
+        "colour": "#007783",
         "perks": [
           {
             "attribute": "minecraft:generic.max_health",
@@ -2003,7 +2003,7 @@
         "name": "Titanium",
         "description": "complete Adventure > Defeat Netherite Monstrosity.",
         "requirements": [],
-        "colour": "#DADADA",
+        "colour": "#174CC4",
         "perks": [
           {
             "attribute": "minecraft:generic.armor",
@@ -2024,7 +2024,7 @@
         "name": "Ancient",
         "description": "complete Adventure > Defeat Ancient Remnant.",
         "requirements": [],
-        "colour": "#EDC74B",
+        "colour": "#9E4D07",
         "perks": [
           {
             "attribute": "minecraft:generic.armor",
@@ -2045,7 +2045,7 @@
         "name": "Hunter",
         "description": "complete Adventure > Defeat Naga.",
         "requirements": [],
-        "colour": "#51D975",
+        "colour": "#487719",
         "perks": [
           {
             "attribute": "minecraft:generic.attack_damage",
@@ -2066,7 +2066,7 @@
         "name": "Phantom",
         "description": "complete Adventure > Defeat Twilight Lich.",
         "requirements": [],
-        "colour": "#C58BF5",
+        "colour": "#8732B5",
         "perks": [
           {
             "attribute": "minecraft:generic.movement_speed",
@@ -2087,7 +2087,7 @@
         "name": "Sentinel",
         "description": "complete Adventure > Defeat Ender Guardian.",
         "requirements": [],
-        "colour": "#C17AFF",
+        "colour": "#6524AD",
         "perks": [
           {
             "attribute": "minecraft:generic.armor",
@@ -2108,7 +2108,7 @@
         "name": "Founder",
         "description": "Staff award: participation in the Towns & Kingdoms 3 beta. Assigned by pack staff.",
         "requirements": [],
-        "colour": "#B896D6",
+        "colour": "#A524A3",
         "perks": [
           {
             "attribute": "minecraft:generic.movement_speed",
@@ -2129,7 +2129,7 @@
         "name": "Owner",
         "description": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
         "requirements": [],
-        "colour": "#7DABF2",
+        "colour": "#A85571",
         "perks": []
       },
       {
@@ -2137,7 +2137,7 @@
         "name": "Admin",
         "description": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
         "requirements": [],
-        "colour": "#EF5D8C",
+        "colour": "#B31539",
         "perks": []
       },
       {
@@ -2145,231 +2145,589 @@
         "name": "Dreadbane",
         "description": "Complete Boss Ledger in Completionist.",
         "requirements": [],
-        "colour": "#EF5D8C",
-        "perks": []
+        "colour": "#B31539",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.06,
+            "operation": "multiply_base",
+            "description": "+6% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          }
+        ]
       },
       {
         "id": "tnk:completionist_master_of_trades",
         "name": "Master of Trades",
         "description": "Complete Master of Trades in Completionist.",
         "requirements": [],
-        "colour": "#DD873A",
-        "perks": []
+        "colour": "#A6432A",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.07,
+            "operation": "multiply_base",
+            "description": "+7% mining speed"
+          },
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.35,
+            "operation": "add",
+            "description": "+0.35 block reach"
+          }
+        ]
       },
       {
         "id": "tnk:completionist_town_and_trails",
         "name": "Roadwarden",
         "description": "Complete Town & Trails in Completionist.",
         "requirements": [],
-        "colour": "#51D975",
-        "perks": []
+        "colour": "#005845",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.06,
+            "operation": "multiply_base",
+            "description": "+6% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 safe fall distance"
+          }
+        ]
       },
       {
         "id": "tnk:completionist_mod_questlines",
         "name": "Polymath",
         "description": "Complete All Mod Questlines in Completionist.",
         "requirements": [],
-        "colour": "#50C5BE",
-        "perks": []
+        "colour": "#006497",
+        "perks": [
+          {
+            "attribute": "irons_spellbooks:spell_power",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% spell power (Iron’s Spells)"
+          },
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% mining speed"
+          }
+        ]
       },
       {
         "id": "tnk:completionist_unlocking_the_end",
         "name": "Eye Collector",
         "description": "Complete Unlocking the End in Completionist.",
         "requirements": [],
-        "colour": "#C58BF5",
-        "perks": []
+        "colour": "#8732B5",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.35,
+            "operation": "add",
+            "description": "+0.35 block reach"
+          },
+          {
+            "attribute": "minecraft:generic.luck",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 luck"
+          }
+        ]
       },
       {
         "id": "tnk:completionist_trophy_forged",
         "name": "Trophyforger",
         "description": "Complete Forge the Trophy in Completionist.",
         "requirements": [],
-        "colour": "#EDC74B",
-        "perks": []
+        "colour": "#9E4D07",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.09,
+            "operation": "multiply_base",
+            "description": "+9% mining speed"
+          },
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.5,
+            "operation": "add",
+            "description": "+0.5 block reach"
+          }
+        ]
       },
       {
         "id": "tnk:completionist_pack_completed",
         "name": "Grand Completionist",
         "description": "Complete Pack Completed in Completionist.",
         "requirements": [],
-        "colour": "#F3EADA",
-        "perks": []
+        "colour": "#AD167D",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.1,
+            "operation": "multiply_base",
+            "description": "+10% mining speed"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 4,
+            "operation": "add",
+            "description": "+4 max health"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_exploration",
         "name": "Trailblazer",
         "description": "Complete the Exploration questline.",
         "requirements": [],
-        "colour": "#51D975",
-        "perks": []
+        "colour": "#487719",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 safe fall distance"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_useful_items",
         "name": "Quartermaster",
         "description": "Complete the Useful Items questline.",
         "requirements": [],
-        "colour": "#DADADA",
-        "perks": []
+        "colour": "#087C9E",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.3,
+            "operation": "add",
+            "description": "+0.3 block reach"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 max health"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_everyday_life",
         "name": "Hearthkeeper",
         "description": "Complete the Everyday Life questline.",
         "requirements": [],
-        "colour": "#DD873A",
-        "perks": []
+        "colour": "#9A1856",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 max health"
+          },
+          {
+            "attribute": "minecraft:generic.luck",
+            "amount": 0.5,
+            "operation": "add",
+            "description": "+0.5 luck"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_market",
         "name": "Guild Merchant",
         "description": "Complete the Market questline.",
         "requirements": [],
-        "colour": "#EDC74B",
-        "perks": []
+        "colour": "#B74600",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.luck",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 luck"
+          },
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% movement speed"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_starfishing",
         "name": "Stargazer",
         "description": "Complete Starcatcher Log Complete in the Starcatcher questline.",
         "requirements": [],
-        "colour": "#6489FF",
-        "perks": []
+        "colour": "#2F236F",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.oxygen_bonus",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 oxygen bonus"
+          },
+          {
+            "attribute": "minecraft:generic.luck",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 luck"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_thaumaturge",
         "name": "Thaumaturge",
         "description": "Complete the Thaumaturge questline.",
         "requirements": [],
-        "colour": "#C58BF5",
-        "perks": []
+        "colour": "#A524A3",
+        "perks": [
+          {
+            "attribute": "puffish_attributes:magic_damage",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% tagged magic damage"
+          },
+          {
+            "attribute": "irons_spellbooks:max_mana",
+            "amount": 8,
+            "operation": "add",
+            "description": "+8 max mana (Iron’s Spells)"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_aeronautics",
         "name": "Sky Captain",
         "description": "Complete Cleared for Flight in the Aeronautics questline.",
         "requirements": [],
-        "colour": "#4BD6ED",
-        "perks": []
+        "colour": "#086BC2",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 safe fall distance"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_createive",
         "name": "Machinist",
         "description": "Complete A Workshop of Your Own in Getting Create’ive.",
         "requirements": [],
-        "colour": "#EDC74B",
-        "perks": []
+        "colour": "#9E4D07",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.08,
+            "operation": "multiply_base",
+            "description": "+8% mining speed"
+          },
+          {
+            "attribute": "minecraft:player.block_interaction_range",
+            "amount": 0.25,
+            "operation": "add",
+            "description": "+0.25 block reach"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_first_winter",
         "name": "Winterbound",
         "description": "Complete The Midwinter Gathering in The First Winter.",
         "requirements": [],
-        "colour": "#4BD6ED",
-        "perks": []
+        "colour": "#087C9E",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 max health"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "+5% knockback resistance"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_bosses",
         "name": "Boss Hunter",
         "description": "Complete the Bosses questline.",
         "requirements": [],
-        "colour": "#EF5D8C",
-        "perks": []
+        "colour": "#B62F16",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.attack_speed",
+            "amount": 0.02,
+            "operation": "multiply_base",
+            "description": "+2% attack speed"
+          }
+        ]
       },
       {
         "id": "tnk:chapter_tutorial",
         "name": "Forgehand",
         "description": "Complete the Tutorial questline.",
         "requirements": [],
-        "colour": "#DADADA",
-        "perks": []
+        "colour": "#272EC4",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% mining speed"
+          }
+        ]
       },
       {
         "id": "tnk:boss_snow_queen",
         "name": "Frostbreaker",
         "description": "Complete the Snow Queen defeat quest.",
         "requirements": [],
-        "colour": "#4BD6ED",
-        "perks": []
+        "colour": "#087C9E",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          },
+          {
+            "attribute": "minecraft:generic.armor_toughness",
+            "amount": 0.5,
+            "operation": "add",
+            "description": "+0.5 armor toughness"
+          }
+        ]
       },
       {
         "id": "tnk:boss_valkyrie_queen",
         "name": "Skybreaker",
         "description": "Complete the Valkyrie Queen defeat quest.",
         "requirements": [],
-        "colour": "#F3EADA",
-        "perks": []
+        "colour": "#4736B4",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 safe fall distance"
+          }
+        ]
       },
       {
         "id": "tnk:boss_maledictus",
         "name": "Cursebane",
         "description": "Complete the Maledictus defeat quest.",
         "requirements": [],
-        "colour": "#C58BF5",
-        "perks": []
+        "colour": "#760E7E",
+        "perks": [
+          {
+            "attribute": "puffish_attributes:magic_damage",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% tagged magic damage"
+          },
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 max health"
+          }
+        ]
       },
       {
         "id": "tnk:boss_wilden_chimera",
         "name": "Wildbane",
         "description": "Complete the Wilden Chimera defeat quest.",
         "requirements": [],
-        "colour": "#51D975",
-        "perks": []
+        "colour": "#08793D",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.03,
+            "operation": "multiply_base",
+            "description": "+3% movement speed"
+          }
+        ]
       },
       {
         "id": "tnk:boss_ferrous_wroughtnaut",
         "name": "Ironbreaker",
         "description": "Complete the Ferrous Wroughtnaut defeat quest.",
         "requirements": [],
-        "colour": "#DADADA",
-        "perks": []
+        "colour": "#006497",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.06,
+            "operation": "multiply_base",
+            "description": "+6% mining speed"
+          },
+          {
+            "attribute": "minecraft:generic.armor_toughness",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 armor toughness"
+          }
+        ]
       },
       {
         "id": "tnk:boss_last_of_deepslate",
         "name": "Deepslate Warden",
         "description": "Complete the Last of Deepslate defeat quest.",
         "requirements": [],
-        "colour": "#C58BF5",
-        "perks": []
+        "colour": "#6524AD",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.06,
+            "operation": "multiply_base",
+            "description": "+6% mining speed"
+          },
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 3,
+            "operation": "add",
+            "description": "+3 armor"
+          }
+        ]
       },
       {
         "id": "tnk:boss_possessed_paladin",
         "name": "Oathkeeper",
         "description": "Complete the Possessed Paladin defeat quest.",
         "requirements": [],
-        "colour": "#EDC74B",
-        "perks": []
+        "colour": "#9E4D07",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.max_health",
+            "amount": 3,
+            "operation": "add",
+            "description": "+3 max health"
+          },
+          {
+            "attribute": "minecraft:generic.armor",
+            "amount": 2,
+            "operation": "add",
+            "description": "+2 armor"
+          }
+        ]
       },
       {
         "id": "tnk:boss_sirok",
         "name": "Dunebane",
         "description": "Complete the Sirok the Sandworm defeat quest.",
         "requirements": [],
-        "colour": "#DD873A",
-        "perks": []
+        "colour": "#B74600",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.movement_speed",
+            "amount": 0.05,
+            "operation": "multiply_base",
+            "description": "+5% movement speed"
+          },
+          {
+            "attribute": "minecraft:generic.safe_fall_distance",
+            "amount": 1,
+            "operation": "add",
+            "description": "+1 safe fall distance"
+          }
+        ]
       },
       {
         "id": "tnk:boss_helvar",
         "name": "Bastionbreaker",
         "description": "Complete the Helvar defeat quest.",
         "requirements": [],
-        "colour": "#EF5D8C",
-        "perks": []
+        "colour": "#9A1856",
+        "perks": [
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.06,
+            "operation": "multiply_base",
+            "description": "+6% attack damage"
+          },
+          {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "amount": 0.05,
+            "operation": "add",
+            "description": "+5% knockback resistance"
+          }
+        ]
       },
       {
         "id": "tnk:boss_overgrown_colossus",
         "name": "Rootbreaker",
         "description": "Complete the Overgrown Colossus defeat quest.",
         "requirements": [],
-        "colour": "#51D975",
-        "perks": []
+        "colour": "#667200",
+        "perks": [
+          {
+            "attribute": "minecraft:player.block_break_speed",
+            "amount": 0.07,
+            "operation": "multiply_base",
+            "description": "+7% mining speed"
+          },
+          {
+            "attribute": "minecraft:generic.attack_damage",
+            "amount": 0.04,
+            "operation": "multiply_base",
+            "description": "+4% attack damage"
+          }
+        ]
       },
       {
         "id": "tnk:eternal_sovereign",
         "name": "Eternal Sovereign",
         "description": "Reach character level 105.",
         "requirements": [],
-        "colour": "#E0AAF8",
+        "colour": "#F6AD32",
         "perks": [
           {
             "description": "+20% mining speed"
@@ -2388,7 +2746,7 @@
       {
         "title": "Two independent slots",
         "body": [
-          "The cosmetic slot chooses the title shown beside your character. The passive slot chooses the unlocked title whose bonuses apply.",
+          "The cosmetic slot chooses the title shown beside your character. Equip an unlocked title in the passive slot to use its gameplay bonuses, including bonuses earned from questlines, bosses and Completionist.",
           "Only one passive chosen in the title menu applies at a time. Permanent milestone benefits such as Eternal Sovereign apply alongside it.",
           "Changing the active passive has a 30-second cooldown. You can leave the passive slot empty. Maximum-health changes do not heal you."
         ]
@@ -2406,7 +2764,7 @@
         "id": "eternal-sovereign",
         "title": "Eternal Sovereign",
         "body": [
-          "Reach level 105 to unlock Eternal Sovereign and its gold-to-purple badge. If you have already reached level 105, the title and its benefits are applied when you log in.",
+          "Reach level 105 to unlock Eternal Sovereign and its amber-to-purple badge. If you have already reached level 105, the title and its benefits are applied when you log in.",
           "You permanently gain 20% mining speed, take 20% less damage from damage types affected by Resistance, and gain 20% maximum mana with Iron’s Spells or Ars Nouveau. These benefits apply with any cosmetic or passive title equipped."
         ]
       },
@@ -2627,142 +2985,142 @@
           {
             "Title": "Dreadbane",
             "How to earn it": "Complete Boss Ledger in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+6% attack damage · +2 armor"
           },
           {
             "Title": "Master of Trades",
             "How to earn it": "Complete Master of Trades in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+7% mining speed · +0.35 block reach"
           },
           {
             "Title": "Roadwarden",
             "How to earn it": "Complete Town & Trails in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+6% movement speed · +2 safe fall distance"
           },
           {
             "Title": "Polymath",
             "How to earn it": "Complete All Mod Questlines in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+5% spell power (Iron’s Spells) · +5% mining speed"
           },
           {
             "Title": "Eye Collector",
             "How to earn it": "Complete Unlocking the End in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+0.35 block reach · +1 luck"
           },
           {
             "Title": "Trophyforger",
             "How to earn it": "Complete Forge the Trophy in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+9% mining speed · +0.5 block reach"
           },
           {
             "Title": "Grand Completionist",
             "How to earn it": "Complete Pack Completed in Completionist.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+10% mining speed · +4 max health"
           },
           {
             "Title": "Trailblazer",
             "How to earn it": "Complete the Exploration questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+4% movement speed · +1 safe fall distance"
           },
           {
             "Title": "Quartermaster",
             "How to earn it": "Complete the Useful Items questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+0.3 block reach · +1 max health"
           },
           {
             "Title": "Hearthkeeper",
             "How to earn it": "Complete the Everyday Life questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+2 max health · +0.5 luck"
           },
           {
             "Title": "Guild Merchant",
             "How to earn it": "Complete the Market questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+1 luck · +3% movement speed"
           },
           {
             "Title": "Stargazer",
             "How to earn it": "Complete Starcatcher Log Complete in the Starcatcher questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+1 oxygen bonus · +1 luck"
           },
           {
             "Title": "Thaumaturge",
             "How to earn it": "Complete the Thaumaturge questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+5% tagged magic damage · +8 max mana (Iron’s Spells)"
           },
           {
             "Title": "Sky Captain",
             "How to earn it": "Complete Cleared for Flight in the Aeronautics questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+3% movement speed · +2 safe fall distance"
           },
           {
             "Title": "Machinist",
             "How to earn it": "Complete A Workshop of Your Own in Getting Create’ive.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+8% mining speed · +0.25 block reach"
           },
           {
             "Title": "Winterbound",
             "How to earn it": "Complete The Midwinter Gathering in The First Winter.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+2 max health · +5% knockback resistance"
           },
           {
             "Title": "Boss Hunter",
             "How to earn it": "Complete the Bosses questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+5% attack damage · +2% attack speed"
           },
           {
             "Title": "Forgehand",
             "How to earn it": "Complete the Tutorial questline.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+3% mining speed"
           },
           {
             "Title": "Frostbreaker",
             "How to earn it": "Complete the Snow Queen defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+2 armor · +0.5 armor toughness"
           },
           {
             "Title": "Skybreaker",
             "How to earn it": "Complete the Valkyrie Queen defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+4% movement speed · +2 safe fall distance"
           },
           {
             "Title": "Cursebane",
             "How to earn it": "Complete the Maledictus defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+5% tagged magic damage · +2 max health"
           },
           {
             "Title": "Wildbane",
             "How to earn it": "Complete the Wilden Chimera defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+4% attack damage · +3% movement speed"
           },
           {
             "Title": "Ironbreaker",
             "How to earn it": "Complete the Ferrous Wroughtnaut defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+6% mining speed · +1 armor toughness"
           },
           {
             "Title": "Deepslate Warden",
             "How to earn it": "Complete the Last of Deepslate defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+6% mining speed · +3 armor"
           },
           {
             "Title": "Oathkeeper",
             "How to earn it": "Complete the Possessed Paladin defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+3 max health · +2 armor"
           },
           {
             "Title": "Dunebane",
             "How to earn it": "Complete the Sirok the Sandworm defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+5% movement speed · +1 safe fall distance"
           },
           {
             "Title": "Bastionbreaker",
             "How to earn it": "Complete the Helvar defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+6% attack damage · +5% knockback resistance"
           },
           {
             "Title": "Rootbreaker",
             "How to earn it": "Complete the Overgrown Colossus defeat quest.",
-            "Passive bonuses": "Cosmetic only"
+            "Passive bonuses": "+7% mining speed · +4% attack damage"
           },
           {
             "Title": "Eternal Sovereign",

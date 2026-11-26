@@ -35,43 +35,43 @@
       "offset": 84
     },
     "tnk:boss_ferrous_wroughtnaut": {
-      "width": 73,
+      "width": 85,
       "offset": 96
     },
     "tnk:boss_helvar": {
-      "width": 91,
+      "width": 106,
       "offset": 108
     },
     "tnk:boss_last_of_deepslate": {
-      "width": 103,
+      "width": 121,
       "offset": 120
     },
     "tnk:boss_maledictus": {
-      "width": 63,
+      "width": 75,
       "offset": 132
     },
     "tnk:boss_overgrown_colossus": {
-      "width": 75,
+      "width": 88,
       "offset": 144
     },
     "tnk:boss_possessed_paladin": {
-      "width": 69,
+      "width": 81,
       "offset": 156
     },
     "tnk:boss_sirok": {
-      "width": 57,
+      "width": 69,
       "offset": 168
     },
     "tnk:boss_snow_queen": {
-      "width": 81,
+      "width": 95,
       "offset": 180
     },
     "tnk:boss_valkyrie_queen": {
-      "width": 69,
+      "width": 81,
       "offset": 192
     },
     "tnk:boss_wilden_chimera": {
-      "width": 55,
+      "width": 65,
       "offset": 204
     },
     "tnk:champion": {
@@ -79,75 +79,75 @@
       "offset": 216
     },
     "tnk:chapter_aeronautics": {
-      "width": 71,
+      "width": 81,
       "offset": 228
     },
     "tnk:chapter_bosses": {
-      "width": 73,
+      "width": 85,
       "offset": 240
     },
     "tnk:chapter_createive": {
-      "width": 59,
+      "width": 68,
       "offset": 252
     },
     "tnk:chapter_everyday_life": {
-      "width": 81,
+      "width": 95,
       "offset": 264
     },
     "tnk:chapter_exploration": {
-      "width": 73,
+      "width": 84,
       "offset": 276
     },
     "tnk:chapter_first_winter": {
-      "width": 73,
+      "width": 87,
       "offset": 288
     },
     "tnk:chapter_market": {
-      "width": 89,
+      "width": 103,
       "offset": 300
     },
     "tnk:chapter_starfishing": {
-      "width": 63,
+      "width": 74,
       "offset": 312
     },
     "tnk:chapter_thaumaturge": {
-      "width": 75,
+      "width": 89,
       "offset": 324
     },
     "tnk:chapter_tutorial": {
-      "width": 63,
+      "width": 75,
       "offset": 336
     },
     "tnk:chapter_useful_items": {
-      "width": 87,
+      "width": 103,
       "offset": 348
     },
     "tnk:completionist_boss_ledger": {
-      "width": 67,
+      "width": 75,
       "offset": 360
     },
     "tnk:completionist_master_of_trades": {
-      "width": 105,
+      "width": 116,
       "offset": 372
     },
     "tnk:completionist_mod_questlines": {
-      "width": 61,
+      "width": 68,
       "offset": 384
     },
     "tnk:completionist_pack_completed": {
-      "width": 121,
+      "width": 135,
       "offset": 396
     },
     "tnk:completionist_town_and_trails": {
-      "width": 73,
+      "width": 83,
       "offset": 408
     },
     "tnk:completionist_trophy_forged": {
-      "width": 85,
+      "width": 95,
       "offset": 420
     },
     "tnk:completionist_unlocking_the_end": {
-      "width": 89,
+      "width": 98,
       "offset": 432
     },
     "tnk:disciplined": {
@@ -163,7 +163,7 @@
       "offset": 468
     },
     "tnk:eternal_sovereign": {
-      "width": 115,
+      "width": 124,
       "offset": 480
     },
     "tnk:expert": {
