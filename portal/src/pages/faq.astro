@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { href } from '../lib/data';
-import pack from '../data/pack-version.json';
 
 const topics = [
   {
@@ -11,7 +10,7 @@ const topics = [
       {
         id: 'installation',
         question: 'Which version do I install?',
-        answer: 'Search for Towns & Kingdoms in the CurseForge app’s modpack browser and select your Beyond the Forge build if it’s listed, or import the pack ZIP as a new profile. The project also hosts TK2 files, so check the edition. For multiplayer, use the exact pack build announced by your server.',
+        answer: 'Search for Towns & Kingdoms in the CurseForge app’s modpack browser and install the Beyond the Forge release, or import the release ZIP as a new profile. The project also hosts TK2 files, so check the edition. For multiplayer, use the exact pack build announced by your server.',
       },
       {
         id: 'first-world',
@@ -22,7 +21,7 @@ const topics = [
       {
         id: 'java',
         question: 'Which Java should my launcher use?',
-        answer: `Start with the runtime your launcher selects for the pack profile. The ${pack.version} client export lists Java ${pack.javaVersion}. For a dedicated server, use the runtime specified by its server package.`,
+        answer: 'Use the Java runtime your launcher selects for the pack profile. For a dedicated server, use the runtime specified by the server package.',
         link: { label: 'Dedicated server setup', path: 'guides/server-setup/' },
       },
       {
@@ -75,7 +74,7 @@ const topics = [
       {
         id: 'level-cap',
         question: 'How do I raise my character level cap?',
-        answer: 'Finish a production chapter and check off its completion milestone in The Story. The level cap rises at specific milestones and reaches 100 when you finish Chapter X. TNK Progression 1.1.8 adds five prestige levels once you reach level 100.',
+        answer: 'Finish a production chapter and check off its completion milestone in The Story. The level cap rises at specific milestones and reaches 100 when you finish Chapter X. Five prestige levels unlock once you reach level 100.',
         link: { label: 'See level caps and prestige XP', path: 'mechanics/#leveling' },
       },
       {

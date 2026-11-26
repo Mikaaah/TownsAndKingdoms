@@ -6,17 +6,6 @@ const writeSnapshot = (path, data) => writeFileSync(
   JSON.stringify(data) + '\n',
 );
 
-const manifest = readPack('manifest.json');
-const loader = manifest.minecraft.modLoaders.find(entry => entry.primary) ?? manifest.minecraft.modLoaders[0];
-const neoForge = loader?.id.match(/^neoforge-(.+)$/);
-if (!neoForge) throw new Error('The handbook server guide requires a NeoForge build.');
-
-writeSnapshot('src/data/pack-version.json', {
-  version: manifest.version,
-  javaVersion: manifest.minecraft.javaVersion,
-  neoForgeVersion: neoForge[1],
-});
-
 mkdirSync(new URL('../tests/fixtures/', import.meta.url), { recursive: true });
 const ponder = readPack('kubejs/pack_data/ponder.json');
 writeSnapshot('tests/fixtures/ponder-staging.json', ponder.scenes.map(scene => ({
