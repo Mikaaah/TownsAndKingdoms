@@ -375,5 +375,29 @@
         "recipeId": "tnk:machines/tier_08/native_upgrade/create_enchantment_industry/affix_augmentor/0"
       }
     ]
+  },
+  "chapter-10": {
+    "purpose": "Power an Arc Furnace and bring your alloy-sheet, Boot Drive and Matter Construct lines together to make the Creation Core. The Creation Machine and its upgrades are optional projects after the core.",
+    "machineSource": "Creation Core and Creation Machine",
+    "machines": [
+      {
+        "id": "kubejs:tk3_creation_machine",
+        "title": "Creation Machine",
+        "sourceId": "kubejs:creation_core",
+        "recipeId": "tnk:chapter_10/crafting/creation_machine"
+      },
+      {
+        "id": "kubejs:ore_generator_catalyst",
+        "title": "Ore Generator Catalyst",
+        "sourceId": "kubejs:tk3_creation_machine",
+        "recipeId": "tnk:endgame/mechanical_crafting/ore_generator_catalyst"
+      },
+      {
+        "id": "create_enchantment_industry:creative_bookshelf",
+        "title": "Creative Bookshelf",
+        "sourceId": "kubejs:tk3_creation_machine",
+        "recipeId": "tnk:endgame/mechanical_crafting/creative_bookshelf"
+      }
+    ]
   }
 }

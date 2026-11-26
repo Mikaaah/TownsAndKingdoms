@@ -245,7 +245,7 @@ test('global search indexes every requested category and opens through Ctrl+K',a
  window.document.querySelector('#close-search').click();assert.equal(window.document.querySelector('#global-search').open,false);
  dom.window.close();
 });
-test('Chapters shows each authored quest and keeps the final chapter secret',()=>{
+test('Chapters shows each authored quest and includes the final chapter in search and recipes',()=>{
  const dom=browser('chapters');
  const doc=dom.window.document;
  const questlines=json('chapter-questlines');
@@ -264,7 +264,7 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
  for (const [index, link] of chapterLinks.entries()) {
   const chapter = questlines[index];
   const sprite = link.querySelector('svg');
-  const expectedTitle = `Chapter ${chapter.roman} | ${chapter.quests.length ? chapter.title : 'Secret'}`;
+  const expectedTitle = `Chapter ${chapter.roman} | ${chapter.title}`;
   const heading = doc.getElementById(chapter.id + '-title');
   assert.equal(link.querySelector('.chapter-title').textContent, expectedTitle);
   assert.equal(heading.textContent, expectedTitle);
@@ -272,13 +272,12 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
    assert.equal(element.style.getPropertyValue('--chapter-text-color'), chapter.titleColors.text);
    assert.equal(element.style.getPropertyValue('--chapter-numeral-color'), chapter.titleColors.numeral);
   }
-  if (chapter.quests.length) {
-   const icon = assets.icons[chapter.icon];
+  const icon = assets.icons[chapter.icon];
+  if (icon) {
    assert.equal(sprite?.querySelector('image')?.getAttribute('href'), '/TownsAndKingdoms/' + icon.src, chapter.id);
    assert.equal(sprite?.getAttribute('viewBox'), [icon.x, icon.y, icon.width, icon.height].join(' '), chapter.id);
   } else {
    assert.equal(sprite, null);
-   assert.match(link.textContent, /Secret/);
   }
  }
  for(const chapter of questlines){
@@ -287,7 +286,7 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
   assert.deepEqual(rendered.sort(),chapter.quests.map(quest=>quest.id).sort(),chapter.id);
   if(chapter.quests.length){
    const title=assets.titles[chapter.id];
-   const titleArt=chapter.images.length
+   const titleArt=chapter.images?.some(image=>image.image===chapter.titleImage)
     ? stage.querySelector('.board-art image').getAttribute('href')
     : stage.querySelector('.chapter-header img').getAttribute('src');
    assert.equal(titleArt,'/TownsAndKingdoms/'+title.src);
@@ -312,7 +311,8 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
     const detail=doc.getElementById('quest-'+quest.id);
     assert.equal(detail.querySelector('h3').textContent.trim(),quest.title);
     assert.deepEqual([...detail.querySelectorAll('.quest-description p')].map(p=>p.textContent),quest.description);
-    assert.ok(detail.querySelector('.detail-title-art'),quest.title);
+    assert.equal(Boolean(detail.querySelector('.detail-title-art')),Boolean(assets.labels?.[quest.id]),quest.title);
+    assert.equal(Boolean(detail.querySelector('[data-quest-optional]')),Boolean(quest.optional),quest.title);
     if(quest.hideDependencyLines)continue;
     for(const id of quest.dependencies){
      const dependency=byId.get(id);
@@ -341,23 +341,27 @@ test('Chapters shows each authored quest and keeps the final chapter secret',()=
   }
  }
  const final=doc.getElementById('chapter-10');
- assert.equal(questlines.at(-1).title,'Secret');
- assert.equal(questlines.at(-1).icon,undefined);
- assert.equal(questlines.at(-1).titleImage,undefined);
- assert.equal(doc.querySelectorAll('[data-quest-shape="tnk_milestone_hexagon"]').length,18);
- assert.doesNotMatch(doc.body.textContent,/The Final Chapter|Creative Core|Creation Core/i);
- assert.match(final.textContent,/Secret until release/i);
- assert.equal(final.querySelector('[data-quest-id]'),null);
- assert.equal(final.querySelector('.chapter-info'),null);
+ const finalChapter=questlines.at(-1);
+ assert.equal(finalChapter.title,'The Final Chapter');
+ assert.equal(final.querySelectorAll('[data-quest-id]').length,33);
+ assert.equal(final.querySelectorAll('[data-quest-optional]').length,7);
+ assert.ok(final.querySelector('#quest-2B78AB16ED738866'));
+ assert.ok(final.querySelector('#quest-5327C6EEE009523E'));
+ assert.ok(final.querySelector('.chapter-info'));
  const search=json('search');
- assert.equal(search.find(entry=>entry._key==='Chapters:chapter-10')?.name,'Secret until release');
+ const finalSearch=search.find(entry=>entry._key==='Chapters:chapter-10');
+ assert.equal(finalSearch?.name,finalChapter.title);
+ assert.equal(finalSearch?.url,'/TownsAndKingdoms/chapters/#chapter-10');
+ assert.ok(finalSearch?.description.includes(finalChapter.quests[0].title));
  assert.equal(search.find(entry=>entry._key==='Chapters:chapter-01')?.name,questlines[0].title);
- assert.deepEqual(json('chapters').map(chapter=>chapter.number),[1,2,3,4,5,6,7,8,9]);
- assert.ok(json('recipes').every(recipe=>recipe.chapter!==10 && recipe.output!=='kubejs:creation_core'));
- assert.ok(!search.some(entry=>entry._key.startsWith('Recipes:tnk:chapter_10/')));
+ assert.deepEqual(json('chapters').map(chapter=>chapter.number),questlines.map(chapter=>chapter.number));
+ const creationCore=json('recipes').find(recipe=>recipe.output==='kubejs:creation_core');
+ assert.equal(creationCore?.chapter,10);
+ assert.equal(search.find(entry=>entry._key==='Recipes:'+creationCore.id)?.url,
+  '/TownsAndKingdoms/recipes/#recipe='+encodeURIComponent(creationCore.id));
  const recipesPage=browser('recipes');
- assert.ok(![...recipesPage.window.document.querySelectorAll('.recipe-landmark small')]
-  .some(label=>label.textContent==='Chapter X'));
+ assert.ok([...recipesPage.window.document.querySelectorAll('.recipe-landmark small')]
+  .some(label=>label.textContent==='Chapter X' && label.title===finalChapter.title));
  recipesPage.window.close();
  dom.window.close();
 });

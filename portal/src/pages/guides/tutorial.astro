@@ -29,19 +29,23 @@ const topics = [
       <h2 id="questbook-title">Find your way around the quest book</h2>
     </header>
     <ol class="guide-steps">
-      <li><strong>Open the Quest Book.</strong> Click <strong>Quests</strong> in the lower-left FTB sidebar of your inventory. To set a shortcut, find <strong>Open Quests</strong> in <strong>Options → Controls → Key Binds</strong>.</li>
-      <li><strong>Start The Story.</strong> In <strong>Town Square</strong>, open <strong>The Story</strong> and check off <strong>A New Beginning</strong>. Claim its eight hamburgers, then open <strong>Chapter I | Getting Started</strong> under <strong>Forging Ahead</strong>.</li>
-      <li><strong>Read the objective and claim the reward.</strong> Item goals usually check what you have in your inventory. A checkmark goal asks you to confirm a step yourself. Open finished quests and claim their rewards manually.</li>
-      <li><strong>Return to The Story between chapters.</strong> Check off <strong>Chapter Completed</strong> on the chapter board, then check off its milestone in <strong>The Story</strong>, such as <strong>Chapter I | Completed</strong>. Claim any visible rewards and open the next chapter from <strong>Forging Ahead</strong>.</li>
+      <li><strong>Open the Quest Book.</strong> Click <strong>Quests</strong> in the FTB sidebar of your inventory. You can bind <strong>Open Quests</strong> in <strong>Options → Controls → Key Binds</strong>.</li>
+      <li><strong>Finish the in-game Tutorial.</strong> Under <strong>Town Square</strong>, follow the questing and gameplay branches through <strong>Tutorial Complete!</strong> Then open <strong>The Story</strong>, check off <strong>A New Beginning</strong> and claim the eight hamburgers.</li>
+      <li><strong>Read the objective and collect the reward.</strong> Item tasks check the requested stack or set and keep your items by default. Tick checkmark tasks yourself. Claim available rewards in the quest screen. Some Story rewards, including character XP and titles, apply automatically.</li>
+      <li><strong>Return to The Story between chapters.</strong> Check off <strong>Chapter Completed</strong> on your production board and then its matching milestone in <strong>The Story</strong>. Open the next chapter from <strong>Forging Ahead</strong>.</li>
     </ol>
     <figure class="guide-figure">
       <img src={href('media/tutorial/quest-book-orientation.webp')} width="840" height="226" loading="lazy" decoding="async" alt="Open the Quest Book and choose Story for milestones, Chapters for the workshop, or Market for trading." />
     </figure>
     <dl class="tutorial-boards">
-      <div><dt>The Story</dt><dd>Start here and check off your chapter milestones.</dd></div>
-      <div><dt>Forging Ahead</dt><dd>Follow the workshop quests and their prerequisites. <a href={href('chapters/')}>Open the chapter questlines</a>.</dd></div>
-      <div><dt>Market</dt><dd>Claim a free Trading Hub to list a shop. <a href={href('guides/player-shops/#shop-teleporter')}>Set up a player shop</a>.</dd></div>
+      <div><dt>Town Square</dt><dd>Find Tutorial, The Story, Market, Bulletin Board and Completionist. Start job orders with <strong>Check the Notice Board</strong>.</dd></div>
+      <div><dt>Forging Ahead</dt><dd>Follow ten production chapters to the Creation Core. <a href={href('chapters/')}>Open the chapter questlines</a>.</dd></div>
+      <div><dt>Realms &amp; Relics</dt><dd>Follow exploration, boss, End Remastered eye and useful item quests.</dd></div>
+      <div><dt>Crafts &amp; Curiosities</dt><dd>Find mod-specific quests for magic, Aeronautics, fishing, everyday life and advanced Create systems.</dd></div>
+      <div><dt>Seasonal Tales</dt><dd>Find seasonal boards such as <strong>The First Winter</strong>.</dd></div>
+      <div><dt>Completionist</dt><dd>Use <strong>The Golden Collection</strong> to track optional milestones across the pack, including bosses, trades and mod questlines.</dd></div>
     </dl>
+    <p>The CB-2.0.0 quest book has 1,539 quests across 28 boards. For the main story finale, see <a href={href('chapters/#chapter-10')}>Chapter X</a>. You can also take a job order from the <strong>Bulletin Board</strong>, then use <strong>Master of Trades</strong> on the Completionist board to track finishing all ten jobs.</p>
   </section>
 
   <section class="guide-section" id="recipes" aria-labelledby="recipes-title">
@@ -70,11 +74,11 @@ const topics = [
     </header>
     <p>Open the <strong>Character</strong> screen from your inventory or press <kbd>I</kbd> by default. Look for <strong>Open Character</strong> in Key Binds to change the shortcut. The screen brings together your level, Origin and skills.</p>
     <ul>
-      <li><strong>Gain character experience.</strong> Fighting, gathering, exploring and quest rewards all support character progression. Read a quest’s reward list before counting on it for experience.</li>
+      <li><strong>Gain character experience.</strong> Fighting, gathering, exploring and quest rewards all support character progression. <a href={href('mechanics/#leveling')}>See the Story level caps and prestige levels</a>.</li>
       <li><strong>Choose an Origin.</strong> Read each Origin’s starting bonuses before you confirm your choice. The <a href={href('mechanics/#origins')}>Origins reference</a> shows the full options.</li>
       <li><strong>Spend skill points.</strong> Start at a root and follow connected nodes. You can build across the six professions. Some advanced skills require a minimum point investment before you can buy them.</li>
     </ul>
-    <p>Try a route in the <a href={href('skills/')}>skilltree planner</a> and check <a href={href('mechanics/#titles')}>titles</a> for other challenges and benefits.</p>
+    <p>Try a route in the <a href={href('skills/')}>skilltree planner</a>. See the <a href={href('mechanics/#titles')}>title catalogue</a> for milestone rewards, the cosmetic and passive slots, and Eternal Sovereign at level 105.</p>
   </section>
 
   <section class="guide-section" id="combat" aria-labelledby="combat-title">

@@ -7,7 +7,7 @@ const headings=section.headings||section.columns||(rows.length&&typeof rows[0]==
 const Container = collapsible ? 'details' : 'section';
 function cell(v:any){if(v===null||v===undefined)return '';if(Array.isArray(v))return v.map(x=>pretty(x)||JSON.stringify(x)).join(', ');if(typeof v==='object')return pretty(v)||Object.entries(v).map(([k,x])=>`${words(k)}: ${x}`).join(', ');return String(v);}
 ---
-<Container class={collapsible ? 'mechanic-disclosure' : 'section'}>
+<Container id={section.id} class={collapsible ? 'mechanic-disclosure' : 'section'}>
   {collapsible ? <summary>{section.title}</summary> : <h3>{section.title}</h3>}
   <div class="mechanic-disclosure-body">
     {paragraphs.map((p:any) => <p>{typeof p === 'string' ? p : pretty(p)}</p>)}

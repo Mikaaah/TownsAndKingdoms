@@ -9,12 +9,16 @@ for (const calculator of document.querySelectorAll('[data-level-calculator]')) {
   const total = calculator.querySelector('[data-level-total]');
   const next = calculator.querySelector('[data-level-next]');
   const maxLevel = Number(control.max);
-  const { levelBase, levelFactor, levelExponent } = calculator.dataset;
+  const { levelBase, levelFactor, levelExponent, campaignLevelLimit, prestigeCosts } = calculator.dataset;
+  const campaignLimit = Number(campaignLevelLimit);
+  const prestigeSteps = JSON.parse(prestigeCosts);
   const costs = [0];
   const totals = [0, 0];
 
   for (let level = 1; level < maxLevel; level++) {
-    costs[level] = Math.max(1, Math.floor(Number(levelBase) + Number(levelFactor) * level ** Number(levelExponent)));
+    costs[level] = level < campaignLimit
+      ? Math.max(1, Math.floor(Number(levelBase) + Number(levelFactor) * level ** Number(levelExponent)))
+      : (prestigeSteps[level - campaignLimit] ?? totals[level]);
     totals[level + 1] = totals[level] + costs[level];
   }
 
@@ -30,6 +34,14 @@ for (const calculator of document.querySelectorAll('[data-level-calculator]')) {
   control.addEventListener('input', updateLevel);
   updateLevel();
 }
+
+function openLinkedDetail() {
+  const section = document.getElementById(window.location.hash.slice(1));
+  if (section?.matches('details.mechanic-disclosure')) section.open = true;
+}
+
+openLinkedDetail();
+window.addEventListener('hashchange', openLinkedDetail);
 
 const originControls = document.querySelector('[data-origin-controls]');
 const originGrid = document.querySelector('[data-origin-grid]');

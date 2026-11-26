@@ -1,174 +1,354 @@
 {
-  "source": "TNK3 Progression title artwork",
-  "height": 504,
+  "source": "TNK Progression 1.1.8 and CB-2.0.0 title artwork",
+  "height": 1044,
   "entries": {
-    "tnk:apprentice": {
-      "width": 78,
+    "tnk:admin": {
+      "width": 44,
       "offset": 0
     },
-    "tnk:technician": {
-      "width": 75,
+    "tnk:apprentice": {
+      "width": 78,
       "offset": 12
-    },
-    "tnk:engineer": {
-      "width": 65,
-      "offset": 24
-    },
-    "tnk:specialist": {
-      "width": 73,
-      "offset": 36
-    },
-    "tnk:expert": {
-      "width": 53,
-      "offset": 48
-    },
-    "tnk:master": {
-      "width": 54,
-      "offset": 60
-    },
-    "tnk:grandmaster": {
-      "width": 90,
-      "offset": 72
-    },
-    "tnk:champion": {
-      "width": 65,
-      "offset": 84
-    },
-    "tnk:legend": {
-      "width": 54,
-      "offset": 96
-    },
-    "tnk:monarch": {
-      "width": 62,
-      "offset": 108
-    },
-    "tnk:initiate": {
-      "width": 56,
-      "offset": 120
-    },
-    "tnk:disciplined": {
-      "width": 77,
-      "offset": 132
-    },
-    "tnk:veteran": {
-      "width": 61,
-      "offset": 144
-    },
-    "tnk:paragon": {
-      "width": 61,
-      "offset": 156
-    },
-    "tnk:skill_wayfarer": {
-      "width": 69,
-      "offset": 168
-    },
-    "tnk:skill_delver": {
-      "width": 62,
-      "offset": 180
-    },
-    "tnk:skill_homesteader": {
-      "width": 74,
-      "offset": 192
-    },
-    "tnk:skill_artificer": {
-      "width": 60,
-      "offset": 204
-    },
-    "tnk:skill_survivor": {
-      "width": 69,
-      "offset": 216
-    },
-    "tnk:skill_adventurer": {
-      "width": 82,
-      "offset": 228
-    },
-    "tnk:board_recruit": {
-      "width": 56,
-      "offset": 240
-    },
-    "tnk:board_citizen": {
-      "width": 53,
-      "offset": 252
-    },
-    "tnk:board_taskmaster": {
-      "width": 82,
-      "offset": 264
-    },
-    "tnk:prepared": {
-      "width": 63,
-      "offset": 276
-    },
-    "tnk:planner": {
-      "width": 62,
-      "offset": 288
     },
     "tnk:architect": {
       "width": 70,
-      "offset": 300
-    },
-    "tnk:irons_arcane": {
-      "width": 54,
-      "offset": 312
+      "offset": 24
     },
     "tnk:ars_mystic": {
       "width": 50,
-      "offset": 324
-    },
-    "tnk:witchery_oracle": {
-      "width": 53,
-      "offset": 336
-    },
-    "tnk:dragon_slayer": {
-      "width": 53,
-      "offset": 348
-    },
-    "tnk:wither_vanquisher": {
-      "width": 78,
-      "offset": 360
-    },
-    "tnk:ignis_inferno": {
-      "width": 58,
-      "offset": 372
-    },
-    "tnk:harbinger_conqueror": {
-      "width": 75,
-      "offset": 384
-    },
-    "tnk:leviathan_tidal": {
-      "width": 42,
-      "offset": 396
-    },
-    "tnk:monstrosity_titanium": {
-      "width": 61,
-      "offset": 408
-    },
-    "tnk:remnant_ancient": {
-      "width": 58,
-      "offset": 420
-    },
-    "tnk:naga_hunter": {
-      "width": 54,
-      "offset": 432
-    },
-    "tnk:lich_phantom": {
-      "width": 62,
-      "offset": 444
-    },
-    "tnk:guardian_sentinel": {
-      "width": 65,
-      "offset": 456
+      "offset": 36
     },
     "tnk:beta_tester": {
       "width": 61,
+      "offset": 48
+    },
+    "tnk:board_citizen": {
+      "width": 53,
+      "offset": 60
+    },
+    "tnk:board_recruit": {
+      "width": 56,
+      "offset": 72
+    },
+    "tnk:board_taskmaster": {
+      "width": 82,
+      "offset": 84
+    },
+    "tnk:boss_ferrous_wroughtnaut": {
+      "width": 73,
+      "offset": 96
+    },
+    "tnk:boss_helvar": {
+      "width": 91,
+      "offset": 108
+    },
+    "tnk:boss_last_of_deepslate": {
+      "width": 103,
+      "offset": 120
+    },
+    "tnk:boss_maledictus": {
+      "width": 63,
+      "offset": 132
+    },
+    "tnk:boss_overgrown_colossus": {
+      "width": 75,
+      "offset": 144
+    },
+    "tnk:boss_possessed_paladin": {
+      "width": 69,
+      "offset": 156
+    },
+    "tnk:boss_sirok": {
+      "width": 57,
+      "offset": 168
+    },
+    "tnk:boss_snow_queen": {
+      "width": 81,
+      "offset": 180
+    },
+    "tnk:boss_valkyrie_queen": {
+      "width": 69,
+      "offset": 192
+    },
+    "tnk:boss_wilden_chimera": {
+      "width": 55,
+      "offset": 204
+    },
+    "tnk:champion": {
+      "width": 65,
+      "offset": 216
+    },
+    "tnk:chapter_aeronautics": {
+      "width": 71,
+      "offset": 228
+    },
+    "tnk:chapter_bosses": {
+      "width": 73,
+      "offset": 240
+    },
+    "tnk:chapter_createive": {
+      "width": 59,
+      "offset": 252
+    },
+    "tnk:chapter_everyday_life": {
+      "width": 81,
+      "offset": 264
+    },
+    "tnk:chapter_exploration": {
+      "width": 73,
+      "offset": 276
+    },
+    "tnk:chapter_first_winter": {
+      "width": 73,
+      "offset": 288
+    },
+    "tnk:chapter_market": {
+      "width": 89,
+      "offset": 300
+    },
+    "tnk:chapter_starfishing": {
+      "width": 63,
+      "offset": 312
+    },
+    "tnk:chapter_thaumaturge": {
+      "width": 75,
+      "offset": 324
+    },
+    "tnk:chapter_tutorial": {
+      "width": 63,
+      "offset": 336
+    },
+    "tnk:chapter_useful_items": {
+      "width": 87,
+      "offset": 348
+    },
+    "tnk:completionist_boss_ledger": {
+      "width": 67,
+      "offset": 360
+    },
+    "tnk:completionist_master_of_trades": {
+      "width": 105,
+      "offset": 372
+    },
+    "tnk:completionist_mod_questlines": {
+      "width": 61,
+      "offset": 384
+    },
+    "tnk:completionist_pack_completed": {
+      "width": 121,
+      "offset": 396
+    },
+    "tnk:completionist_town_and_trails": {
+      "width": 73,
+      "offset": 408
+    },
+    "tnk:completionist_trophy_forged": {
+      "width": 85,
+      "offset": 420
+    },
+    "tnk:completionist_unlocking_the_end": {
+      "width": 89,
+      "offset": 432
+    },
+    "tnk:disciplined": {
+      "width": 77,
+      "offset": 444
+    },
+    "tnk:dragon_slayer": {
+      "width": 53,
+      "offset": 456
+    },
+    "tnk:engineer": {
+      "width": 65,
       "offset": 468
+    },
+    "tnk:eternal_sovereign": {
+      "width": 115,
+      "offset": 480
+    },
+    "tnk:expert": {
+      "width": 53,
+      "offset": 492
+    },
+    "tnk:grandmaster": {
+      "width": 90,
+      "offset": 504
+    },
+    "tnk:guardian_sentinel": {
+      "width": 65,
+      "offset": 516
+    },
+    "tnk:harbinger_conqueror": {
+      "width": 75,
+      "offset": 528
+    },
+    "tnk:ignis_inferno": {
+      "width": 58,
+      "offset": 540
+    },
+    "tnk:initiate": {
+      "width": 56,
+      "offset": 552
+    },
+    "tnk:irons_arcane": {
+      "width": 54,
+      "offset": 564
+    },
+    "tnk:legend": {
+      "width": 54,
+      "offset": 576
+    },
+    "tnk:letsdo_caretaker": {
+      "width": 74,
+      "offset": 588
+    },
+    "tnk:letsdo_creator": {
+      "width": 60,
+      "offset": 600
+    },
+    "tnk:letsdo_expert": {
+      "width": 53,
+      "offset": 612
+    },
+    "tnk:letsdo_host": {
+      "width": 39,
+      "offset": 624
+    },
+    "tnk:leviathan_tidal": {
+      "width": 42,
+      "offset": 636
+    },
+    "tnk:lich_phantom": {
+      "width": 62,
+      "offset": 648
+    },
+    "tnk:master": {
+      "width": 54,
+      "offset": 660
+    },
+    "tnk:mastery_alchemist_1": {
+      "width": 54,
+      "offset": 672
+    },
+    "tnk:mastery_alchemist_2": {
+      "width": 64,
+      "offset": 684
+    },
+    "tnk:mastery_blacksmith_1": {
+      "width": 56,
+      "offset": 696
+    },
+    "tnk:mastery_blacksmith_2": {
+      "width": 46,
+      "offset": 708
+    },
+    "tnk:mastery_cook_1": {
+      "width": 74,
+      "offset": 720
+    },
+    "tnk:mastery_cook_2": {
+      "width": 35,
+      "offset": 732
+    },
+    "tnk:mastery_enchanter_1": {
+      "width": 46,
+      "offset": 744
+    },
+    "tnk:mastery_enchanter_2": {
+      "width": 53,
+      "offset": 756
+    },
+    "tnk:mastery_hunter_1": {
+      "width": 54,
+      "offset": 768
+    },
+    "tnk:mastery_hunter_2": {
+      "width": 53,
+      "offset": 780
+    },
+    "tnk:mastery_miner_1": {
+      "width": 67,
+      "offset": 792
+    },
+    "tnk:mastery_miner_2": {
+      "width": 68,
+      "offset": 804
+    },
+    "tnk:monarch": {
+      "width": 62,
+      "offset": 816
+    },
+    "tnk:monstrosity_titanium": {
+      "width": 61,
+      "offset": 828
+    },
+    "tnk:naga_hunter": {
+      "width": 54,
+      "offset": 840
     },
     "tnk:owner": {
       "width": 48,
-      "offset": 480
+      "offset": 852
     },
-    "tnk:admin": {
-      "width": 44,
-      "offset": 492
+    "tnk:paragon": {
+      "width": 61,
+      "offset": 864
+    },
+    "tnk:planner": {
+      "width": 62,
+      "offset": 876
+    },
+    "tnk:prepared": {
+      "width": 63,
+      "offset": 888
+    },
+    "tnk:remnant_ancient": {
+      "width": 58,
+      "offset": 900
+    },
+    "tnk:skill_adventurer": {
+      "width": 82,
+      "offset": 912
+    },
+    "tnk:skill_artificer": {
+      "width": 60,
+      "offset": 924
+    },
+    "tnk:skill_delver": {
+      "width": 62,
+      "offset": 936
+    },
+    "tnk:skill_homesteader": {
+      "width": 74,
+      "offset": 948
+    },
+    "tnk:skill_survivor": {
+      "width": 69,
+      "offset": 960
+    },
+    "tnk:skill_wayfarer": {
+      "width": 69,
+      "offset": 972
+    },
+    "tnk:specialist": {
+      "width": 73,
+      "offset": 984
+    },
+    "tnk:technician": {
+      "width": 75,
+      "offset": 996
+    },
+    "tnk:veteran": {
+      "width": 61,
+      "offset": 1008
+    },
+    "tnk:witchery_oracle": {
+      "width": 53,
+      "offset": 1020
+    },
+    "tnk:wither_vanquisher": {
+      "width": 78,
+      "offset": 1032
     }
   }
 }

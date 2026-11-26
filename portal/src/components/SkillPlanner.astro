@@ -14,7 +14,7 @@ const mapTheme={
 ---
 <section class="skill-planner" data-skill-planner data-base={base} style={mapTheme} aria-label="Interactive skill tree planner">
   <div class="sp-toolbar">
-    <label class="sp-budget">Character level <input data-skill-level type="number" min="1" max="100" value="100" placeholder="Custom" inputmode="numeric" /></label>
+    <label class="sp-budget">Campaign level <input data-skill-level type="number" min="1" max="100" value="100" placeholder="Custom" inputmode="numeric" /></label>
     <details class="sp-budget-options"><summary>Custom budget</summary><label class="sp-budget">Points <input data-skill-budget type="number" min="0" max={skills.category.pointCap} value={skills.category.pointCap} inputmode="numeric" /></label></details>
     <div class="sp-counter"><strong data-skill-spent>0</strong><span>spent</span></div>
     <div class="sp-counter"><strong data-skill-available>{skills.category.pointCap}</strong><span>available</span></div>
@@ -64,6 +64,7 @@ const mapTheme={
   </div>
   <p class="sp-status" data-skill-status role="status" aria-live="polite">{skills.nodes.length} skills · {skills.category.pointCap}-point limit</p>
 </section>
+<p class="subtle">The supplied character tree has a {skills.category.pointCap}-point spending limit. <a href={base+'mechanics/#prestige'}>Prestige levels</a> can raise your total earned points in TNK Progression 1.1.8.</p>
 <p class="sp-lettering-credit subtle">Profession lettering by CraftronGaming.</p>
 <script>
   import {initSkillPlanners} from '../scripts/skill-planner.js';
