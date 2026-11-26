@@ -68,7 +68,7 @@
     {
       "id": "pilot",
       "title": "Drive on flat ground first",
-      "text": "Right-click the Pilot Controls. Use W and S to drive, A and D to turn, and the mouse wheel to shift gears. Shift exits the controls. The pinned version allows the first two gears at 16 RPM, the third at 32, the fourth at 64, and the fifth at 128."
+      "text": "Right-click the Pilot Controls. Use W and S to drive, A and D to turn, and the mouse wheel to shift gears. Shift exits the controls. The first two gears work at 16 RPM, the third at 32 RPM, the fourth at 64 RPM, and the fifth at 128 RPM."
     }
   ],
   "tips": [

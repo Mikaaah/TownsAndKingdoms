@@ -27,8 +27,8 @@
       {
         "title": "Levels and skill points",
         "body": [
-          "On the supplied curve, each campaign level costs 1,000 × your current level in character XP. Level 100 takes 4,950,000 total character XP.",
-          "Up to level 100, your skill-point total is your level plus three-quarters of that level rounded down. That gives you 175 earned skill points at level 100, with five more per prestige level in TNK Progression 1.1.8.",
+          "Each campaign level costs 1,000 × your current level in character XP. Level 100 takes 4,950,000 total character XP.",
+          "Up to level 100, your skill-point total is your level plus three-quarters of that level rounded down. That gives you 175 earned skill points at level 100, with five more per prestige level.",
           "Your sources of character XP keep their base rewards as you level. Spend earned points in the character skill tree to develop your build."
         ],
         "rows": [
@@ -104,15 +104,15 @@
         "id": "prestige",
         "title": "Prestige levels 101–105",
         "body": [
-          "TNK Progression 1.1.8 unlocks prestige automatically when you reach level 100, including on existing characters. You can see your prestige XP and level on the Character screen or HUD.",
-          "Level 104 → 105 costs as much character XP as all prior levels combined. On the supplied curve, the final step costs 10,150,000 XP, for 20,300,000 XP total.",
-          "Level 105 grants the Eternal Sovereign title and brings the total to 200 earned skill points. The supplied CB 2.0.0 character tree caps spending at 175 points."
+          "Prestige unlocks automatically when you reach level 100. You can see your prestige XP and level on the Character screen or HUD.",
+          "Level 104 → 105 costs 10,150,000 XP, the same as all prior levels combined. Level 105 takes 20,300,000 total character XP.",
+          "Level 105 grants the Eternal Sovereign title and brings the total to 200 earned skill points. You can spend up to 175 points in the character skill tree."
         ]
       },
       {
         "title": "Campaign ceilings",
         "body": [
-          "Characters begin with a level ceiling of 10. The table lists all available campaign brackets in the supplied configuration.",
+          "Characters begin with a level ceiling of 10. The table lists each campaign level bracket.",
           "If you reach the current ceiling below level 100, XP pauses until you unlock a higher ceiling. Campaign unlocks can be shared with your team. XP, origins, titles and skill spending are personal.",
           "The highest campaign ceiling is 100. Exploration dimensions and the Wither remain accessible independently of campaign ceilings."
         ],
@@ -437,11 +437,7 @@
         ]
       }
     ],
-    "campaignMaximumLevel": 100,
-    "prestigeVersion": "1.1.8",
-    "prestigeSource": "https://www.curseforge.com/minecraft/mc-mods/towns-kingdoms-progression/files/9824094",
-    "bundledVersion": "1.1.7",
-    "packVersion": "CB 2.0.0"
+    "campaignMaximumLevel": 100
   },
   "originGuide": {
     "title": "Origins and Ascension",
@@ -2371,7 +2367,7 @@
       {
         "id": "tnk:eternal_sovereign",
         "name": "Eternal Sovereign",
-        "description": "Reach character level 105 in TNK Progression 1.1.8 or later.",
+        "description": "Reach character level 105.",
         "requirements": [],
         "colour": "#E0AAF8",
         "perks": [
@@ -2410,13 +2406,13 @@
         "id": "eternal-sovereign",
         "title": "Eternal Sovereign",
         "body": [
-          "Reach level 105 in TNK Progression 1.1.8 to unlock Eternal Sovereign and its gold-to-purple badge. If you have already reached level 105, the title and its benefits are applied when you log in.",
+          "Reach level 105 to unlock Eternal Sovereign and its gold-to-purple badge. If you have already reached level 105, the title and its benefits are applied when you log in.",
           "You permanently gain 20% mining speed, take 20% less damage from damage types affected by Resistance, and gain 20% maximum mana with Iron’s Spells or Ars Nouveau. These benefits apply with any cosmetic or passive title equipped."
         ]
       },
       {
         "title": "Title catalogue",
-        "body": "The catalog lists 71 titles supplied by TNK Progression 1.1.8. Quest titles require the associated title reward in your quest book.",
+        "body": "The catalog lists 71 titles. Quest titles require the associated title reward in your quest book.",
         "rows": [
           {
             "Title": "Apprentice",
@@ -2770,7 +2766,7 @@
           },
           {
             "Title": "Eternal Sovereign",
-            "How to earn it": "Reach character level 105 in TNK Progression 1.1.8 or later.",
+            "How to earn it": "Reach character level 105.",
             "Passive bonuses": "Permanent: +20% mining speed · 20% less damage from damage types affected by Resistance · +20% maximum mana in Iron’s Spells or Ars Nouveau"
           }
         ]
