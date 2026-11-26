@@ -40,8 +40,9 @@ test('enforces real budgets and the hard category cap',()=>{
 });
 test('character levels award the actual nonlinear integer point budget',()=>{
   assert.equal(pointsForLevel(1),1);assert.equal(pointsForLevel(4),7);assert.equal(pointsForLevel(50),87);assert.equal(pointsForLevel(100),175);
+  assert.deepEqual([101,102,103,104,105].map(pointsForLevel),[180,185,190,195,200]);
   assert.equal(levelForPoints(87),50);assert.equal(levelForPoints(0),null);
-  assert.equal(pointsForLevel(200),175);assert.equal(pointsForLevel(-1),0);
+  assert.equal(levelForPoints(200),105);assert.equal(pointsForLevel(200),200);assert.equal(pointsForLevel(-1),0);
 });
 test('conditional tree effects obey the runtime caps rather than raw sums',()=>{
   const totals=summarizeSelection(model,new Set(model.ids)).passives;

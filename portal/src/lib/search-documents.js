@@ -36,8 +36,7 @@ export function buildSearchDocuments(datasets, base) {
   for(const m of mods)add('Mods',m.id,m.name,[m.summary,m.category].join(' '),base+'mods/#mod='+encodeURIComponent(m.id),m.category);
   for(const chapter of chapters){
     const quests=chapter.quests||[];
-    const title=chapter.number===10 && !quests.length ? 'Secret until release' : chapter.title;
-    add('Chapters',chapter.id,title,quests.map(quest=>quest.title),base+'chapters/#'+encodeURIComponent(chapter.id),'Chapter '+chapter.roman);
+    add('Chapters',chapter.id,chapter.title,quests.map(quest=>quest.title),base+'chapters/#'+encodeURIComponent(chapter.id),'Chapter '+chapter.roman);
   }
   for(const b of bosses)add('Bosses',b.id,b.name,[b.modName,b.classification,...(b.rewards||[]).map(r=>r.name||r.item||r.id||r)],base+'bosses/#boss='+encodeURIComponent(b.id),b.modName);
   for(const n of skills.nodes||[])add('Skills',n.id,n.title,n.description,base+'skills/#node='+encodeURIComponent(n.id),n.branch+' · '+n.cost+' point'+(n.cost===1?'':'s'));

@@ -2,12 +2,18 @@
   "leveling": {
     "title": "Character progression",
     "summary": "Earn character XP through exploration, combat and practical work. Spend the skill points you earn to shape a build.",
-    "maximumLevel": 100,
-    "skillPointFormula": "level + floor(3 × level / 4)",
+    "maximumLevel": 105,
+    "skillPointFormula": "level + floor(3 × level / 4) through level 100, then 5 per prestige level",
     "levelCost": {
       "base": 0.0,
       "factor": 1000.0,
-      "exponent": 1.0
+      "exponent": 1.0,
+      "prestigeSteps": [
+        1000000,
+        1200000,
+        1400000,
+        1600000
+      ]
     },
     "sections": [
       {
@@ -21,9 +27,9 @@
       {
         "title": "Levels and skill points",
         "body": [
-          "Going from level L to L+1 costs 1000 × L character XP, rounded down to a whole point. Level 100 requires 4,950,000 total character XP.",
-          "Earned skill points equal level + floor(3 × level / 4), reaching 175 points at level 100. Reconnecting and refunding a build do not award those points again.",
-          "The activity reward stays the same as you level; the amount needed for the next level increases. Your build, equipment, origin and active passive title supply your combat bonuses."
+          "On the supplied curve, each campaign level costs 1,000 × your current level in character XP. Level 100 takes 4,950,000 total character XP.",
+          "Up to level 100, your skill-point total is your level plus three-quarters of that level rounded down. That gives you 175 earned skill points at level 100, with five more per prestige level in TNK Progression 1.1.8.",
+          "Your sources of character XP keep their base rewards as you level. Spend earned points in the character skill tree to develop your build."
         ],
         "rows": [
           {
@@ -59,17 +65,56 @@
           {
             "Level": 100,
             "Total character XP": "4,950,000",
-            "XP to next level": "Maximum level",
+            "XP to next level": "1,000,000",
             "Earned skill points": 175
+          },
+          {
+            "Level": 101,
+            "Total character XP": "5,950,000",
+            "XP to next level": "1,200,000",
+            "Earned skill points": 180
+          },
+          {
+            "Level": 102,
+            "Total character XP": "7,150,000",
+            "XP to next level": "1,400,000",
+            "Earned skill points": 185
+          },
+          {
+            "Level": 103,
+            "Total character XP": "8,550,000",
+            "XP to next level": "1,600,000",
+            "Earned skill points": 190
+          },
+          {
+            "Level": 104,
+            "Total character XP": "10,150,000",
+            "XP to next level": "10,150,000",
+            "Earned skill points": 195
+          },
+          {
+            "Level": 105,
+            "Total character XP": "20,300,000",
+            "XP to next level": "Maximum level",
+            "Earned skill points": 200
           }
+        ]
+      },
+      {
+        "id": "prestige",
+        "title": "Prestige levels 101–105",
+        "body": [
+          "TNK Progression 1.1.8 unlocks prestige automatically when you reach level 100, including on existing characters. You can see your prestige XP and level on the Character screen or HUD.",
+          "Level 104 → 105 costs as much character XP as all prior levels combined. On the supplied curve, the final step costs 10,150,000 XP, for 20,300,000 XP total.",
+          "Level 105 grants the Eternal Sovereign title and brings the total to 200 earned skill points. The supplied CB 2.0.0 character tree caps spending at 175 points."
         ]
       },
       {
         "title": "Campaign ceilings",
         "body": [
-          "Characters begin with a level ceiling of 10. Campaign unlocks raise that ceiling through the following brackets.",
-          "XP pauses at the current ceiling and is not banked for a later unlock. Character unlocks can be shared with your team; XP, origins, titles and skill spending remain personal.",
-          "Character ceilings and production chapters are separate systems. Exploration dimensions and the Wither remain accessible."
+          "Characters begin with a level ceiling of 10. The table lists all available campaign brackets in the supplied configuration.",
+          "If you reach the current ceiling below level 100, XP pauses until you unlock a higher ceiling. Campaign unlocks can be shared with your team. XP, origins, titles and skill spending are personal.",
+          "The highest campaign ceiling is 100. Exploration dimensions and the Wither remain accessible independently of campaign ceilings."
         ],
         "rows": [
           {
@@ -77,12 +122,24 @@
             "Highest ordinary rarity": "Uncommon"
           },
           {
+            "Character ceiling": 20,
+            "Highest ordinary rarity": "Rare"
+          },
+          {
             "Character ceiling": 30,
             "Highest ordinary rarity": "Rare"
           },
           {
+            "Character ceiling": 40,
+            "Highest ordinary rarity": "Epic"
+          },
+          {
             "Character ceiling": 50,
             "Highest ordinary rarity": "Epic"
+          },
+          {
+            "Character ceiling": 60,
+            "Highest ordinary rarity": "Legendary"
           },
           {
             "Character ceiling": 70,
@@ -91,6 +148,10 @@
           {
             "Character ceiling": 80,
             "Highest ordinary rarity": "Legendary"
+          },
+          {
+            "Character ceiling": 90,
+            "Highest ordinary rarity": "Mythic"
           },
           {
             "Character ceiling": 94,
@@ -333,8 +394,8 @@
       {
         "title": "Enemy levels and scaling",
         "body": [
-          "Ordinary eligible enemies use the nearest eligible player’s level with a random offset from −4 to +4, bounded to levels 1–100.",
-          "Bosses use the higher of their encounter minimum and nearby player level +10, up to level 110. Minibosses use the same comparison but stop at 100. Apotheosis invaders use player level +5, capped at 100.",
+          "Ordinary eligible enemies use the nearest eligible player’s campaign level with a random offset from −4 to +4, bounded to levels 1–100.",
+          "Bosses use their encounter minimum or the nearest eligible player’s campaign level +10, whichever is higher, up to level 110. Minibosses use the same comparison but stop at 100. Apotheosis invaders use campaign level +5, capped at 100.",
           "Outside separately controlled arena encounters, maximum health scales by 1 + 0.03 × (enemy level − 1). Melee attack damage scales by 1 + 0.0125 × (enemy level − 1).",
           "Assigned enemy levels persist. Reloading does not stack the modifiers, restore damage already taken or make ordinary enemies permanent."
         ]
@@ -375,7 +436,12 @@
           }
         ]
       }
-    ]
+    ],
+    "campaignMaximumLevel": 100,
+    "prestigeVersion": "1.1.8",
+    "prestigeSource": "https://www.curseforge.com/minecraft/mc-mods/towns-kingdoms-progression/files/9824094",
+    "bundledVersion": "1.1.7",
+    "packVersion": "CB 2.0.0"
   },
   "originGuide": {
     "title": "Origins and Ascension",
@@ -1406,7 +1472,7 @@
       {
         "id": "tnk:monarch",
         "name": "Monarch",
-        "description": "Complete the final story chapter.",
+        "description": "Complete Beyond the Forge after Chapter X.",
         "requirements": [],
         "colour": "#F3EADA",
         "perks": [
@@ -2077,6 +2143,249 @@
         "requirements": [],
         "colour": "#EF5D8C",
         "perks": []
+      },
+      {
+        "id": "tnk:completionist_boss_ledger",
+        "name": "Dreadbane",
+        "description": "Complete Boss Ledger in Completionist.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": []
+      },
+      {
+        "id": "tnk:completionist_master_of_trades",
+        "name": "Master of Trades",
+        "description": "Complete Master of Trades in Completionist.",
+        "requirements": [],
+        "colour": "#DD873A",
+        "perks": []
+      },
+      {
+        "id": "tnk:completionist_town_and_trails",
+        "name": "Roadwarden",
+        "description": "Complete Town & Trails in Completionist.",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": []
+      },
+      {
+        "id": "tnk:completionist_mod_questlines",
+        "name": "Polymath",
+        "description": "Complete All Mod Questlines in Completionist.",
+        "requirements": [],
+        "colour": "#50C5BE",
+        "perks": []
+      },
+      {
+        "id": "tnk:completionist_unlocking_the_end",
+        "name": "Eye Collector",
+        "description": "Complete Unlocking the End in Completionist.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": []
+      },
+      {
+        "id": "tnk:completionist_trophy_forged",
+        "name": "Trophyforger",
+        "description": "Complete Forge the Trophy in Completionist.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": []
+      },
+      {
+        "id": "tnk:completionist_pack_completed",
+        "name": "Grand Completionist",
+        "description": "Complete Pack Completed in Completionist.",
+        "requirements": [],
+        "colour": "#F3EADA",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_exploration",
+        "name": "Trailblazer",
+        "description": "Complete the Exploration questline.",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_useful_items",
+        "name": "Quartermaster",
+        "description": "Complete the Useful Items questline.",
+        "requirements": [],
+        "colour": "#DADADA",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_everyday_life",
+        "name": "Hearthkeeper",
+        "description": "Complete the Everyday Life questline.",
+        "requirements": [],
+        "colour": "#DD873A",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_market",
+        "name": "Guild Merchant",
+        "description": "Complete the Market questline.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_starfishing",
+        "name": "Stargazer",
+        "description": "Complete Starcatcher Log Complete in the Starcatcher questline.",
+        "requirements": [],
+        "colour": "#6489FF",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_thaumaturge",
+        "name": "Thaumaturge",
+        "description": "Complete the Thaumaturge questline.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_aeronautics",
+        "name": "Sky Captain",
+        "description": "Complete Cleared for Flight in the Aeronautics questline.",
+        "requirements": [],
+        "colour": "#4BD6ED",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_createive",
+        "name": "Machinist",
+        "description": "Complete A Workshop of Your Own in Getting Create’ive.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_first_winter",
+        "name": "Winterbound",
+        "description": "Complete The Midwinter Gathering in The First Winter.",
+        "requirements": [],
+        "colour": "#4BD6ED",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_bosses",
+        "name": "Boss Hunter",
+        "description": "Complete the Bosses questline.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": []
+      },
+      {
+        "id": "tnk:chapter_tutorial",
+        "name": "Forgehand",
+        "description": "Complete the Tutorial questline.",
+        "requirements": [],
+        "colour": "#DADADA",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_snow_queen",
+        "name": "Frostbreaker",
+        "description": "Complete the Snow Queen defeat quest.",
+        "requirements": [],
+        "colour": "#4BD6ED",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_valkyrie_queen",
+        "name": "Skybreaker",
+        "description": "Complete the Valkyrie Queen defeat quest.",
+        "requirements": [],
+        "colour": "#F3EADA",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_maledictus",
+        "name": "Cursebane",
+        "description": "Complete the Maledictus defeat quest.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_wilden_chimera",
+        "name": "Wildbane",
+        "description": "Complete the Wilden Chimera defeat quest.",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_ferrous_wroughtnaut",
+        "name": "Ironbreaker",
+        "description": "Complete the Ferrous Wroughtnaut defeat quest.",
+        "requirements": [],
+        "colour": "#DADADA",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_last_of_deepslate",
+        "name": "Deepslate Warden",
+        "description": "Complete the Last of Deepslate defeat quest.",
+        "requirements": [],
+        "colour": "#C58BF5",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_possessed_paladin",
+        "name": "Oathkeeper",
+        "description": "Complete the Possessed Paladin defeat quest.",
+        "requirements": [],
+        "colour": "#EDC74B",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_sirok",
+        "name": "Dunebane",
+        "description": "Complete the Sirok the Sandworm defeat quest.",
+        "requirements": [],
+        "colour": "#DD873A",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_helvar",
+        "name": "Bastionbreaker",
+        "description": "Complete the Helvar defeat quest.",
+        "requirements": [],
+        "colour": "#EF5D8C",
+        "perks": []
+      },
+      {
+        "id": "tnk:boss_overgrown_colossus",
+        "name": "Rootbreaker",
+        "description": "Complete the Overgrown Colossus defeat quest.",
+        "requirements": [],
+        "colour": "#51D975",
+        "perks": []
+      },
+      {
+        "id": "tnk:eternal_sovereign",
+        "name": "Eternal Sovereign",
+        "description": "Reach character level 105 in TNK Progression 1.1.8 or later.",
+        "requirements": [],
+        "colour": "#E0AAF8",
+        "perks": [
+          {
+            "description": "+20% mining speed"
+          },
+          {
+            "description": "20% less damage from damage types affected by Resistance"
+          },
+          {
+            "description": "+20% maximum mana in Iron’s Spells or Ars Nouveau"
+          }
+        ],
+        "permanent": true
       }
     ],
     "sections": [
@@ -2084,7 +2393,7 @@
         "title": "Two independent slots",
         "body": [
           "The cosmetic slot chooses the title shown beside your character. The passive slot chooses the unlocked title whose bonuses apply.",
-          "Only one title passive is active at a time. Owning more titles or displaying a different cosmetic title does not stack their bonuses.",
+          "Only one passive chosen in the title menu applies at a time. Permanent milestone benefits such as Eternal Sovereign apply alongside it.",
           "Changing the active passive has a 30-second cooldown. You can leave the passive slot empty. Maximum-health changes do not heal you."
         ]
       },
@@ -2092,14 +2401,22 @@
         "title": "How titles unlock",
         "body": [
           "Skill titles unlock automatically when their spent-point or exact skill-node requirements are met. Character level alone is not a substitute for those requirements.",
-          "Campaign and encounter titles follow their designated reward. Complete and claim that milestone reward; kills and activity totals alone do not grant a command-awarded title.",
+          "Campaign and encounter titles come from their designated quest rewards. Complete the quest and receive its title reward.",
           "Founder is awarded by pack staff for beta participation. Owner and Admin are staff-assigned cosmetic titles and grant neither gameplay bonuses nor permissions.",
           "Previously earned retired titles remain available to their owners with their saved artwork and passive choices."
         ]
       },
       {
+        "id": "eternal-sovereign",
+        "title": "Eternal Sovereign",
+        "body": [
+          "Reach level 105 in TNK Progression 1.1.8 to unlock Eternal Sovereign and its gold-to-purple badge. If you have already reached level 105, the title and its benefits are applied when you log in.",
+          "You permanently gain 20% mining speed, take 20% less damage from damage types affected by Resistance, and gain 20% maximum mana with Iron’s Spells or Ars Nouveau. These benefits apply with any cosmetic or passive title equipped."
+        ]
+      },
+      {
         "title": "Title catalogue",
-        "body": "There are 42 titles in the active collection.",
+        "body": "The catalog lists 71 titles supplied by TNK Progression 1.1.8. Quest titles require the associated title reward in your quest book.",
         "rows": [
           {
             "Title": "Apprentice",
@@ -2148,7 +2465,7 @@
           },
           {
             "Title": "Monarch",
-            "How to earn it": "Complete the final story chapter.",
+            "How to earn it": "Complete Beyond the Forge after Chapter X.",
             "Passive bonuses": "+5.7% block breaking speed; +2 maximum health"
           },
           {
@@ -2310,6 +2627,151 @@
             "Title": "Admin",
             "How to earn it": "Command-only staff title. Cosmetic only; grants no permissions or gameplay bonuses.",
             "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Dreadbane",
+            "How to earn it": "Complete Boss Ledger in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Master of Trades",
+            "How to earn it": "Complete Master of Trades in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Roadwarden",
+            "How to earn it": "Complete Town & Trails in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Polymath",
+            "How to earn it": "Complete All Mod Questlines in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Eye Collector",
+            "How to earn it": "Complete Unlocking the End in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Trophyforger",
+            "How to earn it": "Complete Forge the Trophy in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Grand Completionist",
+            "How to earn it": "Complete Pack Completed in Completionist.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Trailblazer",
+            "How to earn it": "Complete the Exploration questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Quartermaster",
+            "How to earn it": "Complete the Useful Items questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Hearthkeeper",
+            "How to earn it": "Complete the Everyday Life questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Guild Merchant",
+            "How to earn it": "Complete the Market questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Stargazer",
+            "How to earn it": "Complete Starcatcher Log Complete in the Starcatcher questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Thaumaturge",
+            "How to earn it": "Complete the Thaumaturge questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Sky Captain",
+            "How to earn it": "Complete Cleared for Flight in the Aeronautics questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Machinist",
+            "How to earn it": "Complete A Workshop of Your Own in Getting Create’ive.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Winterbound",
+            "How to earn it": "Complete The Midwinter Gathering in The First Winter.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Boss Hunter",
+            "How to earn it": "Complete the Bosses questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Forgehand",
+            "How to earn it": "Complete the Tutorial questline.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Frostbreaker",
+            "How to earn it": "Complete the Snow Queen defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Skybreaker",
+            "How to earn it": "Complete the Valkyrie Queen defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Cursebane",
+            "How to earn it": "Complete the Maledictus defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Wildbane",
+            "How to earn it": "Complete the Wilden Chimera defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Ironbreaker",
+            "How to earn it": "Complete the Ferrous Wroughtnaut defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Deepslate Warden",
+            "How to earn it": "Complete the Last of Deepslate defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Oathkeeper",
+            "How to earn it": "Complete the Possessed Paladin defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Dunebane",
+            "How to earn it": "Complete the Sirok the Sandworm defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Bastionbreaker",
+            "How to earn it": "Complete the Helvar defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Rootbreaker",
+            "How to earn it": "Complete the Overgrown Colossus defeat quest.",
+            "Passive bonuses": "Cosmetic only"
+          },
+          {
+            "Title": "Eternal Sovereign",
+            "How to earn it": "Reach character level 105 in TNK Progression 1.1.8 or later.",
+            "Passive bonuses": "Permanent: +20% mining speed · 20% less damage from damage types affected by Resistance · +20% maximum mana in Iron’s Spells or Ars Nouveau"
           }
         ]
       }
@@ -2517,7 +2979,7 @@
       {
         "title": "Ordinary loot follows encounter level",
         "body": [
-          "For ordinary progression-aware equipment, effective source level is the lower of the encounter’s source level and your character ceiling, bounded to 1–100.",
+          "For ordinary progression-aware equipment, effective source level is the lower of the encounter’s source level and your unlocked campaign ceiling, bounded to 1–100.",
           "The following tier distribution is rolled at that effective level. The token is sealed when generated; postponing identification does not reroll its progression band."
         ],
         "rows": [
@@ -2604,19 +3066,31 @@
       },
       {
         "title": "Rarity ceilings",
-        "body": "The active character ceiling determines the highest eligible ordinary rarity.",
+        "body": "The unlocked campaign ceiling sets the highest eligible ordinary rarity. Loot uses campaign ceilings through level 100.",
         "rows": [
           {
             "Character ceiling": 10,
             "Highest ordinary rarity": "Uncommon"
           },
           {
+            "Character ceiling": 20,
+            "Highest ordinary rarity": "Rare"
+          },
+          {
             "Character ceiling": 30,
             "Highest ordinary rarity": "Rare"
           },
           {
+            "Character ceiling": 40,
+            "Highest ordinary rarity": "Epic"
+          },
+          {
             "Character ceiling": 50,
             "Highest ordinary rarity": "Epic"
+          },
+          {
+            "Character ceiling": 60,
+            "Highest ordinary rarity": "Legendary"
           },
           {
             "Character ceiling": 70,
@@ -2625,6 +3099,10 @@
           {
             "Character ceiling": 80,
             "Highest ordinary rarity": "Legendary"
+          },
+          {
+            "Character ceiling": 90,
+            "Highest ordinary rarity": "Mythic"
           },
           {
             "Character ceiling": 94,

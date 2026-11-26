@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import RegistryDialog from '../components/RegistryDialog.astro';
 import { href, data, fmt, pretty, words } from '../lib/data';
-import { visibleChapters, visibleRecipes } from '../lib/handbook-visibility.js';
 import '../styles/recipes.css';
 
 interface Recipe {
@@ -21,7 +20,7 @@ interface Chapter {
 }
 type RecipeTexture = string | [number, number, number];
 
-const recipes: Recipe[] = visibleRecipes(data('recipes'));
+const recipes: Recipe[] = data('recipes');
 const outputNamespaces = new Set(recipes.map(recipe => recipe.mod));
 const installedMods: { id: string; name: string }[] = data('mods');
 // An exact namespace match takes priority over the captured display name.
@@ -29,7 +28,7 @@ const installedMods: { id: string; name: string }[] = data('mods');
 const recipeModNames = Object.fromEntries(installedMods
   .filter(mod => mod.id !== 'kubejs' && outputNamespaces.has(mod.id))
   .map(mod => [mod.id, mod.name]));
-const chapters: Chapter[] = visibleChapters(data('chapters'));
+const chapters: Chapter[] = data('chapters');
 const families = data('recipe-families');
 const rules = data('production-rules');
 const recipeArt: Record<string, RecipeTexture> = data('recipe-textures', {});

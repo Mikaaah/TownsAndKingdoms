@@ -2,7 +2,10 @@
 
 - [Overview](https://mikaaah.github.io/TownsAndKingdoms/)
 - [Getting Started](https://mikaaah.github.io/TownsAndKingdoms/guides/)
+- [Quest Book](https://mikaaah.github.io/TownsAndKingdoms/guides/tutorial/#questbook)
 - [Chapter Questlines](https://mikaaah.github.io/TownsAndKingdoms/chapters/)
+- [The Final Chapter](https://mikaaah.github.io/TownsAndKingdoms/chapters/#chapter-10)
+- [Levels and Titles](https://mikaaah.github.io/TownsAndKingdoms/mechanics/)
 - [Recipes](https://mikaaah.github.io/TownsAndKingdoms/recipes/)
 - [Build Guides](https://mikaaah.github.io/TownsAndKingdoms/tutorials/)
 - [Epic Fight](https://mikaaah.github.io/TownsAndKingdoms/guides/epic-fight/)

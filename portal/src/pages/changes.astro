@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {href} from '../lib/data';
+import {data, href} from '../lib/data';
+
+const chapterNames = data('chapter-questlines', []).map((chapter: { title: string }) => chapter.title);
 
 // Historical statements are limited to the preserved TK2 feature, mod-list
 // and changelog pages. Current statements follow the TK3 registries and rules.
@@ -41,15 +43,16 @@ const removals=[
  <div class="prose">
   <section id="production" class="section">
    <h2>Ten chapters of production</h2>
-   <p>Create was already the centre of TK2’s eleven-tier automation route. TK3 keeps that foundation and reorganizes it into ten chapters: Getting Started, Andesite, Copper, Brass, AE2, Light Engineering, Heavy Engineering, Magic &amp; Mana, Radiant &amp; Shadow, and Creative Core.</p>
+   <p>Create was already the centre of TK2’s eleven-tier automation route. TK3 keeps that foundation and reorganizes it into {chapterNames.length} chapters, from {chapterNames[0]} through {chapterNames.at(-1)}.</p>
    <p>Mechanisms and machine frames carry the crafting requirements between those stages. AE2 provides storage and autocrafting; Immersive Engineering supplies electrical and industrial systems alongside Create’s mechanical production. Thermal machinery and The Factory Must Grow are no longer part of that route.</p>
    <p>Aeronautics and Let It Walk meet at the Reinforced stage. Flight components, walker cores, controls and actuators draw on the same engineering progression rather than forming separate endgame unlocks.</p>
+   <p>Chapter X brings together the Arc Furnace, Stargaze Alloy, AE2 circuits and mechanisms from earlier chapters in the <a href={href('chapters/#chapter-10')}>Creation Core questline</a>. The Tutorial, Bulletin Board and Completionist cover the <a href={href('guides/tutorial/#questbook')}>rest of the quest book</a>.</p>
    <p><a href={href('chapters/')}>Follow the ten chapters →</a> <span class="link-separator">·</span> <a href={href('recipes/')}>Look up a recipe →</a></p>
   </section>
   <section id="character" class="section">
    <h2>Character growth and combat</h2>
    <p>TK2 already had a Passive Skill Tree and weapon-specific Epic Fight combat. Those are familiar foundations, rather than new additions to the series.</p>
-   <p>TK3’s Character system awards XP directly for supported exploration, combat, mining, harvesting, cooking and fishing. Levels supply Pufferfish skill points; Origins and titles add separate choices for your character.</p>
+   <p>TK3’s Character system awards XP for supported exploration, combat, mining, harvesting, cooking and fishing. Story milestones raise the campaign ceiling to 100. Progression 1.1.8 adds five prestige levels and the <a href={href('mechanics/#titles')}>Eternal Sovereign title</a> at level 105.</p>
    <p>Weapon assignments distinguish combat daggers from utility knives, casting staffs from physical battlestaffs, and ordinary material sets from named artifacts. The TNK styles include Colossal Blade, Great Hammer, Reaper Glaive, Earthrend Gauntlet, Khopesh and Double Greatsword.</p>
    <p><a href={href('skills/')}>Plan a skill build →</a> <span class="link-separator">·</span> <a href={href('weapons/')}>Compare weapon handling →</a></p>
   </section>

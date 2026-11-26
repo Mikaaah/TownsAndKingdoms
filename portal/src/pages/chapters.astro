@@ -32,6 +32,7 @@ interface Quest {
   icon?: string;
   x: number;
   y: number;
+  optional?: boolean;
   size?: number;
   shape?: string;
   hideDependencyLines?: boolean;
@@ -89,7 +90,6 @@ const assets: BoardAssets = data('quest-board-assets', { titles: {}, icons: {} }
 const spruce = href('media/textures/spruce-planks.png');
 const chapterBackboard = href('media/chapters/chapter-backboard.png');
 const questBackground = href('media/chapters/quest-background.png');
-const isSecret = (chapter: Chapter) => chapter.number === 10;
 const titleStyle = (chapter: Chapter) => ({
   '--chapter-text-color': chapter.titleColors?.text,
   '--chapter-numeral-color': chapter.titleColors?.numeral,
@@ -158,13 +158,12 @@ function boardEdges(chapter: Chapter) {
     <nav aria-label="Chapters">
       <ol class="chapter-picker" style={{ '--chapter-backboard': `url("${chapterBackboard}")` }}>
         {chapters.map((chapter, index) => {
-          const secret = isSecret(chapter);
-          const icon = secret ? undefined : assets.icons[chapter.icon ?? ''];
+          const icon = assets.icons[chapter.icon ?? ''];
           return <li>
             <a class:list={['chapter-jump', { 'has-icon': icon }]} href={'#' + chapter.id} data-chapter-link
               style={titleStyle(chapter)} aria-current={index === 0 ? 'true' : undefined}>
               {icon && <QuestBoardTexture texture={icon} width={24} height={24} />}
-              <ChapterTitle roman={chapter.roman} title={secret ? 'Secret' : chapter.title} />
+              <ChapterTitle roman={chapter.roman} title={chapter.title} />
             </a>
           </li>;
         })}
@@ -172,9 +171,8 @@ function boardEdges(chapter: Chapter) {
     </nav>
 
     {chapters.map((chapter, index) => {
-      const secret = isSecret(chapter);
-      const info = secret ? undefined : chapterInfo[chapter.id];
-      const title = secret ? undefined : assets.titles[chapter.id];
+      const info = chapterInfo[chapter.id];
+      const title = assets.titles[chapter.id];
       const frameSizes = new Map(chapter.quests.map(quest => [quest.id, frameSide(quest, chapter.quests)]));
       const titleOnBoard = title && chapter.images?.some(image => image.image === chapter.titleImage);
       const headingId = chapter.id + '-title';
@@ -185,148 +183,145 @@ function boardEdges(chapter: Chapter) {
           <img src={href(title.src)} width={title.width} height={title.height} alt="" loading="lazy" />
         </div>}
 
-        {secret ? <>
-          <header class="chapter-header"><h2 id={headingId}><ChapterTitle roman={chapter.roman} title="Secret" /></h2></header>
-          <div class="chapter-secret"><p>Secret until release</p></div>
-        </> : (
-          <div class="chapter-content">
-            <div class="quest-board" data-quest-board>
-              <header class="board-heading"><h2 id={headingId}><ChapterTitle roman={chapter.roman} title={chapter.title} /></h2></header>
-              <div class="board-toolbar">
-                <p id={helpId}>Drag to move. Select a quest for details.<span class="sr-only"> Use the arrow keys to pan, plus and minus to zoom, or Tab to move between quests.</span></p>
-                {info && <details class="chapter-info">
-                  <summary>What you’ll build</summary>
-                  <div class="chapter-info-body">
-                    <p>{info.purpose}</p>
-                    {info.machines.length > 0 && <p class="chapter-machines">
-                      <strong>{info.machineSource ? `Machines using ${info.machineSource}` : 'Machines'}</strong>
-                      {info.machines.map(machine => machine.title).join(' · ')}
-                    </p>}
-                  </div>
-                </details>}
-                <div class="board-controls" role="group" aria-label="Quest board zoom">
-                  <button type="button" data-quest-action="zoom-out" aria-label="Zoom out">−</button>
-                  <button type="button" data-quest-action="fit" aria-label="Fit all quests">Fit</button>
-                  <button type="button" data-quest-action="zoom-in" aria-label="Zoom in">+</button>
+        <div class="chapter-content">
+          <div class="quest-board" data-quest-board>
+            <header class="board-heading"><h2 id={headingId}><ChapterTitle roman={chapter.roman} title={chapter.title} /></h2></header>
+            <div class="board-toolbar">
+              <p id={helpId}>Drag to move. Select a quest for details.<span class="sr-only"> Use the arrow keys to pan, plus and minus to zoom, or Tab to move between quests.</span></p>
+              {info && <details class="chapter-info">
+                <summary>What you’ll build</summary>
+                <div class="chapter-info-body">
+                  <p>{info.purpose}</p>
+                  {chapter.number === 10 && <p>Complete <strong>Chapter IX | Completed</strong> in The Story to open this chapter. After you craft the <a href="#quest-2B78AB16ED738866">Creation Core</a>, check off <strong>Chapter Completed</strong> here. Then finish <strong>Chapter X | Completed</strong> in The Story to raise the character ceiling to 100 and earn 5,000 character XP. Its <strong>Beyond the Forge</strong> finale awards the Monarch title and cape.</p>}
+                  {info.machines.length > 0 && <p class="chapter-machines">
+                    <strong>{info.machineSource ? `Machines using ${info.machineSource}` : 'Machines'}</strong>
+                    {info.machines.map(machine => machine.title).join(' · ')}
+                  </p>}
                 </div>
+              </details>}
+              <div class="board-controls" role="group" aria-label="Quest board zoom">
+                <button type="button" data-quest-action="zoom-out" aria-label="Zoom out">−</button>
+                <button type="button" data-quest-action="fit" aria-label="Fit all quests">Fit</button>
+                <button type="button" data-quest-action="zoom-in" aria-label="Zoom in">+</button>
               </div>
-              <svg class="quest-map" data-quest-map viewBox={boardViewBox(chapter, frameSizes)} tabindex="0" aria-label={chapter.title + ' quest board'} aria-describedby={helpId}>
-                <g aria-hidden="true" class="board-art">
-                  {(chapter.images ?? []).map(image => {
-                    const art = image.image === chapter.titleImage ? title : undefined;
-                    if (!art) return null;
-                    const [x, y] = coordinates(image);
-                    const width = image.width * unit;
-                    const height = image.height * unit;
-                    return <image href={href(art.src)} x={x - width / 2} y={y - height / 2} {width} {height}
-                      transform={`rotate(${image.rotation} ${x} ${y})`} />;
-                  })}
-                </g>
-                <g aria-hidden="true" class="board-edges">
-                  {boardEdges(chapter).map(({ dependency, quest }) => {
-                    const [x1, y1] = coordinates(dependency);
-                    const [x2, y2] = coordinates(quest);
-                    return <line {x1} {y1} {x2} {y2} data-dependency={dependency.id} data-dependent={quest.id} />;
-                  })}
-                </g>
-                {chapter.quests.map((quest, questIndex) => {
-                  const [x, y] = coordinates(quest);
-                  const width = frameSizes.get(quest.id)!;
-                  const radius = width / 2;
-                  const icon = assets.icons[quest.icon ?? ''];
-                  const frame = assets.shapes?.[quest.shape ?? ''];
-                  const iconSide = width * (2 / 3);
-                  const label = assets.labels?.[quest.id];
-                  const labelWidth = label ? label.width / 2 + 10 : 0;
-                  const labelHeight = label ? label.height / 2 + 8 : 0;
-                  return <a class="quest-node" href={'#quest-' + quest.id} data-quest-node data-quest-id={quest.id}
-                    data-quest-x={x} data-quest-y={y} data-quest-radius={radius}
-                    data-selected={questIndex === 0 ? '' : undefined} aria-label={quest.title} aria-controls={'quest-' + quest.id}
-                    transform={`translate(${x} ${y})`}>
-                    <title>{quest.title}</title>
-                    {frame ? <>
-                      <rect class="quest-node-hitbox" x={-radius} y={-radius} {width} height={width} />
-                      <g class="quest-node-shape" data-quest-shape={quest.shape}>
-                        <QuestBoardTexture texture={frame} x={-radius} y={-radius} {width} height={width} />
-                      </g>
-                    </> : quest.shape === 'hexagon' ? <polygon class="quest-node-frame" points={hexagon(radius)} />
-                      : quest.shape === 'circle' ? <circle class="quest-node-frame" r={radius} />
-                      : <rect class="quest-node-frame" x={-radius} y={-radius} {width} height={width}
-                        rx={quest.shape === 'rsquare' ? radius * .37 : radius * .1} />}
-                    {icon ? <QuestBoardTexture texture={icon} x={-iconSide / 2} y={-iconSide / 2} width={iconSide} height={iconSide} />
-                      : <circle class="quest-node-marker" aria-hidden="true" r={radius * .2} />}
-                    <g class="quest-node-label" aria-hidden="true">
-                      {label ? <>
-                        <rect class="quest-label-backdrop" x={-labelWidth / 2} y={radius + 4} width={labelWidth} height={labelHeight} rx="3" />
-                        <QuestBoardTexture texture={label} x={-label.width / 4} y={radius + 8} width={label.width / 2} height={label.height / 2} />
-                      </> : <text x="0" y={radius + 16}>{quest.title}</text>}
-                    </g>
-                  </a>;
-                })}
-              </svg>
             </div>
-
-            <aside class="quest-panel" aria-label="Quest details" data-quest-panel>
-              <p class="quest-empty" data-quest-empty hidden={chapter.quests.length > 0}>Select a quest on the board.</p>
+            <svg class="quest-map" data-quest-map viewBox={boardViewBox(chapter, frameSizes)} tabindex="0" aria-label={chapter.title + ' quest board'} aria-describedby={helpId}>
+              <g aria-hidden="true" class="board-art">
+                {(chapter.images ?? []).map(image => {
+                  const art = image.image === chapter.titleImage ? title : undefined;
+                  if (!art) return null;
+                  const [x, y] = coordinates(image);
+                  const width = image.width * unit;
+                  const height = image.height * unit;
+                  return <image href={href(art.src)} x={x - width / 2} y={y - height / 2} {width} {height}
+                    transform={`rotate(${image.rotation} ${x} ${y})`} />;
+                })}
+              </g>
+              <g aria-hidden="true" class="board-edges">
+                {boardEdges(chapter).map(({ dependency, quest }) => {
+                  const [x1, y1] = coordinates(dependency);
+                  const [x2, y2] = coordinates(quest);
+                  return <line {x1} {y1} {x2} {y2} data-dependency={dependency.id} data-dependent={quest.id} />;
+                })}
+              </g>
               {chapter.quests.map((quest, questIndex) => {
+                const [x, y] = coordinates(quest);
+                const width = frameSizes.get(quest.id)!;
+                const radius = width / 2;
                 const icon = assets.icons[quest.icon ?? ''];
-                const titleTexture = assets.labels?.[quest.id];
-                return <section class="quest-detail" id={'quest-' + quest.id} data-quest-detail={quest.id}
-                  aria-labelledby={'quest-title-' + quest.id} hidden={questIndex !== 0}>
-                  <div class="quest-detail-heading">
-                    {icon && <svg class="detail-icon" viewBox="0 0 38 38" width="38" height="38" aria-hidden="true">
-                      <QuestBoardTexture texture={icon} x={4} y={4} width={30} height={30} />
-                    </svg>}
-                    <div>
-                      <h3 id={'quest-title-' + quest.id}>
-                        {titleTexture ? <>
-                          <span class="sr-only">{quest.title}</span>
-                          <svg class="detail-title-art" aria-hidden="true" width={titleTexture.width} height={titleTexture.height}
-                            viewBox={`0 0 ${titleTexture.width} ${titleTexture.height}`}>
-                            <QuestBoardTexture texture={titleTexture} width={titleTexture.width} height={titleTexture.height} />
-                          </svg>
-                        </> : quest.title}
-                      </h3>
-                      {quest.subtitle && <p class="quest-subtitle">{quest.subtitle}</p>}
-                    </div>
-                  </div>
-                  {quest.description.length > 0 && <div class="quest-description">
-                    {quest.description.map(paragraph => <p>{paragraph}</p>)}
-                  </div>}
-                  {[
-                    { title: 'Objectives', objectives: quest.tasks },
-                    { title: 'Rewards', objectives: quest.rewards ?? [] },
-                  ].map(({ title, objectives }) => objectives.length > 0 && <div class="quest-detail-group">
-                    <h4>{title}</h4>
-                    <ul>
-                      {objectives.map(objective => {
-                        const texture = objectiveIcon(objective);
-                        return <li>
-                          {texture && <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-                            <QuestBoardTexture texture={texture} width={18} height={18} />
-                          </svg>}
-                          <span>{objectiveLabel(objective)}</span>
-                        </li>;
-                      })}
-                    </ul>
-                  </div>)}
-                  {quest.prerequisites.length > 0 && <div class="quest-detail-group">
-                    <h4>{quest.dependencyRequirement === 'one_completed' ? 'Requires one of' : 'Requires'}</h4>
-                    <ul class="quest-prerequisites">
-                      {quest.prerequisites.map(prerequisite => <li>
-                        {prerequisite.chapterId
-                          ? <a href={'#quest-' + prerequisite.id}>{prerequisite.title}</a>
-                          : <span>{prerequisite.title}</span>}
-                        {prerequisite.chapterId !== chapter.id && prerequisite.chapterTitle &&
-                          <small>{prerequisite.chapterTitle}</small>}
-                      </li>)}
-                    </ul>
-                  </div>}
-                </section>;
+                const frame = assets.shapes?.[quest.shape ?? ''];
+                const iconSide = width * (2 / 3);
+                const label = assets.labels?.[quest.id];
+                const labelWidth = label ? label.width / 2 + 10 : 0;
+                const labelHeight = label ? label.height / 2 + 8 : 0;
+                return <a class="quest-node" href={'#quest-' + quest.id} data-quest-node data-quest-id={quest.id}
+                  data-quest-x={x} data-quest-y={y} data-quest-radius={radius}
+                  data-selected={questIndex === 0 ? '' : undefined} aria-label={quest.title} aria-controls={'quest-' + quest.id}
+                  transform={`translate(${x} ${y})`}>
+                  <title>{quest.title}</title>
+                  {frame ? <>
+                    <rect class="quest-node-hitbox" x={-radius} y={-radius} {width} height={width} />
+                    <g class="quest-node-shape" data-quest-shape={quest.shape}>
+                      <QuestBoardTexture texture={frame} x={-radius} y={-radius} {width} height={width} />
+                    </g>
+                  </> : quest.shape === 'hexagon' ? <polygon class="quest-node-frame" points={hexagon(radius)} />
+                    : quest.shape === 'circle' ? <circle class="quest-node-frame" r={radius} />
+                    : <rect class="quest-node-frame" x={-radius} y={-radius} {width} height={width}
+                      rx={quest.shape === 'rsquare' ? radius * .37 : radius * .1} />}
+                  {icon ? <QuestBoardTexture texture={icon} x={-iconSide / 2} y={-iconSide / 2} width={iconSide} height={iconSide} />
+                    : <circle class="quest-node-marker" aria-hidden="true" r={radius * .2} />}
+                  <g class="quest-node-label" aria-hidden="true">
+                    {label ? <>
+                      <rect class="quest-label-backdrop" x={-labelWidth / 2} y={radius + 4} width={labelWidth} height={labelHeight} rx="3" />
+                      <QuestBoardTexture texture={label} x={-label.width / 4} y={radius + 8} width={label.width / 2} height={label.height / 2} />
+                    </> : <text x="0" y={radius + 16}>{quest.title}</text>}
+                  </g>
+                </a>;
               })}
-            </aside>
+            </svg>
           </div>
-        )}
+
+          <aside class="quest-panel" aria-label="Quest details" data-quest-panel>
+            <p class="quest-empty" data-quest-empty hidden={chapter.quests.length > 0}>Select a quest on the board.</p>
+            {chapter.quests.map((quest, questIndex) => {
+              const icon = assets.icons[quest.icon ?? ''];
+              const titleTexture = assets.labels?.[quest.id];
+              return <section class="quest-detail" id={'quest-' + quest.id} data-quest-detail={quest.id}
+                aria-labelledby={'quest-title-' + quest.id} hidden={questIndex !== 0}>
+                <div class="quest-detail-heading">
+                  {icon && <svg class="detail-icon" viewBox="0 0 38 38" width="38" height="38" aria-hidden="true">
+                    <QuestBoardTexture texture={icon} x={4} y={4} width={30} height={30} />
+                  </svg>}
+                  <div>
+                    <h3 id={'quest-title-' + quest.id}>
+                      {titleTexture ? <>
+                        <span class="sr-only">{quest.title}</span>
+                        <svg class="detail-title-art" aria-hidden="true" width={titleTexture.width} height={titleTexture.height}
+                          viewBox={`0 0 ${titleTexture.width} ${titleTexture.height}`}>
+                          <QuestBoardTexture texture={titleTexture} width={titleTexture.width} height={titleTexture.height} />
+                        </svg>
+                      </> : quest.title}
+                    </h3>
+                    {quest.optional && <p class="quest-subtitle" data-quest-optional>Optional quest</p>}
+                    {quest.subtitle && <p class="quest-subtitle">{quest.subtitle}</p>}
+                  </div>
+                </div>
+                {quest.description.length > 0 && <div class="quest-description">
+                  {quest.description.map(paragraph => <p>{paragraph}</p>)}
+                </div>}
+                {[
+                  { title: 'Objectives', objectives: quest.tasks },
+                  { title: 'Rewards', objectives: quest.rewards ?? [] },
+                ].map(({ title, objectives }) => objectives.length > 0 && <div class="quest-detail-group">
+                  <h4>{title}</h4>
+                  <ul>
+                    {objectives.map(objective => {
+                      const texture = objectiveIcon(objective);
+                      return <li>
+                        {texture && <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
+                          <QuestBoardTexture texture={texture} width={18} height={18} />
+                        </svg>}
+                        <span>{objectiveLabel(objective)}</span>
+                      </li>;
+                    })}
+                  </ul>
+                </div>)}
+                {quest.prerequisites.length > 0 && <div class="quest-detail-group">
+                  <h4>{quest.dependencyRequirement === 'one_completed' ? 'Requires one of' : 'Requires'}</h4>
+                  <ul class="quest-prerequisites">
+                    {quest.prerequisites.map(prerequisite => <li>
+                      {prerequisite.chapterId
+                        ? <a href={'#quest-' + prerequisite.id}>{prerequisite.title}</a>
+                        : <span>{prerequisite.title}</span>}
+                      {prerequisite.chapterId !== chapter.id && prerequisite.chapterTitle &&
+                        <small>{prerequisite.chapterTitle}</small>}
+                    </li>)}
+                  </ul>
+                </div>}
+              </section>;
+            })}
+          </aside>
+        </div>
       </article>;
     })}
   </div>
@@ -545,42 +540,6 @@ function boardEdges(chapter: Chapter) {
   .quest-detail-group li svg { flex: none; }
   .quest-detail-group .quest-prerequisites li { flex-wrap: wrap; gap: 0 5px; }
   .quest-prerequisites small { color: var(--subtle); font-size: 12px; }
-
-  .chapter-secret {
-    position: relative;
-    isolation: isolate;
-    display: grid;
-    min-height: 180px;
-    place-items: center;
-    overflow: hidden;
-    background: #261b1c;
-    border: 1px solid #693135;
-    border-radius: var(--radius);
-  }
-
-  .chapter-secret::before, .chapter-secret::after {
-    position: absolute;
-    inset: 50% auto auto 50%;
-    width: 125%;
-    height: 23px;
-    background: repeating-linear-gradient(135deg, #aa2332 0 17px, #f3e5e4 17px 34px);
-    border-block: 1px solid #693135;
-    transform: translate(-50%, -50%) rotate(10deg);
-    content: '';
-  }
-  .chapter-secret::after { transform: translate(-50%, -50%) rotate(-10deg); }
-  .chapter-secret p {
-    z-index: 1;
-    margin: 12px;
-    padding: 8px 14px;
-    background: #261b1c;
-    border: 1px solid #bd6873;
-    border-radius: 5px;
-    color: #fff2f2;
-    font-size: 16px;
-    font-weight: 650;
-    text-align: center;
-  }
 
   @media (min-width: 801px) and (max-width: 1110px), (max-width: 720px) {
     .chapter-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }

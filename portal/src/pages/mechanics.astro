@@ -48,7 +48,7 @@ const badgeStyle = (id: string) => {
       <div><h2 id="leveling-title">{leveling.title}</h2><p>{leveling.summary}</p></div>
     </header>
     <div class="mechanics-panel progression-panel">
-      <div class="level-calculator" data-level-calculator data-level-base={leveling.levelCost.base} data-level-factor={leveling.levelCost.factor} data-level-exponent={leveling.levelCost.exponent}>
+      <div class="level-calculator" data-level-calculator data-level-base={leveling.levelCost.base} data-level-factor={leveling.levelCost.factor} data-level-exponent={leveling.levelCost.exponent} data-campaign-level-limit={leveling.campaignMaximumLevel ?? leveling.maximumLevel} data-prestige-costs={JSON.stringify(leveling.levelCost.prestigeSteps ?? [])}>
         <div class="level-calculator-heading">
           <label for="character-level">Character level</label>
           <output id="character-level-selected" for="character-level" data-level-selected>{sampleLevel.Level}</output>
@@ -56,15 +56,16 @@ const badgeStyle = (id: string) => {
         <input type="range" min="1" max={leveling.maximumLevel} value={sampleLevel.Level} id="character-level" disabled data-level-control />
         <div class="level-extremes" aria-hidden="true"><span>1</span><span>{leveling.maximumLevel}</span></div>
         <dl class="progression-totals">
-          <div><dt>Skill points</dt><dd><output for="character-level" data-level-points>{sampleLevel['Earned skill points']}</output></dd></div>
+          <div><dt>Earned skill points</dt><dd><output for="character-level" data-level-points>{sampleLevel['Earned skill points']}</output></dd></div>
           <div><dt>Total character XP</dt><dd><output for="character-level" data-level-total>{sampleLevel['Total character XP']}</output></dd></div>
           <div><dt>XP to next level</dt><dd><output for="character-level" data-level-next>{sampleLevel['XP to next level']}</output></dd></div>
         </dl>
+        {leveling.prestigeVersion && <p>{leveling.packVersion} includes TNK Progression {leveling.bundledVersion}. Levels 101–105 require <a href={leveling.prestigeSource}>TNK Progression {leveling.prestigeVersion}</a>.</p>}
         <a class="button button-primary" href={href('skills/')}>Open skill planner</a>
       </div>
       <div class="level-ceilings">
         <h3>Campaign ceilings</h3>
-        <p>Campaign unlocks raise your level ceiling and determine your highest ordinary loot rarity.</p>
+        <p>Your unlocked campaign ceiling determines your highest ordinary loot rarity. These are the brackets available in the supplied configuration.</p>
         <ol class="ceiling-list">
           {ceilings.map((row: any) => <li><span>Level <strong>{row['Character ceiling']}</strong></span><span>{row['Highest ordinary rarity']}</span></li>)}
         </ol>
@@ -121,11 +122,11 @@ const badgeStyle = (id: string) => {
       <details class="title-catalogue">
         <summary>Title catalogue <span>· {fmt(titles.catalog.length)} titles</span></summary>
         <div class="table-wrap"><table>
-          <thead><tr><th scope="col">Title</th><th scope="col">How to earn it</th><th scope="col">Passive bonuses</th></tr></thead>
+          <thead><tr><th scope="col">Title</th><th scope="col">How to earn it</th><th scope="col">Benefits</th></tr></thead>
           <tbody>{titles.catalog.map((title: any) => <tr>
             <td>{titleBadges[title.id] ? <span class="title-badge" style={badgeStyle(title.id)} role="img" aria-label={title.name}></span> : title.name}</td>
             <td>{title.description}</td>
-            <td>{title.perks.length ? title.perks.map((perk: any) => perk.description).join(' · ') : 'Cosmetic only'}</td>
+            <td>{title.perks.length ? (title.permanent ? 'Permanent · ' : '') + title.perks.map((perk: any) => perk.description).join(' · ') : 'Cosmetic only'}</td>
           </tr>)}</tbody>
         </table></div>
       </details>

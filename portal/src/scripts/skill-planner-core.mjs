@@ -1,8 +1,14 @@
 // TNK Progression TreePassiveRules: caps on the selected tree's contributions.
 export const PASSIVE_CAPS=Object.freeze({guard:.25,evasion:.15,burning_damage:.35,longshot:.15,
   well_fed_damage:.2,effect_damage:.2,potion_duration:.5,food_recovery:3,leech:1,ignite:.2,second_wind:1});
-export function pointsForLevel(level){const value=Math.max(0,Math.min(100,Math.floor(Number(level)||0)));return value+Math.floor(value*.75);}
-export function levelForPoints(points){for(let level=1;level<=100;level++)if(pointsForLevel(level)===points)return level;return null;}
+const campaignMaximumLevel = 100;
+const maximumCharacterLevel = 105;
+export function pointsForLevel(level) {
+  const value = Math.max(0, Math.min(maximumCharacterLevel, Math.floor(Number(level) || 0)));
+  const campaignLevel = Math.min(campaignMaximumLevel, value);
+  return campaignLevel + Math.floor(campaignLevel * 3 / 4) + 5 * (value - campaignLevel);
+}
+export function levelForPoints(points){for(let level=1;level<=maximumCharacterLevel;level++)if(pointsForLevel(level)===points)return level;return null;}
 export function createSkillModel(data) {
   const byId = new Map(data.nodes.map(node=>[node.id,node]));
   if (byId.size !== data.nodes.length) throw new Error('Duplicate skill IDs.');
